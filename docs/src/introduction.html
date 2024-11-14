@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Introduction to PDMShell | PDMShell </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Introduction to PDMShell | PDMShell ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="introduction-to-pdmshell">Introduction to PDMShell</h1>
+
+<p>Welcome to <strong>PDMShell</strong>, the command-line interpreter designed specifically for <strong>SOLIDWORKS PDM Professional</strong>. PDMShell provides engineers and IT professionals with a powerful and flexible tool for automating and streamlining tasks within the SOLIDWORKS PDM environment. By integrating command-line functionality, PDMShell allows users to perform routine PDM operations quickly, efficiently, and with greater control over their PDM data management processes.</p>
+<h3 id="what-is-pdmshell">What is PDMShell?</h3>
+<p>PDMShell is a comprehensive command-line interface (CLI) for <strong>SOLIDWORKS PDM Professional</strong> that simplifies file management, automation, and configuration tasks. It offers an extensive set of commands that can be used for common operations such as file check-ins and check-outs, variable management, user authentication, and much more. With PDMShell, users can interact with the PDM system without the need to open the SOLIDWORKS PDM client interface, making it an ideal tool for batch processing, automation, and system integration.</p>
+<h3 id="key-features">Key Features</h3>
+<ul>
+<li><strong>Automated Workflows</strong>: Automate tasks like checking files in and out, setting variables, and managing user permissions.</li>
+<li><strong>Command-Line Flexibility</strong>: Execute PDM operations using simple or complex command sequences directly from your terminal or batch scripts.</li>
+<li><strong>Error Logging</strong>: Detailed logs and output help you diagnose issues, track file histories, and keep records of system activities.</li>
+<li><strong>User and License Management</strong>: Easily list users, manage licenses, and configure environment settings using PDMShell commands.</li>
+</ul>
+<h3 id="use-cases-for-pdmshell">Use Cases for PDMShell</h3>
+<ul>
+<li><strong>Batch Processing</strong>: Execute bulk operations like file renaming, setting variables, and automating workflows across multiple files or folders.</li>
+<li><strong>System Integration</strong>: Integrate PDMShell commands into custom applications, scripts, or scheduled tasks to enhance the automation of business processes.</li>
+<li><strong>Advanced File Management</strong>: Perform check-ins, check-outs, versioning, and other file management operations using the command line.</li>
+</ul>
+<h3 id="benefits-of-using-pdmshell">Benefits of Using PDMShell</h3>
+<ul>
+<li><strong>Efficiency</strong>: Speed up PDM operations by bypassing the need for GUI interaction. Execute commands faster and reduce human error.</li>
+<li><strong>Automation</strong>: Enable automation of repetitive tasks to improve productivity and consistency across your team.</li>
+<li><strong>Customizability</strong>: Customize the command-line environment to suit your specific workflows and integrate PDMShell into your existing software systems.</li>
+</ul>
+<hr>
+<h2 id="getting-support">Getting Support</h2>
+<h3 id="continuous-improvement-and-support">Continuous Improvement and Support</h3>
+<p>At <strong>Blue Byte Systems</strong>, we are dedicated to continuously enhancing <strong>PDMShell</strong> to ensure it meets the evolving needs of our users. We offer regular updates and are committed to providing exceptional customer support. Our documentation, tutorials, and support team are here to help you get the most out of your PDMShell experience.</p>
+<blockquote>
+<p><strong>How to Reach Out?</strong><br>
+If you need support or have any questions, please don't hesitate to contact us by clicking the button below:</p>
+<p><a href="mailto:support@bluebytesystemsinc.zohodesk.com">Get Support</a></p>
+</blockquote>
+<p><a href="#" class="button big">Create Project</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://bluebyte.biz'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

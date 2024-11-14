@@ -1,0 +1,182 @@
+{
+  "README.html": {
+    "href": "README.html",
+    "title": "Old Documentation: | PDMShell",
+    "keywords": "Old Documentation: https://bluebyte.biz/docs/pdm2excel/ https://bluebyte.biz/docs/pdm-convert-task-extended/ https://bluebyte.biz/docs/revisionsync/ Build To build the docs: Clone repo cd to repo folder type bin\\docfx.exe docfx.json --serve and press enter go to http://localhost:8080 in your browser to view Ctrl + C to end the webserver git add . git commit -m \"added docs\" git push Live site Commits will take roughly a few minutes to render on github pages. See live site here. Edits Make changes to the src folder. It contains the toc.yml (Table of Content) and the articles in markdown (.md files) Images Add images to the images folder and use <img src=\"../images/myimage.png\"/> to render them. Links See how links work in introduction.md. Tool Use VSCode."
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "| PDMShell",
+    "keywords": "PDMShell Welcome to the PDMShell Help Center. Here, you will find the official documentation for PDMShell, a command-line interpreter designed to streamline and automate tasks within SOLIDWORKS PDM Professional. We also provide helpful articles on PDM best practices and tooling. Before submitting a support ticket, we highly recommend reviewing the documentation and troubleshooting guides available on this site. Getting Started Click on Help Center to get started. Quick Links PDMShell Documentation: To review the complete documentation for PDMShell, please click here. Common Commands: For a quick reference to the most commonly used PDMShell commands, click here. Troubleshooting Guide: If you encounter issues, please review our troubleshooting guide by clicking here. Contact Us For more information or to get in touch with our support team, please refer to the Contact Us page."
+  },
+  "src/ADDADDIN.html": {
+    "href": "src/ADDADDIN.html",
+    "title": "ADDADDIN Command Documentation | PDMShell",
+    "keywords": "ADDADDIN Command Documentation DESCRIPTION: Adds an addin to the logged-in vault. Overrides any existing version. SYNTAX: addaddin -add <addin_name> [-force] PARAMETERS: addin_name - The name of the addin to be added. -force - Forces the addin to be added even if it already exists. EXAMPLES: addaddin -add 'MyAddin' -force"
+  },
+  "src/CD.html": {
+    "href": "src/CD.html",
+    "title": "CD Command Documentation | PDMShell",
+    "keywords": "CD Command Documentation DESCRIPTION: Displays the name of, or changes, the current PDM directory. SYNTAX: cd [-d directory] PARAMETERS: -d directory - The directory to switch to. EXAMPLES: cd -d 'C:\\Vault\\NewFolder'"
+  },
+  "src/CHECKIN.html": {
+    "href": "src/CHECKIN.html",
+    "title": "CHECKIN Command Documentation | PDMShell",
+    "keywords": "CHECKIN Command Documentation DESCRIPTION: Check-in the specified file or files using a search operation. SYNTAX: checkin [-f file] PARAMETERS: -f file - The file(s) to be checked in. EXAMPLES: checkin -f 'file1.sldprt'"
+  },
+  "src/CHECKOUT.html": {
+    "href": "src/CHECKOUT.html",
+    "title": "CHECKOUT Command Documentation | PDMShell",
+    "keywords": "CHECKOUT Command Documentation DESCRIPTION: Checks out a file. SYNTAX: checkout [-f file] PARAMETERS: -f file - The file(s) to be checked out. EXAMPLES: checkout -f 'file2.sldasm'"
+  },
+  "src/CLS.html": {
+    "href": "src/CLS.html",
+    "title": "CLS Command Documentation | PDMShell",
+    "keywords": "CLS Command Documentation DESCRIPTION: Clears the screen. SYNTAX: cls PARAMETERS: EXAMPLES: cls"
+  },
+  "src/DEBUG.html": {
+    "href": "src/DEBUG.html",
+    "title": "DEBUG Command Documentation | PDMShell",
+    "keywords": "DEBUG Command Documentation DESCRIPTION: Opens up the vault in an open dialog and redirects console to the session. SYNTAX: debug PARAMETERS: EXAMPLES: debug"
+  },
+  "src/DIR.html": {
+    "href": "src/DIR.html",
+    "title": "DIR Command Documentation | PDMShell",
+    "keywords": "DIR Command Documentation DESCRIPTION: Displays a list of files and subdirectories in a directory. SYNTAX: dir [-d directory] PARAMETERS: -d directory - The directory to display files from. EXAMPLES: dir -d 'C:\\Vault\\Documents'"
+  },
+  "src/DUMP.html": {
+    "href": "src/DUMP.html",
+    "title": "DUMP Command Documentation | PDMShell",
+    "keywords": "DUMP Command Documentation DESCRIPTION: Dumps all session text into a log file. SYNTAX: dump [-l logfile] PARAMETERS: -l logfile - The log file to dump session details into. EXAMPLES: dump -l 'sessionlog.txt'"
+  },
+  "src/EDITVARS.html": {
+    "href": "src/EDITVARS.html",
+    "title": "EDITVARS Command Documentation | PDMShell",
+    "keywords": "EDITVARS Command Documentation DESCRIPTION: Shows the variable editor manager. SYNTAX: editvars PARAMETERS: EXAMPLES: editvars"
+  },
+  "src/FROGLEAP.html": {
+    "href": "src/FROGLEAP.html",
+    "title": "FROGLEAP Command Documentation | PDMShell",
+    "keywords": "FROGLEAP Command Documentation DESCRIPTION: Frog leaps an old version as newest. SYNTAX: frogleap [-v version] PARAMETERS: -v version - The version to leap. EXAMPLES: frogleap -v 2.1"
+  },
+  "src/GET.html": {
+    "href": "src/GET.html",
+    "title": "GET Command Documentation | PDMShell",
+    "keywords": "GET Command Documentation DESCRIPTION: Downloads a version of the specified document to the local cache. SYNTAX: get [-f file] PARAMETERS: -f file - The file to be downloaded. EXAMPLES: get -f 'file1.sldprt'"
+  },
+  "src/GETNAME.html": {
+    "href": "src/GETNAME.html",
+    "title": "GETNAME Command Documentation | PDMShell",
+    "keywords": "GETNAME Command Documentation DESCRIPTION: Returns the name of an object (folder or file) from a PDM ID. SYNTAX: getname [-id object_id] PARAMETERS: -id object_id - The PDM ID of the object. EXAMPLES: getname -id 12345"
+  },
+  "src/GETVAR.html": {
+    "href": "src/GETVAR.html",
+    "title": "GETVAR Command Documentation | PDMShell",
+    "keywords": "GETVAR Command Documentation DESCRIPTION: Gets the value of a variable for a specified file or folder. SYNTAX: getvar [-f file] [-v variable_name] PARAMETERS: -f file - The file or folder to get the variable from. -v variable_name - The variable name to retrieve. EXAMPLES: getvar -f 'file1.sldprt' -v 'CustomVar'"
+  },
+  "src/GETVARFROMDB.html": {
+    "href": "src/GETVARFROMDB.html",
+    "title": "GETVARFROMDB Command Documentation | PDMShell",
+    "keywords": "GETVARFROMDB Command Documentation DESCRIPTION: Gets the value of a variable for a specified file or folder directly from the database. SYNTAX: getvarfromdb [-f file] [-v variable_name] PARAMETERS: -f file - The file or folder to get the variable from. -v variable_name - The variable name to retrieve from the database. EXAMPLES: getvarfromdb -f 'file1.sldprt' -v 'CustomVar'"
+  },
+  "src/HELP.html": {
+    "href": "src/HELP.html",
+    "title": "HELP Command Documentation | PDMShell",
+    "keywords": "HELP Command Documentation DESCRIPTION: Provides description, syntax of all commands. SYNTAX: help [-c command_name] PARAMETERS: -c command_name - The specific command you need help with. EXAMPLES: help -c 'cd'"
+  },
+  "src/HISTORY.html": {
+    "href": "src/HISTORY.html",
+    "title": "HISTORY Command Documentation | PDMShell",
+    "keywords": "HISTORY Command Documentation DESCRIPTION: Prints the history of a file. SYNTAX: history [-f file] PARAMETERS: -f file - The file to get the history for. EXAMPLES: history -f 'file1.sldprt'"
+  },
+  "src/INBOX.html": {
+    "href": "src/INBOX.html",
+    "title": "INBOX Command Documentation | PDMShell",
+    "keywords": "INBOX Command Documentation DESCRIPTION: Opens the PDM inbox and sends a message as the logged-in user. SYNTAX: inbox [-m message] PARAMETERS: -m message - The message to send. EXAMPLES: inbox -m 'File checked in successfully'"
+  },
+  "src/INFOVAR.html": {
+    "href": "src/INFOVAR.html",
+    "title": "INFOVAR Command Documentation | PDMShell",
+    "keywords": "INFOVAR Command Documentation DESCRIPTION: Gets information about a variable. SYNTAX: infovar [-v variable_name] PARAMETERS: -v variable_name - The variable name to retrieve information for. EXAMPLES: infovar -v 'CustomVar'"
+  },
+  "src/KILL.html": {
+    "href": "src/KILL.html",
+    "title": "KILL Command Documentation | PDMShell",
+    "keywords": "KILL Command Documentation DESCRIPTION: Kills a process. SYNTAX: kill [-p process_name] PARAMETERS: -p process_name - The process to terminate. EXAMPLES: kill -p 'MyProcess'"
+  },
+  "src/LOGIN.html": {
+    "href": "src/LOGIN.html",
+    "title": "LOGIN Command Documentation | PDMShell",
+    "keywords": "LOGIN Command Documentation DESCRIPTION: Authenticates a user to a specified vault. SYNTAX: login [-a|-win|-ex] -u username -p password -v vault_name PARAMETERS: Auto -a Automatic authentication with current user. Displays login dialog box if not logged in. win -w Automatic authentication with current user. Does not display login dialog box. External -ex Toggle ensures that a license is consumed. Username -u Username. Password -p Password. vaultName -v Vault Name. EXAMPLES: login -u admin -p 'password' -v 'MyVault'"
+  },
+  "src/MKDIR.html": {
+    "href": "src/MKDIR.html",
+    "title": "MKDIR Command Documentation | PDMShell",
+    "keywords": "MKDIR Command Documentation DESCRIPTION: Creates a new folder. SYNTAX: mkdir [-d directory] PARAMETERS: -d directory - The folder to create. EXAMPLES: mkdir -d 'C:\\Vault\\NewFolder'"
+  },
+  "src/MKVAR.html": {
+    "href": "src/MKVAR.html",
+    "title": "MKVAR Command Documentation | PDMShell",
+    "keywords": "MKVAR Command Documentation DESCRIPTION: Creates a new variable. SYNTAX: mkvar [-v variable_name] PARAMETERS: -v variable_name - The name of the variable to create. EXAMPLES: mkvar -v 'NewVariable'"
+  },
+  "src/PREVIEW.html": {
+    "href": "src/PREVIEW.html",
+    "title": "PREVIEW Command Documentation | PDMShell",
+    "keywords": "PREVIEW Command Documentation DESCRIPTION: Previews thumbnails of PDM files. SYNTAX: preview [-f file] PARAMETERS: -f file - The file to preview. EXAMPLES: preview -f 'file1.sldprt'"
+  },
+  "src/PRINT.html": {
+    "href": "src/PRINT.html",
+    "title": "PRINT Command Documentation | PDMShell",
+    "keywords": "PRINT Command Documentation DESCRIPTION: Displays the biographical information about the specified file. SYNTAX: print [-f file] PARAMETERS: -f file - The file to print biographical information for. EXAMPLES: print -f 'file1.sldprt'"
+  },
+  "src/QUIT.html": {
+    "href": "src/QUIT.html",
+    "title": "QUIT Command Documentation | PDMShell",
+    "keywords": "QUIT Command Documentation DESCRIPTION: Quits the application. SYNTAX: quit PARAMETERS: EXAMPLES: quit"
+  },
+  "src/REBUILD.html": {
+    "href": "src/REBUILD.html",
+    "title": "REBUILD Command Documentation | PDMShell",
+    "keywords": "REBUILD Command Documentation DESCRIPTION: Rebuilds SOLIDWORKS files and their references. SYNTAX: rebuild [-f file] PARAMETERS: -f file - The file(s) to rebuild. EXAMPLES: rebuild -f 'file1.sldasm'"
+  },
+  "src/RENAME.html": {
+    "href": "src/RENAME.html",
+    "title": "RENAME Command Documentation | PDMShell",
+    "keywords": "RENAME Command Documentation DESCRIPTION: Renames a specified file or a group of files. SYNTAX: rename [-f file] -n new_name PARAMETERS: -f file - The file(s) to rename. -n new_name - The new name for the file. EXAMPLES: rename -f 'file1.sldprt' -n 'new_file.sldprt'"
+  },
+  "src/SETVAR.html": {
+    "href": "src/SETVAR.html",
+    "title": "SETVAR Command Documentation | PDMShell",
+    "keywords": "SETVAR Command Documentation DESCRIPTION: Sets the value of a variable for a specified file or folder. SYNTAX: setvar [-f file] -v variable_name -s value PARAMETERS: -f file - The file or folder to set the variable for. -v variable_name - The variable to set. -s value - The value to assign to the variable. EXAMPLES: setvar -f 'file1.sldprt' -v 'CustomVar' -s 'NewValue'"
+  },
+  "src/START.html": {
+    "href": "src/START.html",
+    "title": "START Command Documentation | PDMShell",
+    "keywords": "START Command Documentation DESCRIPTION: Starts a program. SYNTAX: start [-p program_name] PARAMETERS: -p program_name - The program to start. EXAMPLES: start -p 'C:\\Program Files\\MyProgram.exe'"
+  },
+  "src/UNDOCHECKOUT.html": {
+    "href": "src/UNDOCHECKOUT.html",
+    "title": "UNDOCHECKOUT Command Documentation | PDMShell",
+    "keywords": "UNDOCHECKOUT Command Documentation DESCRIPTION: Undoes a checkout operation. SYNTAX: undocheckout [-f file] PARAMETERS: -f file - The file(s) to undo the checkout for. EXAMPLES: undocheckout -f 'file1.sldprt'"
+  },
+  "src/USERS.html": {
+    "href": "src/USERS.html",
+    "title": "USERS Command Documentation | PDMShell",
+    "keywords": "USERS Command Documentation DESCRIPTION: Lists all the users in the active vault. SYNTAX: users PARAMETERS: EXAMPLES: users"
+  },
+  "src/VERSION.html": {
+    "href": "src/VERSION.html",
+    "title": "VERSION Command Documentation | PDMShell",
+    "keywords": "VERSION Command Documentation DESCRIPTION: Lists versions of PDMShell, SOLIDWORKS, and PDM add-ins. SYNTAX: version PARAMETERS: EXAMPLES: version"
+  },
+  "src/cdpdm.html": {
+    "href": "src/cdpdm.html",
+    "title": "Continuous Delivery | PDMShell",
+    "keywords": "Continuous Delivery CDPDM is a PDM add-in by Blue Byte Systems Inc. that facilitates the deployment of PDM and task add-ins developed for you. The add-in communicates with our servers and allows the installation and uninstallation of all versions of your PDM add-ins. Advantages The advantages of using CDPDM are numerous: ✔️ No need to ask for or download CEX files. ✔️ Ability to switch between versions. ✔️ The conventional process of installing and updating add-ins is very tedious and time-consuming. Where to Find CDPDM If we have a developed a custom solution for you: CDPDM is provided in your project onboarding email. The email contains: Link to the CEX file. Link to this page with installation instructions. Link to your Customer Configuration File. If you have purchased a PDM product from us: Your Blue Byte Systems Inc account has all the information you need. You can access your account from this link here. From the Downloads tab, please download the archive file that contains CDPDM.cex and the Customer Configuration File. Note If you have purchased one of our PDM products and have had us develop a custom solution for you, please reach to us so we can generate a Customer Configuration File that lets you access all of your assets. How to Install Locate CDPDM.cex. In Windows 11, 10, and 7, internet downloads are blocked. Right-click on the CEX file, go to Properties, check Unblock, then click Apply and OK. Open the Administration tool. Log in to the vault. Please ensure you use a PDM user with Edit Add-Ins permission. In the Administration tool, click File > Open and browse to the CDPDM.cex file. Drag and drop the add-in from the CEX window onto the Add-ins node and wait for a few moments for CDPDM to be installed. Configuration Locate your Customer Configuration File. You can upload the Customer Configuration File via the Administration tool. Right-click on the add-in and click Upload Customer Configuration File... Browse to the Customer Configuration File. Note You can configure the settings of CDPDM by adding the credentials of the Customer Configuration File manually. Contact support for help. Updating Add-ins Right-click on CDPDM under Add-ins in the Administration tool and click Update Add-ins... This process may take a few moments depending on how many add-ins are in your vault. You will be prompted with a window like the following: You can: Install the selected add-in from the list. From the Version To Install dropdown, you can select which version to install and make sure to check the add-in. Uninstall the selected add-in from the vault (if it is installed). The installation process will ask you if you want to restart PDM. This may be beneficial to do after every upgrade, especially if you're validating a feature. Note Please allow for a few moments after you click Install/Update. The add-in will be downloaded unblocked and added to the vault. This operation includes suppressing some PDM dialog boxes."
+  },
+  "src/introduction.html": {
+    "href": "src/introduction.html",
+    "title": "Introduction to PDMShell | PDMShell",
+    "keywords": "Introduction to PDMShell Welcome to PDMShell, the command-line interpreter designed specifically for SOLIDWORKS PDM Professional. PDMShell provides engineers and IT professionals with a powerful and flexible tool for automating and streamlining tasks within the SOLIDWORKS PDM environment. By integrating command-line functionality, PDMShell allows users to perform routine PDM operations quickly, efficiently, and with greater control over their PDM data management processes. What is PDMShell? PDMShell is a comprehensive command-line interface (CLI) for SOLIDWORKS PDM Professional that simplifies file management, automation, and configuration tasks. It offers an extensive set of commands that can be used for common operations such as file check-ins and check-outs, variable management, user authentication, and much more. With PDMShell, users can interact with the PDM system without the need to open the SOLIDWORKS PDM client interface, making it an ideal tool for batch processing, automation, and system integration. Key Features Automated Workflows: Automate tasks like checking files in and out, setting variables, and managing user permissions. Command-Line Flexibility: Execute PDM operations using simple or complex command sequences directly from your terminal or batch scripts. Error Logging: Detailed logs and output help you diagnose issues, track file histories, and keep records of system activities. User and License Management: Easily list users, manage licenses, and configure environment settings using PDMShell commands. Use Cases for PDMShell Batch Processing: Execute bulk operations like file renaming, setting variables, and automating workflows across multiple files or folders. System Integration: Integrate PDMShell commands into custom applications, scripts, or scheduled tasks to enhance the automation of business processes. Advanced File Management: Perform check-ins, check-outs, versioning, and other file management operations using the command line. Benefits of Using PDMShell Efficiency: Speed up PDM operations by bypassing the need for GUI interaction. Execute commands faster and reduce human error. Automation: Enable automation of repetitive tasks to improve productivity and consistency across your team. Customizability: Customize the command-line environment to suit your specific workflows and integrate PDMShell into your existing software systems. Getting Support Continuous Improvement and Support At Blue Byte Systems, we are dedicated to continuously enhancing PDMShell to ensure it meets the evolving needs of our users. We offer regular updates and are committed to providing exceptional customer support. Our documentation, tutorials, and support team are here to help you get the most out of your PDMShell experience. How to Reach Out? If you need support or have any questions, please don't hesitate to contact us by clicking the button below: Get Support Create Project"
+  }
+}

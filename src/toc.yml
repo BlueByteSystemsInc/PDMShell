@@ -1,0 +1,71 @@
+- name: Help Center
+- name: Introduction
+  href: introduction.md
+
+- name: PDMShell Commands
+  expanded: true
+  items:
+    - name: ADDADDIN
+      href: addaddin.md
+    - name: CD
+      href: cd.md
+    - name: CHECKIN
+      href: checkin.md
+    - name: CHECKOUT
+      href: checkout.md
+    - name: CLS
+      href: cls.md
+    - name: DEBUG
+      href: debug.md
+    - name: DIR
+      href: dir.md
+    - name: DUMP
+      href: dump.md
+    - name: EDITVARS
+      href: editvars.md
+    - name: FROGLEAP
+      href: frogleap.md
+    - name: GET
+      href: get.md
+    - name: GETNAME
+      href: getname.md
+    - name: GETVAR
+      href: getvar.md
+    - name: GETVARFROMDB
+      href: getvarfromdb.md
+    - name: HELP
+      href: help.md
+    - name: HISTORY
+      href: history.md
+    - name: INBOX
+      href: inbox.md
+    - name: INFOVAR
+      href: infovar.md
+    - name: KILL
+      href: kill.md
+    - name: LOGIN
+      href: login.md
+    - name: MKDIR
+      href: mkdir.md
+    - name: MKVAR
+      href: mkvar.md
+    - name: PREVIEW
+      href: preview.md
+    - name: PRINT
+      href: print.md
+    - name: QUIT
+      href: quit.md
+    - name: REBUILD
+      href: rebuild.md
+    - name: RENAME
+      href: rename.md
+    - name: SETVAR
+      href: setvar.md
+    - name: START
+      href: start.md
+    - name: UNDOCHECKOUT
+      href: undocheckout.md
+    - name: USERS
+      href: users.md
+    - name: VERSION
+      href: version.md
