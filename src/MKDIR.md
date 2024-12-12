@@ -10,4 +10,4 @@ mkdir [-d directory]
 -d directory - The folder to create.
 
 ## EXAMPLES:
-mkdir -d 'C:\Vault\NewFolder'
+mkdir -d "NewFolder"

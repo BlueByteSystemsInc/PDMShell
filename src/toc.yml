@@ -1,7 +1,8 @@
 - name: Help Center
 - name: Introduction
   href: introduction.md
-
+- name: EULA
+  href: eula.md
 - name: PDMShell Commands
   expanded: true
   items:
@@ -45,8 +46,6 @@
       href: mkdir.md
     - name: MKVAR
       href: mkvar.md
-    - name: PREVIEW
-      href: preview.md
     - name: PRINT
       href: print.md
     - name: QUIT

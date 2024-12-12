@@ -887,16 +887,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "src/PREVIEW.md",
-      "output": {
-        ".html": {
-          "relative_path": "src/PREVIEW.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "src/PRINT.md",
       "output": {
         ".html": {
@@ -991,6 +981,16 @@
       "output": {
         ".html": {
           "relative_path": "src/cdpdm.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/eula.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/eula.html"
         }
       },
       "version": ""
