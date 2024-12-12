@@ -10,4 +10,4 @@ undocheckout [-f file]
 -f file - The file(s) to undo the checkout for.
 
 ## EXAMPLES:
-undocheckout -f 'file1.sldprt'
+undocheckout -f file1.sldprt

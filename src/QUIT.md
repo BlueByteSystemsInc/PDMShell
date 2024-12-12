@@ -7,7 +7,7 @@ Quits the application.
 quit
 
 ## PARAMETERS:
-
+None
 
 ## EXAMPLES:
 quit

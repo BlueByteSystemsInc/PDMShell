@@ -10,4 +10,9 @@ infovar [-v variable_name]
 -v variable_name - The variable name to retrieve information for.
 
 ## EXAMPLES:
-infovar -v 'CustomVar'
+infovar -v Description
+
+
+## Preview 
+
+![InfoVar Command](../images/infovar.png)

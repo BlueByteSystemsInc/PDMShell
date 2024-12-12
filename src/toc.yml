@@ -50,8 +50,6 @@
       href: print.md
     - name: QUIT
       href: quit.md
-    - name: REBUILD
-      href: rebuild.md
     - name: RENAME
       href: rename.md
     - name: SETVAR
@@ -60,7 +58,5 @@
       href: start.md
     - name: UNDOCHECKOUT
       href: undocheckout.md
-    - name: USERS
-      href: users.md
     - name: VERSION
       href: version.md

@@ -10,4 +10,8 @@ print [-f file]
 -f file - The file to print biographical information for.
 
 ## EXAMPLES:
-print -f 'file1.sldprt'
+print -f file1.sldprt
+
+
+## PREVIEW
+![Print Command](../images/print.png)

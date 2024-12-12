@@ -20,4 +20,4 @@ Password -p  Password.
 vaultName -v  Vault Name.
 
 ## EXAMPLES:
-login -u admin -p "password" -v "MyVault"
+login -u admin -p "password" -v "bluebyte"

@@ -1,13 +1,13 @@
 # VERSION Command Documentation
 
 ## DESCRIPTION:
-Lists versions of PDMShell, SOLIDWORKS, and PDM add-ins.
+Lists versions of installed SOLIDWORKS.
 
 ## SYNTAX:
 version
 
 ## PARAMETERS:
-
+SOLIDWORKS - List versions of installed SOLIDWORKS
 
 ## EXAMPLES:
-version
+version -solidworks

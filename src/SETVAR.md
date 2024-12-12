@@ -12,4 +12,4 @@ setvar [-f file] -v variable_name -s value
 -s value - The value to assign to the variable.
 
 ## EXAMPLES:
-setvar -f 'file1.sldprt' -v 'CustomVar' -s 'NewValue'
+setvar -f "file1.sldprt" -v "CustomVar" -s "NewValue"

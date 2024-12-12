@@ -90,11 +90,69 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Creates a new variable.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>mkvar [-v variable_name]</p>
+<p>mkvar [-n name] [-varType varType] [-mkvarflags mkvarflags] [-mkvarattributes mkvarattributes]</p>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-v variable_name - The name of the variable to create.</p>
+<p>-n name - The name of the variable to create.</p>
+<p>-varType varType - The type of the variable.</p>
+<p>-mkvarflags mkvarflags - The flags for the variable.</p>
+<p>-mkvarattributes mkvarattributes - The attributes for the variable. Seperated by <code>#</code></p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>mkvar -v 'NewVariable'</p>
+<p>mkvar -n &quot;NewVariable&quot; -varType &quot;Text&quot; -mkvarflags &quot;ReadOnly&quot; -mkvarattributes &quot;Attribute1#Attribute2&quot;</p>
+<h2 id="var-type-values">VAR TYPE VALUES:</h2>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+</tr>
+<tr>
+<td>Text</td>
+</tr>
+<tr>
+<td>Int</td>
+</tr>
+<tr>
+<td>Float</td>
+</tr>
+<tr>
+<td>Bool</td>
+</tr>
+<tr>
+<td>Date</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mkvar-flags-values">MKVAR FLAGS VALUES:</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unique</td>
+<td>Values of the variable must be unique; only used for files, ignored for folders</td>
+</tr>
+<tr>
+<td>Mandatory</td>
+<td>Missing values are not permitted; only used for files, ignored for folders</td>
+</tr>
+<tr>
+<td>VerFreeUpdateAll</td>
+<td>Every version and every revision, regardless access, workflow states etc., are affected by the variable update</td>
+</tr>
+<tr>
+<td>VerFreeLatest</td>
+<td>Only the latest version is affected by the variable update</td>
+</tr>
+</tbody>
+</table>
 
 </article>
 

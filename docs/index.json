@@ -87,17 +87,17 @@
   "src/INFOVAR.html": {
     "href": "src/INFOVAR.html",
     "title": "INFOVAR Command Documentation | PDMShell",
-    "keywords": "INFOVAR Command Documentation DESCRIPTION: Gets information about a variable. SYNTAX: infovar [-v variable_name] PARAMETERS: -v variable_name - The variable name to retrieve information for. EXAMPLES: infovar -v 'CustomVar'"
+    "keywords": "INFOVAR Command Documentation DESCRIPTION: Gets information about a variable. SYNTAX: infovar [-v variable_name] PARAMETERS: -v variable_name - The variable name to retrieve information for. EXAMPLES: infovar -v Description Preview"
   },
   "src/KILL.html": {
     "href": "src/KILL.html",
     "title": "KILL Command Documentation | PDMShell",
-    "keywords": "KILL Command Documentation DESCRIPTION: Kills a process. SYNTAX: kill [-p process_name] PARAMETERS: -p process_name - The process to terminate. EXAMPLES: kill -p 'MyProcess'"
+    "keywords": "KILL Command Documentation DESCRIPTION: Kills a process. SYNTAX: kill [-p process_name] PARAMETERS: -p process_name - The process to terminate (with extension) EXAMPLES: kill sldworks.exe REMARKS: This command uses taskkill from the command line. It requires PDM to be run as an administrator."
   },
   "src/LOGIN.html": {
     "href": "src/LOGIN.html",
     "title": "LOGIN Command Documentation | PDMShell",
-    "keywords": "LOGIN Command Documentation DESCRIPTION: Authenticates a user to a specified vault. SYNTAX: login [-a|-win|-ex] -u username -p password -v vault_name PARAMETERS: Auto -a Automatic authentication with current user. Displays login dialog box if not logged in. win -w Automatic Windows authentication with current user. Does not display login dialog box. External -ex Toggle ensures that a license is consumed. Username -u Username. Password -p Password. vaultName -v Vault Name. EXAMPLES: login -u admin -p \"password\" -v \"MyVault\""
+    "keywords": "LOGIN Command Documentation DESCRIPTION: Authenticates a user to a specified vault. SYNTAX: login [-a|-win|-ex] -u username -p password -v vault_name PARAMETERS: Auto -a Automatic authentication with current user. Displays login dialog box if not logged in. win -w Automatic Windows authentication with current user. Does not display login dialog box. External -ex Toggle ensures that a license is consumed. Username -u Username. Password -p Password. vaultName -v Vault Name. EXAMPLES: login -u admin -p \"password\" -v \"bluebyte\""
   },
   "src/MKDIR.html": {
     "href": "src/MKDIR.html",
@@ -107,42 +107,37 @@
   "src/MKVAR.html": {
     "href": "src/MKVAR.html",
     "title": "MKVAR Command Documentation | PDMShell",
-    "keywords": "MKVAR Command Documentation DESCRIPTION: Creates a new variable. SYNTAX: mkvar [-v variable_name] PARAMETERS: -v variable_name - The name of the variable to create. EXAMPLES: mkvar -v 'NewVariable'"
+    "keywords": "MKVAR Command Documentation DESCRIPTION: Creates a new variable. SYNTAX: mkvar [-n name] [-varType varType] [-mkvarflags mkvarflags] [-mkvarattributes mkvarattributes] PARAMETERS: -n name - The name of the variable to create. -varType varType - The type of the variable. -mkvarflags mkvarflags - The flags for the variable. -mkvarattributes mkvarattributes - The attributes for the variable. Seperated by # EXAMPLES: mkvar -n \"NewVariable\" -varType \"Text\" -mkvarflags \"ReadOnly\" -mkvarattributes \"Attribute1#Attribute2\" VAR TYPE VALUES: Description None Text Int Float Bool Date MKVAR FLAGS VALUES: Value Description Unique Values of the variable must be unique; only used for files, ignored for folders Mandatory Missing values are not permitted; only used for files, ignored for folders VerFreeUpdateAll Every version and every revision, regardless access, workflow states etc., are affected by the variable update VerFreeLatest Only the latest version is affected by the variable update"
   },
   "src/PRINT.html": {
     "href": "src/PRINT.html",
     "title": "PRINT Command Documentation | PDMShell",
-    "keywords": "PRINT Command Documentation DESCRIPTION: Displays the biographical information about the specified file. SYNTAX: print [-f file] PARAMETERS: -f file - The file to print biographical information for. EXAMPLES: print -f 'file1.sldprt'"
+    "keywords": "PRINT Command Documentation DESCRIPTION: Displays the biographical information about the specified file. SYNTAX: print [-f file] PARAMETERS: -f file - The file to print biographical information for. EXAMPLES: print -f file1.sldprt PREVIEW"
   },
   "src/QUIT.html": {
     "href": "src/QUIT.html",
     "title": "QUIT Command Documentation | PDMShell",
-    "keywords": "QUIT Command Documentation DESCRIPTION: Quits the application. SYNTAX: quit PARAMETERS: EXAMPLES: quit"
-  },
-  "src/REBUILD.html": {
-    "href": "src/REBUILD.html",
-    "title": "REBUILD Command Documentation | PDMShell",
-    "keywords": "REBUILD Command Documentation DESCRIPTION: Rebuilds SOLIDWORKS files and their references. SYNTAX: rebuild [-f file] PARAMETERS: -f file - The file(s) to rebuild. EXAMPLES: rebuild -f 'file1.sldasm'"
+    "keywords": "QUIT Command Documentation DESCRIPTION: Quits the application. SYNTAX: quit PARAMETERS: None EXAMPLES: quit"
   },
   "src/RENAME.html": {
     "href": "src/RENAME.html",
     "title": "RENAME Command Documentation | PDMShell",
-    "keywords": "RENAME Command Documentation DESCRIPTION: Renames a specified file or a group of files. SYNTAX: rename [-f file] -n new_name PARAMETERS: -f file - The file(s) to rename. -n new_name - The new name for the file. EXAMPLES: rename -f 'file1.sldprt' -n 'new_file.sldprt'"
+    "keywords": "RENAME Command Documentation DESCRIPTION: Renames a specified file or a group of files. SYNTAX: rename [-f file] -n new_name PARAMETERS: -f file - The file(s) to rename. -n new_name - The new name for the file. EXAMPLES: rename -f \"file1.sldprt\" -n \"new_file.sldprt\""
   },
   "src/SETVAR.html": {
     "href": "src/SETVAR.html",
     "title": "SETVAR Command Documentation | PDMShell",
-    "keywords": "SETVAR Command Documentation DESCRIPTION: Sets the value of a variable for a specified file or folder. SYNTAX: setvar [-f file] -v variable_name -s value PARAMETERS: -f file - The file or folder to set the variable for. -v variable_name - The variable to set. -s value - The value to assign to the variable. EXAMPLES: setvar -f 'file1.sldprt' -v 'CustomVar' -s 'NewValue'"
+    "keywords": "SETVAR Command Documentation DESCRIPTION: Sets the value of a variable for a specified file or folder. SYNTAX: setvar [-f file] -v variable_name -s value PARAMETERS: -f file - The file or folder to set the variable for. -v variable_name - The variable to set. -s value - The value to assign to the variable. EXAMPLES: setvar -f \"file1.sldprt\" -v \"CustomVar\" -s \"NewValue\""
   },
   "src/START.html": {
     "href": "src/START.html",
     "title": "START Command Documentation | PDMShell",
-    "keywords": "START Command Documentation DESCRIPTION: Starts a program. SYNTAX: start [-p program_name] PARAMETERS: -p program_name - The program to start. EXAMPLES: start -p 'C:\\Program Files\\MyProgram.exe'"
+    "keywords": "START Command Documentation DESCRIPTION: Starts a program or the administration tool. SYNTAX: start [-p program_name] PARAMETERS: -p program_name - The program to start. EXAMPLES: start -p 'C:\\Program Files\\MyProgram.exe' REMARKS: start admin starts the administration tool"
   },
   "src/UNDOCHECKOUT.html": {
     "href": "src/UNDOCHECKOUT.html",
     "title": "UNDOCHECKOUT Command Documentation | PDMShell",
-    "keywords": "UNDOCHECKOUT Command Documentation DESCRIPTION: Undoes a checkout operation. SYNTAX: undocheckout [-f file] PARAMETERS: -f file - The file(s) to undo the checkout for. EXAMPLES: undocheckout -f 'file1.sldprt'"
+    "keywords": "UNDOCHECKOUT Command Documentation DESCRIPTION: Undoes a checkout operation. SYNTAX: undocheckout [-f file] PARAMETERS: -f file - The file(s) to undo the checkout for. EXAMPLES: undocheckout -f file1.sldprt"
   },
   "src/USERS.html": {
     "href": "src/USERS.html",
@@ -152,7 +147,7 @@
   "src/VERSION.html": {
     "href": "src/VERSION.html",
     "title": "VERSION Command Documentation | PDMShell",
-    "keywords": "VERSION Command Documentation DESCRIPTION: Lists versions of PDMShell, SOLIDWORKS, and PDM add-ins. SYNTAX: version PARAMETERS: EXAMPLES: version"
+    "keywords": "VERSION Command Documentation DESCRIPTION: Lists versions of installed SOLIDWORKS. SYNTAX: version PARAMETERS: SOLIDWORKS - List versions of installed SOLIDWORKS EXAMPLES: version -solidworks"
   },
   "src/cdpdm.html": {
     "href": "src/cdpdm.html",

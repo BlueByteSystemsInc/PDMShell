@@ -11,4 +11,4 @@ rename [-f file] -n new_name
 -n new_name - The new name for the file.
 
 ## EXAMPLES:
-rename -f 'file1.sldprt' -n 'new_file.sldprt'
+rename -f "file1.sldprt" -n "new_file.sldprt"

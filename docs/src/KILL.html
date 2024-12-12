@@ -92,9 +92,14 @@
 <h2 id="syntax">SYNTAX:</h2>
 <p>kill [-p process_name]</p>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-p process_name - The process to terminate.</p>
+<p>-p process_name - The process to terminate (with extension)</p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>kill -p 'MyProcess'</p>
+<p>kill sldworks.exe</p>
+<h2 id="remarks">REMARKS:</h2>
+<ul>
+<li>This command uses <code>taskkill</code> from the command line.</li>
+<li>It requires PDM to be run as an administrator.</li>
+</ul>
 
 </article>
 

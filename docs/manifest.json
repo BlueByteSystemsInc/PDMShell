@@ -647,6 +647,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/infovar.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/infovar.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/logo.png",
       "output": {
         "resource": {
@@ -671,6 +681,16 @@
       "output": {
         "resource": {
           "relative_path": "images/pdmshell.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/print.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/print.png"
         }
       },
       "version": ""
@@ -901,16 +921,6 @@
       "output": {
         ".html": {
           "relative_path": "src/QUIT.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "src/REBUILD.md",
-      "output": {
-        ".html": {
-          "relative_path": "src/REBUILD.html"
         }
       },
       "version": ""
