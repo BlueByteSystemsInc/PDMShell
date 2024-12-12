@@ -5,12 +5,12 @@
 - name: PDMShell Commands
   expanded: true
   items:
-    - name: CD
-      href: cd.md
     - name: CHECKIN
       href: checkin.md
     - name: CHECKOUT
       href: checkout.md
+    - name: CD
+      href: cd.md
     - name: CLS
       href: cls.md
     - name: DIR
