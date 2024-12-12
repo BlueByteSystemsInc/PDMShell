@@ -6,88 +6,78 @@
   },
   "index.html": {
     "href": "index.html",
-    "title": "| PDMShell",
-    "keywords": "PDMShell Welcome to the PDMShell Help Center. Here, you will find the official documentation for PDMShell, a command-line interpreter designed to streamline and automate tasks within SOLIDWORKS PDM Professional. We also provide helpful articles on PDM best practices and tooling. Before submitting a support ticket, we highly recommend reviewing the documentation and troubleshooting guides available on this site. Getting Started Click on Help Center to get started. Quick Links PDMShell Documentation: To review the complete documentation for PDMShell, please click here. Common Commands: For a quick reference to the most commonly used PDMShell commands, click here. Troubleshooting Guide: If you encounter issues, please review our troubleshooting guide by clicking here. Contact Us For more information or to get in touch with our support team, please refer to the Contact Us page."
-  },
-  "src/ADDADDIN.html": {
-    "href": "src/ADDADDIN.html",
-    "title": "ADDADDIN Command Documentation | PDMShell",
-    "keywords": "ADDADDIN Command Documentation DESCRIPTION: Adds an addin to the logged-in vault. Overrides any existing version. SYNTAX: addaddin -add <addin_name> [-force] PARAMETERS: addin_name - The name of the addin to be added. -force - Forces the addin to be added even if it already exists. EXAMPLES: addaddin -add 'MyAddin' -force"
+    "title": "PDMShell | PDMShell",
+    "keywords": "PDMShell Welcome to the PDMShell Help Center. Here, you will find the official documentation for PDMShell, a command-line interpreter designed to streamline and automate tasks within SOLIDWORKS PDM Professional. We also provide helpful articles on PDM best practices and tooling. Before submitting a support ticket, we highly recommend reviewing the documentation and troubleshooting guides available on this site. Getting Started Click on Help Center to get started. Contact Us For more information or to get in touch with our support team, please refer to the Contact Us page."
   },
   "src/CD.html": {
     "href": "src/CD.html",
     "title": "CD Command Documentation | PDMShell",
-    "keywords": "CD Command Documentation DESCRIPTION: Displays the name of, or changes, the current PDM directory. SYNTAX: cd [-d directory] PARAMETERS: -d directory - The directory to switch to. EXAMPLES: cd -d 'C:\\Vault\\NewFolder'"
+    "keywords": "CD Command Documentation DESCRIPTION: Displays the name of, or changes, the current PDM directory. SYNTAX: cd [-d directory] [-clipboardcd] PARAMETERS: -d directory - The directory to switch to. The directory parameter can be a relative or absolute path in PDM. -clipboardcd - Copies the path to your clipboard after switching to that directory. EXAMPLES: cd -d 'C:\\Vault\\NewFolder' cd -clipboardcd REMARKS: If the user just creates a new folder and wants to cd to it using autocomplete, they need to use the dir command with the -refresh parameter to force the session to load the current files and sub-folders in the active directory. Do not use this when the current folder has many items."
   },
   "src/CHECKIN.html": {
     "href": "src/CHECKIN.html",
     "title": "CHECKIN Command Documentation | PDMShell",
-    "keywords": "CHECKIN Command Documentation DESCRIPTION: Check-in the specified file or files using a search operation. SYNTAX: checkin [-f file] PARAMETERS: -f file - The file(s) to be checked in. EXAMPLES: checkin -f 'file1.sldprt'"
+    "keywords": "CHECKIN Command Documentation DESCRIPTION: Check-in the specified file or files using a search operation. SYNTAX: checkin [-s search] [-b batch] [-f filePath] [-cmt comment] [-ciopt Checkinoptions] PARAMETERS: -s search - The search operation to use. -b batch - Forces PDM to use the BatchUtility in PDM to process a large number of files. -f filePath - The file(s) to be checked in. This is the default parameter. -cmt comment - The comment to add to the check-in. -ciopt Checkinoptions - The check-in options to use. EXAMPLES: checkin -f \"file1.sldprt\" REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard. If combining Checkinoptions parameters, the user needs to add + between the values. Checkinoptions Parameter Values: Member Description EdmUnlock_FailOnRegenerationNeed Fail if the file needs to be regenerated in the CAD program. NOTE: Only files resaved in SOLIDWORKS 2009 or later can trigger this flag EdmUnlock_ForceUnlock Unlock the file even if it is not modified EdmUnlock_IgnoreCorruptFile Ignore files with file formats unrecognized by SOLIDWORKS PDM Professional; without this flag, SOLIDWORKS PDM Professional returns E_EDM_INVALID_FILE if it encounters a corrupt file or a file containing a newer format than SOLIDWORKS PDM Professional can handle EdmUnlock_IgnoreReferences Silently unlock parent files without their references EdmUnlock_IgnoreRefsNotLockedByCaller Ignore references not locked by caller EdmUnlock_IgnoreRefsOutsideVault Ignore references to files outside the vault EdmUnlock_KeepLocked Keep the file checked out after creating the new version in the archive EdmUnlock_OverwriteLatestVersion Do not create a new version; overwrite the last version of the file with new changes EdmUnlock_RemoveLocalCopy Remove the local copy of the file from the hard disk after the file has been checked in EdmUnlock_Simple Check in the file using default behavior"
   },
   "src/CHECKOUT.html": {
     "href": "src/CHECKOUT.html",
     "title": "CHECKOUT Command Documentation | PDMShell",
-    "keywords": "CHECKOUT Command Documentation DESCRIPTION: Checks out a file. SYNTAX: checkout [-f file] PARAMETERS: -f file - The file(s) to be checked out. EXAMPLES: checkout -f 'file2.sldasm'"
+    "keywords": "CHECKOUT Command Documentation DESCRIPTION: Check-out the specified file or files using a search operation. SYNTAX: checkout [-s search] [-f filePath] PARAMETERS: -s search - The search operation to use. -f filePath - The file(s) to be checked out. This is the default parameter. EXAMPLES: checkout -f \"file1.sldprt\" REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard."
   },
   "src/CLS.html": {
     "href": "src/CLS.html",
     "title": "CLS Command Documentation | PDMShell",
-    "keywords": "CLS Command Documentation DESCRIPTION: Clears the screen. SYNTAX: cls PARAMETERS: EXAMPLES: cls"
-  },
-  "src/DEBUG.html": {
-    "href": "src/DEBUG.html",
-    "title": "DEBUG Command Documentation | PDMShell",
-    "keywords": "DEBUG Command Documentation DESCRIPTION: Opens up the vault in an open dialog and redirects console to the session. SYNTAX: debug PARAMETERS: EXAMPLES: debug"
+    "keywords": "CLS Command Documentation DESCRIPTION: Clears the screen. SYNTAX: cls PARAMETERS: None EXAMPLES: cls"
   },
   "src/DIR.html": {
     "href": "src/DIR.html",
     "title": "DIR Command Documentation | PDMShell",
-    "keywords": "DIR Command Documentation DESCRIPTION: Displays a list of files and subdirectories in a directory. SYNTAX: dir [-d directory] PARAMETERS: -d directory - The directory to display files from. EXAMPLES: dir -d 'C:\\Vault\\Documents'"
+    "keywords": "DIR Command Documentation DESCRIPTION: Displays a list of files and subdirectories in a directory. SYNTAX: dir [-d directory] [-sort sort] [-cols columns] [-csv CSV] [-refresh] PARAMETERS: -d directory - The directory to display files from. -sort sort - The sorting order for the displayed files. -cols columns - The columns to display, separated by commas. -csv CSV - Export the directory listing to a CSV file. -refresh - Refresh the session to load the current files and sub-folders in the active directory. EXAMPLES: dir -d \"C:\\Vault\\Documents\" dir -d \"C:\\Vault\\Documents\" -sort \"name\" -cols \"name,size,date\" -csv \"output.csv\" -refresh REMARKS: Use the -refresh parameter to force the session to load the current files and sub-folders in the active directory. Do not use this when the current folder has many items. The CSV file will be checked into the current directory."
   },
   "src/DUMP.html": {
     "href": "src/DUMP.html",
     "title": "DUMP Command Documentation | PDMShell",
-    "keywords": "DUMP Command Documentation DESCRIPTION: Dumps all session text into a log file. SYNTAX: dump [-l logfile] PARAMETERS: -l logfile - The log file to dump session details into. EXAMPLES: dump -l 'sessionlog.txt'"
+    "keywords": "DUMP Command Documentation DESCRIPTION: Dumps all session text into a log file. SYNTAX: dump [-l logfile] PARAMETERS: -l logfile - The log file to dump session details into. EXAMPLES: dump -l \"sessionlog.txt\""
   },
   "src/EDITVARS.html": {
     "href": "src/EDITVARS.html",
     "title": "EDITVARS Command Documentation | PDMShell",
-    "keywords": "EDITVARS Command Documentation DESCRIPTION: Shows the variable editor manager. SYNTAX: editvars PARAMETERS: EXAMPLES: editvars"
+    "keywords": "EDITVARS Command Documentation DESCRIPTION: Shows the variable editor manager. SYNTAX: editvars PARAMETERS: None EXAMPLES: editvars PREVIEW:"
   },
   "src/FROGLEAP.html": {
     "href": "src/FROGLEAP.html",
     "title": "FROGLEAP Command Documentation | PDMShell",
-    "keywords": "FROGLEAP Command Documentation DESCRIPTION: Frog leaps an old version as newest. SYNTAX: frogleap [-v version] PARAMETERS: -v version - The version to leap. EXAMPLES: frogleap -v 2.1"
+    "keywords": "FROGLEAP Command Documentation DESCRIPTION: Frog leaps an old version as newest. SYNTAX: frogleap [-s search] [-f filePath] [-oldVersion oldVersion] PARAMETERS: -s search - The search operation to use. -f filePath - The file(s) to be frog leaped. This is the default parameter. -oldVersion oldVersion - The old version to leap. This is an integer. EXAMPLES: frogleap -f \"file1.sldprt\" -oldVersion 2 REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard."
   },
   "src/GET.html": {
     "href": "src/GET.html",
     "title": "GET Command Documentation | PDMShell",
-    "keywords": "GET Command Documentation DESCRIPTION: Downloads a version of the specified document to the local cache. SYNTAX: get [-f file] PARAMETERS: -f file - The file to be downloaded. EXAMPLES: get -f 'file1.sldprt'"
+    "keywords": "GET Command Documentation DESCRIPTION: Retrieves a specified version of a file or files. SYNTAX: get [-s search] [-f filePath] [-ver version] PARAMETERS: -s search - The search operation to use. -f filePath - The file(s) to retrieve. This is the default parameter. -ver version - The version of the file to retrieve. EXAMPLES: get -f \"file1.sldprt\" -ver 2 REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard."
   },
   "src/GETNAME.html": {
     "href": "src/GETNAME.html",
     "title": "GETNAME Command Documentation | PDMShell",
-    "keywords": "GETNAME Command Documentation DESCRIPTION: Returns the name of an object (folder or file) from a PDM ID. SYNTAX: getname [-id object_id] PARAMETERS: -id object_id - The PDM ID of the object. EXAMPLES: getname -id 12345"
+    "keywords": "GETNAME Command Documentation DESCRIPTION: Returns the name of an object (folder or file) from a PDM ID. SYNTAX: getname [-id object_id] PARAMETERS: -id object_id - The PDM ID of the object. EXAMPLES: getname -id 12345 PREVIEW:"
   },
   "src/GETVAR.html": {
     "href": "src/GETVAR.html",
     "title": "GETVAR Command Documentation | PDMShell",
-    "keywords": "GETVAR Command Documentation DESCRIPTION: Gets the value of a variable for a specified file or folder. SYNTAX: getvar [-f file] [-v variable_name] PARAMETERS: -f file - The file or folder to get the variable from. -v variable_name - The variable name to retrieve. EXAMPLES: getvar -f 'file1.sldprt' -v 'CustomVar'"
+    "keywords": "GETVAR Command Documentation DESCRIPTION: Gets the value of a variable for a specified file or folder. SYNTAX: getvar [-f filePath] [-var variableName] [-configs configNames] [-clear] [-ver version] PARAMETERS: -f filePath - The file or folder to get the variable from. -var variableName - The variable name to retrieve. -configs configNames - The configuration names to retrieve the variable from, separated by commas. -clear - Clears the variable value. -ver version - The version of the file to retrieve the variable from. EXAMPLES: getvar -f \"file1.sldprt\" -var \"CustomVar\" REMARKS: The configuration names should be separated by commas. The variable must be in the data card."
   },
   "src/GETVARFROMDB.html": {
     "href": "src/GETVARFROMDB.html",
     "title": "GETVARFROMDB Command Documentation | PDMShell",
-    "keywords": "GETVARFROMDB Command Documentation DESCRIPTION: Gets the value of a variable for a specified file or folder directly from the database. SYNTAX: getvarfromdb [-f file] [-v variable_name] PARAMETERS: -f file - The file or folder to get the variable from. -v variable_name - The variable name to retrieve from the database. EXAMPLES: getvarfromdb -f 'file1.sldprt' -v 'CustomVar'"
+    "keywords": "GETVARFROMDB Command Documentation DESCRIPTION: Gets the value of a variable for a specified file or folder directly from the database. SYNTAX: getvarfromdb [-f filePath] [-var variableName] [-configs configNames] PARAMETERS: -f filePath - The file or folder to get the variable from. -var variableName - The variable name to retrieve from the database. -configs configNames - The configuration names to retrieve the variable from, separated by commas. EXAMPLES: getvarfromdb -f \"file1.sldprt\" -var \"CustomVar\" REMARKS: The configuration names should be separated by commas."
   },
   "src/HELP.html": {
     "href": "src/HELP.html",
     "title": "HELP Command Documentation | PDMShell",
-    "keywords": "HELP Command Documentation DESCRIPTION: Provides description, syntax of all commands. SYNTAX: help [-c command_name] PARAMETERS: -c command_name - The specific command you need help with. EXAMPLES: help -c 'cd'"
+    "keywords": "HELP Command Documentation DESCRIPTION: Provides help about a command. SYNTAX: help [-c command_name] PARAMETERS: -c command_name - The specific command you need help with. EXAMPLES: help -c cd"
   },
   "src/HISTORY.html": {
     "href": "src/HISTORY.html",
     "title": "HISTORY Command Documentation | PDMShell",
-    "keywords": "HISTORY Command Documentation DESCRIPTION: Prints the history of a file. SYNTAX: history [-f file] PARAMETERS: -f file - The file to get the history for. EXAMPLES: history -f 'file1.sldprt'"
+    "keywords": "HISTORY Command Documentation DESCRIPTION: Prints the history of a file. SYNTAX: history [-s search] [-f filePath] PARAMETERS: -s search - The search operation to use. -f filePath - The file to get the history for. EXAMPLES: history -f \"file1.sldprt\" REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard. PREVIEW:"
   },
   "src/INBOX.html": {
     "href": "src/INBOX.html",

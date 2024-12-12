@@ -1,7 +1,7 @@
 # HELP Command Documentation
 
 ## DESCRIPTION:
-Provides description, syntax of all commands.
+Provides help about a command.
 
 ## SYNTAX:
 help [-c command_name]
@@ -10,4 +10,4 @@ help [-c command_name]
 -c command_name - The specific command you need help with.
 
 ## EXAMPLES:
-help -c 'cd'
+help -c cd

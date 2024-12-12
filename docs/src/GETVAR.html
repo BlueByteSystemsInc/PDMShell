@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/GETVAR.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -90,16 +90,25 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Gets the value of a variable for a specified file or folder.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>getvar [-f file] [-v variable_name]</p>
+<p>getvar [-f filePath] [-var variableName] [-configs configNames] [-clear] [-ver version]</p>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-f file - The file or folder to get the variable from.
--v variable_name - The variable name to retrieve.</p>
+<p>-f filePath - The file or folder to get the variable from.</p>
+<p>-var variableName - The variable name to retrieve.</p>
+<p>-configs configNames - The configuration names to retrieve the variable from, separated by commas.</p>
+<p>-clear - Clears the variable value.</p>
+<p>-ver version - The version of the file to retrieve the variable from.</p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>getvar -f 'file1.sldprt' -v 'CustomVar'</p>
+<p>getvar -f &quot;file1.sldprt&quot; -var &quot;CustomVar&quot;</p>
+<h2 id="remarks">REMARKS:</h2>
+<ul>
+<li>The configuration names should be separated by commas.</li>
+<li>The variable must be in the data card.</li>
+</ul>
 
 </article>
 
         <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/GETVAR.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

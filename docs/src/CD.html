@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/CD.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -90,15 +90,22 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Displays the name of, or changes, the current PDM directory.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>cd [-d directory]</p>
+<p>cd [-d directory] [-clipboardcd]</p>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-d directory - The directory to switch to.</p>
+<p>-d directory - The directory to switch to. The directory parameter can be a relative or absolute path in PDM.</p>
+<p>-clipboardcd - Copies the path to your clipboard after switching to that directory.</p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>cd -d 'C:\Vault\NewFolder'</p>
+<p>cd -d 'C:\Vault\NewFolder'
+cd -clipboardcd</p>
+<h2 id="remarks">REMARKS:</h2>
+<ul>
+<li>If the user just creates a new folder and wants to <code>cd</code> to it using autocomplete, they need to use the <code>dir</code> command with the <code>-refresh</code> parameter to force the session to load the current files and sub-folders in the active directory. Do not use this when the current folder has many items.</li>
+</ul>
 
 </article>
 
         <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/CD.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

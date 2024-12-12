@@ -7,7 +7,10 @@ Shows the variable editor manager.
 editvars
 
 ## PARAMETERS:
-
+None
 
 ## EXAMPLES:
 editvars
+
+## PREVIEW:
+![Variable Editor Manager](../images/editvars.png)

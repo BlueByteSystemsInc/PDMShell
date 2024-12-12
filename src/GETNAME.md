@@ -11,3 +11,6 @@ getname [-id object_id]
 
 ## EXAMPLES:
 getname -id 12345
+
+## PREVIEW:
+![GetName Command](../images/getname.png)

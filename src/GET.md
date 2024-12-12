@@ -1,13 +1,20 @@
 # GET Command Documentation
 
 ## DESCRIPTION:
-Downloads a version of the specified document to the local cache.
+Retrieves a specified version of a file or files.
 
 ## SYNTAX:
-get [-f file]
+get [-s search] [-f filePath] [-ver version]
 
 ## PARAMETERS:
--f file - The file to be downloaded.
+-s search - The search operation to use.
+
+-f filePath - The file(s) to retrieve. This is the default parameter.
+
+-ver version - The version of the file to retrieve.
 
 ## EXAMPLES:
-get -f 'file1.sldprt'
+get -f "file1.sldprt" -ver 2
+
+## REMARKS:
+- The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.

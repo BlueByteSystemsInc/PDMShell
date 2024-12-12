@@ -7,7 +7,7 @@ Clears the screen.
 cls
 
 ## PARAMETERS:
-
+None
 
 ## EXAMPLES:
 cls

@@ -1,13 +1,18 @@
 # CHECKOUT Command Documentation
 
 ## DESCRIPTION:
-Checks out a file.
+Check-out the specified file or files using a search operation.
 
 ## SYNTAX:
-checkout [-f file]
+checkout [-s search] [-f filePath]
 
 ## PARAMETERS:
--f file - The file(s) to be checked out.
+-s search - The search operation to use.
+
+-f filePath - The file(s) to be checked out. This is the default parameter.
 
 ## EXAMPLES:
-checkout -f 'file2.sldasm'
+checkout -f "file1.sldprt"
+
+## REMARKS:
+- The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.

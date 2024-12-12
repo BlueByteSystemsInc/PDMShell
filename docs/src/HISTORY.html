@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/HISTORY.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -90,15 +90,23 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Prints the history of a file.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>history [-f file]</p>
+<p>history [-s search] [-f filePath]</p>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-f file - The file to get the history for.</p>
+<p>-s search - The search operation to use.
+-f filePath - The file to get the history for.</p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>history -f 'file1.sldprt'</p>
+<p>history -f &quot;file1.sldprt&quot;</p>
+<h2 id="remarks">REMARKS:</h2>
+<ul>
+<li>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
+</ul>
+<h2 id="preview">PREVIEW:</h2>
+<p><img src="../images/history.png" alt="GetName Command"></p>
 
 </article>
 
         <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/HISTORY.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

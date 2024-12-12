@@ -10,4 +10,4 @@ dump [-l logfile]
 -l logfile - The log file to dump session details into.
 
 ## EXAMPLES:
-dump -l 'sessionlog.txt'
+dump -l "sessionlog.txt"

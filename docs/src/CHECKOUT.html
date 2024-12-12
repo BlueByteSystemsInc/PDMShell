@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/CHECKOUT.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -88,17 +88,23 @@
 <h1 id="checkout-command-documentation">CHECKOUT Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>Checks out a file.</p>
+<p>Check-out the specified file or files using a search operation.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>checkout [-f file]</p>
+<p>checkout [-s search] [-f filePath]</p>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-f file - The file(s) to be checked out.</p>
+<p>-s search - The search operation to use.</p>
+<p>-f filePath - The file(s) to be checked out. This is the default parameter.</p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>checkout -f 'file2.sldasm'</p>
+<p>checkout -f &quot;file1.sldprt&quot;</p>
+<h2 id="remarks">REMARKS:</h2>
+<ul>
+<li>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
+</ul>
 
 </article>
 
         <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/CHECKOUT.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/GET.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -88,17 +88,24 @@
 <h1 id="get-command-documentation">GET Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>Downloads a version of the specified document to the local cache.</p>
+<p>Retrieves a specified version of a file or files.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>get [-f file]</p>
+<p>get [-s search] [-f filePath] [-ver version]</p>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-f file - The file to be downloaded.</p>
+<p>-s search - The search operation to use.</p>
+<p>-f filePath - The file(s) to retrieve. This is the default parameter.</p>
+<p>-ver version - The version of the file to retrieve.</p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>get -f 'file1.sldprt'</p>
+<p>get -f &quot;file1.sldprt&quot; -ver 2</p>
+<h2 id="remarks">REMARKS:</h2>
+<ul>
+<li>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
+</ul>
 
 </article>
 
         <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/GET.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
