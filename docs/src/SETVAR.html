@@ -88,15 +88,38 @@
 <h1 id="setvar-command-documentation">SETVAR Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>Sets the value of a variable for a specified file or folder.</p>
+<p>Sets the value of a variable for a specified file.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>setvar [-f file] -v variable_name -s value</p>
+<p>setvar [-filePath filePath|-search search] -var variableName -val value [-configs configNames]</p>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-f file - The file or folder to set the variable for.
--v variable_name - The variable to set.
--s value - The value to assign to the variable.</p>
+<p>-filePath filePath - The file to set the variable for.</p>
+<p>-var variableName - The variable to set.</p>
+<p>-val value - The value to assign to the variable.</p>
+<p>-configs configNames - The configuration names to set the variable for, separated by commas.</p>
+<p>-search search - The search operation to use.</p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>setvar -f &quot;file1.sldprt&quot; -v &quot;CustomVar&quot; -s &quot;NewValue&quot;</p>
+<p>setvar -filePath &quot;file1.sldprt&quot; -var &quot;CustomVar&quot; -value &quot;NewValue&quot;</p>
+<h2 id="remarks">REMARKS:</h2>
+<ul>
+<li><p>The <code>val</code> parameter gets evaluated by the <code>EvaluateAliases</code> function. This function allows you to use placeholders in the new value, which will be replaced with actual values from the file. This can be useful to dynamically generate new values based on file properties or other variables. The following placeholders are supported:</p>
+<ul>
+<li><code>$filename</code> - The file name without extension.</li>
+<li><code>$id</code> - The file ID.</li>
+<li><code>$revision</code> - The current revision of the file.</li>
+<li><code>$date</code> - The current date.</li>
+<li><code>$time</code> - The current time.</li>
+<li><code>$version</code> - The current version of the file.</li>
+<li><code>$extension</code> - The file extension.</li>
+</ul>
+<p>Additionally, you can use variables enclosed in square brackets (e.g., <code>[VariableName]</code>) to include values from other variables.</p>
+</li>
+<li><p>The configuration names should be separated by commas.</p>
+</li>
+<li><p>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</p>
+</li>
+</ul>
+<h3 id="example">Example:</h3>
+<p>If you use the value <code>&quot;$filename_$date_$version&quot;</code>, it will be replaced with the file name, current date, and version, resulting in something like <code>&quot;oldname_10-12-2023_3&quot;</code>.</p>
 
 </article>
 

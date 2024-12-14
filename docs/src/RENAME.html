@@ -88,14 +88,33 @@
 <h1 id="rename-command-documentation">RENAME Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>Renames a specified file or a group of files.</p>
+<p>Renames a specified file.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>rename [-f file] -n new_name</p>
+<p>rename [-filePath filePath] [-val value] [-search search]</p>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-f file - The file(s) to rename.
--n new_name - The new name for the file.</p>
+<p>-filePath filePath - The filerename.
+-val value - The new name for the file.
+-search search - The search operation to use.</p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>rename -f &quot;file1.sldprt&quot; -n &quot;new_file.sldprt&quot;</p>
+<p>rename -filePath &quot;oldname.sldprt&quot; -val &quot;newname.sldprt&quot;</p>
+<h2 id="remarks">REMARKS:</h2>
+<ul>
+<li>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
+</ul>
+<h2 id="value-evaluation">VALUE EVALUATION:</h2>
+<p>The <code>value</code> parameter gets evaluated by PDMShell. PDMShell allows you to use placeholders in the new name, which will be replaced with actual values from the file. This can be useful to dynamically generate new names based on file properties or other variables. The following placeholders are supported:</p>
+<ul>
+<li><code>$filename</code> - The file name without extension.</li>
+<li><code>$id</code> - The file ID.</li>
+<li><code>$revision</code> - The current revision of the file.</li>
+<li><code>$date</code> - The current date.</li>
+<li><code>$time</code> - The current time.</li>
+<li><code>$version</code> - The current version of the file.</li>
+<li><code>$extension</code> - The file extension.</li>
+</ul>
+<p>Additionally, you can use variables enclosed in square brackets (e.g., <code>[VariableName]</code>) to include values from other variables.</p>
+<h3 id="example">Example:</h3>
+<p>If you use the value <code>&quot;$filename_$date_$version&quot;</code>, it will be replaced with the file name, current date, and version, resulting in something like <code>&quot;oldname_10-12-2023_3&quot;</code>.</p>
 
 </article>
 
