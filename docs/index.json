@@ -6,8 +6,8 @@
   },
   "index.html": {
     "href": "index.html",
-    "title": "PDMShell | PDMShell",
-    "keywords": "PDMShell Welcome to the PDMShell Help Center. Here, you will find the official documentation for PDMShell, a command-line interpreter designed to streamline and automate tasks within SOLIDWORKS PDM Professional. We also provide helpful articles on PDM best practices and tooling. Before submitting a support ticket, we highly recommend reviewing the documentation and troubleshooting guides available on this site. Getting Started Click on Help Center to get started. Contact Us For more information or to get in touch with our support team, please refer to the Contact Us page."
+    "title": "| PDMShell",
+    "keywords": "PDMShell, a command-line interpreter designed to streamline and automate tasks within SOLIDWORKS PDM Professional. We also provide helpful articles on PDM best practices and tooling. Before submitting a support ticket, we highly recommend reviewing the documentation and troubleshooting guides available on this site. Click on PDM Commands to get started. Sessions Management PDMShell allows you to manage your sessions efficiently, ensuring that you can keep track of your work and maintain a smooth workflow. IntelliSense PDMShell features IntelliSense to help you write commands faster and with fewer errors. This feature provides auto-completion and suggestions as you type. Advanced Search PDMShell includes advanced search capabilities, allowing you to find files and folders quickly and efficiently. Commands List With a comprehensive list of commands, PDMShell provides you with the tools you need to perform a wide range of PDM operations from the command line. Contact Us For more information or to get in touch with our support team, please refer to the Contact Us page."
   },
   "src/CD.html": {
     "href": "src/CD.html",

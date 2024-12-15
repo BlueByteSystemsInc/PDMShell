@@ -597,6 +597,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/commandslist.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/commandslist.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/demo.mp4",
       "output": {
         "resource": {
@@ -657,6 +667,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/intelisense.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/intelisense.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/logo.png",
       "output": {
         "resource": {
@@ -691,6 +711,26 @@
       "output": {
         "resource": {
           "relative_path": "images/print.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/search.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/search.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sessions.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sessions.png"
         }
       },
       "version": ""

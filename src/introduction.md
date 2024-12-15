@@ -1,10 +1,5 @@
 # Introduction to PDMShell
-<div align="center"  >  
-<video src="../images/demo.mp4" 
-width="800"  height="600"
-auto-play="true"  muted="muted" controls>
-</video>
-</div>
+
 
 Welcome to **PDMShell**, the command-line interpreter designed specifically for **SOLIDWORKS PDM Professional**. PDMShell provides engineers and IT professionals with a powerful and flexible tool for automating and streamlining tasks within the SOLIDWORKS PDM environment. By integrating command-line functionality, PDMShell allows users to perform routine PDM operations quickly, efficiently, and with greater control over their PDM data management processes.
 
