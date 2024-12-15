@@ -7,6 +7,7 @@ _layout: landing
 
 <div align="center" style="background-color: black; width: 100%; margin-bottom: 20px;">  
   <video src="../images/demo.mp4" 
+  style="width: 100%; max-width: 800px; height: auto;"
   auto-play="true" muted="muted" controls>
   </video>
 </div>
