@@ -47,7 +47,9 @@ _layout: landing
  
 
 <div align="center"  >  
+  <a href="https://apps.microsoft.com/detail/XPFFXTTJDCW85C?hl=en-US&gl=CA&ocid=pdpshare" target="_blank">
   <img src="../images/microsoftstore.png" alt="IntelliSense" width="300" height="150">
+</a>
 </div>
 
 ## Contact Us
