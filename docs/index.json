@@ -119,15 +119,30 @@
     "title": "QUIT Command Documentation | PDMShell",
     "keywords": "QUIT Command Documentation DESCRIPTION: Quits the application. SYNTAX: quit PARAMETERS: None EXAMPLES: quit"
   },
+  "src/REBOOT.html": {
+    "href": "src/REBOOT.html",
+    "title": "REBOOT Command Documentation | PDMShell",
+    "keywords": "REBOOT Command Documentation DESCRIPTION: Hard PDM reboot. SYNTAX: reboot PARAMETERS: None EXAMPLES: reboot REMARKS: This command uses taskkill from the command prompt to kill explorer.exe and edmserver.exe then restart explorer.exe. It requires PDM to be run as an administrator."
+  },
   "src/RENAME.html": {
     "href": "src/RENAME.html",
     "title": "RENAME Command Documentation | PDMShell",
     "keywords": "RENAME Command Documentation DESCRIPTION: Renames a specified file. SYNTAX: rename [-filePath filePath] [-val value] [-search search] PARAMETERS: -filePath filePath - The filerename. -val value - The new name for the file. -search search - The search operation to use. EXAMPLES: rename -filePath \"oldname.sldprt\" -val \"newname.sldprt\" REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard. VALUE EVALUATION: The value parameter gets evaluated by PDMShell. PDMShell allows you to use placeholders in the new name, which will be replaced with actual values from the file. This can be useful to dynamically generate new names based on file properties or other variables. The following placeholders are supported: $filename - The file name without extension. $id - The file ID. $revision - The current revision of the file. $date - The current date. $time - The current time. $version - The current version of the file. $extension - The file extension. Additionally, you can use variables enclosed in square brackets (e.g., [VariableName]) to include values from other variables. Example: If you use the value \"$filename_$date_$version\", it will be replaced with the file name, current date, and version, resulting in something like \"oldname_10-12-2023_3\"."
   },
+  "src/RUNSCRIPT.html": {
+    "href": "src/RUNSCRIPT.html",
+    "title": "RUNSCRIPT Command Documentation | PDMShell",
+    "keywords": "RUNSCRIPT Command Documentation DESCRIPTION: Runs a PDMShell script. SYNTAX: runscript [-filePath filePath] PARAMETERS: -filePath file path to the script file. EXAMPLES: runscript -source pdmshell.script In the example above the pdmshell.script exists in the current directory. REMARKS: Script file must be stored in PDM. Commands like cls and quit are not supported in scripting. A good way to start creating a script is the start notepad.exe command. Use it to create a new text file and copy the commands from the PDMShell session."
+  },
   "src/SETVAR.html": {
     "href": "src/SETVAR.html",
     "title": "SETVAR Command Documentation | PDMShell",
     "keywords": "SETVAR Command Documentation DESCRIPTION: Sets the value of a variable for a specified file. SYNTAX: setvar [-filePath filePath|-search search] -var variableName -val value [-configs configNames] PARAMETERS: -filePath filePath - The file to set the variable for. -var variableName - The variable to set. -val value - The value to assign to the variable. -configs configNames - The configuration names to set the variable for, separated by commas. -search search - The search operation to use. EXAMPLES: setvar -filePath \"file1.sldprt\" -var \"CustomVar\" -value \"NewValue\" REMARKS: The val parameter gets evaluated by the EvaluateAliases function. This function allows you to use placeholders in the new value, which will be replaced with actual values from the file. This can be useful to dynamically generate new values based on file properties or other variables. The following placeholders are supported: $filename - The file name without extension. $id - The file ID. $revision - The current revision of the file. $date - The current date. $time - The current time. $version - The current version of the file. $extension - The file extension. Additionally, you can use variables enclosed in square brackets (e.g., [VariableName]) to include values from other variables. The configuration names should be separated by commas. The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard. Example: If you use the value \"$filename_$date_$version\", it will be replaced with the file name, current date, and version, resulting in something like \"oldname_10-12-2023_3\"."
+  },
+  "src/SETVARSFROMSOURCE.html": {
+    "href": "src/SETVARSFROMSOURCE.html",
+    "title": "SETVARSFROMSOURCE Command Documentation | PDMShell",
+    "keywords": "SETVARSFROMSOURCE Command Documentation DESCRIPTION: Sets variables for multiple files using a CSV file as the source. SYNTAX: setvarsfromsource -source csvFilePath PARAMETERS: -source csvFilePath - The CSV file containing the file IDs and variable values. CSV FILE FORMAT: The CSV file should have the following format: FileID,Variable1,Variable2,... file1.sldprt,Value1,Value2,... file2.sldprt,Value1,Value2,... EXAMPLES: setvarsfromsource -source \"variables.csv\" REMARKS: The CSV file should have the first column as the file ID and the subsequent columns as the variable names. The best way to generate a source CSV is to use the dir command on a folder with the -csv parameter, like: dir -csv data.csv"
   },
   "src/START.html": {
     "href": "src/START.html",

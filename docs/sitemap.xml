@@ -2,199 +2,217 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pdmshell.bluebyte.biz/README.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/index.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/CD.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/CHECKIN.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/CHECKOUT.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/CLS.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/DIR.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/DUMP.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/EDITVARS.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/FROGLEAP.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/GET.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/GETNAME.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/GETVAR.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/GETVARFROMDB.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/HELP.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/HISTORY.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/INBOX.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/INFOVAR.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/KILL.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/LOGIN.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/MKDIR.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/MKVAR.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/PRINT.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/QUIT.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pdmshell.bluebyte.biz/src/REBOOT.html</loc>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/RENAME.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pdmshell.bluebyte.biz/src/RUNSCRIPT.html</loc>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/SETVAR.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pdmshell.bluebyte.biz/src/SETVARSFROMSOURCE.html</loc>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/START.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/UNDOCHECKOUT.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/USERS.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/VERSION.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/cdpdm.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/eula.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pdmshell.bluebyte.biz/src/introduction.html</loc>
-    <lastmod>2025-02-18T09:55:09-08:00</lastmod>
+    <lastmod>2025-02-24T12:54:30-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

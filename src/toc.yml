@@ -6,6 +6,8 @@
 - name: PDMShell Commands
   expanded: true
   items:
+    - name: RUNSCRIPT
+      href: RUNSCRIPT.md
     - name: CHECKIN
       href: checkin.md
     - name: CHECKOUT
@@ -18,6 +20,8 @@
       href: dir.md
     - name: DUMP
       href: dump.md
+    - name: SETVARSFROMSOURCE
+      href: SETVARSFROMSOURCE.md
     - name: EDITVARS
       href: editvars.md
     - name: FROGLEAP
@@ -60,3 +64,5 @@
       href: undocheckout.md
     - name: VERSION
       href: version.md
+    - name: REBOOT
+      href: REBOOT.md

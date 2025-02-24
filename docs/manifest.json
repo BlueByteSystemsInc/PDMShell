@@ -967,6 +967,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/REBOOT.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/REBOOT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/RENAME.md",
       "output": {
         ".html": {
@@ -977,10 +987,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/RUNSCRIPT.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/RUNSCRIPT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/SETVAR.md",
       "output": {
         ".html": {
           "relative_path": "src/SETVAR.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/SETVARSFROMSOURCE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/SETVARSFROMSOURCE.html"
         }
       },
       "version": ""
