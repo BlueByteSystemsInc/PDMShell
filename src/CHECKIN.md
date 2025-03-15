@@ -1,15 +1,13 @@
 # CHECKIN Command Documentation
 
 ## DESCRIPTION:
-Check-in the specified file or files using a search operation.
+Performs a check-in operation on a specified file or many files.
 
 ## SYNTAX:
-checkin [-s search] [-b batch] [-f filePath] [-cmt comment] [-ciopt Checkinoptions]
+checkin [-s search] [-f filePath] [-cmt comment] [-ciopt Checkinoptions]
 
 ## PARAMETERS:
 -s search - The search operation to use.
-
--b batch - Forces PDM to use the BatchUtility in PDM to process a large number of files.
 
 -f filePath - The file(s) to be checked in. This is the default parameter.
 

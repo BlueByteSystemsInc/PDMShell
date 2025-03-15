@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>CD Command Documentation | PDMShell </title>
+      <title>CLEARCACHE Command Documentation | PDMShell </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="CD Command Documentation | PDMShell ">
+      <meta name="title" content="CLEARCACHE Command Documentation | PDMShell ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/CD.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/CLEARCACHE.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,27 +85,22 @@
         </div>
 
         <article data-uid="">
-<h1 id="cd-command-documentation">CD Command Documentation</h1>
+<h1 id="clearcache-command-documentation">CLEARCACHE Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>Changes the current PDM directory.</p>
+<p>Clears the local cache of a folder or many files</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>cd [-d directory]</p>
+<p>clearcache [-d directory] [-s search]</p>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-d directory - The directory to switch to. The directory parameter can be a relative or absolute path in PDM.</p>
+<p>-d directory - The directory to clear the local cache of.
+-s search - Search query.</p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>cd -directory 'C:\Vault\NewFolder' // Navigates its newFolder
-cd.. // Navigates to the parent folder
-cd\ // Navigates to the root of the vault</p>
-<h2 id="remarks">REMARKS:</h2>
-<ul>
-<li>If the user just created a new folder and wants to <code>cd</code> to it using autocomplete, they need to use the <code>dir</code> command with the <code>-refresh</code> parameter to force the session to load the current files and sub-folders in the active directory. Using <code>-refresh</code> might affect the performance of the session if the current folder has too many files and sub-folders.</li>
-</ul>
+<p>The search parameter allows to search for files in the current directory and remove their local copies.</p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/CD.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/CLEARCACHE.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

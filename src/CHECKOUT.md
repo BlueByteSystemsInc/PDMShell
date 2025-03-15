@@ -1,7 +1,7 @@
 # CHECKOUT Command Documentation
 
 ## DESCRIPTION:
-Check-out the specified file or files using a search operation.
+Performs a check-out operation on a specified file or many files.
 
 ## SYNTAX:
 checkout [-s search] [-f filePath]

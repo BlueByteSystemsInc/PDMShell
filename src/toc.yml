@@ -66,3 +66,13 @@
       href: version.md
     - name: REBOOT
       href: REBOOT.md
+    - name: DELETE
+      href: DELETE.md
+    - name: RENAMEFROMSOURCE
+      href: RENAMEFROMSOURCE.md
+    - name: DESTORY
+      href: DESTORY.md
+    - name: CLEARCACHE
+      href: CLEARCACHE.md
+    - name: CLEARCACHE
+      href: CLEARCACHE.md

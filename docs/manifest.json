@@ -777,10 +777,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/CLEARCACHE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/CLEARCACHE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/CLS.md",
       "output": {
         ".html": {
           "relative_path": "src/CLS.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/DESTROY.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/DESTROY.html"
         }
       },
       "version": ""
