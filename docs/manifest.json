@@ -697,6 +697,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/migrate.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/migrate.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell.gif",
       "output": {
         "resource": {
