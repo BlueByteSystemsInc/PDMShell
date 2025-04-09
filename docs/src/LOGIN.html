@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/LOGIN.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/LOGIN.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -90,21 +90,29 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Authenticates a user to a specified vault.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>login [-a|-win|-ex] -u username -p password -v vault_name</p>
+<pre><code class="lang-bash">login [-auto|-win|-external] -username &lt;username&gt; -password &lt;password&gt; -vaultname &lt;vault_name&gt;
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>Auto -a  Automatic authentication with current user. Displays login dialog box if not logged in.</p>
-<p>win -w  Automatic Windows authentication with current user. Does not display login dialog box.</p>
-<p>External -ex Toggle ensures that a license is consumed.</p>
-<p>Username -u  Username.</p>
-<p>Password -p  Password.</p>
-<p>vaultName -v  Vault Name.</p>
+<p>Auto: Automatic authentication with current user. Displays login dialog box if not logged in.</p>
+<p>win: Automatic Windows authentication with current user. Does not display login dialog box.</p>
+<p>External: Toggle ensures that a license is consumed.</p>
+<p>Username:  Username.</p>
+<p>Password:  Password.</p>
+<p>vaultName: Vault Name.</p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>login -u admin -p &quot;password&quot; -v &quot;bluebyte&quot;</p>
+<pre><code class="lang-bash">login -username admin -password &quot;password&quot; -vaultName &quot;bluebyte&quot;
+</code></pre>
+<h1 id="remarks">REMARKS:</h1>
+<p>The <code>external</code> parameter allows an application that is not supplied and supported by SOLIDWORKS Corporation to:</p>
+<ul>
+<li>Log into SOLIDWORKS PDM Professional</li>
+<li>Log into a vault view</li>
+</ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/LOGIN.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/LOGIN.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

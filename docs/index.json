@@ -107,7 +107,7 @@
   "src/LOGIN.html": {
     "href": "src/LOGIN.html",
     "title": "LOGIN Command Documentation | PDMShell",
-    "keywords": "LOGIN Command Documentation DESCRIPTION: Authenticates a user to a specified vault. SYNTAX: login [-a|-win|-ex] -u username -p password -v vault_name PARAMETERS: Auto -a Automatic authentication with current user. Displays login dialog box if not logged in. win -w Automatic Windows authentication with current user. Does not display login dialog box. External -ex Toggle ensures that a license is consumed. Username -u Username. Password -p Password. vaultName -v Vault Name. EXAMPLES: login -u admin -p \"password\" -v \"bluebyte\""
+    "keywords": "LOGIN Command Documentation DESCRIPTION: Authenticates a user to a specified vault. SYNTAX: login [-auto|-win|-external] -username <username> -password <password> -vaultname <vault_name> PARAMETERS: Auto: Automatic authentication with current user. Displays login dialog box if not logged in. win: Automatic Windows authentication with current user. Does not display login dialog box. External: Toggle ensures that a license is consumed. Username: Username. Password: Password. vaultName: Vault Name. EXAMPLES: login -username admin -password \"password\" -vaultName \"bluebyte\" REMARKS: The external parameter allows an application that is not supplied and supported by SOLIDWORKS Corporation to: Log into SOLIDWORKS PDM Professional Log into a vault view"
   },
   "src/MKDIR.html": {
     "href": "src/MKDIR.html",
