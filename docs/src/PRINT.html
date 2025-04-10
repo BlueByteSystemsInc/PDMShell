@@ -90,13 +90,37 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Displays the biographical information about the specified file.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>print [-f file]</p>
+<pre><code class="lang-bash">print [-filePath|-id]
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-f file - The file to print biographical information for.</p>
+<p>-filePath: The file to print biographical information for.</p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>print -f file1.sldprt</p>
-<h2 id="preview">PREVIEW</h2>
-<p><img src="../images/print.png" alt="Print Command"></p>
+<pre><code class="lang-bash">print -filePath &quot;C:\SOLIDWORKSPDM\Bluebyte\API\Sandbox\fidget spinner\___108545.SLDPRT&quot;
+</code></pre>
+<p>The print command will print an output like the following:</p>
+<pre><code class="lang-bash">
+File Name     : ___108545.SLDPRT
+Local Path    : C:\SOLIDWORKSPDM\Bluebyte\API\Sandbox\fidget spinner\___108545.SLDPRT
+Folder Path   : \API\Sandbox\fidget spinner
+
+File ID       : 115310
+Folder ID     : 457
+
+HEXID         : 1C26E
+Archive Path  : E\0001C26E
+
+Checked out?  : False
+
+State ID      : 158
+State Name    : New State
+Current state : New State [Workflow: Vaulted]
+Current Ver   : 7
+Current Rev   : 
+
+Transitions   :
+Return Engineering [193] From New State [158] To In Design [9]
+
+</code></pre>
 
 </article>
 
