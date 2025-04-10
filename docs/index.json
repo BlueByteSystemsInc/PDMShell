@@ -1,192 +1,192 @@
 {
   "README.html": {
     "href": "README.html",
-    "title": "Old Documentation: | PDMShell",
+    "title": "Old Documentation: | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "Old Documentation: https://bluebyte.biz/docs/pdm2excel/ https://bluebyte.biz/docs/pdm-convert-task-extended/ https://bluebyte.biz/docs/revisionsync/ Build To build the docs: Clone repo cd to repo folder type bin\\docfx.exe docfx.json --serve and press enter go to http://localhost:8080 in your browser to view Ctrl + C to end the webserver git add . git commit -m \"added docs\" git push Live site Commits will take roughly a few minutes to render on github pages. See live site here. Edits Make changes to the src folder. It contains the toc.yml (Table of Content) and the articles in markdown (.md files) Images Add images to the images folder and use <img src=\"../images/myimage.png\"/> to render them. Links See how links work in introduction.md. Tool Use VSCode."
   },
   "index.html": {
     "href": "index.html",
-    "title": "| PDMShell",
-    "keywords": "body { background-color: #121212; color: #e0e0e0; font-family: Arial, sans-serif; } h2 { color: #bb86fc; } p { color: #e0e0e0; } a { color: #bb86fc; text-decoration: none; } a:hover { text-decoration: underline; } .container { display: flex; flex-wrap: wrap; justify-content: center; margin: 20px 0; } .card { background-color: #1f1f1f; border: 1px solid #333; border-radius: 8px; margin: 10px; padding: 20px; width: 300px; text-align: center; } .card img { max-width: 100%; height: auto; border-radius: 8px; } .video-container { background-color: black; width: 100%; margin-bottom: 20px; text-align: center; } .video-container video { width: 100%; max-width: 800px; height: auto; border-radius: 8px; } .download-button { display: inline-block; background-color: #bb86fc; color: #ffffff; font-weight: bold; text-transform: uppercase; padding: 10px 20px; border-radius: 8px; margin: 20px 0; text-align: center; } .download-button:hover { background-color: #9b6fcf; } PDMShell, a command-line interpreter designed to streamline and automate tasks within SOLIDWORKS PDM Professional. We also provide helpful articles on PDM best practices and tooling. Before submitting a support ticket, we highly recommend reviewing the documentation and troubleshooting guides available on this site. Click on PDM Commands to get started. ⬇️ Download PDMShell Directly Sessions Management PDMShell allows you to manage your sessions efficiently, ensuring that you can keep track of your work and maintain a smooth workflow. IntelliSense PDMShell features IntelliSense to help you write commands faster and with fewer errors. This feature provides auto-completion and suggestions as you type. Advanced Search PDMShell includes advanced search capabilities, allowing you to find files and folders quickly and efficiently. Commands List With a comprehensive list of commands, PDMShell provides you with the tools you need to perform a wide range of PDM operations from the command line. Migrating Files to the Vault PDMShell simplifies the process of migrating files to the vault, ensuring a smooth and efficient transition. Frog Leaping Versions PDMShell supports frog leaping versions, allowing you to skip intermediate versions and go directly to the desired version. Delete PDMShell provides commands to delete files and folders from the vault, ensuring that you can manage your data effectively. Renaming PDMShell includes commands to rename files and folders, making it easy to keep your data organized. Set Card Data PDMShell allows you to set card data for files and folders, ensuring that your metadata is always up to date. ⬇️ Download PDMShell Directly Free Version PDMShell is free to use and allows you to test all commands with some limits without committing to a license. To buy a license, please visit the PDMShell Product Page. Contact Us For more information or to get in touch with our support team, please refer to the Contact Us page."
+    "title": "PDMShell | Powershell like features for SOLIDWORKS PDM Professional",
+    "keywords": "body { background-color: #121212; color: #e0e0e0; font-family: Arial, sans-serif; } h2 { color: #bb86fc; } p { color: #e0e0e0; } a { color: #bb86fc; text-decoration: none; } a:hover { text-decoration: underline; } .container { display: flex; flex-wrap: wrap; justify-content: center; margin: 20px 0; } .card { background-color: #1f1f1f; border: 1px solid #333; border-radius: 8px; margin: 10px; padding: 20px; width: 300px; text-align: center; } .card img { max-width: 100%; height: auto; border-radius: 8px; } .video-container { background-color: black; width: 100%; padding: 10px; margin: auto; text-align: center; } .video-container video { width: 100%; max-width: 800px; height: auto; border-radius: 8px; } .download-button { display: inline-block; background-color: #bb86fc; color: #ffffff; font-weight: bold; text-transform: uppercase; padding: 10px 20px; border-radius: 8px; margin: 20px 0; text-align: center; } .download-button:hover { background-color: #9b6fcf; } body { background-color: #1a1a1a; margin: 0; font-family: 'Open Sans', sans-serif; } .header-container { display: flex; padding: 10px; margin: auto; align-items: center; gap: 20px; flex-wrap: wrap; } .header-text { color: white; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); font-weight: 600; font-size: 32px; margin: auto; text-transform: uppercase; letter-spacing: 1px; line-height: 1.4; max-width: 600px; } @media (max-width: 768px) { .header-container { flex-direction: column; align-items: flex-start; } } PowerShell-Like Features For SOLIDWORKS PDM Professional 👂🔇 This video autoplays silently so you can watch without sound. Unmute if you'd like to hear it. PDMShell, a command-line interpreter designed to streamline and automate tasks within SOLIDWORKS PDM Professional. We also provide helpful articles on PDM best practices and tooling. Before submitting a support ticket, we highly recommend reviewing the documentation and troubleshooting guides available on this site. Click on PDM Commands to get started. ⬇️ Download PDMShell Directly Sessions Management PDMShell allows you to manage your sessions efficiently, ensuring that you can keep track of your work and maintain a smooth workflow. IntelliSense PDMShell features IntelliSense to help you write commands faster and with fewer errors. This feature provides auto-completion and suggestions as you type. Advanced Search PDMShell includes advanced search capabilities, allowing you to find files and folders quickly and efficiently. Commands List With a comprehensive list of commands, PDMShell provides you with the tools you need to perform a wide range of PDM operations from the command line. Migrating Files to the Vault PDMShell simplifies the process of migrating files to the vault, ensuring a smooth and efficient transition. Frog Leaping Versions PDMShell supports frog leaping versions, allowing you to skip intermediate versions and go directly to the desired version. Delete PDMShell provides commands to delete files and folders from the vault, ensuring that you can manage your data effectively. Renaming PDMShell includes commands to rename files and folders, making it easy to keep your data organized. Set Card Data PDMShell allows you to set card data for files and folders, ensuring that your metadata is always up to date. ⬇️ Download PDMShell Directly Free Version PDMShell is free to use and allows you to test all commands with some limits without committing to a license. To buy a license, please visit the PDMShell Product Page. Contact Us For more information or to get in touch with our support team, please refer to the Contact Us page."
   },
   "src/CD.html": {
     "href": "src/CD.html",
-    "title": "CD Command Documentation | PDMShell",
-    "keywords": "CD Command Documentation DESCRIPTION: Changes the current PDM directory. SYNTAX: cd [-d directory] PARAMETERS: -d directory - The directory to switch to. The directory parameter can be a relative or absolute path in PDM. EXAMPLES: cd -directory 'C:\\Vault\\NewFolder' // Navigates its newFolder cd.. // Navigates to the parent folder cd\\ // Navigates to the root of the vault REMARKS: If the user just created a new folder and wants to cd to it using autocomplete, they need to use the dir command with the -refresh parameter to force the session to load the current files and sub-folders in the active directory. Using -refresh might affect the performance of the session if the current folder has too many files and sub-folders."
+    "title": "CD Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
+    "keywords": "CD Command Documentation DESCRIPTION: Changes the current PDM directory. SYNTAX: cd [-d|-directory] directory PARAMETERS: -directory (or d): The directory to switch to. The directory parameter can be a relative or absolute path in PDM. EXAMPLES: cd -directory 'C:\\Vault\\NewFolder' # Navigates its newFolder cd.. # Navigates to the parent folder cd\\ # Navigates to the root of the vault REMARKS: If the user just created a new folder and wants to cd to it using autocomplete, they need to use the dir command with the -refresh parameter to force the session to load the current files and sub-folders in the active directory. Using -refresh might affect the performance of the session if the current folder has too many files and sub-folders. directory is the default parameter. You do not need to specify it if it is the only parameter in your command. Example: cd api #navigates to the api folder"
   },
   "src/CHECKIN.html": {
     "href": "src/CHECKIN.html",
-    "title": "CHECKIN Command Documentation | PDMShell",
+    "title": "CHECKIN Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "CHECKIN Command Documentation DESCRIPTION: Performs a check-in operation on a specified file or many files. SYNTAX: checkin [-s search] [-f filePath] [-cmt comment] [-ciopt Checkinoptions] PARAMETERS: -s search - The search operation to use. -f filePath - The file(s) to be checked in. This is the default parameter. -cmt comment - The comment to add to the check-in. -ciopt Checkinoptions - The check-in options to use. EXAMPLES: checkin -f \"file1.sldprt\" REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard. If combining Checkinoptions parameters, the user needs to add + between the values. Checkinoptions Parameter Values: Member Description EdmUnlock_FailOnRegenerationNeed Fail if the file needs to be regenerated in the CAD program. NOTE: Only files resaved in SOLIDWORKS 2009 or later can trigger this flag EdmUnlock_ForceUnlock Unlock the file even if it is not modified EdmUnlock_IgnoreCorruptFile Ignore files with file formats unrecognized by SOLIDWORKS PDM Professional; without this flag, SOLIDWORKS PDM Professional returns E_EDM_INVALID_FILE if it encounters a corrupt file or a file containing a newer format than SOLIDWORKS PDM Professional can handle EdmUnlock_IgnoreReferences Silently unlock parent files without their references EdmUnlock_IgnoreRefsNotLockedByCaller Ignore references not locked by caller EdmUnlock_IgnoreRefsOutsideVault Ignore references to files outside the vault EdmUnlock_KeepLocked Keep the file checked out after creating the new version in the archive EdmUnlock_OverwriteLatestVersion Do not create a new version; overwrite the last version of the file with new changes EdmUnlock_RemoveLocalCopy Remove the local copy of the file from the hard disk after the file has been checked in EdmUnlock_Simple Check in the file using default behavior"
   },
   "src/CHECKOUT.html": {
     "href": "src/CHECKOUT.html",
-    "title": "CHECKOUT Command Documentation | PDMShell",
+    "title": "CHECKOUT Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "CHECKOUT Command Documentation DESCRIPTION: Performs a check-out operation on a specified file or many files. SYNTAX: checkout [-s search] [-f filePath] PARAMETERS: -s search - The search operation to use. -f filePath - The file(s) to be checked out. This is the default parameter. EXAMPLES: checkout -f \"file1.sldprt\" REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard."
   },
   "src/CLEARCACHE.html": {
     "href": "src/CLEARCACHE.html",
-    "title": "CLEARCACHE Command Documentation | PDMShell",
+    "title": "CLEARCACHE Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "CLEARCACHE Command Documentation DESCRIPTION: Clears the local cache of a folder or many files SYNTAX: clearcache [-d directory] [-s search] PARAMETERS: -d directory - The directory to clear the local cache of. -s search - Search query. EXAMPLES: The search parameter allows to search for files in the current directory and remove their local copies."
   },
   "src/CLS.html": {
     "href": "src/CLS.html",
-    "title": "CLS Command Documentation | PDMShell",
+    "title": "CLS Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "CLS Command Documentation DESCRIPTION: Clears the screen. SYNTAX: cls PARAMETERS: None EXAMPLES: cls"
   },
   "src/DESTROY.html": {
     "href": "src/DESTROY.html",
-    "title": "DESTORY Command Documentation | PDMShell",
+    "title": "DESTORY Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "DESTORY Command Documentation DESCRIPTION: Destroy the deleted files in a folder. SYNTAX: clearcache [-d directory] [-recursive] PARAMETERS: -d directory - The directory to destory. -recursive - Enables recursive search."
   },
   "src/DIR.html": {
     "href": "src/DIR.html",
-    "title": "DIR Command Documentation | PDMShell",
+    "title": "DIR Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "DIR Command Documentation DESCRIPTION: Displays a list of files and subdirectories in a directory. SYNTAX: dir [-d directory] [-sort sort] [-cols columns] [-csv CSV] [-refresh] PARAMETERS: -d directory - The directory to display files from. -sort sort - The sorting order for the displayed files. -cols columns - The columns to display, separated by commas. -csv CSV - Export the directory listing to a CSV file. -refresh - Refresh the session to load the current files and sub-folders in the active directory. EXAMPLES: dir -d \"C:\\Vault\\Documents\" dir -d \"C:\\Vault\\Documents\" -sort \"name\" -cols \"name,size,date\" -csv \"output.csv\" -refresh REMARKS: Use the -refresh parameter to force the session to load the current files and sub-folders in the active directory. Do not use this when the current folder has many items. The CSV file will be checked into the current directory."
   },
   "src/DUMP.html": {
     "href": "src/DUMP.html",
-    "title": "DUMP Command Documentation | PDMShell",
+    "title": "DUMP Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "DUMP Command Documentation DESCRIPTION: Dumps all session text into a log file. SYNTAX: dump [-l logfile] PARAMETERS: -l logfile - The log file to dump session details into. EXAMPLES: dump -l \"sessionlog.txt\""
   },
   "src/EDITVARS.html": {
     "href": "src/EDITVARS.html",
-    "title": "EDITVARS Command Documentation | PDMShell",
+    "title": "EDITVARS Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "EDITVARS Command Documentation DESCRIPTION: Shows the variable editor manager. SYNTAX: editvars PARAMETERS: None EXAMPLES: editvars PREVIEW:"
   },
   "src/FROGLEAP.html": {
     "href": "src/FROGLEAP.html",
-    "title": "FROGLEAP Command Documentation | PDMShell",
+    "title": "FROGLEAP Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "FROGLEAP Command Documentation DESCRIPTION: Frog leaps an old version as newest. SYNTAX: frogleap [-s search] [-f filePath] [-oldVersion oldVersion] PARAMETERS: -s search - The search operation to use. -f filePath - The file(s) to be frog leaped. This is the default parameter. -oldVersion oldVersion - The old version to leap. This is an integer. EXAMPLES: frogleap -f \"file1.sldprt\" -oldVersion 2 REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard."
   },
   "src/GET.html": {
     "href": "src/GET.html",
-    "title": "GET Command Documentation | PDMShell",
+    "title": "GET Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "GET Command Documentation DESCRIPTION: Retrieves a specified version of a file or files. SYNTAX: get [-s search] [-f filePath] [-ver version] PARAMETERS: -s search - The search operation to use. -f filePath - The file(s) to retrieve. This is the default parameter. -ver version - The version of the file to retrieve. EXAMPLES: get -f \"file1.sldprt\" -ver 2 REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard."
   },
   "src/GETNAME.html": {
     "href": "src/GETNAME.html",
-    "title": "GETNAME Command Documentation | PDMShell",
+    "title": "GETNAME Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "GETNAME Command Documentation DESCRIPTION: Returns the name of an object (folder or file) from a PDM ID. SYNTAX: getname [-id object_id] PARAMETERS: -id object_id - The PDM ID of the object. EXAMPLES: getname -id 12345 PREVIEW:"
   },
   "src/GETVAR.html": {
     "href": "src/GETVAR.html",
-    "title": "GETVAR Command Documentation | PDMShell",
+    "title": "GETVAR Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "GETVAR Command Documentation DESCRIPTION: Gets the value of a variable for a specified file or folder. SYNTAX: getvar [-f filePath] [-var variableName] [-configs configNames] [-clear] [-ver version] PARAMETERS: -f filePath - The file or folder to get the variable from. -var variableName - The variable name to retrieve. -configs configNames - The configuration names to retrieve the variable from, separated by commas. -clear - Clears the variable value. -ver version - The version of the file to retrieve the variable from. EXAMPLES: getvar -f \"file1.sldprt\" -var \"CustomVar\" REMARKS: The configuration names should be separated by commas. The variable must be in the data card."
   },
   "src/GETVARFROMDB.html": {
     "href": "src/GETVARFROMDB.html",
-    "title": "GETVARFROMDB Command Documentation | PDMShell",
+    "title": "GETVARFROMDB Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "GETVARFROMDB Command Documentation DESCRIPTION: Gets the value of a variable for a specified file or folder directly from the database. SYNTAX: getvarfromdb [-f filePath] [-var variableName] [-configs configNames] PARAMETERS: -f filePath - The file or folder to get the variable from. -var variableName - The variable name to retrieve from the database. -configs configNames - The configuration names to retrieve the variable from, separated by commas. EXAMPLES: getvarfromdb -f \"file1.sldprt\" -var \"CustomVar\" REMARKS: The configuration names should be separated by commas."
   },
   "src/HELP.html": {
     "href": "src/HELP.html",
-    "title": "HELP Command Documentation | PDMShell",
-    "keywords": "HELP Command Documentation DESCRIPTION: Provides help about a command. SYNTAX: help [-c command_name] PARAMETERS: -c command_name - The specific command you need help with. EXAMPLES: help -c cd"
+    "title": "HELP Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
+    "keywords": "HELP Command Documentation DESCRIPTION: Provides help about a command. SYNTAX: help [-command|-c] command_name PARAMETERS: -c command_name The specific command you need help with. EXAMPLES: help -c cd"
   },
   "src/HISTORY.html": {
     "href": "src/HISTORY.html",
-    "title": "HISTORY Command Documentation | PDMShell",
+    "title": "HISTORY Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "HISTORY Command Documentation DESCRIPTION: Prints the history of a file. SYNTAX: history [-s search] [-f filePath] PARAMETERS: -s search - The search operation to use. -f filePath - The file to get the history for. EXAMPLES: history -f \"file1.sldprt\" REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard. PREVIEW:"
   },
   "src/INBOX.html": {
     "href": "src/INBOX.html",
-    "title": "INBOX Command Documentation | PDMShell",
+    "title": "INBOX Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "INBOX Command Documentation DESCRIPTION: Opens the PDM inbox and sends a message as the logged-in user. SYNTAX: inbox [-m message] PARAMETERS: -m message - The message to send. EXAMPLES: inbox -m 'File checked in successfully'"
   },
   "src/INFOVAR.html": {
     "href": "src/INFOVAR.html",
-    "title": "INFOVAR Command Documentation | PDMShell",
+    "title": "INFOVAR Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "INFOVAR Command Documentation DESCRIPTION: Gets information about a variable. SYNTAX: infovar [-v variable_name] PARAMETERS: -v variable_name - The variable name to retrieve information for. EXAMPLES: infovar -v Description Preview"
   },
   "src/KILL.html": {
     "href": "src/KILL.html",
-    "title": "KILL Command Documentation | PDMShell",
+    "title": "KILL Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "KILL Command Documentation DESCRIPTION: Kills a process. SYNTAX: kill [-p process_name] PARAMETERS: -p process_name - The process to terminate (with extension) EXAMPLES: kill sldworks.exe REMARKS: This command uses taskkill from the command line. It requires PDM to be run as an administrator."
   },
   "src/LOGIN.html": {
     "href": "src/LOGIN.html",
-    "title": "LOGIN Command Documentation | PDMShell",
+    "title": "LOGIN Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "LOGIN Command Documentation DESCRIPTION: Authenticates a user to a specified vault. SYNTAX: login [-auto|-win|-external] -username <username> -password <password> -vaultname <vault_name> PARAMETERS: Auto: Automatic authentication with current user. Displays login dialog box if not logged in. win: Automatic Windows authentication with current user. Does not display login dialog box. External: Toggle ensures that a license is consumed. Username: Username. Password: Password. vaultName: Vault Name. EXAMPLES: login -username admin -password \"password\" -vaultName \"bluebyte\" REMARKS: The external parameter allows an application that is not supplied and supported by SOLIDWORKS Corporation to: Log into SOLIDWORKS PDM Professional Log into a vault view"
   },
   "src/MKDIR.html": {
     "href": "src/MKDIR.html",
-    "title": "MKDIR Command Documentation | PDMShell",
+    "title": "MKDIR Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "MKDIR Command Documentation DESCRIPTION: Creates a new folder. SYNTAX: mkdir [-d directory] PARAMETERS: -d directory - The folder to create. EXAMPLES: mkdir -d \"NewFolder\" Remarks: To get the new folder to show up in the auto-complete, please use the command cd -refresh"
   },
   "src/MKVAR.html": {
     "href": "src/MKVAR.html",
-    "title": "MKVAR Command Documentation | PDMShell",
+    "title": "MKVAR Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "MKVAR Command Documentation DESCRIPTION: Creates a new variable. SYNTAX: mkvar [-n name] [-varType varType] [-mkvarflags mkvarflags] [-mkvarattributes mkvarattributes] PARAMETERS: -n name - The name of the variable to create. -varType varType - The type of the variable. -mkvarflags mkvarflags - The flags for the variable. -mkvarattributes mkvarattributes - The attributes for the variable. Seperated by # EXAMPLES: mkvar -n \"NewVariable\" -varType \"Text\" -mkvarflags \"ReadOnly\" -mkvarattributes \"Attribute1#Attribute2\" VAR TYPE VALUES: Description None Text Int Float Bool Date MKVAR FLAGS VALUES: Value Description Unique Values of the variable must be unique; only used for files, ignored for folders Mandatory Missing values are not permitted; only used for files, ignored for folders VerFreeUpdateAll Every version and every revision, regardless access, workflow states etc., are affected by the variable update VerFreeLatest Only the latest version is affected by the variable update"
   },
   "src/PRINT.html": {
     "href": "src/PRINT.html",
-    "title": "PRINT Command Documentation | PDMShell",
+    "title": "PRINT Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "PRINT Command Documentation DESCRIPTION: Displays the biographical information about the specified file. SYNTAX: print [-filePath|-id] PARAMETERS: -filePath: The file to print biographical information for. EXAMPLES: print -filePath \"C:\\SOLIDWORKSPDM\\Bluebyte\\API\\Sandbox\\fidget spinner\\___108545.SLDPRT\" The print command will print an output like the following: File Name : ___108545.SLDPRT Local Path : C:\\SOLIDWORKSPDM\\Bluebyte\\API\\Sandbox\\fidget spinner\\___108545.SLDPRT Folder Path : \\API\\Sandbox\\fidget spinner File ID : 115310 Folder ID : 457 HEXID : 1C26E Archive Path : E\\0001C26E Checked out? : False State ID : 158 State Name : New State Current state : New State [Workflow: Vaulted] Current Ver : 7 Current Rev : Transitions : Return Engineering [193] From New State [158] To In Design [9]"
   },
   "src/QUIT.html": {
     "href": "src/QUIT.html",
-    "title": "QUIT Command Documentation | PDMShell",
+    "title": "QUIT Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "QUIT Command Documentation DESCRIPTION: Quits the application. SYNTAX: quit PARAMETERS: None EXAMPLES: quit"
   },
   "src/REBOOT.html": {
     "href": "src/REBOOT.html",
-    "title": "REBOOT Command Documentation | PDMShell",
+    "title": "REBOOT Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "REBOOT Command Documentation DESCRIPTION: Hard PDM reboot. SYNTAX: reboot PARAMETERS: None EXAMPLES: reboot REMARKS: This command uses taskkill from the command prompt to kill explorer.exe and edmserver.exe then restart explorer.exe. It requires PDM to be run as an administrator."
   },
   "src/RENAME.html": {
     "href": "src/RENAME.html",
-    "title": "RENAME Command Documentation | PDMShell",
+    "title": "RENAME Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "RENAME Command Documentation DESCRIPTION: Renames a specified file. SYNTAX: rename [-filePath filePath] [-val value] [-search search] PARAMETERS: -filePath filePath - The filerename. -val value - The new name for the file. -search search - The search operation to use. EXAMPLES: rename -filePath \"oldname.sldprt\" -val \"newname.sldprt\" REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard. VALUE EVALUATION: The value parameter gets evaluated by PDMShell. PDMShell allows you to use placeholders in the new name, which will be replaced with actual values from the file. This can be useful to dynamically generate new names based on file properties or other variables. The following placeholders are supported: $filename - The file name without extension. $id - The file ID. $revision - The current revision of the file. $date - The current date. $time - The current time. $version - The current version of the file. $extension - The file extension. Additionally, you can use variables enclosed in square brackets (e.g., [VariableName]) to include values from other variables. Example: If you use the value \"$filename_$date_$version\", it will be replaced with the file name, current date, and version, resulting in something like \"oldname_10-12-2023_3\"."
   },
   "src/RUNSCRIPT.html": {
     "href": "src/RUNSCRIPT.html",
-    "title": "RUNSCRIPT Command Documentation | PDMShell",
+    "title": "RUNSCRIPT Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "RUNSCRIPT Command Documentation DESCRIPTION: Runs a PDMShell script. SYNTAX: runscript [-filePath filePath] PARAMETERS: -filePath file path to the script file. EXAMPLES: runscript -source pdmshell.script In the example above the pdmshell.script exists in the current directory. REMARKS: Script file must be stored in PDM. Commands like cls and quit are not supported in scripting. A good way to start creating a script is the start notepad.exe command. Use it to create a new text file and copy the commands from the PDMShell session."
   },
   "src/SETVAR.html": {
     "href": "src/SETVAR.html",
-    "title": "SETVAR Command Documentation | PDMShell",
+    "title": "SETVAR Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "SETVAR Command Documentation DESCRIPTION: Sets the value of a variable for a specified file. SYNTAX: setvar [-filePath filePath|-search search] -var variableName -val value [-configs configNames] PARAMETERS: -filePath filePath - The file to set the variable for. -var variableName - The variable to set. -val value - The value to assign to the variable. -configs configNames - The configuration names to set the variable for, separated by commas. -search search - The search operation to use. EXAMPLES: setvar -filePath \"file1.sldprt\" -var \"CustomVar\" -value \"NewValue\" REMARKS: The val parameter gets evaluated by the EvaluateAliases function. This function allows you to use placeholders in the new value, which will be replaced with actual values from the file. This can be useful to dynamically generate new values based on file properties or other variables. The following placeholders are supported: $filename - The file name without extension. $id - The file ID. $revision - The current revision of the file. $date - The current date. $time - The current time. $version - The current version of the file. $extension - The file extension. Additionally, you can use variables enclosed in square brackets (e.g., [VariableName]) to include values from other variables. The configuration names should be separated by commas. The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard. Example: If you use the value \"$filename_$date_$version\", it will be replaced with the file name, current date, and version, resulting in something like \"oldname_10-12-2023_3\"."
   },
   "src/SETVARSFROMSOURCE.html": {
     "href": "src/SETVARSFROMSOURCE.html",
-    "title": "SETVARSFROMSOURCE Command Documentation | PDMShell",
+    "title": "SETVARSFROMSOURCE Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "SETVARSFROMSOURCE Command Documentation DESCRIPTION: Sets variables for multiple files using a CSV file as the source. SYNTAX: setvarsfromsource -source csvFilePath PARAMETERS: -source csvFilePath - The CSV file containing the file IDs and variable values. CSV FILE FORMAT: The CSV file should have the following format: FileID,Variable1,Variable2,... file1.sldprt,Value1,Value2,... file2.sldprt,Value1,Value2,... EXAMPLES: setvarsfromsource -source \"variables.csv\" REMARKS: The CSV file should have the first column as the file ID and the subsequent columns as the variable names. The best way to generate a source CSV is to use the dir command on a folder with the -csv parameter, like: dir -csv data.csv"
   },
   "src/START.html": {
     "href": "src/START.html",
-    "title": "START Command Documentation | PDMShell",
+    "title": "START Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "START Command Documentation DESCRIPTION: Starts a program or the administration tool. SYNTAX: start [-p program_name] PARAMETERS: -p program_name - The program to start. EXAMPLES: start -p 'C:\\Program Files\\MyProgram.exe' REMARKS: start admin starts the administration tool"
   },
   "src/UNDOCHECKOUT.html": {
     "href": "src/UNDOCHECKOUT.html",
-    "title": "UNDOCHECKOUT Command Documentation | PDMShell",
+    "title": "UNDOCHECKOUT Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "UNDOCHECKOUT Command Documentation DESCRIPTION: Undoes a checkout operation. SYNTAX: undocheckout [-f filePath | -s search] PARAMETERS: -f filePath - The file(s) to undo the checkout for. -search search - The search operation to use. EXAMPLES: undocheckout -f \"file1.sldprt\" REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard."
   },
   "src/USERS.html": {
     "href": "src/USERS.html",
-    "title": "USERS Command Documentation | PDMShell",
+    "title": "USERS Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "USERS Command Documentation DESCRIPTION: Lists all the users in the active vault. SYNTAX: users PARAMETERS: EXAMPLES: users"
   },
   "src/VERSION.html": {
     "href": "src/VERSION.html",
-    "title": "VERSION Command Documentation | PDMShell",
+    "title": "VERSION Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "VERSION Command Documentation DESCRIPTION: Lists versions of installed SOLIDWORKS. SYNTAX: version PARAMETERS: SOLIDWORKS - List versions of installed SOLIDWORKS EXAMPLES: version -solidworks"
   },
   "src/cdpdm.html": {
     "href": "src/cdpdm.html",
-    "title": "Continuous Delivery | PDMShell",
+    "title": "Continuous Delivery | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "Continuous Delivery CDPDM is a PDM add-in by Blue Byte Systems Inc. that facilitates the deployment of PDM and task add-ins developed for you. The add-in communicates with our servers and allows the installation and uninstallation of all versions of your PDM add-ins. Advantages The advantages of using CDPDM are numerous: ✔️ No need to ask for or download CEX files. ✔️ Ability to switch between versions. ✔️ The conventional process of installing and updating add-ins is very tedious and time-consuming. Where to Find CDPDM If we have a developed a custom solution for you: CDPDM is provided in your project onboarding email. The email contains: Link to the CEX file. Link to this page with installation instructions. Link to your Customer Configuration File. If you have purchased a PDM product from us: Your Blue Byte Systems Inc account has all the information you need. You can access your account from this link here. From the Downloads tab, please download the archive file that contains CDPDM.cex and the Customer Configuration File. Note If you have purchased one of our PDM products and have had us develop a custom solution for you, please reach to us so we can generate a Customer Configuration File that lets you access all of your assets. How to Install Locate CDPDM.cex. In Windows 11, 10, and 7, internet downloads are blocked. Right-click on the CEX file, go to Properties, check Unblock, then click Apply and OK. Open the Administration tool. Log in to the vault. Please ensure you use a PDM user with Edit Add-Ins permission. In the Administration tool, click File > Open and browse to the CDPDM.cex file. Drag and drop the add-in from the CEX window onto the Add-ins node and wait for a few moments for CDPDM to be installed. Configuration Locate your Customer Configuration File. You can upload the Customer Configuration File via the Administration tool. Right-click on the add-in and click Upload Customer Configuration File... Browse to the Customer Configuration File. Note You can configure the settings of CDPDM by adding the credentials of the Customer Configuration File manually. Contact support for help. Updating Add-ins Right-click on CDPDM under Add-ins in the Administration tool and click Update Add-ins... This process may take a few moments depending on how many add-ins are in your vault. You will be prompted with a window like the following: You can: Install the selected add-in from the list. From the Version To Install dropdown, you can select which version to install and make sure to check the add-in. Uninstall the selected add-in from the vault (if it is installed). The installation process will ask you if you want to restart PDM. This may be beneficial to do after every upgrade, especially if you're validating a feature. Note Please allow for a few moments after you click Install/Update. The add-in will be downloaded unblocked and added to the vault. This operation includes suppressing some PDM dialog boxes."
   },
   "src/eula.html": {
     "href": "src/eula.html",
-    "title": "PDMShell End User License Agreement | PDMShell",
+    "title": "PDMShell End User License Agreement | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "PDMShell End User License Agreement 1. Introduction This End User License Agreement (\"EULA\") is a legal agreement between you (\"Licensee\") and Blue Byte Systems Inc. (\"Licensor\"), governing your use of the PDMShell software product and any associated documentation (collectively, the \"Software\"). By installing, copying, automating (including automatic or unattended use), or otherwise using the Software, you agree to be bound by the terms of this EULA. If you do not agree, do not install, copy, automate, or otherwise use the Software. 2. License Grant Licensor grants Licensee a non-exclusive, non-transferable, non-sublicensable, limited right to use the Software on a single computer or device for Licensee’s own internal business purposes. Special Licensing Requirement: Data migration companies, SOLIDWORKS resellers, or third-party providers utilizing or incorporating PDMShell into their commercial services or products must purchase a special licensing model from Blue Byte Systems Inc. Use without acquiring such licensing is strictly prohibited. 3. Restrictions Licensee agrees not to, and shall not permit others to: Resell, distribute, or sublicense the Software to any third party. Modify, adapt, translate, or create derivative works of the Software. Reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code of the Software. Rent, lease, lend, or otherwise transfer the Software to any third party. Use the Software for any illegal purpose or in violation of applicable law. 4. Intellectual Property The Software and all related intellectual property rights, including copyrights, patents, trademarks, and trade secrets, are owned by Licensor or its licensors. This EULA does not grant Licensee any ownership rights in the Software. 5. Termination This EULA shall automatically terminate upon Licensee’s breach of any of its terms. Licensor may also terminate this EULA at any time upon written notice to Licensee. Upon termination, Licensee shall cease all use of the Software and delete all copies of the Software from its systems. 6. Disclaimer of Warranty THE SOFTWARE IS PROVIDED \"AS IS\" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. LICENSOR DOES NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE OR THAT IT WILL MEET LICENSEE’S REQUIREMENTS. 7. Limitation of Liability IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY DAMAGES WHATSOEVER, INCLUDING WITHOUT LIMITATION, DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 8. Changes to Terms Licensor reserves the right, in its sole discretion, to modify or update this EULA at any time without prior notice. Continued use of the Software constitutes acceptance of the modified or updated terms. 9. Governing Law This EULA shall be governed by and construed in accordance with the laws of British Columbia, Canada, without regard to its conflict of law provisions. 10. Entire Agreement This EULA constitutes the entire agreement between the parties with respect to the subject matter hereof and supersedes all prior or contemporaneous communications, representations, and agreements, whether oral or written. 11. Severability If any provision of this EULA is held to be invalid or unenforceable, such provision shall be struck, and the remaining provisions shall remain in full force and effect. 12. Contact Information For any questions regarding this EULA, please contact: Blue Byte Systems Inc. Email: amen@bluebyte.biz"
   },
   "src/introduction.html": {
     "href": "src/introduction.html",
-    "title": "Introduction to PDMShell | PDMShell",
+    "title": "Introduction to PDMShell | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "Introduction to PDMShell Welcome to PDMShell, the command-line interpreter designed specifically for SOLIDWORKS PDM Professional. PDMShell provides engineers and IT professionals with a powerful and flexible tool for automating and streamlining tasks within the SOLIDWORKS PDM environment. By integrating command-line functionality, PDMShell allows users to perform routine PDM operations quickly, efficiently, and with greater control over their PDM data management processes. What is PDMShell? PDMShell is a comprehensive command-line interface (CLI) for SOLIDWORKS PDM Professional that simplifies file management, automation, and configuration tasks. It offers an extensive set of commands that can be used for common operations such as file check-ins and check-outs, variable management, user authentication, and much more. With PDMShell, users can interact with the PDM system without the need to open the SOLIDWORKS PDM client interface, making it an ideal tool for batch processing, automation, and system integration. Use Cases for PDMShell Batch Processing: Execute bulk operations like file renaming, setting variables, and automating workflows across multiple files or folders. System Integration: Integrate PDMShell commands into custom applications, scripts, or scheduled tasks to enhance the automation of business processes. Advanced File Management: Perform check-ins, check-outs, versioning, and other file management operations using the command line. Tip If you have a large vault with folder content exceeding +500 items, please consider disabling the intellisense if you see a performance hit. Getting Support How to Reach Out or report an issue? If you need support or have any questions, please don't hesitate to contact us by clicking the button below: Get Support"
   }
 }

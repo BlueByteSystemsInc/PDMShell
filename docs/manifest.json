@@ -597,6 +597,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/_demo.mp4",
+      "output": {
+        "resource": {
+          "relative_path": "images/_demo.mp4"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/commandslist.png",
       "output": {
         "resource": {
@@ -631,6 +641,16 @@
       "output": {
         "resource": {
           "relative_path": "images/fav.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
         }
       },
       "version": ""

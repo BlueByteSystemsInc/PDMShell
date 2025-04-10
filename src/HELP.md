@@ -4,10 +4,13 @@
 Provides help about a command.
 
 ## SYNTAX:
-help [-c command_name]
-
+```bash
+help [-command|-c] command_name
+```
 ## PARAMETERS:
--c command_name - The specific command you need help with.
+-c command_name The specific command you need help with.
 
 ## EXAMPLES:
+```bash
 help -c cd
+```
