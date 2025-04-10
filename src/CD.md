@@ -5,7 +5,7 @@ Changes the current PDM directory.
 
 ## SYNTAX:
 ```bash
-cd [-d|-directory] directory
+cd -directory
 ```
 
 ## PARAMETERS:

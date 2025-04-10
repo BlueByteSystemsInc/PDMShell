@@ -90,16 +90,18 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Displays a list of files and subdirectories in a directory.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>dir [-d directory] [-sort sort] [-cols columns] [-csv CSV] [-refresh]</p>
+<pre><code class="lang-bash">dir -sort -columns -csv -refresh
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-d directory - The directory to display files from.</p>
-<p>-sort sort - The sorting order for the displayed files.</p>
-<p>-cols columns - The columns to display, separated by commas.</p>
-<p>-csv CSV - Export the directory listing to a CSV file.</p>
-<p>-refresh - Refresh the session to load the current files and sub-folders in the active directory.</p>
+<p>-sort: The column name to sort the list of files and folders with.</p>
+<p>-columns: The columns to display, separated by commas. These are PDM variables drawn from the @ tab.</p>
+<p>-csv: Export the directory listing to a CSV file. Must include the csv extension</p>
+<p>-refresh: Refreshes the session to load the current files and sub-folders in the active directory in the autocomplete list.</p>
+<p>-recursive: Lists all files and all folders in the current directory recursively.</p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>dir -d &quot;C:\Vault\Documents&quot;
-dir -d &quot;C:\Vault\Documents&quot; -sort &quot;name&quot; -cols &quot;name,size,date&quot; -csv &quot;output.csv&quot; -refresh</p>
+<pre><code class="lang-bash">dir  #&quot;C:\Vault\Documents&quot;
+dir  -sort &quot;name&quot; -cols &quot;description,partnumber&quot; -csv &quot;output.csv&quot; -refresh
+</code></pre>
 <h2 id="remarks">REMARKS:</h2>
 <ul>
 <li>Use the <code>-refresh</code> parameter to force the session to load the current files and sub-folders in the active directory. Do not use this when the current folder has many items.</li>
