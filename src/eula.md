@@ -1,4 +1,4 @@
-# PDMShell End User License Agreement
+# End User License Agreement
 
 ## 1. Introduction
 
@@ -21,39 +21,43 @@ Licensee agrees not to, and shall not permit others to:
 - Rent, lease, lend, or otherwise transfer the Software to any third party.
 - Use the Software for any illegal purpose or in violation of applicable law.
 
-## 4. Intellectual Property
+## 4. Metadata Collection
+
+To improve our software and validate licenses, the Software may collect certain metadata about the machine it is installed on, including but not limited to the IP address, SOLIDWORKS version, and operating system version. This information is used solely for the purposes of enhancing the Software and ensuring compliance with licensing terms. By using the Software, you consent to this data collection.
+
+## 5. Intellectual Property
 
 The Software and all related intellectual property rights, including copyrights, patents, trademarks, and trade secrets, are owned by Licensor or its licensors. This EULA does not grant Licensee any ownership rights in the Software.
 
-## 5. Termination
+## 6. Termination
 
 This EULA shall automatically terminate upon Licensee’s breach of any of its terms. Licensor may also terminate this EULA at any time upon written notice to Licensee. Upon termination, Licensee shall cease all use of the Software and delete all copies of the Software from its systems.
 
-## 6. Disclaimer of Warranty
+## 7. Disclaimer of Warranty
 
 THE SOFTWARE IS PROVIDED **"AS IS"** WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. LICENSOR DOES NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE OR THAT IT WILL MEET LICENSEE’S REQUIREMENTS.
 
-## 7. Limitation of Liability
+## 8. Limitation of Liability
 
 IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY DAMAGES WHATSOEVER, INCLUDING WITHOUT LIMITATION, DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
-## 8. Changes to Terms
+## 9. Changes to Terms
 
 Licensor reserves the right, in its sole discretion, to modify or update this EULA at any time **without prior notice**. Continued use of the Software constitutes acceptance of the modified or updated terms.
 
-## 9. Governing Law
+## 10. Governing Law
 
 This EULA shall be governed by and construed in accordance with the laws of British Columbia, Canada, without regard to its conflict of law provisions.
 
-## 10. Entire Agreement
+## 11. Entire Agreement
 
 This EULA constitutes the entire agreement between the parties with respect to the subject matter hereof and supersedes all prior or contemporaneous communications, representations, and agreements, whether oral or written.
 
-## 11. Severability
+## 12. Severability
 
 If any provision of this EULA is held to be invalid or unenforceable, such provision shall be struck, and the remaining provisions shall remain in full force and effect.
 
-## 12. Contact Information
+## 13. Contact Information
 
 For any questions regarding this EULA, please contact:
 

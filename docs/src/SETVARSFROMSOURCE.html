@@ -90,7 +90,7 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Sets variables for multiple files using a CSV file as the source.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">setvarsfromsource -source csvFilePath
+<pre><code class="lang-bash">setvarsfromsource -source
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
 <p>-<code>source</code>: The CSV file containing the file IDs and variable values.</p>
@@ -106,6 +106,7 @@ XXXX,Value1,Value2,...
 <h2 id="remarks">REMARKS:</h2>
 <ul>
 <li>The CSV file should have the first column as the file ID and the subsequent columns as the variable names.</li>
+<li>You need to include the extension in the filename. This file can be outside the vault.</li>
 <li>The best way to generate a source CSV is to use the <code>dir</code> command or the <code>search</code> command on a folder with the <code>-csv</code> parameter and the <code>columns</code>, like:</li>
 </ul>
 <pre><code class="lang-bash">dir -columns Description,&quot;Part Number&quot; -csv data.csv

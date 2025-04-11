@@ -5,7 +5,7 @@ Sets variables for multiple files using a CSV file as the source.
 
 ## SYNTAX:
 ```bash
-setvarsfromsource -source csvFilePath
+setvarsfromsource -source
 ```
 
 ## PARAMETERS:
@@ -26,6 +26,7 @@ setvarsfromsource -source variables.csv # the source file must be exist in the c
 
 ## REMARKS:
 - The CSV file should have the first column as the file ID and the subsequent columns as the variable names.
+- You need to include the extension in the filename. This file can be outside the vault.
 - The best way to generate a source CSV is to use the `dir` command or the `search` command on a folder with the `-csv` parameter and the `columns`, like:
 ```bash
 dir -columns Description,"Part Number" -csv data.csv
