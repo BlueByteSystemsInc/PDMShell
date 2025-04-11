@@ -1,18 +1,22 @@
 # CHECKOUT Command Documentation
 
 ## DESCRIPTION:
-Performs a check-out operation on a specified file or many files.
+Performs a check out operation on a specified file or many files.
 
 ## SYNTAX:
-checkout [-s search] [-f filePath]
-
+```bash
+checkout -search -recursive -filePath
+```
 ## PARAMETERS:
--s search - The search operation to use.
+-search: Search keyword
 
--f filePath - The file(s) to be checked out. This is the default parameter.
+-filePath: The file(s) to be checked out. This is the default parameter
+
+-recursive: Recursively check out all files in the current directory. Use in combination with search
 
 ## EXAMPLES:
-checkout -f "file1.sldprt"
-
+```bash
+checkout -filePath file1.sldprt
+```
 ## REMARKS:
 - The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.

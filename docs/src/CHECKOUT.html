@@ -88,14 +88,17 @@
 <h1 id="checkout-command-documentation">CHECKOUT Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>Performs a check-out operation on a specified file or many files.</p>
+<p>Performs a check out operation on a specified file or many files.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>checkout [-s search] [-f filePath]</p>
+<pre><code class="lang-bash">checkout -search -recursive -filePath
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-s search - The search operation to use.</p>
-<p>-f filePath - The file(s) to be checked out. This is the default parameter.</p>
+<p>-search: Search keyword</p>
+<p>-filePath: The file(s) to be checked out. This is the default parameter</p>
+<p>-recursive: Recursively check out all files in the current directory. Use in combination with search</p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>checkout -f &quot;file1.sldprt&quot;</p>
+<pre><code class="lang-bash">checkout -filePath file1.sldprt
+</code></pre>
 <h2 id="remarks">REMARKS:</h2>
 <ul>
 <li>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>

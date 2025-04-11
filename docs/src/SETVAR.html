@@ -88,38 +88,75 @@
 <h1 id="setvar-command-documentation">SETVAR Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>Sets the value of a variable for a specified file.</p>
+<p>Sets the value of a variable for a specified checked out file or many checked out files.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>setvar [-filePath filePath|-search search] -var variableName -val value [-configs configNames]</p>
+<pre><code class="lang-bash">setvar [-filePath|-search]  -variableName -value [-configNames] [-stringformat] 
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-filePath filePath - The file to set the variable for.</p>
-<p>-var variableName - The variable to set.</p>
-<p>-val value - The value to assign to the variable.</p>
-<p>-configs configNames - The configuration names to set the variable for, separated by commas.</p>
-<p>-search search - The search operation to use.</p>
+<p>-<code>filePath</code>: The file to set the variable for.</p>
+<p>-<code>variableName</code>: The variable to set.</p>
+<p>-<code>value</code>: The value to assign to the variable.</p>
+<p>-<code>configNames</code>: The configuration names to set the variable for, separated by commas.</p>
+<p>-<code>search</code>: The search operation to use.</p>
+<p>-<code>stringformat</code>: string format. See remarks section.</p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>setvar -filePath &quot;file1.sldprt&quot; -var &quot;CustomVar&quot; -value &quot;NewValue&quot;</p>
-<h2 id="remarks">REMARKS:</h2>
+<pre><code class="lang-bash">setvar -filePath file1.sldprt -variableName Description -value $value -stringformat UpperCase # Upper case the current value.
+</code></pre>
+<h2 id="evaluation">EVALUATION:</h2>
+<p>The <code>value</code> parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables. The following placeholders are supported:</p>
+<h3 id="for-files">For Files:</h3>
 <ul>
-<li><p>The <code>val</code> parameter gets evaluated by the <code>EvaluateAliases</code> function. This function allows you to use placeholders in the new value, which will be replaced with actual values from the file. This can be useful to dynamically generate new values based on file properties or other variables. The following placeholders are supported:</p>
+<li><code>$value</code>: Existing value of the variable.</li>
+<li><code>$name</code>: The file name with extension.</li>
+<li><code>$nameWithoutExtension</code>: The file name without extension.</li>
+<li><code>$username</code>: The name of the logged-in user.</li>
+<li><code>$vaultName</code>: The name of the vault.</li>
+<li><code>$yyyy</code>: The current year.</li>
+<li><code>$mm</code>: The current month (two digits).</li>
+<li><code>$hh</code>: The current hour (two digits).</li>
+<li><code>$mi</code>: The current minute (two digits).</li>
+<li><code>$ss</code>: The current second (two digits).</li>
+<li><code>$id</code>: The file ID.</li>
+<li><code>$revision</code>: The current revision of the file (PDM revision, not the PDM variable).</li>
+<li><code>$date</code>: The current date.</li>
+<li><code>$time</code>: The current time in the current locale.</li>
+<li><code>$version</code>: The current version of the file.</li>
+<li><code>$extension</code>: The file extension.</li>
+<li><code>$fullyQualifiedName</code>: The full local path of the file.</li>
+<li><code>$fullyQualifiedFolderName</code>: The full local path of the folder containing the file.</li>
+<li><code>$folderName</code>: The name of the folder containing the file.</li>
+</ul>
+<h3 id="for-folders">For Folders:</h3>
 <ul>
-<li><code>$filename</code> - The file name without extension.</li>
-<li><code>$id</code> - The file ID.</li>
-<li><code>$revision</code> - The current revision of the file.</li>
-<li><code>$date</code> - The current date.</li>
-<li><code>$time</code> - The current time.</li>
-<li><code>$version</code> - The current version of the file.</li>
-<li><code>$extension</code> - The file extension.</li>
+<li><code>$value</code>: Existing value of the variable.</li>
+<li><code>$name</code>: The folder name.</li>
+<li><code>$folderName</code>: The name of the parent folder.</li>
+<li><code>$id</code>: The folder ID.</li>
+<li><code>$fullyQualifiedName</code>: The full local path of the folder.</li>
+<li><code>$username</code>: The name of the logged-in user.</li>
+<li><code>$vaultName</code>: The name of the vault.</li>
+<li><code>$yyyy</code>: The current year.</li>
+<li><code>$mm</code>: The current month (two digits).</li>
+<li><code>$hh</code>: The current hour (two digits).</li>
+<li><code>$mi</code>: The current minute (two digits).</li>
+<li><code>$ss</code>: The current second (two digits).</li>
+<li><code>$date</code>: The current date.</li>
+<li><code>$time</code>: The current time in the current locale.</li>
 </ul>
-<p>Additionally, you can use variables enclosed in square brackets (e.g., <code>[VariableName]</code>) to include values from other variables.</p>
-</li>
-<li><p>The configuration names should be separated by commas.</p>
-</li>
-<li><p>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</p>
+<p>Additionally, you can use variables enclosed in square brackets (e.g., <code>[VariableName]</code>) to include values from other variables. These variables are dynamically resolved based on the context of the file or folder.</p>
+<h2 id="remarks">REMARKS</h2>
+<ul>
+<li>The <code>configNames</code> parameter should be separated by commas. If omitted, PDMShell uses <code>@</code> for configuration-supported documents.</li>
+<li>The <code>search</code> parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
+<li>The <code>stringformat</code> parameter allows you to format the value of the variable using predefined string formatting options. The following formats are supported:
+<ul>
+<li><strong>UpperCase</strong>: Converts the entire string to uppercase.</li>
+<li><strong>LowerCase</strong>: Converts the entire string to lowercase.</li>
+<li><strong>CamelCase</strong>: Converts the string to camel case, where the first word is lowercase, and subsequent words are capitalized (e.g., <code>exampleString</code>).</li>
+<li><strong>FirstLetterCase</strong>: Capitalizes the first letter of the string and converts the rest to lowercase (e.g., <code>Example</code>).</li>
+</ul>
 </li>
 </ul>
-<h3 id="example">Example:</h3>
-<p>If you use the value <code>&quot;$filename_$date_$version&quot;</code>, it will be replaced with the file name, current date, and version, resulting in something like <code>&quot;oldname_10-12-2023_3&quot;</code>.</p>
 
 </article>
 

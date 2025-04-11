@@ -93,7 +93,7 @@
 <pre><code class="lang-bash">cd -directory
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-directory (or d): The directory to switch to. The directory parameter can be a relative or absolute path in PDM.</p>
+<p>-<code>directory</code>(or <code>d</code>): The directory to switch to. The directory parameter can be a relative or absolute path in PDM.</p>
 <h2 id="examples">EXAMPLES:</h2>
 <pre><code class="lang-bash">cd -directory 'C:\Vault\NewFolder' # Navigates its newFolder
 cd.. # Navigates to the parent folder
@@ -102,7 +102,8 @@ cd\  # Navigates to the root of the vault
 <h2 id="remarks">REMARKS:</h2>
 <ul>
 <li>If the user just created a new folder and wants to <code>cd</code> to it using autocomplete, they need to use the <code>dir</code> command with the <code>-refresh</code> parameter to force the session to load the current files and sub-folders in the active directory. Using <code>-refresh</code> might affect the performance of the session if the current folder has too many files and sub-folders.</li>
-<li><code>directory</code> is the default parameter. You do not need to specify it if it is the only parameter in your command. Example:</li>
+<li><code>directory</code> is the default parameter. You do not need to specify it if it is the only parameter in your command.
+Example:</li>
 </ul>
 <pre><code class="lang-bash">cd api #navigates to the api folder
 </code></pre>

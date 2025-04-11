@@ -9,11 +9,11 @@ search -search -recursive -includesubfolders -csv -columns
 ```
 
 ## PARAMETERS:
-- **-search**: Search keyword. This supports SQL wildcard %.
-- **-recursive**: Searches through all subdirectories recursively.
-- **-includesubfolders**: Includes subfolders in the search results.
-- **-csv**: Outputs the search results in CSV format.
-- **-columns**: Specifies the columns to include in the output.
+- `search`: Search keyword. This supports SQL wildcard %.
+- `recursive`: Searches through all subdirectories recursively.
+- `includesubfolders`: Includes subfolders in the search results.
+- `csv`: Outputs the search results in CSV format.
+- `columns`: Specifies the columns to include in the output.
 
 ## EXAMPLES:
 ### Example 1: Basic Search

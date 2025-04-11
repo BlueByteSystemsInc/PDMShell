@@ -1,10 +1,12 @@
 # CLS Command Documentation
 
 ## DESCRIPTION:
-Clears the screen.
+Clears the current session.
 
 ## SYNTAX:
+```bash
 cls
+```
 
 ## PARAMETERS:
 None
