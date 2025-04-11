@@ -1,14 +1,7 @@
+# Before you clone
 
-# Old Documentation: 
-https://bluebyte.biz/docs/pdm2excel/
-https://bluebyte.biz/docs/pdm-convert-task-extended/
-https://bluebyte.biz/docs/revisionsync/
-
-
-# Build 
-
-To build the docs: 
-
+Some files here will hit GitHub’s 100 MB file size limit for individual files.  Use Git LFS (Large File Storage)/ GitHub supports large files through Git LFS.
+# How To Use
 - Clone repo
 - `cd` to repo folder
 - type `bin\docfx.exe docfx.json --serve` and press enter
@@ -29,9 +22,6 @@ Make changes to the src folder. It contains the toc.yml (Table of Content) and t
 # Images
 
 Add images to the images folder and use `<img src="../images/myimage.png"/>` to render them.
-
-# Links
-See how links work in introduction.md. 
 
 # Tool 
 Use VSCode.
