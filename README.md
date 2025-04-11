@@ -1,4 +1,4 @@
-# Before you clone
+# Before You Clone
 
 Some files here will hit GitHub’s 100 MB file size limit for individual files.  Use Git LFS (Large File Storage)/ GitHub supports large files through Git LFS.
 # How To Use
