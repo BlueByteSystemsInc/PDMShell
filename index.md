@@ -121,7 +121,7 @@ _layout: landing
       SOLIDWORKS PDM Professional
     </div>
     </div>
-  <video src="../images/demo.mp4" autoplay muted controls>
+  <video src="https://bluebyte.biz/wp-content/pdmshellvideos/demo.mp4" autoplay muted controls>
     
   </video>
 <p style="color: #bbbbbb; margin:auto; font-family:  'Open Sans', sans-serif;">
@@ -157,44 +157,44 @@ _layout: landing
   <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
     <h2 style="color: #ffffff;">Find Any File Archive Path</h2>
     <p style="color: #bbbbbb;">Learn how to manage archive paths effectively in PDMShell.</p>
-    <video src="../images/archive path.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/archive path.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
   </div>
 
   <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
     <h2 style="color: #ffffff;">Change Directory</h2>
     <p style="color: #bbbbbb;">Understand how to use the CD command to navigate directories in PDMShell.</p>
-    <video src="../images/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
   </div>
 
   <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
     <h2 style="color: #ffffff;">Checkout, 1, 10 or 1000 Files In One Line</h2>
     <p style="color: #bbbbbb;">Discover how to use the CHECKOUT command to check out files from the vault.</p>
-    <video src="../images/checkout.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/checkout.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
   </div>
 
   <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
     <h2 style="color: #ffffff;">List Directory Content</h2>
     <p style="color: #bbbbbb;">Explore the DIR command to list files and folders in the current directory.</p>
-    <video src="../images/dir.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/dir.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
   </div>
 
   
   <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
     <h2 style="color: #ffffff;">Concurrent PDM Sessions</h2>
     <p style="color: #bbbbbb;">Learn how to use the  LOGIN command to authenticate with the vault.</p>
-    <video src="../images/login.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/login.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
   </div>
 
   <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
     <h2 style="color: #ffffff;">Options</h2>
     <p style="color: #bbbbbb;">Understand the various options available in PDMShell to customize your experience.</p>
-    <video src="../images/options.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/options.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
   </div>
 
   <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
     <h2 style="color: #ffffff;">Power Search Capabilitiy</h2>
     <p style="color: #bbbbbb;">Learn how to use the Search command to find files and folders efficiently.</p>
-    <video src="../images/search.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/search.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
   </div>
 
 <div align="center">
