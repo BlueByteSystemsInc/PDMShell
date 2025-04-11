@@ -37,3 +37,6 @@ Exports the search results to a CSV file with specified columns.
 ## NOTES:
 - Ensure the current directory is set correctly before running the command.
 - Use the `-columns` parameter to customize the output format. Data is pulled from @ for configuration-supported documents.
+
+# VIDEO:
+ <video src="https://bluebyte.biz/wp-content/pdmshellvideos/search.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>

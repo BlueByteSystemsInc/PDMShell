@@ -6,28 +6,35 @@ Authenticates a user to a specified vault.
 
 ## SYNTAX:
 ```bash
-login [-auto|-win|-external] -username <username> -password <password> -vaultname <vault_name>
+login [-auto|-win -username -password|-external -username -password ] -vaultname 
 ```
 
 ## PARAMETERS:
-Auto: Automatic authentication with current user. Displays login dialog box if not logged in.
+`Auto`: Automatic authentication with current user. Displays login dialog box if not logged in.
 
-win: Automatic Windows authentication with current user. Does not display login dialog box.
+`Win`: Automatic Windows authentication with current user. Does not display login dialog box.
 
-External: Toggle ensures that a license is consumed.
+`External`: Toggle ensures that a license is consumed.
 
-Username:  Username.
+`Username`:  Username.
 
-Password:  Password.
+`Password`:  Password.
 
-vaultName: Vault Name.
+`vaultName`: Vault Name.
 
 ## EXAMPLES:
 ```bash
-login -username admin -password "password" -vaultName "bluebyte"
+login -username admin -password ******** -vaultName bluebyte #logs into the bluebyte vault with a username ans a password
+login -auto -vaultName bluebyte #logs into the blue byte vault using the existing PDM session
 ```
 
 # REMARKS: 
-The `external` parameter allows an application that is not supplied and supported by SOLIDWORKS Corporation to:
-- Log into SOLIDWORKS PDM Professional
-- Log into a vault view
+
+- You must have a local vault view before you can start using PDMShell.
+- The `external` parameter allows an application that is not supplied and supported by SOLIDWORKS Corporation to:
+  - Log into SOLIDWORKS PDM Professional
+  - Log into a vault view
+
+
+# VIDEO:
+ <video src="https://bluebyte.biz/wp-content/pdmshellvideos/login.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>

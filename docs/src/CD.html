@@ -90,23 +90,31 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Changes the current PDM directory.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">cd -directory
+<pre><code class="lang-bash">cd [-directory|id]
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-<code>directory</code>(or <code>d</code>): The directory to switch to. The directory parameter can be a relative or absolute path in PDM.</p>
+<p>-<code>directory</code>(or <code>d</code>): The directory to switch to. The directory parameter can be a relative or absolute path in PDM.
+-<code>id</code>: ID of the folder to navigate to.</p>
 <h2 id="examples">EXAMPLES:</h2>
 <pre><code class="lang-bash">cd -directory 'C:\Vault\NewFolder' # Navigates its newFolder
-cd.. # Navigates to the parent folder
-cd\  # Navigates to the root of the vault
 </code></pre>
 <h2 id="remarks">REMARKS:</h2>
+<ul>
+<li>Please be aware of the following special ways to change directory:</li>
+</ul>
+<pre><code class="lang-bash">cd.. # Navigates to the parent folder
+cd\  # Navigates to the root of the vault
+</code></pre>
 <ul>
 <li>If the user just created a new folder and wants to <code>cd</code> to it using autocomplete, they need to use the <code>dir</code> command with the <code>-refresh</code> parameter to force the session to load the current files and sub-folders in the active directory. Using <code>-refresh</code> might affect the performance of the session if the current folder has too many files and sub-folders.</li>
 <li><code>directory</code> is the default parameter. You do not need to specify it if it is the only parameter in your command.
 Example:</li>
 </ul>
 <pre><code class="lang-bash">cd api #navigates to the api folder
+cd -id 755 #navigates to the folder with id 755
 </code></pre>
+<h1 id="video">VIDEO:</h1>
+<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay="" muted="" controls="" style="width: 100%; border-radius: 12px;"></video></p>
 
 </article>
 

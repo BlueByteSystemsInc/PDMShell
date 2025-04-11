@@ -20,3 +20,6 @@ checkout -filePath file1.sldprt
 ```
 ## REMARKS:
 - The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
+
+# VIDEO:
+ <video src="https://bluebyte.biz/wp-content/pdmshellvideos/checkout.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
