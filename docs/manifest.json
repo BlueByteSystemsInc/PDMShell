@@ -77,6 +77,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/How to install.mp4",
+      "output": {
+        "resource": {
+          "relative_path": "images/How to install.mp4"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/LargeTile.scale-100.png",
       "output": {
         "resource": {
@@ -607,6 +617,36 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/archive path.mp4",
+      "output": {
+        "resource": {
+          "relative_path": "images/archive path.mp4"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/cd.mp4",
+      "output": {
+        "resource": {
+          "relative_path": "images/cd.mp4"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/checkout.mp4",
+      "output": {
+        "resource": {
+          "relative_path": "images/checkout.mp4"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/commandslist.png",
       "output": {
         "resource": {
@@ -621,6 +661,16 @@
       "output": {
         "resource": {
           "relative_path": "images/demo.mp4"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/dir.mp4",
+      "output": {
+        "resource": {
+          "relative_path": "images/dir.mp4"
         }
       },
       "version": ""
@@ -697,6 +747,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/login.mp4",
+      "output": {
+        "resource": {
+          "relative_path": "images/login.mp4"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/logo.png",
       "output": {
         "resource": {
@@ -727,6 +787,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/options.mp4",
+      "output": {
+        "resource": {
+          "relative_path": "images/options.mp4"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell.gif",
       "output": {
         "resource": {
@@ -747,6 +817,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/search.mp4",
+      "output": {
+        "resource": {
+          "relative_path": "images/search.mp4"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/search.png",
       "output": {
         "resource": {
@@ -761,6 +841,16 @@
       "output": {
         "resource": {
           "relative_path": "images/sessions.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/setvar.mp4",
+      "output": {
+        "resource": {
+          "relative_path": "images/setvar.mp4"
         }
       },
       "version": ""

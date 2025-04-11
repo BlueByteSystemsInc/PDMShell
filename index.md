@@ -136,67 +136,66 @@ _layout: landing
 
 <br>
 
-<br>
-
 <div align="center">
   <a href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell" class="download-button">⬇️ Download PDMShell Directly</a>
 </div>
 
-<div class="container">
-  <div class="card">
-    <h2>Sessions Management</h2>
-    <p>PDMShell allows you to manage your sessions efficiently, ensuring that you can keep track of your work and maintain a smooth workflow.</p>
-    <img src="../images/sessions.png" alt="Sessions Management">
-  </div>
+<br>
 
-  <div class="card">
-    <h2>IntelliSense</h2>
-    <p>PDMShell features IntelliSense to help you write commands faster and with fewer errors. This feature provides auto-completion and suggestions as you type.</p>
-    <img src="../images/intelisense.png" alt="IntelliSense">
-  </div>
-
-  <div class="card">
-    <h2>Advanced Search</h2>
-    <p>PDMShell includes advanced search capabilities, allowing you to find files and folders quickly and efficiently.</p>
-    <img src="../images/search.png" alt="Advanced Search">
-  </div>
-
-  <div class="card">
-    <h2>Commands List</h2>
-    <p>With a comprehensive list of commands, PDMShell provides you with the tools you need to perform a wide range of PDM operations from the command line.</p>
-    <img src="../images/commandslist.png" alt="Commands List">
-  </div>
-
-  <div class="card">
-    <h2>Migrating Files to the Vault</h2>
-    <p>PDMShell simplifies the process of migrating files to the vault, ensuring a smooth and efficient transition.</p>
-    <img src="../images/migrate.png" alt="Migrating Files to the Vault">
-  </div>
-
-  <div class="card">
-    <h2>Frog Leaping Versions</h2>
-    <p>PDMShell supports frog leaping versions, allowing you to skip intermediate versions and go directly to the desired version.</p>
-    <img src="../images/frogleap.png" alt="Frog Leaping Versions">
-  </div>
-
-  <div class="card">
-    <h2>Delete</h2>
-    <p>PDMShell provides commands to delete files and folders from the vault, ensuring that you can manage your data effectively.</p>
-    <img src="../images/delete.png" alt="Delete">
-  </div>
-
-  <div class="card">
-    <h2>Renaming</h2>
-    <p>PDMShell includes commands to rename files and folders, making it easy to keep your data organized.</p>
-    <img src="../images/rename.png" alt="Renaming">
-  </div>
-
-  <div class="card">
-    <h2>Set Card Data</h2>
-    <p>PDMShell allows you to set card data for files and folders, ensuring that your metadata is always up to date.</p>
-    <img src="../images/setcarddata.png" alt="Set Card Data">
-  </div>
+<div style="text-align: center;">
+  <h2 style="color: #bb86fc; margin-bottom: 10px;">PDMShell is free.</h2>
+  <p style="color: #e0e0e0; font-family: Arial, sans-serif; margin: 0 auto; max-width: 800px;">
+    PDMShell is free to use and allows you to test all commands with some limits without committing to a license. To buy a license, please visit the 
+    <a href="https://bluebyte.biz/product/pdmshell" style="color: #bb86fc; text-decoration: none;">Blue Byte Systems online shop</a>. Read details below.
+  </p>
 </div>
+
+<br>
+
+ 
+<div class="container" style="flex-direction: column; align-items: center;">
+  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
+    <h2 style="color: #ffffff;">Find Any File Archive Path</h2>
+    <p style="color: #bbbbbb;">Learn how to manage archive paths effectively in PDMShell.</p>
+    <video src="../images/archive path.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+  </div>
+
+  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
+    <h2 style="color: #ffffff;">Change Directory</h2>
+    <p style="color: #bbbbbb;">Understand how to use the CD command to navigate directories in PDMShell.</p>
+    <video src="../images/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+  </div>
+
+  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
+    <h2 style="color: #ffffff;">Checkout, 1, 10 or 1000 Files In One Line</h2>
+    <p style="color: #bbbbbb;">Discover how to use the CHECKOUT command to check out files from the vault.</p>
+    <video src="../images/checkout.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+  </div>
+
+  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
+    <h2 style="color: #ffffff;">List Directory Content</h2>
+    <p style="color: #bbbbbb;">Explore the DIR command to list files and folders in the current directory.</p>
+    <video src="../images/dir.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+  </div>
+
+  
+  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
+    <h2 style="color: #ffffff;">Concurrent PDM Sessions</h2>
+    <p style="color: #bbbbbb;">Learn how to use the  LOGIN command to authenticate with the vault.</p>
+    <video src="../images/login.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+  </div>
+
+  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
+    <h2 style="color: #ffffff;">Options</h2>
+    <p style="color: #bbbbbb;">Understand the various options available in PDMShell to customize your experience.</p>
+    <video src="../images/options.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+  </div>
+
+  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
+    <h2 style="color: #ffffff;">Power Search Capabilitiy</h2>
+    <p style="color: #bbbbbb;">Learn how to use the Search command to find files and folders efficiently.</p>
+    <video src="../images/search.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+  </div>
 
 <div align="center">
   <a href="https://apps.microsoft.com/detail/XPFFXTTJDCW85C?hl=en-US&gl=CA&ocid=pdpshare" target="_blank">
@@ -204,13 +203,20 @@ _layout: landing
   </a>
 </div>
 
-<div align="center">
-  <a href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell" class="download-button">⬇️ Download PDMShell Directly</a>
-</div>
+## Need more power? Choose Premium.
 
-## Free Version
+Upgrade to the **Premium Version** of PDMShell to unlock advanced features that take your productivity to the next level. With the Premium Version, you can:
 
-PDMShell is free to use and allows you to test all commands with some limits without committing to a license. To buy a license, please visit the [PDMShell Product Page](https://bluebyte.biz/product/pdmshell).
+- Call PDMShell directly from other applications, enabling seamless integration into your workflows.
+- Run PDMShell as a **workflow transition action**, automating complex tasks and saving time.
+- Process **unlimited** number of files. Free version caps at items per search.
+
+Take advantage of these powerful features to streamline your PDM operations and enhance your team's efficiency.
+
+[Buy the Premium Version Now](https://bluebyte.biz/product/pdmshell)
+
+Need more information or want to discuss how PDMShell can fit into your workflow? Schedule a call with us today:  
+[Schedule a Call](https://calendly.com/bluebyte)
 
 ## Contact Us
 

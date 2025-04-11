@@ -8,11 +8,11 @@ Performs a check out operation on a specified file or many files.
 checkout -search -recursive -filePath
 ```
 ## PARAMETERS:
--search: Search keyword
+-`search`: Search keyword
 
--filePath: The file(s) to be checked out. This is the default parameter
+-`filePath`: The file(s) to be checked out. This is the default parameter
 
--recursive: Recursively check out all files in the current directory. Use in combination with search
+-`recursive`: Recursively check out all files in the current directory. Use in combination with search
 
 ## EXAMPLES:
 ```bash
