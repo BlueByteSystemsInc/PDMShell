@@ -1,78 +1,78 @@
-- name: Help Center
+- name: PDMShell
 - name: Introduction
   href: introduction.md
 - name: EULA
   href: eula.md
-- name: PDMShell Commands
+- name: COMMANDS
   expanded: true
   items:
-    - name: RUNSCRIPT
-      href: RUNSCRIPT.md
-    - name: CHECKIN
-      href: checkin.md
-    - name: CHECKOUT
-      href: checkout.md
-    - name: CD
+    - name: cd
       href: cd.md
-    - name: CLS
+    - name: checkin
+      href: checkin.md
+    - name: checkout
+      href: checkout.md
+    - name: clearCache
+      href: CLEARCACHE.md
+    - name: cls
       href: cls.md
-    - name: DIR
-      href: dir.md
-    - name: DUMP
-      href: dump.md
-    - name: SETVARSFROMSOURCE
-      href: SETVARSFROMSOURCE.md
-    - name: EDITVARS
-      href: editvars.md
-    - name: FROGLEAP
-      href: frogleap.md
-    - name: GET
-      href: get.md
-    - name: GETNAME
-      href: getname.md
-    - name: GETVAR
-      href: getvar.md
-    - name: GETVARFROMDB
-      href: getvarfromdb.md
-    - name: HELP
-      href: help.md
-    - name: HISTORY
-      href: history.md
-    - name: INBOX
-      href: inbox.md
-    - name: INFOVAR
-      href: infovar.md
-    - name: KILL
-      href: kill.md
-    - name: LOGIN
-      href: login.md
-    - name: MKDIR
-      href: mkdir.md
-    - name: MKVAR
-      href: mkvar.md
-    - name: PRINT
-      href: print.md
-    - name: QUIT
-      href: quit.md
-    - name: RENAME
-      href: rename.md
-    - name: SETVAR
-      href: setvar.md
-    - name: START
-      href: start.md
-    - name: UNDOCHECKOUT
-      href: undocheckout.md
-    - name: VERSION
-      href: version.md
-    - name: REBOOT
-      href: REBOOT.md
-    - name: DELETE
+    - name: delete
       href: DELETE.md
-    - name: RENAMEFROMSOURCE
-      href: RENAMEFROMSOURCE.md
-    - name: DESTORY
+    - name: destory
       href: DESTORY.md
-    - name: CLEARCACHE
-      href: CLEARCACHE.md
-    - name: CLEARCACHE
-      href: CLEARCACHE.md
+    - name: dir
+      href: dir.md
+    - name: dump
+      href: dump.md
+    - name: editVars
+      href: editvars.md
+    - name: frogLeap
+      href: frogleap.md
+    - name: get
+      href: get.md
+    - name: getName
+      href: getname.md
+    - name: getVar
+      href: getvar.md
+    - name: getVarFromDb
+      href: getvarfromdb.md
+    - name: help
+      href: help.md
+    - name: history
+      href: history.md
+    - name: inbox
+      href: inbox.md
+    - name: infoVar
+      href: infovar.md
+    - name: kill
+      href: kill.md
+    - name: login
+      href: login.md
+    - name: mkdir
+      href: mkdir.md
+    - name: mkVar
+      href: mkvar.md
+    - name: print
+      href: print.md
+    - name: quit
+      href: quit.md
+    - name: reboot
+      href: REBOOT.md
+    - name: rename
+      href: rename.md
+    - name: renameFromSource
+      href: RENAMEFROMSOURCE.md
+    - name: runScript
+      href: RUNSCRIPT.md
+    - name: search
+      href: search.md
+    - name: setVar
+      href: setvar.md
+    - name: setVarsFromSource
+      href: SETVARSFROMSOURCE.md
+    - name: start
+      href: start.md
+    - name: undoCheckout
+      href: undocheckout.md
+    - name: version
+      href: version.md
