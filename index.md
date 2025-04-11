@@ -159,6 +159,12 @@ _layout: landing
     <p style="color: #bbbbbb;">Learn how to manage archive paths effectively in PDMShell.</p>
     <video src="https://bluebyte.biz/wp-content/pdmshellvideos/archive path.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
   </div>
+ 
+  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
+    <h2 style="color: #ffffff;">Edit Datacards like a Boss</h2>
+    <p style="color: #bbbbbb;">Change datacard values for one of many files using the SetVar command.</p>
+    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/setvar.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+  </div>
 
   <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
     <h2 style="color: #ffffff;">Change Directory</h2>
