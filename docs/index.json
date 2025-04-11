@@ -32,7 +32,7 @@
   "src/CLS.html": {
     "href": "src/CLS.html",
     "title": "CLS Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
-    "keywords": "CLS Command Documentation DESCRIPTION: Clears the current session. SYNTAX: cls PARAMETERS: None EXAMPLES: cls"
+    "keywords": "CLS Command Documentation DESCRIPTION: Clears the current session. SYNTAX: cls PARAMETERS: Command has no parameters. EXAMPLES: cls REMARKS You can alternatively set the Line Limit Count from the settings to remind the session to clear every count of lines."
   },
   "src/DESTROY.html": {
     "href": "src/DESTROY.html",
@@ -82,7 +82,7 @@
   "src/HELP.html": {
     "href": "src/HELP.html",
     "title": "HELP Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
-    "keywords": "HELP Command Documentation DESCRIPTION: Provides help about a command. SYNTAX: help [-command|-c] command_name PARAMETERS: -c command_name The specific command you need help with. EXAMPLES: help -c cd"
+    "keywords": "HELP Command Documentation DESCRIPTION: Provides help about a command. SYNTAX: help [-command|-c] PARAMETERS: -command: The specific command you need help with. EXAMPLES: help -c cd #opens the help page about the change directory command"
   },
   "src/HISTORY.html": {
     "href": "src/HISTORY.html",
@@ -132,7 +132,7 @@
   "src/REBOOT.html": {
     "href": "src/REBOOT.html",
     "title": "REBOOT Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
-    "keywords": "REBOOT Command Documentation DESCRIPTION: Hard PDM reboot. SYNTAX: reboot PARAMETERS: None EXAMPLES: reboot REMARKS: This command uses taskkill from the command prompt to kill explorer.exe and edmserver.exe then restart explorer.exe. It requires PDM to be run as an administrator."
+    "keywords": "REBOOT Command Documentation DESCRIPTION: Hard PDM reboot. SYNTAX: reboot PARAMETERS: This command has no parameters. EXAMPLES: reboot REMARKS: This command uses taskkill from the command prompt to kill explorer.exe and edmserver.exe then restart explorer.exe. It requires PDM to be run as an administrator."
   },
   "src/RENAME.html": {
     "href": "src/RENAME.html",

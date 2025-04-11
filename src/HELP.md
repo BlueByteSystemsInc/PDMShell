@@ -5,12 +5,12 @@ Provides help about a command.
 
 ## SYNTAX:
 ```bash
-help [-command|-c] command_name
+help [-command|-c]
 ```
 ## PARAMETERS:
--c command_name The specific command you need help with.
+-`command`: The specific command you need help with.
 
 ## EXAMPLES:
 ```bash
-help -c cd
+help -c cd #opens the help page about the change directory command
 ```

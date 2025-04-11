@@ -4,14 +4,16 @@
 Hard PDM reboot.
 
 ## SYNTAX:
+```bash
 reboot
-
+```
 ## PARAMETERS:
-None
+This command has no parameters.
 
 ## EXAMPLES:
+```bash
 reboot
-
+```
 ## REMARKS:
 - This command uses `taskkill` from the command prompt to kill `explorer.exe` and `edmserver.exe` then restart `explorer.exe`.
 - It requires PDM to be run as an administrator.
