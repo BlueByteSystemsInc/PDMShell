@@ -90,20 +90,27 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Sets variables for multiple files using a CSV file as the source.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>setvarsfromsource -source csvFilePath</p>
+<pre><code class="lang-bash">setvarsfromsource -source csvFilePath
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-source csvFilePath - The CSV file containing the file IDs and variable values.</p>
+<p>-<code>source</code>: The CSV file containing the file IDs and variable values.</p>
 <h2 id="csv-file-format">CSV FILE FORMAT:</h2>
 <p>The CSV file should have the following format:</p>
-<p>FileID,Variable1,Variable2,... file1.sldprt,Value1,Value2,... file2.sldprt,Value1,Value2,...</p>
+<pre><code>FileID,Variable1,Variable2,... 
+XXXX,Value1,Value2,... 
+XXXX,Value1,Value2,...
+</code></pre>
 <h2 id="examples">EXAMPLES:</h2>
-<p>setvarsfromsource -source &quot;variables.csv&quot;</p>
+<pre><code class="lang-bash">setvarsfromsource -source variables.csv # the source file must be exist in the current directory
+</code></pre>
 <h2 id="remarks">REMARKS:</h2>
 <ul>
 <li>The CSV file should have the first column as the file ID and the subsequent columns as the variable names.</li>
-<li>The best way to generate a source CSV is to use the <code>dir</code> command on a folder with the <code>-csv</code> parameter, like:
-<code>dir -csv data.csv</code></li>
+<li>The best way to generate a source CSV is to use the <code>dir</code> command or the <code>search</code> command on a folder with the <code>-csv</code> parameter and the <code>columns</code>, like:</li>
 </ul>
+<pre><code class="lang-bash">dir -columns Description,&quot;Part Number&quot; -csv data.csv
+search -search %.sldprt -recursive -columns Description,&quot;Part Number&quot; -csv data.csv #this will save all parts from all levels in the current directory with the columns Description and Part Number
+</code></pre>
 
 </article>
 
