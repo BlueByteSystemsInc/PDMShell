@@ -16,6 +16,8 @@
       href: CLEARCACHE.md
     - name: cls
       href: cls.md
+    - name: copyTree
+      href: COPYTREE.md
     - name: delete
       href: DELETE.md
     - name: destory

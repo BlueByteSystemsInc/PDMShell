@@ -917,6 +917,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/COPYTREE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/COPYTREE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/DESTROY.md",
       "output": {
         ".html": {
