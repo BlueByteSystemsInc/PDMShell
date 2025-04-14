@@ -4,16 +4,24 @@
 Runs a PDMShell script.
 
 ## SYNTAX:
-runscript [-filePath filePath]
+```bash
+runscript -source -filePath -search -recursive
+```
 
 ## PARAMETERS:
--filePath  file path to the script file.
-
+- `source`:  Script file.  
+- `filePath`:  File path to run the script on.  
+- `search`:  Search query to filter files.
+- `recursive`: If specified, the command will run script on all files recursively in subdirectories.  
 ## EXAMPLES:
-runscript -source pdmshell.script 
-In the example above the pdmshell.script exists in the current directory.
+ ```bash
+runscript -filePath pdmscript.script -search "%.sldprt" -recursive 
+# this will run pdm.script on all part files in the active directory and its subdirectories
+ ```
 
 ## REMARKS:
-- Script file must be stored in PDM.
-- Commands like `cls` and `quit` are not supported in scripting.
-- A good way to start creating a script is the  `start notepad.exe` command. Use it to create a new text file and copy the commands from the PDMShell session.
+- A good way to start a script is using the `start notepad.exe` command to open up notepad.exe.
+- In your script, you must use the alias `$completefilename` and `$completefoldername` to reference the file your script is targeting. This is required with the `search` or `filePath` parameters. 
+
+## FREE VERSION LIMIT:
+- The free version is limited to 10 lines per script.

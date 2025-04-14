@@ -21,7 +21,6 @@ Licensee agrees not to, and shall not permit others to:
 - Rent, lease, lend, or otherwise transfer the Software to any third party.
 - Use the Software for any illegal purpose or in violation of applicable law.
 
-## 4. Metadata Collection
 
 To improve our software and validate licenses, the Software may collect certain metadata about the machine it is installed on, including but not limited to the IP address, SOLIDWORKS version, and operating system version. This information is used solely for the purposes of enhancing the Software and ensuring compliance with licensing terms. By using the Software, you consent to this data collection.
 

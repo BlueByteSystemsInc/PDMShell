@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/RUNSCRIPT.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/RUNSCRIPT.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -90,23 +90,33 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Runs a PDMShell script.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>runscript [-filePath filePath]</p>
+<pre><code class="lang-bash">runscript -source -filePath -search -recursive
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-filePath  file path to the script file.</p>
+<ul>
+<li><code>source</code>:  Script file.</li>
+<li><code>filePath</code>:  File path to run the script on.</li>
+<li><code>search</code>:  Search query to filter files.</li>
+<li><code>recursive</code>: If specified, the command will run script on all files recursively in subdirectories.</li>
+</ul>
 <h2 id="examples">EXAMPLES:</h2>
-<p>runscript -source pdmshell.script
-In the example above the pdmshell.script exists in the current directory.</p>
+<pre><code class="lang-bash">runscript -filePath pdmscript.script -search &quot;%.sldprt&quot; -recursive 
+# this will run pdm.script on all part files in the active directory and its subdirectories
+</code></pre>
 <h2 id="remarks">REMARKS:</h2>
 <ul>
-<li>Script file must be stored in PDM.</li>
-<li>Commands like <code>cls</code> and <code>quit</code> are not supported in scripting.</li>
-<li>A good way to start creating a script is the  <code>start notepad.exe</code> command. Use it to create a new text file and copy the commands from the PDMShell session.</li>
+<li>A good way to start a script is using the <code>start notepad.exe</code> command to open up notepad.exe.</li>
+<li>In your script, you must use the alias <code>$completefilename</code> and <code>$completefoldername</code> to reference the file your script is targeting. This is required with the <code>search</code> or <code>filePath</code> parameters.</li>
+</ul>
+<h2 id="free-version-limit">FREE VERSION LIMIT:</h2>
+<ul>
+<li>The free version is limited to 10 lines per script.</li>
 </ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/RUNSCRIPT.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/RUNSCRIPT.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

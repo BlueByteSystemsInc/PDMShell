@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/introduction.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/introduction.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -87,17 +87,58 @@
         <article data-uid="">
 <h1 id="introduction-to-pdmshell">Introduction to PDMShell</h1>
 
-<p>Welcome to <strong>PDMShell</strong>, the command-line interpreter designed specifically for <strong>SOLIDWORKS PDM Professional</strong>. PDMShell empowers engineers and IT professionals with a <strong>powerful</strong>, <strong>flexible</strong>, and <strong>efficient</strong> tool for automating and streamlining tasks within the SOLIDWORKS PDM environment. By integrating command-line functionality, PDMShell enables users to perform routine PDM operations quickly, efficiently, and with greater control over their PDM data management processes.</p>
-<hr>
-<h2 id="what-is-pdmshell">What is PDMShell?</h2>
-<p>PDMShell is a <strong>comprehensive command-line interface (CLI)</strong> for <strong>SOLIDWORKS PDM Professional</strong> that simplifies file management, automation, and configuration tasks. It offers an extensive set of commands that can be used for common operations such as:</p>
+<p>Welcome to <strong>PDMShell</strong>, the command-line interpreter designed specifically for <strong>SOLIDWORKS PDM Professional</strong>. PDMShell empowers engineers and IT professionals with a <strong>powerful</strong>, <strong>flexible</strong>, and <strong>efficient</strong> tool for automating and streamlining tasks within the SOLIDWORKS PDM environment.</p>
+<h3 id="using-the-help-system">Using the Help System</h3>
+<p>PDMShell provides a comprehensive help system and detailed command documentation to guide you through its features. Here's how to get started:</p>
 <ul>
-<li>File check-ins and check-outs</li>
-<li>Variable management</li>
-<li>User authentication</li>
-<li>Workflow automation</li>
-<li>And much more!</li>
+<li>To view a list of all available commands, type:
+<pre><code class="lang-bash">help
+</code></pre>
+</li>
+<li>To get detailed information about a specific command, type:
+<pre><code class="lang-bash">help -c &lt;command&gt;
+</code></pre>
+For example:
+<pre><code class="lang-bash">help -c cd
+</code></pre>
+</li>
 </ul>
+<h3 id="understanding-the-command-documentation-structure">Understanding the Command Documentation Structure</h3>
+<p>Each command page in PDMShell documentation is organized into the following sections:</p>
+<ol>
+<li><strong>DESCRIPTION</strong>: A brief explanation of what the command does.</li>
+<li><strong>SYNTAX</strong>: The syntax for using the command, including required and optional parameters.</li>
+<li><strong>PARAMETERS</strong>: A detailed explanation of each parameter, including whether it is required or optional.</li>
+<li><strong>EXAMPLES</strong>: Practical examples of how to use the command.</li>
+<li><strong>REMARKS</strong>: Additional notes, tips, or special considerations for using the command.</li>
+<li><strong>VIDEO</strong>: A short video tutorial demonstrating the command in action (if available).</li>
+</ol>
+<h3 id="example-command-documentation">Example Command Documentation</h3>
+<p>Here’s an example of how a command is documented:</p>
+<h4 id="cd-command-documentation">CD Command Documentation</h4>
+<p><strong>DESCRIPTION</strong>:<br>
+Changes the current PDM directory.</p>
+<p><strong>SYNTAX</strong>:</p>
+<pre><code class="lang-bash">cd [-directory|id]
+</code></pre>
+<p><strong>PARAMETERS</strong>:</p>
+<ul>
+<li><code>directory</code> (or <code>d</code>): The directory to switch to. The directory parameter can be a relative or absolute path in PDM.</li>
+<li><code>id</code>: ID of the folder to navigate to.</li>
+</ul>
+<p><strong>EXAMPLES</strong>:</p>
+<pre><code class="lang-bash">cd -directory 'C:\Vault\NewFolder' # Navigates to NewFolder
+cd -id 755 # Navigates to the folder with ID 755
+</code></pre>
+<p><strong>REMARKS</strong>:</p>
+<ul>
+<li>Use <code>cd..</code> to navigate to the parent folder or <code>cd\</code> to navigate to the root of the vault.</li>
+<li>If you just created a new folder and want to <code>cd</code> to it using autocomplete, use the <code>dir</code> command with the <code>-refresh</code> parameter to reload the session.</li>
+<li><code>directory</code> is the default parameter, so you don’t need to specify it if it’s the only parameter in your command.</li>
+</ul>
+<p><strong>VIDEO</strong>:<br>
+<video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay="" muted="" controls="" style="width: 100%; border-radius: 12px;"></video></p>
+<p>By following this structure, you can quickly learn how to use any command in PDMShell and integrate it into your workflows.</p>
 <hr>
 <h2 id="-getting-support">📞 Getting Support</h2>
 <p>If you need assistance or have any questions, we're here to help!</p>
@@ -112,7 +153,7 @@ Click the button below to reach out to our support team:<br>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/introduction.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/introduction.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

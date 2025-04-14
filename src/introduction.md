@@ -1,29 +1,77 @@
 # Introduction to PDMShell
 
-Welcome to **PDMShell**, the command-line interpreter designed specifically for **SOLIDWORKS PDM Professional**. PDMShell empowers engineers and IT professionals with a **powerful**, **flexible**, and **efficient** tool for automating and streamlining tasks within the SOLIDWORKS PDM environment. By integrating command-line functionality, PDMShell enables users to perform routine PDM operations quickly, efficiently, and with greater control over their PDM data management processes.
+Welcome to **PDMShell**, the command-line interpreter designed specifically for **SOLIDWORKS PDM Professional**. PDMShell empowers engineers and IT professionals with a **powerful**, **flexible**, and **efficient** tool for automating and streamlining tasks within the SOLIDWORKS PDM environment.
 
----
+### Using the Help System
 
-## What is PDMShell?
+PDMShell provides a comprehensive help system and detailed command documentation to guide you through its features. Here's how to get started:
 
-PDMShell is a **comprehensive command-line interface (CLI)** for **SOLIDWORKS PDM Professional** that simplifies file management, automation, and configuration tasks. It offers an extensive set of commands that can be used for common operations such as:
+- To view a list of all available commands, type:
+  ```bash
+  help
+  ```
+- To get detailed information about a specific command, type:
+  ```bash
+  help -c <command>
+  ```
+  For example:
+  ```bash
+  help -c cd
+  ```
 
-- File check-ins and check-outs
-- Variable management
-- User authentication
-- Workflow automation
-- And much more!
+### Understanding the Command Documentation Structure
+Each command page in PDMShell documentation is organized into the following sections:
+
+1. **DESCRIPTION**: A brief explanation of what the command does.
+2. **SYNTAX**: The syntax for using the command, including required and optional parameters.
+3. **PARAMETERS**: A detailed explanation of each parameter, including whether it is required or optional.
+4. **EXAMPLES**: Practical examples of how to use the command.
+5. **REMARKS**: Additional notes, tips, or special considerations for using the command.
+6. **VIDEO**: A short video tutorial demonstrating the command in action (if available).
+
+### Example Command Documentation
+Here’s an example of how a command is documented:
+
+#### CD Command Documentation
+
+**DESCRIPTION**:  
+Changes the current PDM directory.
+
+**SYNTAX**:  
+```bash
+cd [-directory|id]
+```
+
+**PARAMETERS**:  
+- `directory` (or `d`): The directory to switch to. The directory parameter can be a relative or absolute path in PDM.  
+- `id`: ID of the folder to navigate to.
+
+**EXAMPLES**:  
+```bash
+cd -directory 'C:\Vault\NewFolder' # Navigates to NewFolder
+cd -id 755 # Navigates to the folder with ID 755
+```
+
+**REMARKS**:  
+- Use `cd..` to navigate to the parent folder or `cd\` to navigate to the root of the vault.  
+- If you just created a new folder and want to `cd` to it using autocomplete, use the `dir` command with the `-refresh` parameter to reload the session.  
+- `directory` is the default parameter, so you don’t need to specify it if it’s the only parameter in your command.  
+
+**VIDEO**:  
+<video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+
+
+By following this structure, you can quickly learn how to use any command in PDMShell and integrate it into your workflows.
 
 ---
 
 ## 📞 Getting Support
 
-If you need assistance or have any questions, we're here to help!  
+If you need assistance or have any questions, we're here to help!   
 
 - **Contact Us**:  
   Click the button below to reach out to our support team:  
   [Get Support](mailto:support@bluebytesystemsinc.zohodesk.com)
-
 
 ---
 
