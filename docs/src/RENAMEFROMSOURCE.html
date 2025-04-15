@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>GETNAME Command Documentation | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>RENAMEFROMSOURCE Command Documentation | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="GETNAME Command Documentation | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="RENAMEFROMSOURCE Command Documentation | Powershell like features for SOLIDWORKS PDM Professional ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/GETNAME.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/RENAMEFROMSOURCE.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,23 +85,79 @@
         </div>
 
         <article data-uid="">
-<h1 id="getname-command-documentation">GETNAME Command Documentation</h1>
+<h1 id="renamefromsource-command-documentation">RENAMEFROMSOURCE Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>Returns the name of an object (folder or file) from a PDM ID.</p>
+<p>The <code>renamefromsource</code> command is used to rename files in the PDM system based on a source CSV file. The CSV file provides the necessary information to map file IDs to their new names and folder IDs. This command supports alias evaluation for dynamic renaming.</p>
+<hr>
 <h2 id="syntax">SYNTAX:</h2>
-<p>getname [-id object_id]</p>
+<pre><code class="lang-bash">renamefromsource -filePath -evaluatealias -csv 
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-id object_id - The PDM ID of the object.</p>
+<ul>
+<li><code>filePath</code>: (Required) The source file path. This must be a CSV file with three columns:</li>
+</ul>
+<ol>
+<li>File ID: The ID of the file to be renamed.</li>
+<li>New File Name: The new file name, including the extension.</li>
+<li>Folder ID: The ID of the folder containing the file.</li>
+</ol>
+<ul>
+<li><code>evaluatealias</code>: Toggle. This allows placeholders to be used in the new file name.</li>
+<li><code>csv</code>: Specifies the path to an additional CSV file for batch renaming.</li>
+</ul>
 <h2 id="examples">EXAMPLES:</h2>
-<p>getname -id 12345</p>
-<h2 id="preview">PREVIEW:</h2>
-<p><img src="../images/getname.png" alt="GetName Command"></p>
+<p>Rename files using a source CSV file:</p>
+<pre><code class="lang-bash">renamefromsource -filePath &quot;C:\data\rename.csv&quot; -evaluatealias  
+# renames all the files in rename.csv while evaluating aliases
+</code></pre>
+<h2 id="csv-format">CSV FORMAT:</h2>
+<p>The source CSV file must have the following structure:</p>
+<table>
+<thead>
+<tr>
+<th>File ID</th>
+<th>New File Name</th>
+<th>Folder ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>123</td>
+<td>newfile1.txt</td>
+<td>456</td>
+</tr>
+<tr>
+<td>124</td>
+<td>anotherfile.docx</td>
+<td>457</td>
+</tr>
+<tr>
+<td>125</td>
+<td>examplefile_backup.pdf</td>
+<td>458</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>File ID</strong>: The ID of the file to be renamed.</li>
+<li><strong>New File Name</strong>: The desired new name for the file, including the extension.</li>
+<li><strong>Folder ID</strong>: The ID of the folder containing the file.</li>
+</ul>
+<h2 id="remarks">REMARKS:</h2>
+<ul>
+<li>The <code>filePath</code> parameter is mandatory and must point to a valid CSV file.</li>
+<li>The <code>evaluatealias</code> parameter supports dynamic placeholders for renaming, such as $name, $revision, $yyyy, etc. Ensure the CSV file is properly formatted with three columns: File -ID, New File Name, and Folder ID.</li>
+<li>The <code>csv</code> parameter is optional and can be used to provide additional renaming data.</li>
+</ul>
+<p>For more information about alias evaluation, refer to the <a href="EVAL.html">Dynamic Placeholders in PDMShell</a>.</p>
+<h2 id="tutorial">TUTORIAL:</h2>
+<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/renamefromsource.mp4" autoplay="" muted="" controls="" style="width: 100%; border-radius: 12px;"></video></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/GETNAME.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/RENAMEFROMSOURCE.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

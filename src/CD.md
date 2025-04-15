@@ -30,5 +30,5 @@ cd api #navigates to the api folder
 cd -id 755 #navigates to the folder with id 755
 ```
 
-# VIDEO:
+## TUTORIAL:
  <video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>

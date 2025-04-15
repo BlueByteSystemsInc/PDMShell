@@ -30,5 +30,5 @@ The `value` parameter gets evaluated by PDMShell. PDMShell allows you to use pla
 
 Additionally, you can use variables enclosed in square brackets (e.g., `[VariableName]`) to include values from other variables.
 
-### Example:
+## EXAMPLES:
 If you use the value `"$filename_$date_$version"`, it will be replaced with the file name, current date, and version, resulting in something like `"oldname_10-12-2023_3"`.

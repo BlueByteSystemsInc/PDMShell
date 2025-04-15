@@ -4,10 +4,8 @@
 Quits the application.
 
 ## SYNTAX:
+```bash
 quit
-
+```
 ## PARAMETERS:
 None
-
-## EXAMPLES:
-quit

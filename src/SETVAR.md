@@ -76,5 +76,5 @@ Additionally, you can use variables enclosed in square brackets (e.g., `[Variabl
   - **CamelCase**: Converts the string to camel case, where the first word is lowercase, and subsequent words are capitalized (e.g., `exampleString`).
   - **FirstLetterCase**: Capitalizes the first letter of the string and converts the rest to lowercase (e.g., `Example`).
 
-# VIDEO:
+## TUTORIAL:
  <video src="https://bluebyte.biz/wp-content/pdmshellvideos/setvar.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>

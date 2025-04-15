@@ -36,5 +36,5 @@ login -auto -vaultName bluebyte #logs into the blue byte vault using the existin
   - Log into a vault view
 
 
-# VIDEO:
+## TUTORIAL:
  <video src="https://bluebyte.biz/wp-content/pdmshellvideos/login.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>

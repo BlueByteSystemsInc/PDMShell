@@ -27,7 +27,7 @@ Each command page in PDMShell documentation is organized into the following sect
 3. **PARAMETERS**: A detailed explanation of each parameter, including whether it is required or optional.
 4. **EXAMPLES**: Practical examples of how to use the command.
 5. **REMARKS**: Additional notes, tips, or special considerations for using the command.
-6. **VIDEO**: A short video tutorial demonstrating the command in action (if available).
+6. **TUTORIAL**: A short video tutorial demonstrating the command in action (if available).
 
 ### Example Command Documentation
 Here’s an example of how a command is documented:
@@ -57,7 +57,7 @@ cd -id 755 # Navigates to the folder with ID 755
 - If you just created a new folder and want to `cd` to it using autocomplete, use the `dir` command with the `-refresh` parameter to reload the session.  
 - `directory` is the default parameter, so you don’t need to specify it if it’s the only parameter in your command.  
 
-**VIDEO**:  
+**TUTORIAL**:  
 <video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
 
 
