@@ -187,7 +187,7 @@
   "src/VERSION.html": {
     "href": "src/VERSION.html",
     "title": "VERSION Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
-    "keywords": "VERSION Command Documentation DESCRIPTION: Lists versions of installed SOLIDWORKS. SYNTAX: version PARAMETERS: SOLIDWORKS - List versions of installed SOLIDWORKS EXAMPLES: version -solidworks"
+    "keywords": "VERSION Command Documentation DESCRIPTION: Displays version information for PDMShell, installed SOLIDWORKS, or the PDM client. SYNTAX: version -solidworks -pdm PARAMETERS: No parameters: Displays the version of PDMShell. solidworks: Displays the versions of installed SOLIDWORKS. pdm: Displays the version of the installed PDM client. PARAMETERS: SOLIDWORKS - List versions of installed SOLIDWORKS EXAMPLES: version -solidworks # lists all the installed solidworks versions"
   },
   "src/cdpdm.html": {
     "href": "src/cdpdm.html",
