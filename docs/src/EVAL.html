@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/EVAL.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/EVAL.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -97,12 +97,13 @@
 <ul>
 <li><strong><code>cd</code></strong>: Change the current directory.</li>
 <li><strong><code>mkdir</code></strong>: Create a new directory.</li>
-<li><strong><code>exportcommand</code></strong>: Export commands to a file.</li>
+<li><strong><code>export</code></strong>: Export commands to a file.</li>
 <li><strong><code>addtvault</code></strong>: Add a vault with the directory as the backing object.</li>
 </ul>
 <h3 id="commands-using-files-or-folders-as-the-backing-object">Commands Using Files or Folders as the Backing Object:</h3>
 <ul>
 <li><strong><code>rename</code></strong>: Uses the <code>value</code> parameter for renaming files or folders.</li>
+<li><strong><code>renamefromsource</code></strong>: The new file is evaluated if the <code>evaluatealiases</code> parameter is specified.</li>
 <li><strong><code>setvar</code></strong>: Uses the <code>value</code> parameter to set variables for files or folders.</li>
 </ul>
 <hr>
@@ -113,19 +114,10 @@
 <li><code>$value</code>: Existing value of the variable.</li>
 <li><code>$name</code>: The file name with extension.</li>
 <li><code>$nameWithoutExtension</code>: The file name without extension.</li>
-<li><code>$username</code>: The name of the logged-in user.</li>
-<li><code>$vaultName</code>: The name of the vault.</li>
-<li><code>$yyyy</code>: The current year.</li>
-<li><code>$mm</code>: The current month (two digits).</li>
-<li><code>$hh</code>: The current hour (two digits).</li>
-<li><code>$mi</code>: The current minute (two digits).</li>
-<li><code>$ss</code>: The current second (two digits).</li>
+<li><code>$extension</code>: The file extension.</li>
 <li><code>$id</code>: The file ID.</li>
 <li><code>$revision</code>: The current revision of the file (PDM revision, not the PDM variable).</li>
-<li><code>$date</code>: The current date.</li>
-<li><code>$time</code>: The current time in the current locale.</li>
 <li><code>$version</code>: The current version of the file.</li>
-<li><code>$extension</code>: The file extension.</li>
 <li><code>$fullyQualifiedName</code>: The full local path of the file.</li>
 <li><code>$fullyQualifiedFolderName</code>: The full local path of the folder containing the file.</li>
 <li><code>$folderName</code>: The name of the folder containing the file.</li>
@@ -137,6 +129,9 @@
 <li><code>$folderName</code>: The name of the parent folder.</li>
 <li><code>$id</code>: The folder ID.</li>
 <li><code>$fullyQualifiedName</code>: The full local path of the folder.</li>
+</ul>
+<h3 id="common-placeholders-applicable-to-both-files-and-folders">Common Placeholders (Applicable to Both Files and Folders)</h3>
+<ul>
 <li><code>$username</code>: The name of the logged-in user.</li>
 <li><code>$vaultName</code>: The name of the vault.</li>
 <li><code>$yyyy</code>: The current year.</li>
@@ -160,7 +155,7 @@
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/EVAL.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/EVAL.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

@@ -12,11 +12,11 @@ PDMShell provides a comprehensive help system and detailed command documentation
   ```
 - To get detailed information about a specific command, type:
   ```bash
-  help -c <command>
+  help -command <command>
   ```
   For example:
   ```bash
-  help -c cd
+  help -command cd
   ```
 
 ### Understanding the Command Documentation Structure
@@ -39,11 +39,11 @@ Changes the current PDM directory.
 
 **SYNTAX**:  
 ```bash
-cd [-directory|id]
+cd [-directory|-id]
 ```
 
 **PARAMETERS**:  
-- `directory` (or `d`): The directory to switch to. The directory parameter can be a relative or absolute path in PDM.  
+- `directory`: The directory to switch to. The directory parameter can be a relative or absolute path in PDM.  
 - `id`: ID of the folder to navigate to.
 
 **EXAMPLES**:  

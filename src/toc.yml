@@ -7,6 +7,8 @@
   href: EVAL.md
 - name: Scripting
   href: scripting.md
+- name: Short Format for Parameters
+  href: parameter_short_format.md
 - name: COMMANDS
   expanded: true
   items:

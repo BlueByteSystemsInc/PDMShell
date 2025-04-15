@@ -14,11 +14,12 @@ The following commands support the use of dynamic placeholders:
 ### Commands Using the Current Folder as the Backing Object (`directory` parameter):
 - **`cd`**: Change the current directory.
 - **`mkdir`**: Create a new directory.
-- **`exportcommand`**: Export commands to a file.
+- **`export`**: Export commands to a file.
 - **`addtvault`**: Add a vault with the directory as the backing object.
 
 ### Commands Using Files or Folders as the Backing Object:
 - **`rename`**: Uses the `value` parameter for renaming files or folders.
+- **`renamefromsource`**: The new file is evaluated if the `evaluatealiases` parameter is specified.
 - **`setvar`**: Uses the `value` parameter to set variables for files or folders.
 
 ---
@@ -30,19 +31,10 @@ The `value` parameter in supported commands can include placeholders that are dy
 - `$value`: Existing value of the variable.
 - `$name`: The file name with extension.
 - `$nameWithoutExtension`: The file name without extension.
-- `$username`: The name of the logged-in user.
-- `$vaultName`: The name of the vault.
-- `$yyyy`: The current year.
-- `$mm`: The current month (two digits).
-- `$hh`: The current hour (two digits).
-- `$mi`: The current minute (two digits).
-- `$ss`: The current second (two digits).
+- `$extension`: The file extension.
 - `$id`: The file ID.
 - `$revision`: The current revision of the file (PDM revision, not the PDM variable).
-- `$date`: The current date.
-- `$time`: The current time in the current locale.
 - `$version`: The current version of the file.
-- `$extension`: The file extension.
 - `$fullyQualifiedName`: The full local path of the file.
 - `$fullyQualifiedFolderName`: The full local path of the folder containing the file.
 - `$folderName`: The name of the folder containing the file.
@@ -53,6 +45,8 @@ The `value` parameter in supported commands can include placeholders that are dy
 - `$folderName`: The name of the parent folder.
 - `$id`: The folder ID.
 - `$fullyQualifiedName`: The full local path of the folder.
+
+### Common Placeholders (Applicable to Both Files and Folders)
 - `$username`: The name of the logged-in user.
 - `$vaultName`: The name of the vault.
 - `$yyyy`: The current year.
