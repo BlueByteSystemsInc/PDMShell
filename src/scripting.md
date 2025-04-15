@@ -75,11 +75,11 @@ You can also execute scripts directly from the PDMShell console using the `runsc
 runscript -source "C:\Scripts\example.pdmshell"
 ```
 > [!NOTE]
-> For more information about the `runscript` command, refer to the [runscript documentation](runscript.html).
+> For more information about the `runscript` command, refer to the [runscript documentation](RUNSCRIPT.html).
 
 ---
 
-## Advanced Usage: Workflow Integration
+## Workflow Integration
 For users with the **Premium Version** of PDMShell, `pdmcli.exe` can be hooked into workflow transitions. This allows scripts to be executed automatically as part of a workflow, enabling seamless automation of complex processes.
 
 ---
