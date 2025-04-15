@@ -3,6 +3,8 @@
   href: introduction.md
 - name: EULA
   href: eula.md
+- name: Dynamic Placeholders in PDMShell
+  href: EVAL.md
 - name: Scripting
   href: scripting.md
 - name: COMMANDS

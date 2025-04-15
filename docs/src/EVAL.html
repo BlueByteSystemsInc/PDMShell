@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Evaluation Functionality in PDMShell | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>Dynamic Placeholders in PDMShell | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Evaluation Functionality in PDMShell | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="Dynamic Placeholders in PDMShell | Powershell like features for SOLIDWORKS PDM Professional ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,28 +85,28 @@
         </div>
 
         <article data-uid="">
-<h1 id="evaluation-functionality-in-pdmshell">Evaluation Functionality in PDMShell</h1>
+<h1 id="dynamic-placeholders-in-pdmshell">Dynamic Placeholders in PDMShell</h1>
 
 <h2 id="overview">Overview</h2>
-<p>The <strong>Evaluation</strong> functionality in PDMShell allows dynamic value substitution using placeholders. This feature is supported by several commands and enables the use of file or folder properties, system variables, and other contextual information to generate new values dynamically.</p>
-<p>Evaluation is not a standalone command but a <strong>functionality</strong> used by specific commands to process the <code>value</code> parameter or other relevant inputs.</p>
+<p>The <strong>Dynamic Placeholders</strong> feature in PDMShell allows you to substitute values dynamically using placeholders. This functionality is supported by several commands and enables the use of file or folder properties, system variables, and other contextual information to generate new values automatically.</p>
+<p>Dynamic Placeholders are not a standalone command but a <strong>feature</strong> used by specific commands to process the <code>value</code> parameter or other relevant inputs.</p>
 <hr>
-<h2 id="commands-supporting-evaluation">Commands Supporting Evaluation</h2>
-<p>The following commands support evaluation:</p>
-<h3 id="commands-using-the-current-folder-as-the-backing-object-directory-parameter">Commands Using the Current Folder as the backing Object (<code>directory</code> parameter):</h3>
+<h2 id="commands-supporting-dynamic-placeholders">Commands Supporting Dynamic Placeholders</h2>
+<p>The following commands support the use of dynamic placeholders:</p>
+<h3 id="commands-using-the-current-folder-as-the-backing-object-directory-parameter">Commands Using the Current Folder as the Backing Object (<code>directory</code> parameter):</h3>
 <ul>
 <li><strong><code>cd</code></strong>: Change the current directory.</li>
 <li><strong><code>mkdir</code></strong>: Create a new directory.</li>
 <li><strong><code>exportcommand</code></strong>: Export commands to a file.</li>
 <li><strong><code>addtvault</code></strong>: Add a vault with the directory as the backing object.</li>
 </ul>
-<h3 id="commands-using-files-or-folders-as-the-backing-object">Commands Using Files or Folders as the backing Object:</h3>
+<h3 id="commands-using-files-or-folders-as-the-backing-object">Commands Using Files or Folders as the Backing Object:</h3>
 <ul>
 <li><strong><code>rename</code></strong>: Uses the <code>value</code> parameter for renaming files or folders.</li>
 <li><strong><code>setvar</code></strong>: Uses the <code>value</code> parameter to set variables for files or folders.</li>
 </ul>
 <hr>
-<h2 id="placeholders-for-evaluation">Placeholders for Evaluation</h2>
+<h2 id="placeholders-for-dynamic-substitution">Placeholders for Dynamic Substitution</h2>
 <p>The <code>value</code> parameter in supported commands can include placeholders that are dynamically replaced with actual values based on the context. The placeholders differ slightly depending on whether the backing object is a <strong>file</strong> or a <strong>folder</strong>.</p>
 <h3 id="placeholders-for-files">Placeholders for Files</h3>
 <ul>
@@ -148,8 +148,14 @@
 <li><code>$time</code>: The current time in the current locale.</li>
 </ul>
 <hr>
-<h2 id="using-variables-in-evaluation">Using Variables in Evaluation</h2>
+<h2 id="using-variables-in-dynamic-placeholders">Using Variables in Dynamic Placeholders</h2>
 <p>In addition to placeholders, you can include other variables by enclosing them in square brackets (e.g., <code>[VariableName]</code>). These variables are dynamically resolved based on the context of the file or folder.</p>
+<hr>
+<h2 id="example-usage">Example Usage</h2>
+<p>Here’s an example of how to use dynamic placeholders in a command:</p>
+<h3 id="renaming-a-file">Renaming a File</h3>
+<pre><code class="lang-bash">rename -filePath 1.sldprt -value &quot;$nameWithoutExtension_$yyyy$mm$dd$extension&quot;
+</code></pre>
 
 </article>
 
