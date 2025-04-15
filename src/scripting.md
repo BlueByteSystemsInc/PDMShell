@@ -1,4 +1,4 @@
-gi# Scripting in PDMShell
+# Scripting in PDMShell
 
 ## Overview
 PDMShell supports scripting to automate tasks and streamline workflows. Scripts use the `.pdmshell` file extension and are plain text files, making them easy to create and edit using any text editor, such as Notepad.
