@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/scripting.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p>gi# Scripting in PDMShell</p>
+<h2 id="overview">Overview</h2>
+<p>PDMShell supports scripting to automate tasks and streamline workflows. Scripts use the <code>.pdmshell</code> file extension and are plain text files, making them easy to create and edit using any text editor, such as Notepad.</p>
+<hr>
+<h2 id="creating-a-script">Creating a Script</h2>
+<p>A PDMShell script is a sequence of PDMShell commands written in a plain text file. Each command is executed in the order it appears in the script.</p>
+<h3 id="example-script">Example Script</h3>
+<p>Below is an example of a <code>.pdmshell</code> script:</p>
+<pre><code class="lang-bash"># filepath: example.pdmshell
+# This script automates exporting and adding files to the vault.
+
+# Navigate to the working directory
+cd &quot;\api\sandbox\fidget spinner&quot;
+
+# Create a new export folder with a dynamic name using the current folder
+mkdir &quot;$name-export-$date&quot;
+
+# Export all SolidWorks part files to the new folder as STEP files
+export -search %.sldprt -directory &quot;$name-export-$date&quot; -extensions stp -name $namewithoutextension-$yyyy-$mm-$dd
+
+# Change to the newly created export folder
+cd &quot;$name-export-$date&quot;
+
+# Add the exported files to the vault as stp files are NOT automatically added
+addtovault -source &quot; &quot;
+
+# Check in all files in the current folder
+checkin -search %
+
+# Open the folder in File Explorer
+start .
+</code></pre>
+<h3 id="script-annotations">Script Annotations</h3>
+<ol>
+<li><strong><code>cd &quot;\api\sandbox\fidget spinner&quot;</code></strong>: Changes the current working directory to the specified path.</li>
+<li><strong><code>mkdir &quot;$name-export-$date&quot;</code></strong>: Creates a new folder with a dynamic name based on the current date and the folder name.</li>
+<li><strong><code>export</code></strong>: Exports all <code>.sldprt</code> files in the current directory to the newly created folder as <code>.stp</code> files, appending the current date to the file names.</li>
+<li><strong><code>cd &quot;$name-export-$date&quot;</code></strong>: Changes the working directory to the newly created export folder.</li>
+<li><strong><code>addtovault</code></strong>: Adds the exported files to the vault.</li>
+<li><strong><code>checkin</code></strong>: Checks in all files in the current folder to the vault.</li>
+<li><strong><code>start .</code></strong>: Opens the current folder in File Explorer.</li>
+</ol>
+<hr>
+<h3 id="comments">Comments</h3>
+<p>Lines that start with <code>#</code> are ignored.</p>
+<h2 id="executing-a-script">Executing a Script</h2>
+<p>There are two ways to execute a <code>.pdmshell</code> script:</p>
+<h3 id="1-using-pdmcliexe">1. Using <code>pdmcli.exe</code></h3>
+<p>You can execute a script using the <code>pdmcli.exe</code> command-line tool. Provide the script file as the first argument, wrapped in quotes if the file path contains spaces.</p>
+<h4 id="example-command">Example Command</h4>
+<pre><code class="lang-bash">pdmcli.exe &quot;C:\Scripts\example.pdmshell&quot;
+</code></pre>
+<p>The <code>pdmcli.exe</code> tool can be found in the installation folder under <code>Program Files (x86)\BLUE BYTE SYSTEMS INC</code>.</p>
+<h3 id="2-using-the-runscript-command">2. Using the <code>runscript</code> Command</h3>
+<p>You can also execute scripts directly from the PDMShell console using the <code>runscript</code> command.</p>
+<p>[Note]</p>
+<h4 id="example-command-1">Example Command</h4>
+<pre><code class="lang-bash">runscript -source &quot;C:\Scripts\example.pdmshell&quot;
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For more information about the <code>runscript</code> command, refer to the <a href="runscript.html">runscript documentation</a>.</p>
+</div>
+<hr>
+<h2 id="advanced-usage-workflow-integration">Advanced Usage: Workflow Integration</h2>
+<p>For users with the <strong>Premium Version</strong> of PDMShell, <code>pdmcli.exe</code> can be hooked into workflow transitions. This allows scripts to be executed automatically as part of a workflow, enabling seamless automation of complex processes.</p>
+<hr>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>Scripts are a powerful way to automate repetitive tasks and enforce consistency in workflows.</li>
+<li>Since <code>.pdmshell</code> files are plain text, they can be created and edited using any text editor.</li>
+<li>Ensure the script file is saved with the <code>.pdmshell</code> extension for proper execution.</li>
+<li>Use comments (<code>#</code>) in scripts to document the purpose of each command for better readability.</li>
+</ul>
+<h2 id="let-blue-byte-systems-write-your-scripts">Let Blue Byte Systems Write Your Scripts</h2>
+<p>If you need assistance creating scripts for your specific workflows, Blue Byte Systems offers professional scripting services. Their team of experts can design and implement custom .pdmshell scripts tailored to your requirements, ensuring optimal efficiency and accuracy.</p>
+<p>To learn more about this service, contact Blue Byte Systems directly through their support page.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/scripting.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://bluebyte.biz'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

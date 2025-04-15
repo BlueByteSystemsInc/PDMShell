@@ -3,6 +3,8 @@
   href: introduction.md
 - name: EULA
   href: eula.md
+- name: Scripting
+  href: scripting.md
 - name: COMMANDS
   expanded: true
   items:
@@ -78,3 +80,5 @@
       href: undocheckout.md
     - name: version
       href: version.md
+- name: Aliases
+  href: EVAL.md

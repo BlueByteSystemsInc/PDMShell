@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>SETVAR Command Documentation | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>Evaluation Functionality in PDMShell | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="SETVAR Command Documentation | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="Evaluation Functionality in PDMShell | Powershell like features for SOLIDWORKS PDM Professional ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/SETVAR.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/EVAL.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,26 +85,30 @@
         </div>
 
         <article data-uid="">
-<h1 id="setvar-command-documentation">SETVAR Command Documentation</h1>
+<h1 id="evaluation-functionality-in-pdmshell">Evaluation Functionality in PDMShell</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
-<p>Sets the value of a variable for a specified checked out file or many checked out files.</p>
-<h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">setvar [-filePath|-search]  -variableName -value [-configNames] [-stringformat] 
-</code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
-<p>-<code>filePath</code>: The file to set the variable for.</p>
-<p>-<code>variableName</code>: The variable to set.</p>
-<p>-<code>value</code>: The value to assign to the variable.</p>
-<p>-<code>configNames</code>: The configuration names to set the variable for, separated by commas.</p>
-<p>-<code>search</code>: The search operation to use.</p>
-<p>-<code>stringformat</code>: string format. See remarks section.</p>
-<h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">setvar -filePath file1.sldprt -variableName Description -value $value -stringformat UpperCase # Upper case the current value.
-</code></pre>
-<h2 id="evaluation">EVALUATION:</h2>
-<p>The <code>value</code> parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables. The following placeholders are supported:</p>
-<h3 id="for-files">For Files:</h3>
+<h2 id="overview">Overview</h2>
+<p>The <strong>Evaluation</strong> functionality in PDMShell allows dynamic value substitution using placeholders. This feature is supported by several commands and enables the use of file or folder properties, system variables, and other contextual information to generate new values dynamically.</p>
+<p>Evaluation is not a standalone command but a <strong>functionality</strong> used by specific commands to process the <code>value</code> parameter or other relevant inputs.</p>
+<hr>
+<h2 id="commands-supporting-evaluation">Commands Supporting Evaluation</h2>
+<p>The following commands support evaluation:</p>
+<h3 id="commands-using-the-current-folder-as-the-backing-object-directory-parameter">Commands Using the Current Folder as the backing Object (<code>directory</code> parameter):</h3>
+<ul>
+<li><strong><code>cd</code></strong>: Change the current directory.</li>
+<li><strong><code>mkdir</code></strong>: Create a new directory.</li>
+<li><strong><code>exportcommand</code></strong>: Export commands to a file.</li>
+<li><strong><code>addtvault</code></strong>: Add a vault with the directory as the backing object.</li>
+</ul>
+<h3 id="commands-using-files-or-folders-as-the-backing-object">Commands Using Files or Folders as the backing Object:</h3>
+<ul>
+<li><strong><code>rename</code></strong>: Uses the <code>value</code> parameter for renaming files or folders.</li>
+<li><strong><code>setvar</code></strong>: Uses the <code>value</code> parameter to set variables for files or folders.</li>
+</ul>
+<hr>
+<h2 id="placeholders-for-evaluation">Placeholders for Evaluation</h2>
+<p>The <code>value</code> parameter in supported commands can include placeholders that are dynamically replaced with actual values based on the context. The placeholders differ slightly depending on whether the backing object is a <strong>file</strong> or a <strong>folder</strong>.</p>
+<h3 id="placeholders-for-files">Placeholders for Files</h3>
 <ul>
 <li><code>$value</code>: Existing value of the variable.</li>
 <li><code>$name</code>: The file name with extension.</li>
@@ -126,7 +130,7 @@
 <li><code>$fullyQualifiedFolderName</code>: The full local path of the folder containing the file.</li>
 <li><code>$folderName</code>: The name of the folder containing the file.</li>
 </ul>
-<h3 id="for-folders">For Folders:</h3>
+<h3 id="placeholders-for-folders">Placeholders for Folders</h3>
 <ul>
 <li><code>$value</code>: Existing value of the variable.</li>
 <li><code>$name</code>: The folder name.</li>
@@ -143,27 +147,14 @@
 <li><code>$date</code>: The current date.</li>
 <li><code>$time</code>: The current time in the current locale.</li>
 </ul>
-<p>Additionally, you can use variables enclosed in square brackets (e.g., <code>[VariableName]</code>) to include values from other variables. These variables are dynamically resolved based on the context of the file or folder.</p>
-<h2 id="remarks">REMARKS</h2>
-<ul>
-<li>The <code>configNames</code> parameter should be separated by commas. If omitted, PDMShell uses <code>@</code> for configuration-supported documents.</li>
-<li>The <code>search</code> parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
-<li>The <code>stringformat</code> parameter allows you to format the value of the variable using predefined string formatting options. The following formats are supported:
-<ul>
-<li><strong>UpperCase</strong>: Converts the entire string to uppercase.</li>
-<li><strong>LowerCase</strong>: Converts the entire string to lowercase.</li>
-<li><strong>CamelCase</strong>: Converts the string to camel case, where the first word is lowercase, and subsequent words are capitalized (e.g., <code>exampleString</code>).</li>
-<li><strong>FirstLetterCase</strong>: Capitalizes the first letter of the string and converts the rest to lowercase (e.g., <code>Example</code>).</li>
-</ul>
-</li>
-</ul>
-<h1 id="video">VIDEO:</h1>
-<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/setvar.mp4" autoplay="" muted="" controls="" style="width: 100%; border-radius: 12px;"></video></p>
+<hr>
+<h2 id="using-variables-in-evaluation">Using Variables in Evaluation</h2>
+<p>In addition to placeholders, you can include other variables by enclosing them in square brackets (e.g., <code>[VariableName]</code>). These variables are dynamically resolved based on the context of the file or folder.</p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/SETVAR.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/EVAL.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
