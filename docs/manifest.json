@@ -4,7 +4,7 @@
     "changefreq": "weekly",
     "priority": 1.0
   },
-  "source_base_path": "C:/Users/jlili/source/repos/BlueByteSystemsInc/PDMShell.Docs",
+  "source_base_path": "C:/Users/jlili/source/repos/BlueByteSystemsInc/PDMShell",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -921,6 +921,16 @@
       "output": {
         ".html": {
           "relative_path": "src/COPYTREE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/DELETE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/DELETE.html"
         }
       },
       "version": ""

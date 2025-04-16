@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>GETNAME Command Documentation | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>DELETE Command Documentation | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="GETNAME Command Documentation | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="DELETE Command Documentation | Powershell like features for SOLIDWORKS PDM Professional ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/GETNAME.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/DELETE.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,23 +85,49 @@
         </div>
 
         <article data-uid="">
-<h1 id="getname-command-documentation">GETNAME Command Documentation</h1>
+<h1 id="delete-command-documentation">DELETE Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>Returns the name of an object (folder or file) from a PDM ID.</p>
+<p>The <code>delete</code> command is used to delete files or directories from the PDM system. It supports various parameters to specify the target files or directories, including file paths, directory paths, search queries, and IDs. The command also supports recursive deletion for directories.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>getname [-id object_id]</p>
+<pre><code class="lang-bash">delete [-filePath|-id] -directory -search -recursive
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-id object_id - The PDM ID of the object.</p>
+<ul>
+<li><p><code>filePath</code> <path>:
+(Optional) Specifies the file path of the file to be deleted.</path></p>
+</li>
+<li><p><code>directory</code>: <directory>:
+(Optional) Specifies the directory to be deleted. If used with the -recursive parameter, all files and subdirectories within the directory will also be deleted.</directory></p>
+</li>
+<li><p><code>search</code> <query>:
+(Optional) A search query to filter files or directories to be deleted.</query></p>
+</li>
+<li><p><code>id</code> <fileid>:
+(Optional) Specifies the ID of the file to be deleted.</fileid></p>
+</li>
+<li><p><code>recursive</code>:
+(Optional) Deletes all files and subdirectories within the specified directory. This parameter is only applicable when deleting directories.</p>
+</li>
+</ul>
 <h2 id="examples">EXAMPLES:</h2>
-<p>getname -id 12345</p>
-<h2 id="preview">PREVIEW:</h2>
-<p><img src="../images/getname.png" alt="GetName Command"></p>
+<p>Delete files matching a search query:</p>
+<pre><code class="lang-bash">delete -search &quot;%.sldprt&quot;
+# delete all parts in the current directory
+</code></pre>
+<h2 id="remarks">REMARKS:</h2>
+<ul>
+<li>The delete command requires at least one of the following parameters: <code>filePath</code>, <code>dir</code>, <code>search</code>, or <code>id</code>.</li>
+<li>Use the <code>recursive</code> parameter with caution, as it will delete all contents within the specified directory.</li>
+<li>Ensure you have the necessary permissions to delete files or directories in the PDM system.</li>
+</ul>
+<h2 id="tutorial">TUTORIAL:</h2>
+<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/delete.mp4" autoplay="" muted="" controls="" style="width: 100%; border-radius: 12px;"></video></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/GETNAME.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/DELETE.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
