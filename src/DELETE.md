@@ -9,16 +9,16 @@ delete [-filePath|-id] -directory -search -recursive
 ```
 ## PARAMETERS:
 
-- `filePath` <path>:
+- `filePath`:
 (Optional) Specifies the file path of the file to be deleted.
 
-- `directory`: <directory>:
+- `directory`: 
 (Optional) Specifies the directory to be deleted. If used with the -recursive parameter, all files and subdirectories within the directory will also be deleted.
 
-- `search` <query>:
+- `search`:
 (Optional) A search query to filter files or directories to be deleted.
 
-- `id` <fileId>:
+- `id`:
 (Optional) Specifies the ID of the file to be deleted.
 
 - `recursive`:

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>SETVARSFROMSOURCE Command Documentation | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>DELETEFROMSOURCE Command Documentation | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="SETVARSFROMSOURCE Command Documentation | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="DELETEFROMSOURCE Command Documentation | Powershell like features for SOLIDWORKS PDM Professional ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/SETVARSFROMSOURCE.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/DELETEFROMSOURCE.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,40 +85,30 @@
         </div>
 
         <article data-uid="">
-<h1 id="setvarsfromsource-command-documentation">SETVARSFROMSOURCE Command Documentation</h1>
+<h1 id="deletefromsource-command-documentation">DELETEFROMSOURCE Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>Sets variables for multiple files using a CSV file as the source.</p>
+<p>The <code>deletefromsource</code> function is used to delete files from a csv file.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">setvarsfromsource -source
+<pre><code class="lang-bash">deletefromsource -filePath
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-<code>source</code>: The CSV file containing the file IDs and variable values.</p>
-<h2 id="csv-file-format">CSV FILE FORMAT:</h2>
-<p>The CSV file should have the following format:</p>
-<pre><code>FileID,Variable1,Variable2,... 
-XXXX,Value1,Value2,... 
-XXXX,Value1,Value2,...
-</code></pre>
-<h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">setvarsfromsource -source variables.csv # the source file must be exist in the current directory
-</code></pre>
+<ul>
+<li><code>filePath</code> :  A string containing the IDs of the files and folders to be deleted. The IDs should be formatted appropriately for the function to process them.</li>
+</ul>
 <h2 id="remarks">REMARKS:</h2>
 <ul>
-<li>The CSV file should have the first column as the file ID and the subsequent columns as the variable names.</li>
-<li>You need to include the extension in the filename. This file can be outside the vault.</li>
-<li>The best way to generate a source CSV is to use the <code>dir</code> command or the <code>search</code> command on a folder with the <code>-csv</code> parameter and the <code>columns</code>, like:</li>
+<li>The source file should be a CSV file with a column header. This column must contain the IDs of the files to be deleted.</li>
+<li>The command will ignore any files that are <strong>checked out</strong>.</li>
 </ul>
-<pre><code class="lang-bash">dir -columns Description,&quot;Part Number&quot; -csv data.csv
-search -search %.sldprt -recursive -columns Description,&quot;Part Number&quot; -csv data.csv #this will save all parts from all levels in the current directory with the columns Description and Part Number
+<h3 id="examples">EXAMPLES:</h3>
+<pre><code class="lang-bash">deletefromsource -filePath &quot;files to delete.csv&quot;
 </code></pre>
-<h2 id="tutorial">TUTORIAL:</h2>
-<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/setvarsfromsource.mp4" autoplay="" muted="" controls="" style="width: 100%; border-radius: 12px;"></video></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/SETVARSFROMSOURCE.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/DELETEFROMSOURCE.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

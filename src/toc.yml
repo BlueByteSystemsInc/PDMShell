@@ -26,6 +26,8 @@
       href: COPYTREE.md
     - name: delete
       href: DELETE.md
+    - name: deleteFromSource
+      href: DELETEFROMSOURCE.md
     - name: destory
       href: DESTORY.md
     - name: dir
