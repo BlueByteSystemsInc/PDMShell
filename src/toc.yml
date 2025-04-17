@@ -1,8 +1,10 @@
 - name: PDMShell
-- name: Introduction
-  href: introduction.md
 - name: EULA
   href: eula.md
+- name: Introduction
+  href: introduction.md
+- name: Installing PDMShell
+  href: howtoinstall.md
 - name: Dynamic Placeholders in PDMShell
   href: EVAL.md
 - name: Scripting
@@ -12,6 +14,8 @@
 - name: COMMANDS
   expanded: true
   items:
+    - name: addToVault
+      href: ADDTOVAULT.md
     - name: cd
       href: cd.md
     - name: checkin

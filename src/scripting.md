@@ -90,6 +90,8 @@ For users with the **Premium Version** of PDMShell, `pdmcli.exe` can be hooked i
 - Ensure the script file is saved with the `.pdmshell` extension for proper execution.
 - Use comments (`#`) in scripts to document the purpose of each command for better readability.
 
+## TUTORIAL:
+ <video src="https://bluebyte.biz/wp-content/pdmshellvideos/scripting.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
 
 ## Let Blue Byte Systems Write Your Scripts
 If you need assistance creating scripts for your specific workflows, Blue Byte Systems offers professional scripting services. Their team of experts can design and implement custom .pdmshell scripts tailored to your requirements, ensuring optimal efficiency and accuracy.
