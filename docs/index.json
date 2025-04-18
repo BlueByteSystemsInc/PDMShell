@@ -54,10 +54,10 @@
     "title": "DELETEFROMSOURCE Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
     "keywords": "DELETEFROMSOURCE Command Documentation DESCRIPTION: The deletefromsource function is used to delete files from a csv file. SYNTAX: deletefromsource -filePath PARAMETERS: filePath : A string containing the IDs of the files and folders to be deleted. The IDs should be formatted appropriately for the function to process them. REMARKS: The source file should be a CSV file with a column header. This column must contain the IDs of the files to be deleted. The command will ignore any files that are checked out. EXAMPLES: deletefromsource -filePath \"files to delete.csv\""
   },
-  "src/DESTROY.html": {
-    "href": "src/DESTROY.html",
-    "title": "DESTORY Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
-    "keywords": "DESTORY Command Documentation DESCRIPTION: Destroy the deleted files in a folder. SYNTAX: clearcache [-d directory] [-recursive] PARAMETERS: -d directory - The directory to destory. -recursive - Enables recursive search."
+  "src/DESTORY.html": {
+    "href": "src/DESTORY.html",
+    "title": "DESTROY Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
+    "keywords": "DESTROY Command Documentation DESCRIPTION: The destroy command is used to permanently delete files that have been marked as deleted in a specified directory. This command supports recursive deletion and filtering by date. SYNTAX: destroy -directory -recursive -date PARAMETERS: directory: The directory to destroy. recursive: Enables recursive search (for files). date: (Optional) Specifies a date filter. Only files deleted on or before the specified date will be destroyed. The date format should be YYYY-MM-DD. EXAMPLES: destroy -directory \"C:\\Projects\\Project\" # destroys all deleted files in project folder REMARKS: The directory parameter is mandatory and must specify a valid directory. Use the recursive parameter with caution, as it will process all subdirectories within the specified directory. The date parameter allows you to target files deleted on or before the specified date, providing more control over the destruction process. This action is irreversible. Ensure you have the necessary permissions and have reviewed the files before executing the command."
   },
   "src/DIR.html": {
     "href": "src/DIR.html",

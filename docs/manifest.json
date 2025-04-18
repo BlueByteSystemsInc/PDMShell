@@ -877,10 +877,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "src/DESTROY.md",
+      "source_relative_path": "src/DESTORY.md",
       "output": {
         ".html": {
-          "relative_path": "src/DESTROY.html"
+          "relative_path": "src/DESTORY.html"
         }
       },
       "version": ""
