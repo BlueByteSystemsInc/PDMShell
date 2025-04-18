@@ -1,14 +1,27 @@
 # CLEARCACHE Command Documentation
 
 ## DESCRIPTION:
-Clears the local cache of a folder or many files
+Clears the local cache of a folder or many files.
 
 ## SYNTAX:
-clearcache [-d directory] [-s search]
+```bash
+clearcache -directory -search -toolboxflag -source
+```
 
 ## PARAMETERS:
--d directory - The directory to clear the local cache of.
--s search - Search query.  
+- `-directory`: The directory to clear the local cache of.
+- `-search`: Search query.
+- `-toolboxflag`: Ignore toolbox files.
+- `-source`: CSV files containing complete local file paths to clear. First row is header.
 
 ## EXAMPLES:
-The search parameter allows to search for files in the current directory and remove their local copies.
+```bash
+clearcache --search "*.sldprt"
+# Clears the cache of all `.sldprt` files in the current directory.
+
+clearcache -directory project -toolboxflag
+# Clears the directory called project whiling ignore toolbox files.
+
+clearcache -source "source.csv"
+# Clears the cache for the specified source.
+```

@@ -1,16 +1,19 @@
 # EDITVARS Command Documentation
 
 ## DESCRIPTION:
-Shows the variable editor manager.
+Opens the PDM variable editor.
 
 ## SYNTAX:
+```bash 
 editvars
-
+```
 ## PARAMETERS:
 None
 
 ## EXAMPLES:
+```bash
 editvars
-
-## PREVIEW:
+# open the PDM variable editor 
+```
+## TUTORIAL:
 ![Variable Editor Manager](../images/editvars.png)

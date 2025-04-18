@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/SEARCH.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/SEARCH.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,46 +85,46 @@
         </div>
 
         <article data-uid="">
-<h1 id="search-command-documentation">SEARCH Command Documentation</h1>
+<h1 id="search-command-documentation" sourcefile="src/SEARCH.md" sourcestartlinenumber="1">SEARCH Command Documentation</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
-<p>The <code>search</code> command allows users to search for files and folders in the current directory. It supports recursive searches, filtering, and output customization.</p>
-<h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">search -search -recursive -includesubfolders -csv -columns
+<h2 id="description" sourcefile="src/SEARCH.md" sourcestartlinenumber="3">DESCRIPTION:</h2>
+<p sourcefile="src/SEARCH.md" sourcestartlinenumber="4">The <code sourcefile="src/SEARCH.md" sourcestartlinenumber="4">search</code> command allows users to search for files and folders in the current directory. It supports recursive searches, filtering, and output customization.</p>
+<h2 id="syntax" sourcefile="src/SEARCH.md" sourcestartlinenumber="6">SYNTAX:</h2>
+<pre><code class="lang-bash" sourcefile="src/SEARCH.md" sourcestartlinenumber="7">search -search -recursive -includesubfolders -csv -columns
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
-<ul>
-<li><code>search</code>: Search keyword. This supports SQL wildcard %.</li>
-<li><code>recursive</code>: Searches through all subdirectories recursively.</li>
-<li><code>includesubfolders</code>: Includes subfolders in the search results.</li>
-<li><code>csv</code>: Outputs the search results in CSV format.</li>
-<li><code>columns</code>: Specifies the columns to include in the output.</li>
+<h2 id="parameters" sourcefile="src/SEARCH.md" sourcestartlinenumber="11">PARAMETERS:</h2>
+<ul sourcefile="src/SEARCH.md" sourcestartlinenumber="12">
+<li sourcefile="src/SEARCH.md" sourcestartlinenumber="12"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="12">search</code>: Search keyword. This supports SQL wildcard %.</li>
+<li sourcefile="src/SEARCH.md" sourcestartlinenumber="13"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="13">recursive</code>: Searches through all subdirectories recursively.</li>
+<li sourcefile="src/SEARCH.md" sourcestartlinenumber="14"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="14">includesubfolders</code>: Includes subfolders in the search results.</li>
+<li sourcefile="src/SEARCH.md" sourcestartlinenumber="15"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="15">csv</code>: Outputs the search results in CSV format.</li>
+<li sourcefile="src/SEARCH.md" sourcestartlinenumber="16"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="16">columns</code>: Specifies the columns to include in the output.</li>
 </ul>
-<h2 id="examples">EXAMPLES:</h2>
-<h3 id="example-1-basic-search">Example 1: Basic Search</h3>
-<pre><code class="lang-bash">search -search % # prints all the files in the current directory
+<h2 id="examples" sourcefile="src/SEARCH.md" sourcestartlinenumber="18">EXAMPLES:</h2>
+<h3 id="example-1-basic-search" sourcefile="src/SEARCH.md" sourcestartlinenumber="19">Example 1: Basic Search</h3>
+<pre><code class="lang-bash" sourcefile="src/SEARCH.md" sourcestartlinenumber="20">search -search % # prints all the files in the current directory
 </code></pre>
-<p>Performs a basic search in the current directory.</p>
-<h3 id="example-2-recursive-search-with-subfolders">Example 2: Recursive Search with Subfolders</h3>
-<pre><code class="lang-bash">search -search -recursive -includesubfolders # prints all the files and folders in the current directory
+<p sourcefile="src/SEARCH.md" sourcestartlinenumber="23">Performs a basic search in the current directory.</p>
+<h3 id="example-2-recursive-search-with-subfolders" sourcefile="src/SEARCH.md" sourcestartlinenumber="25">Example 2: Recursive Search with Subfolders</h3>
+<pre><code class="lang-bash" sourcefile="src/SEARCH.md" sourcestartlinenumber="26">search -search -recursive -includesubfolders # prints all the files and folders in the current directory
 </code></pre>
-<p>Searches all files and folders, including subdirectories.</p>
-<h3 id="example-3-export-results-to-csv">Example 3: Export Results to CSV</h3>
-<pre><code class="lang-bash">search -search -csv -columns &quot;Description,PartNumber&quot; # Prints all the files in the current directory with their descriptions and part numbers
+<p sourcefile="src/SEARCH.md" sourcestartlinenumber="29">Searches all files and folders, including subdirectories.</p>
+<h3 id="example-3-export-results-to-csv" sourcefile="src/SEARCH.md" sourcestartlinenumber="31">Example 3: Export Results to CSV</h3>
+<pre><code class="lang-bash" sourcefile="src/SEARCH.md" sourcestartlinenumber="32">search -search -csv -columns &quot;Description,PartNumber&quot; # Prints all the files in the current directory with their descriptions and part numbers
 </code></pre>
-<p>Exports the search results to a CSV file with specified columns.</p>
-<h2 id="notes">NOTES:</h2>
-<ul>
-<li>Ensure the current directory is set correctly before running the command.</li>
-<li>Use the <code>-columns</code> parameter to customize the output format. Data is pulled from @ for configuration-supported documents.</li>
+<p sourcefile="src/SEARCH.md" sourcestartlinenumber="35">Exports the search results to a CSV file with specified columns.</p>
+<h2 id="notes" sourcefile="src/SEARCH.md" sourcestartlinenumber="37">NOTES:</h2>
+<ul sourcefile="src/SEARCH.md" sourcestartlinenumber="38">
+<li sourcefile="src/SEARCH.md" sourcestartlinenumber="38">Ensure the current directory is set correctly before running the command.</li>
+<li sourcefile="src/SEARCH.md" sourcestartlinenumber="39">Use the <code sourcefile="src/SEARCH.md" sourcestartlinenumber="39">-columns</code> parameter to customize the output format. Data is pulled from @ for configuration-supported documents.</li>
 </ul>
-<h2 id="tutorial">TUTORIAL:</h2>
-<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/search.mp4" autoplay="" muted="" controls="" style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="tutorial" sourcefile="src/SEARCH.md" sourcestartlinenumber="41">TUTORIAL:</h2>
+<p sourcefile="src/SEARCH.md" sourcestartlinenumber="42"><video src="https://bluebyte.biz/wp-content/pdmshellvideos/search.mp4" autoplay="" muted="" controls="" style="width: 100%; border-radius: 12px;"></video></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/SEARCH.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/SEARCH.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
