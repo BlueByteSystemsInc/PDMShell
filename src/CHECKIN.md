@@ -4,19 +4,23 @@
 Performs a check-in operation on a specified file or many files.
 
 ## SYNTAX:
-checkin [-s search] [-f filePath] [-cmt comment] [-ciopt Checkinoptions]
 
+```bash
+checkin -search -filePath -comment -Checkinoptions
+```
 ## PARAMETERS:
--s search - The search operation to use.
+- `search`: The search operation to use.
 
--f filePath - The file(s) to be checked in. This is the default parameter.
+- `filePath`: The file(s) to be checked in. This is the default parameter.
 
--cmt comment - The comment to add to the check-in.
+- `comment`: The comment to add to the check-in.
 
--ciopt Checkinoptions - The check-in options to use.
+- `Checkinoptions`: The check-in options to use.
 
 ## EXAMPLES:
-checkin -f "file1.sldprt"
+```bash
+checkin -filePath "file1.sldprt"
+```
 
 ## REMARKS:
 - The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
