@@ -5,7 +5,7 @@ The `delete` command is used to delete files or directories from the PDM system.
 
 ## SYNTAX:
 ```bash
-delete [-filePath|-id] -directory -search -recursive
+delete [-filePath|-id] -directory -search -recursive -list -csv
 ```
 ## PARAMETERS:
 
@@ -23,6 +23,14 @@ delete [-filePath|-id] -directory -search -recursive
 
 - `recursive`:
 (Optional) Deletes all files and subdirectories within the specified directory. This parameter is only applicable when deleting directories.
+
+- `list`:
+(Optional) Lists all the deleted files. Specifying `recursive` with this parameter will do a drill down search and fetch all deleted files.
+
+- `csv`: Exports a list of deleted files to a csv. This only works if `list is specified`. 
+
+>[!NOTE]
+> Use the exported csv from -csv with the [recover](RECOVER.html) command.
 
 ## EXAMPLES:
 Delete files matching a search query:

@@ -90,7 +90,7 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>The <code>delete</code> command is used to delete files or directories from the PDM system. It supports various parameters to specify the target files or directories, including file paths, directory paths, search queries, and IDs. The command also supports recursive deletion for directories.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">delete [-filePath|-id] -directory -search -recursive
+<pre><code class="lang-bash">delete [-filePath|-id] -directory -search -recursive -list -csv
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
@@ -109,7 +109,16 @@
 <li><p><code>recursive</code>:
 (Optional) Deletes all files and subdirectories within the specified directory. This parameter is only applicable when deleting directories.</p>
 </li>
+<li><p><code>list</code>:
+(Optional) Lists all the deleted files. Specifying <code>recursive</code> with this parameter will do a drill down search and fetch all deleted files.</p>
+</li>
+<li><p><code>csv</code>: Exports a list of deleted files to a csv. This only works if <code>list is specified</code>.</p>
+</li>
 </ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Use the exported csv from -csv with the <a href="RECOVER.html">recover</a> command.</p>
+</div>
 <h2 id="examples">EXAMPLES:</h2>
 <p>Delete files matching a search query:</p>
 <pre><code class="lang-bash">delete -search &quot;%.sldprt&quot;

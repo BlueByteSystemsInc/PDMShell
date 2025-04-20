@@ -72,6 +72,8 @@
       href: quit.md
     - name: reboot
       href: REBOOT.md
+    - name: recover
+      href: RECOVER.md
     - name: rename
       href: rename.md
     - name: renameFromSource

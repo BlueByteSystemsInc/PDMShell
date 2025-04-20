@@ -1087,6 +1087,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/RECOVER.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/RECOVER.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/RENAME.md",
       "output": {
         ".html": {
