@@ -5,6 +5,8 @@
   href: introduction.md
 - name: Installing PDMShell
   href: howtoinstall.md
+- name: FAQ
+  href: faq.md
 - name: Dynamic Placeholders in PDMShell
   href: EVAL.md
 - name: Scripting

@@ -1217,6 +1217,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/faq.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/howtoinstall.md",
       "output": {
         ".html": {
