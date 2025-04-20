@@ -30,3 +30,6 @@ recover -directory ""
 
 ## REMARKS:
 - Ensure that the specified directory or source exists and is accessible.
+
+## TUTORIAL:
+ <video src="https://bluebyte.biz/wp-content/pdmshellvideos/recover.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
