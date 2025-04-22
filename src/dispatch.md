@@ -45,3 +45,6 @@ quit
 ## Tips for Running PDMShell Scripts from Dispatch
 - Test Your Scripts: Always test your PDMShell scripts independently before integrating them with Dispatch.
 - Use Quotes for Paths: Wrap paths and parameters in quotes ("") if they contain spaces to avoid errors.
+
+## Tutorial
+ <video src="https://bluebyte.biz/wp-content/pdmshellvideos/dispatch.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
