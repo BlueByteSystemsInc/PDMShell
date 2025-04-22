@@ -617,6 +617,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/dispatchwindow.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/dispatchwindow.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/editvars.png",
       "output": {
         "resource": {
@@ -1201,6 +1211,16 @@
       "output": {
         ".html": {
           "relative_path": "src/cdpdm.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dispatch.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dispatch.html"
         }
       },
       "version": ""

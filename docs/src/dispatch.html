@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>FROGLEAP Command Documentation | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>Notes About Running PDMShell Scripts from Dispatch | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="FROGLEAP Command Documentation | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="Notes About Running PDMShell Scripts from Dispatch | Powershell like features for SOLIDWORKS PDM Professional ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/FROGLEAP.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/dispatch.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,31 +85,54 @@
         </div>
 
         <article data-uid="">
-<h1 id="frogleap-command-documentation">FROGLEAP Command Documentation</h1>
+<h1 id="notes-about-running-pdmshell-scripts-from-dispatch">Notes About Running PDMShell Scripts from Dispatch</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
-<p>Frog leaps an old version as newest.</p>
-<h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">frogleap -search -filePath -oldVersion oldVersion
+<p>When you want to run PDMShell scripts from Dispatch, you can use the <strong>Shell Command</strong> action.</p>
+<h2 id="shell-command-settings">Shell Command Settings</h2>
+<p><img src="../images/dispatchwindow.png" alt="dispatchwindow"></p>
+<ol>
+<li><strong>Verb</strong>: Leave this field empty.</li>
+<li><strong>Filename</strong>: Specify the path to the PDMShell executable, which is <code>pdmcli.exe</code>.</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Do not wrap the path in quotes (<code>&quot;&quot;</code>), even if it contains spaces.</p>
+</div>
+<ol start="3">
+<li><strong>Parameters</strong>: Use the following format:
+<pre><code class="lang-bash">runscript &quot;pathToScript&quot; [additional parameters]
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+</li>
+</ol>
 <ul>
-<li><code>search</code>: The search operation to use.</li>
-<li><code>search</code>: The file(s) to be frog leaped. This is the default parameter.</li>
-<li><code>oldVersion:</code> The old version to leap. This is an integer.</li>
+<li>The pathToScript must be wrapped in quotes (&quot;&quot;) if it contains spaces.</li>
+<li>Additional parameters can be passed to the script as needed.</li>
 </ul>
-<h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">frogleap -filePath &quot;file1.sldprt&quot; -oldVersion 2
+<h2 id="example-dispatch-configuration">Example: Dispatch Configuration</h2>
+<p>Example Command:</p>
+<pre><code class="lang-bash">runscript &quot;C:\Scripts\frogleap.pdmshell&quot; &quot;%PathToSelectedFile%&quot; &quot;%OldVersion%&quot;
 </code></pre>
-<h2 id="remarks">REMARKS:</h2>
+<p>Example Script:</p>
+<p>In the PDMShell script (frogleap.pdmshell), you can reference the parameters as follows:</p>
+<pre><code class="lang-bash"># check selected file out
+checkout -filePath &quot;$parameter1$&quot;
+# frogleap version to specified version 
+frogleap -filePath &quot;$parameter1$&quot; -oldVersion &quot;$parameter2$&quot;
+# save changes
+checkin -filePath &quot;$parameter1$&quot; -comment &quot;prompted version $parameter2$&quot;
+# you must call this
+quit
+</code></pre>
+<h2 id="tips-for-running-pdmshell-scripts-from-dispatch">Tips for Running PDMShell Scripts from Dispatch</h2>
 <ul>
-<li>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
+<li>Test Your Scripts: Always test your PDMShell scripts independently before integrating them with Dispatch.</li>
+<li>Use Quotes for Paths: Wrap paths and parameters in quotes (&quot;&quot;) if they contain spaces to avoid errors.</li>
 </ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/FROGLEAP.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/dispatch.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

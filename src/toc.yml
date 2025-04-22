@@ -11,6 +11,8 @@
   href: EVAL.md
 - name: Scripting
   href: scripting.md
+- name: Running PDMShell Scripts from Dispatch
+  href: dispatch.md
 - name: Short Format for Parameters
   href: parameter_short_format.md
 - name: COMMANDS
