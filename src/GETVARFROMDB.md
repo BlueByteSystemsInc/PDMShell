@@ -4,17 +4,23 @@
 Gets the value of a variable for a specified file or folder directly from the database.
 
 ## SYNTAX:
-getvarfromdb [-f filePath] [-var variableName] [-configs configNames]
+```bash
+getvarfromdb -filePath -variableName -configs
+```
 
 ## PARAMETERS:
--f filePath - The file or folder to get the variable from.
+- `filePath` :  
+  The file or folder to get the variable from.
 
--var variableName - The variable name to retrieve from the database.
+- `variableName` :  
+  The variable name to retrieve from the database.
 
--configs configNames - The configuration names to retrieve the variable from, separated by commas.
+- `configs` :  
+  The configuration names to retrieve the variable from, separated by commas.
 
 ## EXAMPLES:
-getvarfromdb -f "file1.sldprt" -var "CustomVar"
+getvarfromdb -f "file1.sldprt" -variableName "CustomVar"
 
 ## REMARKS:
 - The configuration names should be separated by commas.
+- This command will always return the latest value.

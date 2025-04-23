@@ -88,18 +88,24 @@
 <h1 id="get-command-documentation">GET Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>Retrieves a specified version of a file or files.</p>
+<p>Retrieves a specified version of a file or files (via search).</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>get [-s search] [-f filePath] [-ver version]</p>
+<pre><code class="lang-bash">get -search -filePath -version
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-s search - The search operation to use.</p>
-<p>-f filePath - The file(s) to retrieve. This is the default parameter.</p>
-<p>-ver version - The version of the file to retrieve.</p>
+<ul>
+<li><p><code>search</code>: The search operation to use.</p>
+</li>
+<li><p><code>filePath</code>: The file(s) to retrieve. This is the default parameter.</p>
+</li>
+</ul>
+<p>-<code>version</code>: The version of the file to retrieve.</p>
 <h2 id="examples">EXAMPLES:</h2>
-<p>get -f &quot;file1.sldprt&quot; -ver 2</p>
+<pre><code class="lang-bash">get -filePath &quot;file1.sldprt&quot; -Version 2
+</code></pre>
 <h2 id="remarks">REMARKS:</h2>
 <ul>
-<li>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
+<li>The <code>search</code> parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
 </ul>
 
 </article>

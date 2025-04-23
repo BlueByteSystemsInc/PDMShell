@@ -957,16 +957,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "src/GETNAME.md",
-      "output": {
-        ".html": {
-          "relative_path": "src/GETNAME.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "src/GETVAR.md",
       "output": {
         ".html": {

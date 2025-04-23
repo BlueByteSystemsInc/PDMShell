@@ -87,22 +87,17 @@
   "src/GET.html": {
     "href": "src/GET.html",
     "title": "GET Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
-    "keywords": "GET Command Documentation DESCRIPTION: Retrieves a specified version of a file or files. SYNTAX: get [-s search] [-f filePath] [-ver version] PARAMETERS: -s search - The search operation to use. -f filePath - The file(s) to retrieve. This is the default parameter. -ver version - The version of the file to retrieve. EXAMPLES: get -f \"file1.sldprt\" -ver 2 REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard."
-  },
-  "src/GETNAME.html": {
-    "href": "src/GETNAME.html",
-    "title": "GETNAME Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
-    "keywords": "GETNAME Command Documentation DESCRIPTION: Returns the name of an object (folder or file) from a PDM ID. SYNTAX: getname [-id object_id] PARAMETERS: -id object_id - The PDM ID of the object. EXAMPLES: getname -id 12345 PREVIEW:"
+    "keywords": "GET Command Documentation DESCRIPTION: Retrieves a specified version of a file or files (via search). SYNTAX: get -search -filePath -version PARAMETERS: search: The search operation to use. filePath: The file(s) to retrieve. This is the default parameter. -version: The version of the file to retrieve. EXAMPLES: get -filePath \"file1.sldprt\" -Version 2 REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard."
   },
   "src/GETVAR.html": {
     "href": "src/GETVAR.html",
     "title": "GETVAR Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
-    "keywords": "GETVAR Command Documentation DESCRIPTION: Gets the value of a variable for a specified file or folder. SYNTAX: getvar [-f filePath] [-var variableName] [-configs configNames] [-clear] [-ver version] PARAMETERS: -f filePath - The file or folder to get the variable from. -var variableName - The variable name to retrieve. -configs configNames - The configuration names to retrieve the variable from, separated by commas. -clear - Clears the variable value. -ver version - The version of the file to retrieve the variable from. EXAMPLES: getvar -f \"file1.sldprt\" -var \"CustomVar\" REMARKS: The configuration names should be separated by commas. The variable must be in the data card."
+    "keywords": "GETVAR Command Documentation DESCRIPTION: Gets the value of a variable for a specified file or folder. SYNTAX: getvar -filePath -variableName -configs -clear -version PARAMETERS: filePath : The file or folder to get the variable from. variableName : The variable name to retrieve. configs : The configuration names to retrieve the variable from, separated by commas. clear : Clears the variable value. version : The version of the file to retrieve the variable from. EXAMPLES: getvar -filePath \"file1.sldprt\" -variableName \"CustomVar\" REMARKS: The configuration names should be separated by commas. The variable must be in the data card. This comand will return what's in the locale cache which may not be necessarily the latest version. For that, please use getVarFromDB."
   },
   "src/GETVARFROMDB.html": {
     "href": "src/GETVARFROMDB.html",
     "title": "GETVARFROMDB Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
-    "keywords": "GETVARFROMDB Command Documentation DESCRIPTION: Gets the value of a variable for a specified file or folder directly from the database. SYNTAX: getvarfromdb [-f filePath] [-var variableName] [-configs configNames] PARAMETERS: -f filePath - The file or folder to get the variable from. -var variableName - The variable name to retrieve from the database. -configs configNames - The configuration names to retrieve the variable from, separated by commas. EXAMPLES: getvarfromdb -f \"file1.sldprt\" -var \"CustomVar\" REMARKS: The configuration names should be separated by commas."
+    "keywords": "GETVARFROMDB Command Documentation DESCRIPTION: Gets the value of a variable for a specified file or folder directly from the database. SYNTAX: getvarfromdb -filePath -variableName -configs PARAMETERS: filePath : The file or folder to get the variable from. variableName : The variable name to retrieve from the database. configs : The configuration names to retrieve the variable from, separated by commas. EXAMPLES: getvarfromdb -f \"file1.sldprt\" -variableName \"CustomVar\" REMARKS: The configuration names should be separated by commas. This command will always return the latest value."
   },
   "src/HELP.html": {
     "href": "src/HELP.html",

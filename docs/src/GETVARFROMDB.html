@@ -90,16 +90,26 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Gets the value of a variable for a specified file or folder directly from the database.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>getvarfromdb [-f filePath] [-var variableName] [-configs configNames]</p>
+<pre><code class="lang-bash">getvarfromdb -filePath -variableName -configs
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-f filePath - The file or folder to get the variable from.</p>
-<p>-var variableName - The variable name to retrieve from the database.</p>
-<p>-configs configNames - The configuration names to retrieve the variable from, separated by commas.</p>
+<ul>
+<li><p><code>filePath</code> :<br>
+The file or folder to get the variable from.</p>
+</li>
+<li><p><code>variableName</code> :<br>
+The variable name to retrieve from the database.</p>
+</li>
+<li><p><code>configs</code> :<br>
+The configuration names to retrieve the variable from, separated by commas.</p>
+</li>
+</ul>
 <h2 id="examples">EXAMPLES:</h2>
-<p>getvarfromdb -f &quot;file1.sldprt&quot; -var &quot;CustomVar&quot;</p>
+<p>getvarfromdb -f &quot;file1.sldprt&quot; -variableName &quot;CustomVar&quot;</p>
 <h2 id="remarks">REMARKS:</h2>
 <ul>
 <li>The configuration names should be separated by commas.</li>
+<li>This command will always return the latest value.</li>
 </ul>
 
 </article>

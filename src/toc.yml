@@ -48,8 +48,6 @@
       href: frogleap.md
     - name: get
       href: get.md
-    - name: getName
-      href: getname.md
     - name: getVar
       href: getvar.md
     - name: getVarFromDb
