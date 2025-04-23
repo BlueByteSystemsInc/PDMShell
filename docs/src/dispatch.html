@@ -108,9 +108,10 @@
 <li>The pathToScript must be wrapped in quotes (&quot;&quot;) if it contains spaces.</li>
 <li>Additional parameters can be passed to the script as needed.</li>
 </ul>
-<h2 id="example-dispatch-configuration">Example: Dispatch Configuration</h2>
-<p>Example Command:</p>
-<pre><code class="lang-bash">runscript &quot;C:\Scripts\frogleap.pdmshell&quot; &quot;%PathToSelectedFile%&quot; &quot;%OldVersion%&quot;
+<h2 id="example-dispatch-shell-execute-configuration">Example: Dispatch Shell Execute Configuration</h2>
+<pre><code class="lang-bash">Verb: #leave this empty
+Filename: C:\Program Files (x86)\BLUE BYTE SYSTEMS INC\PDMShell\PDMCLI.exe
+Parameters: runscript &quot;C:\Scripts\frogleap.pdmshell&quot; &quot;%PathToSelectedFile%&quot; &quot;%OldVersion%&quot;
 </code></pre>
 <p>Example Script:</p>
 <p>In the PDMShell script (frogleap.pdmshell), you can reference the parameters as follows:</p>
@@ -123,13 +124,13 @@ checkin -filePath &quot;$parameter1$&quot; -comment &quot;prompted version $para
 # you must call this
 quit
 </code></pre>
+<h2 id="tutorial">Tutorial</h2>
+<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/dispatch.mp4" autoplay="" muted="" controls="" style="width: 100%; border-radius: 12px;"></video></p>
 <h2 id="tips-for-running-pdmshell-scripts-from-dispatch">Tips for Running PDMShell Scripts from Dispatch</h2>
 <ul>
 <li>Test Your Scripts: Always test your PDMShell scripts independently before integrating them with Dispatch.</li>
 <li>Use Quotes for Paths: Wrap paths and parameters in quotes (&quot;&quot;) if they contain spaces to avoid errors.</li>
 </ul>
-<h2 id="tutorial">Tutorial</h2>
-<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/dispatch.mp4" autoplay="" muted="" controls="" style="width: 100%; border-radius: 12px;"></video></p>
 
 </article>
 

@@ -21,10 +21,12 @@ When you want to run PDMShell scripts from Dispatch, you can use the **Shell Com
 - The pathToScript must be wrapped in quotes ("") if it contains spaces.
 - Additional parameters can be passed to the script as needed.
 
-## Example: Dispatch Configuration
-Example Command:
+## Example: Dispatch Shell Execute Configuration
+
 ```bash
-runscript "C:\Scripts\frogleap.pdmshell" "%PathToSelectedFile%" "%OldVersion%"
+Verb: #leave this empty
+Filename: C:\Program Files (x86)\BLUE BYTE SYSTEMS INC\PDMShell\PDMCLI.exe
+Parameters: runscript "C:\Scripts\frogleap.pdmshell" "%PathToSelectedFile%" "%OldVersion%"
 ```
 
 Example Script:
@@ -41,10 +43,9 @@ checkin -filePath "$parameter1$" -comment "prompted version $parameter2$"
 # you must call this
 quit
 ```
+## Tutorial
+ <video src="https://bluebyte.biz/wp-content/pdmshellvideos/dispatch.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
 
 ## Tips for Running PDMShell Scripts from Dispatch
 - Test Your Scripts: Always test your PDMShell scripts independently before integrating them with Dispatch.
 - Use Quotes for Paths: Wrap paths and parameters in quotes ("") if they contain spaces to avoid errors.
-
-## Tutorial
- <video src="https://bluebyte.biz/wp-content/pdmshellvideos/dispatch.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
