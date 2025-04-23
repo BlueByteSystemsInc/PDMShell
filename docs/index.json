@@ -67,7 +67,7 @@
   "src/DUMP.html": {
     "href": "src/DUMP.html",
     "title": "DUMP Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
-    "keywords": "DUMP Command Documentation DESCRIPTION: Dumps all session text into a log file. SYNTAX: dump [-l logfile] PARAMETERS: -l logfile - The log file to dump session details into. EXAMPLES: dump -l \"sessionlog.txt\""
+    "keywords": "DUMP Command Documentation DESCRIPTION: Dumps all session text into a log file. SYNTAX: dump filePath PARAMETERS: filePath: The log file to dump session details into. EXAMPLES: dump -filePath \"sessionlog.txt\""
   },
   "src/EDITVARS.html": {
     "href": "src/EDITVARS.html",

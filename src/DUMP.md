@@ -4,10 +4,15 @@
 Dumps all session text into a log file.
 
 ## SYNTAX:
-dump [-l logfile]
 
+```bash
+dump filePath
+```
 ## PARAMETERS:
--l logfile - The log file to dump session details into.
+ 
+- `filePath`: The log file to dump session details into.
 
 ## EXAMPLES:
-dump -l "sessionlog.txt"
+```bash
+dump -filePath "sessionlog.txt"
+```
