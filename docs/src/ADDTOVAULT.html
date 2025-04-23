@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/ADDTOVAULT.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/ADDTOVAULT.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -98,8 +98,8 @@
 (Optional) Specifies the path to a CSV file containing a list of files or directories to be added to the vault.</p>
 </li>
 <li><p><code>dir</code>:
-(Optional)
-Specifies the target directory. If not specified current directory is used.</p>
+(<strong>Required</strong>)
+Specifies the target directory. If not specified current directory is used. If using the current directory, use &quot;&quot;.</p>
 </li>
 <li><p><code>search</code>:
 (Optional) A search query to filter files or directories to be added to the vault. This is <strong>File Explorer</strong> search query. Use * as a wildcard.</p>
@@ -118,7 +118,7 @@ Specifies the target directory. If not specified current directory is used.</p>
 </li>
 </ul>
 <h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">addtovault -source &quot;C:\Projects\file.txt&quot;
+<pre><code class="lang-bash">addtovault -source &quot;C:\Projects\file.txt&quot; -directory &quot;&quot;
 # adds text file to the current directory
 </code></pre>
 <h2 id="remarks">REMARKS:</h2>
@@ -138,7 +138,7 @@ Specifies the target directory. If not specified current directory is used.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/ADDTOVAULT.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/ADDTOVAULT.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

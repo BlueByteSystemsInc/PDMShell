@@ -13,8 +13,8 @@ addtovault -csv  -dir  -search  -source -ignoreex -updaterefs -recursive
 (Optional) Specifies the path to a CSV file containing a list of files or directories to be added to the vault.
 
 - `dir`:
-(Optional)
-Specifies the target directory. If not specified current directory is used. 
+(**Required**)
+Specifies the target directory. If not specified current directory is used. If using the current directory, use "".
 
 - `search`:
 (Optional) A search query to filter files or directories to be added to the vault. This is **File Explorer** search query. Use * as a wildcard.
@@ -33,7 +33,7 @@ Specifies the target directory. If not specified current directory is used.
 
 ## EXAMPLES:
 ```bash
-addtovault -source "C:\Projects\file.txt"
+addtovault -source "C:\Projects\file.txt" -directory ""
 # adds text file to the current directory
 ```
 
