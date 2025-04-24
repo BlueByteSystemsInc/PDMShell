@@ -1,23 +1,58 @@
 # Path to your HTML file
 $filePath = "docs\index.html"
 
-# The canonical tag you want to insert
-$canonicalTag = '<link rel="canonical" href="https://pdmshell.bluebyte.biz/" />'
+# All tags to insert
+$tagsToInsert = @"
+    <link rel="canonical" href="https://pdmshell.bluebyte.biz/" />
+    <meta name="description" content="PDMShell - The command-line automation tool for SOLIDWORKS PDM. Automate check-ins, check-outs, migrations, and more." />
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="PDMShell – Automate SOLIDWORKS PDM" />
+    <meta property="og:description" content="Automate check-ins, migrations, and batch operations in SOLIDWORKS PDM using PDMShell." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pdmshell.bluebyte.biz/" />
+    <meta property="og:image" content="https://pdmshell.bluebyte.biz/images/logo.png" />
 
-# Load file content
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PDMShell – Automate SOLIDWORKS PDM" />
+    <meta name="twitter:description" content="Automate your SOLIDWORKS PDM workflows effortlessly using PDMShell." />
+    <meta name="twitter:image" content="https://pdmshell.bluebyte.biz/images/logo.png" />
+
+    <!-- Robots Tag -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PDMShell",
+      "operatingSystem": "Windows",
+      "applicationCategory": "CAD, SOLIDWORKS, PDM, Automation",
+      "offers": {
+        "@type": "Offer",
+        "price": "1949.99",
+        "priceCurrency": "USD"
+      },
+      "url": "https://pdmshell.bluebyte.biz/"
+    }
+    </script>
+"@
+
+# Read current HTML content
 $htmlContent = Get-Content -Path $filePath -Raw
 
-# Check if canonical tag already exists
+# Avoid inserting tags multiple times
 if ($htmlContent -like "*rel=`"canonical`"*") {
-    Write-Host "Canonical tag already present in index.html."
+    Write-Host "SEO tags already exist in index.html. Skipping insertion."
     exit
 }
 
-# Insert canonical tag before </head>
+# Insert tags before </head>
 if ($htmlContent -match "</head>") {
-    $updatedContent = $htmlContent -replace "</head>", "    $canonicalTag`r`n</head>"
+    $updatedContent = $htmlContent -replace "</head>", "$tagsToInsert`r`n</head>"
     Set-Content -Path $filePath -Value $updatedContent -Encoding UTF8
-    Write-Host "Canonical tag successfully inserted."
+    Write-Host "SEO tags successfully inserted into index.html."
 }
 else {
     Write-Host "Error: Couldn't find </head> tag in index.html."

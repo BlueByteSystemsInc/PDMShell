@@ -11,7 +11,7 @@ var _socksProxy = require("../common/socksProxy");
 var _utils = require("../utils");
 var _android = require("../server/android/android");
 var _debugControllerDispatcher = require("../server/dispatchers/debugControllerDispatcher");
-var _debugLogger = require("../common/debugLogger");
+var _debugLogger = require("../utils/debugLogger");
 /**
  * Copyright (c) Microsoft Corporation.
  *
@@ -43,7 +43,7 @@ class PlaywrightConnection {
     this._ws = ws;
     this._preLaunched = preLaunched;
     this._options = options;
-    options.launchOptions = filterLaunchOptions(options.launchOptions);
+    options.launchOptions = filterLaunchOptions(options.launchOptions, options.allowFSPaths);
     if (clientType === 'reuse-browser' || clientType === 'pre-launched-browser-or-android') (0, _utils.assert)(preLaunched.playwright);
     if (clientType === 'pre-launched-browser-or-android') (0, _utils.assert)(preLaunched.browser || preLaunched.androidDevice);
     this._onClose = onClose;
@@ -109,7 +109,7 @@ class PlaywrightConnection {
     const playwright = this._preLaunched.playwright;
 
     // Note: connected client owns the socks proxy and configures the pattern.
-    (_this$_preLaunched$so = this._preLaunched.socksProxy) === null || _this$_preLaunched$so === void 0 ? void 0 : _this$_preLaunched$so.setPattern(this._options.socksProxyPattern);
+    (_this$_preLaunched$so = this._preLaunched.socksProxy) === null || _this$_preLaunched$so === void 0 || _this$_preLaunched$so.setPattern(this._options.socksProxyPattern);
     const browser = this._preLaunched.browser;
     browser.on(_browser.Browser.Events.Disconnected, () => {
       // Underlying browser did close for some reason - force disconnect the client.
@@ -248,7 +248,7 @@ function launchOptionsHash(options) {
   for (const key of optionsThatAllowBrowserReuse) delete copy[key];
   return JSON.stringify(copy);
 }
-function filterLaunchOptions(options) {
+function filterLaunchOptions(options, allowFSPaths) {
   return {
     channel: options.channel,
     args: options.args,
@@ -260,7 +260,8 @@ function filterLaunchOptions(options) {
     chromiumSandbox: options.chromiumSandbox,
     firefoxUserPrefs: options.firefoxUserPrefs,
     slowMo: options.slowMo,
-    executablePath: (0, _utils.isUnderTest)() ? options.executablePath : undefined
+    executablePath: (0, _utils.isUnderTest)() || allowFSPaths ? options.executablePath : undefined,
+    downloadsPath: allowFSPaths ? options.downloadsPath : undefined
   };
 }
 const defaultLaunchOptions = {

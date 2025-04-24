@@ -1,12 +1,30 @@
 {
   "sitemap": {
-    "baseUrl": "https://pdmshell.bluebyte.biz/sitemap/",
+    "baseUrl": "https://pdm.bluebyte.biz/sitemap/",
     "changefreq": "weekly",
-    "priority": 1.0
+    "priority": 1
   },
   "source_base_path": "C:/Users/jlili/source/repos/BlueByteSystemsInc/PDMShell",
   "xrefmap": "xrefmap.yml",
   "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
     {
       "type": "Resource",
       "source_relative_path": "images/BadgeLogo.scale-100.png",
@@ -763,6 +781,522 @@
       "output": {
         "resource": {
           "relative_path": "images/sessions.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/ADDTOVAULT.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/ADDTOVAULT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/CD.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/CD.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/CHECKIN.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/CHECKIN.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/CHECKOUT.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/CHECKOUT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/CLEARCACHE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/CLEARCACHE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/CLS.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/CLS.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/COPYTREE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/COPYTREE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/DELETE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/DELETE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/DELETEFROMSOURCE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/DELETEFROMSOURCE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/DESTORY.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/DESTORY.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/DIR.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/DIR.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/DUMP.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/DUMP.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/EDITVARS.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/EDITVARS.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/EVAL.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/EVAL.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/FROGLEAP.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/FROGLEAP.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/GET.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/GET.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/GETVAR.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/GETVAR.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/GETVARFROMDB.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/GETVARFROMDB.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/HELP.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/HELP.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/HISTORY.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/HISTORY.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/INBOX.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/INBOX.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/INFOVAR.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/INFOVAR.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/KILL.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/KILL.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/LOGIN.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/LOGIN.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/MKDIR.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/MKDIR.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/MKVAR.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/MKVAR.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/PRINT.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/PRINT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/QUIT.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/QUIT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/REBOOT.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/REBOOT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/RECOVER.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/RECOVER.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/RENAME.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/RENAME.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/RENAMEFROMSOURCE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/RENAMEFROMSOURCE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/RUNSCRIPT.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/RUNSCRIPT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/SEARCH.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/SEARCH.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/SETVAR.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/SETVAR.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/SETVARSFROMSOURCE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/SETVARSFROMSOURCE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/START.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/START.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/UNDOCHECKOUT.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/UNDOCHECKOUT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/USERS.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/USERS.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/VERSION.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/VERSION.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/cdpdm.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/cdpdm.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dispatch.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dispatch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/eula.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/eula.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/faq.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/howtoinstall.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/howtoinstall.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/parameter_short_format.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/parameter_short_format.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/scripting.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/scripting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "src/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "src/toc.html"
+        },
+        ".json": {
+          "relative_path": "src/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""
