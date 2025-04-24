@@ -24,7 +24,6 @@
     },
     "output": "docs",
     "template": [
-      "default",
       "modern"
     ],
     "globalMetadata": {
