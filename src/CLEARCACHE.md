@@ -16,7 +16,7 @@ clearcache -directory -search -toolboxflag -source
 
 ## EXAMPLES:
 ```bash
-clearcache --search "*.sldprt"
+clearcache -search "*.sldprt"
 # Clears the cache of all `.sldprt` files in the current directory.
 
 clearcache -directory project -toolboxflag
