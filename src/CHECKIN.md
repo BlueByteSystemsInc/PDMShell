@@ -1,3 +1,8 @@
+---
+description: Performs a check-in operation on a specified file or many files.
+title: CHECKIN Command Documentation | PDMShell
+---
+
 # CHECKIN Command Documentation
 
 ## DESCRIPTION:

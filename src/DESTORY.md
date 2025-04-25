@@ -1,9 +1,25 @@
+---
+description: Learn how to use the destroy command in PDMShell to permanently delete files marked as deleted in a specified directory. Supports recursive deletion and date filtering.
+title: Destroy Command Documentation | PDMShell
+canonical: https://bluebyte.biz/pdmshell/src/destroy
+og:type: article
+og:title: Destroy Command Documentation | PDMShell
+og:description: Learn how to use the destroy command in PDMShell to permanently delete files marked as deleted in a specified directory. Supports recursive deletion and date filtering.
+og:image: https://bluebyte.biz/images/logo.png
+og:url: https://bluebyte.biz/pdmshell/src/destroy
+twitter:card: summary_large_image
+twitter:title: Destroy Command Documentation | PDMShell
+twitter:description: Learn how to use the destroy command in PDMShell to permanently delete files marked as deleted in a specified directory. Supports recursive deletion and date filtering.
+twitter:image: https://bluebyte.biz/images/logo.png
+author: Blue Byte Systems Inc
+feedback_help_link_url: https://bluebyte.biz/contact
+page_type: conceptual
+---
+
 # DESTROY Command Documentation
 
 ## DESCRIPTION:
 The `destroy` command is used to permanently delete files that have been marked as deleted in a specified directory. This command supports recursive deletion and filtering by date.
-
----
 
 ## SYNTAX:
 ```bash
@@ -16,12 +32,12 @@ destroy -directory -recursive -date
 - `recursive`: Enables recursive search (for files).
 - `date`: (Optional) Specifies a date filter. Only files deleted on or before the specified date will be destroyed. The date format should be YYYY-MM-DD.
 
-
 ## EXAMPLES:
 ```bash
 destroy -directory "C:\Projects\Project"
 # destroys all deleted files in project folder
 ```
+
 ## REMARKS:
 
 - The `directory` parameter is mandatory and must specify a valid directory.
@@ -30,4 +46,4 @@ destroy -directory "C:\Projects\Project"
 - This action is irreversible. Ensure you have the necessary permissions and have reviewed the files before executing the command.
 
 ## TUTORIAL:
- <video src="https://bluebyte.biz/wp-content/pdmshellvideos/destroy.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+<video src="https://bluebyte.biz/wp-content/pdmshellvideos/destroy.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>

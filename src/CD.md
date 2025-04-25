@@ -1,3 +1,8 @@
+---
+description: Changes the current PDM directory.
+title: CD  Command Documentation | PDMShell
+---
+
 # CD Command Documentation
 
 ## DESCRIPTION:
