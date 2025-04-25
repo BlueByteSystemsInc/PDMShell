@@ -1,9 +1,7 @@
 # Path to your HTML file
-$filePath = "docs\index.html"
-
+$filePath = "docs\src\index.html"
 # All tags to insert
 $tagsToInsert = @"
-    <link rel="canonical" href="https://pdmshell.bluebyte.biz/" />
     <meta name="description" content="PDMShell - The command-line automation tool for SOLIDWORKS PDM. Automate check-ins, check-outs, migrations, and more." />
     <!-- Open Graph Tags -->
     <meta property="og:title" content="PDMShell – Automate SOLIDWORKS PDM" />

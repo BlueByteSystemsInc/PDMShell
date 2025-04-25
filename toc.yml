@@ -1,5 +1,5 @@
-- name: GET STARTED
-  href: src/
+- name: Home 
+  href: src/index.md
 - name: 📅 SOLIDWORKS PDM MIGRATION | Talk to an Expert 
   href: https://calendly.com/bluebyte/datamigration?back=1
 - name: 🌐 BLUE BYTE SYSTESM INC. 
