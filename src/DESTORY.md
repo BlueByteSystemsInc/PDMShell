@@ -28,3 +28,6 @@ destroy -directory "C:\Projects\Project"
 - Use the `recursive` parameter with caution, as it will process all subdirectories within the specified directory.
 - The `date` parameter allows you to target files deleted on or before the specified date, providing more control over the destruction process.
 - This action is irreversible. Ensure you have the necessary permissions and have reviewed the files before executing the command.
+
+## TUTORIAL:
+ <video src="https://bluebyte.biz/wp-content/pdmshellvideos/destroy.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
