@@ -1,3 +1,7 @@
+---
+description: Displays version information for PDMShell, installed SOLIDWORKS, or the PDM client.
+title: VERSION Command Documentation | PDMShell | SOLIDWORKS PDM
+---
 # VERSION Command Documentation
 
 ## DESCRIPTION:

@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>KILL Command Documentation | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>KILL Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="KILL Command Documentation | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="KILL Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      
+      <meta name="description" content="Kills a process.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/KILL.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/KILL.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -90,21 +90,27 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Kills a process.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>kill [-p process_name]</p>
+<pre><code class="lang-bash">kill -process 
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-p process_name - The process to terminate (with extension)</p>
+<ul>
+<li><code>process</code>: The process to terminate (with extension)</li>
+</ul>
 <h2 id="examples">EXAMPLES:</h2>
-<p>kill sldworks.exe</p>
+<pre><code class="lang-bash">kill sldworks.exe
+# terminates all open SOLIDWORKS sessions.
+</code></pre>
 <h2 id="remarks">REMARKS:</h2>
 <ul>
 <li>This command uses <code>taskkill</code> from the command line.</li>
-<li>It requires PDM to be run as an administrator.</li>
+<li><strong>This command requires PDM to be run as an administrator</strong>.</li>
+<li>PDMShell adds a note called <code>ADMIN</code> in the top-right area of its window when it is open as admin.</li>
 </ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/KILL.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/KILL.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

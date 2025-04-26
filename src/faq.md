@@ -1,3 +1,7 @@
+---
+description: Frequently Asked Questions (FAQ) about PDMShell.
+title: FAQ | PDMShell | SOLIDWORKS PDM
+---
 # Frequently Asked Questions (FAQ) for PDMShell
 
 ---

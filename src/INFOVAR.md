@@ -1,3 +1,7 @@
+---
+description: Gets information about a variable.
+title: INFOVAR Command Documentation | PDMShell | SOLIDWORKS PDM
+---
 # INFOVAR Command Documentation
 
 ## DESCRIPTION:

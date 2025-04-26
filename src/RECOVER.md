@@ -1,3 +1,7 @@
+---
+description: Hard PDM reboot.
+title: REBOOT Command Documentation | PDMShell | SOLIDWORKS PDM
+---
 # RECOVER Command Documentation
 
 ## DESCRIPTION:

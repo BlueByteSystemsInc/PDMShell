@@ -2,19 +2,19 @@
 $filePath = "docs\src\index.html"
 # All tags to insert
 $tagsToInsert = @"
-    <meta name="description" content="PDMShell - The command-line automation tool for SOLIDWORKS PDM. Automate check-ins, check-outs, migrations, and more." />
     <!-- Open Graph Tags -->
+    <link rel="canonical" href="https://pdmshell.bluebyte.biz/" /> 
     <meta property="og:title" content="PDMShell – Automate SOLIDWORKS PDM" />
     <meta property="og:description" content="Automate check-ins, migrations, and batch operations in SOLIDWORKS PDM using PDMShell." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://pdmshell.bluebyte.biz/" />
-    <meta property="og:image" content="https://pdmshell.bluebyte.biz/images/logo.png" />
+    <meta property="og:image" content="images/logo.png" />
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PDMShell – Automate SOLIDWORKS PDM" />
     <meta name="twitter:description" content="Automate your SOLIDWORKS PDM workflows effortlessly using PDMShell." />
-    <meta name="twitter:image" content="https://pdmshell.bluebyte.biz/images/logo.png" />
+    <meta name="twitter:image" content="images/logo.png" />
 
     <!-- Robots Tag -->
     <meta name="robots" content="index, follow" />

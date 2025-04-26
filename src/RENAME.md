@@ -1,19 +1,25 @@
+---
+description: Renames a specified file.
+title: RENAME Command Documentation | PDMShell | SOLIDWORKS PDM
+---
 # RENAME Command Documentation
 
 ## DESCRIPTION:
 Renames a specified file.
 
 ## SYNTAX:
-rename [-filePath filePath] [-val value] [-search search]
-
+```bash
+rename -filePath -value -search
+```
 ## PARAMETERS:
--filePath filePath - The filerename.
--val value - The new name for the file.
--search search - The search operation to use.
+- `filePath`: The filerename.
+- `value`: The new name for the file.
+- `search`: The search operation to use.
 
 ## EXAMPLES:
+```bash
 rename -filePath "oldname.sldprt" -val "newname.sldprt"
-
+```
 ## REMARKS:
 - The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
 

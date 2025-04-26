@@ -1,3 +1,7 @@
+---
+description: Learn how you use PDMShell scripts with Dispatch
+title: Notes About Running PDMShell Scripts from Dispatch | SOLIDWORKS PDM
+---
 # Notes About Running PDMShell Scripts from Dispatch
 
 When you want to run PDMShell scripts from Dispatch, you can use the **Shell Command** action.

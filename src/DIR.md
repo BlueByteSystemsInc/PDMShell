@@ -1,3 +1,8 @@
+---
+description: Displays a list of files and subdirectories in a directory.
+title: DIR Command Documentation | PDMShell
+---
+
 # DIR Command Documentation
 
 ## DESCRIPTION:

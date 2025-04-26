@@ -41,7 +41,7 @@
       "pdf": false
     },
   "sitemap": {
-      "baseUrl": "https://pdm.bluebyte.biz/sitemap",
+      "baseUrl": "https://pdm.bluebyte.biz/",
       "priority": 1,
       "changefreq": "weekly"
     }

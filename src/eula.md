@@ -1,3 +1,7 @@
+---
+description: Terms of Usage of PDMShell.
+title: EULA | PDMShell | SOLIDWORKS PDM
+---
 # End User License Agreement
 
 ## 1. Introduction

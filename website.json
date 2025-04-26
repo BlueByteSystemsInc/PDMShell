@@ -1,0 +1,49 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "docs/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "website",
+   "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "PDMShell",
+      "_appTitle": "Powershell like features for SOLIDWORKS PDM Professional",
+      "_appDescription": "PDMShell is a PowerShell-like command line interface for SOLIDWORKS PDM Professional. It provides a set of commands to interact with the PDM vault, allowing users to perform various operations such as file management, folder navigation, and more.",
+      "_appUrl": "https://pdmshell.com",
+      "_appVersion": "2.0.79",
+      "_appLanguage": "en-US",
+      "_appLanguageName": "English",
+      "_appLanguageVersion": "1.0.0",
+      "_appLanguageDescription": "English version of PDMShell documentation.",
+      "_appLanguageUrl": "https://pdmshell.com",
+      "_appLanguageVersionName": "English version of PDMShell documentation.",
+      "_appLanguageVersionDescription": "English version of PDMShell documentation.",
+      "_appFooter": "<span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>",
+      "_appLogoPath": "images/fav.png",
+      "_enableSearch": true,
+      "pdf": false
+    },
+  "sitemap": {
+      "baseUrl": "https://pdmshell.com/",
+      "priority": 1,
+      "changefreq": "weekly"
+    }
+  }
+}

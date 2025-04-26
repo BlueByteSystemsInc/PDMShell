@@ -1,3 +1,7 @@
+---
+description: Creates a new folder.
+title: MKDIR Command Documentation | PDMShell | SOLIDWORKS PDM
+---
 # MKDIR Command Documentation
 
 ## DESCRIPTION:

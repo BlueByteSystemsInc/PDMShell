@@ -1,23 +1,29 @@
+---
+description: Creates a new variable.
+title: MKVAR Command Documentation | PDMShell | SOLIDWORKS PDM
+---
 # MKVAR Command Documentation
 
 ## DESCRIPTION:
 Creates a new variable.
 
 ## SYNTAX:
-mkvar [-n name] [-varType varType] [-mkvarflags mkvarflags] [-mkvarattributes mkvarattributes]
-
+```bash
+mkvar -name -varType -mkvarflags -mkvarattributes 
+```
 ## PARAMETERS:
--n name - The name of the variable to create.
+- `name`: The name of the variable to create.
 
--varType varType - The type of the variable.
+- `varType`: The type of the variable.
 
--mkvarflags mkvarflags - The flags for the variable.
+- `mkvarflags`: The flags for the variable.
 
--mkvarattributes mkvarattributes - The attributes for the variable. Seperated by `#`
+- `mkvarattributes`: The attributes for the variable. Seperated by `#`
 
 ## EXAMPLES:
-mkvar -n "NewVariable" -varType "Text" -mkvarflags "ReadOnly" -mkvarattributes "Attribute1#Attribute2"
-
+```bash
+mkvar -name "NewVariable" -varType "Text" -mkvarflags "ReadOnly" -mkvarattributes "Attribute1#Attribute2"
+```
 
 
 ## VAR TYPE VALUES:

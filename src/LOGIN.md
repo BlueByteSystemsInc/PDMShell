@@ -1,3 +1,7 @@
+---
+description: Authenticates a user to a specified vault.
+title: LOGIN Command Documentation | PDMShell | SOLIDWORKS PDM
+---
 # LOGIN Command Documentation
 
 ## DESCRIPTION:

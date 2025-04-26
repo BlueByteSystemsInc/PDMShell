@@ -1,3 +1,7 @@
+---
+description: PDMShell can be installed or updated from our official website or via the Microsoft Store.
+title: How to Install/Update PDMShell
+---
 # How to Install/Update PDMShell
 
 PDMShell can be installed or updated from our official website or via the Microsoft Store. For the best experience, we **highly recommend downloading PDMShell from our official website** to ensure you always have the latest version.

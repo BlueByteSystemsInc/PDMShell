@@ -1,3 +1,7 @@
+---
+description: Welcome to PDMShell, the command-line interpreter designed specifically for SOLIDWORKS PDM Professional. You can more information about getting started here.
+title: Getting Started | PDMShell | SOLIDWORKS PDM
+---
 # Introduction to PDMShell
 
 Welcome to **PDMShell**, the command-line interpreter designed specifically for **SOLIDWORKS PDM Professional**. PDMShell empowers engineers and IT professionals with a **powerful**, **flexible**, and **efficient** tool for automating and streamlining tasks within the SOLIDWORKS PDM environment.

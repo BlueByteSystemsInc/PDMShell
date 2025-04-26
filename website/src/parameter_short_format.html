@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Short Format for Parameters | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Short Format for Parameters | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="PDMShell supports short formats for many of its parameters to make commands more concise and easier to use.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/parameter_short_format.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="short-format-for-parameters-in-pdmshell">Short Format for Parameters in PDMShell</h1>
+
+<h2 id="overview">Overview</h2>
+<p>PDMShell supports short formats for many of its parameters to make commands more concise and easier to use. These short formats are defined for specific parameters and can be used as an alternative to their full names. Below is a comprehensive list of parameters and their corresponding short formats.</p>
+<hr>
+<h2 id="list-of-parameters-and-their-short-formats">List of Parameters and Their Short Formats</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Short Format</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>username</code></td>
+<td><code>u</code></td>
+<td>Specifies the username for authentication.</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td><code>p</code></td>
+<td>Specifies the password for authentication.</td>
+</tr>
+<tr>
+<td><code>vaultName</code></td>
+<td><code>v</code></td>
+<td>Specifies the name of the PDM vault.</td>
+</tr>
+<tr>
+<td><code>filePath</code></td>
+<td><code>f</code></td>
+<td>Specifies the file path to operate on.</td>
+</tr>
+<tr>
+<td><code>command</code></td>
+<td><code>c</code></td>
+<td>Specifies the command name.</td>
+</tr>
+<tr>
+<td><code>search</code></td>
+<td><code>s</code></td>
+<td>Specifies the search query. Can use % for wildcard.</td>
+</tr>
+<tr>
+<td><code>directory</code></td>
+<td><code>d</code></td>
+<td>Specifies the directory to operate on.  Wrap in &quot;&quot; if there are spaces.</td>
+</tr>
+<tr>
+<td><code>columns</code></td>
+<td><code>cols</code></td>
+<td>Specifies the columns to include in the output. Wrap in &quot;&quot; if there are spaces. Seperate multiple by comma.</td>
+</tr>
+<tr>
+<td><code>csv</code></td>
+<td><code>csv</code></td>
+<td>Specifies the CSV file to use. You need to include extension.</td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td><code>sort</code></td>
+<td>Specifies the sorting order by column name. Used only in <code>dir</code> command.</td>
+</tr>
+<tr>
+<td><code>programName</code></td>
+<td><code>prog</code></td>
+<td>Specifies the program name.</td>
+</tr>
+<tr>
+<td><code>configNames</code></td>
+<td><code>configs</code></td>
+<td>Specifies the configuration names. Wrap in &quot;&quot; if there are spaces. Seperate multiple by comma.</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>val</code></td>
+<td>Specifies the value to set. Wrap in &quot;&quot; if there are spaces.</td>
+</tr>
+<tr>
+<td><code>version</code></td>
+<td><code>ver</code></td>
+<td>Specifies the version of the file or software.</td>
+</tr>
+<tr>
+<td><code>variableName</code></td>
+<td><code>var</code></td>
+<td>Specifies the name of the variable.</td>
+</tr>
+<tr>
+<td><code>clearToggle</code></td>
+<td><code>cls</code></td>
+<td>Toggles clearing the variable. Used only <code>setvar</code> command.</td>
+</tr>
+<tr>
+<td><code>comment</code></td>
+<td><code>cmt</code></td>
+<td>Specifies a comment during check-in. Wrap in &quot;&quot; if there are spaces.</td>
+</tr>
+<tr>
+<td><code>checkinoptions</code></td>
+<td><code>ciopt</code></td>
+<td>Specifies options for check-in operations.</td>
+</tr>
+<tr>
+<td><code>oldVersion</code></td>
+<td><code>oversion</code></td>
+<td>Specifies the old version of the file.</td>
+</tr>
+<tr>
+<td><code>refresh</code></td>
+<td><code>refresh</code></td>
+<td>Refreshes the current session autocomplete list. Use with <code>dir</code>.</td>
+</tr>
+<tr>
+<td><code>checkinouttoggle</code></td>
+<td><code>checkinouttoggle</code></td>
+<td>Toggles check-in or check-out operations.</td>
+</tr>
+<tr>
+<td><code>process</code></td>
+<td><code>process</code></td>
+<td>Specifies the process to execute.</td>
+</tr>
+<tr>
+<td><code>list</code></td>
+<td><code>list</code></td>
+<td>Lists items based on the specified criteria.</td>
+</tr>
+<tr>
+<td><code>batch</code></td>
+<td><code>batch</code></td>
+<td>Specifies batch operations.</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td><code>id</code></td>
+<td>Specifies the ID of the file or folder.</td>
+</tr>
+<tr>
+<td><code>mkvarattributes</code></td>
+<td><code>mkvarattributes</code></td>
+<td>Specifies attributes for variable creation.</td>
+</tr>
+<tr>
+<td><code>TransitionID</code></td>
+<td><code>trid</code></td>
+<td>Specifies the transition ID.</td>
+</tr>
+<tr>
+<td><code>source</code></td>
+<td><code>source</code></td>
+<td>Specifies the source file or folder.</td>
+</tr>
+<tr>
+<td><code>destory</code></td>
+<td><code>dest</code></td>
+<td>Specifies the destination file or folder.</td>
+</tr>
+<tr>
+<td><code>recursive</code></td>
+<td><code>recursie</code></td>
+<td>Toggles recursive operations.</td>
+</tr>
+<tr>
+<td><code>extensions</code></td>
+<td><code>ext</code></td>
+<td>Specifies file extensions to include.</td>
+</tr>
+<tr>
+<td><code>ignoreexisting</code></td>
+<td><code>ignoreex</code></td>
+<td>Ignores existing files or folders.</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td><code>date</code></td>
+<td>Specifies the date.</td>
+</tr>
+<tr>
+<td><code>updaterefs</code></td>
+<td><code>updaterefs</code></td>
+<td>Updates references for files or folders.</td>
+</tr>
+<tr>
+<td><code>includesubfolders</code></td>
+<td><code>includesubfolders</code></td>
+<td>Includes subfolders in the operation.</td>
+</tr>
+<tr>
+<td><code>includeproperties</code></td>
+<td><code>includeproperties</code></td>
+<td>Includes properties in the operation.</td>
+</tr>
+<tr>
+<td><code>toolboxflag</code></td>
+<td><code>toolboxflag</code></td>
+<td>Toggles the toolbox flag.</td>
+</tr>
+<tr>
+<td><code>evaluatealias</code></td>
+<td><code>evaluatealias</code></td>
+<td>Evaluates aliases for dynamic placeholders.</td>
+</tr>
+<tr>
+<td><code>stringformat</code></td>
+<td><code>stringformat</code></td>
+<td>Specifies the string format.</td>
+</tr>
+<tr>
+<td><code>taskName</code></td>
+<td><code>taskName</code></td>
+<td>Specifies the name of the task.</td>
+</tr>
+<tr>
+<td><code>suffix</code></td>
+<td><code>suffix</code></td>
+<td>Specifies a suffix to append.</td>
+</tr>
+<tr>
+<td><code>prefix</code></td>
+<td><code>prefix</code></td>
+<td>Specifies a prefix to prepend.</td>
+</tr>
+<tr>
+<td><code>includedrawings</code></td>
+<td><code>includedrawings</code></td>
+<td>Includes drawings in the operation.</td>
+</tr>
+<tr>
+<td><code>latest</code></td>
+<td><code>latest</code></td>
+<td>Toggles the use of the latest version.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="usage-example">Usage Example</h2>
+<p>Here’s an example of using short formats in a command:</p>
+<h3 id="full-format">Full Format</h3>
+<pre><code class="lang-bash">setvar -filePath &quot;C:\Vault\File.sldprt&quot; -variableName &quot;VariableName&quot; -value &quot;NewValue&quot;
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/parameter_short_format.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

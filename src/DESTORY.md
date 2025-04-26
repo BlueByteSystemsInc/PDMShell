@@ -1,19 +1,6 @@
 ---
 description: Learn how to use the destroy command in PDMShell to permanently delete files marked as deleted in a specified directory. Supports recursive deletion and date filtering.
-title: Destroy Command Documentation | PDMShell
-canonical: https://bluebyte.biz/pdmshell/src/destroy
-og:type: article
-og:title: Destroy Command Documentation | PDMShell
-og:description: Learn how to use the destroy command in PDMShell to permanently delete files marked as deleted in a specified directory. Supports recursive deletion and date filtering.
-og:image: https://bluebyte.biz/images/logo.png
-og:url: https://bluebyte.biz/pdmshell/src/destroy
-twitter:card: summary_large_image
-twitter:title: Destroy Command Documentation | PDMShell
-twitter:description: Learn how to use the destroy command in PDMShell to permanently delete files marked as deleted in a specified directory. Supports recursive deletion and date filtering.
-twitter:image: https://bluebyte.biz/images/logo.png
-author: Blue Byte Systems Inc
-feedback_help_link_url: https://bluebyte.biz/contact
-page_type: conceptual
+title: Destroy Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 
 # DESTROY Command Documentation

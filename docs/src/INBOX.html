@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>INBOX Command Documentation | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>INBOX Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="INBOX Command Documentation | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="INBOX Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      
+      <meta name="description" content="Opens the PDM inbox and sends a message as the logged-in user.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/INBOX.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/INBOX.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -90,16 +90,21 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Opens the PDM inbox and sends a message as the logged-in user.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>inbox [-m message]</p>
+<pre><code class="lang-bash">inbox -message
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-m message - The message to send.</p>
+<ul>
+<li><code>message</code>: The message to send. Can be HTML code.</li>
+</ul>
 <h2 id="examples">EXAMPLES:</h2>
-<p>inbox -m 'File checked in successfully'</p>
+<pre><code class="lang-bash">inbox -message 'File checked in successfully'
+# sends the specified message to the logged-in user 
+</code></pre>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/INBOX.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/INBOX.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

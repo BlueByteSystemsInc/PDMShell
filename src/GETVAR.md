@@ -1,3 +1,7 @@
+---
+description: Gets the value of a variable for a specified file or folder.
+title: GETVAR Command Documentation  | PDMShell | SOLIDWORKS PDM
+---
 # GETVAR Command Documentation
 
 ## DESCRIPTION:

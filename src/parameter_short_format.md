@@ -1,3 +1,7 @@
+---
+description: PDMShell supports short formats for many of its parameters to make commands more concise and easier to use.
+title: Short Format for Parameters | PDMShell | SOLIDWORKS PDM
+---
 # Short Format for Parameters in PDMShell
 
 ## Overview

@@ -1,3 +1,7 @@
+---
+description: Opens the PDM variable editor.
+title: EDITVARS Command Documentation | PDMShell | SOLIDWORKS PDM
+---
 # EDITVARS Command Documentation
 
 ## DESCRIPTION:

@@ -1,3 +1,7 @@
+---
+description: PDMShell supports scripting to automate tasks and streamline workflows in SOLIDWORKS PDM.
+title: Scripting | PDMShell | SOLIDWORKS PDM
+---
 # Scripting in PDMShell
 
 ## Overview

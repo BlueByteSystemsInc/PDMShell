@@ -1,6 +1,7 @@
 ---
 uid: index
-title: PDMShell
+title: PDMShell 
+description: PowerShell like commandline interpreter and data migration tool for SOLIDWORKS PDM Professional.
 ---
 
 <style>

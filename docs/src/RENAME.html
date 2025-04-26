@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>RENAME Command Documentation | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>RENAME Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="RENAME Command Documentation | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="RENAME Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      
+      <meta name="description" content="Renames a specified file.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/RENAME.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/RENAME.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -90,13 +90,17 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Renames a specified file.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>rename [-filePath filePath] [-val value] [-search search]</p>
+<pre><code class="lang-bash">rename -filePath -value -search
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-filePath filePath - The filerename.
--val value - The new name for the file.
--search search - The search operation to use.</p>
+<ul>
+<li><code>filePath</code>: The filerename.</li>
+<li><code>value</code>: The new name for the file.</li>
+<li><code>search</code>: The search operation to use.</li>
+</ul>
 <h2 id="examples">EXAMPLES:</h2>
-<p>rename -filePath &quot;oldname.sldprt&quot; -val &quot;newname.sldprt&quot;</p>
+<pre><code class="lang-bash">rename -filePath &quot;oldname.sldprt&quot; -val &quot;newname.sldprt&quot;
+</code></pre>
 <h2 id="remarks">REMARKS:</h2>
 <ul>
 <li>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
@@ -119,7 +123,7 @@
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/RENAME.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/RENAME.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

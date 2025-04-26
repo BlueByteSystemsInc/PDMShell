@@ -1,13 +1,21 @@
+---
+description: Opens the PDM inbox and sends a message as the logged-in user.
+title: INBOX Command Documentation | PDMShell | SOLIDWORKS PDM
+---
 # INBOX Command Documentation
 
 ## DESCRIPTION:
 Opens the PDM inbox and sends a message as the logged-in user.
 
 ## SYNTAX:
-inbox [-m message]
-
+```bash
+inbox -message
+```
 ## PARAMETERS:
--m message - The message to send.
+- `message`: The message to send. Can be HTML code.
 
 ## EXAMPLES:
-inbox -m 'File checked in successfully'
+```bash
+inbox -message 'File checked in successfully'
+# sends the specified message to the logged-in user 
+```

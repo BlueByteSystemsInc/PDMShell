@@ -1,3 +1,7 @@
+---
+description: The COPTYREE command is used to copy files and their associated metadata from a source directory or search results, with options to apply prefixes, suffixes, and other filters. This only works with assembly files.
+title: COPYTREE Command Documentation | PDMShell | SOLIDWORKS PDM
+---
 # COPYTREE Command Documentation
 
 ## DESCRIPTION:

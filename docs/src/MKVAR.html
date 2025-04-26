@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>MKVAR Command Documentation | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>MKVAR Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="MKVAR Command Documentation | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="MKVAR Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      
+      <meta name="description" content="Creates a new variable.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/MKVAR.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/MKVAR.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -90,14 +90,22 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Creates a new variable.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>mkvar [-n name] [-varType varType] [-mkvarflags mkvarflags] [-mkvarattributes mkvarattributes]</p>
+<pre><code class="lang-bash">mkvar -name -varType -mkvarflags -mkvarattributes 
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-n name - The name of the variable to create.</p>
-<p>-varType varType - The type of the variable.</p>
-<p>-mkvarflags mkvarflags - The flags for the variable.</p>
-<p>-mkvarattributes mkvarattributes - The attributes for the variable. Seperated by <code>#</code></p>
+<ul>
+<li><p><code>name</code>: The name of the variable to create.</p>
+</li>
+<li><p><code>varType</code>: The type of the variable.</p>
+</li>
+<li><p><code>mkvarflags</code>: The flags for the variable.</p>
+</li>
+<li><p><code>mkvarattributes</code>: The attributes for the variable. Seperated by <code>#</code></p>
+</li>
+</ul>
 <h2 id="examples">EXAMPLES:</h2>
-<p>mkvar -n &quot;NewVariable&quot; -varType &quot;Text&quot; -mkvarflags &quot;ReadOnly&quot; -mkvarattributes &quot;Attribute1#Attribute2&quot;</p>
+<pre><code class="lang-bash">mkvar -name &quot;NewVariable&quot; -varType &quot;Text&quot; -mkvarflags &quot;ReadOnly&quot; -mkvarattributes &quot;Attribute1#Attribute2&quot;
+</code></pre>
 <h2 id="var-type-values">VAR TYPE VALUES:</h2>
 <table>
 <thead>
@@ -157,7 +165,7 @@
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/MKVAR.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/MKVAR.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

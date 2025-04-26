@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>UNDOCHECKOUT Command Documentation | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>UNDOCHECKOUT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="UNDOCHECKOUT Command Documentation | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="UNDOCHECKOUT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      
+      <meta name="description" content="Undoes a checkout operation.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/UNDOCHECKOUT.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/UNDOCHECKOUT.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -90,12 +90,18 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Undoes a checkout operation.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<p>undocheckout [-f filePath | -s search]</p>
+<pre><code class="lang-bash">undocheckout [-filePath | -search]
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-f filePath - The file(s) to undo the checkout for.</p>
-<p>-search search - The search operation to use.</p>
+<ul>
+<li><p><code>filePath</code>: The file to undo the checkout for.</p>
+</li>
+<li><p><code>search</code>: The search operation to use.</p>
+</li>
+</ul>
 <h2 id="examples">EXAMPLES:</h2>
-<p>undocheckout -f &quot;file1.sldprt&quot;</p>
+<pre><code class="lang-bash">undocheckout -f &quot;file1.sldprt&quot;
+</code></pre>
 <h2 id="remarks">REMARKS:</h2>
 <ul>
 <li>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
@@ -104,7 +110,7 @@
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/UNDOCHECKOUT.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/UNDOCHECKOUT.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

@@ -1,3 +1,7 @@
+---
+description: Displays the biographical information about the specified file.
+title: PRINT Command Documentation | PDMShell | SOLIDWORKS PDM
+---
 # PRINT Command Documentation
 
 ## DESCRIPTION:

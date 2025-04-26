@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Getting Started | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Getting Started | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Welcome to PDMShell, the command-line interpreter designed specifically for SOLIDWORKS PDM Professional. You can more information about getting started here.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/introduction.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="introduction-to-pdmshell">Introduction to PDMShell</h1>
+
+<p>Welcome to <strong>PDMShell</strong>, the command-line interpreter designed specifically for <strong>SOLIDWORKS PDM Professional</strong>. PDMShell empowers engineers and IT professionals with a <strong>powerful</strong>, <strong>flexible</strong>, and <strong>efficient</strong> tool for automating and streamlining tasks within the SOLIDWORKS PDM environment.</p>
+<h3 id="using-the-help-system">Using the Help System</h3>
+<p>PDMShell provides a comprehensive help system and detailed command documentation to guide you through its features. Here's how to get started:</p>
+<ul>
+<li>To view a list of all available commands, type:
+<pre><code class="lang-bash">help
+</code></pre>
+</li>
+<li>To get detailed information about a specific command, type:
+<pre><code class="lang-bash">help -command &lt;command&gt;
+</code></pre>
+For example:
+<pre><code class="lang-bash">help -command cd
+</code></pre>
+</li>
+</ul>
+<h3 id="understanding-the-command-documentation-structure">Understanding the Command Documentation Structure</h3>
+<p>Each command page in PDMShell documentation is organized into the following sections:</p>
+<ol>
+<li><strong>DESCRIPTION</strong>: A brief explanation of what the command does.</li>
+<li><strong>SYNTAX</strong>: The syntax for using the command, including required and optional parameters.</li>
+<li><strong>PARAMETERS</strong>: A detailed explanation of each parameter, including whether it is required or optional.</li>
+<li><strong>EXAMPLES</strong>: Practical examples of how to use the command.</li>
+<li><strong>REMARKS</strong>: Additional notes, tips, or special considerations for using the command.</li>
+<li><strong>TUTORIAL</strong>: A short video tutorial demonstrating the command in action (if available).</li>
+</ol>
+<h3 id="example-command-documentation">Example Command Documentation</h3>
+<p>Here’s an example of how a command is documented:</p>
+<h4 id="cd-command-documentation">CD Command Documentation</h4>
+<p><strong>DESCRIPTION</strong>:<br>
+Changes the current PDM directory.</p>
+<p><strong>SYNTAX</strong>:</p>
+<pre><code class="lang-bash">cd [-directory|-id]
+</code></pre>
+<p><strong>PARAMETERS</strong>:</p>
+<ul>
+<li><code>directory</code>: The directory to switch to. The directory parameter can be a relative or absolute path in PDM.</li>
+<li><code>id</code>: ID of the folder to navigate to.</li>
+</ul>
+<p><strong>EXAMPLES</strong>:</p>
+<pre><code class="lang-bash">cd -directory 'C:\Vault\NewFolder' # Navigates to NewFolder
+cd -id 755 # Navigates to the folder with ID 755
+</code></pre>
+<p><strong>REMARKS</strong>:</p>
+<ul>
+<li>Use <code>cd..</code> to navigate to the parent folder or <code>cd\</code> to navigate to the root of the vault.</li>
+<li>If you just created a new folder and want to <code>cd</code> to it using autocomplete, use the <code>dir</code> command with the <code>-refresh</code> parameter to reload the session.</li>
+<li><code>directory</code> is the default parameter, so you don’t need to specify it if it’s the only parameter in your command.</li>
+</ul>
+<p><strong>TUTORIAL</strong>:<br>
+<video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<p>By following this structure, you can quickly learn how to use any command in PDMShell and integrate it into your workflows.</p>
+<hr>
+<h2 id="-getting-support">📞 Getting Support</h2>
+<p>If you need assistance or have any questions, we're here to help!</p>
+<ul>
+<li><strong>Contact Us</strong>:<br>
+Click the button below to reach out to our support team:<br>
+<a href="mailto:support@bluebytesystemsinc.zohodesk.com">Get Support</a></li>
+</ul>
+<hr>
+<p>Thank you for choosing <strong>PDMShell</strong>! We’re excited to help you streamline your PDM workflows and unlock new levels of productivity.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/introduction.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

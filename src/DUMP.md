@@ -1,3 +1,7 @@
+---
+description: Dumps all session text into a log file.
+title: DELETEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM
+---
 # DUMP Command Documentation
 
 ## DESCRIPTION:

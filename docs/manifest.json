@@ -1,10 +1,10 @@
 {
   "sitemap": {
-    "baseUrl": "https://pdm.bluebyte.biz/sitemap/",
+    "baseUrl": "https://pdm.bluebyte.biz/",
     "changefreq": "weekly",
     "priority": 1
   },
-  "source_base_path": "C:/Users/jlili/source/repos/BlueByteSystemsInc/PDMShell",
+  "source_base_path": "C:/Users/jlili/source/repos/BlueByteSystemsInc/PDMShell.Docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -14,16 +14,6 @@
           "relative_path": "index.json"
         }
       }
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "README.md",
-      "output": {
-        ".html": {
-          "relative_path": "README.html"
-        }
-      },
-      "version": ""
     },
     {
       "type": "Resource",

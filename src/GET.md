@@ -1,3 +1,7 @@
+---
+description: Retrieves a specified version of a file or files (via search).
+title: Get Command Documentation  | PDMShell | SOLIDWORKS PDM
+---
 # GET Command Documentation
 
 ## DESCRIPTION:

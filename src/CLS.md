@@ -1,3 +1,7 @@
+---
+description: Clears the current session.
+title: CLS Command Documentation | PDMShell | SOLIDWORKS PDM
+---
 # CLS Command Documentation
 
 ## DESCRIPTION:
