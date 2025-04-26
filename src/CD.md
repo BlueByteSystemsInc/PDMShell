@@ -1,6 +1,6 @@
 ---
 description: Changes the current PDM directory.
-title: CD  Command Documentation | PDMShell
+title: CD  Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 
 # CD Command Documentation

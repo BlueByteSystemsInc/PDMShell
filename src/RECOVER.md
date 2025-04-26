@@ -1,6 +1,6 @@
 ---
-description: Hard PDM reboot.
-title: REBOOT Command Documentation | PDMShell | SOLIDWORKS PDM
+description: The recover command is used to recover files from a specified directory or source. It supports optional parameters for search queries and recursive operations.
+title: RECOVER Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # RECOVER Command Documentation
 

@@ -1,6 +1,6 @@
 ---
-description: Gets the value of a variable for a specified file or folder directly from the database.
-title: GETVARFROMDB Command Documentation | PDMShell | SOLIDWORKS PDM
+description: Provides help about a command.
+title: HELP Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # HELP Command Documentation
 

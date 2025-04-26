@@ -1,6 +1,6 @@
 ---
 description: Performs a check-in operation on a specified file or many files.
-title: CHECKIN Command Documentation | PDMShell
+title: CHECKIN Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 
 # CHECKIN Command Documentation

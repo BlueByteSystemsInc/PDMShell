@@ -1,6 +1,6 @@
 ---
 description: Performs a check out operation on a specified file or many files.
-title: CHECKOUT Command Documentation | PDMShell
+title: CHECKOUT Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # CHECKOUT Command Documentation
 

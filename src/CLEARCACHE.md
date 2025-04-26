@@ -1,3 +1,8 @@
+---
+description: Clears the local cache of a folder or many files..
+title: CLEARCACHE Command Documentation | PDMShell | SOLIDWORKS PDM
+---
+
 # CLEARCACHE Command Documentation
 
 ## DESCRIPTION:

@@ -1,3 +1,7 @@
+---
+description: The Dynamic Placeholders feature in PDMShell allows you to substitute values dynamically using placeholders
+title: Dynamic Placeholders | PDMShell | SOLIDWORKS PDM
+---
 # Dynamic Placeholders in PDMShell
 
 ## Overview

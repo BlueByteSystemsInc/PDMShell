@@ -1,3 +1,7 @@
+---
+description: Runs a PDMShell script.
+title: RUNSCRIPT Command Documentation | PDMShell | SOLIDWORKS PDM
+---
 # RUNSCRIPT Command Documentation
 
 ## DESCRIPTION:
