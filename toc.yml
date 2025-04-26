@@ -2,8 +2,7 @@
   href: src/index.md
 - name: 📅 SOLIDWORKS PDM MIGRATION | Talk to an Expert 
   href: https://calendly.com/bluebyte/datamigration?back=1
-- name: Buy Premium
-  href: https://bluebyte.biz/products/pdmshell
+- name: 💳 Premium
+  href: https://bluebyte.biz/product/pdmshell
 - name: 🔽 Download PDMShell 
   href: https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell
-  class: download-button
