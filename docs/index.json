@@ -11,22 +11,22 @@
   },
   "src/CD.html": {
     "href": "src/CD.html",
-    "title": "CD Command Documentation | PDMShell | Powershell like features for SOLIDWORKS PDM Professional",
+    "title": "CD Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
     "summary": "CD Command Documentation DESCRIPTION: Changes the current PDM directory. SYNTAX: cd [-directory|-id] PARAMETERS: -directory(or d): The directory to switch to. The directory parameter can be a relative or absolute path in PDM. -id: ID of the folder to navigate to. EXAMPLES: cd -directory 'C:\\Vault\\NewFolder' # Navigates its newFolder REMARKS: Please be aware of the following special ways to change directory: cd.. # Navigates to the parent folder cd\\ # Navigates to the root of the vault If the user just created a new folder and wants to cd to it using autocomplete, they need to use the dir command with the -refresh parameter to force the session to load the current files and sub-folders in the active directory. Using -refresh might affect the performance of the session if the current folder has too many files and sub-folders. directory is the default parameter. You do not need to specify it if it is the only parameter in your command. Example: cd api #navigates to the api folder cd -id 755 #navigates to the folder with id 755 TUTORIAL:"
   },
   "src/CHECKIN.html": {
     "href": "src/CHECKIN.html",
-    "title": "CHECKIN Command Documentation | PDMShell | Powershell like features for SOLIDWORKS PDM Professional",
+    "title": "CHECKIN Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
     "summary": "CHECKIN Command Documentation DESCRIPTION: Performs a check-in operation on a specified file or many files. SYNTAX: checkin -search -filePath -comment -Checkinoptions PARAMETERS: search: The search operation to use. filePath: The file(s) to be checked in. This is the default parameter. comment: The comment to add to the check-in. Checkinoptions: The check-in options to use. EXAMPLES: checkin -filePath \"file1.sldprt\" REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard. If combining Checkinoptions parameters, the user needs to add + between the values. Checkinoptions Parameter Values: Member Description EdmUnlock_FailOnRegenerationNeed Fail if the file needs to be regenerated in the CAD program. NOTE: Only files resaved in SOLIDWORKS 2009 or later can trigger this flag EdmUnlock_ForceUnlock Unlock the file even if it is not modified EdmUnlock_IgnoreCorruptFile Ignore files with file formats unrecognized by SOLIDWORKS PDM Professional; without this flag, SOLIDWORKS PDM Professional returns E_EDM_INVALID_FILE if it encounters a corrupt file or a file containing a newer format than SOLIDWORKS PDM Professional can handle EdmUnlock_IgnoreReferences Silently unlock parent files without their references EdmUnlock_IgnoreRefsNotLockedByCaller Ignore references not locked by caller EdmUnlock_IgnoreRefsOutsideVault Ignore references to files outside the vault EdmUnlock_KeepLocked Keep the file checked out after creating the new version in the archive EdmUnlock_OverwriteLatestVersion Do not create a new version; overwrite the last version of the file with new changes EdmUnlock_RemoveLocalCopy Remove the local copy of the file from the hard disk after the file has been checked in EdmUnlock_Simple Check in the file using default behavior"
   },
   "src/CHECKOUT.html": {
     "href": "src/CHECKOUT.html",
-    "title": "CHECKOUT Command Documentation | PDMShell | Powershell like features for SOLIDWORKS PDM Professional",
+    "title": "CHECKOUT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
     "summary": "CHECKOUT Command Documentation DESCRIPTION: Performs a check out operation on a specified file or many files. SYNTAX: checkout -search -recursive -filePath PARAMETERS: -search: Search keyword -filePath: The file(s) to be checked out. This is the default parameter -recursive: Recursively check out all files in the current directory. Use in combination with search EXAMPLES: checkout -filePath file1.sldprt REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard. TUTORIAL:"
   },
   "src/CLEARCACHE.html": {
     "href": "src/CLEARCACHE.html",
-    "title": "CLEARCACHE Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
+    "title": "CLEARCACHE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
     "summary": "CLEARCACHE Command Documentation DESCRIPTION: Clears the local cache of a folder or many files. SYNTAX: clearcache -directory -search -toolboxflag -source PARAMETERS: -directory: The directory to clear the local cache of. -search: Search query. -toolboxflag: Ignore toolbox files. -source: CSV files containing complete local file paths to clear. First row is header. EXAMPLES: clearcache -search \"*.sldprt\" # Clears the cache of all `.sldprt` files in the current directory. clearcache -directory project -toolboxflag # Clears the directory called project whiling ignore toolbox files. clearcache -source \"source.csv\" # Clears the cache for the specified source."
   },
   "src/CLS.html": {
@@ -41,7 +41,7 @@
   },
   "src/DELETE.html": {
     "href": "src/DELETE.html",
-    "title": "DELETE Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
+    "title": "DELETE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
     "summary": "DELETE Command Documentation DESCRIPTION: The delete command is used to delete files or directories from the PDM system. It supports various parameters to specify the target files or directories, including file paths, directory paths, search queries, and IDs. The command also supports recursive deletion for directories. SYNTAX: delete [-filePath|-id] -directory -search -recursive -list -csv PARAMETERS: filePath: (Optional) Specifies the file path of the file to be deleted. directory: (Optional) Specifies the directory to be deleted. If used with the -recursive parameter, all files and subdirectories within the directory will also be deleted. search: (Optional) A search query to filter files or directories to be deleted. id: (Optional) Specifies the ID of the file to be deleted. recursive: (Optional) Deletes all files and subdirectories within the specified directory. This parameter is only applicable when deleting directories. list: (Optional) Lists all the deleted files. Specifying recursive with this parameter will do a drill down search and fetch all deleted files. csv: Exports a list of deleted files to a csv. This only works if list is specified. Note Use the exported csv from -csv with the recover command. EXAMPLES: Delete files matching a search query: delete -search \"%.sldprt\" # delete all parts in the current directory REMARKS: The delete command requires at least one of the following parameters: filePath, dir, search, or id. Use the recursive parameter with caution, as it will delete all contents within the specified directory. Ensure you have the necessary permissions to delete files or directories in the PDM system. TUTORIAL:"
   },
   "src/DELETEFROMSOURCE.html": {
@@ -56,13 +56,13 @@
   },
   "src/DIR.html": {
     "href": "src/DIR.html",
-    "title": "DIR Command Documentation | PDMShell | Powershell like features for SOLIDWORKS PDM Professional",
+    "title": "DIR Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
     "summary": "DIR Command Documentation DESCRIPTION: Displays a list of files and subdirectories in a directory. SYNTAX: dir -sort -columns -csv -refresh PARAMETERS: -sort: The column name to sort the list of files and folders with. -columns: The columns to display, separated by commas. These are PDM variables drawn from the @ tab. -csv: Export the directory listing to a CSV file. Must include the csv extension -refresh: Refreshes the session to load the current files and sub-folders in the active directory in the autocomplete list. -recursive: Lists all files and all folders in the current directory recursively. EXAMPLES: dir #\"C:\\Vault\\Documents\" dir -sort \"name\" -cols \"description,partnumber\" -csv \"output.csv\" -refresh REMARKS: Use the -refresh parameter to force the session to load the current files and sub-folders in the active directory. Do not use this when the current folder has many items. The CSV file will be checked into the current directory. TUTORIAL:"
   },
   "src/DUMP.html": {
     "href": "src/DUMP.html",
     "title": "DELETEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
-    "summary": "DUMP Command Documentation DESCRIPTION: Dumps all session text into a log file. SYNTAX: dump filePath PARAMETERS: filePath: The log file to dump session details into. EXAMPLES: dump -filePath \"sessionlog.txt\""
+    "summary": "DUMP Command Documentation DESCRIPTION: Dumps all session text into a log file and check it back into the vault. SYNTAX: dump filePath PARAMETERS: filePath: The log file to dump session details into. EXAMPLES: dump -filePath \"$release_script_$yyy_$mm_$dd_$guid.txt\" REMARKS: To make sure your logs are always unique, use $guid or the date/time place holders. You can get more information about these place holders here."
   },
   "src/EDITVARS.html": {
     "href": "src/EDITVARS.html",
@@ -71,12 +71,12 @@
   },
   "src/EVAL.html": {
     "href": "src/EVAL.html",
-    "title": "Dynamic Placeholders in PDMShell | Powershell like features for SOLIDWORKS PDM Professional",
-    "summary": "Dynamic Placeholders in PDMShell Overview The Dynamic Placeholders feature in PDMShell allows you to substitute values dynamically using placeholders. This functionality is supported by several commands and enables the use of file or folder properties, system variables, and other contextual information to generate new values automatically. Dynamic Placeholders are not a standalone command but a feature used by specific commands to process the value parameter or other relevant inputs. Commands Supporting Dynamic Placeholders The following commands support the use of dynamic placeholders: Commands Using the Current Folder as the Backing Object (directory parameter): cd: Change the current directory. mkdir: Create a new directory. export: Export commands to a file. addtvault: Add a vault with the directory as the backing object. Commands Using Files or Folders as the Backing Object: rename: Uses the value parameter for renaming files or folders. renamefromsource: The new file is evaluated if the evaluatealiases parameter is specified. setvar: Uses the value parameter to set variables for files or folders. Placeholders for Dynamic Substitution The value parameter in supported commands can include placeholders that are dynamically replaced with actual values based on the context. The placeholders differ slightly depending on whether the backing object is a file or a folder. Placeholders for Files $value: Existing value of the variable. $name: The file name with extension. $nameWithoutExtension: The file name without extension. $extension: The file extension. $id: The file ID. $revision: The current revision of the file (PDM revision, not the PDM variable). $version: The current version of the file. $fullyQualifiedName: The full local path of the file. $fullyQualifiedFolderName: The full local path of the folder containing the file. $folderName: The name of the folder containing the file. Placeholders for Folders $value: Existing value of the variable. $name: The folder name. $folderName: The name of the parent folder. $id: The folder ID. $fullyQualifiedName: The full local path of the folder. Common Placeholders (Applicable to Both Files and Folders) $username: The name of the logged-in user. $vaultName: The name of the vault. $yyyy: The current year. $mm: The current month (two digits). $hh: The current hour (two digits). $mi: The current minute (two digits). $ss: The current second (two digits). $date: The current date. $time: The current time in the current locale. Using Variables in Dynamic Placeholders In addition to placeholders, you can include other variables by enclosing them in square brackets (e.g., [VariableName]). These variables are dynamically resolved based on the context of the file or folder. Example Usage Here’s an example of how to use dynamic placeholders in a command: Renaming a File rename -filePath 1.sldprt -value \"$nameWithoutExtension_$yyyy$mm$dd$extension\""
+    "title": "Dynamic Placeholders | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
+    "summary": "Dynamic Placeholders in PDMShell Overview The Dynamic Placeholders feature in PDMShell allows you to substitute values dynamically using placeholders. This functionality is supported by several commands and enables the use of file or folder properties, system variables, and other contextual information to generate new values automatically. Dynamic Placeholders are not a standalone command but a feature used by specific commands to process the value parameter or other relevant inputs. Commands Supporting Dynamic Placeholders The following commands support the use of dynamic placeholders: Commands Using the Current Folder as the Backing Object (directory parameter): cd: Change the current directory. mkdir: Create a new directory. export: Export commands to a file. addtvault: Add a vault with the directory as the backing object. Commands Using Files or Folders as the Backing Object: rename: Uses the value parameter for renaming files or folders. renamefromsource: The new file is evaluated if the evaluatealiases parameter is specified. setvar: Uses the value parameter to set variables for files or folders. Placeholders for Dynamic Substitution The value parameter in supported commands can include placeholders that are dynamically replaced with actual values based on the context. The placeholders differ slightly depending on whether the backing object is a file or a folder. Placeholders for Files $value: Existing value of the variable. $name: The file name with extension. $nameWithoutExtension: The file name without extension. $extension: The file extension. $id: The file ID. $revision: The current revision of the file (PDM revision, not the PDM variable). $version: The current version of the file. $fullyQualifiedName: The full local path of the file. $fullyQualifiedFolderName: The full local path of the folder containing the file. $folderName: The name of the folder containing the file. Placeholders for Folders $value: Existing value of the variable. $name: The folder name. $folderName: The name of the parent folder. $id: The folder ID. $fullyQualifiedName: The full local path of the folder. Common Placeholders (Applicable to Both Files and Folders) $username: The name of the logged-in user. $vaultName: The name of the vault. $yyyy: The current year. $mm: The current month (two digits). $hh: The current hour (two digits). $mi: The current minute (two digits). $ss: The current second (two digits). $date: The current date. $time: The current time in the current locale. $guid: Unique identifier. Using Variables in Dynamic Placeholders In addition to placeholders, you can include other variables by enclosing them in square brackets (e.g., [VariableName]). These variables are dynamically resolved based on the context of the file or folder. Example Usage Here’s an example of how to use dynamic placeholders in a command: Renaming a File rename -filePath 1.sldprt -value \"$nameWithoutExtension_$yyyy$mm$dd$extension\""
   },
   "src/FROGLEAP.html": {
     "href": "src/FROGLEAP.html",
-    "title": "FROGLEAP Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
+    "title": "FROGLEAP Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
     "summary": "FROGLEAP Command Documentation DESCRIPTION: Frog leaps an old version as newest. SYNTAX: frogleap -search -filePath -oldVersion PARAMETERS: search: The search operation to use. search: The file(s) to be frog leaped. This is the default parameter. oldVersion: The old version to leap. This is an integer. EXAMPLES: frogleap -filePath \"file1.sldprt\" -oldVersion 2 REMARKS: The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use % for wildcard. TUTORIAL:"
   },
   "src/GET.html": {
@@ -91,12 +91,12 @@
   },
   "src/GETVARFROMDB.html": {
     "href": "src/GETVARFROMDB.html",
-    "title": "GETVAR Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
+    "title": "GETVARFROMDB Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
     "summary": "GETVARFROMDB Command Documentation DESCRIPTION: Gets the value of a variable for a specified file or folder directly from the database. SYNTAX: getvarfromdb -filePath -variableName -configs PARAMETERS: filePath : The file or folder to get the variable from. variableName : The variable name to retrieve from the database. configs : The configuration names to retrieve the variable from, separated by commas. EXAMPLES: getvarfromdb -f \"file1.sldprt\" -variableName \"CustomVar\" REMARKS: The configuration names should be separated by commas. This command will always return the latest value."
   },
   "src/HELP.html": {
     "href": "src/HELP.html",
-    "title": "GETVARFROMDB Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
+    "title": "HELP Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
     "summary": "HELP Command Documentation DESCRIPTION: Provides help about a command. SYNTAX: help [-command|-c] PARAMETERS: -command: The specific command you need help with. EXAMPLES: help -c cd #opens the help page about the change directory command"
   },
   "src/HISTORY.html": {
@@ -151,7 +151,7 @@
   },
   "src/RECOVER.html": {
     "href": "src/RECOVER.html",
-    "title": "REBOOT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
+    "title": "RECOVER Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
     "summary": "RECOVER Command Documentation DESCRIPTION: The recover command is used to recover files from a specified directory or source. It supports optional parameters for search queries and recursive operations. SYNTAX: recover -directory -search -recursive -source PARAMETERS: directory: Specifies the directory to recover files from. This parameter is optional. search: A search query to filter the files to recover. This parameter is optional. Supports % and * as wildcards. recursive: Enables recursive recovery of files within subdirectories. This parameter is optional. source: Specifies the source to recover files from. This parameter is optional. Note To generate a source csv file, use the command delete -list -csv deletedfiles.csv to generate a list of all deleted files in the current directory. You can include recursive to get all files from the subdirectories. To generate a source csv file for a particular directory, use directory in combination with list and csv. EXAMPLES: recover -source \"source.csv\" # Recovers files from the specified source. recover -directory \"\" # Recovers files from the current directory. REMARKS: Ensure that the specified directory or source exists and is accessible. TUTORIAL:"
   },
   "src/RENAME.html": {
@@ -166,7 +166,7 @@
   },
   "src/RUNSCRIPT.html": {
     "href": "src/RUNSCRIPT.html",
-    "title": "RUNSCRIPT Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
+    "title": "RUNSCRIPT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
     "summary": "RUNSCRIPT Command Documentation DESCRIPTION: Runs a PDMShell script. SYNTAX: runscript -source -filePath -search -recursive PARAMETERS: source: Script file. filePath: File path to run the script on. search: Search query to filter files. recursive: If specified, the command will run script on all files recursively in subdirectories. EXAMPLES: runscript -filePath pdmscript.script -search \"%.sldprt\" -recursive # this will run pdm.script on all part files in the active directory and its subdirectories REMARKS: A good way to start a script is using the start notepad.exe command to open up notepad.exe. In your script, you must use the alias $completefilename and $completefoldername to reference the file your script is targeting. This is required with the search or filePath parameters. FREE VERSION LIMIT: The free version is limited to 10 lines per script."
   },
   "src/SEARCH.html": {
@@ -196,7 +196,7 @@
   },
   "src/USERS.html": {
     "href": "src/USERS.html",
-    "title": "USERS Command Documentation | Powershell like features for SOLIDWORKS PDM Professional",
+    "title": "USERS Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
     "summary": "USERS Command Documentation DESCRIPTION: Lists all the users in the active vault. SYNTAX: ``bash users ## PARAMETERS: ## EXAMPLES: ```bash users"
   },
   "src/VERSION.html": {

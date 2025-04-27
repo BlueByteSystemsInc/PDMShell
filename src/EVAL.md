@@ -60,7 +60,7 @@ The `value` parameter in supported commands can include placeholders that are dy
 - `$ss`: The current second (two digits).
 - `$date`: The current date.
 - `$time`: The current time in the current locale.
-
+- `$guid`: Unique identifier.
 ---
 
 ## Using Variables in Dynamic Placeholders

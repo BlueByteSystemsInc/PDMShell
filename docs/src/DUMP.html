@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/DUMP.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/DUMP.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -88,7 +88,7 @@
 <h1 id="dump-command-documentation">DUMP Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>Dumps all session text into a log file.</p>
+<p>Dumps all session text into a log file and check it back into the vault.</p>
 <h2 id="syntax">SYNTAX:</h2>
 <pre><code class="lang-bash">dump filePath
 </code></pre>
@@ -97,13 +97,17 @@
 <li><code>filePath</code>: The log file to dump session details into.</li>
 </ul>
 <h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">dump -filePath &quot;sessionlog.txt&quot;
+<pre><code class="lang-bash">dump -filePath &quot;$release_script_$yyy_$mm_$dd_$guid.txt&quot;
 </code></pre>
+<h2 id="remarks">REMARKS:</h2>
+<ul>
+<li>To make sure your logs are always unique, use <code>$guid</code> or the date/time place holders. You can get more information about these place holders <a href="/src/EVAL.html">here</a>.</li>
+</ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/DUMP.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/DUMP.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
