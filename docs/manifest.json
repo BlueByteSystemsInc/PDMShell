@@ -776,6 +776,16 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "images/worktransition.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/worktransition.png"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Redirection",
       "source_relative_path": "index.md",
       "output": {
@@ -1271,6 +1281,16 @@
       "output": {
         ".html": {
           "relative_path": "src/scripting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/scriptsfromtransition.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/scriptsfromtransition.html"
         }
       },
       "version": ""

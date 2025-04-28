@@ -10,10 +10,15 @@
   href: faq.md
 - name: Dynamic Placeholders in PDMShell
   href: EVAL.md
-- name: Scripting
-  href: scripting.md
-- name: Running PDMShell Scripts from Dispatch
-  href: dispatch.md
+- name: PDMShell Scripting
+  expanded: true
+  items:
+  - name: Introduction
+    href: scripting.md
+  - name: From Dispatch
+    href: dispatch.md
+  - name: From Workflow Transitions
+    href: scriptsfromtransition.md
 - name: Short Format for Parameters
   href: parameter_short_format.md
 - name: COMMANDS
