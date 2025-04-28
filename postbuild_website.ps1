@@ -3,13 +3,11 @@ $filePath = "website\src\index.html"
 # All tags to insert
 $tagsToInsert = @"
     <!-- Open Graph Tags -->
-    <link rel="canonical" href="https://pdmshell.com/" /> 
     <meta property="og:title" content="PDMShell for SOLDIWORKS PDM Professional" />
     <meta property="og:description" content="Automate check-ins, migrations, and batch operations in SOLIDWORKS PDM using PDMShell." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://pdmshell.com/" />
+    <meta property="og:url" content="https://pdmshell.com/src/index.html/" />
     <meta property="og:image" content="images/logo.png" />
-
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PDMShell for SOLDIWORKS PDM Professional" />

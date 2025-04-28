@@ -3,11 +3,11 @@ $filePath = "docs\src\index.html"
 # All tags to insert
 $tagsToInsert = @"
     <!-- Open Graph Tags -->
-    <link rel="canonical" href="https://pdmshell.bluebyte.biz/" /> 
+    <link rel="canonical" href="https://pdmshell.bluebyte.biz/src/index.html" /> 
     <meta property="og:title" content="PDMShell – Automate SOLIDWORKS PDM" />
     <meta property="og:description" content="Automate check-ins, migrations, and batch operations in SOLIDWORKS PDM using PDMShell." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://pdmshell.bluebyte.biz/" />
+    <meta property="og:url" content="https://pdmshell.bluebyte.biz/src/index.html" />
     <meta property="og:image" content="images/logo.png" />
 
     <!-- Twitter Cards -->
