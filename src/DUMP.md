@@ -18,7 +18,7 @@ dump filePath
 
 ## EXAMPLES:
 ```bash
-dump -filePath "$release_script_$yyy_$mm_$dd_$guid.txt"
+dump -filePath "$release_script_$yyyy_$mm_$dd_$guid.txt"
 ```
 ## REMARKS:
 - To make sure your logs are always unique, use `$guid` or the date/time place holders. You can get more information about these place holders [here](/src/EVAL.html).
