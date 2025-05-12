@@ -42,12 +42,14 @@
       href: DELETE.md
     - name: deleteFromSource
       href: DELETEFROMSOURCE.md
-    - name: destory
+    - name: destroy
       href: DESTORY.md
     - name: dir
       href: dir.md
     - name: dump
       href: dump.md
+    - name: Export
+      href: Export.md
     - name: editVars
       href: editvars.md
     - name: frogLeap
@@ -88,6 +90,8 @@
       href: RENAMEFROMSOURCE.md
     - name: runScript
       href: RUNSCRIPT.md
+    - name: runSWMacro
+      href: runswmacro.md
     - name: search
       href: search.md
     - name: setVar

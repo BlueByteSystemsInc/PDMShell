@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>DELETEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>EXPORT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="DELETEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="EXPORT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Dumps all session text into a log file.">
+      <meta name="description" content="Exports a specified SOLIDWORKS file or many SOLIDWORKS files the specified extensions.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/DUMP.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/export.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,29 +85,32 @@
         </div>
 
         <article data-uid="">
-<h1 id="dump-command-documentation">DUMP Command Documentation</h1>
+<h1 id="export-command-documentation">EXPORT Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>Dumps all session text into a log file and check it back into the vault.</p>
+<p>The <code>ExportCommand</code> allows you to export SOLIDWORKS files from the PDM vault to various formats using SOLIDWORKS. This command supports exporting a single file or multiple files found via search, with options for specifying file extensions, export location, and more.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">dump filePath
+<pre><code class="lang-bash">export [-search|-filePath] -name -directory -extensions -recursive 
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
+<p>The export command requires several parameters:</p>
 <ul>
-<li><code>filePath</code>: The log file to dump session details into.</li>
+<li><code>filePath</code>: Path to the file to export (relative or absolute).</li>
+<li><code>name</code>: The base name for the exported file(s). This supports evaluation. More <a href="/src/EVAL.html">information here</a>.</li>
+<li><code>directory</code>: The target folder for exported files.</li>
+<li><code>extensions</code>: Comma-separated list of file extensions to export to (e.g., <code>pdf,dxf</code>).</li>
+<li><code>search</code>: Search query to find files for export.</li>
+<li><code>recursive</code>: If set, search will include subfolders.</li>
 </ul>
-<h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">dump -filePath &quot;$release_script_$yyyy_$mm_$dd_$guid.txt&quot;
+<h2 id="example">EXAMPLE:</h2>
+<p>Export a file to PDF and DXF in a specific directory:</p>
+<pre><code class="lang-bash">export -filePath&quot;Designs/part1.sldprt&quot; -name &quot;part1_export&quot; -directory &quot;Exports&quot; -extensions &quot;pdf,dxf&quot;
 </code></pre>
-<h2 id="remarks">REMARKS:</h2>
-<ul>
-<li>To make sure your logs are always unique, use <code>$guid</code> or the date/time place holders. You can get more information about these place holders <a href="/src/EVAL.html">here</a>.</li>
-</ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/DUMP.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/export.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

@@ -717,6 +717,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/logo_large.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo_large.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/microsoftstore.png",
       "output": {
         "resource": {
@@ -1227,6 +1237,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/export.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/export.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/faq.md",
       "output": {
         ".html": {
@@ -1271,6 +1291,16 @@
       "output": {
         ".html": {
           "relative_path": "src/parameter_short_format.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/runswmacro.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/runswmacro.html"
         }
       },
       "version": ""

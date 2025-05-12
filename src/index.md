@@ -126,7 +126,7 @@ description: PowerShell like commandline interpreter and data migration tool for
     
   </video>
 <p style="color: #bbbbbb; margin:auto; font-family:  'Open Sans', sans-serif;">
-  👂🔇 This video autoplays silently so you can watch without sound. Unmute if you'd like to hear it.
+  This video autoplays silently so you can watch without sound. Unmute if you'd like to hear it.
 </p>
 </div>
 

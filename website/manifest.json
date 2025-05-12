@@ -717,6 +717,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/logo_large.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo_large.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/microsoftstore.png",
       "output": {
         "resource": {
@@ -771,6 +781,16 @@
       "output": {
         "resource": {
           "relative_path": "images/sessions.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/worktransition.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/worktransition.png"
         }
       },
       "version": ""
@@ -1217,6 +1237,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/export.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/export.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/faq.md",
       "output": {
         ".html": {
@@ -1267,10 +1297,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/runswmacro.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/runswmacro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/scripting.md",
       "output": {
         ".html": {
           "relative_path": "src/scripting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/scriptsfromtransition.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/scriptsfromtransition.html"
         }
       },
       "version": ""

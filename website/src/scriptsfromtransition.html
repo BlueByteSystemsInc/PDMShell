@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>DELETEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>Notes About Running PDMShell Scripts from Workflow Transitions | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="DELETEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="Notes About Running PDMShell Scripts from Workflow Transitions | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Dumps all session text into a log file.">
+      <meta name="description" content="Learn how to use PDMShell scripts with workflow transitions in SOLIDWORKS PDM.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/DUMP.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/scriptsfromtransition.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,29 +85,57 @@
         </div>
 
         <article data-uid="">
-<h1 id="dump-command-documentation">DUMP Command Documentation</h1>
+<h1 id="notes-about-running-pdmshell-scripts-from-workflow-transitions">Notes About Running PDMShell Scripts from Workflow Transitions</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
-<p>Dumps all session text into a log file and check it back into the vault.</p>
-<h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">dump filePath
+<p>When you want to run PDMShell scripts as part of a workflow transition in SOLIDWORKS PDM, you can configure the transition to execute scripts seamlessly. This allows you to automate complex tasks during transitions, such as updating variables, exporting files, or triggering external processes.</p>
+<h2 id="workflow-transition-configuration">Workflow Transition Configuration</h2>
+<p><img src="../images/worktransition.png" alt="workflowtransition"></p>
+<ol>
+<li><strong>Action Type</strong>: Set the action type to <strong>Execute Command</strong>.</li>
+<li><strong>Command</strong>: Specify the path to the PDMShell executable, which is <code>pdmcli.exe</code>.
+<pre><code class="lang-bash">&quot;path_to_pdmcli.exe&quot; runscript &quot;pathToScript&quot; [additional parameters]
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+</li>
+</ol>
 <ul>
-<li><code>filePath</code>: The log file to dump session details into.</li>
+<li>The <code>pathToScript</code> must be wrapped in quotes (<code>&quot;&quot;</code>) if it contains spaces.</li>
+<li>Additional parameters can be passed to the script as needed aslo wrapped in quotes (<code>&quot;&quot;</code>).</li>
+<li>Make to sure to check <code>Wait until the started program terminates.</code></li>
 </ul>
-<h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">dump -filePath &quot;$release_script_$yyyy_$mm_$dd_$guid.txt&quot;
+<h2 id="example-workflow-transition-execute-command-configuration">Example: Workflow Transition Execute Command Configuration</h2>
+<pre><code class="lang-bash">&quot;C:\Program Files (x86)\BLUE BYTE SYSTEMS INC\PDMShell\PDMCLI.exe&quot; runscript &quot;C:\Scripts\clearvariables.pdmshell&quot; &quot;FilePath&quot; 
 </code></pre>
-<h2 id="remarks">REMARKS:</h2>
+<h3 id="example-script">Example Script</h3>
+<p>In the PDMShell script (<code>clearvariables.pdmshell</code>), you can reference the parameters as follows:</p>
+<pre><code class="lang-bash"># Check the selected file out
+checkout -filePath &quot;$parameter1$&quot;
+
+# clear description variable
+setvar -filePath &quot;$parameter1$&quot; -variableName Description -Value &quot;&quot;
+
+# Save changes
+checkin -filePath &quot;$parameter1$&quot; -comment &quot;cleared description&quot;
+# cd to root folder
+cd\
+# cd to logs folder
+cd logs
+# save log
+dump clearvariables_$yyyy-$mm-$dd_$guid.txt
+# You must call quit at the end of the script
+quit
+</code></pre>
+<h2 id="tutorial">Tutorial</h2>
+<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/workflowtransition.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="tips-for-running-pdmshell-scripts-from-workflow-transitions">Tips for Running PDMShell Scripts from Workflow Transitions</h2>
 <ul>
-<li>To make sure your logs are always unique, use <code>$guid</code> or the date/time place holders. You can get more information about these place holders <a href="/src/EVAL.html">here</a>.</li>
+<li><strong>Test Your Scripts</strong>: Always test your PDMShell scripts independently before integrating them with workflow transitions.</li>
+<li><strong>Use Quotes for Paths</strong>: Wrap paths and parameters in quotes (<code>&quot;&quot;</code>) if they contain spaces to avoid errors.</li>
 </ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/DUMP.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/scriptsfromtransition.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
