@@ -747,6 +747,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/pdmremindermanagelicense.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmremindermanagelicense.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell.gif",
       "output": {
         "resource": {
@@ -1201,16 +1211,6 @@
       "output": {
         ".html": {
           "relative_path": "src/VERSION.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "src/cdpdm.md",
-      "output": {
-        ".html": {
-          "relative_path": "src/cdpdm.html"
         }
       },
       "version": ""
