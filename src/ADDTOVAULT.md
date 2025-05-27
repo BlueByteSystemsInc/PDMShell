@@ -7,6 +7,10 @@ title: ADDTOVAULT Command Documentation | PDMShell | SOLIDWORKS PDM
 
 ## DESCRIPTION:
 The `addtovault` command is used to add files or directories to the PDM vault. It supports various parameters to specify the source files or directories, search queries, and additional options such as ignoring existing files, updating references, and recursive operations.
+
+>[!NOTE]
+> It is highly recommended that you run PDMShell as **administrator** before using this command.
+
 ## SYNTAX:
 ```bash
 addtovault -csv  -dir  -search  -source -ignoreex -updaterefs -recursive
@@ -17,8 +21,8 @@ addtovault -csv  -dir  -search  -source -ignoreex -updaterefs -recursive
 - `csv`:
 (Optional) Specifies the path to a CSV file containing a list of files or directories to be added to the vault.
 
-- `dir`:
-(**Required**)
+- `directory`:
+(Optional)
 Specifies the target directory. If not specified current directory is used. If using the current directory, use "".
 
 - `search`:
