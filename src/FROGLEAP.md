@@ -13,7 +13,7 @@ frogleap -search -filePath -oldVersion
 ```
 ## PARAMETERS:
 - `search`: The search operation to use.
-- `search`: The file(s) to be frog leaped. This is the default parameter.
+- `filePath`: The file(s) to be frog leaped. This is the default parameter.
 - `oldVersion:` The old version to leap. This is an integer.
 
 ## EXAMPLES:
