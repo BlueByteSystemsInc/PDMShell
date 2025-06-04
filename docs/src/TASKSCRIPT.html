@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>RUNSCRIPT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>Run Script as a Task | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="RUNSCRIPT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="Run Script as a Task | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Runs a PDMShell script.">
+      <meta name="description" content="Documentation page of TaskScript.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/RUNSCRIPT.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/TASKSCRIPT.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,38 +85,87 @@
         </div>
 
         <article data-uid="">
-<h1 id="runscript-command-documentation">RUNSCRIPT Command Documentation</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
-<p>Runs a PDMShell script.</p>
-<h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">runscript -source -filePath -search -recursive
+<h2 id="overview">Overview</h2>
+<p><strong>TaskScript</strong> is a custom PDM task add-in developed by <strong>Blue Byte Systems Inc.</strong> that allows you to execute <strong>PDMShell scripts</strong> the same way you would use the built-in <strong>Convert</strong> task.</p>
+<p><strong>This task can be requested upon purchase of a premium license of PDMShell.</strong></p>
+<p>With TaskScript, administrators can create configurable tasks that run custom <code>.pdmshell</code> scripts using the <code>pdmcli</code> engine on selected files within the vault.</p>
+<p><img src="../images/taskscript.png" alt="TaskScript UI"></p>
+<hr>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li>Execute PDMShell commands in response to PDM task triggers</li>
+<li>Dynamic script editing and variable binding</li>
+<li>Reuses existing scripts stored locally or downloaded</li>
+<li>Supports file filtering based on extensions</li>
+<li>Evaluates placeholders like <code>$fileName</code>, <code>$localPath</code>, and more</li>
+<li>Handles script failure with detailed logging</li>
+</ul>
+<hr>
+<h2 id="example-script">Example Script</h2>
+<pre><code class="lang-bash">cd/
+print -id $id
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<p>You can request a script by emailing us via the Request Script button.</p>
+<h2 id="remarks">Remarks</h2>
 <ul>
-<li><code>source</code>:  Script file.</li>
-<li><code>filePath</code>:  File path to run the script on.</li>
-<li><code>search</code>:  Search query to filter files.</li>
-<li><code>recursive</code>: If specified, the command will run script on all files recursively in subdirectories.</li>
+<li>You can include the extensions: <code>sldprt;sldasm;slddrw</code> are the default value.</li>
+<li>TaskScript will run PDMShell sessions on all affected documents by the task.</li>
+<li>Do not forget to set the Command Menu tab.</li>
 </ul>
-<h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">runscript -filePath pdmscript.script -search &quot;%.sldprt&quot; -recursive 
-# this will run pdm.script on all part files in the active directory and its subdirectories
-</code></pre>
-<h2 id="remarks">REMARKS:</h2>
-<ul>
-<li>A good way to start a script is using the <code>start notepad.exe</code> command to open up notepad.exe.</li>
-<li>In your script, you must use the alias <code>$completefilename</code> and <code>$completefoldername</code> to reference the file your script is targeting. This is required with the <code>search</code> or <code>filePath</code> parameters.</li>
-</ul>
-<h2 id="free-version-limit">FREE VERSION LIMIT:</h2>
-<ul>
-<li>The free version is limited to 10 lines per script.</li>
-</ul>
+<h2 id="placeholder-variables">Placeholder Variables</h2>
+<p>TaskScript supports dynamic variables that are replaced at runtime for each selected file. Below is a list of available placeholders:</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$localPath</code></td>
+<td>Full local path to the selected file</td>
+</tr>
+<tr>
+<td><code>$fileName</code></td>
+<td>File name (including extension)</td>
+</tr>
+<tr>
+<td><code>$id</code></td>
+<td>Internal PDM file ID</td>
+</tr>
+<tr>
+<td><code>$folderPath</code></td>
+<td>Full local path to the file's parent folder</td>
+</tr>
+<tr>
+<td><code>$folderID</code></td>
+<td>Internal PDM folder ID</td>
+</tr>
+<tr>
+<td><code>$fileNameWithoutExtension</code></td>
+<td>File name without the extension</td>
+</tr>
+<tr>
+<td><code>$vaultName</code></td>
+<td>Name of the vault the file belongs to</td>
+</tr>
+<tr>
+<td><code>$vaultRootFolder</code></td>
+<td>Local root path of the vault</td>
+</tr>
+<tr>
+<td><code>$(Variable.Configuration)</code></td>
+<td>Value of a custom PDM variable for a given configuration</td>
+</tr>
+</tbody>
+</table>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/RUNSCRIPT.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/TASKSCRIPT.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

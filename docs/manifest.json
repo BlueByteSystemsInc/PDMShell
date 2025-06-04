@@ -4,7 +4,7 @@
     "changefreq": "weekly",
     "priority": 1
   },
-  "source_base_path": "C:/Users/jlili/source/repos/BlueByteSystemsInc/PDMShell.Docs",
+  "source_base_path": "C:/Users/jlili/source/repos/BlueByteSystemsInc/PDMShell",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -797,6 +797,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/taskscript.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/taskscript.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/worktransition.png",
       "output": {
         "resource": {
@@ -951,6 +961,16 @@
       "output": {
         ".html": {
           "relative_path": "src/EVAL.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/EXPORT.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/EXPORT.html"
         }
       },
       "version": ""
@@ -1187,6 +1207,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/TASKSCRIPT.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/TASKSCRIPT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/UNDOCHECKOUT.md",
       "output": {
         ".html": {
@@ -1231,16 +1261,6 @@
       "output": {
         ".html": {
           "relative_path": "src/eula.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "src/export.md",
-      "output": {
-        ".html": {
-          "relative_path": "src/export.html"
         }
       },
       "version": ""
