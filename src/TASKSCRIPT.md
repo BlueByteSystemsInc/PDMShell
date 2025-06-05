@@ -58,3 +58,7 @@ TaskScript supports dynamic variables that are replaced at runtime for each sele
 | `$vaultName`                | Name of the vault the file belongs to                   |
 | `$vaultRootFolder`          | Local root path of the vault                            |
 | `$(Variable.Configuration)` | Value of a custom PDM variable for a given configuration |
+
+## $(Variable.Configuration)
+- Use `@` for the `@` tab. Example: `$(Description.@)`
+- Use empty string for files with no configurations. Example: `$(Description. )`

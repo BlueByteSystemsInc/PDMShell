@@ -18,7 +18,7 @@
   - name: From Dispatch
     href: dispatch.md
   - name: Using TaskScript (Custom Task)
-    href: taskscript.md
+    href: TASKSCRIPT.md
   - name: From Workflow Transitions
     href: scriptsfromtransition.md
 - name: Short Format for Parameters
