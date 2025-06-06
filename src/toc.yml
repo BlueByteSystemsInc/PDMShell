@@ -2,28 +2,31 @@
   href: index.md
 - name: EULA
   href: eula.md
-- name: Introduction
-  href: introduction.md
 - name: Installing PDMShell
   href: howtoinstall.md
-- name: FAQ
-  href: faq.md
+- name: Introduction
+  href: introduction.md
 - name: Dynamic Placeholders in PDMShell
   href: EVAL.md
-- name: PDMShell Scripting
+- name: FAQ
+  href: faq.md
+- name: Scripting
   expanded: true
   items:
   - name: Introduction
     href: scripting.md
+  - name: Short Format for Parameters
+    href: parameter_short_format.md
+  - name: "Run PDMShell Scripts From Dispatch:"
   - name: From Dispatch
     href: dispatch.md
-  - name: Using TaskScript (Custom Task)
+  - name: "Custom Task (Like Convert Task):"
+  - name: Using TaskScript 
     href: TASKSCRIPT.md
+  - name: "Invoke a PDMShell Script From Transition Action:"
   - name: From Workflow Transitions
     href: scriptsfromtransition.md
-- name: Short Format for Parameters
-  href: parameter_short_format.md
-- name: COMMANDS
+- name: Commands
   expanded: true
   items:
     - name: addToVault

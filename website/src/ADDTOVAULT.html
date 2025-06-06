@@ -89,6 +89,10 @@
 
 <h2 id="description">DESCRIPTION:</h2>
 <p>The <code>addtovault</code> command is used to add files or directories to the PDM vault. It supports various parameters to specify the source files or directories, search queries, and additional options such as ignoring existing files, updating references, and recursive operations.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>It is highly recommended that you run PDMShell as <strong>administrator</strong> before using this command.</p>
+</div>
 <h2 id="syntax">SYNTAX:</h2>
 <pre><code class="lang-bash">addtovault -csv  -dir  -search  -source -ignoreex -updaterefs -recursive
 </code></pre>
@@ -97,8 +101,8 @@
 <li><p><code>csv</code>:
 (Optional) Specifies the path to a CSV file containing a list of files or directories to be added to the vault.</p>
 </li>
-<li><p><code>dir</code>:
-(<strong>Required</strong>)
+<li><p><code>directory</code>:
+(Optional)
 Specifies the target directory. If not specified current directory is used. If using the current directory, use &quot;&quot;.</p>
 </li>
 <li><p><code>search</code>:
