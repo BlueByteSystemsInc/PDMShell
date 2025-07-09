@@ -2,13 +2,18 @@
 description: Documentation page of TaskScript.
 title: Run Script as a Task | PDMShell | SOLIDWORKS PDM
 ---
-
-
 ## Overview
 
-**TaskScript** is a custom PDM task add-in developed by **Blue Byte Systems Inc.** that allows you to execute **PDMShell scripts** the same way you would use the built-in **Convert** task.
 
-**This task can be requested upon purchase of a premium license of PDMShell.**
+<iframe width="800" height="600" src="https://www.youtube.com/embed/z2UYgREIRpA?si=vD4PfErfZtUb8-cm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>[!Note]
+> **This task can be requested upon purchase of a premium license of PDMShell.** To request after purchase, please send an email to support@bluebytesystemsinc.zohodesk.com
+
+
+---
+
+**TaskScript** is a custom PDM task add-in developed by **Blue Byte Systems Inc.** that allows you to execute **PDMShell scripts** the same way you would use the built-in **Convert** task.
 
 With TaskScript, administrators can create configurable tasks that run custom `.pdmshell` scripts using the `pdmcli` engine on selected files within the vault.
 
@@ -90,3 +95,5 @@ TaskScript supports dynamic variables that are replaced at runtime for each sele
 ## $(Variable.Configuration)
 - Use `@` for the `@` tab. Example: `$(Description.@)`
 - Use empty string for files with no configurations. Example: `$(Description. )`
+
+

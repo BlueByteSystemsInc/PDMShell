@@ -797,6 +797,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/taskscript.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/taskscript.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/worktransition.png",
       "output": {
         "resource": {
@@ -1181,6 +1191,16 @@
       "output": {
         ".html": {
           "relative_path": "src/START.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/TASKSCRIPT.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/TASKSCRIPT.html"
         }
       },
       "version": ""

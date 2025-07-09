@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>ADDTOVAULT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>Run Script as a Task | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="ADDTOVAULT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="Run Script as a Task | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="The AddTOVAULT command is used to add files or directories to the PDM vault. It supports various parameters to specify the source files or directories, search queries, and additional options such as ignoring existing files, updating references, and recursive operations.">
+      <meta name="description" content="Documentation page of TaskScript.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/ADDTOVAULT.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/TASKSCRIPT.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,64 +85,97 @@
         </div>
 
         <article data-uid="">
-<h1 id="addtovault-command-documentation">ADDTOVAULT Command Documentation</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
-<p>The <code>addtovault</code> command is used to add files or directories to the PDM vault. It supports various parameters to specify the source files or directories, search queries, and additional options such as ignoring existing files, updating references, and recursive operations.</p>
+<h2 id="overview">Overview</h2>
+<iframe width="800" height="600" src="https://www.youtube.com/embed/z2UYgREIRpA?si=vD4PfErfZtUb8-cm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div class="NOTE">
 <h5>Note</h5>
-<p>It is highly recommended that you run PDMShell as <strong>administrator</strong> before using this command.</p>
+<p><strong>This task can be requested upon purchase of a premium license of PDMShell.</strong> To request after purchase, please send an email to support@bluebytesystemsinc.zohodesk.com</p>
 </div>
-<h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">addtovault -csv  -dir  -search  -source -ignoreex -updaterefs -recursive
-</code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<hr>
+<p><strong>TaskScript</strong> is a custom PDM task add-in developed by <strong>Blue Byte Systems Inc.</strong> that allows you to execute <strong>PDMShell scripts</strong> the same way you would use the built-in <strong>Convert</strong> task.</p>
+<p>With TaskScript, administrators can create configurable tasks that run custom <code>.pdmshell</code> scripts using the <code>pdmcli</code> engine on selected files within the vault.</p>
+<p><img src="../images/taskscript.png" alt="TaskScript UI"></p>
+<hr>
+<h2 id="key-features">Key Features</h2>
 <ul>
-<li><p><code>csv</code>:
-(Optional) Specifies the path to a CSV file containing a list of files or directories to be added to the vault.</p>
-</li>
-<li><p><code>directory</code>:
-(Optional)
-Specifies the target directory. If not specified current directory is used. If using the current directory, use &quot;&quot;.</p>
-</li>
-<li><p><code>search</code>:
-(Optional) A search query to filter files or directories to be added to the vault. This is <strong>File Explorer</strong> search query. Use * as a wildcard.</p>
-</li>
-<li><p><code>source</code>:
-(Required) Specifies the source file or directory to be added to the vault.</p>
-</li>
-<li><p><code>ignoreex</code>:
-(Optional) Ignores files that already exist in the vault. This prevents overwriting existing files.</p>
-</li>
-<li><p><code>updaterefs</code>:
-(Optional) Updates references for the files being added to the vault.</p>
-</li>
-<li><p><code>recursive</code>:
-(Optional) Adds all files and subdirectories within the specified directory. This parameter is only applicable when adding directories.</p>
-</li>
+<li>Execute PDMShell commands in response to PDM task triggers</li>
+<li>Dynamic script editing and variable binding</li>
+<li>Reuses existing scripts stored locally or downloaded</li>
+<li>Supports file filtering based on extensions</li>
+<li>Evaluates placeholders like <code>$fileName</code>, <code>$localPath</code>, and more</li>
+<li>Handles script failure with detailed logging</li>
 </ul>
-<h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">addtovault -source &quot;C:\Projects\file.txt&quot; -directory &quot;&quot;
-# adds text file to the current directory
+<hr>
+<h2 id="example-script">Example Script</h2>
+<pre><code class="lang-bash">cd/
+print -id $id
 </code></pre>
-<h2 id="remarks">REMARKS:</h2>
+<p>You can request a script by emailing us via the Request Script button.</p>
+<h2 id="remarks">Remarks</h2>
 <ul>
-<li>Use the <code>recursive</code> parameter with caution, as it will add all contents within the specified directory.</li>
-<li>The <code>ignoreex</code> parameter prevents overwriting files that already exist in the vault.</li>
-<li>Ensure you have the necessary permissions to add files or directories to the PDM vault.</li>
-<li>Files are left <strong>checked out</strong> after command completes.</li>
+<li>You can include the extensions: <code>sldprt;sldasm;slddrw</code> are the default value.</li>
+<li>TaskScript will run PDMShell sessions on all affected documents by the task.</li>
+<li>Do not forget to set the Command Menu tab.</li>
 </ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Use <code>checkin -search % -recursive</code> to check in all added files after calling <code>addtovault</code>.</p>
-</div>
-<h2 id="tutorial">TUTORIAL:</h2>
-<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/addtovault.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="placeholder-variables">Placeholder Variables</h2>
+<p>TaskScript supports dynamic variables that are replaced at runtime for each selected file. Below is a list of available placeholders:</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$localPath</code></td>
+<td>Full local path to the selected file</td>
+</tr>
+<tr>
+<td><code>$fileName</code></td>
+<td>File name (including extension)</td>
+</tr>
+<tr>
+<td><code>$id</code></td>
+<td>Internal PDM file ID</td>
+</tr>
+<tr>
+<td><code>$folderPath</code></td>
+<td>Full local path to the file's parent folder</td>
+</tr>
+<tr>
+<td><code>$folderID</code></td>
+<td>Internal PDM folder ID</td>
+</tr>
+<tr>
+<td><code>$fileNameWithoutExtension</code></td>
+<td>File name without the extension</td>
+</tr>
+<tr>
+<td><code>$vaultName</code></td>
+<td>Name of the vault the file belongs to</td>
+</tr>
+<tr>
+<td><code>$vaultRootFolder</code></td>
+<td>Local root path of the vault</td>
+</tr>
+<tr>
+<td><code>$(Variable.Configuration)</code></td>
+<td>Value of a custom PDM variable for a given configuration</td>
+</tr>
+</tbody>
+</table>
+<h2 id="variableconfiguration">$(Variable.Configuration)</h2>
+<ul>
+<li>Use <code>@</code> for the <code>@</code> tab. Example: <code>$(Description.@)</code></li>
+<li>Use empty string for files with no configurations. Example: <code>$(Description. )</code></li>
+</ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/ADDTOVAULT.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/TASKSCRIPT.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
