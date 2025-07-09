@@ -797,6 +797,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/taskscript-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/taskscript-1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/taskscript.png",
       "output": {
         "resource": {
@@ -1161,6 +1171,16 @@
       "output": {
         ".html": {
           "relative_path": "src/RUNSCRIPT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/RUNTASK.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/RUNTASK.html"
         }
       },
       "version": ""

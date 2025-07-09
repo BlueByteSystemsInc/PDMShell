@@ -94,6 +94,8 @@
       href: RUNSCRIPT.md
     - name: runSWMacro
       href: runswmacro.md
+    - name: RunTask
+      href: RUNTASK.md
     - name: search
       href: search.md
     - name: setVar

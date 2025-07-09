@@ -12,10 +12,6 @@ title: Run Script as a Task | PDMShell | SOLIDWORKS PDM
 
 With TaskScript, administrators can create configurable tasks that run custom `.pdmshell` scripts using the `pdmcli` engine on selected files within the vault.
 
-![TaskScript UI](../images/taskscript.png)
-
----
-
 ## Key Features
 
 - Execute PDMShell commands in response to PDM task triggers
@@ -25,6 +21,38 @@ With TaskScript, administrators can create configurable tasks that run custom `.
 - Evaluates placeholders like `$fileName`, `$localPath`, and more
 - Handles script failure with detailed logging
 
+---
+
+
+## PDMShell Scrit page
+![TaskScript UI](../images/taskscript.png)
+
+### 1. **Available Scripts (BLUE BYTE SYSTEMS)**
+
+- A dropdown list showing available `.pdmshell` scripts.
+- These can be downloaded.
+- Selecting a script from the list loads it into the editor.
+
+### 2. **Buttons**
+
+- **DOWNLOAD SELECTED**  
+  Downloads the currently selected script file.
+
+- **REQUEST A SCRIPT**  
+  Opens a preformatted email to `amen@bluebyte.biz` with the subject **"Script Request"**.
+
+- **REFRESH**  
+  Reloads the available script list.
+
+### 3. Script Editor
+
+- A multi-line editable area for entering or modifying `.pdmshell` scripts.
+- Lines starting with `#` are treated as **comments**.
+- Syntax highlighting shows comments in *italic green* for better readability.
+
+### 4. Extensions and test button
+ - Specify the extensions to process.
+ - **TEST WITH FILE** allows to test your script before running it.
 ---
 
 ## Example Script
