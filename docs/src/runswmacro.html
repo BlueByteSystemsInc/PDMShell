@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/runswmacro.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/runswmacro.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -95,11 +95,21 @@
 <h2 id="parameters">PARAMETERS:</h2>
 <p>The command requires the following parameters:</p>
 <ul>
-<li><code>filePath</code>: Path to the SOLIDWORKS macro file (<code>.swp</code> or <code>.swb</code>). This is required.</li>
+<li><code>filePath</code>: Path to the SOLIDWORKS macro file (<code>.swp</code> or <code>.dll</code>). This is required and the file needs to cached in PDM.</li>
 <li><code>search</code>: (Optional) Search query to find files to run the macro on.</li>
 <li><code>recursive</code>: (Optional) If set, search will include subfolders.</li>
+<li><code>list</code>: (Optional) csv file path of filepaths without a column header.</li>
+<li><code>skip</code>: Skips the specified number of items. Only valid with <code>list</code>.</li>
+<li><code>count</code>: Only processes the specified number of items. Only valid with <code>list</code>.</li>
+<li><code>timeout</code>: Macro timeout in milliseconds</li>
 </ul>
-<h2 id="remarks">REMARKS:</h2>
+<h2 id="list-example">List Example</h2>
+<pre><code class="lang-csv">C:\TestVault\part1.sldprt
+C:\TestVault\assembly2.sldasm
+C:\TestVault\drawing3.slddrw
+C:\TestVault\bracket4.sldprt
+</code></pre>
+<h2 id="swp-macro">SWP Macro</h2>
 <div class="WARNING">
 <h5>Warning</h5>
 <p>Please read the remarks below to properly call your macro.</p>
@@ -108,6 +118,79 @@
 <li>The macro procedure name must be called <code>main</code>.</li>
 <li>The macro module name must be called the file name of the macro appended by <code>1</code>. Example: If the macro called <code>print.swp</code> the module name must be called <code>print1</code>.</li>
 </ul>
+<h2 id="dll-macro">DLL Macro</h2>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Please read the requirements below to properly create your DLL macro.</p>
+</div>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>The macro class must implement the <code>IPDMShellSOLIDWORKSMacro</code> interface</li>
+<li>The class must be decorated with the <code>PDMShellMacro</code> attribute</li>
+<li>The interface can be found in the NuGet package <code>BlueByte.PDMShell.SOLIDWORKSMacro</code> on nuget.org</li>
+</ul>
+<h3 id="required-nuget-package-versions">Required NuGet Package Versions</h3>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Your project must use these specific versions of the NuGet packages:</p>
+</div>
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;BlueByte.PDMShell.SOLIDWORKSMacro&quot; Version=&quot;1.0.0&quot; /&gt;
+&lt;PackageReference Include=&quot;BlueByte.SOLIDWORKS.Interops&quot; Version=&quot;2019.0.0&quot; /&gt;
+&lt;PackageReference Include=&quot;BlueByte.SOLIDWORKS.PDMProfessional.Interops&quot; Version=&quot;2024.5.50&quot; /&gt;
+</code></pre>
+<p>Install using Package Manager Console:</p>
+<pre><code class="lang-powershell">Install-Package BlueByte.PDMShell.SOLIDWORKSMacro -Version 1.0.0
+Install-Package BlueByte.SOLIDWORKS.Interops -Version 2019.0.0
+Install-Package BlueByte.SOLIDWORKS.PDMProfessional.Interops -Version 2024.5.50
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Using different versions may result in compatibility issues or runtime errors.
+These specific versions are tested and guaranteed to work with PDMShell.</p>
+</div>
+<h3 id="example-implementation">Example Implementation</h3>
+<pre><code class="lang-csharp">using PDMShellSOLIDWORKSMacro;
+using SolidWorks.Interop.sldworks;
+using EPDM.Interop.epdm;
+
+[PDMShellMacro]
+public class MyMacro : IPDMShellSOLIDWORKSMacro
+{
+    public bool Execute(
+        SldWorks swApp, 
+        IEdmFile5 pdmFileObject, 
+        IEdmFolder5 pdmFolderObject, 
+        int handle, 
+        string progress, 
+        IPDMCmdLineCallback callback, 
+        out string error)
+    {
+        error = string.Empty;
+        // Update progress using the callback
+        callback.AppendMessage(&quot;Starting macro execution...&quot;);
+        
+        // Your macro implementation here
+        callback.AppendMessage($&quot;Processing file: {pdmFileObject.Name}&quot;);
+        
+        // Report completion
+        callback.AppendMessage(&quot;Macro execution completed successfully&quot;);
+
+        return true;
+    }
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Use the <code>callback.AppendMessage()</code> method to provide progress updates and status messages during macro execution. These messages will be displayed in the PDMShell output.</p>
+</div>
+<h3 id="running-the-macro">Running the Macro</h3>
+<pre><code class="lang-bash"># Run the DLL macro on all parts in the current directory
+runswmacro -filePath &quot;Macros/MyMacro.dll&quot; -search &quot;%.sldprt&quot; -timeout 12000
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The DLL must be built against .NET Framework 4.7.2 or higher</p>
+</div>
 <h2 id="example">EXAMPLE:</h2>
 <pre><code class="lang-bash"># run batch export macro on all part in the current directory
  runswmacro -filePath &quot;Macros/BatchExport.swp&quot; -search &quot;%.sldprt&quot; 
@@ -116,7 +199,7 @@
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/runswmacro.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/runswmacro.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
