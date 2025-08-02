@@ -12,7 +12,7 @@ The `RunSWMacro` command allows you to execute a SOLIDWORKS macro on a specific 
 ## SYNTAX:
 
 ```bash
-runswmacro -filePath -search -recursive
+runswmacro -filePath -search -recursive -list -skip -count -timeout
 ```
 
 ## PARAMETERS:
@@ -20,12 +20,21 @@ runswmacro -filePath -search -recursive
 The command requires the following parameters:
 
 - `filePath`: Path to the SOLIDWORKS macro file (`.swp` or `.dll`). This is required and the file needs to cached in PDM.
-- `search`: (Optional) Search query to find files to run the macro on.
-- `recursive`: (Optional) If set, search will include subfolders.
-- `list`: (Optional) csv file path of filepaths without a column header.
+- `search`: Search query to find files to run the macro on.
+- `recursive`: If set, search will include subfolders.
+- `list`: csv file path of filepaths without a column header.
 - `skip`: Skips the specified number of items. Only valid with `list`.
 - `count`: Only processes the specified number of items. Only valid with `list`.
 - `timeout`: Macro timeout in milliseconds
+
+## What version of SOLIDWORKS will PDMShell use?
+PDMShell will use the latest SOLIDWORKS version installed on your system by checking the Windows Registry at:
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks
+```
+
+>[!NOTE]
+> If you have multiple SOLIDWORKS versions installed, PDMShell will automatically select the most recent version found in the registry.
 
 ## List Example
 

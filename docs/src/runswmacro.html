@@ -90,19 +90,27 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>The <code>RunSWMacro</code> command allows you to execute a SOLIDWORKS macro on a specific file or on multiple files found via search in the PDM vault. This is useful for automating repetitive tasks or applying custom logic to many files.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">runswmacro -filePath -search -recursive
+<pre><code class="lang-bash">runswmacro -filePath -search -recursive -list -skip -count -timeout
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
 <p>The command requires the following parameters:</p>
 <ul>
 <li><code>filePath</code>: Path to the SOLIDWORKS macro file (<code>.swp</code> or <code>.dll</code>). This is required and the file needs to cached in PDM.</li>
-<li><code>search</code>: (Optional) Search query to find files to run the macro on.</li>
-<li><code>recursive</code>: (Optional) If set, search will include subfolders.</li>
-<li><code>list</code>: (Optional) csv file path of filepaths without a column header.</li>
+<li><code>search</code>: Search query to find files to run the macro on.</li>
+<li><code>recursive</code>: If set, search will include subfolders.</li>
+<li><code>list</code>: csv file path of filepaths without a column header.</li>
 <li><code>skip</code>: Skips the specified number of items. Only valid with <code>list</code>.</li>
 <li><code>count</code>: Only processes the specified number of items. Only valid with <code>list</code>.</li>
 <li><code>timeout</code>: Macro timeout in milliseconds</li>
 </ul>
+<h2 id="what-version-of-solidworks-will-pdmshell-use">What version of SOLIDWORKS will PDMShell use?</h2>
+<p>PDMShell will use the latest SOLIDWORKS version installed on your system by checking the Windows Registry at:</p>
+<pre><code>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you have multiple SOLIDWORKS versions installed, PDMShell will automatically select the most recent version found in the registry.</p>
+</div>
 <h2 id="list-example">List Example</h2>
 <pre><code class="lang-csv">C:\TestVault\part1.sldprt
 C:\TestVault\assembly2.sldasm
