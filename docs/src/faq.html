@@ -88,37 +88,92 @@
 <h1 id="frequently-asked-questions-faq-for-pdmshell">Frequently Asked Questions (FAQ) for PDMShell</h1>
 
 <hr>
-<h2 id="1-why-are-some-commands-marked-as-na-or-have-no-description-after-installing-a-new-version">1. Why are some commands marked as &quot;N/A&quot; or have no description after installing a new version?</h2>
-<p>This issue can occur if the new version of PDMShell is installed over an existing version without properly uninstalling the old one.</p>
+<h2 id="1-what-is-pdmshell">1. What is PDMShell?</h2>
+<p>PDMShell is a command-line environment for <strong>SOLIDWORKS PDM Professional</strong> that allows users to automate, query, and batch process vault data using simple shell commands.<br>
+It is designed for administrators, developers, and power users who want to extend PDM capabilities beyond the standard client.</p>
+<hr>
+<h2 id="2-what-is-the-difference-between-the-free-and-premium-versions">2. What is the difference between the Free and Premium versions?</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><strong>Free License</strong></th>
+<th><strong>Premium License</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Max items processed per command</td>
+<td><strong>5 items</strong></td>
+<td><strong>Unlimited</strong></td>
+</tr>
+<tr>
+<td>Access to all <code>search</code> commands</td>
+<td>✅ Included</td>
+<td>✅ Included</td>
+</tr>
+<tr>
+<td>Workflow and transition integration</td>
+<td>❌ Not available</td>
+<td>✅ Available</td>
+</tr>
+<tr>
+<td>Technical support &amp; updates</td>
+<td>❌ Not available</td>
+<td>Priority</td>
+</tr>
+<tr>
+<td>Commercial use</td>
+<td>❌ Not available</td>
+<td>✅ Allowed</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Free License</strong> is ideal for evaluation and lightweight tasks.<br>
+The <strong>Premium License</strong> unlocks full automation, workflow integration, and unlimited command processing.</p>
+<hr>
+<h2 id="3-how-do-i-install-or-update-pdmshell">3. How do I install or update PDMShell?</h2>
+<p>You can install or update PDMShell from:</p>
+<ul>
+<li>The <a href="https://pdmshell.bluebyte.biz">official website</a>, or</li>
+<li>The <strong>Microsoft Store</strong></li>
+</ul>
+<p>For detailed setup steps, see the <a href="howtoinstall.html">Installation Guide</a>.<br>
+If you are updating from a previous version, uninstall the old one first to ensure all command definitions and descriptions are refreshed properly.</p>
+<hr>
+<h2 id="4-why-are-some-commands-marked-as-na-or-missing-descriptions-after-an-update">4. Why are some commands marked as “N/A” or missing descriptions after an update?</h2>
+<p>This usually happens when PDMShell is updated over an existing installation without removing old files.</p>
 <h3 id="solution">Solution:</h3>
 <ol>
-<li>Uninstall the current version of PDMShell manually from your system.</li>
-<li>Download the latest version of PDMShell from our <a href="https://pdmshell.bluebyte.biz">official website</a>.</li>
-<li>Reinstall the downloaded version.</li>
+<li>Uninstall the current version of PDMShell.</li>
+<li>Download the latest version from the <a href="https://pdmshell.bluebyte.biz">official website</a>.</li>
+<li>Reinstall it cleanly to refresh command data and documentation.</li>
 </ol>
-<p>This ensures that all commands and descriptions are updated correctly.</p>
 <hr>
-<h2 id="2-how-do-i-install-or-update-pdmshell">2. How do I install or update PDMShell?</h2>
-<p>You can install or update PDMShell either from our <a href="https://pdmshell.bluebyte.biz">official website</a> or via the Microsoft Store. For detailed instructions, refer to the <a href="howtoinstall.html">Installation Guide</a>.</p>
-<hr>
-<h2 id="3-do-i-need-administrative-privileges-to-install-pdmshell">3. Do I need administrative privileges to install PDMShell?</h2>
-<p>Yes, you may need administrative privileges to install or update PDMShell, especially if you are installing it from the official website.</p>
-<hr>
-<h2 id="4-can-i-use-pdmshell-without-a-premium-license">4. Can I use PDMShell without a premium license?</h2>
-<p>Yes, PDMShell offers a <strong>Free License</strong> that includes basic functionality. However, advanced features, such as workflow integration, require a <strong>Premium License</strong>.</p>
-<hr>
-<h2 id="5-how-do-i-report-a-bug-or-request-support">5. How do I report a bug or request support?</h2>
-<p>You can report bugs or request support by visiting our <a href="https://bluebyte.biz/contact">Support Page</a> or emailing us at <code>support@bluebyte.biz</code>.</p>
+<h2 id="5-do-i-need-administrative-privileges-to-install-pdmshell">5. Do I need administrative privileges to install PDMShell?</h2>
+<p>Yes. Administrative privileges are required when installing PDMShell from the website installer (MSI).<br>
+If you install via the Microsoft Store, Windows handles elevation automatically.</p>
 <hr>
 <h2 id="6-what-are-the-system-requirements-for-pdmshell">6. What are the system requirements for PDMShell?</h2>
-<p>PDMShell requires:</p>
 <ul>
-<li><strong>Operating System</strong>: Windows 10/11</li>
-<li><strong>SOLIDWORKS PDM Professional</strong>: Version 2014 or newer</li>
-<li><strong>SOLIDWORKS 3D</strong>: Version 2017 or newer (for commands that use SOLIDWORKS)</li>
+<li><strong>Operating System:</strong> Windows 10 or 11</li>
+<li><strong>SOLIDWORKS PDM Professional:</strong> 2014 or newer</li>
+<li><strong>SOLIDWORKS 3D:</strong> 2017 or newer (for commands that interact with SOLIDWORKS)</li>
 </ul>
 <hr>
-<p>For additional questions, feel free to contact us at <code>support@bluebyte.biz</code>.</p>
+<h2 id="7-how-do-i-report-a-bug-or-request-support">7. How do I report a bug or request support?</h2>
+<p>You can reach us via:</p>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:support@bluebyte.biz">support@bluebyte.biz</a></li>
+<li><strong>Web Form:</strong> <a href="https://bluebyte.biz/contact">bluebyte.biz/contact</a></li>
+</ul>
+<p>Please include your PDMShell version, command name, and error message when reporting issues.</p>
+<hr>
+<h2 id="8-which-commands-are-available-in-the-free-version">8. Which commands are available in the Free version?</h2>
+<p>All <strong>search-related commands</strong> and basic file utilities are free to use (limited to processing <strong>5 items per run</strong>).</p>
+<p>These commands are ideal for quick lookups, validation, and testing automation workflows before upgrading to Premium.</p>
+<hr>
+<p>For additional questions, contact us anytime at <a href="mailto:support@bluebyte.biz">support@bluebyte.biz</a>.</p>
 
 </article>
 

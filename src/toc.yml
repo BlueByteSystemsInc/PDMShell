@@ -1,5 +1,7 @@
 - name: PDMShell
   href: index.md
+- name: Free Vs Premium
+  href: FREEVSPREMIUM.md
 - name: EULA
   href: eula.md
 - name: Installing PDMShell
@@ -83,6 +85,8 @@
       href: mkvar.md
     - name: print
       href: print.md
+    - name: PrintFromSource
+      href: PRINTFROMSOURCE.md
     - name: quit
       href: quit.md
     - name: reboot

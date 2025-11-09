@@ -95,8 +95,6 @@
 <hr>
 <p><strong>TaskScript</strong> is a custom PDM task add-in developed by <strong>Blue Byte Systems Inc.</strong> that allows you to execute <strong>PDMShell scripts</strong> the same way you would use the built-in <strong>Convert</strong> task.</p>
 <p>With TaskScript, administrators can create configurable tasks that run custom <code>.pdmshell</code> scripts using the <code>pdmcli</code> engine on selected files within the vault.</p>
-<p><img src="../images/taskscript.png" alt="TaskScript UI"></p>
-<hr>
 <h2 id="key-features">Key Features</h2>
 <ul>
 <li>Execute PDMShell commands in response to PDM task triggers</li>
@@ -105,6 +103,38 @@
 <li>Supports file filtering based on extensions</li>
 <li>Evaluates placeholders like <code>$fileName</code>, <code>$localPath</code>, and more</li>
 <li>Handles script failure with detailed logging</li>
+</ul>
+<hr>
+<h2 id="pdmshell-scrit-page">PDMShell Scrit page</h2>
+<p><img src="../images/taskscript.png" alt="TaskScript UI"></p>
+<h3 id="1-available-scripts-blue-byte-systems">1. <strong>Available Scripts (BLUE BYTE SYSTEMS)</strong></h3>
+<ul>
+<li>A dropdown list showing available <code>.pdmshell</code> scripts.</li>
+<li>These can be downloaded.</li>
+<li>Selecting a script from the list loads it into the editor.</li>
+</ul>
+<h3 id="2-buttons">2. <strong>Buttons</strong></h3>
+<ul>
+<li><p><strong>DOWNLOAD SELECTED</strong><br>
+Downloads the currently selected script file.</p>
+</li>
+<li><p><strong>REQUEST A SCRIPT</strong><br>
+Opens a preformatted email to <code>amen@bluebyte.biz</code> with the subject <strong>&quot;Script Request&quot;</strong>.</p>
+</li>
+<li><p><strong>REFRESH</strong><br>
+Reloads the available script list.</p>
+</li>
+</ul>
+<h3 id="3-script-editor">3. Script Editor</h3>
+<ul>
+<li>A multi-line editable area for entering or modifying <code>.pdmshell</code> scripts.</li>
+<li>Lines starting with <code>#</code> are treated as <strong>comments</strong>.</li>
+<li>Syntax highlighting shows comments in <em>italic green</em> for better readability.</li>
+</ul>
+<h3 id="4-extensions-and-test-button">4. Extensions and test button</h3>
+<ul>
+<li>Specify the extensions to process.</li>
+<li><strong>TEST WITH FILE</strong> allows to test your script before running it.</li>
 </ul>
 <hr>
 <h2 id="example-script">Example Script</h2>

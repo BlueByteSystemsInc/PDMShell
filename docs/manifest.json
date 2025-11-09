@@ -977,6 +977,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/FREEVSPREMIUM.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/FREEVSPREMIUM.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/FROGLEAP.md",
       "output": {
         ".html": {
@@ -1101,6 +1111,16 @@
       "output": {
         ".html": {
           "relative_path": "src/PRINT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/PRINTFROMSOURCE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/PRINTFROMSOURCE.html"
         }
       },
       "version": ""
