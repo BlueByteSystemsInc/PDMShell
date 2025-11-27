@@ -34,6 +34,8 @@ delete [-filePath|-id] -directory -search -recursive -list -csv
 
 - `csv`: Exports a list of deleted files to a csv. This only works if `list is specified`. 
 
+- `destroy`: If specified, deleted file will be also destroyed. 
+
 >[!NOTE]
 > Use the exported csv from -csv with the [recover](RECOVER.html) command.
 
