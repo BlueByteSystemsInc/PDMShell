@@ -2,331 +2,343 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pdmshell.com/src/ADDTOVAULT.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/CD.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/CHECKIN.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/CHECKOUT.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/CLEARCACHE.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/CLS.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/COPYTREE.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/DELETE.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/DELETEFROMSOURCE.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/DESTORY.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/DIR.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/DUMP.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/EDITVARS.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/EVAL.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/FREEVSPREMIUM.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/FROGLEAP.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/GET.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/GETVAR.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/GETVARFROMDB.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/HELP.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/HISTORY.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/INBOX.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/INFOVAR.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/KILL.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/LOGIN.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/MKDIR.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/MKVAR.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/PRINT.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/PRINTFROMSOURCE.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/QUIT.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/REBOOT.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/RECOVER.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/RENAME.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/RENAMEFROMSOURCE.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/RUNSCRIPT.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/RUNTASK.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/SEARCH.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/SETVAR.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/SETVARSFROMSOURCE.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/START.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/TASKSCRIPT.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/UNDOCHECKOUT.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/USERS.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/VERSION.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/dispatch.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://pdmshell.com/src/escapingquotes.html</loc>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/eula.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/export.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/faq.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/howtoinstall.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/index.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://pdmshell.com/src/instances.html</loc>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/introduction.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/parameter_short_format.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/runswmacro.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/scripting.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://pdmshell.com/src/scriptsfromtransition.html</loc>
-    <lastmod>2025-11-09T03:18:36-08:00</lastmod>
+    <lastmod>2025-11-27T12:57:51-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>

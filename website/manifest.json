@@ -627,6 +627,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/escapequotecommandline.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/escapequotecommandline.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/escapequotecommandline_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/escapequotecommandline_1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/fav.png",
       "output": {
         "resource": {
@@ -791,6 +811,26 @@
       "output": {
         "resource": {
           "relative_path": "images/sessions.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/singleinstance.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/singleinstance.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/singlemodeuac.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/singlemodeuac.png"
         }
       },
       "version": ""
@@ -1287,6 +1327,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/escapingquotes.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/escapingquotes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/eula.md",
       "output": {
         ".html": {
@@ -1331,6 +1381,16 @@
       "output": {
         ".html": {
           "relative_path": "src/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/instances.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/instances.html"
         }
       },
       "version": ""

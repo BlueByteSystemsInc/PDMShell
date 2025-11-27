@@ -61,6 +61,16 @@ cd -id 755 # Navigates to the folder with ID 755
 - If you just created a new folder and want to `cd` to it using autocomplete, use the `dir` command with the `-refresh` parameter to reload the session.  
 - `directory` is the default parameter, so you don’t need to specify it if it’s the only parameter in your command.  
 
+
+### Case Sensitivity
+
+As of **PDMShell 3.0.1**, all **command names**, **parameter names**, and **values** are **case-sensitive**.
+
+### Escaping Quotes
+
+Escaping quotes when passing arguments to PDMShell depends on **where the command originates**. [Please read this dedicated article](escapingquotes.md).
+
+
 **TUTORIAL**:  
 <video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
 

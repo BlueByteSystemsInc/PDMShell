@@ -22,6 +22,11 @@
   - name: "Run PDMShell Scripts From Dispatch:"
   - name: From Dispatch
     href: dispatch.md
+  - name: "Special Characters and Modes:"
+  - name: Single Instance Vs Multi Instance
+    href: instances.md
+  - name: Escaping Characters 
+    href: escapingquotes.md
   - name: "Custom Task (Like Convert Task):"
   - name: Using TaskScript 
     href: TASKSCRIPT.md

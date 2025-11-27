@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Notes About Running PDMShell in Single Instance Mode | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Notes About Running PDMShell in Single Instance Mode | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Learn how to run PDMShell in Single Instance Mode from Dispatch">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/instances.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="notes-about-running-pdmshell-in-single-instance-mode">Notes About Running PDMShell in Single Instance Mode</h1>
+
+<p>PDMShell can run in two modes:</p>
+<ul>
+<li><strong>Multi Instance Mode</strong> (default)</li>
+<li><strong>Single Instance Mode</strong> (one controller instance, all commands routed to it)</li>
+</ul>
+<p>Single instance mode is useful when you want:</p>
+<ul>
+<li>faster execution for multiple commands</li>
+<li>automation pipelines that require sequential execution</li>
+</ul>
+<hr>
+<h2 id="single-instance-mode-overview">Single Instance Mode Overview</h2>
+<p>To enable <strong>Single Instance Mode</strong>, start PDMShell using:</p>
+<pre><code class="lang-bash">pdmcli.exe /single
+</code></pre>
+<p>or</p>
+<pre><code class="lang-bash">pdmcli.exe -single
+</code></pre>
+<p><img src="../images/singleinstance.png" alt="singleinstance"></p>
+<p>When PDMShell is running in <strong>Single Instance Mode</strong>, you’ll see a <strong>single-instance indicator</strong> in the top-right corner of the window. It shows a <strong>“1” icon</strong>, confirming that all commands will be routed to this instance from other <strong>single</strong> instances.</p>
+<p>If PDMShell is <strong>not</strong> running in single instance mode, the indicator will display an <strong>infinity symbol (∞)</strong>, meaning <strong>multiple PDMShell instances are allowed</strong> and each command launches independently in its own PDMShell process.</p>
+<p>With single instance, you can:</p>
+<p>✅ launch PDMShell as a single instance controller<br>
+✅ allow subsequent commands to reuse the same PDMShell instance<br>
+✅ improve performance if triggered from <code>cmd.exe</code> or <code>Dispatch</code><br>
+✅ prevent multiple conflicting PDMShell instances</p>
+<h3 id="uac-permissions-and-single-instance-mode">UAC, Permissions, and Single Instance Mode</h3>
+<p><img src="../images/singlemodeuac.png" alt="singlemodeuac"></p>
+<p>PDMShell’s <strong>Single Instance Mode</strong> relies on Windows’ global mutex system.  Because of this, <strong>User Account Control (UAC)</strong> and <strong>process elevation</strong> matter.</p>
+<p>To attach to the single instance, you must ensure that:</p>
+<ul>
+<li>If the first instance is started as <strong>Admin</strong>, all following calls must also run <strong>as Admin</strong></li>
+<li>If the first instance is started <strong>without elevation</strong>, all following calls must also run <strong>without elevation</strong></li>
+</ul>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Avoid running PDMShell as a Windows Administrator if you have custom add-ins installed.  Check-in and check-out commands can create instances of your add-in inside the host application's memory. If the add-in was registered under a different user or UAC level, PDM will throw a <strong>“Class not registered”</strong> error.</p>
+</div>
+<h2 id="executing-commands-in-single-instance-mode">Executing Commands in Single Instance Mode</h2>
+<p>Once PDMShell is running with <code>/single</code>, <strong>all subsequent calls to <code>pdmcli.exe</code> must also include <code>/single</code></strong>, or PDMShell will launch a new instance instead of attaching.</p>
+<p>Example:</p>
+<pre><code>pdmcli.exe &quot;/single help command checkout&quot;
+</code></pre>
+<p>This will:</p>
+<ul>
+<li>connect to the already running instance</li>
+<li>execute <code>help command checkout</code></li>
+<li>return output immediately</li>
+</ul>
+<h2 id="tips-for-single-instance-mode">Tips for Single Instance Mode</h2>
+<ul>
+<li>Always include <code>/single</code> in <strong>every call</strong></li>
+<li><a href="escapingquotes.html">Use proper quote escaping when calling from Dispatch</a></li>
+<li>Use Single Instance mode for sequences of operations</li>
+<li>Use Multi Instance mode for isolated one-shot commands</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/instances.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
