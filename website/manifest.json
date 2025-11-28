@@ -1317,6 +1317,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/advancedsearch.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/advancedsearch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/dispatch.md",
       "output": {
         ".html": {

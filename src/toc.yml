@@ -27,6 +27,9 @@
     href: instances.md
   - name: Escaping Characters 
     href: escapingquotes.md
+  - name: "Advanced Search:"
+  - name: Using Advanced Search
+    href: advancedsearch.md 
   - name: "Custom Task (Like Convert Task):"
   - name: Using TaskScript 
     href: TASKSCRIPT.md

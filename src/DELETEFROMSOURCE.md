@@ -16,6 +16,8 @@ deletefromsource -filePath
 
 - `filePath` :  A string containing the IDs of the files and folders to be deleted. The IDs should be formatted appropriately for the function to process them.
 
+- `destroy`: If specified, the deleted file will be also destroyed. 
+
 ## REMARKS:
 
 - The source file should be a CSV file with a column header. This column must contain the IDs of the files to be deleted.
