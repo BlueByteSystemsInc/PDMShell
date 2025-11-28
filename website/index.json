@@ -152,7 +152,7 @@
   "src/QUIT.html": {
     "href": "src/QUIT.html",
     "title": "QUIT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
-    "summary": "QUIT Command Documentation DESCRIPTION: Quits the application. SYNTAX: quit PARAMETERS: None REMARKS: This commands needs user confirmation complete but runs silently in scripts. Read more abotu scripting."
+    "summary": "QUIT Command Documentation DESCRIPTION: Quits the application. SYNTAX: quit -silent PARAMETERS: -silent: (Optional) suppresses the close dialog box. REMARKS: This command runs silently in scripts. Read more about scripting."
   },
   "src/REBOOT.html": {
     "href": "src/REBOOT.html",

@@ -9,10 +9,12 @@ Quits the application.
 
 ## SYNTAX:
 ```bash
-quit
+quit -silent
 ```
 ## PARAMETERS:
-None
+- `-silent`:
+(Optional) suppresses the close dialog box.
 
 ## REMARKS:
-- This commands needs user confirmation complete but runs silently in scripts. Read more abotu [scripting](/src/scripting.html).
+- This command runs silently in scripts. Read more about [scripting](/src/scripting.html).
+ 
