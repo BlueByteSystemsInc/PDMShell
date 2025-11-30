@@ -55,6 +55,3 @@ addtovault -source "C:\Projects\file.txt" -directory ""
 
 >[!NOTE]
 > Use `checkin -search % -recursive` to check in all added files after calling `addtovault`.
-
-## TUTORIAL:
- <video src="https://bluebyte.biz/wp-content/pdmshellvideos/addtovault.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>

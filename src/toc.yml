@@ -1,5 +1,7 @@
 - name: PDMShell
   href: index.md
+- name: Changelog
+  href: releasenotes.md
 - name: Free Vs Premium
   href: FREEVSPREMIUM.md
 - name: EULA
@@ -39,87 +41,174 @@
 - name: Commands
   expanded: true
   items:
-    - name: addToVault
-      href: ADDTOVAULT.md
-    - name: cd
-      href: cd.md
-    - name: checkin
-      href: checkin.md
-    - name: checkout
-      href: checkout.md
-    - name: clearCache
-      href: CLEARCACHE.md
-    - name: cls
-      href: cls.md
-    - name: copyTree
-      href: COPYTREE.md
-    - name: delete
-      href: DELETE.md
-    - name: deleteFromSource
-      href: DELETEFROMSOURCE.md
-    - name: destroy
-      href: DESTORY.md
-    - name: dir
-      href: dir.md
-    - name: dump
-      href: dump.md
-    - name: Export
-      href: Export.md
-    - name: editVars
-      href: editvars.md
-    - name: frogLeap
-      href: frogleap.md
-    - name: get
-      href: get.md
-    - name: getVar
-      href: getvar.md
-    - name: getVarFromDb
-      href: getvarfromdb.md
-    - name: help
-      href: help.md
-    - name: history
-      href: history.md
-    - name: inbox
-      href: inbox.md
-    - name: infoVar
-      href: infovar.md
-    - name: kill
-      href: kill.md
-    - name: login
-      href: login.md
-    - name: mkdir
-      href: mkdir.md
-    - name: mkVar
-      href: mkvar.md
-    - name: print
-      href: print.md
-    - name: PrintFromSource
-      href: PRINTFROMSOURCE.md
-    - name: quit
-      href: quit.md
-    - name: reboot
-      href: REBOOT.md
-    - name: recover
-      href: RECOVER.md
-    - name: rename
-      href: rename.md
-    - name: renameFromSource
-      href: RENAMEFROMSOURCE.md
-    - name: runScript
-      href: RUNSCRIPT.md
-    - name: runSWMacro
-      href: runswmacro.md
-    - name: RunTask
-      href: RUNTASK.md
-    - name: search
-      href: search.md
-    - name: setVar
-      href: setvar.md
-    - name: setVarsFromSource
-      href: SETVARSFROMSOURCE.md
-    - name: start
-      href: start.md
-    - name: undoCheckout
-      href: undocheckout.md
-    - name: version
-      href: version.md
+- name: Add to Vault
+  name: addToVault
+  href: ADDTOVAULT.md
+
+- name: Bill of Materials
+  name: BOM
+  href: BOM.md
+
+- name: change directory
+  name: cd
+  href: cd.md
+
+- name: check in
+  name: checkin
+  href: checkin.md
+
+- name: check out
+  name: checkout
+  href: checkout.md
+
+- name: clear cache
+  name: clearCache
+  href: CLEARCACHE.md
+
+- name: clear screen
+  name: cls
+  href: cls.md
+
+- name: Enhanced copy tree
+  name: copyTree
+  href: COPYTREE.md
+
+- name: Delete files or directories
+  name: delete
+  href: DELETE.md
+
+- name: Delete files from CSV
+  name: deleteFromSource
+  href: DELETEFROMSOURCE.md
+
+- name: Destroy files or directories
+  name: destroy
+  href: DESTORY.md
+
+- name: List directory contents
+  name: dir
+  href: dir.md
+
+- name: Save session output to a file
+  name: dump
+  href: dump.md
+
+- name: Launch Variable Editor
+  name: editVars
+  href: editvars.md
+
+- name: Launch SOLIDWORKS Export
+  name: Export
+  href: Export.md
+
+- name: Frog Leap files version
+  name: frogLeap
+  href: frogleap.md
+
+- name: Locally cache files from PDM
+  name: get
+  href: get.md
+
+- name: Get variable value
+  name: getVar
+  href: getvar.md
+
+- name: Get variable value from database
+  name: getVarFromDb
+  href: getvarfromdb.md
+
+- name: List all commands
+  name: help
+  href: help.md
+
+- name: View complete file history
+  name: history
+  href: history.md
+
+- name: Open PDM Inbox
+  name: inbox
+  href: inbox.md
+
+- name: Get file variable information
+  name: infoVar
+  href: infovar.md
+
+- name: Terminate Windows processes
+  name: kill
+  href: kill.md
+
+- name: Log in to PDM
+  name: login
+  href: login.md
+
+- name: Create a new PDM directory
+  name: mkdir
+  href: mkdir.md
+
+- name: Create a new PDM variable
+  name: mkVar
+  href: mkvar.md
+
+- name: Print information from CSV
+  name: PrintFromSource
+  href: PRINTFROMSOURCE.md
+
+- name: Print information about files
+  name: print
+  href: print.md
+
+- name: Quit PDMShell
+  name: quit
+  href: quit.md
+
+- name: Force Reboot PDM
+  name: reboot
+  href: REBOOT.md
+
+- name: Recover deleted files
+  name: recover
+  href: RECOVER.md
+
+- name: Rename files
+  name: rename
+  href: rename.md
+
+- name: Rename files from CSV
+  name: renameFromSource
+  href: RENAMEFROMSOURCE.md
+
+- name: Run a PDMShell script
+  name: runScript
+  href: RUNSCRIPT.md
+
+- name: Run a SOLIDWORKS macro
+  name: runSWMacro
+  href: runswmacro.md
+
+- name: Run a PDM task
+  name: RunTask
+  href: RUNTASK.md
+
+- name: Search for files
+  name: search
+  href: search.md
+
+- name: Set variable value
+  name: setVar
+  href: setvar.md
+
+- name: Set variables from CSV
+  name: setVarsFromSource
+  href: SETVARSFROMSOURCE.md
+
+- name: Start a process
+  name: start
+  href: start.md
+
+- name: Undo checkout
+  name: undoCheckout
+  href: undocheckout.md
+
+- name: Show version information
+  name: version
+  href: version.md

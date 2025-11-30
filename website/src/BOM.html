@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>ADDTOVAULT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>BOM Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="ADDTOVAULT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="BOM Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="The AddTOVAULT command is used to add files or directories to the PDM vault. It supports various parameters to specify the source files or directories, search queries, and additional options such as ignoring existing files, updating references, and recursive operations.">
+      <meta name="description" content="Exports the Bill of Materials (BOM) of a SOLIDWORKS assembly to a CSV file.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/ADDTOVAULT.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/BOM.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,62 +85,42 @@
         </div>
 
         <article data-uid="">
-<h1 id="addtovault-command-documentation">ADDTOVAULT Command Documentation</h1>
+<h1 id="bom-command-documentation">BOM Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>The <code>addtovault</code> command is used to add files or directories to the PDM vault. It supports various parameters to specify the source files or directories, search queries, and additional options such as ignoring existing files, updating references, and recursive operations.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>It is highly recommended that you run PDMShell as <strong>administrator</strong> before using this command.</p>
-</div>
+<p>The <code>BOMCommand</code> allows you to extract a Bill of Materials from a SOLIDWORKS file inside the PDM vault and export it to a CSV file.<br>
+This command supports configuration evaluation using <strong>$configuration</strong>, allows specifying <strong>configNames</strong>, and supports selecting a <strong>layout</strong> from all available BOM layouts.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">addtovault -csv  -dir  -search  -source -ignoreex -updaterefs -recursive
+<pre><code class="lang-bash">bom -filePath -name -directory -configNames -layout
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
-<li><p><code>csv</code>:
-(Optional) Specifies the path to a CSV file containing a list of files or directories to be added to the vault.</p>
+<li><p><code>filePath</code><br>
+Path to the SOLIDWORKS file whose BOM you want to export.</p>
 </li>
-<li><p><code>directory</code>:
-(Optional)
-Specifies the target directory. If not specified current directory is used. If using the current directory, use &quot;&quot;.</p>
+<li><p><code>name</code><br>
+The base name for the exported CSV file.<br>
+Supports evaluation (e.g., <code>$configuration</code>).<br>
+<a href="EVAL.html">More information here</a>.</p>
 </li>
-<li><p><code>search</code>:
-(Optional) A search query to filter files or directories to be added to the vault. This is <strong>File Explorer</strong> search query. Use * as a wildcard.</p>
+<li><p><code>directory</code><br>
+Target folder where the CSV will be saved.</p>
 </li>
-<li><p><code>source</code>:
-(Required) Specifies the source file or directory to be added to the vault.</p>
+<li><p><code>configNames</code><br>
+Comma-separated list of configurations to extract the BOM from. If unspecified, all configurations are processed.
+Example: <code>@,Default,Manufacturing</code>.</p>
 </li>
-<li><p><code>ignoreex</code>:
-(Optional) Ignores files that already exist in the vault. This prevents overwriting existing files.</p>
-</li>
-<li><p><code>updaterefs</code>:
-(Optional) Updates references for the files being added to the vault.</p>
-</li>
-<li><p><code>recursive</code>:
-(Optional) Adds all files and subdirectories within the specified directory. This parameter is only applicable when adding directories.</p>
+<li><p><code>layout</code><br>
+A comma-separated list of BOM layout names to export.<br>
+Example: <code>Engineering,Manufacturing</code>.<br>
+PDMShell validates layout names against PDM before exporting.</p>
 </li>
 </ul>
-<h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">addtovault -source &quot;C:\Projects\file.txt&quot; -directory &quot;&quot;
-# adds text file to the current directory
-</code></pre>
-<h2 id="remarks">REMARKS:</h2>
-<ul>
-<li>Use the <code>recursive</code> parameter with caution, as it will add all contents within the specified directory.</li>
-<li>The <code>ignoreex</code> parameter prevents overwriting files that already exist in the vault.</li>
-<li>Ensure you have the necessary permissions to add files or directories to the PDM vault.</li>
-<li>Files are left <strong>checked out</strong> after command completes.</li>
-</ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Use <code>checkin -search % -recursive</code> to check in all added files after calling <code>addtovault</code>.</p>
-</div>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/ADDTOVAULT.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/BOM.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

@@ -42,6 +42,7 @@ The `value` parameter in supported commands can include placeholders that are dy
 - `$fullyQualifiedName`: The full local path of the file.
 - `$fullyQualifiedFolderName`: The full local path of the folder containing the file.
 - `$folderName`: The name of the folder containing the file.
+- `$configuration`: configuration name. Only valid for BOM command.
 
 ### Placeholders for Folders
 - `$value`: Existing value of the variable.

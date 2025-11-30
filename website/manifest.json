@@ -887,6 +887,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/BOM.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/BOM.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/CD.md",
       "output": {
         ".html": {
@@ -1421,6 +1431,16 @@
       "output": {
         ".html": {
           "relative_path": "src/parameter_short_format.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/releasenotes.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/releasenotes.html"
         }
       },
       "version": ""
