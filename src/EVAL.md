@@ -25,6 +25,8 @@ The following commands support the use of dynamic placeholders:
 - **`rename`**: Uses the `value` parameter for renaming files or folders.
 - **`renamefromsource`**: The new file is evaluated if the `evaluatealiases` parameter is specified.
 - **`setvar`**: Uses the `value` parameter to set variables for files or folders.
+- **`bom`**: Uses the `name` parameter to set the exported bom csv name.
+- **`export`**: Uses the `name` parameter to set the exported files name pattern.
 
 ---
 
@@ -34,26 +36,26 @@ The `value` parameter in supported commands can include placeholders that are dy
 ### Placeholders for Files
 - `$value`: Existing value of the variable.
 - `$name`: The file name with extension.
-- `$nameWithoutExtension`: The file name without extension.
+- `$namewithoutextension`: The file name without extension.
 - `$extension`: The file extension.
 - `$id`: The file ID.
 - `$revision`: The current revision of the file (PDM revision, not the PDM variable).
 - `$version`: The current version of the file.
-- `$fullyQualifiedName`: The full local path of the file.
-- `$fullyQualifiedFolderName`: The full local path of the folder containing the file.
-- `$folderName`: The name of the folder containing the file.
+- `$fullyqualifiedname`: The full local path of the file.
+- `$fullyqualifiedfoldername`: The full local path of the folder containing the file.
+- `$foldername`: The name of the folder containing the file.
 - `$configuration`: configuration name. Only valid for BOM command.
 
 ### Placeholders for Folders
 - `$value`: Existing value of the variable.
 - `$name`: The folder name.
-- `$folderName`: The name of the parent folder.
+- `$foldername`: The name of the parent folder.
 - `$id`: The folder ID.
-- `$fullyQualifiedName`: The full local path of the folder.
+- `$fullyqualifiedname`: The full local path of the folder.
 
 ### Common Placeholders (Applicable to Both Files and Folders)
 - `$username`: The name of the logged-in user.
-- `$vaultName`: The name of the vault.
+- `$vaultname`: The name of the vault.
 - `$yyyy`: The current year.
 - `$mm`: The current month (two digits).
 - `$hh`: The current hour (two digits).
