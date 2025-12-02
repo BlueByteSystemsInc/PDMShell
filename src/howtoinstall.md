@@ -41,6 +41,14 @@ PDMShell can be installed or updated from our official website or via the Micros
 - **Administrative Privileges**: Depending on your system settings, you may need admin privileges to install PDMShell, especially if installing from the official website.
 - **Updates**: The website always contains the latest version of PDMShell. If you installed PDMShell via the Microsoft Store, you may need to manually uninstall and reinstall to get the latest updates.
 
+
+
+## Common Update Issues
+
+Sometimes after updating, new commands might show up as `N/A` in the help command. In such case, please uninstall PDMShell and reinstall it to reload the latest resources.  
+
+![updateissue](../images/updateissue.png)
+
 ---
 
 ## System Requirements

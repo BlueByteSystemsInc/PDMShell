@@ -82,3 +82,7 @@ Additionally, you can use variables enclosed in square brackets (e.g., `[Variabl
 
 ## TUTORIAL:
  <video src="https://bluebyte.biz/wp-content/pdmshellvideos/setvar.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+
+
+## CHANGELOGS
+- As of version [3.0.9](releasenotes.md), we have added support for setting folder daracard variables

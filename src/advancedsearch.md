@@ -2,7 +2,7 @@
 description: Learn how to run PDMShell advanced search
 title: Notes About Using Advanced Search In PDMShell | SOLIDWORKS PDM
 ---
-# PDMShell Search Guide
+# PDMShell Advanced Search Guide
 
 PDMShell provides a complete search engine based on PDM's own search. This feature is extremely useful with commands that have a `-search` parameter. 
 

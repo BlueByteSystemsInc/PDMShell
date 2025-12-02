@@ -19,6 +19,9 @@ search -search -recursive -includesubfolders -csv -columns
 - `csv`: Outputs the search results in CSV format.
 - `columns`: Specifies the columns to include in the output.
 
+>[!NOTE]
+> We have introduced Advanced Search capabilities that can be used in the `-search` parameter. Please see more information [here](advancedsearch.md).
+
 ## EXAMPLES:
 ### Example 1: Basic Search
 ```bash
