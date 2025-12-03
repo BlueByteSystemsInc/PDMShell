@@ -196,6 +196,10 @@
   - name: Set variable value
   - name: setVar
     href: setvar.md
+  
+  - name: Set revision
+  - name: setrevision
+    href: setrevision.md
 
   - name: Set variables from CSV
   - name: setVarsFromSource

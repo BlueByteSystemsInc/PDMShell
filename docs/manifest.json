@@ -1277,6 +1277,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/SETREVISION.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/SETREVISION.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/SETVAR.md",
       "output": {
         ".html": {

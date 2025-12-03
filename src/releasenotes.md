@@ -3,6 +3,10 @@ description: Release Notes of PDMShell
 title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 ---
 
+# 3.0.11 (2025-12-02)
+- [SetRevision: Added a new command](SETREVISION.md).
+ - Fixed evaluation bug: Bracketed variable `[Variable]` fail to evaluate in `name` and `value` parameters
+
 # 3.0.10 (2025-12-01)
 - Rebuild
 

@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>SETREVISION Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="SETREVISION Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Release Notes of PDMShell">
+      <meta name="description" content="Sets the revision of a SOLIDWORKS PDM file using built-in revision keywords or evaluated variables.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/releasenotes.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/SETREVISION.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,40 +85,61 @@
         </div>
 
         <article data-uid="">
-<h1 id="3011-2025-12-02">3.0.11 (2025-12-02)</h1>
+<h1 id="setrevision-command-documentation">SETREVISION Command Documentation</h1>
 
+<h2 id="description">DESCRIPTION:</h2>
+<p>The <code>SetRevisionCommand</code> allows you to set the <strong>PDM-managed revision</strong> of a file inside the vault.<br>
+This command updates the official <strong>PDM Revision</strong> (the value shown on the version tab), <em>not</em> the datacard one.</p>
+<p>You may set the revision using:</p>
 <ul>
-<li><a href="SETREVISION.html">SetRevision: Added a new command</a>.</li>
-<li>Fixed evaluation bug: Bracketed variable <code>[Variable]</code> fail to evaluate in <code>name</code> and <code>value</code> parameters</li>
+<li><strong>%nextrevision%</strong> — moves the revision forward</li>
+<li><strong>%previousrevision%</strong> — moves the revision backward</li>
+<li><strong>%initial%</strong> — resets to the first revision in the revision scheme</li>
 </ul>
-<h1 id="3010-2025-12-01">3.0.10 (2025-12-01)</h1>
+<p>You can also use <strong>PDM variables</strong> by enclosing them in brackets:<br>
+Example: <code>[Revision]</code><br>
+This evaluates the variable on the file and applies its value as the new revision.</p>
+<p>The command resolves all bracketed variables before applying the revision.</p>
+<h2 id="syntax">SYNTAX:</h2>
+<pre><code class="lang-bash">setrevision -filePath|-search -value 
+</code></pre>
+<h2 id="parameters">PARAMETERS:</h2>
 <ul>
-<li>Rebuild</li>
+<li><p><code>filePath</code><br>
+Path to the file whose revision you want to update.<br>
+Only a single file is affected by this command.</p>
+</li>
+<li><p><code>search</code><br>
+Search query in the current folder</p>
+</li>
+<li><p><code>value</code><br>
+The revision value to apply.<br>
+This can be:</p>
+<ul>
+<li><code>%nextrevision%</code> → increments the PDM revision counter</li>
+<li><code>%previousrevision%</code> → decrements the PDM revision counter</li>
+<li><code>%initial%</code> → resets revision to the scheme’s first value</li>
+<li><code>[VariableName]</code> → evaluates the PDM variable and uses its value</li>
+<li>A literal revision string supported by the vault’s revision scheme</li>
 </ul>
-<h1 id="309-2025-12-01">3.0.9 (2025-12-01)</h1>
-<ul>
-<li><a href="INFOVAR.html">INFOVAR: Fixed bug with related to single flag variables</a></li>
-<li><a href="SETVAR.html">SETVAR: Added support for handling folder cards</a></li>
+</li>
 </ul>
-<h1 id="308-2025-11-30">3.0.8 (2025-11-30)</h1>
+<h3 id="notes">NOTES:</h3>
 <ul>
-<li>Fixed unhandled exception when license is limited that causes a crash in all commands</li>
-<li>Fixed evaluation bug (order)</li>
-<li>Fixed some minor bugs in BOM command</li>
+<li>This command affects <strong>only the PDM Revision</strong>, not custom properties or configuration-specific metadata.</li>
+<li>When using <code>[VariableName]</code>, ensure the variable is present on the file card.</li>
+<li><code>%previousrevision%</code> will adjust the counter only if the revision scheme allows backward movement.</li>
+<li><code>%nextrevision%</code> respects all revision scheme rules defined in the PDM Administration tool.</li>
 </ul>
-<h1 id="307-2025-11-29">3.0.7 (2025-11-29)</h1>
+<h1 id="availability">AVAILABILITY</h1>
 <ul>
-<li><a href="BOM.html">BOM: Added a new command</a>. Please see notes <a href="howtoinstall.html#common-update-issues">here</a> about new commands in the <strong>Common Update Issues</strong> section.</li>
-<li><a href="EVAL.html">Added <code>$configuration</code> placeholder</a></li>
-<li>Added release notes page</li>
-<li>Fixed some minor typos for the delete and destroy commands</li>
-<li>Change toolbar icons and tooltips for better UX</li>
+<li>3.0.11</li>
 </ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/releasenotes.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/SETREVISION.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
