@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/advancedsearch.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/advancedsearch.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,22 +89,51 @@
 
 <p>PDMShell provides a complete search engine based on PDM's own search. This feature is extremely useful with commands that have a <code>-search</code> parameter.</p>
 <p>This guide explains how the <code>-search</code> parameter works, how to use tokens, variables, operators, and how PDMShell parses and applies search rules.</p>
+<h1 id="wildcards-in-pdmshell-sql-style-pattern-matching">Wildcards in PDMShell (SQL-Style Pattern Matching)</h1>
+<p>PDMShell supports the same wildcard patterns used in SOLIDWORKS PDM and standard SQL-like matching rules. These allow you to control how filenames are matched inside any <code>-search</code> query.</p>
+<table>
+<thead>
+<tr>
+<th>Wildcard</th>
+<th>Meaning</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%</code></td>
+<td>Matches <strong>zero or more characters</strong></td>
+<td><code>%.sldprt</code></td>
+<td>Returns all part files</td>
+</tr>
+<tr>
+<td><code>_</code></td>
+<td>Matches <strong>exactly one character</strong></td>
+<td><code>pump_.sldprt</code></td>
+<td>Matches <code>pump1.sldprt</code>, <code>pumpA.sldprt</code>, <strong>not</strong> <code>pump10.sldprt</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="1-overview">1. Overview</h2>
 <p>The <code>-search</code> parameter accepts simple text queries or advanced multi-condition expressions that filter files and folders using PDM system tokens and variable values.</p>
 <h2 id="2-simple-searches">2. Simple Searches</h2>
 <p>If no operators are present, the entire input is treated as a Name filter.</p>
 <p>Examples:</p>
-<pre><code class="lang-bash">pump  
-assembly_1001  
-*.sldasm
+<pre><code class="lang-bash">pump.sldprt     # Searches for files explicitly named pump.sldprt
+assembly_1001   # Searches for any file whose name contains 'assembly_1001'
+%.sldasm        # Searches for all SOLIDWORKS assembly files in the current folder
+
 </code></pre>
 <p>Equivalent to:</p>
-<pre><code class="lang-bash">Name=pump
+<pre><code class="lang-bash">Name=pump.sldprt
+Name=passembly_1001
+Name=%.sldasm  
 </code></pre>
 <h2 id="3-advanced-syntax">3. Advanced Syntax</h2>
 <p>Multiple conditions are separated using semicolons.</p>
 <p>Example:</p>
-<pre><code class="lang-bash">Name=Pump;Recursive=true;VersionsBefore=20200101
+<pre><code class="lang-bash">Name=%Pump%;Recursive=true;VersionsBefore=20200101   # Finds files with 'Pump' in the name, searches subfolders, and only returns versions created before Jan 1st 2020
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
@@ -116,7 +145,7 @@ assembly_1001
 \\ inserts a literal backslash
 </code></pre>
 <p>Example:</p>
-<pre><code class="lang-bash">Name=Valve\=A;Label=Released\;Approved
+<pre><code class="lang-bash">Name=Valve\=A;Label=Released\;Approved   # Searches for files literally named &quot;Valve=A&quot; and having a label containing the text &quot;Released;Approved&quot;
 </code></pre>
 <h2 id="4-built-in-search-tokens">4. Built-in Search Tokens</h2>
 <p>These tokens map directly to EdmSearchToken values and control how PDMShell filters PDM objects.</p>
@@ -306,11 +335,11 @@ assembly_1001
 <pre><code class="lang-bash">@VariableName Operator Value
 </code></pre>
 <p>Examples:</p>
-<pre><code>@Description=Pump  
-@Weight&gt;=10  
-@Revision!=A  
-@Material~Steel  
-@ProjectCode!~TEST  
+<pre><code class="lang-bash">@Description=Pump      # Variable 'Description' must equal &quot;Pump&quot;
+@Weight&gt;=10            # Numeric variable 'Weight' must be greater than or equal to 10
+@Revision!=A           # Variable 'Revision' must NOT be &quot;A&quot;
+@Material~Steel        # Variable 'Material' must contain the text &quot;Steel&quot;
+@ProjectCode!~TEST     # Variable 'ProjectCode' must NOT contain the text &quot;TEST&quot;
 </code></pre>
 <p>PDMShell automatically:</p>
 <ol>
@@ -469,7 +498,7 @@ assembly_1001
 <p>This ensures &gt;= is not incorrectly parsed as &gt;.</p>
 <h2 id="10-combining-tokens-and-variables">10. Combining Tokens and Variables</h2>
 <p>Tokens and variable conditions can be mixed:</p>
-<pre><code class="lang-bash">Name=Pump;@Description~Steel;StateName=Released;@Weight&gt;=5
+<pre><code class="lang-bash">Name=%Pump%;@Description~Steel;StateName=Released;@Weight&gt;=5   # Files with names containing 'Pump', description containing 'Steel', state equal to Released, and weight &gt;= 5
 </code></pre>
 <p>All conditions must match.</p>
 <h2 id="11-invalid-input-handling">11. Invalid Input Handling</h2>
@@ -481,19 +510,25 @@ UnknownKey=Value
 </code></pre>
 <h2 id="12-examples">12. Examples</h2>
 <p>Search by name:</p>
-<pre><code class="lang-bash">Name=Valve
+<pre><code class="lang-bash">Name=%Valve%
+# Finds all files whose name contains 'Valve'
 </code></pre>
 <p>Search by folder:</p>
-<pre><code class="lang-bash">Name=Valve;FolderID=102
+<pre><code class="lang-bash">Name=%Valve%;FolderID=102          
+# Same search, but restricted to folder with ID 102
 </code></pre>
 <p>Variable contains:</p>
-<pre><code>@Description~Pump
+<pre><code class="lang-bash">@Description~Pump                
+# Matches files where Description contains the text 'Pump'
 </code></pre>
 <p>Token and variable together:</p>
-<pre><code class="lang-bash">StateName=Approved;@Revision!=A
+<pre><code class="lang-bash">StateName=Approved;@Revision!=A  
+# Files in state 'Approved' AND Revision variable not equal to 'A'
 </code></pre>
 <p>More complex:</p>
-<pre><code class="lang-bash">Name=Pump;@Material~Steel;@Weight&gt;=15;Recursive=true;VersionsBefore=20200101
+<pre><code class="lang-bash">Name=%Pump%;@Material~Steel;@Weight&gt;=15;Recursive=true;VersionsBefore=20200101
+# Files with 'Pump' in the name, Material containing 'Steel', Weight &gt;= 15,
+# include subfolders, and versions created before Jan 1st 2020
 </code></pre>
 <h2 id="13-technical-support">13. Technical support</h2>
 <p>Please reach out to us if you have a premium license or considering getting one from our contact <a href="https://bluebyte.biz/contact">page</a> on our main website.</p>
@@ -501,7 +536,7 @@ UnknownKey=Value
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/advancedsearch.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/advancedsearch.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

@@ -41,178 +41,182 @@
 - name: Commands
   expanded: true
   items:
-  - name: Add to Vault
-  - name: addToVault
-    href: ADDTOVAULT.md
-    
-  - name: Bill of Materials
-  - name: BOM
-    href: BOM.md
+- name: Add to Vault
+- name: addToVault
+  href: ADDTOVAULT.md
 
-  - name: change directory
-  - name: cd
-    href: cd.md
+- name: Bill of Materials
+- name: BOM
+  href: BOM.md
 
-  - name: check in
-  - name: checkin
-    href: checkin.md
+- name: change directory
+- name: cd
+  href: cd.md
 
-  - name: check out
-  - name: checkout
-    href: checkout.md
+- name: check in
+- name: checkin
+  href: checkin.md
 
-  - name: clear cache
-  - name: clearCache
-    href: CLEARCACHE.md
+- name: check out
+- name: checkout
+  href: checkout.md
 
-  - name: clear screen
-  - name: cls
-    href: cls.md
+- name: clear cache
+- name: clearCache
+  href: CLEARCACHE.md
 
-  - name: Enhanced copy tree
-  - name: copyTree
-    href: COPYTREE.md
+- name: clear screen
+- name: cls
+  href: cls.md
 
-  - name: Delete files or directories
-  - name: delete
-    href: DELETE.md
+- name: Enhanced copy tree
+- name: copyTree
+  href: COPYTREE.md
 
-  - name: Delete files from CSV
-  - name: deleteFromSource
-    href: DELETEFROMSOURCE.md
+- name: Delete files or directories
+- name: delete
+  href: DELETE.md
 
-  - name: Destroy files or directories
-  - name: destroy
-    href: DESTORY.md
+- name: Delete files from CSV
+- name: deleteFromSource
+  href: DELETEFROMSOURCE.md
 
-  - name: List directory contents
-  - name: dir
-    href: dir.md
+- name: Destroy files or directories
+- name: destroy
+  href: DESTORY.md
 
-  - name: Save session output to a file
-  - name: dump
-    href: dump.md
+- name: List directory contents
+- name: dir
+  href: dir.md
 
-  - name: Launch Variable Editor
-  - name: editVars
-    href: editvars.md
+- name: Save session output to a file
+- name: dump
+  href: dump.md
 
-  - name: Launch SOLIDWORKS Export
-  - name: Export
-    href: Export.md
+- name: Launch Variable Editor
+- name: editVars
+  href: editvars.md
 
-  - name: Frog Leap files version
-  - name: frogLeap
-    href: frogleap.md
+- name: Launch SOLIDWORKS Export
+- name: Export
+  href: Export.md
 
-  - name: Locally cache files from PDM
-  - name: get
-    href: get.md
+- name: Frog Leap files version
+- name: frogLeap
+  href: frogleap.md
 
-  - name: Get variable value
-  - name: getVar
-    href: getvar.md
+- name: Locally cache files from PDM
+- name: get
+  href: get.md
 
-  - name: Get variable value from database
-  - name: getVarFromDb
-    href: getvarfromdb.md
+- name: Get variable value
+- name: getVar
+  href: getvar.md
 
-  - name: List all commands
-  - name: help
-    href: help.md
+- name: Get variable value from database
+- name: getVarFromDb
+  href: getvarfromdb.md
 
-  - name: View complete file history
-  - name: history
-    href: history.md
+- name: List all commands
+- name: help
+  href: help.md
 
-  - name: Open PDM Inbox
-  - name: inbox
-    href: inbox.md
+- name: View complete file history
+- name: history
+  href: history.md
 
-  - name: Get file variable information
-  - name: infoVar
-    href: infovar.md
+- name: Open PDM Inbox
+- name: inbox
+  href: inbox.md
 
-  - name: Terminate Windows processes
-  - name: kill
-    href: kill.md
+- name: Get file variable information
+- name: infoVar
+  href: infovar.md
 
-  - name: Log in to PDM
-  - name: login
-    href: login.md
+- name: Terminate Windows processes
+- name: kill
+  href: kill.md
 
-  - name: Create a new PDM directory
-  - name: mkdir
-    href: mkdir.md
+- name: Log in to PDM
+- name: login
+  href: login.md
 
-  - name: Create a new PDM variable
-  - name: mkVar
-    href: mkvar.md
+- name: Create a new PDM directory
+- name: mkdir
+  href: mkdir.md
 
-  - name: Print information from CSV
-  - name: PrintFromSource
-    href: PRINTFROMSOURCE.md
+- name: Create a new PDM variable
+- name: mkVar
+  href: mkvar.md
 
-  - name: Print information about files
-  - name: print
-    href: print.md
+- name: Print information from CSV
+- name: PrintFromSource
+  href: PRINTFROMSOURCE.md
 
-  - name: Quit PDMShell
-  - name: quit
-    href: quit.md
+- name: Print information about files
+- name: print
+  href: print.md
 
-  - name: Force Reboot PDM
-  - name: reboot
-    href: REBOOT.md
+- name: Quit PDMShell
+- name: quit
+  href: quit.md
 
-  - name: Recover deleted files
-  - name: recover
-    href: RECOVER.md
+- name: Force Reboot PDM
+- name: reboot
+  href: REBOOT.md
 
-  - name: Rename files
-  - name: rename
-    href: rename.md
+- name: Recover deleted files
+- name: recover
+  href: RECOVER.md
 
-  - name: Rename files from CSV
-  - name: renameFromSource
-    href: RENAMEFROMSOURCE.md
+- name: Rename files
+- name: rename
+  href: rename.md
 
-  - name: Run a PDMShell script
-  - name: runScript
-    href: RUNSCRIPT.md
+- name: Rename files from CSV
+- name: renameFromSource
+  href: RENAMEFROMSOURCE.md
 
-  - name: Run a SOLIDWORKS macro
-  - name: runSWMacro
-    href: runswmacro.md
+- name: Run a PDMShell script
+- name: runScript
+  href: RUNSCRIPT.md
 
-  - name: Run a PDM task
-  - name: RunTask
-    href: RUNTASK.md
+- name: Run a SOLIDWORKS macro
+- name: runSWMacro
+  href: runswmacro.md
 
-  - name: Search for files
-  - name: search
-    href: search.md
+- name: Run a PDM task
+- name: RunTask
+  href: RUNTASK.md
 
-  - name: Set variable value
-  - name: setVar
-    href: setvar.md
-  
-  - name: Set revision
-  - name: setrevision
-    href: setrevision.md
+- name: Search for files
+- name: search
+  href: search.md
 
-  - name: Set variables from CSV
-  - name: setVarsFromSource
-    href: SETVARSFROMSOURCE.md
+- name: Set file PDM revision
+- name: setRevision
+  href: SETREVISION.md
 
-  - name: Start a process
-  - name: start
-    href: start.md
+- name: Set file PDM revision from CSV
+- name: SetRevisionFromSource
+  href: SETREVISIONFROMSOURCE.md
 
-  - name: Undo checkout
-  - name: undoCheckout
-    href: undocheckout.md
+- name: Set variable value
+- name: setVar
+  href: setvar.md
 
-  - name: Show version information
-  - name: version
-    href: version.md
+- name: Set variables from CSV
+- name: setVarsFromSource
+  href: SETVARSFROMSOURCE.md
+
+- name: Start a process
+- name: start
+  href: start.md
+
+- name: Undo checkout
+- name: undoCheckout
+  href: undocheckout.md
+
+- name: Show version information
+- name: version
+  href: version.md

@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>PDMShell Free vs Premium | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>SETRECISIONFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="PDMShell Free vs Premium | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="SETRECISIONFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Comparison between the Free and Premium versions of PDMShell.">
+      <meta name="description" content="Sets the revision of SOLIDWORKS PDM files from a CSV source containing file IDs and revision values.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/FREEVSPREMIUM.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/SETREVISIONFROMSOURCE.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,108 +85,69 @@
         </div>
 
         <article data-uid="">
-<h1 id="pdmshell-free-vs-premium">PDMShell Free vs Premium</h1>
+<h1 id="setrecisionfromsource-command-documentation">SETRECISIONFROMSOURCE Command Documentation</h1>
 
-<p>PDMShell comes in two editions: <strong>Free</strong> for light use and <strong>Premium</strong> for full automation in SOLIDWORKS PDM.</p>
-<hr>
-<h2 id="overview">OVERVIEW</h2>
-<table>
-<thead>
-<tr>
-<th>Edition</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Free</strong></td>
-<td>Ideal for testing and small jobs. Processes up to <strong>5 items per command</strong>.</td>
-</tr>
-<tr>
-<td><strong>Premium</strong></td>
-<td>Full access with <strong>unlimited processing</strong>, workflow automation, and scripting.</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="feature-comparison">FEATURE COMPARISON</h2>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th>Free</th>
-<th>Premium</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Max items per command</td>
-<td>5</td>
-<td>Unlimited</td>
-</tr>
-<tr>
-<td>All <code>search</code> commands</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td><code>printfromsource</code>, <code>getvar</code></td>
-<td>✅ (5-limit)</td>
-<td>✅ Unlimited</td>
-</tr>
-<tr>
-<td>Workflow &amp; transitions</td>
-<td>❌</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Automation scripting</td>
-<td>❌</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Alias &amp; renaming</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Priority support</td>
-<td>❌</td>
-<td>Full</td>
-</tr>
-<tr>
-<td>Commercial use</td>
-<td>✅ (non-resellers)</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Reseller use</td>
-<td>❌</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Cost</td>
-<td>Free</td>
-<td>Paid</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="free-edition">FREE EDITION</h2>
-<p>Perfect for evaluation, quick lookups, and validation tasks.<br>
-<strong>Limit:</strong> 5 items per command.<br>
-<strong>Note:</strong> Resellers and VARs may not use the Free version commercially.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="lang-bash">printfromsource -filePath &quot;source.csv&quot; -csv &quot;output.csv&quot;
+<h2 id="description">DESCRIPTION</h2>
+<p>The <code>SetRecisionFromSourceCommand</code> allows you to batch-update the <strong>PDM-managed revision</strong> for multiple files by reading values from a CSV input source.</p>
+<p>The <strong>source CSV</strong> must contain at minimum:</p>
+<ul>
+<li><strong>Id</strong> → the PDM file ID</li>
+<li><strong>Value</strong> → the revision value to apply</li>
+</ul>
+<p>This command applies the revision exactly as supplied in the CSV just like in the <a href="SETREVISION.html">set revision command</a>.<br>
+It does  <strong>evaluate</strong> <code>%nextrevision%</code>, <code>%previousrevision%</code>,<code>%initial%</code>, or bracketed variables—only literal revision values.</p>
+<p>You may optionally output a <strong>results CSV</strong> that includes success/failure information for each processed row.</p>
+<h2 id="syntax">SYNTAX</h2>
+<pre><code class="lang-bash">setrevisionfromsource -source -csv
 </code></pre>
-<h2 id="buy-premium">BUY PREMIUM</h2>
-<p>To buy a Premium PDMShell license, visit:
-<a href="http://bluebyte.biz/product/pdmshell">http://bluebyte.biz/product/pdmshell</a></p>
+<h2 id="parameters">PARAMETERS</h2>
+<ul>
+<li><code>-source</code><br>
+Path to the CSV file that contains the input dataset.<br>
+Required columns:
+<ul>
+<li><code>ID</code> — the file’s PDM ID inside the vault.</li>
+<li><code>Revision</code> — the revision string supported by the revision scheme</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/setrevisionfromsource.png" alt="setrevisionfromsource"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can generate IDs and variables into a CSV by using the <a href="SEARCH.html">search command</a>.</p>
+</div>
+<ul>
+<li><code>-csv</code> <em>(optional)</em><br>
+Path to an output CSV file where results will be written.<br>
+The results file contains:
+<ul>
+<li>File ID</li>
+<li>Operation status</li>
+<li>Error message (if any)</li>
+</ul>
+</li>
+</ul>
+<h2 id="examplaes">EXAMPLAES</h2>
+<pre><code class="lang-bash">
+setrevisionfromsource -source source.csv -csv results.csv
+
+</code></pre>
+<h2 id="notes">NOTES</h2>
+<ul>
+<li>This command updates the <strong>PDM Revision</strong> shown on the Version tab, not datacard variables.</li>
+<li>All revisions must already exist in the active revision scheme.</li>
+<li>If a file ID does not exist or cannot be updated, the error will be logged and processing continues for the remaining records.</li>
+<li>Output CSV is optional; if omitted, results are printed to console only.</li>
+</ul>
+<h2 id="availability">AVAILABILITY</h2>
+<ul>
+<li>3.0.12</li>
+</ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/FREEVSPREMIUM.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/SETREVISIONFROMSOURCE.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
@@ -203,7 +164,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span><a href='https://bluebyte.biz'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
         </div>
       </div>
     </footer>

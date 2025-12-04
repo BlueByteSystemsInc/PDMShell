@@ -4,7 +4,7 @@
     "changefreq": "weekly",
     "priority": 1
   },
-  "source_base_path": "C:/Users/jlili/source/repos/BlueByteSystemsInc/PDMShell",
+  "source_base_path": "C:/Users/jlili/source/repos/BlueByteSystemsInc/PDMShell.Docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -817,6 +817,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/setrevisionfromsource.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/setrevisionfromsource.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/singleinstance.png",
       "output": {
         "resource": {
@@ -1031,16 +1041,6 @@
       "output": {
         ".html": {
           "relative_path": "src/EVAL.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "src/EXPORT.md",
-      "output": {
-        ".html": {
-          "relative_path": "src/EXPORT.html"
         }
       },
       "version": ""
@@ -1287,6 +1287,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/SETREVISIONFROMSOURCE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/SETREVISIONFROMSOURCE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/SETVAR.md",
       "output": {
         ".html": {
@@ -1391,6 +1401,16 @@
       "output": {
         ".html": {
           "relative_path": "src/eula.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/export.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/export.html"
         }
       },
       "version": ""

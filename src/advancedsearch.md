@@ -8,6 +8,16 @@ PDMShell provides a complete search engine based on PDM's own search. This featu
 
 This guide explains how the `-search` parameter works, how to use tokens, variables, operators, and how PDMShell parses and applies search rules.
 
+# Wildcards in PDMShell (SQL-Style Pattern Matching)
+
+PDMShell supports the same wildcard patterns used in SOLIDWORKS PDM and standard SQL-like matching rules. These allow you to control how filenames are matched inside any `-search` query.
+
+| Wildcard | Meaning | Example | Result |
+|----------|---------|---------|--------|
+| `%` | Matches **zero or more characters** | `%.sldprt` | Returns all part files |
+| `_` | Matches **exactly one character** | `pump_.sldprt` | Matches `pump1.sldprt`, `pumpA.sldprt`, **not** `pump10.sldprt` |
+
+
 ## 1. Overview
 
 The `-search` parameter accepts simple text queries or advanced multi-condition expressions that filter files and folders using PDM system tokens and variable values.
@@ -18,13 +28,17 @@ If no operators are present, the entire input is treated as a Name filter.
 
 Examples:  
 ```bash
-pump  
-assembly_1001  
-*.sldasm
+pump.sldprt     # Searches for files explicitly named pump.sldprt
+assembly_1001   # Searches for any file whose name contains 'assembly_1001'
+%.sldasm        # Searches for all SOLIDWORKS assembly files in the current folder
+
 ```
 Equivalent to: 
+
 ```bash 
-Name=pump
+Name=pump.sldprt
+Name=passembly_1001
+Name=%.sldasm  
 ```
 
 
@@ -33,9 +47,10 @@ Name=pump
 
 Multiple conditions are separated using semicolons.
 
-Example:  
-```bash 
-Name=Pump;Recursive=true;VersionsBefore=20200101
+Example:
+
+```bash
+Name=%Pump%;Recursive=true;VersionsBefore=20200101   # Finds files with 'Pump' in the name, searches subfolders, and only returns versions created before Jan 1st 2020
 ```
 >[!Note]
 > Dates must follow the `yyyMMdd` format.
@@ -48,9 +63,10 @@ Escaping rules:
 ```
 
 Example:  
-```bash 
-Name=Valve\=A;Label=Released\;Approved
-``` 
+
+```bash
+Name=Valve\=A;Label=Released\;Approved   # Searches for files literally named "Valve=A" and having a label containing the text "Released;Approved"
+```
 
 ## 4. Built-in Search Tokens
 
@@ -119,12 +135,12 @@ Format:
 ```
 
 Examples:  
-```
-@Description=Pump  
-@Weight>=10  
-@Revision!=A  
-@Material~Steel  
-@ProjectCode!~TEST  
+```bash
+@Description=Pump      # Variable 'Description' must equal "Pump"
+@Weight>=10            # Numeric variable 'Weight' must be greater than or equal to 10
+@Revision!=A           # Variable 'Revision' must NOT be "A"
+@Material~Steel        # Variable 'Material' must contain the text "Steel"
+@ProjectCode!~TEST     # Variable 'ProjectCode' must NOT contain the text "TEST"
 ```
 
 PDMShell automatically:
@@ -197,8 +213,9 @@ This ensures >= is not incorrectly parsed as >.
 ## 10. Combining Tokens and Variables
 
 Tokens and variable conditions can be mixed:
-```bash 
-Name=Pump;@Description~Steel;StateName=Released;@Weight>=5
+
+```bash
+Name=%Pump%;@Description~Steel;StateName=Released;@Weight>=5   # Files with names containing 'Pump', description containing 'Steel', state equal to Released, and weight >= 5
 ```
 
 All conditions must match.
@@ -217,26 +234,34 @@ UnknownKey=Value
 ## 12. Examples
 
 Search by name:
-```bash 
-Name=Valve
+```bash
+Name=%Valve%
+# Finds all files whose name contains 'Valve'
 ```
 
 Search by folder:
-```bash 
-Name=Valve;FolderID=102
+```bash
+Name=%Valve%;FolderID=102          
+# Same search, but restricted to folder with ID 102
 ```
 
 Variable contains:
+```bash
+@Description~Pump                
+# Matches files where Description contains the text 'Pump'
 ```
-@Description~Pump
-```
+
 Token and variable together:
-```bash 
-StateName=Approved;@Revision!=A
+```bash
+StateName=Approved;@Revision!=A  
+# Files in state 'Approved' AND Revision variable not equal to 'A'
 ```
+
 More complex:
-```bash 
-Name=Pump;@Material~Steel;@Weight>=15;Recursive=true;VersionsBefore=20200101
+```bash
+Name=%Pump%;@Material~Steel;@Weight>=15;Recursive=true;VersionsBefore=20200101
+# Files with 'Pump' in the name, Material containing 'Steel', Weight >= 15,
+# include subfolders, and versions created before Jan 1st 2020
 ```
 ## 13. Technical support
 
