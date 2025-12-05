@@ -43,6 +43,10 @@ setrevision -filePath|-search -value
   - `[VariableName]` → evaluates the PDM variable and uses its value  
   - A literal revision string supported by the vault’s revision scheme  
 
+- `csv` (only valid with `search`)
+  Save results to a csv file
+
+
 ### NOTES:
 
 - This command affects **only the PDM Revision**, not custom properties or configuration-specific metadata.  

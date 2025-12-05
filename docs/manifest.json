@@ -1347,6 +1347,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/UPGRADEVERSION.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/UPGRADEVERSION.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/UPGRADEVERSIONFROMSOURCE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/UPGRADEVERSIONFROMSOURCE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/USERS.md",
       "output": {
         ".html": {

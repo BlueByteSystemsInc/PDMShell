@@ -128,7 +128,7 @@
 <h2 id="executing-commands-in-single-instance-mode">Executing Commands in Single Instance Mode</h2>
 <p>Once PDMShell is running with <code>/single</code>, <strong>all subsequent calls to <code>pdmcli.exe</code> must also include <code>/single</code></strong>, or PDMShell will launch a new instance instead of attaching.</p>
 <p>Example:</p>
-<pre><code>pdmcli.exe &quot;/single help command checkout&quot;
+<pre><code>pdmcli.exe /single &quot;help command checkout&quot;
 </code></pre>
 <p>This will:</p>
 <ul>
@@ -136,6 +136,10 @@
 <li>execute <code>help command checkout</code></li>
 <li>return output immediately</li>
 </ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>When calling from <code>cmd.exe</code>, /single or -single cannot be contained in the double quote.</p>
+</div>
 <h2 id="tips-for-single-instance-mode">Tips for Single Instance Mode</h2>
 <ul>
 <li>Always include <code>/single</code> in <strong>every call</strong></li>

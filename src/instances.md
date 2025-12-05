@@ -67,7 +67,7 @@ Once PDMShell is running with `/single`, **all subsequent calls to `pdmcli.exe` 
 
 Example:
 
-    pdmcli.exe "/single help command checkout"
+    pdmcli.exe /single "help command checkout"
 
 This will:
 
@@ -75,6 +75,8 @@ This will:
 - execute `help command checkout`
 - return output immediately
 
+>[!IMPORTANT]
+> When calling from `cmd.exe`, /single or -single cannot be contained in the double quote.
 
 ## Tips for Single Instance Mode
 
