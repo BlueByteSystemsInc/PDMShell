@@ -3,6 +3,10 @@ description: Release Notes of PDMShell
 title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 ---
 
+# 3.0.12 (2025-12-04)
+- [UpgradeVersion: Added a new command](UPGRADEVERSION.md).
+- [UpgradeVersionFromSource: Added a new command (Reserved but not implemented)](UPGRADEVERSIONFROMSOURCE.md).
+
 # 3.0.12 (2025-12-03)
 - [SetRevisionFromSource: Added a new command](SETREVISIONFROMSOURCE.md).
 
