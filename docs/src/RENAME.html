@@ -95,7 +95,7 @@
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
 <li><code>filePath</code>: The filerename.</li>
-<li><code>value</code>: The new name for the file.</li>
+<li><code>value</code>: The new name for the file. <strong>YOU MUST INCLUDE THE EXTENSION</strong></li>
 <li><code>search</code>: The search operation to use.</li>
 </ul>
 <h2 id="examples">EXAMPLES:</h2>
@@ -117,8 +117,12 @@
 <li><code>$extension</code> - The file extension.</li>
 </ul>
 <p>Additionally, you can use variables enclosed in square brackets (e.g., <code>[VariableName]</code>) to include values from other variables.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Please read more information about placeholder evaluation <a href="EVAL.html">here</a>.</p>
+</div>
 <h2 id="examples-1">EXAMPLES:</h2>
-<p>If you use the value <code>&quot;$filename_$date_$version&quot;</code>, it will be replaced with the file name, current date, and version, resulting in something like <code>&quot;oldname_10-12-2023_3&quot;</code>.</p>
+<p>If you use the value <code>&quot;$filename_$date_$version$extension&quot;</code>, it will be replaced with the file name, current date, and version, resulting in something like <code>&quot;oldname_10-12-2023_3&quot;</code>.</p>
 
 </article>
 

@@ -183,7 +183,7 @@
 
 - name: Run a SOLIDWORKS macro
 - name: runSWMacro
-  href: runswmacro.md
+  href: RUNSWMACRO.md
 
 - name: Run a PDM task
 - name: RunTask

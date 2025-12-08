@@ -13,8 +13,10 @@ rename -filePath -value -search
 ```
 ## PARAMETERS:
 - `filePath`: The filerename.
-- `value`: The new name for the file.
+- `value`: The new name for the file. **YOU MUST INCLUDE THE EXTENSION**
 - `search`: The search operation to use.
+
+
 
 ## EXAMPLES:
 ```bash
@@ -36,5 +38,9 @@ The `value` parameter gets evaluated by PDMShell. PDMShell allows you to use pla
 
 Additionally, you can use variables enclosed in square brackets (e.g., `[VariableName]`) to include values from other variables.
 
+>[!Note]
+> Please read more information about placeholder evaluation [here](EVAL.md).
+
+
 ## EXAMPLES:
-If you use the value `"$filename_$date_$version"`, it will be replaced with the file name, current date, and version, resulting in something like `"oldname_10-12-2023_3"`.
+If you use the value `"$filename_$date_$version$extension"`, it will be replaced with the file name, current date, and version, resulting in something like `"oldname_10-12-2023_3"`.

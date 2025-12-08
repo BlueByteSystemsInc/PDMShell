@@ -31,45 +31,8 @@ setvar -filePath file1.sldprt -variableName Description -value $value -stringfor
 ## EVALUATION:
 The `value` parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables. The following placeholders are supported:
 
-### For Files:
-  - `$value`: Existing value of the variable.
-  - `$name`: The file name with extension.
-  - `$nameWithoutExtension`: The file name without extension.
-  - `$username`: The name of the logged-in user.
-  - `$vaultName`: The name of the vault.
-  - `$yyyy`: The current year.
-  - `$mm`: The current month (two digits).
-  - `$hh`: The current hour (two digits).
-  - `$mi`: The current minute (two digits).
-  - `$ss`: The current second (two digits).
-  - `$id`: The file ID.
-  - `$revision`: The current revision of the file (PDM revision, not the PDM variable).
-  - `$date`: The current date.
-  - `$time`: The current time in the current locale.
-  - `$version`: The current version of the file.
-  - `$extension`: The file extension.
-  - `$fullyQualifiedName`: The full local path of the file.
-  - `$fullyQualifiedFolderName`: The full local path of the folder containing the file.
-  - `$folderName`: The name of the folder containing the file.
-
-### For Folders:
-  - `$value`: Existing value of the variable.
-  - `$name`: The folder name.
-  - `$folderName`: The name of the parent folder.
-  - `$id`: The folder ID.
-  - `$fullyQualifiedName`: The full local path of the folder.
-  - `$username`: The name of the logged-in user.
-  - `$vaultName`: The name of the vault.
-  - `$yyyy`: The current year.
-  - `$mm`: The current month (two digits).
-  - `$hh`: The current hour (two digits).
-  - `$mi`: The current minute (two digits).
-  - `$ss`: The current second (two digits).
-  - `$date`: The current date.
-  - `$time`: The current time in the current locale.
-
-
-Additionally, you can use variables enclosed in square brackets (e.g., `[VariableName]`) to include values from other variables. These variables are dynamically resolved based on the context of the file or folder.
+>[!Note]
+> Please read more information about placeholder evaluation [here](EVAL.md).
 
 ## REMARKS
 - The `configNames` parameter should be separated by commas. If omitted, PDMShell uses `@` for configuration-supported documents.

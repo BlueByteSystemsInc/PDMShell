@@ -1257,6 +1257,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/RUNSWMACRO.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/RUNSWMACRO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/RUNTASK.md",
       "output": {
         ".html": {
@@ -1501,16 +1511,6 @@
       "output": {
         ".html": {
           "relative_path": "src/releasenotes.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "src/runswmacro.md",
-      "output": {
-        ".html": {
-          "relative_path": "src/runswmacro.html"
         }
       },
       "version": ""

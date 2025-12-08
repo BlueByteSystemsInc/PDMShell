@@ -3,7 +3,12 @@ description: Release Notes of PDMShell
 title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 ---
 
-# 3.0.12 (2025-12-04)
+# 3.0.14 (2025-12-05)
+- [Login: Fix bug with parameter casing](LOGIN.md).
+- [Login: Added implementation with the transition command](TRANSITION.md).
+- Updated documentation
+
+# 3.0.13 (2025-12-04)
 - [UpgradeVersion: Added a new command](UPGRADEVERSION.md).
 - [UpgradeVersionFromSource: Added a new command (Reserved but not implemented)](UPGRADEVERSIONFROMSOURCE.md).
 

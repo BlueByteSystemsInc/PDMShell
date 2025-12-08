@@ -14,15 +14,15 @@ login [-auto|-win -username -password|-external -username -password ] -vaultname
 ```
 
 ## PARAMETERS:
-`Auto`: Automatic authentication with current user. Displays login dialog box if not logged in.
+`auto`: Automatic authentication with current user. Displays login dialog box if not logged in.
 
-`Win`: Automatic Windows authentication with current user. Does not display login dialog box.
+`win`: Automatic Windows authentication with current user. Does not display login dialog box.
 
-`External`: Toggle ensures that a license is consumed.
+`external`: Toggle ensures that a license is consumed.
 
-`Username`:  Username.
+`username`:  Username.
 
-`Password`:  Password.
+`password`:  Password.
 
 `vaultName`: Vault Name.
 

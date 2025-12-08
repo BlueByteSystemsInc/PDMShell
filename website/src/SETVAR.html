@@ -104,46 +104,10 @@
 </code></pre>
 <h2 id="evaluation">EVALUATION:</h2>
 <p>The <code>value</code> parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables. The following placeholders are supported:</p>
-<h3 id="for-files">For Files:</h3>
-<ul>
-<li><code>$value</code>: Existing value of the variable.</li>
-<li><code>$name</code>: The file name with extension.</li>
-<li><code>$nameWithoutExtension</code>: The file name without extension.</li>
-<li><code>$username</code>: The name of the logged-in user.</li>
-<li><code>$vaultName</code>: The name of the vault.</li>
-<li><code>$yyyy</code>: The current year.</li>
-<li><code>$mm</code>: The current month (two digits).</li>
-<li><code>$hh</code>: The current hour (two digits).</li>
-<li><code>$mi</code>: The current minute (two digits).</li>
-<li><code>$ss</code>: The current second (two digits).</li>
-<li><code>$id</code>: The file ID.</li>
-<li><code>$revision</code>: The current revision of the file (PDM revision, not the PDM variable).</li>
-<li><code>$date</code>: The current date.</li>
-<li><code>$time</code>: The current time in the current locale.</li>
-<li><code>$version</code>: The current version of the file.</li>
-<li><code>$extension</code>: The file extension.</li>
-<li><code>$fullyQualifiedName</code>: The full local path of the file.</li>
-<li><code>$fullyQualifiedFolderName</code>: The full local path of the folder containing the file.</li>
-<li><code>$folderName</code>: The name of the folder containing the file.</li>
-</ul>
-<h3 id="for-folders">For Folders:</h3>
-<ul>
-<li><code>$value</code>: Existing value of the variable.</li>
-<li><code>$name</code>: The folder name.</li>
-<li><code>$folderName</code>: The name of the parent folder.</li>
-<li><code>$id</code>: The folder ID.</li>
-<li><code>$fullyQualifiedName</code>: The full local path of the folder.</li>
-<li><code>$username</code>: The name of the logged-in user.</li>
-<li><code>$vaultName</code>: The name of the vault.</li>
-<li><code>$yyyy</code>: The current year.</li>
-<li><code>$mm</code>: The current month (two digits).</li>
-<li><code>$hh</code>: The current hour (two digits).</li>
-<li><code>$mi</code>: The current minute (two digits).</li>
-<li><code>$ss</code>: The current second (two digits).</li>
-<li><code>$date</code>: The current date.</li>
-<li><code>$time</code>: The current time in the current locale.</li>
-</ul>
-<p>Additionally, you can use variables enclosed in square brackets (e.g., <code>[VariableName]</code>) to include values from other variables. These variables are dynamically resolved based on the context of the file or folder.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Please read more information about placeholder evaluation <a href="EVAL.html">here</a>.</p>
+</div>
 <h2 id="remarks">REMARKS</h2>
 <ul>
 <li>The <code>configNames</code> parameter should be separated by commas. If omitted, PDMShell uses <code>@</code> for configuration-supported documents.</li>
