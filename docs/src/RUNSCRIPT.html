@@ -94,13 +94,19 @@
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
-<li><code>source</code>:  Script file.</li>
+<li><code>source</code>:  Script file.  <strong>Must end in <code>.pdmshell</code></strong></li>
+</ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Script extension is <code>.pdmshell</code></p>
+</div>
+<ul>
 <li><code>filePath</code>:  File path to run the script on.</li>
 <li><code>search</code>:  Search query to filter files.</li>
 <li><code>recursive</code>: If specified, the command will run script on all files recursively in subdirectories.</li>
 </ul>
 <h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">runscript -filePath pdmscript.script -search &quot;%.sldprt&quot; -recursive 
+<pre><code class="lang-bash">runscript -filePath pdmscript.pdmshell -search &quot;%.sldprt&quot; -recursive 
 # this will run pdm.script on all part files in the active directory and its subdirectories
 </code></pre>
 <h2 id="remarks">REMARKS:</h2>

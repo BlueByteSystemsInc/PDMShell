@@ -3,6 +3,13 @@ description: Release Notes of PDMShell
 title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 ---
 
+# 3.0.16 (2025-12-07)
+- [Export: Added timeout parameter launching SOLIDWORKS](EXPORT.md).
+- [RunSwMacro: timeout parameter is also enabled for launching SOLIDWORKS](RUNSWMACRO.md).
+- Enforced `.pdmshell` extension across all commands as the scripting file extension.
+# 3.0.15
+- skipped
+
 # 3.0.14 (2025-12-05)
 - [Login: Fix bug with parameter casing](LOGIN.md).
 - [Login: Added implementation with the transition command](TRANSITION.md).

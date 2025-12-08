@@ -12,6 +12,9 @@ PDMShell supports scripting to automate tasks and streamline workflows. Scripts 
 ## Creating a Script
 A PDMShell script is a sequence of PDMShell commands written in a plain text file. Each command is executed in the order it appears in the script.
 
+### Script File Extension
+Script file extension is `.pdmshell`.
+
 ### Example Script
 Below is an example of a `.pdmshell` script:
 

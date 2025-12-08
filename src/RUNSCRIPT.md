@@ -13,13 +13,17 @@ runscript -source -filePath -search -recursive
 ```
 
 ## PARAMETERS:
-- `source`:  Script file.  
-- `filePath`:  File path to run the script on.  
+- `source`:  Script file.  **Must end in `.pdmshell`** 
+
+>[!IMPORTANT]
+> Script extension is `.pdmshell`
+
+- `filePath`:  File path to run the script on. 
 - `search`:  Search query to filter files.
 - `recursive`: If specified, the command will run script on all files recursively in subdirectories.  
 ## EXAMPLES:
  ```bash
-runscript -filePath pdmscript.script -search "%.sldprt" -recursive 
+runscript -filePath pdmscript.pdmshell -search "%.sldprt" -recursive 
 # this will run pdm.script on all part files in the active directory and its subdirectories
  ```
 

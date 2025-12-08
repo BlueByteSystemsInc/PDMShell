@@ -24,6 +24,7 @@ The export command requires several parameters:
 - `extensions`: Comma-separated list of file extensions to export to (e.g., `pdf,dxf`).
 - `search`: Search query to find files for export.
 - `recursive`: If set, search will include subfolders.
+- `timeout`: timeout in seconds (for starting SOLIDWORKS only)
 
 ## EXAMPLE:
 

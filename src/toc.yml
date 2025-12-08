@@ -55,7 +55,7 @@
 
 - name: check in
 - name: checkin
-  href: checkin.md
+  href: CHECKIN.md
 
 - name: check out
 - name: checkout
@@ -64,7 +64,7 @@
 - name: clear cache
 - name: clearCache
   href: CLEARCACHE.md
-
+  
 - name: clear screen
 - name: cls
   href: cls.md
@@ -99,7 +99,7 @@
 
 - name: Launch SOLIDWORKS Export
 - name: Export
-  href: Export.md
+  href: EXPORT.md
 
 - name: Frog Leap files version
 - name: frogLeap
@@ -123,11 +123,11 @@
 
 - name: View complete file history
 - name: history
-  href: history.md
+  href: HISTORY.md
 
 - name: Open PDM Inbox
 - name: inbox
-  href: inbox.md
+  href: Inbox.md
 
 - name: Get file variable information
 - name: infoVar

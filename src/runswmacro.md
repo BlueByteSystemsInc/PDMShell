@@ -25,7 +25,7 @@ The command requires the following parameters:
 - `list`: csv file path of filepaths without a column header.
 - `skip`: Skips the specified number of items. Only valid with `list`.
 - `count`: Only processes the specified number of items. Only valid with `list`.
-- `timeout`: Macro timeout in milliseconds
+- `timeout`: Macro timeout in seconds (for both the macro to execute and for SOLIDWORKS to start too)
 
 ## What version of SOLIDWORKS will PDMShell use?
 PDMShell will use the latest SOLIDWORKS version installed on your system by checking the Windows Registry at:
