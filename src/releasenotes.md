@@ -4,6 +4,9 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 ---
 
 
+# 3.0.18 (2025-12-08)
+- Rebuild. Previous faulty build.
+
 # 3.0.17 (2025-12-08)
 - Fixed single instance issue related to Windows enviornment variables
 - Added note for `solidworks` and `pdm`parameters in the [Version](VERSION.md) command: **RESERVED FOR FUTURE. NOT IMPLEMENTED**   
