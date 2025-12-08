@@ -3,6 +3,11 @@ description: Release Notes of PDMShell
 title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 ---
 
+
+# 3.0.17 (2025-12-08)
+- Fixed single instance issue related to Windows enviornment variables
+- Added note for `solidworks` and `pdm`parameters in the [Version](VERSION.md) command: **RESERVED FOR FUTURE. NOT IMPLEMENTED**   
+
 # 3.0.16 (2025-12-07)
 - [Export: Added timeout parameter launching SOLIDWORKS](EXPORT.md).
 - [RunSwMacro: timeout parameter is also enabled for launching SOLIDWORKS](RUNSWMACRO.md).
