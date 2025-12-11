@@ -4,7 +4,7 @@
     "changefreq": "weekly",
     "priority": 1
   },
-  "source_base_path": "C:/Users/jlili/source/repos/BlueByteSystemsInc/PDMShell.Docs",
+  "source_base_path": "C:/mikeworkspace/PDMShell",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -1047,16 +1047,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "src/EXPORT.md",
-      "output": {
-        ".html": {
-          "relative_path": "src/EXPORT.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "src/FREEVSPREMIUM.md",
       "output": {
         ".html": {
@@ -1267,16 +1257,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "src/RUNSWMACRO.md",
-      "output": {
-        ".html": {
-          "relative_path": "src/RUNSWMACRO.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "src/RUNTASK.md",
       "output": {
         ".html": {
@@ -1447,6 +1427,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/export.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/export.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/faq.md",
       "output": {
         ".html": {
@@ -1511,6 +1501,16 @@
       "output": {
         ".html": {
           "relative_path": "src/releasenotes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/runswmacro.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/runswmacro.html"
         }
       },
       "version": ""
