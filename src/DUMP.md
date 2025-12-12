@@ -21,4 +21,7 @@ dump filePath
 dump -filePath "$release_script_$yyyy_$mm_$dd_$guid.txt"
 ```
 ## REMARKS:
+
 - To make sure your logs are always unique, use `$guid` or the date/time place holders. You can get more information about these place holders [here](/src/EVAL.html).
+
+- If you start PDMShell as a Windows administrator with the `-winlog` or `/winlog` parameter, PDMShell will create logs in the Windows event viewer. 

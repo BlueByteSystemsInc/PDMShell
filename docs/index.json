@@ -67,7 +67,7 @@
   "src/DUMP.html": {
     "href": "src/DUMP.html",
     "title": "DELETEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional",
-    "summary": "DUMP Command Documentation DESCRIPTION: Dumps all session text into a log file and check it back into the vault. SYNTAX: dump filePath PARAMETERS: filePath: The log file to dump session details into. EXAMPLES: dump -filePath \"$release_script_$yyyy_$mm_$dd_$guid.txt\" REMARKS: To make sure your logs are always unique, use $guid or the date/time place holders. You can get more information about these place holders here."
+    "summary": "DUMP Command Documentation DESCRIPTION: Dumps all session text into a log file and check it back into the vault. SYNTAX: dump filePath PARAMETERS: filePath: The log file to dump session details into. EXAMPLES: dump -filePath \"$release_script_$yyyy_$mm_$dd_$guid.txt\" REMARKS: To make sure your logs are always unique, use $guid or the date/time place holders. You can get more information about these place holders here. If you start PDMShell as a Windows administrator with the -winlog or /winlog parameter, PDMShell will create logs in the Windows event viewer."
   },
   "src/EDITVARS.html": {
     "href": "src/EDITVARS.html",
