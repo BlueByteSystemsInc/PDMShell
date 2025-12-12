@@ -3,6 +3,9 @@ description: Release Notes of PDMShell
 title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 ---
 
+# 3.0.19 (2025-12-11)
+- Added `winlog` parameter for pdmcli.exe. See remarks section of [dump command](DUMP.md).
+- Fixed single instance bug. All commands are now executed sequentially. Output is blocked during commands execution.
 
 # 3.0.18 (2025-12-08)
 - Rebuild. Previous faulty build.
