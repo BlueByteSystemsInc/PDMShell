@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>VERSIONUPGRADE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="VERSIONUPGRADE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Checks and upgrades SOLIDWORKS PDM file versions, performs reference validation, and optionally exports broken references to CSV.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/VERSIONUPGRADE.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="versionupgrade-command-documentation">VERSIONUPGRADE Command Documentation</h1>
+
+<h2 id="description">DESCRIPTION:</h2>
+<p>The <code>VersionUpgradeCommand</code> provides tools for <strong>bumping PDM revisions</strong>, <strong>validating file references</strong>, and <strong>exporting broken reference results to a CSV file</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>A SOLIDWORKS file upgrade increments the file version and thus the revision. Use <code>-bumprevision</code> reset to the revision back to the previous value prior to the file upgrade.</p>
+</div>
+<p>This command uses PDM’s internal engine to:</p>
+<ul>
+<li>Increment revision numbers in bulk</li>
+<li>Detect incorrect, missing, or version-mismatched references</li>
+<li>Output the reference check results to a CSV file that can be added or updated inside the PDM vault</li>
+</ul>
+<p>The CSV export uses the fields of the <code>EdmCheckRef</code> structure:</p>
+<ul>
+<li><code>mlParentFileID</code></li>
+<li><code>mlRefFileID</code></li>
+<li><code>mbsParentPath</code></li>
+<li><code>mbsRefPath</code></li>
+<li><code>mlRefVersion</code></li>
+<li><code>mlRefLatestVersion</code></li>
+<li><code>mlRefFolderID</code></li>
+</ul>
+<p>Each result row represents a reference that is out of date, missing, or mismatched according to PDM rules.</p>
+<hr>
+<h2 id="syntax">SYNTAX:</h2>
+<pre><code class="lang-bash">versionupgrade -search &lt;query&gt; [-recursive] [-bumprevision] [-referencescheck] [-csv &lt;fileName&gt;]
+</code></pre>
+<hr>
+<h2 id="parameters">PARAMETERS:</h2>
+<ul>
+<li><code>search</code><br>
+Search query used to locate files for the version upgrade operation.<br>
+If omitted, no files will be processed.</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Consult <a href="advancedsearch.html">advanced search</a> to learn how to create advanced search queries.</p>
+</div>
+<ul>
+<li><p><code>recursive</code><br>
+Searches through all subfolders from the current folder. Not required if using <code>Recursive=true</code> in <code>search</code>.</p>
+</li>
+<li><p><code>bumprevision</code><br>
+Increments the PDM revision of each file returned from the search.<br>
+Requires the logged-in user to have the permission:<br>
+<strong>Modify revision numbers (EdmSysRight_ModifyRevisionNumbers)</strong>.</p>
+</li>
+<li><p><code>referencescheck</code><br>
+Runs PDM’s <strong>Reference Check</strong>.
+This detects:</p>
+<ul>
+<li>Missing references</li>
+<li>Wrong versions</li>
+<li>Outdated references</li>
+<li>Broken or invalid reference paths</li>
+</ul>
+<p>Any issues found are stored in an internal list and may be exported via the <code>csv</code> parameter.</p>
+</li>
+<li><p><code>csv</code><br>
+Exports reference-check issues to a CSV file.<br>
+If the file exists in the vault, it is <strong>updated</strong>.<br>
+If the file does not exist, it is <strong>added</strong> to the vault.</p>
+</li>
+</ul>
+<p>The CSV contains:</p>
+<pre><code class="lang-bash">ParentFileID,RefFileID,ParentPath,RefPath,RefVersion,RefLatestVersion,RefFolderID
+</code></pre>
+<h3 id="behavior-notes-for-csv">Behavior notes for CSV:</h3>
+<ul>
+<li>Fully-qualified paths inside the vault are handled correctly.</li>
+<li>CSV escaping is applied (quotes, commas, newlines).</li>
+<li>UTF-8 encoding without BOM is used for compatibility.</li>
+<li>If the CSV file is checked out, a warning is returned.</li>
+</ul>
+<hr>
+<h2 id="workflow-overview">WORKFLOW OVERVIEW</h2>
+<h3 id="1-search-for-files">1. Search for files</h3>
+<p>The command executes a PDM search using the supplied query and optional recursion.</p>
+<h3 id="2-perform-requested-operations">2. Perform requested operations</h3>
+<p>Depending on parameters:</p>
+<ul>
+<li><code>-bumprevision</code> → increments the PDM revision counters</li>
+<li><code>-referencescheck</code> → checks all references for correctness</li>
+</ul>
+<h3 id="3-csv-export-optional">3. CSV Export (optional)</h3>
+<p>If both <code>search</code> and <code>referencescheck</code> are supplied, and <code>csv</code> is specified:</p>
+<ul>
+<li>Writes reference errors to a CSV</li>
+<li>Adds or updates the file in the vault</li>
+<li>Displays success, warnings, and error messages</li>
+</ul>
+<hr>
+<h2 id="notes">NOTES:</h2>
+<ul>
+<li><code>bumprevision</code> and <code>referencescheck</code> operate <em>only</em> on files returned by the search.</li>
+<li>CSV exporting is only active when <strong>both</strong><br>
+<code>search</code> <strong>and</strong> <code>referencescheck</code> are supplied.</li>
+<li>The reference check output may include many entries depending on assembly depth.</li>
+<li>This command does <strong>not</strong> modify file content — it only updates revision metadata or reference validation results.</li>
+<li>Bulk operations respect PDM permissions and may fail if the user lacks rights.</li>
+</ul>
+<hr>
+<h2 id="availability">AVAILABILITY</h2>
+<ul>
+<li><strong>3.0.13</strong></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/VERSIONUPGRADE.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

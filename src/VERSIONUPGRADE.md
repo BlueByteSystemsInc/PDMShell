@@ -8,6 +8,9 @@ title: VERSIONUPGRADE Command Documentation | PDMShell | SOLIDWORKS PDM
 
 The `VersionUpgradeCommand` provides tools for **bumping PDM revisions**, **validating file references**, and **exporting broken reference results to a CSV file**.
 
+>[!Note]
+> A SOLIDWORKS file upgrade increments the file version and thus the revision. Use `-bumprevision` reset to the revision back to the previous value prior to the file upgrade.
+
 This command uses PDM’s internal engine to:
 
 - Increment revision numbers in bulk  
