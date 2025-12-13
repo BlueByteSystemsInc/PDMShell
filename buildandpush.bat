@@ -1,7 +1,7 @@
 .\bin\docfx.exe .\docfx.json
-.\postbuild.ps1
+powershell -ExecutionPolicy Bypass -File .\postbuild.ps1
 .\bin\docfx.exe .\website.json
-.\postbuild_website.ps1
+powershell -ExecutionPolicy Bypass -File .\postbuild_website.ps1
 git add .
 git commit -m "updated docs"
 git push 

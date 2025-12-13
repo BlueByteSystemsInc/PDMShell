@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -37,7 +37,40 @@
         document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
       </script>
 
-  </head>
+      <!-- Open Graph Tags -->
+    <link rel="canonical" href="https://pdmshell.bluebyte.biz/src/index.html" /> 
+    <meta property="og:title" content="PDMShell â€“ Automate SOLIDWORKS PDM" />
+    <meta property="og:description" content="Automate check-ins, migrations, and batch operations in SOLIDWORKS PDM using PDMShell." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pdmshell.bluebyte.biz/src/index.html" />
+    <meta property="og:image" content="images/logo.png" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PDMShell â€“ Automate SOLIDWORKS PDM" />
+    <meta name="twitter:description" content="Automate your SOLIDWORKS PDM workflows effortlessly using PDMShell." />
+    <meta name="twitter:image" content="images/logo.png" />
+
+    <!-- Robots Tag -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PDMShell",
+      "operatingSystem": "Windows",
+      "applicationCategory": "CAD, SOLIDWORKS, PDM, Automation",
+      "offers": {
+        "@type": "Offer",
+        "price": "1949.99",
+        "priceCurrency": "USD"
+      },
+      "url": "https://pdmshell.bluebyte.biz/"
+    }
+    </script>
+</head>
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
@@ -306,9 +339,10 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span><a href='https://bluebyte.biz'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+          <span><a href='https://bluebyte.biz'>Blue Byte Systems Inc</a>. Made with Maple syrup ðŸ and Couscous ðŸ².</span>
         </div>
       </div>
     </footer>
   </body>
 </html>
+
