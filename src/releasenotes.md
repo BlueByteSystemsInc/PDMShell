@@ -3,6 +3,11 @@ description: Release Notes of PDMShell
 title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 ---
 
+# 3.0.20 (2025-12-20)
+- Fixed timeout issue with [Export](EXPORT.md) and [RunSwMacro](RUNSWMACRO.md).
+- Added `name`, `filePath` and `value` parameters to [INBOX](INBOX.md). 
+- `source` parameter default to current directory in [addtovaultcommmand](ADDTOVAULT.md). 
+
 # 3.0.19 (2025-12-11)
 - Added `winlog` parameter for pdmcli.exe. See remarks section of [dump command](DUMP.md).
 - Fixed single instance bug. All commands are now executed sequentially. Output is blocked during commands execution.

@@ -88,14 +88,14 @@
 <h1 id="inbox-command-documentation">INBOX Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>Opens the PDM inbox and sends a message as the logged-in user.</p>
+<p>Opens the PDM inbox or sends a message as the logged-in user.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">inbox -message
+<pre><code class="lang-bash">inbox -filePath -name -value
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<ul>
-<li><code>message</code>: The message to send. Can be HTML code.</li>
-</ul>
+<p>-<code>name</code>: Name of the user to send the message to.
+-<code>value</code>: Message: supports evaluation against the <code>filePath</code>.
+-<code>filePath</code>: Associated file</p>
 <h2 id="examples">EXAMPLES:</h2>
 <pre><code class="lang-bash">inbox -message 'File checked in successfully'
 # sends the specified message to the logged-in user 

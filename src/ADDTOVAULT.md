@@ -29,7 +29,7 @@ Specifies the target directory. If not specified current directory is used. If u
 (Optional) A search query to filter files or directories to be added to the vault. This is **File Explorer** search query. Use * as a wildcard.
 
 - `source`:
-(Required) Specifies the source file or directory to be added to the vault.
+Specifies the source file or directory to be added to the vault. **Default to the current folder in PDM if not specified.**
 
 - `ignoreex`:
 (Optional) Ignores files that already exist in the vault. This prevents overwriting existing files.
