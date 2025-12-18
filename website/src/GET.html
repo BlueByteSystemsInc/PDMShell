@@ -99,7 +99,47 @@
 <li><p><code>filePath</code>: The file(s) to retrieve. This is the default parameter.</p>
 </li>
 </ul>
-<p>-<code>version</code>: The version of the file to retrieve.</p>
+<p>-<code>version</code>:  (Optional) The version of the file to retrieve</p>
+<p>-<code>directory</code>: Folder where to deposit the file. Can be outside vault. Do not end with \.</p>
+<p>-<code>getoptions</code>: (Optional). Allows you to cache references as well:</p>
+<table>
+<thead>
+<tr>
+<th>Option Name (CLI)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simple</td>
+<td>Retrieves the file with no additional options applied.</td>
+</tr>
+<tr>
+<td>MakeReadOnly</td>
+<td>Marks the retrieved file as read-only in the local cache.</td>
+</tr>
+<tr>
+<td>DisableRefresh</td>
+<td>Does not refresh File Explorer after the file is retrieved.</td>
+</tr>
+<tr>
+<td>RefsOnlyMissing</td>
+<td>Retrieves only referenced files that are not already present on the local hard disk.</td>
+</tr>
+<tr>
+<td>RefsVerLatest</td>
+<td>Retrieves the latest versions of referenced files that the user has permission to see, instead of the attached (as-built) versions used when the file was checked in.</td>
+</tr>
+<tr>
+<td>RefsOverwriteLocked</td>
+<td>Retrieves referenced files even if they are checked out and overwrites local changes; <strong>warning:</strong> any previous modifications to checked-out files will be lost.</td>
+</tr>
+<tr>
+<td>ForPreview</td>
+<td>Retrieves only referenced files required for SOLIDWORKS PDM preview when retrieving the referencing file.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="examples">EXAMPLES:</h2>
 <pre><code class="lang-bash">get -filePath &quot;file1.sldprt&quot; -Version 2
 </code></pre>

@@ -3,7 +3,12 @@ description: Release Notes of PDMShell
 title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 ---
 
-# 3.0.20 (2025-12-20)
+# 3.0.21 (2025-12-18)
+- Fixed single instance bug. All commands are now executed sequentially. Output is not during commands execution anymore. This was in 3.0.19 and 20
+- Added `getoptions` in [Get](GET.md)
+- Added `checkoutoptions` in [Checkout](CHECKOUT.md)
+
+# 3.0.20 (2025-12-12)
 - Fixed timeout issue with [Export](EXPORT.md) and [RunSwMacro](RUNSWMACRO.md).
 - Added `name`, `filePath` and `value` parameters to [INBOX](INBOX.md). 
 - `source` parameter default to current directory in [addtovaultcommmand](ADDTOVAULT.md). 
