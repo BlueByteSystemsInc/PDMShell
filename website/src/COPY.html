@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Get Command Documentation  | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>COPY Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Get Command Documentation  | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="COPY Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Retrieves a specified version of a file or files (via search).">
+      <meta name="description" content="Copies files inside the SOLIDWORKS PDM vault from a source file or folder to a target directory.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/GET.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/COPY.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,73 +85,75 @@
         </div>
 
         <article data-uid="">
-<h1 id="get-command-documentation">GET Command Documentation</h1>
+<h1 id="copy-command-documentation">COPY Command Documentation</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
-<p>Retrieves a specified version of a file or files (via search).</p>
-<h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">get -search -filePath -version
-</code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="description">DESCRIPTION</h2>
+<p>Performs a vault-to-vault copy operation in SOLIDWORKS PDM.</p>
+<p>The <code>copy</code> command creates <strong>new files with new File IDs</strong> inside the vault by copying:</p>
 <ul>
-<li><p><code>search</code>: The search operation to use.</p>
+<li>A single file</li>
+<li>All files in a folder</li>
+<li>Files found using a search scoped to a source folder</li>
+</ul>
+<p>This command does <strong>not</strong> add files from disk and does <strong>not</strong> modify the original files.</p>
+<h2 id="syntax">SYNTAX</h2>
+<pre><code class="lang-bash">copy -source -directory -search -recursive -name -ignoreexisting
+</code></pre>
+<h2 id="parameters">PARAMETERS</h2>
+<ul>
+<li><p><code>source</code><br>
+The source file or folder inside the vault.</p>
+<ul>
+<li>If a file path is provided (ends with an extension), only that file is copied.</li>
+<li>If a folder path is provided, all matching files in that folder are copied.</li>
+<li>Relative paths are resolved against the current folder.</li>
+</ul>
 </li>
-<li><p><code>filePath</code>: The file(s) to retrieve. This is the default parameter.</p>
+<li><p><code>directory</code><br>
+The destination folder inside the vault where files will be copied.</p>
+</li>
+<li><p><code>search</code><br>
+Optional PDM search keyword used to filter files in the source folder.<br>
+The search is scoped to the source folder and supports <code>%</code> wildcards.</p>
+</li>
+<li><p><code>recursive</code><br>
+Optional. When used with <code>search</code>, includes subfolders of the source folder.</p>
+</li>
+<li><p><code>name</code><br>
+Required. Specifies the destination file name.<br>
+<a href="EVAL.html">Alias expressions are evaluated <strong>only for the destination name</strong></a>. Extension required.</p>
+</li>
+<li><p><code>ignoreexisting</code><br>
+Not implemented</p>
 </li>
 </ul>
-<p>-<code>version</code>:  (Optional) The version of the file to retrieve</p>
-<p>-<code>directory</code>: Folder where to deposit the file. Can be outside vault. Do not end with \.</p>
-<p>-<code>getoptions</code>: (Optional). Allows you to cache references as well:</p>
-<table>
-<thead>
-<tr>
-<th>Option Name (CLI)</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Simple</td>
-<td>Retrieves the file with no additional options applied.</td>
-</tr>
-<tr>
-<td>MakeReadOnly</td>
-<td>Marks the retrieved file as read-only in the local cache.</td>
-</tr>
-<tr>
-<td>DisableRefresh</td>
-<td>Does not refresh File Explorer after the file is retrieved.</td>
-</tr>
-<tr>
-<td>RefsOnlyMissing</td>
-<td>Retrieves only referenced files that are not already present on the local hard disk.</td>
-</tr>
-<tr>
-<td>RefsVerLatest</td>
-<td>Retrieves the latest versions of referenced files that the user has permission to see, instead of the attached (as-built) versions used when the file was checked in.</td>
-</tr>
-<tr>
-<td>RefsOverwriteLocked</td>
-<td>Retrieves referenced files even if they are checked out and overwrites local changes; <strong>warning:</strong> any previous modifications to checked-out files will be lost.</td>
-</tr>
-<tr>
-<td>ForPreview</td>
-<td>Retrieves only referenced files required for SOLIDWORKS PDM preview when retrieving the referencing file.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">get -filePath &quot;file1.sldprt&quot; -Version 2
+<h2 id="examples">EXAMPLES</h2>
+<h3 id="copy-a-single-file-to-another-folder">Copy a single file to another folder</h3>
+<pre><code class="lang-bash">copy -source part1.sldprt -directory /Vault/Projects/Released -name part2.sldprt
 </code></pre>
-<h2 id="remarks">REMARKS:</h2>
+<h3 id="copy-a-file-and-rename-it">Copy a file and rename it</h3>
+<pre><code class="lang-bash">copy -source part1.sldprt -directory /Vault/Projects/Released -name part1_revA.sldprt
+</code></pre>
+<h3 id="copy-all-files-from-a-folder">Copy all files from a folder</h3>
+<pre><code class="lang-bash">copy -source Vault/Projects/WIP -directory /Vault/Projects/Released -name &quot;$namewithouextension-new$extension&quot;
+</code></pre>
+<h3 id="copy-files-using-a-search-filter">Copy files using a search filter</h3>
+<pre><code class="lang-bash">copy -source Vault/Projects/WIP -search %.slddrw -directory Vault/Projects/Released -name &quot;$namewithouextension-new$extension&quot;
+</code></pre>
+<h3 id="copy-files-and-append-new-to-the-old-name">Copy files and append new to the old name</h3>
+<pre><code class="lang-bash">copy -source Vault/Projects/WIP -search %.sldprt -directory Vault/Projects/Released -name &quot;$namewithouextension-new$extension&quot;
+</code></pre>
+<h2 id="remarks">REMARKS</h2>
 <ul>
-<li>The <code>search</code> parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
+<li>If <code>source</code> is a file, <code>search</code> and <code>recursive</code> are ignored.</li>
+<li>If <code>source</code> is a folder and <code>search</code> is not provided, all files in that folder are copied.</li>
+<li>The <code>search</code> parameter does not search the entire vault, only the source folder</li>
 </ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/GET.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/COPY.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
@@ -168,7 +170,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span><a href='https://bluebyte.biz'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
         </div>
       </div>
     </footer>

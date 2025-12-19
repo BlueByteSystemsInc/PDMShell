@@ -967,6 +967,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/COPY.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/COPY.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/COPYTREE.md",
       "output": {
         ".html": {

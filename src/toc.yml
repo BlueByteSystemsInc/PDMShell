@@ -61,6 +61,10 @@
 - name: checkout
   href: checkout.md
 
+- name: Copy files (within the vault)
+- name: Copy
+  href: COPY.md
+
 - name: clear cache
 - name: clearCache
   href: CLEARCACHE.md
