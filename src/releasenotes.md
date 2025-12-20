@@ -3,6 +3,9 @@ description: Release Notes of PDMShell
 title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 ---
 
+# 3.0.23 (2025-12-20)
+- Added [update references command](UPDATEREFERENCES.md)
+
 # 3.0.22 (2025-12-19)
 - Added [copy command](COPY.md)
 

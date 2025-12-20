@@ -1357,6 +1357,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/UPDATEREFERENCES.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/UPDATEREFERENCES.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/USERS.md",
       "output": {
         ".html": {

@@ -221,6 +221,10 @@
 - name: undoCheckout
   href: undocheckout.md
 
+- name: Update references
+- name: Update references
+  href: UPDATEREFERENCES.md
+
 - name: Show version information
 - name: version
   href: version.md
