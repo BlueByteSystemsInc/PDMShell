@@ -3,6 +3,10 @@ description: Release Notes of PDMShell
 title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 ---
 
+
+# 3.0.24 (2025-12-22)
+- parameter tooltips (little box that shows up next to the parameter when you type in the command box) are now uniaue for each command. Over the next releases, we will update all tooltips for all parameters to make them more clear. The same parameter can be used in multiple commands having different function in each.
+
 # 3.0.23 (2025-12-20)
 - Added [update references command](UPDATEREFERENCES.md)
 
