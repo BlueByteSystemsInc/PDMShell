@@ -3,6 +3,12 @@ description: Release Notes of PDMShell
 title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 ---
 
+>[!Important]
+> To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and then **install** the latest version. **Do not update installed version.**
+
+# 3.0.24 (2025-12-23)
+- No added commands or bug fixes.  
+- Updated parameters tooltip in `addtovault`, `rename`, `cd` and others.
 
 # 3.0.24 (2025-12-22)
 - parameter tooltips (little box that shows up next to the parameter when you type in the command box) are now uniaue for each command. Over the next releases, we will update all tooltips for all parameters to make them more clear. The same parameter can be used in multiple commands having different function in each.
