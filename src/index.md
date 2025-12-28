@@ -118,15 +118,15 @@ description: PowerShell like commandline interpreter and data migration tool for
 <div class="header-container">
    
     <div class="header-text">
-      PowerShell-Like Features For<br>
-      SOLIDWORKS PDM Professional
+      Best Commandline for <br>
+      SOLIDWORKS PDM Professional. 
     </div>
     </div>
-  <video src="https://bluebyte.biz/wp-content/pdmshellvideos/demo.mp4" autoplay muted controls>
+ <iframe width="850" height="500" src="https://www.youtube.com/embed/UgNCkIuo-CM?si=h3U4PrZX-ES0bC8T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     
   </video>
 <p style="color: #bbbbbb; margin:auto; font-family:  'Open Sans', sans-serif;">
-  This video autoplays silently so you can watch without sound. Unmute if you'd like to hear it.
+  A 29-min walkthrough of PDMShell covering the most commonly used commands
 </p>
 </div>
 
@@ -144,7 +144,7 @@ description: PowerShell like commandline interpreter and data migration tool for
 <br>
 
 <div style="text-align: center;">
-  <h2 style="color: #bb86fc; margin-bottom: 10px;">PDMShell is free.</h2>
+  <h2 style="color: #bb86fc; margin-bottom: 10px;">PDMShell is free to download and use*.</h2>
   <p style="color: #e0e0e0; font-family: Arial, sans-serif; margin: 0 auto; max-width: 800px;">
     PDMShell is free to use and allows you to test all commands with some limits without committing to a license. To buy a license, please visit the 
     <a href="https://bluebyte.biz/product/pdmshell" style="color: #bb86fc; text-decoration: none;">Blue Byte Systems online shop</a>. Read details below.
@@ -228,4 +228,6 @@ Need more information or want to discuss how PDMShell can fit into your workflow
 ## Contact Us
 
 For more information or to get in touch with our support team, please refer to the [Contact Us](https://bluebyte.biz/contact) page.
+
+*See EULA page for licensing requirements and restrictions for SOLIDWORKS partners and resellers.
 
