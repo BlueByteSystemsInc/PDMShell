@@ -18,7 +18,7 @@ get -search -filePath -version
 
 -`version`:  (Optional) The version of the file to retrieve
 
--`directory`: Folder where to deposit the file. Can be outside vault. Do not end with \\.
+-`directory`: (Optional) Folder where to deposit the file. Can be outside vault. Do not end with \\. If not specified, file is cached in its folder. 
 
 -`getoptions`: (Optional). Allows you to cache references as well:
 

@@ -6,7 +6,13 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 >[!Important]
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and then **install** the latest version. **Do not update installed version.**
 
-# 3.0.24 (2025-12-23)
+# 3.0.26 (2026-01-05)
+- Happy New Year 2026 🎊!
+- [get command](GET.md): `Directory` parameter is now **optional**. If not specified, the file is cached in its folder. If specified with an empty value, the file is cached at the root of the vault.
+- Update tooltip for the `source` parameter in the [clear cache command](CLEARACACHE.md)
+
+
+# 3.0.25 (2025-12-23)
 - No added commands or bug fixes.  
 - Updated parameters tooltip in `addtovault`, `rename`, `cd` and others.
 
