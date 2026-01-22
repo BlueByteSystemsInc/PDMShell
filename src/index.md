@@ -142,7 +142,7 @@ description: PowerShell like commandline interpreter and data migration tool for
 </div>
 
 <br>
-
+<!-- 
 <div style="text-align: center;">
   <h2 style="color: #bb86fc; margin-bottom: 10px;">PDMShell is free to download and use*.</h2>
   <p style="color: #e0e0e0; font-family: Arial, sans-serif; margin: 0 auto; max-width: 800px;">
@@ -208,7 +208,7 @@ description: PowerShell like commandline interpreter and data migration tool for
   <a href="https://apps.microsoft.com/detail/XPFFXTTJDCW85C?hl=en-US&gl=CA&ocid=pdpshare" target="_blank">
     <img src="../images/microsoftstore.png" alt="Microsoft Store" width="300" height="150">
   </a>
-</div>
+</div> -->
 
 ## Need more power? Choose Premium.
 

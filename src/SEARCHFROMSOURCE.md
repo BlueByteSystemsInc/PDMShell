@@ -21,8 +21,9 @@ Optionally, the command can write the results to a CSV file and add/update that 
 ---
 
 ## SYNTAX
+```bash
 searchfromsource -filePath -recursive -csv
-
+```
 ---
 
 ## PARAMETERS
@@ -83,13 +84,13 @@ Notes:
 ### Input Example 1: Plain file names (most common)
 
 This is the simplest format where the first column contains exact file names:
-
+```bash
 FileName  
 bracket.sldprt  
 frame.sldasm  
 cover.sldprt  
 motor_mount.sldprt  
-
+```
 How it behaves:
 - Each row is searched individually
 - PDMShell tries to locate the file in the vault (based on your current folder and `-recursive` flag)
@@ -99,13 +100,13 @@ How it behaves:
 ### Input Example 2: File names with extensions mixed (multi-document types)
 
 You can mix parts, assemblies, drawings, PDFs, etc.
-
+```bash
 FileName  
 100023.sldprt  
 100023.slddrw  
 Datasheet_100023.pdf  
 SpecSheet.docx  
-
+```
 How it behaves:
 - Each row is treated as a separate lookup item
 - Results are returned only if PDM finds a matching file
@@ -117,10 +118,11 @@ How it behaves:
 If your source file contains wildcard patterns, each row can be used as a search token:
 
 Query  
+```bash
 %.sldprt  
 %.sldasm  
 %.slddrw  
-
+```
 How it behaves:
 - Each row becomes its own search query
 - Useful for generating bulk reports from common patterns
@@ -132,9 +134,10 @@ How it behaves:
 You can pass more powerful search values in the first column (same idea as `-search` in the `search` command).
 
 Query  
-"Name=%.slddrw"  
+```
+"Name=%.slddrw"  // all drawings 
 "Name=%.sldprt;Locked=true" // All parts that are checked out   
-
+```
 How it behaves:
 - Each row is passed directly into the search engine
 - Results depend on your Advanced Search capabilities and syntax rules
@@ -166,21 +169,25 @@ ID,FileName,Path,ParentFolderID,ParentFolder,IsCheckedOut,WhereUsedIds
 ## EXAMPLES
 
 ### Example 1: Run search from a source CSV
+```bash
 searchfromsource -filePath "input.csv"
-
+```
 Reads `input.csv` and searches each row item.
 
 ---
 
 ### Example 2: Recursive search
+```bash
 searchfromsource -filePath "input.csv" -recursive
-
+```
 Searches for each item recursively through subfolders.
 
 ---
 
 ### Example 3: Export results to a CSV file
+```bash
 searchfromsource -filePath "input.csv" -recursive -csv "results.csv"
+```
 
 Writes results into `results.csv`.  
 If `results.csv` exists in the vault, the command attempts to update it.  

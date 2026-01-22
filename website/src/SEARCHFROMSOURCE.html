@@ -100,7 +100,8 @@
 <p>Optionally, the command can write the results to a CSV file and add/update that CSV in the vault.</p>
 <hr>
 <h2 id="syntax">SYNTAX</h2>
-<p>searchfromsource -filePath -recursive -csv</p>
+<pre><code class="lang-bash">searchfromsource -filePath -recursive -csv
+</code></pre>
 <hr>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="filepath"><code>filePath</code></h3>
@@ -152,11 +153,12 @@ drawing1.slddrw</p>
 <hr>
 <h3 id="input-example-1-plain-file-names-most-common">Input Example 1: Plain file names (most common)</h3>
 <p>This is the simplest format where the first column contains exact file names:</p>
-<p>FileName<br>
-bracket.sldprt<br>
-frame.sldasm<br>
-cover.sldprt<br>
-motor_mount.sldprt</p>
+<pre><code class="lang-bash">FileName  
+bracket.sldprt  
+frame.sldasm  
+cover.sldprt  
+motor_mount.sldprt  
+</code></pre>
 <p>How it behaves:</p>
 <ul>
 <li>Each row is searched individually</li>
@@ -165,11 +167,12 @@ motor_mount.sldprt</p>
 <hr>
 <h3 id="input-example-2-file-names-with-extensions-mixed-multi-document-types">Input Example 2: File names with extensions mixed (multi-document types)</h3>
 <p>You can mix parts, assemblies, drawings, PDFs, etc.</p>
-<p>FileName<br>
-100023.sldprt<br>
-100023.slddrw<br>
-Datasheet_100023.pdf<br>
-SpecSheet.docx</p>
+<pre><code class="lang-bash">FileName  
+100023.sldprt  
+100023.slddrw  
+Datasheet_100023.pdf  
+SpecSheet.docx  
+</code></pre>
 <p>How it behaves:</p>
 <ul>
 <li>Each row is treated as a separate lookup item</li>
@@ -178,10 +181,11 @@ SpecSheet.docx</p>
 <hr>
 <h3 id="input-example-3-using-wildcards--in-the-input">Input Example 3: Using wildcards (<code>%</code>) in the input</h3>
 <p>If your source file contains wildcard patterns, each row can be used as a search token:</p>
-<p>Query<br>
-%.sldprt<br>
-%.sldasm<br>
-%.slddrw</p>
+<p>Query</p>
+<pre><code class="lang-bash">%.sldprt  
+%.sldasm  
+%.slddrw  
+</code></pre>
 <p>How it behaves:</p>
 <ul>
 <li>Each row becomes its own search query</li>
@@ -190,9 +194,10 @@ SpecSheet.docx</p>
 <hr>
 <h3 id="input-example-4-advanced-search-expressions-in-the-input">Input Example 4: Advanced Search expressions in the input</h3>
 <p>You can pass more powerful search values in the first column (same idea as <code>-search</code> in the <code>search</code> command).</p>
-<p>Query<br>
-&quot;Name=%.slddrw&quot;<br>
-&quot;Name=%.sldprt;Locked=true&quot; // All parts that are checked out</p>
+<p>Query</p>
+<pre><code>&quot;Name=%.slddrw&quot;  // all drawings 
+&quot;Name=%.sldprt;Locked=true&quot; // All parts that are checked out   
+</code></pre>
 <p>How it behaves:</p>
 <ul>
 <li>Each row is passed directly into the search engine</li>
@@ -219,15 +224,18 @@ SpecSheet.docx</p>
 <hr>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1-run-search-from-a-source-csv">Example 1: Run search from a source CSV</h3>
-<p>searchfromsource -filePath &quot;input.csv&quot;</p>
+<pre><code class="lang-bash">searchfromsource -filePath &quot;input.csv&quot;
+</code></pre>
 <p>Reads <code>input.csv</code> and searches each row item.</p>
 <hr>
 <h3 id="example-2-recursive-search">Example 2: Recursive search</h3>
-<p>searchfromsource -filePath &quot;input.csv&quot; -recursive</p>
+<pre><code class="lang-bash">searchfromsource -filePath &quot;input.csv&quot; -recursive
+</code></pre>
 <p>Searches for each item recursively through subfolders.</p>
 <hr>
 <h3 id="example-3-export-results-to-a-csv-file">Example 3: Export results to a CSV file</h3>
-<p>searchfromsource -filePath &quot;input.csv&quot; -recursive -csv &quot;results.csv&quot;</p>
+<pre><code class="lang-bash">searchfromsource -filePath &quot;input.csv&quot; -recursive -csv &quot;results.csv&quot;
+</code></pre>
 <p>Writes results into <code>results.csv</code>.<br>
 If <code>results.csv</code> exists in the vault, the command attempts to update it.<br>
 If it does not exist, the command creates it and adds it to the vault.</p>
