@@ -81,7 +81,7 @@
 - name: delete
   href: DELETE.md
 
-- name: Delete files from CSV
+- name: Delete files (from CSV)
 - name: deleteFromSource
   href: DELETEFROMSOURCE.md
 
@@ -153,7 +153,7 @@
 - name: mkVar
   href: mkvar.md
 
-- name: Print information from CSV
+- name: Print information (from CSV)
 - name: PrintFromSource
   href: PRINTFROMSOURCE.md
 
@@ -177,7 +177,7 @@
 - name: rename
   href: rename.md
 
-- name: Rename files from CSV
+- name: Rename files (from CSV)
 - name: renameFromSource
   href: RENAMEFROMSOURCE.md
 
@@ -197,11 +197,15 @@
 - name: search
   href: search.md
 
+- name: Search for files (from CSV)
+- name: searchFromSource
+  href: SEARCHFROMSOURCE.md
+
 - name: Set file PDM revision
 - name: setRevision
   href: SETREVISION.md
 
-- name: Set file PDM revision from CSV
+- name: Set file PDM revision (from CSV)
 - name: SetRevisionFromSource
   href: SETREVISIONFROMSOURCE.md
 
@@ -209,7 +213,7 @@
 - name: setVar
   href: setvar.md
 
-- name: Set variables from CSV
+- name: Set variables (from CSV)
 - name: setVarsFromSource
   href: SETVARSFROMSOURCE.md
 

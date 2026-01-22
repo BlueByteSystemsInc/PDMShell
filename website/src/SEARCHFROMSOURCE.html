@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>SEARCHFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="SEARCHFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="The searchfromsource command reads a CSV file containing file names or search tokens, searches for each item in the SOLIDWORKS PDM vault, and optionally exports results to a CSV file.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/SEARCHFROMSOURCE.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="searchfromsource-command-documentation">SEARCHFROMSOURCE Command Documentation</h1>
+
+<h2 id="description">DESCRIPTION</h2>
+<p>The <code>searchfromsource</code> command reads a <strong>CSV source file</strong> and uses the <strong>first column</strong> (ignoring the header) as input items to search for in the vault.</p>
+<p>For every row in the source CSV, PDMShell performs a vault search and returns information such as:</p>
+<ul>
+<li>File ID</li>
+<li>Full vault path</li>
+<li>Parent folder ID</li>
+<li>Checked-out status</li>
+<li>Where Used parent file IDs</li>
+</ul>
+<p>Optionally, the command can write the results to a CSV file and add/update that CSV in the vault.</p>
+<hr>
+<h2 id="syntax">SYNTAX</h2>
+<p>searchfromsource -filePath -recursive -csv</p>
+<hr>
+<h2 id="parameters">PARAMETERS</h2>
+<h3 id="filepath"><code>filePath</code></h3>
+<p>Path to the <strong>source CSV file</strong> to read input values.</p>
+<ul>
+<li>If the path is <strong>absolute</strong>, PDMShell uses it directly.</li>
+<li>If the path is <strong>relative</strong>, PDMShell combines it with the current directory.</li>
+</ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>The source file must exist in the vault (so it can be downloaded locally and read).</p>
+</div>
+<hr>
+<h3 id="recursive"><code>recursive</code></h3>
+<p>If specified, the search will recursively search through all subfolders.</p>
+<ul>
+<li>When omitted: search is performed in the current directory scope (non-recursive).</li>
+<li>When included: recursive search is enabled.</li>
+</ul>
+<hr>
+<h3 id="csv"><code>csv</code></h3>
+<p>Optional output CSV file name/path.</p>
+<p>If provided, the command will write the search results to a CSV file containing one row per input item.</p>
+<p>Supported behaviors:</p>
+<ul>
+<li>If the CSV file already exists in the vault, PDMShell will attempt to overwrite/update it.</li>
+<li>If the CSV file does not exist, PDMShell will create it and add it to the vault.</li>
+</ul>
+<hr>
+<h2 id="input-csv-format">INPUT CSV FORMAT</h2>
+<p>The command reads:</p>
+<ul>
+<li>Comma-delimited CSV</li>
+<li>First row is treated as a header and ignored</li>
+<li>Only the <strong>first column</strong> is used</li>
+</ul>
+<p>Example:</p>
+<p>FileName<br>
+part1.sldprt<br>
+asm_top.sldasm<br>
+drawing1.slddrw</p>
+<p>Notes:</p>
+<ul>
+<li><strong>THE VALUES CAN BE A SEARCH QUERY. PLEASE SEE</strong> <a href="advancedsearch.html">ADVANCED SEARCH ARTICLE FOR MORE INFORMATION</a>.</li>
+<li>Empty rows are ignored</li>
+<li>Values are trimmed</li>
+<li>Each value becomes the search input token</li>
+</ul>
+<hr>
+<h3 id="input-example-1-plain-file-names-most-common">Input Example 1: Plain file names (most common)</h3>
+<p>This is the simplest format where the first column contains exact file names:</p>
+<p>FileName<br>
+bracket.sldprt<br>
+frame.sldasm<br>
+cover.sldprt<br>
+motor_mount.sldprt</p>
+<p>How it behaves:</p>
+<ul>
+<li>Each row is searched individually</li>
+<li>PDMShell tries to locate the file in the vault (based on your current folder and <code>-recursive</code> flag)</li>
+</ul>
+<hr>
+<h3 id="input-example-2-file-names-with-extensions-mixed-multi-document-types">Input Example 2: File names with extensions mixed (multi-document types)</h3>
+<p>You can mix parts, assemblies, drawings, PDFs, etc.</p>
+<p>FileName<br>
+100023.sldprt<br>
+100023.slddrw<br>
+Datasheet_100023.pdf<br>
+SpecSheet.docx</p>
+<p>How it behaves:</p>
+<ul>
+<li>Each row is treated as a separate lookup item</li>
+<li>Results are returned only if PDM finds a matching file</li>
+</ul>
+<hr>
+<h3 id="input-example-3-using-wildcards--in-the-input">Input Example 3: Using wildcards (<code>%</code>) in the input</h3>
+<p>If your source file contains wildcard patterns, each row can be used as a search token:</p>
+<p>Query<br>
+%.sldprt<br>
+%.sldasm<br>
+%.slddrw</p>
+<p>How it behaves:</p>
+<ul>
+<li>Each row becomes its own search query</li>
+<li>Useful for generating bulk reports from common patterns</li>
+</ul>
+<hr>
+<h3 id="input-example-4-advanced-search-expressions-in-the-input">Input Example 4: Advanced Search expressions in the input</h3>
+<p>You can pass more powerful search values in the first column (same idea as <code>-search</code> in the <code>search</code> command).</p>
+<p>Query<br>
+&quot;Name=%.slddrw&quot;<br>
+&quot;Name=%.sldprt;Locked=true&quot; // All parts that are checked out</p>
+<p>How it behaves:</p>
+<ul>
+<li>Each row is passed directly into the search engine</li>
+<li>Results depend on your Advanced Search capabilities and syntax rules</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For full syntax and supported fields/operators, see: <a href="advancedsearch.html">advancedsearch.md</a></p>
+</div>
+<hr>
+<h2 id="output-csv-format">OUTPUT CSV FORMAT</h2>
+<p>When <code>-csv</code> is used, PDMShell generates the following columns:</p>
+<p>ID,FileName,Path,ParentFolderID,ParentFolder,IsCheckedOut,WhereUsedIds</p>
+<h3 id="column-definitions">Column Definitions</h3>
+<ul>
+<li><strong>ID</strong>: PDM file ID returned by search</li>
+<li><strong>FileName</strong>: The original value read from the source CSV first column</li>
+<li><strong>Path</strong>: Full vault path returned by the search result</li>
+<li><strong>ParentFolderID</strong>: Folder ID containing the file</li>
+<li><strong>ParentFolder</strong>: Folder path (derived from the result path)</li>
+<li><strong>IsCheckedOut</strong>: <code>True/False</code> based on PDM lock status</li>
+<li><strong>WhereUsedIds</strong>: Comma-separated list of parent file IDs (from the reference tree)</li>
+</ul>
+<hr>
+<h2 id="examples">EXAMPLES</h2>
+<h3 id="example-1-run-search-from-a-source-csv">Example 1: Run search from a source CSV</h3>
+<p>searchfromsource -filePath &quot;input.csv&quot;</p>
+<p>Reads <code>input.csv</code> and searches each row item.</p>
+<hr>
+<h3 id="example-2-recursive-search">Example 2: Recursive search</h3>
+<p>searchfromsource -filePath &quot;input.csv&quot; -recursive</p>
+<p>Searches for each item recursively through subfolders.</p>
+<hr>
+<h3 id="example-3-export-results-to-a-csv-file">Example 3: Export results to a CSV file</h3>
+<p>searchfromsource -filePath &quot;input.csv&quot; -recursive -csv &quot;results.csv&quot;</p>
+<p>Writes results into <code>results.csv</code>.<br>
+If <code>results.csv</code> exists in the vault, the command attempts to update it.<br>
+If it does not exist, the command creates it and adds it to the vault.</p>
+<hr>
+<h2 id="notes">NOTES</h2>
+<ul>
+<li>This command requires the user to be logged in to a vault.</li>
+<li>The input CSV must be accessible locally (PDM will download the file when needed).</li>
+<li>If the vault search yields no result for a row, the command prints a warning and continues.</li>
+<li>Output CSV values are CSV-escaped (commas, quotes, newlines).</li>
+<li>Where Used results are generated using the reference tree lookup.</li>
+</ul>
+<hr>
+<h2 id="limitations">LIMITATIONS</h2>
+<ul>
+<li>Only the first search result is used (<code>GetFirstResult()</code>).</li>
+<li>Only file results are processed (folder results are ignored).</li>
+<li>The input file is interpreted as comma-delimited CSV only.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/SEARCHFROMSOURCE.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
