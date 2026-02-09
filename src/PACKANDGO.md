@@ -16,20 +16,19 @@ This command launches SOLIDWORKS, executes Pack and Go for each assembly, and sa
 
 By default, only `.sldasm` files are processed.
 
----
-
 ## SYNTAX:
 
+```bash
 packg -source -directory [-search] [-includedrawings] [-recursive] [-prefix] [-suffix] [-timeout]
+```
 
----
 
 ## PARAMETERS:
 
-- source  
+- `source`  
   Single assembly file, directory of assemblies, or CSV file containing assembly paths.
 
-- directory  
+- `directory`  
   Destination folder where Pack and Go results will be saved.  
   Supports dynamic placeholders:
   - $filename
@@ -38,25 +37,23 @@ packg -source -directory [-search] [-includedrawings] [-recursive] [-prefix] [-s
   - $date
   - $year
 
-- search  
+- `search`  
   Search pattern applied when source is a directory.  
-  Default value is *.sldasm.  
-  Supports regular expressions.
+  Default value is `\.sldasm$`. Supports [regular expressions](https://en.wikipedia.org/wiki/Regular_expression).
 
-- includedrawings  
+- `includedrawings`  
   Includes associated drawing files (.slddrw) in the Pack and Go operation.
 
-- recursive  
+- `recursive`  
   Searches subdirectories when source is a directory.
 
-- prefix  
+- `prefix`  
   Adds a prefix to all generated file names.
 
-- suffix  
+- `suffix`  
   Adds a suffix to all generated file names.
 
-- timeout  
-  SOLIDWORKS startup timeout in seconds. Default is 30.
+- `timeout` SOLIDWORKS startup and pack and go timeout in seconds. Default is 30.
 
 ---
 
@@ -67,53 +64,52 @@ packg -source -directory [-search] [-includedrawings] [-recursive] [-prefix] [-s
 ## Packs a single assembly and saves results to D:\Packages
 packg -source "C:\Projects\Top.sldasm" -directory "D:\Packages"
 ```
----
+
 
 ### Example 2: Pack All Assemblies in a Directory
 ```bash
 ## Packs all assemblies (*.sldasm) in the specified folder
 packg -source "C:\Projects" -directory "D:\Packages"
 ```
----
+
 
 ### Example 3: Recursive Directory Search
 ```bash
 ## Searches subfolders and packs all assemblies found
 packg -source "C:\Projects" -directory "D:\Packages" -recursive
 ```
----
 
 ### Example 4: Use Regex Search
 ```bash
 ## Packs only assemblies that start with TOP_
 packg -source "C:\Projects" -search "^TOP_.*\.sldasm$" -directory "D:\Packages"
 ```
----
 
 ### Example 5: Pack Assemblies from CSV
 
-## Reads assembly paths from a CSV file and packs each one
+
 ```bash
+## Reads assembly paths from a CSV file and packs each one 
 packg -source "C:\Batch\assemblies.csv" -directory "D:\Packages"
 ```
----
+
 
 ### Example 6: Include Drawings
 ```bash
 ## Includes associated drawing files in Pack and Go
 packg -source "C:\Projects\Top.sldasm" -directory "D:\Packages" -includedrawings
 ```
----
+
 
 ### Example 7: Prefix and Suffix
 ```bash
 ## Adds prefix and suffix to all packed files
 packg -source "C:\Projects\Top.sldasm" -directory "D:\Packages" -prefix "SW_" -suffix "_Release"
 ```
----
+
 
 ### Example 8: Increase SOLIDWORKS Timeout
 ```bash
 ## Allows more time for SOLIDWORKS to launch
-packg -source "C:\Projects" -directory "D:\Packages" -timeout 60
+packg -source "C:\Projects" -directory "D:\Packages" -timeout 300
 ```

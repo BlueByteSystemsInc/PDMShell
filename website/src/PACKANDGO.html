@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/PACKANDGO.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/PACKANDGO.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -96,16 +96,15 @@
 </ul>
 <p>This command launches SOLIDWORKS, executes Pack and Go for each assembly, and saves the results into a specified output directory.</p>
 <p>By default, only <code>.sldasm</code> files are processed.</p>
-<hr>
 <h2 id="syntax">SYNTAX:</h2>
-<p>packg -source -directory [-search] [-includedrawings] [-recursive] [-prefix] [-suffix] [-timeout]</p>
-<hr>
+<pre><code class="lang-bash">packg -source -directory [-search] [-includedrawings] [-recursive] [-prefix] [-suffix] [-timeout]
+</code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
-<li><p>source<br>
+<li><p><code>source</code><br>
 Single assembly file, directory of assemblies, or CSV file containing assembly paths.</p>
 </li>
-<li><p>directory<br>
+<li><p><code>directory</code><br>
 Destination folder where Pack and Go results will be saved.<br>
 Supports dynamic placeholders:</p>
 <ul>
@@ -116,25 +115,23 @@ Supports dynamic placeholders:</p>
 <li>$year</li>
 </ul>
 </li>
-<li><p>search<br>
+<li><p><code>search</code><br>
 Search pattern applied when source is a directory.<br>
-Default value is *.sldasm.<br>
-Supports regular expressions.</p>
+Default value is <code>\.sldasm$</code>. Supports <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expressions</a>.</p>
 </li>
-<li><p>includedrawings<br>
+<li><p><code>includedrawings</code><br>
 Includes associated drawing files (.slddrw) in the Pack and Go operation.</p>
 </li>
-<li><p>recursive<br>
+<li><p><code>recursive</code><br>
 Searches subdirectories when source is a directory.</p>
 </li>
-<li><p>prefix<br>
+<li><p><code>prefix</code><br>
 Adds a prefix to all generated file names.</p>
 </li>
-<li><p>suffix<br>
+<li><p><code>suffix</code><br>
 Adds a suffix to all generated file names.</p>
 </li>
-<li><p>timeout<br>
-SOLIDWORKS startup timeout in seconds. Default is 30.</p>
+<li><p><code>timeout</code> SOLIDWORKS startup and pack and go timeout in seconds. Default is 30.</p>
 </li>
 </ul>
 <hr>
@@ -143,46 +140,39 @@ SOLIDWORKS startup timeout in seconds. Default is 30.</p>
 <pre><code class="lang-bash">## Packs a single assembly and saves results to D:\Packages
 packg -source &quot;C:\Projects\Top.sldasm&quot; -directory &quot;D:\Packages&quot;
 </code></pre>
-<hr>
 <h3 id="example-2-pack-all-assemblies-in-a-directory">Example 2: Pack All Assemblies in a Directory</h3>
 <pre><code class="lang-bash">## Packs all assemblies (*.sldasm) in the specified folder
 packg -source &quot;C:\Projects&quot; -directory &quot;D:\Packages&quot;
 </code></pre>
-<hr>
 <h3 id="example-3-recursive-directory-search">Example 3: Recursive Directory Search</h3>
 <pre><code class="lang-bash">## Searches subfolders and packs all assemblies found
 packg -source &quot;C:\Projects&quot; -directory &quot;D:\Packages&quot; -recursive
 </code></pre>
-<hr>
 <h3 id="example-4-use-regex-search">Example 4: Use Regex Search</h3>
 <pre><code class="lang-bash">## Packs only assemblies that start with TOP_
 packg -source &quot;C:\Projects&quot; -search &quot;^TOP_.*\.sldasm$&quot; -directory &quot;D:\Packages&quot;
 </code></pre>
-<hr>
 <h3 id="example-5-pack-assemblies-from-csv">Example 5: Pack Assemblies from CSV</h3>
-<h2 id="reads-assembly-paths-from-a-csv-file-and-packs-each-one">Reads assembly paths from a CSV file and packs each one</h2>
-<pre><code class="lang-bash">packg -source &quot;C:\Batch\assemblies.csv&quot; -directory &quot;D:\Packages&quot;
+<pre><code class="lang-bash">## Reads assembly paths from a CSV file and packs each one 
+packg -source &quot;C:\Batch\assemblies.csv&quot; -directory &quot;D:\Packages&quot;
 </code></pre>
-<hr>
 <h3 id="example-6-include-drawings">Example 6: Include Drawings</h3>
 <pre><code class="lang-bash">## Includes associated drawing files in Pack and Go
 packg -source &quot;C:\Projects\Top.sldasm&quot; -directory &quot;D:\Packages&quot; -includedrawings
 </code></pre>
-<hr>
 <h3 id="example-7-prefix-and-suffix">Example 7: Prefix and Suffix</h3>
 <pre><code class="lang-bash">## Adds prefix and suffix to all packed files
 packg -source &quot;C:\Projects\Top.sldasm&quot; -directory &quot;D:\Packages&quot; -prefix &quot;SW_&quot; -suffix &quot;_Release&quot;
 </code></pre>
-<hr>
 <h3 id="example-8-increase-solidworks-timeout">Example 8: Increase SOLIDWORKS Timeout</h3>
 <pre><code class="lang-bash">## Allows more time for SOLIDWORKS to launch
-packg -source &quot;C:\Projects&quot; -directory &quot;D:\Packages&quot; -timeout 60
+packg -source &quot;C:\Projects&quot; -directory &quot;D:\Packages&quot; -timeout 300
 </code></pre>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/PACKANDGO.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/PACKANDGO.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
