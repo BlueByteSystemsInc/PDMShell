@@ -153,6 +153,10 @@
 - name: mkVar
   href: mkvar.md
 
+- name: Pack And Go (SOLIDWORKS)
+- name: PackAndGo
+  href: PACKANDGO.md
+
 - name: Print information (from CSV)
 - name: PrintFromSource
   href: PRINTFROMSOURCE.md
