@@ -1,6 +1,8 @@
 - name: Home 
   href: src/index.md
-- name: 📅 SOLIDWORKS PDM MIGRATION | Talk to an Expert 
+- name: ✨ Shell AI Assistant
+  href: https://pdmshell-assistant.vercel.app/
+- name: PDM Migration Services
   href: https://calendly.com/bluebyte/datamigration?back=1
 - name: Buy PDMShell Premium
   href: https://bluebyte.biz/product/pdmshell
