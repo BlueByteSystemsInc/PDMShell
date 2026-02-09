@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>SEARCH Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>PACKG Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="SEARCH Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="PACKG Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="The SEARCH command allows users to search for files and folders in the current directory. It supports recursive searches, filtering, and output customization.">
+      <meta name="description" content="The PACKG command performs a SOLIDWORKS Pack and Go on a specified assembly or multiple assemblies discovered via search.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/SEARCH.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/PACKANDGO.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,61 +85,104 @@
         </div>
 
         <article data-uid="">
-<h1 id="search-command-documentation">SEARCH Command Documentation</h1>
+<h1 id="packg-command-documentation">PACKG Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>The <code>search</code> command allows users to search for files and folders in the current directory. It supports recursive searches, filtering, and output customization.</p>
+<p>The <code>packg</code> command performs a SOLIDWORKS Pack and Go operation on:</p>
+<ul>
+<li>A single assembly file</li>
+<li>Multiple assemblies discovered via directory search</li>
+<li>A CSV file containing a list of assembly paths</li>
+</ul>
+<p>This command launches SOLIDWORKS, executes Pack and Go for each assembly, and saves the results into a specified output directory.</p>
+<p>By default, only <code>.sldasm</code> files are processed.</p>
+<hr>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">search -search -recursive -includesubfolders -csv -columns
-</code></pre>
+<p>packg -source -directory [-search] [-includedrawings] [-recursive] [-prefix] [-suffix] [-timeout]</p>
+<hr>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
-<li><p><code>search</code>: Search keyword. This supports SQL wildcard %.</p>
+<li><p>source<br>
+Single assembly file, directory of assemblies, or CSV file containing assembly paths.</p>
 </li>
-<li><p><code>recursive</code>: Searches through all subdirectories recursively.</p>
-</li>
-<li><p><code>includesubfolders</code>: Includes subfolders in the search results.</p>
-</li>
-<li><p><code>csv</code>: Outputs the search results in CSV format.</p>
-</li>
-<li><p><code>columns</code>: Specifies the columns to include in the output seperated by a comma.</p>
-</li>
-</ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p><strong>Special columns</strong>: You can use <code>@LastModified</code> and <code>@Hash</code> to list the last date the file was modified as well as the hash. The hash requires that the file be locally cached. Example:</p>
-</div>
-<pre><code class="lang-bash">search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns &quot;@LastModified,@Hash,Revision&quot;
-</code></pre>
-<div class="NOTE">
-<h5>Note</h5>
-<p>We have introduced Advanced Search capabilities that can be used in the <code>-search</code> parameter. Please see more information <a href="advancedsearch.html">here</a>.</p>
-</div>
-<h2 id="examples">EXAMPLES:</h2>
-<h3 id="example-1-basic-search">Example 1: Basic Search</h3>
-<pre><code class="lang-bash">search -search % # prints all the files in the current directory
-</code></pre>
-<p>Performs a basic search in the current directory.</p>
-<h3 id="example-2-recursive-search-with-subfolders">Example 2: Recursive Search with Subfolders</h3>
-<pre><code class="lang-bash">search -search -recursive -includesubfolders # prints all the files and folders in the current directory
-</code></pre>
-<p>Searches all files and folders, including subdirectories.</p>
-<h3 id="example-3-export-results-to-csv">Example 3: Export Results to CSV</h3>
-<pre><code class="lang-bash">search -search -csv -columns &quot;Description,PartNumber&quot; # Prints all the files in the current directory with their descriptions and part numbers
-</code></pre>
-<p>Exports the search results to a CSV file with specified columns.</p>
-<h2 id="notes">NOTES:</h2>
+<li><p>directory<br>
+Destination folder where Pack and Go results will be saved.<br>
+Supports dynamic placeholders:</p>
 <ul>
-<li>Ensure the current directory is set correctly before running the command.</li>
-<li>Use the <code>-columns</code> parameter to customize the output format. Data is pulled from @ for configuration-supported documents.</li>
+<li>$filename</li>
+<li>$nameWithoutExtension</li>
+<li>$directory</li>
+<li>$date</li>
+<li>$year</li>
 </ul>
-<h2 id="tutorial">TUTORIAL:</h2>
-<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/search.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+</li>
+<li><p>search<br>
+Search pattern applied when source is a directory.<br>
+Default value is *.sldasm.<br>
+Supports regular expressions.</p>
+</li>
+<li><p>includedrawings<br>
+Includes associated drawing files (.slddrw) in the Pack and Go operation.</p>
+</li>
+<li><p>recursive<br>
+Searches subdirectories when source is a directory.</p>
+</li>
+<li><p>prefix<br>
+Adds a prefix to all generated file names.</p>
+</li>
+<li><p>suffix<br>
+Adds a suffix to all generated file names.</p>
+</li>
+<li><p>timeout<br>
+SOLIDWORKS startup timeout in seconds. Default is 30.</p>
+</li>
+</ul>
+<hr>
+<h2 id="examples">EXAMPLES:</h2>
+<h3 id="example-1-pack-a-single-assembly">Example 1: Pack a Single Assembly</h3>
+<pre><code class="lang-bash">## Packs a single assembly and saves results to D:\Packages
+packg -source &quot;C:\Projects\Top.sldasm&quot; -directory &quot;D:\Packages&quot;
+</code></pre>
+<hr>
+<h3 id="example-2-pack-all-assemblies-in-a-directory">Example 2: Pack All Assemblies in a Directory</h3>
+<pre><code class="lang-bash">## Packs all assemblies (*.sldasm) in the specified folder
+packg -source &quot;C:\Projects&quot; -directory &quot;D:\Packages&quot;
+</code></pre>
+<hr>
+<h3 id="example-3-recursive-directory-search">Example 3: Recursive Directory Search</h3>
+<pre><code class="lang-bash">## Searches subfolders and packs all assemblies found
+packg -source &quot;C:\Projects&quot; -directory &quot;D:\Packages&quot; -recursive
+</code></pre>
+<hr>
+<h3 id="example-4-use-regex-search">Example 4: Use Regex Search</h3>
+<pre><code class="lang-bash">## Packs only assemblies that start with TOP_
+packg -source &quot;C:\Projects&quot; -search &quot;^TOP_.*\.sldasm$&quot; -directory &quot;D:\Packages&quot;
+</code></pre>
+<hr>
+<h3 id="example-5-pack-assemblies-from-csv">Example 5: Pack Assemblies from CSV</h3>
+<h2 id="reads-assembly-paths-from-a-csv-file-and-packs-each-one">Reads assembly paths from a CSV file and packs each one</h2>
+<pre><code class="lang-bash">packg -source &quot;C:\Batch\assemblies.csv&quot; -directory &quot;D:\Packages&quot;
+</code></pre>
+<hr>
+<h3 id="example-6-include-drawings">Example 6: Include Drawings</h3>
+<pre><code class="lang-bash">## Includes associated drawing files in Pack and Go
+packg -source &quot;C:\Projects\Top.sldasm&quot; -directory &quot;D:\Packages&quot; -includedrawings
+</code></pre>
+<hr>
+<h3 id="example-7-prefix-and-suffix">Example 7: Prefix and Suffix</h3>
+<pre><code class="lang-bash">## Adds prefix and suffix to all packed files
+packg -source &quot;C:\Projects\Top.sldasm&quot; -directory &quot;D:\Packages&quot; -prefix &quot;SW_&quot; -suffix &quot;_Release&quot;
+</code></pre>
+<hr>
+<h3 id="example-8-increase-solidworks-timeout">Example 8: Increase SOLIDWORKS Timeout</h3>
+<pre><code class="lang-bash">## Allows more time for SOLIDWORKS to launch
+packg -source &quot;C:\Projects&quot; -directory &quot;D:\Packages&quot; -timeout 60
+</code></pre>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/SEARCH.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/PACKANDGO.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

@@ -6,6 +6,10 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 >[!Important]
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and then **install** the latest version. **Do not update installed version.**
 
+# 3.0.27 (2026-02-09)
+- Added [Pack And Go](PACKANDGO.md)
+- Updated [Where Used](WHEREUSED.md)  
+
 # 3.0.26 (2026-01-05)
 - Happy New Year 2026 🎊!
 - [get command](GET.md): `Directory` parameter is now **optional**. If not specified, the file is cached in its folder. If specified with an empty value, the file is cached at the root of the vault.

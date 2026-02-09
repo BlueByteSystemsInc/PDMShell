@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>SEARCH Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>WHEREUSED Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="SEARCH Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="WHEREUSED Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="The SEARCH command allows users to search for files and folders in the current directory. It supports recursive searches, filtering, and output customization.">
+      <meta name="description" content="The WHEREUSED command lists all parents that reference a specific file.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/SEARCH.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/WHEREUSED.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,61 +85,57 @@
         </div>
 
         <article data-uid="">
-<h1 id="search-command-documentation">SEARCH Command Documentation</h1>
+<h1 id="whereused-command-documentation">WHEREUSED Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>The <code>search</code> command allows users to search for files and folders in the current directory. It supports recursive searches, filtering, and output customization.</p>
+<p>The <code>whereused</code> command lists all parent files that reference a specified file.</p>
+<p>This command helps identify assemblies or drawings that use a particular part or subassembly.</p>
+<p>The output columns are:</p>
+<ul>
+<li>ChildID</li>
+<li>ChildName</li>
+<li>ParentName</li>
+<li>ParentID</li>
+<li>FolderPath</li>
+</ul>
+<hr>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">search -search -recursive -includesubfolders -csv -columns
+<pre><code class="lang-bash">whereused -filepath|-search -csv
 </code></pre>
+<hr>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
-<li><p><code>search</code>: Search keyword. This supports SQL wildcard %.</p>
+<li><p><code>filepath</code><br>
+Full or relative path of the file to evaluate.</p>
 </li>
-<li><p><code>recursive</code>: Searches through all subdirectories recursively.</p>
+<li><p><code>search</code><br>
+Optional filter applied to parent results. Supports SQL wildcard <code>%</code>.</p>
 </li>
-<li><p><code>includesubfolders</code>: Includes subfolders in the search results.</p>
-</li>
-<li><p><code>csv</code>: Outputs the search results in CSV format.</p>
-</li>
-<li><p><code>columns</code>: Specifies the columns to include in the output seperated by a comma.</p>
+<li><p><code>csv</code> csv file name to put the results in CSV format.</p>
 </li>
 </ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p><strong>Special columns</strong>: You can use <code>@LastModified</code> and <code>@Hash</code> to list the last date the file was modified as well as the hash. The hash requires that the file be locally cached. Example:</p>
-</div>
-<pre><code class="lang-bash">search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns &quot;@LastModified,@Hash,Revision&quot;
-</code></pre>
-<div class="NOTE">
-<h5>Note</h5>
-<p>We have introduced Advanced Search capabilities that can be used in the <code>-search</code> parameter. Please see more information <a href="advancedsearch.html">here</a>.</p>
-</div>
+<hr>
 <h2 id="examples">EXAMPLES:</h2>
-<h3 id="example-1-basic-search">Example 1: Basic Search</h3>
-<pre><code class="lang-bash">search -search % # prints all the files in the current directory
+<h3 id="example-1-basic-where-used">Example 1: Basic Where Used</h3>
+<pre><code class="lang-bash">## Lists all parent files that reference `Bracket.SLDPRT`.
+whereused -filepath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot;
 </code></pre>
-<p>Performs a basic search in the current directory.</p>
-<h3 id="example-2-recursive-search-with-subfolders">Example 2: Recursive Search with Subfolders</h3>
-<pre><code class="lang-bash">search -search -recursive -includesubfolders # prints all the files and folders in the current directory
+<hr>
+<h3 id="example-2-filter-parent-results">Example 2: Filter Parent Results</h3>
+<pre><code class="lang-bash">whereused -search &quot;%.SLDASM&quot;
+## Finds the parents of all the assemblies in the current directory.
 </code></pre>
-<p>Searches all files and folders, including subdirectories.</p>
-<h3 id="example-3-export-results-to-csv">Example 3: Export Results to CSV</h3>
-<pre><code class="lang-bash">search -search -csv -columns &quot;Description,PartNumber&quot; # Prints all the files in the current directory with their descriptions and part numbers
+<hr>
+<h3 id="example-3-export-to-csv">Example 3: Export to CSV</h3>
+<pre><code class="lang-bash">whereused -filepath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot; -csv parents.csv
+## Exports results to CSV with columns:
+## ChildID,ChildName,ParentName,ParentID,FolderPath
 </code></pre>
-<p>Exports the search results to a CSV file with specified columns.</p>
-<h2 id="notes">NOTES:</h2>
-<ul>
-<li>Ensure the current directory is set correctly before running the command.</li>
-<li>Use the <code>-columns</code> parameter to customize the output format. Data is pulled from @ for configuration-supported documents.</li>
-</ul>
-<h2 id="tutorial">TUTORIAL:</h2>
-<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/search.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/SEARCH.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/WHEREUSED.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
@@ -156,7 +152,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+          <span><a href='https://bluebyte.biz'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
         </div>
       </div>
     </footer>

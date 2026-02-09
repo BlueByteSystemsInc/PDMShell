@@ -4,7 +4,7 @@
     "changefreq": "weekly",
     "priority": 1
   },
-  "source_base_path": "C:/mikeworkspace/PDMShell",
+  "source_base_path": "C:/Users/jlili/source/repos/BlueByteSystemsInc/PDMShell",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -1187,6 +1187,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/PACKANDGO.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/PACKANDGO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/PRINT.md",
       "output": {
         ".html": {
@@ -1411,6 +1421,16 @@
       "output": {
         ".html": {
           "relative_path": "src/VERSIONUPGRADEFROMSOURCE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/WHEREUSED.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/WHEREUSED.html"
         }
       },
       "version": ""

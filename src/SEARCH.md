@@ -14,10 +14,22 @@ search -search -recursive -includesubfolders -csv -columns
 
 ## PARAMETERS:
 - `search`: Search keyword. This supports SQL wildcard %.
+
 - `recursive`: Searches through all subdirectories recursively.
+
 - `includesubfolders`: Includes subfolders in the search results.
+
 - `csv`: Outputs the search results in CSV format.
-- `columns`: Specifies the columns to include in the output.
+
+- `columns`: Specifies the columns to include in the output seperated by a comma.
+
+>[!NOTE]
+> **Special columns**: You can use `@LastModified` and `@Hash` to list the last date the file was modified as well as the hash. The hash requires that the file be locally cached. Example:
+
+```bash 
+search -search "Name=%.sld%;Recursive=true;DuplicatedBy=Name" -columns "@LastModified,@Hash,Revision"
+```
+
 
 >[!NOTE]
 > We have introduced Advanced Search capabilities that can be used in the `-search` parameter. Please see more information [here](advancedsearch.md).
