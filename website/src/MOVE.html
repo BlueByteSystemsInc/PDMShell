@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>MOVE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="MOVE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="The MOVE command moves file(s) from one location in the vault to another.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/MOVE.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="move-command-documentation">MOVE Command Documentation</h1>
+
+<h2 id="description">DESCRIPTION:</h2>
+<p>The <code>move</code> command moves file(s) from one folder in the vault to another.</p>
+<p>You can move:</p>
+<ul>
+<li>A single file</li>
+<li>All files inside a folder</li>
+<li>Files returned from a search query</li>
+</ul>
+<p>When a file is moved:</p>
+<ul>
+<li>All references are automatically updated by SOLIDWORKS PDM.</li>
+<li>Any parent files referencing the moved file are updated.</li>
+<li>File history and versions are preserved.</li>
+</ul>
+<hr>
+<h2 id="syntax">SYNTAX:</h2>
+<pre><code class="lang-bash">move -source -directory -search -recursive
+</code></pre>
+<hr>
+<h2 id="parameters">PARAMETERS:</h2>
+<ul>
+<li><p><code>source</code><br>
+The complete file path of the file to move.<br>
+You can also specify a folder path. This will move the files in that folder.<br>
+Temporary files starting with <code>~</code> are ignored.</p>
+</li>
+<li><p><code>directory</code><br>
+Target directory where to move the file(s) to. Must exist in the vault.</p>
+</li>
+<li><p><code>search</code><br>
+Search query. Use this to move all search results from the source folder.</p>
+</li>
+<li><p><code>recursive</code><br>
+Affects the search parameter. Specify <code>-recursive</code> to make the search recursive.<br>
+The start location is the current directory.</p>
+</li>
+</ul>
+<hr>
+<h2 id="examples">EXAMPLES:</h2>
+<h3 id="example-1-move-a-single-file">Example 1: Move a Single File</h3>
+<pre><code class="lang-bash">move -source &quot;C:\Vault\Parts\Bracket.SLDPRT&quot; -directory &quot;\Released&quot;
+## Moves a single file to the Released folder.
+</code></pre>
+<hr>
+<h3 id="example-2-move-all-files-in-a-folder">Example 2: Move All Files in a Folder</h3>
+<pre><code class="lang-bash">move -source &quot;\Projects\OldProject&quot; -directory &quot;\Archive&quot;
+## Moves all files inside the specified folder.
+</code></pre>
+<hr>
+<h3 id="example-3-move-search-results">Example 3: Move Search Results</h3>
+<pre><code class="lang-bash">move -source &quot;\Projects&quot; -search &quot;Name=%.sldprt%&quot; -recursive -directory &quot;\Archive&quot;
+## Moves all part files found in the Projects folder (including subfolders) to the Archive folder.
+</code></pre>
+<hr>
+<h2 id="notes">NOTES:</h2>
+<ul>
+<li>You must have permission to move the file(s).</li>
+<li>If the file is referenced by other files, referencing paths are updated automatically.</li>
+<li>If the file has references, those reference paths are updated automatically.</li>
+<li>Target directory must already exist in the vault.</li>
+<li>Move operations preserve version history.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/MOVE.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

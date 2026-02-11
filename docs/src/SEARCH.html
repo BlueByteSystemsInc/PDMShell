@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/SEARCH.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/SEARCH.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -90,7 +90,7 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>The <code>search</code> command allows users to search for files and folders in the current directory. It supports recursive searches, filtering, and output customization.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">search -search -recursive -includesubfolders -csv -columns
+<pre><code class="lang-bash">search -search -recursive -includesubfolders -csv -columns -duplicatesstrategy
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
@@ -104,12 +104,15 @@
 </li>
 <li><p><code>columns</code>: Specifies the columns to include in the output seperated by a comma.</p>
 </li>
+<li><p><code>duplicatesstrategy</code>: Defines how duplicate results are resolved when DuplicatedBy is specified in the search query. You must <code>DuplicatedBy</code> token in the <code>search</code> parameter.</p>
+</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p><strong>Special columns</strong>: You can use <code>@LastModified</code> and <code>@Hash</code> to list the last date the file was modified as well as the hash. The hash requires that the file be locally cached. Example:</p>
+<p><strong>Special columns</strong>: You can use <code>FileDate</code>, <code>Version</code>, <code>State</code> and <code>Hash</code> to list information that is not captured in the datacard. This is useful when searching for duplicates. The hash requires that the file be locally cached. Example:</p>
 </div>
-<pre><code class="lang-bash">search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns &quot;@LastModified,@Hash,Revision&quot;
+<pre><code class="lang-bash">## lists all duplicates in the current directory by name and prints their file date, hash and revision
+search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns &quot;FileDate,Hash,Revision&quot;
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
@@ -128,6 +131,78 @@
 <pre><code class="lang-bash">search -search -csv -columns &quot;Description,PartNumber&quot; # Prints all the files in the current directory with their descriptions and part numbers
 </code></pre>
 <p>Exports the search results to a CSV file with specified columns.</p>
+<h2 id="duplicate-strategy-options">DUPLICATE STRATEGY OPTIONS</h2>
+<p>The following strategies are supported for the <code>-duplicatesstrategy</code> parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KeepNewest</td>
+<td>Keeps the newest file in each duplicate group.</td>
+</tr>
+<tr>
+<td>ExcludeNewest</td>
+<td>Excludes the newest file and keeps the remaining duplicates.</td>
+</tr>
+<tr>
+<td>KeepOldest</td>
+<td>Keeps the oldest file in each duplicate group.</td>
+</tr>
+<tr>
+<td>ExcludeOldest</td>
+<td>Excludes the oldest file and keeps the remaining duplicates.</td>
+</tr>
+<tr>
+<td>KeepHighestVersion</td>
+<td>Keeps the file with the highest PDM version.</td>
+</tr>
+<tr>
+<td>ExcludeHighestVersion</td>
+<td>Excludes the file with the highest PDM version.</td>
+</tr>
+<tr>
+<td>KeepLowestVersion</td>
+<td>Keeps the file with the lowest PDM version.</td>
+</tr>
+<tr>
+<td>ExcludeLowestVersion</td>
+<td>Excludes the file with the lowest PDM version.</td>
+</tr>
+<tr>
+<td>KeepLatestRevision</td>
+<td>Keeps the file with the latest revision value.</td>
+</tr>
+<tr>
+<td>ExcludeLatestRevision</td>
+<td>Excludes the file with the latest revision value.</td>
+</tr>
+<tr>
+<td>KeepLargest</td>
+<td>Keeps the file with the largest file size.</td>
+</tr>
+<tr>
+<td>ExcludeLargest</td>
+<td>Excludes the file with the largest file size.</td>
+</tr>
+<tr>
+<td>KeepSmallest</td>
+<td>Keeps the file with the smallest file size.</td>
+</tr>
+<tr>
+<td>ExcludeSmallest</td>
+<td>Excludes the file with the smallest file size.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-bash">## Lists all duplicates in the current directory by name and prints their file date, hash and revision
+search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -duplicatesstrategy KeepNewest -columns &quot;FileDate,Hash,Revision&quot;
+</code></pre>
+<p><img src="image.png" alt="duplicatedby"></p>
 <h2 id="notes">NOTES:</h2>
 <ul>
 <li>Ensure the current directory is set correctly before running the command.</li>
@@ -139,7 +214,7 @@
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/SEARCH.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/SEARCH.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

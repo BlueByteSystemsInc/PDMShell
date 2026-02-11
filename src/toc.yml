@@ -153,10 +153,6 @@
 - name: mkVar
   href: mkvar.md
 
-- name: Pack And Go (SOLIDWORKS)
-- name: PackAndGo
-  href: PACKANDGO.md
-
 - name: Print information (from CSV)
 - name: PrintFromSource
   href: PRINTFROMSOURCE.md
@@ -165,9 +161,22 @@
 - name: print
   href: print.md
 
+- name: Pack and Go
+- name: pack and Go (SOLIDWORKS)
+  href: packandgo.md
+
+- name: Move file (or files via advanced search)
+- name: Move
+  href: MOVE.md
+
+- name: Move files (from CSV) 
+- name: MoveFromSource
+  href: MOVEFROMSOURCE.md
+
 - name: Quit PDMShell
 - name: quit
   href: quit.md
+
 
 - name: Force Reboot PDM
 - name: reboot
