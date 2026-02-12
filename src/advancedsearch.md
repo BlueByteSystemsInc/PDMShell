@@ -117,7 +117,7 @@ These tokens map directly to EdmSearchToken values and control how PDMShell filt
 | VersionsBefore | Versions before date |
 | VersionsByUser | Versions created by user |
 | WorkflowName | Search by workflow name |
-| **DuplicatedBy** | **Finds duplicates either by name, variables, hash and last modified** |
+| **DuplicatedBy** | **Finds duplicates either by name, variables, hash and filedate** |
 
 #### Duplicates
 
@@ -125,14 +125,14 @@ You can use `DuplicatedBy` to list the items either filename, variable, ash or l
 
 
 ```bash
-# finds all solidworks duplicate solidworks files by name and list their last modified, hash and revision variable
-search -search "Name=%.sld%;Recursive=true;DuplicatedBy=Name" -columns "@LastModified,@Hash,Revision"
+# finds all solidworks duplicate solidworks files by name and list their file date, hash and revision variable
+search -search "Name=%.sld%;Recursive=true;DuplicatedBy=Name" -columns "FileDate,Hash,Revision"
 ```
 
 
 ```bash
-# finds all solidworks duplicate solidworks files by revision and list their last modified, hash and revision variable
-search -search "Name=%.sld%;Recursive=true;DuplicatedBy=@Revision" -columns "@LastModified,@Hash,Revision"
+# finds all solidworks duplicate solidworks files by revision and list their file date, hash and revision variable
+search -search "Name=%.sld%;Recursive=true;DuplicatedBy=@Revision" -columns "FileDate,Hash,Revision"
 ```
 
 ## 5. Default Behavior

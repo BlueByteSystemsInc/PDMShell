@@ -324,17 +324,17 @@ Name=%.sldasm
 </tr>
 <tr>
 <td><strong>DuplicatedBy</strong></td>
-<td><strong>Finds duplicates either by name, variables, hash and last modified</strong></td>
+<td><strong>Finds duplicates either by name, variables, hash and filedate</strong></td>
 </tr>
 </tbody>
 </table>
 <h4 id="duplicates">Duplicates</h4>
 <p>You can use <code>DuplicatedBy</code> to list the items either filename, variable, ash or last date the file was modified. To use the hash, files must be locally cached.</p>
-<pre><code class="lang-bash"># finds all solidworks duplicate solidworks files by name and list their last modified, hash and revision variable
-search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns &quot;@LastModified,@Hash,Revision&quot;
+<pre><code class="lang-bash"># finds all solidworks duplicate solidworks files by name and list their file date, hash and revision variable
+search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns &quot;FileDate,Hash,Revision&quot;
 </code></pre>
-<pre><code class="lang-bash"># finds all solidworks duplicate solidworks files by revision and list their last modified, hash and revision variable
-search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=@Revision&quot; -columns &quot;@LastModified,@Hash,Revision&quot;
+<pre><code class="lang-bash"># finds all solidworks duplicate solidworks files by revision and list their file date, hash and revision variable
+search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=@Revision&quot; -columns &quot;FileDate,Hash,Revision&quot;
 </code></pre>
 <h2 id="5-default-behavior">5. Default Behavior</h2>
 <p><code>FolderID</code> defaults to the active directory.<br>
