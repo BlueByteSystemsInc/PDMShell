@@ -6,6 +6,9 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 >[!Important]
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and then **install** the latest version. **Do not update installed version.**
 
+# 3.0.29 (2026-02-16)
+- Minor changes and updates to the docs.
+
 # 3.0.28 (2026-02-11)
 - Added `DuplicatedBy` token to advanced search and `DuplicateStrategy` parameter to the search command.
 - Added [Move](MOVE.md) and [MoveFromSource](MOVEFROMSOURCE.md) commands.
