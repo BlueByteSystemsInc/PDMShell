@@ -34,10 +34,13 @@ delete [-filePath|-id] -directory -search -recursive -list -csv
 
 - `csv`: Exports a list of deleted files to a csv. This only works if `list is specified`. 
 
-- `destroy`: If specified, the deleted file will be also destroyed. 
+- `destroy`: If specified, the deleted file will be also destroyed. `-destroy` only affects results from the `search` parameter.
 
 >[!NOTE]
 > Use the exported csv from -csv with the [recover](RECOVER.html) command.
+
+>[!NOTE]
+>  `-destroy` only affects results from the `search` parameter. 
 
 ## EXAMPLES:
 Delete files matching a search query:
