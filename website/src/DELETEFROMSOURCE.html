@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="DELETEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="The DELETEFROMSOURCE command is used to delete files from a csv file.">
+      <meta name="description" content="The DELETEFROMSOURCE command is used to delete files from a CSV file and optionally export the results.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/DELETEFROMSOURCE.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/DELETEFROMSOURCE.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -88,30 +88,125 @@
 <h1 id="deletefromsource-command-documentation">DELETEFROMSOURCE Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>The <code>deletefromsource</code> function is used to delete files from a csv file.</p>
+<p>The <code>deletefromsource</code> command deletes files listed in a CSV file. It can also optionally destroy the files and export the operation results to a CSV file for auditing and reporting purposes.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">deletefromsource -filePath
+<pre><code class="lang-bash">    deletefromsource -filePath -destroy -csv
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<ul>
-<li><p><code>filePath</code> :  A string containing the IDs of the files and folders to be deleted. The IDs should be formatted appropriately for the function to process them.</p>
-</li>
-<li><p><code>destroy</code>: If specified, the deleted file will be also destroyed.</p>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>filePath</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>Path to the source CSV file containing File IDs and Folder IDs.</td>
+</tr>
+<tr>
+<td><code>destroy</code></td>
+<td>flag</td>
+<td>No</td>
+<td>If specified, files will be permanently destroyed after deletion.</td>
+</tr>
+<tr>
+<td><code>csv</code></td>
+<td>string</td>
+<td>No</td>
+<td>Path to export the results CSV file.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="source-csv-format">SOURCE CSV FORMAT:</h2>
+<p>The source CSV file must contain a header row with the following columns:</p>
+<pre><code class="lang-bash">FileID,FolderID
+12345,678
+12346,678
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FileID</td>
+<td>The document ID of the file</td>
+</tr>
+<tr>
+<td>FolderID</td>
+<td>The folder ID containing the file</td>
+</tr>
+</tbody>
+</table>
+<h2 id="results-csv-format">RESULTS CSV FORMAT:</h2>
+<p>If <code>-csv</code> is specified, PDMShell will generate a results file containing:</p>
+<pre><code class="lang-bash">FileID,FolderID,Deleted,Destroyed,DeleteError,DestroyError
+12345,678,True,True,,
+12346,678,False,False,File is checked out,
+</code></pre>
+<h2 id="results-csv-columns">RESULTS CSV COLUMNS:</h2>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FileID</td>
+<td>File ID</td>
+</tr>
+<tr>
+<td>FolderID</td>
+<td>Folder ID</td>
+</tr>
+<tr>
+<td>Deleted</td>
+<td>Whether delete succeeded</td>
+</tr>
+<tr>
+<td>Destroyed</td>
+<td>Whether destroy succeeded</td>
+</tr>
+<tr>
+<td>DeleteError</td>
+<td>Delete error message if failed</td>
+</tr>
+<tr>
+<td>DestroyError</td>
+<td>Destroy error message if failed</td>
+</tr>
+</tbody>
+</table>
 <h2 id="remarks">REMARKS:</h2>
 <ul>
-<li>The source file should be a CSV file with a column header. This column must contain the IDs of the files to be deleted.</li>
-<li>The command will ignore any files that are <strong>checked out</strong>.</li>
+<li>The source file <strong>must be a CSV file with a header row</strong>.</li>
 </ul>
-<h3 id="examples">EXAMPLES:</h3>
-<pre><code class="lang-bash">deletefromsource -filePath &quot;files to delete.csv&quot;
+<h2 id="examples">EXAMPLES:</h2>
+<pre><code class="lang-bash">## Delete files from CSV:
+deletefromsource -filePath &quot;files to delete.csv&quot;
+</code></pre>
+<pre><code class="lang-bash">##Delete and destroy files:
+deletefromsource -filePath &quot;files to delete.csv&quot; -destroy
+</code></pre>
+<pre><code class="lang-bash">## Delete, destroy, and export results:
+deletefromsource -filePath &quot;files to delete.csv&quot; -destroy -csv &quot;results.csv&quot;
 </code></pre>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/DELETEFROMSOURCE.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/DELETEFROMSOURCE.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
