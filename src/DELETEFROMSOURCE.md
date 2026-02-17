@@ -11,7 +11,7 @@ The `deletefromsource` command deletes files listed in a CSV file. It can also o
 
 ## SYNTAX:
 ```bash
-    deletefromsource -filePath -destroy -csv
+    deletefromsource -filePath -destroy -csv -batch
 ```
 
 ## PARAMETERS:
@@ -21,7 +21,7 @@ The `deletefromsource` command deletes files listed in a CSV file. It can also o
 | `filePath` | string | Yes | Path to the source CSV file containing File IDs and Folder IDs. |
 | `destroy` | flag | No | If specified, files will be permanently destroyed after deletion. |
 | `csv` | string | No | Path to export the results CSV file. |
-
+| `batch` | int | No | Destory batch size for large folders. |
 ## SOURCE CSV FORMAT:
 
 The source CSV file must contain a header row with the following columns:
@@ -76,4 +76,7 @@ deletefromsource -filePath "files to delete.csv" -destroy
 ## Delete, destroy, and export results:
 deletefromsource -filePath "files to delete.csv" -destroy -csv "results.csv"
 ```
-
+```bash
+## Delete, destroy (50 files at a time in each folder), and export results:
+deletefromsource -filePath "files to delete.csv" -destroy -csv "results.csv" -batch 50
+```

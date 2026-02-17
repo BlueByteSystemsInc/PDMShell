@@ -90,7 +90,7 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>The <code>deletefromsource</code> command deletes files listed in a CSV file. It can also optionally destroy the files and export the operation results to a CSV file for auditing and reporting purposes.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">    deletefromsource -filePath -destroy -csv
+<pre><code class="lang-bash">    deletefromsource -filePath -destroy -csv -batch
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
 <table>
@@ -120,6 +120,12 @@
 <td>string</td>
 <td>No</td>
 <td>Path to export the results CSV file.</td>
+</tr>
+<tr>
+<td><code>batch</code></td>
+<td>int</td>
+<td>No</td>
+<td>Destory batch size for large folders.</td>
 </tr>
 </tbody>
 </table>
@@ -201,6 +207,9 @@ deletefromsource -filePath &quot;files to delete.csv&quot; -destroy
 </code></pre>
 <pre><code class="lang-bash">## Delete, destroy, and export results:
 deletefromsource -filePath &quot;files to delete.csv&quot; -destroy -csv &quot;results.csv&quot;
+</code></pre>
+<pre><code class="lang-bash">## Delete, destroy (50 files at a time in each folder), and export results:
+deletefromsource -filePath &quot;files to delete.csv&quot; -destroy -csv &quot;results.csv&quot; -batch 50
 </code></pre>
 
 </article>

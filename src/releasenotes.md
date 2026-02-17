@@ -5,6 +5,9 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 
 >[!Important]
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and then **install** the latest version. **Do not update installed version.**
+# 3.0.30 (2026-02-17)
+- Added `batch` parameter for destroying files in the [DeleteFromSource](DELETEFROMSOURCE.md) command.
+
 
 # 3.0.29 (2026-02-16)
 - Minor changes and updates to the docs.
