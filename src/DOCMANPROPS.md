@@ -120,8 +120,7 @@ docmanprops -directory "C:\Vault\Parts" -csv "C:\temp\props.csv" -recursive
 ```
 
 ## OUTPUT
-
-![export mode](image-2.png)
+![export mode](/images/exportmode.png)
 ---
 
 # REFRESH MODE
@@ -147,9 +146,8 @@ Implementation reference: :contentReference[oaicite:1]{index=1}
 docmanprops -csv "C:\temp\props.csv" -refresh
 ```
 
-## CONSOLE OUTPUT
-
-![refreshmode](image-1.png)
+## OUTPUT
+![refreshmode](/images/refreshmode.png)
 
 
 ---

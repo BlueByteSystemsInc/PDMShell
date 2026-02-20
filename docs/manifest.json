@@ -647,6 +647,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/exportmode.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/exportmode.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/fav.png",
       "output": {
         "resource": {
@@ -791,6 +801,16 @@
       "output": {
         "resource": {
           "relative_path": "images/print.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/refreshmode.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/refreshmode.png"
         }
       },
       "version": ""
