@@ -73,6 +73,10 @@
 - name: cls
   href: cls.md
 
+- name: Mass edit SOLIDWORKS custom properties
+- name: docManProps
+  href: DOCMANPROPS.md
+
 - name: Enhanced copy tree
 - name: copyTree
   href: COPYTREE.md

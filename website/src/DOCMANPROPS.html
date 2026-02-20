@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>DIR Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="DIR Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Edit files with the document manager.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/DOCMANPROPS.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="docmanprops-command">DOCMANPROPS Command</h1>
+
+<h2 id="description">DESCRIPTION</h2>
+<p>The <code>docmanprops</code> command is used to <strong>export and refresh SOLIDWORKS file custom properties</strong> without opening SOLIDWORKS.</p>
+<p>This command supports two primary modes:</p>
+<ul>
+<li><strong>Export Mode (Default)</strong> — Reads properties from SOLIDWORKS files and writes them to a CSV file</li>
+<li><strong>Refresh Mode</strong> — Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)</li>
+</ul>
+<p>This command is designed for:</p>
+<ul>
+<li>Bulk property extraction</li>
+<li>Bulk property updates</li>
+<li>Property migration</li>
+<li>Property synchronization</li>
+<li>Property correction and normalization</li>
+</ul>
+<p>The command uses the <strong>SOLIDWORKS Document Manager API</strong>, making it significantly faster and more scalable than SOLIDWORKS automation.</p>
+<p>Implementation reference: :contentReference[oaicite:0]{index=0}</p>
+<hr>
+<h1 id="syntax">SYNTAX</h1>
+<pre><code class="lang-bash">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-refresh]
+</code></pre>
+<hr>
+<h1 id="parameters">PARAMETERS</h1>
+<h2 id="directory">directory</h2>
+<p>Specifies the folder containing SOLIDWORKS files.</p>
+<p>Supported file types:</p>
+<ul>
+<li>.sldprt</li>
+<li>.sldasm</li>
+<li>.slddrw</li>
+</ul>
+<p>Example: <code>-directory &quot;C:\Vault\Projects&quot;</code></p>
+<hr>
+<h2 id="csv">csv</h2>
+<p>Specifies the CSV file path.</p>
+<p>Used for:</p>
+<ul>
+<li>Export destination</li>
+<li>Refresh source</li>
+</ul>
+<p>Example: <code>-csv &quot;C:\temp\props.csv&quot;</code></p>
+<hr>
+<h2 id="refresh">refresh</h2>
+<p>When specified, the command runs in <strong>Refresh Mode</strong>.</p>
+<p>Reads the CSV file and writes the properties back into the SOLIDWORKS files.</p>
+<hr>
+<h2 id="recursive">recursive</h2>
+<h2 id="when-specified-searches-subfolders">When specified, searches subfolders.</h2>
+<h2 id="confignames">configNames</h2>
+<p>Specifies which configurations to include.</p>
+<p>Default: All configurations</p>
+<p>Example: <code>-configNames &quot;Default,Config1&quot;</code> Use space for custom property.</p>
+<hr>
+<h1 id="csv-format">CSV FORMAT</h1>
+<p>The CSV contains the following columns:</p>
+<pre><code class="lang-bash">Folder  
+FullPath  
+FileName  
+Extension  
+Configuration  
+Property  
+Value  
+EvaluatedValue  
+Type  
+Success  
+Exception  
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-bash">C:\Vault\Part, C:\Vault\Part\Part1.SLDPRT, Part1, .SLDPRT, Default, Description, Plate, Plate, Text, True,
+</code></pre>
+<hr>
+<h1 id="export-mode">EXPORT MODE</h1>
+<h2 id="description-1">DESCRIPTION</h2>
+<p>Reads properties from files and writes them to CSV.</p>
+<p>Properties include:</p>
+<ul>
+<li>File custom properties</li>
+<li>Configuration properties</li>
+<li>Evaluated values</li>
+<li>Property types</li>
+</ul>
+<hr>
+<h2 id="example">EXAMPLE</h2>
+<pre><code class="lang-bash">docmanprops -directory &quot;C:\Vault\Parts&quot; -csv &quot;C:\temp\props.csv&quot; -recursive
+</code></pre>
+<h2 id="output">OUTPUT</h2>
+<h2 id="export-mode-1"><img src="image-2.png" alt="export mode"></h2>
+<h1 id="refresh-mode">REFRESH MODE</h1>
+<h2 id="description-2">DESCRIPTION</h2>
+<p>Reads CSV file and writes properties back into files.</p>
+<p>Features:</p>
+<ul>
+<li>Opens each file once</li>
+<li>Updates all properties</li>
+<li>Saves file</li>
+<li>Updates CSV Success and Exception columns</li>
+<li>Parallel processing</li>
+</ul>
+<p>Implementation reference: :contentReference[oaicite:1]{index=1}</p>
+<hr>
+<h2 id="example-1">EXAMPLE</h2>
+<pre><code class="lang-bash">docmanprops -csv &quot;C:\temp\props.csv&quot; -refresh
+</code></pre>
+<h2 id="console-output">CONSOLE OUTPUT</h2>
+<p><img src="image-1.png" alt="refreshmode"></p>
+<hr>
+<h1 id="success-and-error-tracking">SUCCESS AND ERROR TRACKING</h1>
+<p>The CSV is updated during refresh:</p>
+<p>Success column:</p>
+<p>True — Property updated successfully<br>
+False — Property update failed</p>
+<p>Exception column:</p>
+<p>Contains error message</p>
+<p>Example:</p>
+<pre><code class="lang-bash">Property,Success,Exception
+Description,True,
+PartNumber,False,Configuration Default not found
+</code></pre>
+<hr>
+<h1 id="performance">PERFORMANCE</h1>
+<p>Typical performance:</p>
+<table>
+<thead>
+<tr>
+<th>Files</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1,000</td>
+<td>seconds</td>
+</tr>
+<tr>
+<td>10,000</td>
+<td>under 1 minute</td>
+</tr>
+<tr>
+<td>100,000</td>
+<td>few minutes</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/DOCMANPROPS.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

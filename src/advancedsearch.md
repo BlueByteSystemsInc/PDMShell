@@ -160,15 +160,12 @@ Examples:
 @ProjectCode!~TEST     # Variable 'ProjectCode' must NOT contain the text "TEST"
 ```
 
-PDMShell automatically:
+You can chain mutiple variables. The chain of variables uses the AND operator:
 
-1. Detects the operator  
-2. Extracts variable name and value  
-3. Looks up the variable definition using IEdmVariable5  
-4. Determines the variable type  
-5. Converts the value to the correct type  
-6. Selects the appropriate EdmVarOp_* enum  
-7. Applies AddVariable2
+```bash
+@Description=Pump.sldprt;@Weight>=10      # Part files named pump that have weight above 10
+```
+
 
 ## 7. Supported Variable Operators
 

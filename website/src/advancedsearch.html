@@ -353,16 +353,9 @@ search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=@Revision&quot; -co
 @Material~Steel        # Variable 'Material' must contain the text &quot;Steel&quot;
 @ProjectCode!~TEST     # Variable 'ProjectCode' must NOT contain the text &quot;TEST&quot;
 </code></pre>
-<p>PDMShell automatically:</p>
-<ol>
-<li>Detects the operator</li>
-<li>Extracts variable name and value</li>
-<li>Looks up the variable definition using IEdmVariable5</li>
-<li>Determines the variable type</li>
-<li>Converts the value to the correct type</li>
-<li>Selects the appropriate EdmVarOp_* enum</li>
-<li>Applies AddVariable2</li>
-</ol>
+<p>You can chain mutiple variables. The chain of variables uses the AND operator:</p>
+<pre><code class="lang-bash">@Description=Pump.sldprt;@Weight&gt;=10      # Part files named pump that have weight above 10
+</code></pre>
 <h2 id="7-supported-variable-operators">7. Supported Variable Operators</h2>
 <p>PDMShell supports all major comparison operators for variables.</p>
 <h3 id="table-supported-operators">Table: Supported Operators</h3>

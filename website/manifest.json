@@ -1027,6 +1027,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/DOCMANPROPS.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/DOCMANPROPS.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/DUMP.md",
       "output": {
         ".html": {
