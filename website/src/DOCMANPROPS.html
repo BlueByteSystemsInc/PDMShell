@@ -94,16 +94,6 @@
 <li><strong>Export Mode (Default)</strong> — Reads properties from SOLIDWORKS files and writes them to a CSV file</li>
 <li><strong>Refresh Mode</strong> — Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)</li>
 </ul>
-<p>This command is designed for:</p>
-<ul>
-<li>Bulk property extraction</li>
-<li>Bulk property updates</li>
-<li>Property migration</li>
-<li>Property synchronization</li>
-<li>Property correction and normalization</li>
-</ul>
-<p>The command uses the <strong>SOLIDWORKS Document Manager API</strong>, making it significantly faster and more scalable than SOLIDWORKS automation.</p>
-<p>Implementation reference: :contentReference[oaicite:0]{index=0}</p>
 <hr>
 <h1 id="syntax">SYNTAX</h1>
 <pre><code class="lang-bash">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-refresh]
@@ -113,11 +103,10 @@
 <h2 id="directory">directory</h2>
 <p>Specifies the folder containing SOLIDWORKS files.</p>
 <p>Supported file types:</p>
-<ul>
-<li>.sldprt</li>
-<li>.sldasm</li>
-<li>.slddrw</li>
-</ul>
+<pre><code class="lang-bash">- .sldprt
+- .sldasm
+- .slddrw
+</code></pre>
 <p>Example: <code>-directory &quot;C:\Vault\Projects&quot;</code></p>
 <hr>
 <h2 id="csv">csv</h2>

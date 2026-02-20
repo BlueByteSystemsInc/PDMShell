@@ -14,18 +14,6 @@ This command supports two primary modes:
 - **Export Mode (Default)** — Reads properties from SOLIDWORKS files and writes them to a CSV file
 - **Refresh Mode** — Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)
 
-This command is designed for:
-
-- Bulk property extraction
-- Bulk property updates
-- Property migration
-- Property synchronization
-- Property correction and normalization
-
-The command uses the **SOLIDWORKS Document Manager API**, making it significantly faster and more scalable than SOLIDWORKS automation.
-
-Implementation reference: :contentReference[oaicite:0]{index=0}
-
 ---
 
 # SYNTAX
@@ -42,11 +30,11 @@ docmanprops -directory <path> -csv <csvPath> [-recursive] [-configNames] [-refre
 Specifies the folder containing SOLIDWORKS files.
 
 Supported file types:
-
+```bash
 - .sldprt
 - .sldasm
 - .slddrw
-
+```
 Example: `-directory "C:\Vault\Projects"`
 
 ---
