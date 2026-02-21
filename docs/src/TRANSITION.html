@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>TRANSITION Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="TRANSITION Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Batch and single-file workflow state transitions using PDMShell">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/TRANSITION.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="transition-command-documentation">TRANSITION Command Documentation</h1>
+
+<h2 id="description">DESCRIPTION</h2>
+<p>The <code>transition</code> command is used to move SOLIDWORKS PDM files from one workflow state to another using a specified transition.</p>
+<p>This command supports three modes:</p>
+<ul>
+<li>Batch transition using CSV source (recommended for large migrations)</li>
+<li>Search-based transition</li>
+<li>Single file transition</li>
+</ul>
+<h1 id="syntax">SYNTAX</h1>
+<pre><code class="lang-bash"># single file
+transition -transitionid &lt;id&gt; -filePath &lt;path&gt;
+# search and transition all results
+transition -transitionid &lt;id&gt; -search &lt;pattern&gt; [-recursive]
+# transition all files in the csv via the specified transition
+transition -source &lt;csv&gt; -password &lt;password&gt; [-batch &lt;size&gt;] [-comment &lt;text&gt;]
+</code></pre>
+<h1 id="parameters">PARAMETERS</h1>
+<h2 id="transitionid">transitionid</h2>
+<p>Specifies the workflow transition ID.
+Required for search and filepath modes.</p>
+<p>Example:</p>
+<pre><code class="lang-bash">-transitionid 12
+</code></pre>
+<h2 id="source">source</h2>
+<p>Specifies a CSV file containing files to transition in batch.</p>
+<p>The CSV may be:</p>
+<ul>
+<li>Absolute path</li>
+<li>Relative to current directory</li>
+</ul>
+<p>Example:</p>
+<p>-source transitions.csv</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>The file must be locally cached.</p>
+</div>
+<h2 id="password">password</h2>
+<p>Specifies the PDM user password required to execute the transition.
+Only used with <code>source</code> parameter.
+Example:</p>
+<pre><code class="lang-bash">-password mypassword
+</code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Your password remains visible in your session output. Do not start PDMShell with winlog parameter.</p>
+</div>
+<h2 id="batch">batch</h2>
+<p>Specifies how many files to process per batch.</p>
+<p>Default:
+1000
+Example:</p>
+<pre><code class="lang-bash">-batch 5000
+</code></pre>
+<p>Recommended values:
+500</p>
+<h2 id="comment">comment</h2>
+<p>Specifies the transition comment.</p>
+<p>Default:</p>
+<p>Transitioned by PDMShell</p>
+<p>Example:</p>
+<pre><code class="lang-bash">-comment &quot;Released by migration script&quot;
+</code></pre>
+<hr>
+<h2 id="search">search</h2>
+<p>Searches for files matching a pattern in the current directory.</p>
+<p>Example:</p>
+<pre><code class="lang-bash"># find all parts in the current directory
+-search %.sldprt
+</code></pre>
+<hr>
+<h2 id="recursive">recursive</h2>
+<p>Includes subfolders when used with search.</p>
+<hr>
+<h2 id="filepath">filePath</h2>
+<p>Specifies a single file to transition.</p>
+<p>Example:</p>
+<pre><code class="lang-bash"># part is found the current directory
+-filePath part.sldprt
+</code></pre>
+<hr>
+<h1 id="csv-format">CSV FORMAT</h1>
+<p>Required format:</p>
+<p>FileID,ParentFolderID,TransitionID</p>
+<p>Example:</p>
+<pre><code class="lang-bash">FileID,ParentFolderID,TransitionID
+34521,1201,15
+34522,1201,15
+34523,1205,18
+</code></pre>
+<h2 id="transitioncsv"><img src="/images/transitioncsv.png" alt="transition.csv"></h2>
+<h1 id="batch-mode-source">BATCH MODE (SOURCE)</h1>
+<p>This is the recommended mode for:</p>
+<ul>
+<li>Data migrations</li>
+<li>Vault cleanup</li>
+<li>Bulk state changes</li>
+<li>Automation</li>
+</ul>
+<p>Supports hundreds of thousands of files.</p>
+<p>Example:</p>
+<pre><code class="lang-bash">transition -source transitions.csv -password mypass -batch 2000
+</code></pre>
+<hr>
+<h1 id="important-considersations-for-batch-mode">IMPORTANT CONSIDERSATIONS FOR BATCH MODE</h1>
+<p><img src="/images/ReferenceDialogSettings.png" alt="ReferenceDialogSettings"></p>
+<p>PDMShell batch transitions are affected by the logged-in user’s Reference Dialog settings. If “Select child references during state change” and “Select references that are defined as drawing nodes during state change” are enabled, PDM will also transition referenced files, not just the source files from the CSV. If you want PDMShell batch mode to transition only the source files, these options must be disabled for the logged-in user.</p>
+<h1 id="search-mode">SEARCH MODE</h1>
+<p>Transitions files found using search.</p>
+<p>Example:</p>
+<pre><code class="lang-bash">transition -search %.sldasm -transitionid 12 -recursive
+</code></pre>
+<h1 id="single-file-mode">SINGLE FILE MODE</h1>
+<p>Transitions one file.</p>
+<p>Example:</p>
+<pre><code class="lang-bash">transition -filePath part.sldprt -transitionid 12
+</code></pre>
+<h1 id="validation">VALIDATION</h1>
+<p>The command automatically:</p>
+<ul>
+<li>Validates transition IDs</li>
+<li>Validates workflow permissions</li>
+<li>Validates file state eligibility</li>
+<li>Skips invalid files</li>
+</ul>
+<h1 id="license-limitations">LICENSE LIMITATIONS</h1>
+<p>Free version limits number of files processed.</p>
+<p>To remove limit: <a href="https://bluebyte.biz/product/pdmshell">https://bluebyte.biz/product/pdmshell</a></p>
+<h1 id="best-practices">BEST PRACTICES</h1>
+<ul>
+<li>Use source mode for large operations.</li>
+<li>Use batch size between 500 and 5000.</li>
+<li>Always test with small batch first.</li>
+<li>Backup vault before large operations.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/TRANSITION.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://bluebyte.biz'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

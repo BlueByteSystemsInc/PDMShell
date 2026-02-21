@@ -127,6 +127,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/ReferenceDialogSettings.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/ReferenceDialogSettings.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/SmallTile.scale-100.png",
       "output": {
         "resource": {
@@ -887,6 +897,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/transitioncsv.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/transitioncsv.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/updateissue.png",
       "output": {
         "resource": {
@@ -1431,6 +1451,16 @@
       "output": {
         ".html": {
           "relative_path": "src/TASKSCRIPT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/TRANSITION.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/TRANSITION.html"
         }
       },
       "version": ""

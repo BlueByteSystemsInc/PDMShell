@@ -5,6 +5,10 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 
 >[!Important]
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and then **install** the latest version. **Do not update installed version.**
+
+# 3.0.32 (2026-02-20)
+- Added documentation for the `transition`  [Transition](TRANSITION.md) command.
+
 # 3.0.31 (2026-02-20)
 - Added `docmanprops` to edit properties using the document manager [DocManProps](DOCMANPROPS.md) command.
 

@@ -238,6 +238,10 @@
 - name: start
   href: start.md
 
+- name: Transition files or many files
+- name: Transition
+  href: TRANSITION.md
+
 - name: Undo checkout
 - name: undoCheckout
   href: undocheckout.md
