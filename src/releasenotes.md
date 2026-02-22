@@ -4,7 +4,13 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 ---
 
 >[!Important]
-> To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and then **install** the latest version. **Do not update installed version.**
+> To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
+then **install** the latest version. **Do not update installed version.**
+
+
+# 3.0.32 (2026-02-20)
+- Fixed escape and unescape bug in default mode in [DocManProps](DOCMANPROPS.md) command.
+- Add `extensions` parameter to [DocManProps](DOCMANPROPS.md) command.
 
 # 3.0.32 (2026-02-20)
 - Added documentation for the `transition`  [Transition](TRANSITION.md) command.

@@ -19,7 +19,7 @@ This command supports two primary modes:
 # SYNTAX
 
 ```bash
-docmanprops -directory <path> -csv <csvPath> [-recursive] [-configNames] [-refresh]
+docmanprops -directory <path> -csv <csvPath> [-recursive] [-configNames] [-refresh] [extensions]
 ```
 ---
 
@@ -74,6 +74,36 @@ Default: All configurations
 Example: `-configNames "Default,Config1"` Use space for custom property.
 
 ---
+
+## extensions
+
+Specifies which file extensions to include when exporting or refreshing properties.
+
+Default: `*` (all files)
+
+Supports wildcards and multiple values separated by commas.
+
+Examples:
+```bash
+#all solidworks files
+-extensions "solidworks"
+
+-extensions "*.sld*"
+
+-extensions "*.sldprt,*.sldasm"
+
+-extensions "*.sld*,*.pdf"
+
+-extensions "*"
+```
+If an extension filter contains spaces, wrap it in quotes.
+
+Example:
+```bash
+-extensions "*.sld*,*.step,*.pdf"
+```
+Use `*` to include all files regardless of extension.
+--
 
 # CSV FORMAT
 

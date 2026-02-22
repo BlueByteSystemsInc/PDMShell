@@ -96,7 +96,7 @@
 </ul>
 <hr>
 <h1 id="syntax">SYNTAX</h1>
-<pre><code class="lang-bash">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-refresh]
+<pre><code class="lang-bash">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-refresh] [extensions]
 </code></pre>
 <hr>
 <h1 id="parameters">PARAMETERS</h1>
@@ -129,6 +129,27 @@
 <p>Default: All configurations</p>
 <p>Example: <code>-configNames &quot;Default,Config1&quot;</code> Use space for custom property.</p>
 <hr>
+<h2 id="extensions">extensions</h2>
+<p>Specifies which file extensions to include when exporting or refreshing properties.</p>
+<p>Default: <code>*</code> (all files)</p>
+<p>Supports wildcards and multiple values separated by commas.</p>
+<p>Examples:</p>
+<pre><code class="lang-bash">#all solidworks files
+-extensions &quot;solidworks&quot;
+
+-extensions &quot;*.sld*&quot;
+
+-extensions &quot;*.sldprt,*.sldasm&quot;
+
+-extensions &quot;*.sld*,*.pdf&quot;
+
+-extensions &quot;*&quot;
+</code></pre>
+<p>If an extension filter contains spaces, wrap it in quotes.</p>
+<p>Example:</p>
+<pre><code class="lang-bash">-extensions &quot;*.sld*,*.step,*.pdf&quot;
+</code></pre>
+<h2 id="use--to-include-all-files-regardless-of-extension">Use <code>*</code> to include all files regardless of extension.</h2>
 <h1 id="csv-format">CSV FORMAT</h1>
 <p>The CSV contains the following columns:</p>
 <pre><code class="lang-bash">Folder  
