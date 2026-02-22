@@ -8,7 +8,7 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 then **install** the latest version. **Do not update installed version.**
 
 
-# 3.0.32 (2026-02-20)
+# 3.0.33 (2026-02-21)
 - Fixed escape and unescape bug in default mode in [DocManProps](DOCMANPROPS.md) command.
 - Add `extensions` parameter to [DocManProps](DOCMANPROPS.md) command.
 
