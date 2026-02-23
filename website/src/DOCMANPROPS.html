@@ -94,7 +94,10 @@
 <li><strong>Export Mode (Default)</strong> — Reads properties from SOLIDWORKS files and writes them to a CSV file</li>
 <li><strong>Refresh Mode</strong> — Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)</li>
 </ul>
-<hr>
+<div class="IMPORTANT">
+<h5>Important</h5>
+</div>
+<h2 id="this-command-works-with-the-file-system-and-requires-files-to-be-locally-cached-it-reads-and-writes-files-both-inside-and-outside-the-vault-relative-paths-only-work-in-the-vault-directory-and-requires-you-to-be-logged-in">?This command works with the file system and requires files to be locally cached. It reads and writes files both inside and outside the vault. Relative paths only work in the vault directory (and requires you to be logged in).</h2>
 <h1 id="syntax">SYNTAX</h1>
 <pre><code class="lang-bash">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-refresh] [extensions]
 </code></pre>

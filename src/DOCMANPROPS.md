@@ -14,6 +14,9 @@ This command supports two primary modes:
 - **Export Mode (Default)** — Reads properties from SOLIDWORKS files and writes them to a CSV file
 - **Refresh Mode** — Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)
 
+
+>[!IMPORTANT]
+?This command works with the file system and requires files to be locally cached. It reads and writes files both inside and outside the vault. Relative paths only work in the vault directory (and requires you to be logged in).
 ---
 
 # SYNTAX
