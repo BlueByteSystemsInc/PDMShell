@@ -7,6 +7,9 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.34 (2026-02-23)
+- Fixed bug when enumerating large data volume [DocManProps](DOCMANPROPS.md).
+- pdmcli.exe now signed with a verified publisher.
 
 # 3.0.33 (2026-02-21)
 - Fixed escape and unescape bug in default mode in [DocManProps](DOCMANPROPS.md) command.
