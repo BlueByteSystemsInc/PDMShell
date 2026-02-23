@@ -29,14 +29,10 @@ docmanprops -directory <path> -csv <csvPath> [-recursive] [-configNames] [-refre
 
 Specifies the folder containing SOLIDWORKS files.
 
-Supported file types:
-```bash
-- .sldprt
-- .sldasm
-- .slddrw
+Example:
+```bash 
+`-directory "C:\Vault\Projects"`
 ```
-Example: `-directory "C:\Vault\Projects"`
-
 ---
 
 ## csv
@@ -82,6 +78,8 @@ Specifies which file extensions to include when exporting or refreshing properti
 Default: `*` (all files)
 
 Supports wildcards and multiple values separated by commas.
+
+Special value for all solidworks file extensions is: `solidworks`
 
 Examples:
 ```bash

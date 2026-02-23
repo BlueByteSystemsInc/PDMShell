@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/DOCMANPROPS.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/DOCMANPROPS.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -102,12 +102,9 @@
 <h1 id="parameters">PARAMETERS</h1>
 <h2 id="directory">directory</h2>
 <p>Specifies the folder containing SOLIDWORKS files.</p>
-<p>Supported file types:</p>
-<pre><code class="lang-bash">- .sldprt
-- .sldasm
-- .slddrw
+<p>Example:</p>
+<pre><code class="lang-bash">`-directory &quot;C:\Vault\Projects&quot;`
 </code></pre>
-<p>Example: <code>-directory &quot;C:\Vault\Projects&quot;</code></p>
 <hr>
 <h2 id="csv">csv</h2>
 <p>Specifies the CSV file path.</p>
@@ -133,6 +130,7 @@
 <p>Specifies which file extensions to include when exporting or refreshing properties.</p>
 <p>Default: <code>*</code> (all files)</p>
 <p>Supports wildcards and multiple values separated by commas.</p>
+<p>Special value for all solidworks file extensions is: <code>solidworks</code></p>
 <p>Examples:</p>
 <pre><code class="lang-bash">#all solidworks files
 -extensions &quot;solidworks&quot;
@@ -245,7 +243,7 @@ PartNumber,False,Configuration Default not found
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/DOCMANPROPS.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/DOCMANPROPS.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
