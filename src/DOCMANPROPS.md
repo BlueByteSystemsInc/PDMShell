@@ -1,6 +1,6 @@
 ---
 description: Edit files with the document manager.
-title: DIR Command Documentation | PDMShell | SOLIDWORKS PDM
+title: DOCMANPROPS Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 
 # DOCMANPROPS Command  
