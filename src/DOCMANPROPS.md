@@ -102,7 +102,7 @@ Example:
 ```bash
 -extensions "*.sld*,*.step,*.pdf"
 ```
-Use `*` to include all files regardless of extension.
+Use `*.*` to include all files regardless of extension.
 --
 
 # CSV FORMAT
@@ -180,6 +180,9 @@ docmanprops -csv "C:\temp\props.csv" -refresh
 ![refreshmode](/images/refreshmode.png)
 
 
+
+>[!NOTE]
+> Temporary files start with ~ are ignored.
 ---
 
 # SUCCESS AND ERROR TRACKING

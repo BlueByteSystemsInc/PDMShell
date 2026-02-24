@@ -7,6 +7,9 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.36 (2026-02-24)
+- Ignored temporary files in [DocManProps](DOCMANPROPS.md).
+- Added support for listing non-solidworks in output of [DocManProps](DOCMANPROPS.md).
 # 3.0.35 (2026-02-23)
 # 3.0.34 (2026-02-23)
 - Fixed bug when enumerating large data volume [DocManProps](DOCMANPROPS.md).
