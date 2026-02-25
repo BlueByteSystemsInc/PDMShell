@@ -7,6 +7,11 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.37 (2026-02-35)
+- Added `list` parameter [addtovaultcommmand](ADDTOVAULT.md): CSV mapping file list
+- Added `batch` parameter to [addtovaultcommmand](ADDTOVAULT.md).
+- Improved performance with large data sets [addtovaultcommmand](ADDTOVAULT.md). 
+
 # 3.0.36 (2026-02-24)
 - Ignored temporary files in [DocManProps](DOCMANPROPS.md).
 - Added support for listing non-solidworks in output of [DocManProps](DOCMANPROPS.md).

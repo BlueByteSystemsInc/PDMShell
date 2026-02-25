@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="ADDTOVAULT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="The AddTOVAULT command is used to add files or directories to the PDM vault. It supports various parameters to specify the source files or directories, search queries, and additional options such as ignoring existing files, updating references, and recursive operations.">
+      <meta name="description" content="The ADDTOVAULT command is used to add files or directories to the PDM vault. It supports adding from a single file, folder, or CSV mapping list, and includes options such as batch processing, ignoring existing files, updating references, recursion, and exporting results to CSV.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -88,53 +88,140 @@
 <h1 id="addtovault-command-documentation">ADDTOVAULT Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>The <code>addtovault</code> command is used to add files and/or directories to the PDM vault. It supports various parameters to specify the source files or directories, search queries, and additional options such as ignoring existing files, updating references, and recursive operations.</p>
+<p>The <code>addtovault</code> command is used to add files and/or directories to the SOLIDWORKS PDM vault. It supports multiple input methods including direct file paths, folders, and CSV mapping lists. Additional options allow batch processing, filtering, ignoring existing files, updating references, and exporting results.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>It is highly recommended that you run PDMShell as <strong>administrator</strong> before using this command.</p>
+<p>It is highly recommended that you run PDMShell as <strong>Administrator</strong> before using this command.</p>
 </div>
+<hr>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">addtovault -csv  -dir  -search  -source -ignoreex -updaterefs -recursive
-</code></pre>
+<p>addtovault [-source <path> | -list <csvpath>] [-directory <vaultfolder>] [-search <pattern>] [-recursive] [-batch <size>] [-ignoreex] [-updaterefs] [-csv <outputpath>]</outputpath></size></pattern></vaultfolder></csvpath></path></p>
+<hr>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
-<li><p><code>csv</code>:
-(Optional) Specifies the path to a CSV file containing a list of files or directories to be added to the vault.</p>
-</li>
-<li><p><code>directory</code>:
-(Optional)
-Specifies the target directory. If not specified current directory is used. If using the current directory, use &quot;&quot;.</p>
-</li>
-<li><p><code>search</code>:
-(Optional) A search query to filter files or directories to be added to the vault. This is <strong>File Explorer</strong> search query. Use * as a wildcard.</p>
-</li>
-<li><p><code>source</code>:
-Specifies the source file or directory to be added to the vault. <strong>Default to the current folder in PDM if not specified.</strong></p>
-</li>
-<li><p><code>ignoreex</code>:
-(Optional) Ignores files that already exist in the vault. This prevents overwriting existing files.</p>
-</li>
-<li><p><code>updaterefs</code>:
-(Optional) Updates references for the files being added to the vault.</p>
-</li>
-<li><p><code>recursive</code>:
-(Optional) Adds all files and subdirectories within the specified directory. This parameter is only applicable when adding directories.</p>
-</li>
+<li><code>source</code>:
+Specifies the source file or directory to be added to the vault.</li>
 </ul>
-<h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">addtovault -source &quot;C:\Projects\file.txt&quot; -directory &quot;&quot;
-# adds text file to the current directory
-</code></pre>
-<h2 id="remarks">REMARKS:</h2>
+<p>Supports:</p>
+<p>• Single file<br>
+• Folder</p>
+<p>If a folder is specified, files can be filtered using <code>-search</code> and <code>-recursive</code>.</p>
+<p>If not specified, the current working directory is used.</p>
+<hr>
 <ul>
-<li>Use the <code>recursive</code> parameter with caution, as it will add all contents within the specified directory.</li>
-<li>The <code>ignoreex</code> parameter prevents overwriting files that already exist in the vault.</li>
-<li>Ensure you have the necessary permissions to add files or directories to the PDM vault.</li>
-<li>Files are left <strong>checked out</strong> after command completes.</li>
+<li><code>list</code>:</li>
 </ul>
+<p>Specifies a CSV file containing file mapping information.</p>
+<p>The CSV must contain <strong>two columns</strong> (First row is header):</p>
+<p>Column 1: Full source file path<br>
+Column 2: Destination folder path relative to the target vault directory</p>
+<p>Example CSV:
+FilePath,Target
+C:\Data\Part1.sldprt,ProjectA\Mechanical<br>
+C:\Data\Part2.sldprt,ProjectB\Mechanical</p>
+<p>This parameter overrides <code>-source</code>.</p>
+<hr>
+<ul>
+<li><code>directory</code>:</li>
+</ul>
+<p>Specifies the destination folder in the PDM vault.</p>
+<p>If not specified, the current vault directory is used.</p>
+<p>Example:</p>
+<p>-directory &quot;$/Projects&quot;</p>
+<hr>
+<ul>
+<li><code>search</code>:</li>
+</ul>
+<p>(Optional)</p>
+<p>File Explorer search pattern used to filter files when <code>-source</code> is a folder.</p>
+<p>Supports:</p>
+<p>• Wildcards (<code>*</code>)<br>
+• Multiple extensions<br>
+• Separators: <code>,</code> <code>;</code> <code>|</code></p>
+<p>Examples:</p>
+<p>-search &quot;<em>.sldprt&quot;<br>
+-search &quot;</em>.sldprt;*.sldasm&quot;</p>
+<hr>
+<ul>
+<li><code>recursive</code>:</li>
+</ul>
+<p>(Optional)</p>
+<p>Includes all subfolders when the source is a folder.</p>
+<p>If not specified, only the top-level folder is processed.</p>
+<hr>
+<ul>
+<li><code>batch</code>:</li>
+</ul>
+<p>(Optional)</p>
+<p>Specifies the number of files to add per batch.</p>
+<p>This improves performance and stability when adding large numbers of files.</p>
+<p>Examples:</p>
+<p>-batch 50<br>
+-batch 100</p>
+<p>If not specified, all files are added in a single batch.</p>
+<hr>
+<ul>
+<li><code>ignoreex</code>:</li>
+</ul>
+<p>(Optional)</p>
+<p>Ignores files that already exist in the vault.</p>
+<p>Prevents duplicate additions and overwriting.</p>
+<hr>
+<ul>
+<li><code>updaterefs</code>:</li>
+</ul>
+<p>(Optional)</p>
+<p>Updates file references after files are added.</p>
+<p>This is recommended when migrating SOLIDWORKS assemblies to ensure references point to the correct vault locations.</p>
+<hr>
+<ul>
+<li><code>csv</code>:</li>
+</ul>
+<p>(Optional)</p>
+<p>Exports the results of the add operation to a CSV file.</p>
+<p>The output CSV contains:</p>
+<p>File ID<br>
+File Name<br>
+Vault Folder<br>
+Source Path<br>
+Status</p>
+<p>Example:</p>
+<p>-csv &quot;C:\Reports\add_results.csv&quot;</p>
+<hr>
+<h2 id="examples">EXAMPLES:</h2>
+<p>Adds a single file to the current vault directory:</p>
+<p>addtovault -source &quot;C:\Projects\file.txt&quot;</p>
+<hr>
+<p>Adds all parts and assemblies recursively:</p>
+<p>addtovault -source &quot;C:\Projects&quot; -recursive -search &quot;<em>.sldprt;</em>.sldasm&quot;</p>
+<hr>
+<p>Adds files using a CSV mapping file in batches of 50:</p>
+<p>addtovault -list &quot;C:\Projects\mapping.csv&quot; -batch 50</p>
+<hr>
+<p>Adds files and exports results:</p>
+<p>addtovault -source &quot;C:\Projects&quot; -recursive -csv &quot;C:\Reports\results.csv&quot;</p>
+<hr>
+<p>Adds files and updates references:</p>
+<p>addtovault -source &quot;C:\Migration&quot; -recursive -updaterefs</p>
+<hr>
+<p>Adds files to a specific vault folder:</p>
+<p>addtovault -source &quot;C:\Projects&quot; -directory &quot;$/Projects&quot;</p>
+<hr>
+<h2 id="remarks">REMARKS:</h2>
+<p>• Files are left <strong>checked out</strong> after being added.</p>
+<p>• Use <code>checkin</code> command to check in files after adding.</p>
+<p>Example:</p>
+<p>checkin -search % -recursive</p>
+<hr>
+<p>• Batch processing is strongly recommended for large migrations.</p>
+<p>• The <code>ignoreex</code> parameter prevents duplicate files from being added.</p>
+<p>• The <code>updaterefs</code> parameter should be used when adding SOLIDWORKS assemblies.</p>
+<p>• Ensure you have sufficient vault permissions before running this command.</p>
+<p>• The <code>list</code> parameter overrides <code>source</code> if both are specified.</p>
+<hr>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Use <code>checkin -search % -recursive</code> to check in all added files after calling <code>addtovault</code>.</p>
+<p>It is recommended to perform large add operations in stages and verify results using the exported CSV report.</p>
 </div>
 
 </article>
