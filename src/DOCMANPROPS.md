@@ -7,12 +7,14 @@ title: DOCMANPROPS Command Documentation | PDMShell | SOLIDWORKS PDM
 
 ## DESCRIPTION
 
-The `docmanprops` command is used to **export and refresh SOLIDWORKS file custom properties** without opening SOLIDWORKS.
+The `docmanprops` command is used to **export and update SOLIDWORKS file custom properties** without opening SOLIDWORKS.
 
 This command supports two primary modes:
 
 - **Export Mode (Default)** — Reads properties from SOLIDWORKS files and writes them to a CSV file
-- **Refresh Mode** — Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)
+- **Update Mode** — Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)
+
+- **Refresh Mode** — Reads a CSV file and refreshes the content of the csv.
 
 
 >[!IMPORTANT]
@@ -22,7 +24,7 @@ This command supports two primary modes:
 # SYNTAX
 
 ```bash
-docmanprops -directory <path> -csv <csvPath> [-recursive] [-configNames] [-refresh] [extensions]
+docmanprops -directory <path> -csv <csvPath> [-recursive] [-configNames] [-update] [-refresh][extensions]
 ```
 ---
 
@@ -45,20 +47,27 @@ Specifies the CSV file path.
 Used for:
 
 - Export destination
-- Refresh source
+- update source
 
 Example: `-csv "C:\temp\props.csv"`
 
 ---
 
-## refresh
+## update
 
-When specified, the command runs in **Refresh Mode**.
+When specified, the command runs in **Update Mode**.
 
 Reads the CSV file and writes the properties back into the SOLIDWORKS files.
 
 ---
+## refresh
 
+When specified, the command runs in **Refresh Mode**.
+
+Reads the CSV file and refreshes the content of the properties in the csv file.
+
+
+---
 ## recursive
 
 When specified, searches subfolders.
@@ -76,7 +85,7 @@ Example: `-configNames "Default,Config1"` Use space for custom property.
 
 ## extensions
 
-Specifies which file extensions to include when exporting or refreshing properties.
+Specifies which file extensions to include when exporting or updateing properties.
 
 Default: `*` (all files)
 
@@ -154,7 +163,7 @@ docmanprops -directory "C:\Vault\Parts" -csv "C:\temp\props.csv" -recursive
 ![export mode](/images/exportmode.png)
 ---
 
-# REFRESH MODE
+# update MODE
 
 ## DESCRIPTION
 
@@ -174,11 +183,11 @@ Implementation reference: :contentReference[oaicite:1]{index=1}
 
 ## EXAMPLE
 ```bash
-docmanprops -csv "C:\temp\props.csv" -refresh
+docmanprops -csv "C:\temp\props.csv" -update
 ```
 
 ## OUTPUT
-![refreshmode](/images/refreshmode.png)
+![updatemode](/images/refreshmode.png)
 
 
 
@@ -188,7 +197,7 @@ docmanprops -csv "C:\temp\props.csv" -refresh
 
 # SUCCESS AND ERROR TRACKING
 
-The CSV is updated during refresh:
+The CSV is updated during update:
 
 Success column:
 

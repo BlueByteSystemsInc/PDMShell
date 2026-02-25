@@ -88,18 +88,22 @@
 <h1 id="docmanprops-command">DOCMANPROPS Command</h1>
 
 <h2 id="description">DESCRIPTION</h2>
-<p>The <code>docmanprops</code> command is used to <strong>export and refresh SOLIDWORKS file custom properties</strong> without opening SOLIDWORKS.</p>
+<p>The <code>docmanprops</code> command is used to <strong>export and update SOLIDWORKS file custom properties</strong> without opening SOLIDWORKS.</p>
 <p>This command supports two primary modes:</p>
 <ul>
-<li><strong>Export Mode (Default)</strong> — Reads properties from SOLIDWORKS files and writes them to a CSV file</li>
-<li><strong>Refresh Mode</strong> — Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)</li>
+<li><p><strong>Export Mode (Default)</strong> — Reads properties from SOLIDWORKS files and writes them to a CSV file</p>
+</li>
+<li><p><strong>Update Mode</strong> — Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)</p>
+</li>
+<li><p><strong>Refresh Mode</strong> — Reads a CSV file and refreshes the content of the csv.</p>
+</li>
 </ul>
 <div class="IMPORTANT">
 <h5>Important</h5>
 </div>
 <h2 id="this-command-works-with-the-file-system-and-requires-files-to-be-locally-cached-it-reads-and-writes-files-both-inside-and-outside-the-vault-relative-paths-only-work-in-the-vault-directory-and-requires-you-to-be-logged-in">?This command works with the file system and requires files to be locally cached. It reads and writes files both inside and outside the vault. Relative paths only work in the vault directory (and requires you to be logged in).</h2>
 <h1 id="syntax">SYNTAX</h1>
-<pre><code class="lang-bash">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-refresh] [extensions]
+<pre><code class="lang-bash">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-update] [-refresh][extensions]
 </code></pre>
 <hr>
 <h1 id="parameters">PARAMETERS</h1>
@@ -114,13 +118,17 @@
 <p>Used for:</p>
 <ul>
 <li>Export destination</li>
-<li>Refresh source</li>
+<li>update source</li>
 </ul>
 <p>Example: <code>-csv &quot;C:\temp\props.csv&quot;</code></p>
 <hr>
+<h2 id="update">update</h2>
+<p>When specified, the command runs in <strong>Update Mode</strong>.</p>
+<p>Reads the CSV file and writes the properties back into the SOLIDWORKS files.</p>
+<hr>
 <h2 id="refresh">refresh</h2>
 <p>When specified, the command runs in <strong>Refresh Mode</strong>.</p>
-<p>Reads the CSV file and writes the properties back into the SOLIDWORKS files.</p>
+<p>Reads the CSV file and refreshes the content of the properties in the csv file.</p>
 <hr>
 <h2 id="recursive">recursive</h2>
 <h2 id="when-specified-searches-subfolders">When specified, searches subfolders.</h2>
@@ -130,7 +138,7 @@
 <p>Example: <code>-configNames &quot;Default,Config1&quot;</code> Use space for custom property.</p>
 <hr>
 <h2 id="extensions">extensions</h2>
-<p>Specifies which file extensions to include when exporting or refreshing properties.</p>
+<p>Specifies which file extensions to include when exporting or updateing properties.</p>
 <p>Default: <code>*</code> (all files)</p>
 <p>Supports wildcards and multiple values separated by commas.</p>
 <p>Special value for all solidworks file extensions is: <code>solidworks</code></p>
@@ -185,7 +193,7 @@ Exception
 </code></pre>
 <h2 id="output">OUTPUT</h2>
 <h2 id="export-mode-1"><img src="/images/exportmode.png" alt="export mode"></h2>
-<h1 id="refresh-mode">REFRESH MODE</h1>
+<h1 id="update-mode">update MODE</h1>
 <h2 id="description-2">DESCRIPTION</h2>
 <p>Reads CSV file and writes properties back into files.</p>
 <p>Features:</p>
@@ -199,16 +207,16 @@ Exception
 <p>Implementation reference: :contentReference[oaicite:1]{index=1}</p>
 <hr>
 <h2 id="example-1">EXAMPLE</h2>
-<pre><code class="lang-bash">docmanprops -csv &quot;C:\temp\props.csv&quot; -refresh
+<pre><code class="lang-bash">docmanprops -csv &quot;C:\temp\props.csv&quot; -update
 </code></pre>
 <h2 id="output-1">OUTPUT</h2>
-<p><img src="/images/refreshmode.png" alt="refreshmode"></p>
+<p><img src="/images/refreshmode.png" alt="updatemode"></p>
 <div class="NOTE">
 <h5>Note</h5>
 </div>
 <h2 id="temporary-files-start-with--are-ignored">Temporary files start with ~ are ignored.</h2>
 <h1 id="success-and-error-tracking">SUCCESS AND ERROR TRACKING</h1>
-<p>The CSV is updated during refresh:</p>
+<p>The CSV is updated during update:</p>
 <p>Success column:</p>
 <p>True — Property updated successfully<br>
 False — Property update failed</p>

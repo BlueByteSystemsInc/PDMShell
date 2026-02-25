@@ -193,9 +193,9 @@ addtovault -source "C:\Projects" -directory "Projects"
 • Use `checkin` command to check in files after adding.
 
 Example:
-
+```bash
 checkin -search % -recursive
-
+```
 ---
 
 • Batch processing is strongly recommended for large migrations.
