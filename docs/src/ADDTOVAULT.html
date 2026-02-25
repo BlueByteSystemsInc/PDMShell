@@ -95,7 +95,8 @@
 </div>
 <hr>
 <h2 id="syntax">SYNTAX:</h2>
-<p>addtovault [-source <path> | -list <csvpath>] [-directory <vaultfolder>] [-search <pattern>] [-recursive] [-batch <size>] [-ignoreex] [-updaterefs] [-csv <outputpath>]</outputpath></size></pattern></vaultfolder></csvpath></path></p>
+<pre><code class="lang-bash">addtovault [-source &lt;path&gt; | -list &lt;csvPath&gt;] [-directory &lt;vaultFolder&gt;] [-search &lt;pattern&gt;] [-recursive] [-batch &lt;size&gt;] [-ignoreex] [-updaterefs] [-csv &lt;outputPath&gt;]
+</code></pre>
 <hr>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
@@ -115,11 +116,16 @@ Specifies the source file or directory to be added to the vault.</li>
 <p>The CSV must contain <strong>two columns</strong> (First row is header):</p>
 <p>Column 1: Full source file path<br>
 Column 2: Destination folder path relative to the target vault directory</p>
-<p>Example CSV:
-FilePath,Target
-C:\Data\Part1.sldprt,ProjectA\Mechanical<br>
-C:\Data\Part2.sldprt,ProjectB\Mechanical</p>
+<p>Example CSV:</p>
+<pre><code class="lang-bash">FilePath,Target
+C:\Data\Part1.sldprt,ProjectA\Mechanical  
+C:\Data\Part2.sldprt,ProjectB\Mechanical  
+</code></pre>
 <p>This parameter overrides <code>-source</code>.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Please make sure you don't have duplicates copies to the <strong>same</strong> target directory.</p>
+</div>
 <hr>
 <ul>
 <li><code>directory</code>:</li>
@@ -127,7 +133,8 @@ C:\Data\Part2.sldprt,ProjectB\Mechanical</p>
 <p>Specifies the destination folder in the PDM vault.</p>
 <p>If not specified, the current vault directory is used.</p>
 <p>Example:</p>
-<p>-directory &quot;$/Projects&quot;</p>
+<pre><code class="lang-bash">-directory &quot;Projects&quot;
+</code></pre>
 <hr>
 <ul>
 <li><code>search</code>:</li>
@@ -139,8 +146,9 @@ C:\Data\Part2.sldprt,ProjectB\Mechanical</p>
 • Multiple extensions<br>
 • Separators: <code>,</code> <code>;</code> <code>|</code></p>
 <p>Examples:</p>
-<p>-search &quot;<em>.sldprt&quot;<br>
--search &quot;</em>.sldprt;*.sldasm&quot;</p>
+<pre><code class="lang-bash">-search &quot;*.sldprt&quot;  
+-search &quot;*.sldprt;*.sldasm&quot;  
+</code></pre>
 <hr>
 <ul>
 <li><code>recursive</code>:</li>
@@ -156,9 +164,14 @@ C:\Data\Part2.sldprt,ProjectB\Mechanical</p>
 <p>Specifies the number of files to add per batch.</p>
 <p>This improves performance and stability when adding large numbers of files.</p>
 <p>Examples:</p>
-<p>-batch 50<br>
--batch 100</p>
+<pre><code class="lang-bash">-batch 50  
+-batch 100  
+</code></pre>
 <p>If not specified, all files are added in a single batch.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p><strong>Please use a batch size when processing large directory +1000 files. We recommend a batch size of 100</strong>.</p>
+</div>
 <hr>
 <ul>
 <li><code>ignoreex</code>:</li>
@@ -179,37 +192,38 @@ C:\Data\Part2.sldprt,ProjectB\Mechanical</p>
 </ul>
 <p>(Optional)</p>
 <p>Exports the results of the add operation to a CSV file.</p>
-<p>The output CSV contains:</p>
-<p>File ID<br>
-File Name<br>
-Vault Folder<br>
-Source Path<br>
-Status</p>
 <p>Example:</p>
-<p>-csv &quot;C:\Reports\add_results.csv&quot;</p>
+<pre><code class="lang-bash">-csv &quot;C:\Reports\add_results.csv&quot;
+</code></pre>
 <hr>
 <h2 id="examples">EXAMPLES:</h2>
 <p>Adds a single file to the current vault directory:</p>
-<p>addtovault -source &quot;C:\Projects\file.txt&quot;</p>
+<pre><code class="lang-bash">addtovault -source &quot;C:\Projects\file.txt&quot;
+</code></pre>
 <hr>
 <p>Adds all parts and assemblies recursively:</p>
-<p>addtovault -source &quot;C:\Projects&quot; -recursive -search &quot;<em>.sldprt;</em>.sldasm&quot;</p>
+<pre><code class="lang-bash">addtovault -source &quot;C:\Projects&quot; -recursive -search &quot;*.sldprt;*.sldasm&quot;
+</code></pre>
 <hr>
 <p>Adds files using a CSV mapping file in batches of 50:</p>
-<p>addtovault -list &quot;C:\Projects\mapping.csv&quot; -batch 50</p>
+<pre><code class="lang-bash">addtovault -list &quot;C:\Projects\mapping.csv&quot; -batch 50
+</code></pre>
 <hr>
 <p>Adds files and exports results:</p>
-<p>addtovault -source &quot;C:\Projects&quot; -recursive -csv &quot;C:\Reports\results.csv&quot;</p>
+<pre><code class="lang-bash">addtovault -source &quot;C:\Projects&quot; -recursive -csv &quot;C:\Reports\results.csv&quot;
+</code></pre>
 <hr>
 <p>Adds files and updates references:</p>
-<p>addtovault -source &quot;C:\Migration&quot; -recursive -updaterefs</p>
+<pre><code class="lang-bash">addtovault -source &quot;C:\Migration&quot; -recursive -updaterefs
+</code></pre>
 <hr>
 <p>Adds files to a specific vault folder:</p>
-<p>addtovault -source &quot;C:\Projects&quot; -directory &quot;$/Projects&quot;</p>
+<pre><code class="lang-bash">addtovault -source &quot;C:\Projects&quot; -directory &quot;Projects&quot;
+</code></pre>
 <hr>
 <h2 id="remarks">REMARKS:</h2>
-<p>• Files are left <strong>checked out</strong> after being added.</p>
-<p>• Use <code>checkin</code> command to check in files after adding.</p>
+<p>• Files are left <strong>checked out</strong> after being added.
+• Use <code>checkin</code> command to check in files after adding.</p>
 <p>Example:</p>
 <p>checkin -search % -recursive</p>
 <hr>

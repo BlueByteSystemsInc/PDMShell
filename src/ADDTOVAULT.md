@@ -14,9 +14,9 @@ The `addtovault` command is used to add files and/or directories to the SOLIDWOR
 ---
 
 ## SYNTAX:
-
+```bash
 addtovault [-source <path> | -list <csvPath>] [-directory <vaultFolder>] [-search <pattern>] [-recursive] [-batch <size>] [-ignoreex] [-updaterefs] [-csv <outputPath>]
-
+```
 ---
 
 ## PARAMETERS:
@@ -45,11 +45,15 @@ Column 1: Full source file path
 Column 2: Destination folder path relative to the target vault directory  
 
 Example CSV:
+```bash
 FilePath,Target
 C:\Data\Part1.sldprt,ProjectA\Mechanical  
 C:\Data\Part2.sldprt,ProjectB\Mechanical  
-
+```
 This parameter overrides `-source`.
+
+>[!Important]
+>Please make sure you don't have duplicates copies to the **same** target directory. 
 
 ---
 
@@ -60,9 +64,9 @@ Specifies the destination folder in the PDM vault.
 If not specified, the current vault directory is used.
 
 Example:
-
--directory "$/Projects"
-
+```bash
+-directory "Projects"
+```
 ---
 
 - `search`:
@@ -78,10 +82,10 @@ Supports:
 • Separators: `,` `;` `|`
 
 Examples:
-
+```bash
 -search "*.sldprt"  
 -search "*.sldprt;*.sldasm"  
-
+```
 ---
 
 - `recursive`:
@@ -103,11 +107,13 @@ Specifies the number of files to add per batch.
 This improves performance and stability when adding large numbers of files.
 
 Examples:
-
+```bash
 -batch 50  
 -batch 100  
-
-If not specified, all files are added in a single batch.
+```
+If not specified, all files are added in a single batch. 
+>[!Important]
+>**Please use a batch size when processing large directory +1000 files. We recommend a batch size of 100**.
 
 ---
 
@@ -137,62 +143,53 @@ This is recommended when migrating SOLIDWORKS assemblies to ensure references po
 
 Exports the results of the add operation to a CSV file.
 
-The output CSV contains:
-
-File ID  
-File Name  
-Vault Folder  
-Source Path  
-Status  
-
 Example:
-
+```bash
 -csv "C:\Reports\add_results.csv"
-
+```
 ---
 
 ## EXAMPLES:
 
 Adds a single file to the current vault directory:
-
+```bash
 addtovault -source "C:\Projects\file.txt"
-
+```
 ---
 
 Adds all parts and assemblies recursively:
-
+```bash
 addtovault -source "C:\Projects" -recursive -search "*.sldprt;*.sldasm"
-
+```
 ---
 
 Adds files using a CSV mapping file in batches of 50:
-
+```bash
 addtovault -list "C:\Projects\mapping.csv" -batch 50
-
+```
 ---
 
 Adds files and exports results:
-
+```bash
 addtovault -source "C:\Projects" -recursive -csv "C:\Reports\results.csv"
-
+```
 ---
 
 Adds files and updates references:
-
+```bash
 addtovault -source "C:\Migration" -recursive -updaterefs
-
+```
 ---
 
 Adds files to a specific vault folder:
-
-addtovault -source "C:\Projects" -directory "$/Projects"
-
+```bash
+addtovault -source "C:\Projects" -directory "Projects"
+```
 ---
 
 ## REMARKS:
 
 • Files are left **checked out** after being added.
-
 • Use `checkin` command to check in files after adding.
 
 Example:
