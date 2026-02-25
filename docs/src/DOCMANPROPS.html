@@ -94,7 +94,10 @@
 <li><strong>Export Mode (Default)</strong> — Reads properties from SOLIDWORKS files and writes them to a CSV file</li>
 <li><strong>Refresh Mode</strong> — Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)</li>
 </ul>
-<hr>
+<div class="IMPORTANT">
+<h5>Important</h5>
+</div>
+<h2 id="this-command-works-with-the-file-system-and-requires-files-to-be-locally-cached-it-reads-and-writes-files-both-inside-and-outside-the-vault-relative-paths-only-work-in-the-vault-directory-and-requires-you-to-be-logged-in">?This command works with the file system and requires files to be locally cached. It reads and writes files both inside and outside the vault. Relative paths only work in the vault directory (and requires you to be logged in).</h2>
 <h1 id="syntax">SYNTAX</h1>
 <pre><code class="lang-bash">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-refresh] [extensions]
 </code></pre>
@@ -102,12 +105,9 @@
 <h1 id="parameters">PARAMETERS</h1>
 <h2 id="directory">directory</h2>
 <p>Specifies the folder containing SOLIDWORKS files.</p>
-<p>Supported file types:</p>
-<pre><code class="lang-bash">- .sldprt
-- .sldasm
-- .slddrw
+<p>Example:</p>
+<pre><code class="lang-bash">`-directory &quot;C:\Vault\Projects&quot;`
 </code></pre>
-<p>Example: <code>-directory &quot;C:\Vault\Projects&quot;</code></p>
 <hr>
 <h2 id="csv">csv</h2>
 <p>Specifies the CSV file path.</p>
@@ -133,6 +133,7 @@
 <p>Specifies which file extensions to include when exporting or refreshing properties.</p>
 <p>Default: <code>*</code> (all files)</p>
 <p>Supports wildcards and multiple values separated by commas.</p>
+<p>Special value for all solidworks file extensions is: <code>solidworks</code></p>
 <p>Examples:</p>
 <pre><code class="lang-bash">#all solidworks files
 -extensions &quot;solidworks&quot;
