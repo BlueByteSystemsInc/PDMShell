@@ -149,10 +149,17 @@ Example:
 ---
 
 - `propertymap`: 
-A csv file path containing a list of files and their properties. Use [DocManProps](DOCMANPROPS.md) to generate a list and edit in excel.
+A csv file path containing a list of files and their properties. Use [DocManProps](DOCMANPROPS.md) to generate a list and edit in excel. 
 ```bash
 -csv "C:\Reports\propertymap.csv"
 ```
+You only need the columns that marked in red:
+
+![Example of property map file](/images/propertymap.png)
+
+>[!IMPORTANT]
+> If you specify the word "DELETE" as the value, PDMShell will delete that property from in the migrated file during the add operation. **The original file will not be affected**.
+
 ---
 
 
