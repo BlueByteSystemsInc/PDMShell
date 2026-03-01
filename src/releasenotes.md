@@ -7,6 +7,14 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.41 (2026-03-01)
+- Added `propertymap` parameter to allow to set custom property prior to adding files to vault from a csv file.
+- Changed `list` parameter [addtovaultcommmand](ADDTOVAULT.md) to `map`
+
+# 3.0.40
+# 3.0.39
+Ghost builds
+
 # 3.0.38 (2026-02-26)
 - Added `update` parameter and changed the logic `refresh` parameter [DocManProps](DOCMANPROPS.md): `Update` now updates the files and `refresh` refresh the csv.
 

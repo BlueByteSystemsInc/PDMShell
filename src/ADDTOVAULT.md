@@ -1,12 +1,12 @@
 ---
-description: The ADDTOVAULT command is used to add files or directories to the PDM vault. It supports adding from a single file, folder, or CSV mapping list, and includes options such as batch processing, ignoring existing files, updating references, recursion, and exporting results to CSV.
+description: The ADDTOVAULT command is used to add files or directories to the PDM vault. It supports adding from a single file, folder, or CSV mapping map, and includes options such as batch processing, ignoring existing files, updating references, recursion, and exporting results to CSV.
 title: ADDTOVAULT Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 
 # ADDTOVAULT Command Documentation
 
 ## DESCRIPTION:
-The `addtovault` command is used to add files and/or directories to the SOLIDWORKS PDM vault. It supports multiple input methods including direct file paths, folders, and CSV mapping lists. Additional options allow batch processing, filtering, ignoring existing files, updating references, and exporting results.
+The `addtovault` command is used to add files and/or directories to the SOLIDWORKS PDM vault. It supports multiple input methods including direct file paths, folders, and CSV mapping maps. Additional options allow batch processing, filtering, ignoring existing files, updating references, and exporting results.
 
 > [!NOTE]
 > It is highly recommended that you run PDMShell as **Administrator** before using this command.
@@ -15,7 +15,7 @@ The `addtovault` command is used to add files and/or directories to the SOLIDWOR
 
 ## SYNTAX:
 ```bash
-addtovault [-source <path> | -list <csvPath>] [-directory <vaultFolder>] [-search <pattern>] [-recursive] [-batch <size>] [-ignoreex] [-updaterefs] [-csv <outputPath>]
+addtovault [-source <path> | -map <csvPath>] [-directory <Vault or outside directory>] [-search <pattern>] [-recursive] [-batch <size>] [-ignoreexisting] [-updaterefs] [-csv <outputPath>] [-propertymap]
 ```
 ---
 
@@ -35,7 +35,7 @@ If not specified, the current working directory is used.
 
 ---
 
-- `list`:
+- `map`:
 
 Specifies a CSV file containing file mapping information.
 
@@ -117,12 +117,11 @@ If not specified, all files are added in a single batch.
 
 ---
 
-- `ignoreex`:
+- `ignoreexisting`:
 
 (Optional)
 
 Ignores files that already exist in the vault.
-
 Prevents duplicate additions and overwriting.
 
 ---
@@ -149,6 +148,14 @@ Example:
 ```
 ---
 
+- `propertymap`: 
+A csv file path containing a list of files and their properties. Use [DocManProps](DOCMANPROPS.md) to generate a list and edit in excel.
+```bash
+-csv "C:\Reports\propertymap.csv"
+```
+---
+
+
 ## EXAMPLES:
 
 Adds a single file to the current vault directory:
@@ -165,7 +172,7 @@ addtovault -source "C:\Projects" -recursive -search "*.sldprt;*.sldasm"
 
 Adds files using a CSV mapping file in batches of 50:
 ```bash
-addtovault -list "C:\Projects\mapping.csv" -batch 50
+addtovault -map "C:\Projects\mapping.csv" -batch 50
 ```
 ---
 
@@ -185,6 +192,11 @@ Adds files to a specific vault folder:
 ```bash
 addtovault -source "C:\Projects" -directory "Projects"
 ```
+Add files from a map CSV (50 at a time) and save the results to ret.csv, while ensuring properties are updated using a property map CSV file. This also performs a search and ignores files that already exist in the vault.
+```bash
+addtovault -map "c:\export\map.csv" -ignoreexisting -csv "ret.csv" -batch 10 -propertymap "c:\export\propertymap.csv"
+```
+
 ---
 
 ## REMARKS:
@@ -200,13 +212,13 @@ checkin -search % -recursive
 
 • Batch processing is strongly recommended for large migrations.
 
-• The `ignoreex` parameter prevents duplicate files from being added.
+• The `ignoreexisting` parameter prevents duplicate files from being added.
 
 • The `updaterefs` parameter should be used when adding SOLIDWORKS assemblies.
 
 • Ensure you have sufficient vault permissions before running this command.
 
-• The `list` parameter overrides `source` if both are specified.
+• The `map` parameter overrides `source` if both are specified.
 
 ---
 
