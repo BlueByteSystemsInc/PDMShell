@@ -95,7 +95,7 @@
 </div>
 <hr>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">addtovault [-source &lt;path&gt; | -map &lt;csvPath&gt;] [-directory &lt;Vault or outside directory&gt;] [-search &lt;pattern&gt;] [-recursive] [-batch &lt;size&gt;] [-ignoreexisting] [-updaterefs] [-csv &lt;outputPath&gt;] [-propertymap]
+<pre><code class="lang-bash">addtovault [-source &lt;path&gt; | -map &lt;csvPath&gt;]  [-skip] [-count] | [-directory &lt;Vault or outside directory&gt;] [-search &lt;pattern&gt;] [-recursive] [-batch &lt;size&gt;] [-ignoreexisting] [-updaterefs] [-csv &lt;outputPath&gt;] [-propertymap] [-clear]
 </code></pre>
 <hr>
 <h2 id="parameters">PARAMETERS:</h2>
@@ -120,6 +120,10 @@ Column 2: Destination folder path relative to the target vault directory</p>
 <pre><code class="lang-bash">FilePath,Target
 C:\Data\Part1.sldprt,ProjectA\Mechanical  
 C:\Data\Part2.sldprt,ProjectB\Mechanical  
+</code></pre>
+<p>With <code>-map</code>, you skip a specified number of items using <code>-skip</code> to start from a starting index in your map file. You can limit the number of items to process using the <code>-count</code>.</p>
+<pre><code class="lang-bash">#uses a map file and starts from the index 5234 only processing 540 mappings
+addtovault -map &quot;C:\Users\hawkridge\Downloads\map\map.csv&quot; -batch 50 -propertymap &quot;C:\Users\hawkridge\Downloads\map\property.csv&quot; -skip 5243 -count 540 -clear -ignoreexisting -csv &quot;result.csv&quot;
 </code></pre>
 <p>This parameter overrides <code>-source</code>.</p>
 <div class="IMPORTANT">
@@ -208,6 +212,7 @@ A csv file path containing a list of files and their properties. Use <a href="DO
 <h5>Important</h5>
 <p>If you specify the word &quot;DELETE&quot; as the value, PDMShell will delete that property from in the migrated file during the add operation. <strong>The original file will not be affected</strong>.</p>
 </div>
+<p>If you specify <code>-clear</code>, PDMShell will clear all the properties from the file before adding it to the vault and prior to apply the property map.</p>
 <hr>
 <h2 id="examples">EXAMPLES:</h2>
 <p>Adds a single file to the current vault directory:</p>

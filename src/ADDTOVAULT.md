@@ -15,7 +15,7 @@ The `addtovault` command is used to add files and/or directories to the SOLIDWOR
 
 ## SYNTAX:
 ```bash
-addtovault [-source <path> | -map <csvPath>] [-directory <Vault or outside directory>] [-search <pattern>] [-recursive] [-batch <size>] [-ignoreexisting] [-updaterefs] [-csv <outputPath>] [-propertymap]
+addtovault [-source <path> | -map <csvPath>]  [-skip] [-count] | [-directory <Vault or outside directory>] [-search <pattern>] [-recursive] [-batch <size>] [-ignoreexisting] [-updaterefs] [-csv <outputPath>] [-propertymap] [-clear]
 ```
 ---
 
@@ -50,6 +50,14 @@ FilePath,Target
 C:\Data\Part1.sldprt,ProjectA\Mechanical  
 C:\Data\Part2.sldprt,ProjectB\Mechanical  
 ```
+
+With `-map`, you skip a specified number of items using `-skip` to start from a starting index in your map file. You can limit the number of items to process using the `-count`. 
+
+```bash 
+#uses a map file and starts from the index 5234 only processing 540 mappings
+addtovault -map "C:\Users\hawkridge\Downloads\map\map.csv" -batch 50 -propertymap "C:\Users\hawkridge\Downloads\map\property.csv" -skip 5243 -count 540 -clear -ignoreexisting -csv "result.csv"
+```
+
 This parameter overrides `-source`.
 
 >[!Important]
@@ -159,6 +167,8 @@ You only need the columns that marked in red:
 
 >[!IMPORTANT]
 > If you specify the word "DELETE" as the value, PDMShell will delete that property from in the migrated file during the add operation. **The original file will not be affected**.
+
+If you specify `-clear`, PDMShell will clear all the properties from the file before adding it to the vault and prior to apply the property map. 
 
 ---
 
