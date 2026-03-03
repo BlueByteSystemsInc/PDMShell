@@ -95,7 +95,7 @@
 </div>
 <hr>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">addtovault [-source &lt;path&gt; | -map &lt;csvPath&gt;]  [-skip] [-count] | [-directory &lt;Vault or outside directory&gt;] [-search &lt;pattern&gt;] [-recursive] [-batch &lt;size&gt;] [-ignoreexisting] [-updaterefs] [-csv &lt;outputPath&gt;] [-propertymap] [-clear]
+<pre><code class="lang-bash">addtovault [-source &lt;path&gt; | -map &lt;csvPath&gt;]  [-skip] [-count] | [-directory &lt;Vault or outside directory&gt;] [-search &lt;pattern&gt;] [-recursive] [-batch &lt;size&gt;] [-ignoreexisting] [-updaterefs] [-csv &lt;outputPath&gt;] [-propertymap] [-clear] [-label]
 </code></pre>
 <hr>
 <h2 id="parameters">PARAMETERS:</h2>
@@ -191,6 +191,17 @@ Prevents duplicate additions and overwriting.</p>
 <p>Updates file references after files are added.</p>
 <p>This is recommended when migrating SOLIDWORKS assemblies to ensure references point to the correct vault locations.</p>
 <hr>
+<ul>
+<li><code>label</code>:</li>
+</ul>
+<p>(Optional)</p>
+<p>Adds a label to the migrated files. This is a great option to mark the added files immediately.</p>
+<pre><code class="lang-bash">#Add files from a map (skip first 10 and only process 3) and add a label migration name and value 
+addtovault -map &quot;C:\export\map.csv&quot; -skip 10 -count 3 -label &quot;Migration;Migration&quot;
+# finds the added files (parts)
+search -search &quot;Name=%.sldprt;Label=Migration;Recursive=true&quot;
+</code></pre>
+<h2 id="label"><img src="/images/label.png" alt="label"></h2>
 <ul>
 <li><code>csv</code>:</li>
 </ul>

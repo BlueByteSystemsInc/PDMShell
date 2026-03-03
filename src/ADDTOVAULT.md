@@ -15,7 +15,7 @@ The `addtovault` command is used to add files and/or directories to the SOLIDWOR
 
 ## SYNTAX:
 ```bash
-addtovault [-source <path> | -map <csvPath>]  [-skip] [-count] | [-directory <Vault or outside directory>] [-search <pattern>] [-recursive] [-batch <size>] [-ignoreexisting] [-updaterefs] [-csv <outputPath>] [-propertymap] [-clear]
+addtovault [-source <path> | -map <csvPath>]  [-skip] [-count] | [-directory <Vault or outside directory>] [-search <pattern>] [-recursive] [-batch <size>] [-ignoreexisting] [-updaterefs] [-csv <outputPath>] [-propertymap] [-clear] [-label]
 ```
 ---
 
@@ -142,6 +142,21 @@ Updates file references after files are added.
 
 This is recommended when migrating SOLIDWORKS assemblies to ensure references point to the correct vault locations.
 
+---
+
+- `label`:
+
+(Optional)
+
+Adds a label to the migrated files. This is a great option to mark the added files immediately. 
+
+```bash
+#Add files from a map (skip first 10 and only process 3) and add a label migration name and value 
+addtovault -map "C:\export\map.csv" -skip 10 -count 3 -label "Migration;Migration"
+# finds the added files (parts)
+search -search "Name=%.sldprt;Label=Migration;Recursive=true"
+```
+![label](/images/label.png)
 ---
 
 - `csv`:

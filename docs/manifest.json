@@ -747,6 +747,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/label.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/label.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/logo.png",
       "output": {
         "resource": {

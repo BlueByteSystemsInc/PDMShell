@@ -7,6 +7,11 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+
+# 3.0.45 (2026-03-06)
+- Add `label` parameter [addtovaultcommmand](ADDTOVAULT.md)
+
+
 # 3.0.44 (2026-03-03)
 - Add `count`, `clear`, `skip` parameters [addtovaultcommmand](ADDTOVAULT.md)
 
