@@ -30,14 +30,14 @@ move -source -directory -search -recursive
 
 - `source`  
   The complete file path of the file to move.  
-  You can also specify a folder path. This will move the files in that folder.  
+  You can also specify a folder path. This will move the actual folder.
   Temporary files starting with `~` are ignored.
 
 - `directory`  
   Target directory where to move the file(s) to. Must exist in the vault.
 
 - `search`  
-  Search query. Use this to move all search results from the source folder.
+  Search query. Use this to move all search results from the source folder. **This does not support moving folders from a search**
 
 - `recursive`  
   Affects the search parameter. Specify `-recursive` to make the search recursive.  

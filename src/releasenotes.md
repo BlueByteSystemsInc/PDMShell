@@ -7,22 +7,24 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.45 (2026-03-06)
+- Expanded `source` to take folder in [move](MOVE.md): This allow folders to be moved.
 
 # 3.0.45 (2026-03-06)
-- Add `label` parameter [addtovaultcommmand](ADDTOVAULT.md)
+- Add `label` parameter to [addtovault](ADDTOVAULT.md)
 
 
 # 3.0.44 (2026-03-03)
-- Add `count`, `clear`, `skip` parameters [addtovaultcommmand](ADDTOVAULT.md)
+- Add `count`, `clear`, `skip` parameters to [addtovault](ADDTOVAULT.md)
 
 
 # 3.0.42 (2026-03-02)
-- Small bugs fixes with the `csv` parameter [addtovaultcommmand](ADDTOVAULT.md)
+- Small bugs fixes with the `csv` parameter in [addtovault](ADDTOVAULT.md)
 - If you specify the word "DELETE" in the value of the custom property in the `propertymap`, PDMShell will delete the property prior to adding the file.
 
 # 3.0.41 (2026-03-01)
 - Added `propertymap` parameter to allow to set custom property prior to adding files to vault from a csv file.
-- Changed `list` parameter [addtovaultcommmand](ADDTOVAULT.md) to `map`
+- Changed `list` parameter in [addtovault](ADDTOVAULT.md) to `map`
 
 # 3.0.40
 # 3.0.39
@@ -33,9 +35,9 @@ Ghost builds
 
 
 # 3.0.37 (2026-02-25)
-- Added `list` parameter [addtovaultcommmand](ADDTOVAULT.md): CSV mapping file list
-- Added `batch` parameter to [addtovaultcommmand](ADDTOVAULT.md).
-- Improved performance with large data sets [addtovaultcommmand](ADDTOVAULT.md). 
+- Added `list` parameter to [addtovault](ADDTOVAULT.md): CSV mapping file list
+- Added `batch` parameter to [addtovault](ADDTOVAULT.md).
+- Improved performance with large data sets [addtovault](ADDTOVAULT.md). 
 
 # 3.0.36 (2026-02-24)
 - Ignored temporary files in [DocManProps](DOCMANPROPS.md).
