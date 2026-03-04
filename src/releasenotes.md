@@ -7,7 +7,7 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
-# 3.0.45 (2026-03-06)
+# 3.0.46 (2026-03-06)
 - Expanded `source` to take folder in [move](MOVE.md): This allow folders to be moved.
 
 # 3.0.45 (2026-03-06)
