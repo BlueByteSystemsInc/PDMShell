@@ -9,11 +9,12 @@ Sets variables for multiple files using a CSV file as the source.
 
 ## SYNTAX:
 ```bash
-setvarsfromsource -source
+setvarsfromsource -source -evaluatealias
 ```
 
 ## PARAMETERS:
 -`source`: The CSV file containing the file IDs and variable values.
+-`evaluatealias`: See dynamic placeholder article for more details.
 
 ## CSV FILE FORMAT:
 The CSV file should have the following format:
