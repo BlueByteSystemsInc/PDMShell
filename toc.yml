@@ -8,3 +8,5 @@
   href: https://bluebyte.biz/product/pdmshell
 - name: Download PDMShell Now 
   href: https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell
+- name: Testimonials
+  href: src/testimonials.md

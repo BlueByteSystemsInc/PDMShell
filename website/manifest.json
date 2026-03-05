@@ -1686,6 +1686,16 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "src/testimonials.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/testimonials.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "src/toc.yml",
       "output": {
