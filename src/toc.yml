@@ -38,6 +38,11 @@
   - name: "Invoke a PDMShell Script From Transition Action:"
   - name: From Workflow Transitions
     href: scriptsfromtransition.md
+- name: SQL Examples 
+  expanded: true
+  items:
+  - name: Find All Part Numbers And Descriptions
+    href: ALLPARTNUMBERSANDDESCRIPTIONS.md
 - name: Commands
   expanded: true
   items:

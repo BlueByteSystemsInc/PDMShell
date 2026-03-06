@@ -897,6 +897,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/sqloutput.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqloutput.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/taskscript-1.png",
       "output": {
         "resource": {
@@ -961,6 +971,16 @@
       "output": {
         ".html": {
           "relative_path": "src/ADDTOVAULT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/ALLPARTNUMBERSANDESCRIPTIONS.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/ALLPARTNUMBERSANDESCRIPTIONS.html"
         }
       },
       "version": ""
