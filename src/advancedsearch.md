@@ -118,6 +118,15 @@ These tokens map directly to EdmSearchToken values and control how PDMShell filt
 | VersionsByUser | Versions created by user |
 | WorkflowName | Search by workflow name |
 | **DuplicatedBy** | **Finds duplicates either by name, variables, hash and filedate** |
+| **Edit** | **Performs a checkout and a check-in on the search results. Only use with `export` and `runswmacro` commands.** |
+#### Edit
+
+Use the `edit` token to check out and check-in the search results with the `export` and `runswmacro`'s -`search` parameter. If specify `Edit=Force`, the check-in process will be forced.
+
+```bash
+# run rebuild macro on all parts in the current directory and force a check out and checkout using SOLIDWORKS 2023
+runswmacro -search "Name=%.sldprt;Edit=Force" -filePath rebuild.swp -timeout 500 -version 2023
+```
 
 #### Duplicates
 

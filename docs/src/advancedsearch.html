@@ -326,8 +326,17 @@ Name=%.sldasm
 <td><strong>DuplicatedBy</strong></td>
 <td><strong>Finds duplicates either by name, variables, hash and filedate</strong></td>
 </tr>
+<tr>
+<td><strong>Edit</strong></td>
+<td><strong>Performs a checkout and a check-in on the search results. Only use with <code>export</code> and <code>runswmacro</code> commands.</strong></td>
+</tr>
 </tbody>
 </table>
+<h4 id="edit">Edit</h4>
+<p>Use the <code>edit</code> token to check out and check-in the search results with the <code>export</code> and <code>runswmacro</code>'s -<code>search</code> parameter. If specify <code>Edit=Force</code>, the check-in process will be forced.</p>
+<pre><code class="lang-bash"># run rebuild macro on all parts in the current directory and force a check out and checkout using SOLIDWORKS 2023
+runswmacro -search &quot;Name=%.sldprt;Edit=Force&quot; -filePath rebuild.swp -timeout 500 -version 2023
+</code></pre>
 <h4 id="duplicates">Duplicates</h4>
 <p>You can use <code>DuplicatedBy</code> to list the items either filename, variable, ash or last date the file was modified. To use the hash, files must be locally cached.</p>
 <pre><code class="lang-bash"># finds all solidworks duplicate solidworks files by name and list their file date, hash and revision variable

@@ -12,7 +12,7 @@ The `ExportCommand` allows you to export SOLIDWORKS files from the PDM vault to 
 ## SYNTAX:
 
 ```bash
-export [-search|-filePath] -name -directory -extensions -recursive 
+export [-search|-filePath] -name -directory -extensions -recursive -version
 ```
 ## PARAMETERS:
 
@@ -25,10 +25,12 @@ The export command requires several parameters:
 - `search`: Search query to find files for export.
 - `recursive`: If set, search will include subfolders.
 - `timeout`: timeout in seconds (for starting SOLIDWORKS only)
+- `version`: SOLIDWORKS year version. Example 2023. Default is latest.
 
 ## EXAMPLE:
 
-Export a file to PDF and DXF in a specific directory:
+Export a file to PDF and DXF in a specific directory using SOLIDWORKS 2023:
 
 ```bash
-export -filePath"Designs/part1.sldprt" -name "part1_export" -directory "Exports" -extensions "pdf,dxf"
+export -filePath"Designs/part1.sldprt" -name "part1_export" -directory "Exports" -extensions "pdf,dxf" -version 2023
+```

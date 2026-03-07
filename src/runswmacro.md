@@ -26,6 +26,7 @@ The command requires the following parameters:
 - `skip`: Skips the specified number of items. Only valid with `list`.
 - `count`: Only processes the specified number of items. Only valid with `list`.
 - `timeout`: Macro timeout in seconds (for both the macro to execute and for SOLIDWORKS to start too)
+- `version`: SOLIDWORKS year version. Example 2023. Default is latest.
 
 ## What version of SOLIDWORKS will PDMShell use?
 PDMShell will use the latest SOLIDWORKS version installed on your system by checking the Windows Registry at:
@@ -131,9 +132,17 @@ runswmacro -filePath "Macros/MyMacro.dll" -search "%.sldprt" -timeout 12000
 >[!NOTE]
 > The DLL must be built against .NET Framework 4.7.2 or higher
 
-## EXAMPLE:
+## EXAMPLES:
 
 ```bash
 # run batch export macro on all part in the current directory
  runswmacro -filePath "Macros/BatchExport.swp" -search "%.sldprt" 
+ ```
+
+>[!Important]
+> You can use the token `edit` in the search to force a check out and a check in of the search results. The check out uses the default checkout settings specified in the reference dialog of your PDM user settings (ie: this might check out the file itself and its references too). The check in will only check in the document itself (**not the references**).
+
+```bash
+# run batch export macro on all part in the current directory (does a checkout and check in of the parts)
+ runswmacro -filePath "Macros/BatchExport.swp" -search "Name=%.sldprt;Edit" 
  ```

@@ -102,6 +102,7 @@
 <li><code>skip</code>: Skips the specified number of items. Only valid with <code>list</code>.</li>
 <li><code>count</code>: Only processes the specified number of items. Only valid with <code>list</code>.</li>
 <li><code>timeout</code>: Macro timeout in seconds (for both the macro to execute and for SOLIDWORKS to start too)</li>
+<li><code>version</code>: SOLIDWORKS year version. Example 2023. Default is latest.</li>
 </ul>
 <h2 id="what-version-of-solidworks-will-pdmshell-use">What version of SOLIDWORKS will PDMShell use?</h2>
 <p>PDMShell will use the latest SOLIDWORKS version installed on your system by checking the Windows Registry at:</p>
@@ -199,9 +200,16 @@ runswmacro -filePath &quot;Macros/MyMacro.dll&quot; -search &quot;%.sldprt&quot;
 <h5>Note</h5>
 <p>The DLL must be built against .NET Framework 4.7.2 or higher</p>
 </div>
-<h2 id="example">EXAMPLE:</h2>
+<h2 id="examples">EXAMPLES:</h2>
 <pre><code class="lang-bash"># run batch export macro on all part in the current directory
  runswmacro -filePath &quot;Macros/BatchExport.swp&quot; -search &quot;%.sldprt&quot; 
+</code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>You can use the token <code>edit</code> in the search to force a check out and a check in of the search results. The check out uses the default checkout settings specified in the reference dialog of your PDM user settings (ie: this might check out the file itself and its references too). The check in will only check in the document itself (<strong>not the references</strong>).</p>
+</div>
+<pre><code class="lang-bash"># run batch export macro on all part in the current directory (does a checkout and check in of the parts)
+ runswmacro -filePath &quot;Macros/BatchExport.swp&quot; -search &quot;Name=%.sldprt;Edit&quot; 
 </code></pre>
 
 </article>
