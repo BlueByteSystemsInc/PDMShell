@@ -7,6 +7,9 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.48 (2026-03-10)
+- Added AI assistant. This requires Microsoft Edge WebView2 runtime to work. More information here: https://developer.microsoft.com/en-us/microsoft-edge/webview2/?form=MA13LH
+
 # 3.0.47 (2026-03-07)
 - Added `edit` token to search. This will force a check out and check-in when using a PDM `-search` during any command. 
 - Added `version` to specify the version of SOLIDWORKS to use in `export` and `runswmacro` commands. 
