@@ -7,6 +7,10 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.48 (2026-03-15)
+- Minor change to `addtovault`: existing files found during add will be added to results file from parameter `csv`.
+- Added TaskScript add-in to run tasks with PDMShell (Similar to convert task). 
+
 # 3.0.47 (2026-03-07)
 - Added `edit` token to search. This will force a check out and check-in when using a PDM `-search` during any command. 
 - Added `version` to specify the version of SOLIDWORKS to use in `export` and `runswmacro` commands. 
