@@ -7,6 +7,10 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.49 (2026-03-16)
+- Adding verbose logging to to `addtovault`
+- `setvarfromsource`: Added error message to error code. 
+
 # 3.0.48 (2026-03-15)
 - Minor change to `addtovault`: existing files found during add will be added to results file from parameter `csv`.
 - Added TaskScript add-in to run tasks with PDMShell (Similar to convert task). 
