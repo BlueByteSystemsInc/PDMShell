@@ -19,7 +19,7 @@ This command is especially useful for fixing broken references, updating referen
 
 ## SYNTAX
 ```bash
-updatereferences -filepath -search -directory -scope -recursive
+updatereferences -filepath -search -directory -scope -recursive -csv
 ```
 
 ## PARAMETERS
@@ -48,6 +48,9 @@ updatereferences -filepath -search -directory -scope -recursive
 
 - `recursive`  
   Optional. When used with `search`, includes subfolders of the current directory when locating files whose references should be updated.
+
+- `csv`
+  Saves the update references operations in a csv file.
 
 ## BEHAVIOR
 

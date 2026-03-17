@@ -98,7 +98,7 @@
 </ul>
 <p>This command is especially useful for fixing broken references, updating references after migrations, or correcting references that point outside the vault.</p>
 <h2 id="syntax">SYNTAX</h2>
-<pre><code class="lang-bash">updatereferences -filepath -search -directory -scope -recursive
+<pre><code class="lang-bash">updatereferences -filepath -search -directory -scope -recursive -csv
 </code></pre>
 <h2 id="parameters">PARAMETERS</h2>
 <ul>
@@ -132,6 +132,9 @@ Valid values:</p>
 </li>
 <li><p><code>recursive</code><br>
 Optional. When used with <code>search</code>, includes subfolders of the current directory when locating files whose references should be updated.</p>
+</li>
+<li><p><code>csv</code>
+Saves the update references operations in a csv file.</p>
 </li>
 </ul>
 <h2 id="behavior">BEHAVIOR</h2>
