@@ -7,6 +7,17 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.53 (2026-03-18)
+- `deletefromsource`: Fixed some bugs 
+
+# 3.0.52 (2026-03-17)
+- internal build
+
+# 3.0.51 (2026-03-17)
+- internal build
+
+# 3.0.50 (2026-03-16)
+- `updatesreferences`: added `csv` to save output.
 # 3.0.49 (2026-03-16)
 - Adding verbose logging to to `addtovault`
 - `setvarfromsource`: Added error message to error code. 

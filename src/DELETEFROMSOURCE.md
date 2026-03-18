@@ -18,7 +18,7 @@ The `deletefromsource` command deletes files listed in a CSV file. It can also o
 
 | Parameter | Type | Required | Description |
 |---|---|---|---|
-| `filePath` | string | Yes | Path to the source CSV file containing File IDs and Folder IDs. |
+| `filePath` | string | Yes | Path to the source CSV file containing File IDs and Folder IDs. This can be outside the vault. |
 | `destroy` | flag | No | If specified, files will be permanently destroyed after deletion. |
 | `csv` | string | No | Path to export the results CSV file. |
 | `batch` | int | No | Destory batch size for large folders. |
