@@ -7,6 +7,8 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.55 (2026-03-20)
+- Added a quick access button to PDMShell AI assistant
 # 3.0.54 (2026-03-20)
 - `deletefromsource`: API workaround for IEdmBatchDelete3 
 # 3.0.53 (2026-03-18)
