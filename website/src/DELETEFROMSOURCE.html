@@ -129,12 +129,29 @@
 </tr>
 </tbody>
 </table>
+<h2 id="important-notes-about--destroy">IMPORTANT NOTES ABOUT <code>-destroy</code>:</h2>
+<p>The <code>deletefromsource</code> command first attempts to delete and destroy (if <code>-destroy</code> used) files normally using the provided input (IDs from the CSV).</p>
+<p>After that initial pass, it performs a second step using the Name column. This is specifically for files that were already deleted but not destroyed.
+Since these files no longer exist in the vault in a normal state, they cannot be deleted again and their IDs do not exist anymore. Instead, PDMShell uses the file name to locate these previously deleted items and destroy them directly.</p>
+<p>This approach allows you to:</p>
+<ul>
+<li>Handle active files (delete → destroy)</li>
+<li>Handle already deleted files (destroy only) if there a value in the name column. See structure of the CSV file.</li>
+</ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>For previously deleted files, you only need to provide the file name in the Name column.</p>
+</div>
 <h2 id="source-csv-format">SOURCE CSV FORMAT:</h2>
 <p>The source CSV file must contain a header row with the following columns:</p>
-<pre><code class="lang-bash">FileID,FolderID
-12345,678
-12346,678
+<pre><code class="lang-bash">FileID,FolderID,Name
+12345,678,1.sldprt
+12346,678,2.sldprt
 </code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>The <code>Name</code> column is optional. PDMShell uses this value to destroy items. You can enter the names of files that were previously deleted; PDMShell will attempt to delete them (which will fail) and then proceed to destroy them.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -155,9 +172,8 @@
 </table>
 <h2 id="results-csv-format">RESULTS CSV FORMAT:</h2>
 <p>If <code>-csv</code> is specified, PDMShell will generate a results file containing:</p>
-<pre><code class="lang-bash">FileID,FolderID,Deleted,Destroyed,DeleteError,DestroyError
-12345,678,True,True,,
-12346,678,False,False,File is checked out,
+<pre><code class="lang-bash">FileID,FolderID,Error
+12345,678,&quot;DELETE error: File Not Found&quot;
 </code></pre>
 <h2 id="results-csv-columns">RESULTS CSV COLUMNS:</h2>
 <table>
@@ -177,20 +193,8 @@
 <td>Folder ID</td>
 </tr>
 <tr>
-<td>Deleted</td>
-<td>Whether delete succeeded</td>
-</tr>
-<tr>
-<td>Destroyed</td>
-<td>Whether destroy succeeded</td>
-</tr>
-<tr>
-<td>DeleteError</td>
-<td>Delete error message if failed</td>
-</tr>
-<tr>
-<td>DestroyError</td>
-<td>Destroy error message if failed</td>
+<td>Error</td>
+<td>Error message</td>
 </tr>
 </tbody>
 </table>
