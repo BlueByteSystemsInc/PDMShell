@@ -1,12 +1,16 @@
 ---
 description: Release Notes of PDMShell
 title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
+
 ---
 
 >[!Important]
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.56 (2026-03-22)
+- Enhanced `runscript` and fixed minor bugs in TaskScript. 
+- Added a new TaskScript demo
 # 3.0.55 (2026-03-20)
 - Added a quick access button to PDMShell AI assistant
 # 3.0.54 (2026-03-20)

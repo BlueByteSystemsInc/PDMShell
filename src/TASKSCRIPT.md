@@ -4,9 +4,7 @@ title: Run Script as a Task | PDMShell | SOLIDWORKS PDM
 ---
 ## Overview
 
-
-<iframe width="800" height="600" src="https://www.youtube.com/embed/z2UYgREIRpA?si=vD4PfErfZtUb8-cm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+<div style="position: relative; padding-bottom: 42.1875%; height: 0;"><iframe src="https://www.loom.com/embed/8dd02ac8f0fa43a48541b04bc3ef114f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ---
 
@@ -80,20 +78,49 @@ You can request a script by emailing us via the Request Script button.
 
 TaskScript supports dynamic variables that are replaced at runtime for each selected file. Below is a list of available placeholders:
 
-| Placeholder                  | Description                                              |
-|-----------------------------|----------------------------------------------------------|
-| `$localPath`                | Full local path to the selected file                    |
-| `$fileName`                 | File name (including extension)                         |
-| `$id`                       | Internal PDM file ID                                     |
-| `$folderPath`               | Full local path to the file's parent folder             |
-| `$folderID`                 | Internal PDM folder ID                                   |
-| `$fileNameWithoutExtension` | File name without the extension                          |
-| `$vaultName`                | Name of the vault the file belongs to                   |
-| `$vaultRootFolder`          | Local root path of the vault                            |
-| `$(Variable.Configuration)` | Value of a custom PDM variable for a given configuration |
+| Placeholder                  | Description                                                      |
+|-----------------------------|------------------------------------------------------------------|
+| `$localPath`                | Full local path to the selected file                            |
+| `$fileName`                 | File name (including extension)                                 |
+| `$fileNameWithoutExtension` | File name without the extension                                 |
+| `$name`                     | Alias for file name                                             |
+| `$extension`                | File extension                                                  |
+| `$id`                       | Internal PDM file ID                                            |
+| `$GUID`                     | Unique Identifier                                               |
+| `$taskName`                 | Name of the running task                                        |
+| `$folderPath`               | Full local path to the file's parent folder                     |
+| `$folderID`                 | Internal PDM folder ID                                          |
+| `$vaultName`                | Name of the vault the file belongs to                           |
+| `$vaultRootFolder`          | Local root path of the vault                                    |
+| `$(Variable.Configuration)` | Value of a custom PDM variable for a given configuration        |
+| `$machineName`              | Name of the current machine                                     |
+| `$computerName`             | Alias for machine name                                          |
+| `$userName`                 | Logged-in PDM user name                                         |
+| `$windowsUser`              | Windows user name                                               |
+| `$userDomain`               | Windows domain name                                             |
+| `$domain`                   | Alias for domain name                                           |
+| `$yyyy`                     | Current year (4 digits)                                         |
+| `$yy`                       | Current year (2 digits)                                         |
+| `$MM`                       | Month (2 digits)                                                |
+| `$M`                        | Month (no leading zero)                                         |
+| `$dd`                       | Day (2 digits)                                                  |
+| `$d`                        | Day (no leading zero)                                           |
+| `$month`                    | Full month name (e.g., January)                                 |
+| `$mon`                      | Short month name (e.g., Jan)                                    |
+| `$day`                      | Full day name (e.g., Monday)                                    |
+| `$dayShort`                 | Short day name (e.g., Mon)                                      |
+| `$HH`                       | Hour (24-hour format)                                           |
+| `$hh`                       | Hour (12-hour format)                                           |
+| `$mm`                       | Minutes                                                        |
+| `$ss`                       | Seconds                                                        |
+| `$tt`                       | AM/PM designator                                               |
+| `$timestamp`                | Combined date and time (yyyyMMdd_HHmmss)                        |
+| `$date`                     | Current date (yyyy-MM-dd)                                       |
+| `$time`                     | Current time (HH-mm-ss)                                         |
 
 ## $(Variable.Configuration)
 - Use `@` for the `@` tab. Example: `$(Description.@)`
 - Use empty string for files with no configurations. Example: `$(Description. )`
 
 
+ 

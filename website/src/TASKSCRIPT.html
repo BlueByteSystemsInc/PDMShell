@@ -87,7 +87,7 @@
         <article data-uid="">
 
 <h2 id="overview">Overview</h2>
-<iframe width="800" height="600" src="https://www.youtube.com/embed/z2UYgREIRpA?si=vD4PfErfZtUb8-cm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 42.1875%; height: 0;"><iframe src="https://www.loom.com/embed/8dd02ac8f0fa43a48541b04bc3ef114f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 <hr>
 <p><strong>TaskScript</strong> is a custom PDM task add-in developed by <strong>Blue Byte Systems Inc.</strong> that allows you to execute <strong>PDMShell scripts</strong> the same way you would use the built-in <strong>Convert</strong> task.</p>
 <div class="NOTE">
@@ -167,8 +167,28 @@ print -id $id
 <td>File name (including extension)</td>
 </tr>
 <tr>
+<td><code>$fileNameWithoutExtension</code></td>
+<td>File name without the extension</td>
+</tr>
+<tr>
+<td><code>$name</code></td>
+<td>Alias for file name</td>
+</tr>
+<tr>
+<td><code>$extension</code></td>
+<td>File extension</td>
+</tr>
+<tr>
 <td><code>$id</code></td>
 <td>Internal PDM file ID</td>
+</tr>
+<tr>
+<td><code>$GUID</code></td>
+<td>Unique Identifier</td>
+</tr>
+<tr>
+<td><code>$taskName</code></td>
+<td>Name of the running task</td>
 </tr>
 <tr>
 <td><code>$folderPath</code></td>
@@ -177,10 +197,6 @@ print -id $id
 <tr>
 <td><code>$folderID</code></td>
 <td>Internal PDM folder ID</td>
-</tr>
-<tr>
-<td><code>$fileNameWithoutExtension</code></td>
-<td>File name without the extension</td>
 </tr>
 <tr>
 <td><code>$vaultName</code></td>
@@ -193,6 +209,102 @@ print -id $id
 <tr>
 <td><code>$(Variable.Configuration)</code></td>
 <td>Value of a custom PDM variable for a given configuration</td>
+</tr>
+<tr>
+<td><code>$machineName</code></td>
+<td>Name of the current machine</td>
+</tr>
+<tr>
+<td><code>$computerName</code></td>
+<td>Alias for machine name</td>
+</tr>
+<tr>
+<td><code>$userName</code></td>
+<td>Logged-in PDM user name</td>
+</tr>
+<tr>
+<td><code>$windowsUser</code></td>
+<td>Windows user name</td>
+</tr>
+<tr>
+<td><code>$userDomain</code></td>
+<td>Windows domain name</td>
+</tr>
+<tr>
+<td><code>$domain</code></td>
+<td>Alias for domain name</td>
+</tr>
+<tr>
+<td><code>$yyyy</code></td>
+<td>Current year (4 digits)</td>
+</tr>
+<tr>
+<td><code>$yy</code></td>
+<td>Current year (2 digits)</td>
+</tr>
+<tr>
+<td><code>$MM</code></td>
+<td>Month (2 digits)</td>
+</tr>
+<tr>
+<td><code>$M</code></td>
+<td>Month (no leading zero)</td>
+</tr>
+<tr>
+<td><code>$dd</code></td>
+<td>Day (2 digits)</td>
+</tr>
+<tr>
+<td><code>$d</code></td>
+<td>Day (no leading zero)</td>
+</tr>
+<tr>
+<td><code>$month</code></td>
+<td>Full month name (e.g., January)</td>
+</tr>
+<tr>
+<td><code>$mon</code></td>
+<td>Short month name (e.g., Jan)</td>
+</tr>
+<tr>
+<td><code>$day</code></td>
+<td>Full day name (e.g., Monday)</td>
+</tr>
+<tr>
+<td><code>$dayShort</code></td>
+<td>Short day name (e.g., Mon)</td>
+</tr>
+<tr>
+<td><code>$HH</code></td>
+<td>Hour (24-hour format)</td>
+</tr>
+<tr>
+<td><code>$hh</code></td>
+<td>Hour (12-hour format)</td>
+</tr>
+<tr>
+<td><code>$mm</code></td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td><code>$ss</code></td>
+<td>Seconds</td>
+</tr>
+<tr>
+<td><code>$tt</code></td>
+<td>AM/PM designator</td>
+</tr>
+<tr>
+<td><code>$timestamp</code></td>
+<td>Combined date and time (yyyyMMdd_HHmmss)</td>
+</tr>
+<tr>
+<td><code>$date</code></td>
+<td>Current date (yyyy-MM-dd)</td>
+</tr>
+<tr>
+<td><code>$time</code></td>
+<td>Current time (HH-mm-ss)</td>
 </tr>
 </tbody>
 </table>
