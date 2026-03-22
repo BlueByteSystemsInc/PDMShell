@@ -8,6 +8,9 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.57 (2026-03-22)
+- `dir`: Fixed search bug causing dir listing to be incomplete. 
+
 # 3.0.56 (2026-03-22)
 - Enhanced `runscript` and fixed minor bugs in TaskScript. 
 - Added a new TaskScript demo
