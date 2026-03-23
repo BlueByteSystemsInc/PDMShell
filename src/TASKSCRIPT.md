@@ -11,7 +11,7 @@ title: Run Script as a Task | PDMShell | SOLIDWORKS PDM
 **TaskScript** is a custom PDM task add-in developed by **Blue Byte Systems Inc.** that allows you to execute **PDMShell scripts** the same way you would use the built-in **Convert** task.
 
 >[!Note]
-> TaskScript is found in your Blue Byte Systems Inc [account](bluebyte.biz/account) for users with the premium version (active license). You can download also TaskScript using [PDMDeploy](https://docs.bluebyte.biz/src/cdpdm.html).
+> TaskScript is found in your Blue Byte Systems Inc [account](https://bluebyte.biz/account) for users with the premium version (active license). You can download also TaskScript using [PDMDeploy](https://docs.bluebyte.biz/src/cdpdm.html).
 
 With TaskScript, administrators can create configurable tasks that run custom `.pdmshell` scripts using the `pdmcli` engine on selected files within the vault.
 
