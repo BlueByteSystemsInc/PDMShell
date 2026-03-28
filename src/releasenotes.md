@@ -8,6 +8,16 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.66 
+- Added dark mode to the updates available dialog
+- Added automatic update when you click on `Yes, update right now` in the updates available dialog 
+
+# 3.0.59-65 
+- Added fallback logic for when `addtovaultcommand` fails.  
+
+# 3.0.58 (2026-03-23)
+- Added retry logic for verifying license due to server overload. 
+
 # 3.0.57 (2026-03-22)
 - `dir`: Fixed search bug causing dir listing to be incomplete. 
 
