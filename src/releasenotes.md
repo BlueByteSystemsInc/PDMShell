@@ -8,6 +8,10 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.66-69 
+- Remove dialog when calling `quit` command
+- Fixed few issues with updater
+
 # 3.0.66 
 - Added dark mode to the updates available dialog
 - Added automatic update when you click on `Yes, update right now` in the updates available dialog 
