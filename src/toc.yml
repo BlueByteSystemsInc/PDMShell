@@ -251,6 +251,10 @@
 - name: undoCheckout
   href: undocheckout.md
 
+- name: List references
+- name: List references
+  href: LISTREFERENCES.md
+
 - name: Update references
 - name: Update references
   href: UPDATEREFERENCES.md

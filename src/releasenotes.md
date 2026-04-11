@@ -8,6 +8,10 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.70
+- Fixed issue related to PDMShell staying in the task manager when it closes.
+- Add `listreferencescommand` command
+
 # 3.0.66-69 
 - Remove dialog when calling `quit` command
 - Fixed few issues with updater

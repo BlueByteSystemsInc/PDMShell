@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>CHECKOUT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>LISTREFERENCES Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="CHECKOUT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="LISTREFERENCES Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Performs a check out operation on a specified file or many files.">
+      <meta name="description" content="Lists file references inside the SOLIDWORKS PDM vault using the Raw Reference Manager.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/CHECKOUT.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/LISTREFERENCES.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,107 +85,60 @@
         </div>
 
         <article data-uid="">
-<h1 id="checkout-command-documentation">CHECKOUT Command Documentation</h1>
+<h1 id="listreferences-command-documentation">LISTREFERENCES Command Documentation</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
-<p>Performs a check out operation on a specified file or many files.</p>
-<h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">checkout -search -recursive -filePath
-</code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
-<p>-<code>search</code>: Search keyword</p>
-<p>-<code>filePath</code>: The file(s) to be checked out. This is the default parameter</p>
-<p>-<code>recursive</code>: Recursively check out all files in the current directory. Use in combination with search</p>
-<p>-<code>checkoutoptions</code>: Optional. Use this to check a file and its references at once:</p>
-<table>
-<thead>
-<tr>
-<th>Option Name (CLI)</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Nothing</td>
-<td>No checkout options are applied.</td>
-</tr>
-<tr>
-<td>AsBuilt1</td>
-<td>Uses the same versions of referenced files that were used when the referencing file was checked in; otherwise, the latest versions are used.</td>
-</tr>
-<tr>
-<td>SkipUnlockedWritable</td>
-<td>Does not retrieve files that are writable and not checked out.</td>
-</tr>
-<tr>
-<td>SkipExisting</td>
-<td>Does not retrieve files that already exist in the local cache.</td>
-</tr>
-<tr>
-<td>ForPreview</td>
-<td>Retrieves only referenced files required for preview; skips caching referenced files.</td>
-</tr>
-<tr>
-<td>RefreshFileListing</td>
-<td>Refreshes the File Explorer listing after files have been checked out.</td>
-</tr>
-<tr>
-<td>LockReferencedFilesToo</td>
-<td>Checks out (locks) files referenced by the checked-out file.</td>
-</tr>
-<tr>
-<td>AsBuiltNotDefault</td>
-<td>Uses the as-built versions when creating the reference tree.</td>
-</tr>
-<tr>
-<td>SkipOpenFileChecks</td>
-<td>Skips checking whether files are open in another application.</td>
-</tr>
-<tr>
-<td>SkipLockRefFiles</td>
-<td>Skips checking of lock file references.</td>
-</tr>
-<tr>
-<td>LockNoLclCopyFiles</td>
-<td>Locks referenced files even if no local cache copy exists.</td>
-</tr>
-<tr>
-<td>IncludeAutoCacheFiles</td>
-<td>Automatically caches referenced files if the latest version is not already in the local cache.</td>
-</tr>
-<tr>
-<td>RollbackTree</td>
-<td>Provides the ability to roll back files in the checkout dialog.</td>
-</tr>
-<tr>
-<td>ForViewer</td>
-<td>Retrieves only referenced files required by the viewer; skips caching referenced files.</td>
-</tr>
-<tr>
-<td>SingleFileRollback</td>
-<td>Rolls back a single file.</td>
-</tr>
-<tr>
-<td>XrefsOpenCheck</td>
-<td>Checks whether cross-reference files are open in another application.</td>
-</tr>
-</tbody>
-</table>
-<p>You combine values by using <code>+</code>. Please make sure to wrap the parameter value in &quot;&quot;. Example: <code>&quot;SkipExisting + LockReferencedFilesToo&quot;</code></p>
-<h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">checkout -filePath file1.sldprt
-</code></pre>
-<h2 id="remarks">REMARKS:</h2>
+<h2 id="description">DESCRIPTION</h2>
+<p>Lists file references inside the SOLIDWORKS PDM vault.</p>
+<p>The <code>listreferences</code> command reads references stored inside files, without opening SOLIDWORKS, and allows you to:</p>
 <ul>
-<li>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
+<li>List references for a single file</li>
+<li>List references for multiple files using a search</li>
+<li>Export reference information to a CSV file</li>
+<li>Retrieve file IDs, folder IDs, full file paths, full reference paths, and reference IDs</li>
 </ul>
-<h2 id="tutorial">TUTORIAL:</h2>
-<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/checkout.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<p>This command is especially useful for auditing references, troubleshooting missing files, validating migrations, or identifying broken or external references.</p>
+<h2 id="syntax">SYNTAX</h2>
+<pre><code class="lang-bash">listreferences -filepath -search -recursive -csv
+</code></pre>
+<h2 id="parameters">PARAMETERS</h2>
+<ul>
+<li><code>filepath</code> Optional. Lists references for a single file. If a relative path is provided, it is resolved against the current directory. When specified, the search parameter is ignored.</li>
+<li><code>search</code> Optional. Search query used to find files whose references should be listed. The search is scoped to the current directory. Supports % wildcards. Can be combined with recursive.</li>
+<li><code>recursive</code> Optional. When used with search, includes subfolders of the current directory when locating files whose references should be listed.</li>
+<li><code>csv</code> Optional. Saves the reference listing results to a CSV file.</li>
+</ul>
+<h2 id="csv-output">CSV OUTPUT</h2>
+<p>The exported CSV contains the following columns:</p>
+<pre><code class="lang-bash">FileID
+FolderID
+FilePath
+ReferencePath
+ReferenceID
+ReferenceFileID
+</code></pre>
+<h2 id="examples">EXAMPLES</h2>
+<pre><code class="lang-bash"># List references for a single assembly
+listreferences -filepath speaker.sldasm
+# List references for all assemblies in the current folder
+listreferences -search %.sldasm
+# List references recursively and export results to CSV
+listreferences -search %.sldasm -recursive true -csv references.csv
+</code></pre>
+<h2 id="remarks">REMARKS</h2>
+<ul>
+<li>Either filepath or search must be specified.</li>
+<li>If both are provided, filepath takes precedence.</li>
+<li>The search parameter only searches within the current directory unless recursive is specified.</li>
+<li>Files that do not contain references are still included in the CSV output.</li>
+<li>Reference paths may be blank for broken or unresolved references.</li>
+<li>ReferenceFileID will be blank if the referenced file cannot be found in the vault.</li>
+<li>This command is intended for reporting and auditing only and does not modify files.</li>
+</ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/CHECKOUT.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/LISTREFERENCES.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
@@ -202,7 +155,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+          <span><a href='https://bluebyte.biz'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
         </div>
       </div>
     </footer>
