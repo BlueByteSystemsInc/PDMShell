@@ -16,8 +16,9 @@ This command supports two primary modes:
 - **Refresh Mode** — Reads a CSV file and refreshes the content of the csv.
 
 
->[!IMPORTANT]
->This command works with the file system and requires files to be locally cached. It reads and writes files both inside and outside the vault. Relative paths only work in the vault directory (and requires you to be logged in).
+> [!NOTE]
+> This command works with the file system and requires files to be locally cached. It reads and writes files both inside and outside the vault. Relative paths only work in the vault directory (and requires you to be logged in).
+
 ---
 
 # SYNTAX
