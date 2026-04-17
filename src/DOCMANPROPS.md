@@ -163,7 +163,7 @@ docmanprops -directory "C:\Vault\Parts" -csv "C:\temp\props.csv" -recursive
 ![export mode](/images/exportmode.png)
 ---
 
-# update MODE
+# UPDATE MODE
 
 ## DESCRIPTION
 
@@ -176,8 +176,6 @@ Features:
 - Saves file
 - Updates CSV Success and Exception columns
 - Parallel processing
-
-Implementation reference: :contentReference[oaicite:1]{index=1}
 
 ---
 
@@ -193,6 +191,7 @@ docmanprops -csv "C:\temp\props.csv" -update
 
 >[!NOTE]
 > Temporary files start with ~ are ignored.
+
 ---
 
 # SUCCESS AND ERROR TRACKING

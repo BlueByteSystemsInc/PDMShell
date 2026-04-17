@@ -191,7 +191,7 @@ Exception
 </code></pre>
 <h2 id="output">OUTPUT</h2>
 <h2 id="export-mode-1"><img src="/images/exportmode.png" alt="export mode"></h2>
-<h1 id="update-mode">update MODE</h1>
+<h1 id="update-mode">UPDATE MODE</h1>
 <h2 id="description-2">DESCRIPTION</h2>
 <p>Reads CSV file and writes properties back into files.</p>
 <p>Features:</p>
@@ -202,7 +202,6 @@ Exception
 <li>Updates CSV Success and Exception columns</li>
 <li>Parallel processing</li>
 </ul>
-<p>Implementation reference: :contentReference[oaicite:1]{index=1}</p>
 <hr>
 <h2 id="example-1">EXAMPLE</h2>
 <pre><code class="lang-bash">docmanprops -csv &quot;C:\temp\props.csv&quot; -update
@@ -211,8 +210,9 @@ Exception
 <p><img src="/images/refreshmode.png" alt="updatemode"></p>
 <div class="NOTE">
 <h5>Note</h5>
+<p>Temporary files start with ~ are ignored.</p>
 </div>
-<h2 id="temporary-files-start-with--are-ignored">Temporary files start with ~ are ignored.</h2>
+<hr>
 <h1 id="success-and-error-tracking">SUCCESS AND ERROR TRACKING</h1>
 <p>The CSV is updated during update:</p>
 <p>Success column:</p>
