@@ -91,17 +91,14 @@
 <p>The <code>docmanprops</code> command is used to <strong>export and update SOLIDWORKS file custom properties</strong> without opening SOLIDWORKS.</p>
 <p>This command supports two primary modes:</p>
 <ul>
-<li><p><strong>Export Mode (Default)</strong> — Reads properties from SOLIDWORKS files and writes them to a CSV file</p>
-</li>
-<li><p><strong>Update Mode</strong> — Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)</p>
-</li>
-<li><p><strong>Refresh Mode</strong> — Reads a CSV file and refreshes the content of the csv.</p>
-</li>
+<li><strong>Export Mode (Default)</strong> — Reads properties from SOLIDWORKS files and writes them to a CSV file</li>
+<li><strong>Update Mode</strong> — Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)</li>
+<li><strong>Refresh Mode</strong> — Reads a CSV file and refreshes the content of the csv.</li>
 </ul>
 <div class="IMPORTANT">
 <h5>Important</h5>
 </div>
-<h2 id="this-command-works-with-the-file-system-and-requires-files-to-be-locally-cached-it-reads-and-writes-files-both-inside-and-outside-the-vault-relative-paths-only-work-in-the-vault-directory-and-requires-you-to-be-logged-in">?This command works with the file system and requires files to be locally cached. It reads and writes files both inside and outside the vault. Relative paths only work in the vault directory (and requires you to be logged in).</h2>
+<h2 id="this-command-works-with-the-file-system-and-requires-files-to-be-locally-cached-it-reads-and-writes-files-both-inside-and-outside-the-vault-relative-paths-only-work-in-the-vault-directory-and-requires-you-to-be-logged-in">This command works with the file system and requires files to be locally cached. It reads and writes files both inside and outside the vault. Relative paths only work in the vault directory (and requires you to be logged in).</h2>
 <h1 id="syntax">SYNTAX</h1>
 <pre><code class="lang-bash">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-update] [-refresh][extensions]
 </code></pre>
@@ -227,31 +224,6 @@ False — Property update failed</p>
 Description,True,
 PartNumber,False,Configuration Default not found
 </code></pre>
-<hr>
-<h1 id="performance">PERFORMANCE</h1>
-<p>Typical performance:</p>
-<table>
-<thead>
-<tr>
-<th>Files</th>
-<th>Time</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1,000</td>
-<td>seconds</td>
-</tr>
-<tr>
-<td>10,000</td>
-<td>under 1 minute</td>
-</tr>
-<tr>
-<td>100,000</td>
-<td>few minutes</td>
-</tr>
-</tbody>
-</table>
 <hr>
 
 </article>
