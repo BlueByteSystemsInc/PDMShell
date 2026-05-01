@@ -39,7 +39,10 @@ HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks
 
 ## List Example
 
+PDMShell assumes the csv file feed into the `list` parameter has a header.
+
 ```csv
+File Path
 C:\TestVault\part1.sldprt
 C:\TestVault\assembly2.sldasm
 C:\TestVault\drawing3.slddrw

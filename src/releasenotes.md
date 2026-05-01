@@ -8,6 +8,12 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 3.0.71
+- Fixed solidworks exception with `ruswmacrocommand`
+- `list` parameter in `runswmacrocommand` now assumes first row is header
+- Improved cancellation message when the user cancels the search 
+- Improved search with variables.
+
 # 3.0.70
 - Fixed issue related to PDMShell staying in the task manager when it closes.
 - Add `listreferencescommand` command

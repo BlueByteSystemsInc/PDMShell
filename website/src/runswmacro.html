@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/RUNSWMACRO.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/runswmacro.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -113,7 +113,9 @@
 <p>If you have multiple SOLIDWORKS versions installed, PDMShell will automatically select the most recent version found in the registry.</p>
 </div>
 <h2 id="list-example">List Example</h2>
-<pre><code class="lang-csv">C:\TestVault\part1.sldprt
+<p>PDMShell assumes the csv file feed into the <code>list</code> parameter has a header.</p>
+<pre><code class="lang-csv">File Path
+C:\TestVault\part1.sldprt
 C:\TestVault\assembly2.sldasm
 C:\TestVault\drawing3.slddrw
 C:\TestVault\bracket4.sldprt
@@ -215,7 +217,7 @@ runswmacro -filePath &quot;Macros/MyMacro.dll&quot; -search &quot;%.sldprt&quot;
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/RUNSWMACRO.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/runswmacro.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
