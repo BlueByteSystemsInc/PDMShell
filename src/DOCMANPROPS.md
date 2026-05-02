@@ -24,7 +24,7 @@ This command supports two primary modes:
 # SYNTAX
 
 ```bash
-docmanprops -directory <path> -csv <csvPath> [-recursive] [-configNames] [-update] [-refresh][extensions]
+docmanprops -directory <path> -csv <csvPath> [-recursive] [-configNames] [-update] [-refresh] [-extensions]
 ```
 ---
 
