@@ -9,7 +9,7 @@ Performs a check out operation on a specified file or many files.
 
 ## SYNTAX:
 ```bash
-checkout -search -recursive -filePath
+checkout -search -recursive -filePath -checkoutOptions
 ```
 ## PARAMETERS:
 -`search`: Search keyword
@@ -18,7 +18,7 @@ checkout -search -recursive -filePath
 
 -`recursive`: Recursively check out all files in the current directory. Use in combination with search
 
--`checkoutoptions`: Optional. Use this to check a file and its references at once:
+-`checkoutOptions`: Optional. Use this to check a file and its references at once:
 
 | Option Name (CLI)              | Description |
 |--------------------------------|-------------|

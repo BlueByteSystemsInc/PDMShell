@@ -23,8 +23,8 @@ runscript -source -filePath -search -recursive
 - `recursive`: If specified, the command will run script on all files recursively in subdirectories.  
 ## EXAMPLES:
  ```bash
-runscript -filePath pdmscript.pdmshell -search "%.sldprt" -recursive 
-# this will run pdm.script on all part files in the active directory and its subdirectories
+runscript -source pdmscript.pdmshell -search "Name=%.sldprt;Recursive=true"
+# this will run pdmscript.pdmshell on all part files in the active directory and its subdirectories
  ```
 
 ## REMARKS:

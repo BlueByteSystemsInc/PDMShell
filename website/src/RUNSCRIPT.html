@@ -106,8 +106,8 @@
 <li><code>recursive</code>: If specified, the command will run script on all files recursively in subdirectories.</li>
 </ul>
 <h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">runscript -filePath pdmscript.pdmshell -search &quot;%.sldprt&quot; -recursive 
-# this will run pdm.script on all part files in the active directory and its subdirectories
+<pre><code class="lang-bash">runscript -source pdmscript.pdmshell -search &quot;Name=%.sldprt;Recursive=true&quot;
+# this will run pdmscript.pdmshell on all part files in the active directory and its subdirectories
 </code></pre>
 <h2 id="remarks">REMARKS:</h2>
 <ul>
