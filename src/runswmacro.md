@@ -57,6 +57,165 @@ C:\TestVault\bracket4.sldprt
 - The macro procedure name must be called `main`.
 - The macro module name must be called the file name of the macro appended by `1`. Example: If the macro called `print.swp` the module name must be called `print1`.
 
+>[!IMPORTANT]
+>`runswmacro` does not check out files automatically. It opens the file in SOLIDWORKS and runs the selected macro.
+
+If your macro needs to modify and save files inside SOLIDWORKS PDM, the macro itself must handle the check-out and check-in process.
+
+The example below shows a generic pattern that:
+
+1. Gets the active SOLIDWORKS document.
+2. Logs in to the PDM vault.
+3. Checks out the active file.
+4. Runs your custom macro logic.
+5. Saves the file.
+6. Closes the document.
+7. Checks the file back into the vault.
+
+Before using this macro, enable the SOLIDWORKS PDM reference from:
+
+`Tools > References > PDMWorks Enterprise Type Library`
+
+Then update the `vaultName` constant with your vault name.
+
+Make sure there are no missing references.
+
+
+```vb
+Option Explicit
+
+Dim swApp As SldWorks.SldWorks
+Dim pdmVault As EdmVault5
+Dim handle As Long
+
+Const vaultName As String = "Your vault name"
+
+Sub main()
+
+    On Error GoTo CleanExit
+
+    Dim swFrame As SldWorks.Frame
+    Dim swModel As SldWorks.ModelDoc2
+    Dim docType As Integer
+    Dim filePath As String
+    Dim docTitle As String
+
+    Set swApp = Application.SldWorks
+    Set swFrame = swApp.Frame
+
+    handle = swFrame.GetHWnd
+
+    Set pdmVault = New EdmVault5
+    pdmVault.LoginAuto vaultName, handle
+
+    Set swModel = swApp.ActiveDoc
+
+    If swModel Is Nothing Then GoTo CleanExit
+
+    docType = swModel.GetType
+    filePath = swModel.GetPathName
+
+    If Len(filePath) = 0 Then GoTo CleanExit
+
+    checkOutFile pdmVault, docType
+
+    Set swModel = swApp.ActiveDoc
+
+    If swModel Is Nothing Then GoTo CleanExit
+
+    RunCustomLogic swModel
+
+    Dim errors As Long
+    Dim warnings As Long
+
+    swModel.Save3 swSaveAsOptions_Silent, errors, warnings
+
+    docTitle = swModel.GetTitle
+
+    swApp.CloseDoc docTitle
+
+    checkInClosedFile pdmVault, filePath
+
+CleanExit:
+
+End Sub
+
+Private Sub checkOutFile(ByVal pdmVault As EdmVault5, ByVal docType As Integer)
+
+    On Error GoTo Done
+
+    Dim swModel As SldWorks.ModelDoc2
+    Dim pdmFile As IEdmFile5
+    Dim pdmFolder As IEdmFolder5
+    Dim ret As Integer
+
+    Set swModel = swApp.ActiveDoc
+
+    If swModel Is Nothing Then GoTo Done
+
+    Set pdmFile = pdmVault.GetFileFromPath(swModel.GetPathName, pdmFolder)
+
+    If pdmFile Is Nothing Then GoTo Done
+    If pdmFolder Is Nothing Then GoTo Done
+
+    If pdmFile.IsLocked Then GoTo Done
+
+    If swModel.ForceReleaseLocks Then
+        pdmFile.LockFile pdmFolder.ID, handle
+    End If
+
+    If docType = swDocDRAWING Then
+        ret = swApp.CloseAndReopen(swModel, swCloseReopenOption_DiscardChanges, swModel)
+    Else
+        ret = swModel.ReloadOrReplace(False, swModel.GetPathName, True)
+    End If
+
+Done:
+
+End Sub
+
+Private Sub checkInClosedFile(ByVal pdmVault As EdmVault5, ByVal filePath As String)
+
+    On Error GoTo Done
+
+    Dim pdmFile As IEdmFile5
+    Dim pdmFolder As IEdmFolder5
+
+    Set pdmFile = pdmVault.GetFileFromPath(filePath, pdmFolder)
+
+    If pdmFile Is Nothing Then GoTo Done
+    If pdmFolder Is Nothing Then GoTo Done
+
+    If Not pdmFile.IsLocked Then GoTo Done
+
+    pdmFile.UnlockFile handle, "Updated by SOLIDWORKS macro", EdmUnlock_OverwriteLatestVersion
+
+Done:
+
+End Sub
+
+Private Sub RunCustomLogic(ByVal swModel As SldWorks.ModelDoc2)
+
+    On Error GoTo Done
+
+    If swModel Is Nothing Then GoTo Done
+
+    ' Add your custom SOLIDWORKS macro logic here.
+    ' Examples:
+    ' - Update custom properties
+    ' - Rebuild the model
+    ' - Update drawing views
+    ' - Export files
+    ' - Change configurations
+    ' - Run geometry checks
+
+    swModel.ForceRebuild3 False
+    swModel.ViewZoomtofit2
+
+Done:
+
+End Sub
+
 
 ## DLL Macro
 >[!WARNING]

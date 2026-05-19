@@ -129,23 +129,176 @@ C:\TestVault\bracket4.sldprt
 <li>The macro procedure name must be called <code>main</code>.</li>
 <li>The macro module name must be called the file name of the macro appended by <code>1</code>. Example: If the macro called <code>print.swp</code> the module name must be called <code>print1</code>.</li>
 </ul>
-<h2 id="dll-macro">DLL Macro</h2>
-<div class="WARNING">
-<h5>Warning</h5>
-<p>Please read the requirements below to properly create your DLL macro.</p>
-</div>
-<h3 id="requirements">Requirements</h3>
-<ul>
-<li>The macro class must implement the <code>IPDMShellSOLIDWORKSMacro</code> interface</li>
-<li>The class must be decorated with the <code>PDMShellMacro</code> attribute</li>
-<li>The interface can be found in the NuGet package <code>BlueByte.PDMShell.SOLIDWORKSMacro</code> on nuget.org</li>
-</ul>
-<h3 id="required-nuget-package-versions">Required NuGet Package Versions</h3>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>Your project must use these specific versions of the NuGet packages:</p>
+<p><code>runswmacro</code> does not check out files automatically. It opens the file in SOLIDWORKS and runs the selected macro.</p>
 </div>
-<pre><code class="lang-xml">&lt;PackageReference Include=&quot;BlueByte.PDMShell.SOLIDWORKSMacro&quot; Version=&quot;1.0.0&quot; /&gt;
+<p>If your macro needs to modify and save files inside SOLIDWORKS PDM, the macro itself must handle the check-out and check-in process.</p>
+<p>The example below shows a generic pattern that:</p>
+<ol>
+<li>Gets the active SOLIDWORKS document.</li>
+<li>Logs in to the PDM vault.</li>
+<li>Checks out the active file.</li>
+<li>Runs your custom macro logic.</li>
+<li>Saves the file.</li>
+<li>Closes the document.</li>
+<li>Checks the file back into the vault.</li>
+</ol>
+<p>Before using this macro, enable the SOLIDWORKS PDM reference from:</p>
+<p><code>Tools &gt; References &gt; PDMWorks Enterprise Type Library</code></p>
+<p>Then update the <code>vaultName</code> constant with your vault name.</p>
+<p>Make sure there are no missing references.</p>
+<pre><code class="lang-vb">Option Explicit
+
+Dim swApp As SldWorks.SldWorks
+Dim pdmVault As EdmVault5
+Dim handle As Long
+
+Const vaultName As String = &quot;Your vault name&quot;
+
+Sub main()
+
+    On Error GoTo CleanExit
+
+    Dim swFrame As SldWorks.Frame
+    Dim swModel As SldWorks.ModelDoc2
+    Dim docType As Integer
+    Dim filePath As String
+    Dim docTitle As String
+
+    Set swApp = Application.SldWorks
+    Set swFrame = swApp.Frame
+
+    handle = swFrame.GetHWnd
+
+    Set pdmVault = New EdmVault5
+    pdmVault.LoginAuto vaultName, handle
+
+    Set swModel = swApp.ActiveDoc
+
+    If swModel Is Nothing Then GoTo CleanExit
+
+    docType = swModel.GetType
+    filePath = swModel.GetPathName
+
+    If Len(filePath) = 0 Then GoTo CleanExit
+
+    checkOutFile pdmVault, docType
+
+    Set swModel = swApp.ActiveDoc
+
+    If swModel Is Nothing Then GoTo CleanExit
+
+    RunCustomLogic swModel
+
+    Dim errors As Long
+    Dim warnings As Long
+
+    swModel.Save3 swSaveAsOptions_Silent, errors, warnings
+
+    docTitle = swModel.GetTitle
+
+    swApp.CloseDoc docTitle
+
+    checkInClosedFile pdmVault, filePath
+
+CleanExit:
+
+End Sub
+
+Private Sub checkOutFile(ByVal pdmVault As EdmVault5, ByVal docType As Integer)
+
+    On Error GoTo Done
+
+    Dim swModel As SldWorks.ModelDoc2
+    Dim pdmFile As IEdmFile5
+    Dim pdmFolder As IEdmFolder5
+    Dim ret As Integer
+
+    Set swModel = swApp.ActiveDoc
+
+    If swModel Is Nothing Then GoTo Done
+
+    Set pdmFile = pdmVault.GetFileFromPath(swModel.GetPathName, pdmFolder)
+
+    If pdmFile Is Nothing Then GoTo Done
+    If pdmFolder Is Nothing Then GoTo Done
+
+    If pdmFile.IsLocked Then GoTo Done
+
+    If swModel.ForceReleaseLocks Then
+        pdmFile.LockFile pdmFolder.ID, handle
+    End If
+
+    If docType = swDocDRAWING Then
+        ret = swApp.CloseAndReopen(swModel, swCloseReopenOption_DiscardChanges, swModel)
+    Else
+        ret = swModel.ReloadOrReplace(False, swModel.GetPathName, True)
+    End If
+
+Done:
+
+End Sub
+
+Private Sub checkInClosedFile(ByVal pdmVault As EdmVault5, ByVal filePath As String)
+
+    On Error GoTo Done
+
+    Dim pdmFile As IEdmFile5
+    Dim pdmFolder As IEdmFolder5
+
+    Set pdmFile = pdmVault.GetFileFromPath(filePath, pdmFolder)
+
+    If pdmFile Is Nothing Then GoTo Done
+    If pdmFolder Is Nothing Then GoTo Done
+
+    If Not pdmFile.IsLocked Then GoTo Done
+
+    pdmFile.UnlockFile handle, &quot;Updated by SOLIDWORKS macro&quot;, EdmUnlock_OverwriteLatestVersion
+
+Done:
+
+End Sub
+
+Private Sub RunCustomLogic(ByVal swModel As SldWorks.ModelDoc2)
+
+    On Error GoTo Done
+
+    If swModel Is Nothing Then GoTo Done
+
+    ' Add your custom SOLIDWORKS macro logic here.
+    ' Examples:
+    ' - Update custom properties
+    ' - Rebuild the model
+    ' - Update drawing views
+    ' - Export files
+    ' - Change configurations
+    ' - Run geometry checks
+
+    swModel.ForceRebuild3 False
+    swModel.ViewZoomtofit2
+
+Done:
+
+End Sub
+
+
+## DLL Macro
+&gt;[!WARNING]
+&gt; Please read the requirements below to properly create your DLL macro.
+
+### Requirements
+- The macro class must implement the `IPDMShellSOLIDWORKSMacro` interface
+- The class must be decorated with the `PDMShellMacro` attribute
+- The interface can be found in the NuGet package `BlueByte.PDMShell.SOLIDWORKSMacro` on nuget.org
+
+### Required NuGet Package Versions
+
+&gt;[!IMPORTANT]
+&gt; Your project must use these specific versions of the NuGet packages:
+
+```xml
+&lt;PackageReference Include=&quot;BlueByte.PDMShell.SOLIDWORKSMacro&quot; Version=&quot;1.0.0&quot; /&gt;
 &lt;PackageReference Include=&quot;BlueByte.SOLIDWORKS.Interops&quot; Version=&quot;2019.0.0&quot; /&gt;
 &lt;PackageReference Include=&quot;BlueByte.SOLIDWORKS.PDMProfessional.Interops&quot; Version=&quot;2024.5.50&quot; /&gt;
 </code></pre>
