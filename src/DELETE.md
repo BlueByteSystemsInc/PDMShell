@@ -10,7 +10,7 @@ The `delete` command is used to delete files or directories from the PDM system.
 
 ## SYNTAX:
 ```bash
-delete [-filePath|-id] -directory -search -recursive -list -csv
+delete [-filePath|-id] -directory -search -recursive -list -csv -destroy
 ```
 ## PARAMETERS:
 
