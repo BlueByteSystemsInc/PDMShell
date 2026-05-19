@@ -48,6 +48,9 @@ C:\TestVault\assembly2.sldasm
 C:\TestVault\drawing3.slddrw
 C:\TestVault\bracket4.sldprt
 ```
+>[!WARNING]
+> If you only have a list of filenames, we created SOLIDWORKS VBA [this macro](/src/createcompletepathsfromfilename.html) to help you get the complete list of the filepaths from filenames.
+
 
 ## SWP Macro
 
