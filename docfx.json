@@ -1,5 +1,11 @@
 {
   "build": {
+      "markdownEngineProperties": {
+      "alerts": {
+        "Did You Know?": "alert alert-success",
+        "TLDR;": "alert alert-info"
+      }
+    },
     "content": [
       {
         "files": [

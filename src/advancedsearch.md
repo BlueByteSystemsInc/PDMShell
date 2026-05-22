@@ -2,6 +2,10 @@
 description: Learn how to run PDMShell advanced search
 title: Notes About Using Advanced Search In PDMShell | SOLIDWORKS PDM
 ---
+
+>[!TLDR;]
+> If you use search favorites, use the following search query: `-search "Favorite=MY SEARCH FAVORITE NAME"` to retrieve the favorite search results and configure your search criteria from the search tool.
+
 # PDMShell Advanced Search Guide
 
 PDMShell provides a complete search engine based on PDM's own search. This feature is extremely useful with commands that have a `-search` parameter. 
@@ -119,6 +123,7 @@ These tokens map directly to EdmSearchToken values and control how PDMShell filt
 | WorkflowName | Search by workflow name |
 | **DuplicatedBy** | **Finds duplicates either by name, variables, hash and filedate** |
 | **Edit** | **Performs a checkout and a check-in on the search results. Only use with `export` and `runswmacro` commands.** |
+| **Favorite** | **Use search favorite.** |
 #### Edit
 
 Use the `edit` token to check out and check-in the search results with the `export` and `runswmacro`'s -`search` parameter. If specify `Edit=Force`, the check-in process will be forced.
