@@ -5,5 +5,5 @@
   "link": "https://raw.githubusercontent.com/BlueByteSystemsInc/PDMShell/refs/heads/master/src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.pdmshell",
   "pdmShellScript": "checkout -filePath \"$localPath\"\n\ncd -directory \"$folderPath\"\n\nrunswmacro -filePath \"$TempFolder\\RebuildMacro.swb\" -search \"Name=$fileName\" -timeout 500\n\ncheckin -filePath \"$localPath\"",
   "macroScript": "Dim swApp As SldWorks.SldWorks\nDim swModel As SldWorks.ModelDoc2\n\nSub main()\n\n    Set swApp = Application.SldWorks\n    Set swModel = swApp.ActiveDoc\n\n    If swModel Is Nothing Then\n        Exit Sub\n    End If\n\n    Dim modelTitle As String\n    modelTitle = swModel.GetTitle\n\n    swModel.ForceRebuild3 True\n\n    Dim errors As Long\n    Dim warnings As Long\n\n    swModel.Save3 swSaveAsOptions_e.swSaveAsOptions_Silent, errors, warnings\n\n    swApp.CloseDoc modelTitle\n\nEnd Sub",
-  "macroDownloadUrl": "$tempFolder/RebuildMacro.swb"
+  "macroDownloadUrl": "$tempFolder\\RebuildMacro.swb"
 }]
