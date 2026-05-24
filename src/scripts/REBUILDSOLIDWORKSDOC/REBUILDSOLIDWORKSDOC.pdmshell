@@ -1,0 +1,7 @@
+checkout -filePath "$localPath"
+
+cd -directory "$folderPath"
+
+runswmacro -filePath "$tempFolder\RebuildMacro.swb" -search "Name=$fileName" -timeout 500
+
+checkin -filePath "$localPath"

@@ -1717,6 +1717,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOCUMENT.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOCUMENT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/scriptsfromtransition.md",
       "output": {
         ".html": {

@@ -8,6 +8,9 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 4.0.0 (06/01/2026)
+- Visual Code Editor (Workflow like editor).
+
 # 3.0.71
 - Fixed solidworks exception with `ruswmacrocommand`
 - `list` parameter in `runswmacrocommand` now assumes first row is header
