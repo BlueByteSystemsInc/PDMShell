@@ -1717,10 +1717,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOCUMENT.md",
+      "source_relative_path": "src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md",
       "output": {
         ".html": {
-          "relative_path": "src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOCUMENT.html"
+          "relative_path": "src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.html"
         }
       },
       "version": ""

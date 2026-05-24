@@ -38,6 +38,11 @@
   - name: "Invoke a PDMShell Script From Transition Action:"
   - name: From Workflow Transitions
     href: scriptsfromtransition.md
+  - name: Scripts
+    expanded: true
+    items:
+    - name: Rebuild SOLIDWORKS Document
+      href: scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md  
 - name: SQL Examples 
   expanded: true
   items:
