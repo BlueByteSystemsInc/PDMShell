@@ -10,7 +10,7 @@ then **install** the latest version. **Do not update installed version.**
 
 # 4.0.0 (06/01/2026)
 - Visual Code Editor (Workflow like editor).
-
+- Added `Favorite=SEARCH FAVORITE` token to the advanced search.
 # 3.0.71
 - Fixed solidworks exception with `ruswmacrocommand`
 - `list` parameter in `runswmacrocommand` now assumes first row is header
