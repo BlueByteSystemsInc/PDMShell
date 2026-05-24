@@ -1,4 +1,4 @@
----
+﻿---
 description: Frog leaps an old version as newest. 
 title: FROGLEAP Command Documentation  | PDMShell | SOLIDWORKS PDM
 ---
@@ -14,7 +14,7 @@ frogleap -search -filePath -oldVersion
 ## PARAMETERS:
 - `search`: The search operation to use.
 - `filePath`: The file(s) to be frog leaped. This is the default parameter.
-- `oldVersion:` The old version to leap. This is an integer.
+- `oldVersion`: The old version to leap. This is an integer.
 
 ## EXAMPLES:
 ``` bash

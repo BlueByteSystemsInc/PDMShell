@@ -93,12 +93,24 @@
 <pre><code class="lang-bash">setvar [-filePath|-search]  -variableName -value [-configNames] [-stringformat] 
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-<code>filePath</code>: The file to set the variable for.</p>
-<p>-<code>variableName</code>: The variable to set.</p>
-<p>-<code>value</code>: The value to assign to the variable.</p>
-<p>-<code>configNames</code>: The configuration names to set the variable for, separated by commas.</p>
-<p>-<code>search</code>: The search operation to use.</p>
-<p>-<code>stringformat</code>: string format. See remarks section.</p>
+<ul>
+<li><p><code>filePath</code>: The file to set the variable for.</p>
+</li>
+<li><p><code>variableName</code>: The variable to set.</p>
+</li>
+<li><p><code>value</code>: The value to assign to the variable.</p>
+</li>
+<li><p><code>configNames</code>: The configuration names to set the variable for, separated by commas.</p>
+</li>
+<li><p><code>clear</code>: Clears the variable value.</p>
+</li>
+<li><p><code>search</code>: The search operation to use.</p>
+</li>
+<li><p><code>recursive</code>: When used with <code>search</code>, includes files in subfolders.</p>
+</li>
+<li><p><code>stringformat</code>: string format. See remarks section.</p>
+</li>
+</ul>
 <h2 id="examples">EXAMPLES:</h2>
 <pre><code class="lang-bash">setvar -filePath file1.sldprt -variableName Description -value $value -stringformat UpperCase # Upper case the current value.
 </code></pre>

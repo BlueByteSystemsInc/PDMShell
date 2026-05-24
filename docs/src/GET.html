@@ -90,7 +90,7 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Retrieves a specified version of a file or files (via search).</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">get -search -filePath -version
+<pre><code class="lang-bash">get -search -recursive -filePath -version -directory -getoptions
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
@@ -98,10 +98,15 @@
 </li>
 <li><p><code>filePath</code>: The file(s) to retrieve. This is the default parameter.</p>
 </li>
+<li><p><code>recursive</code>: When used with <code>search</code>, includes files in subfolders.</p>
+</li>
+<li><p><code>version</code>:  (Optional) The version of the file to retrieve</p>
+</li>
+<li><p><code>directory</code>: (Optional) Folder where to deposit the file. Can be outside vault. Do not end with \. If not specified, file is cached in its folder.</p>
+</li>
+<li><p><code>getoptions</code>: (Optional). Allows you to cache references as well:</p>
+</li>
 </ul>
-<p>-<code>version</code>:  (Optional) The version of the file to retrieve</p>
-<p>-<code>directory</code>: (Optional) Folder where to deposit the file. Can be outside vault. Do not end with \. If not specified, file is cached in its folder.</p>
-<p>-<code>getoptions</code>: (Optional). Allows you to cache references as well:</p>
 <table>
 <thead>
 <tr>

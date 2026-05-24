@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieves a specified version of a file or files (via search).
 title: Get Command Documentation  | PDMShell | SOLIDWORKS PDM
 ---
@@ -9,18 +9,20 @@ Retrieves a specified version of a file or files (via search).
 
 ## SYNTAX:
 ```bash
-get -search -filePath -version
+get -search -recursive -filePath -version -directory -getoptions
 ```
 ## PARAMETERS:
 - `search`: The search operation to use.
 
 - `filePath`: The file(s) to retrieve. This is the default parameter.
 
--`version`:  (Optional) The version of the file to retrieve
 
--`directory`: (Optional) Folder where to deposit the file. Can be outside vault. Do not end with \\. If not specified, file is cached in its folder. 
+- `recursive`: When used with `search`, includes files in subfolders.
+- `version`:  (Optional) The version of the file to retrieve
 
--`getoptions`: (Optional). Allows you to cache references as well:
+- `directory`: (Optional) Folder where to deposit the file. Can be outside vault. Do not end with \\. If not specified, file is cached in its folder. 
+
+- `getoptions`: (Optional). Allows you to cache references as well:
 
 | Option Name (CLI)        | Description |
 |--------------------------|-------------|

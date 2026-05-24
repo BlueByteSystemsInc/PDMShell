@@ -1,4 +1,4 @@
----
+﻿---
 description: The START command is used to launch programs, tools, or specific applications. It supports launching SOLIDWORKS, the PDM administration tool, Notepad, Windows Explorer, and other custom programs. Additionally, it can open the SOLIDWORKS API help file or the current folder in Explorer.
 title: START Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
@@ -13,6 +13,10 @@ start -process -swversion
 ```
 
 ## PARAMETERS:
+
+- **`filePath`**:  
+  *(Optional)* File path or executable to start. This is the default parameter.
+
 - **`process`**:  
   *(Optional)* Specifies the program to start. Common values include:  
   - `admin`: Launches the PDM administration tool.  
@@ -34,7 +38,7 @@ start -process -swversion
 
 ## REMARKS:
 - **Launching SOLIDWORKS**:  
-  If the `-wversion` parameter is provided, the command attempts to locate and launch the specified version of SOLIDWORKS. If the version is not found, an error message will be displayed.
+  If the `-swversion` parameter is provided, the command attempts to locate and launch the specified version of SOLIDWORKS. If the version is not found, an error message will be displayed.
 
 - **Administration Tool**:  
   The `admin` option launches the PDM administration tool. Ensure the tool is installed and accessible.

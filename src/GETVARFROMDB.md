@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets the value of a variable for a specified file or folder directly from the database.
 title: GETVARFROMDB Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
@@ -9,7 +9,7 @@ Gets the value of a variable for a specified file or folder directly from the da
 
 ## SYNTAX:
 ```bash
-getvarfromdb -filePath -variableName -configs
+getvarfromdb -filePath -variableName -configNames
 ```
 
 ## PARAMETERS:
@@ -19,7 +19,7 @@ getvarfromdb -filePath -variableName -configs
 - `variableName` :  
   The variable name to retrieve from the database.
 
-- `configs` :  
+- `configNames` :  
   The configuration names to retrieve the variable from, separated by commas.
 
 ## EXAMPLES:

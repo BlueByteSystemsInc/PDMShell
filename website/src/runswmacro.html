@@ -95,14 +95,24 @@
 <h2 id="parameters">PARAMETERS:</h2>
 <p>The command requires the following parameters:</p>
 <ul>
-<li><code>filePath</code>: Path to the SOLIDWORKS macro file (<code>.swp</code> or <code>.dll</code>). This is required and the file needs to cached in PDM.</li>
-<li><code>search</code>: Search query to find files to run the macro on.</li>
-<li><code>recursive</code>: If set, search will include subfolders.</li>
-<li><code>list</code>: csv file path of filepaths without a column header.</li>
-<li><code>skip</code>: Skips the specified number of items. Only valid with <code>list</code>.</li>
-<li><code>count</code>: Only processes the specified number of items. Only valid with <code>list</code>.</li>
-<li><code>timeout</code>: Macro timeout in seconds (for both the macro to execute and for SOLIDWORKS to start too)</li>
-<li><code>version</code>: SOLIDWORKS year version. Example 2023. Default is latest.</li>
+<li><p><code>filePath</code>: Path to the SOLIDWORKS macro file (<code>.swp</code> or <code>.dll</code>). This is required and the file needs to cached in PDM.</p>
+</li>
+<li><p><code>search</code>: Search query to find files to run the macro on.</p>
+</li>
+<li><p><code>recursive</code>: If set, search will include subfolders.</p>
+</li>
+<li><p><code>list</code>: csv file path of filepaths without a column header.</p>
+</li>
+<li><p><code>skip</code>: Skips the specified number of items. Only valid with <code>list</code>.</p>
+</li>
+<li><p><code>count</code>: Only processes the specified number of items. Only valid with <code>list</code>.</p>
+</li>
+<li><p><code>timeout</code>: Macro timeout in seconds (for both the macro to execute and for SOLIDWORKS to start too)</p>
+</li>
+<li><p><code>version</code>: SOLIDWORKS year version. Example 2023. Default is latest.</p>
+</li>
+<li><p><code>csv</code>: CSV file path used to report macro execution errors and success.</p>
+</li>
 </ul>
 <h2 id="what-version-of-solidworks-will-pdmshell-use">What version of SOLIDWORKS will PDMShell use?</h2>
 <p>PDMShell will use the latest SOLIDWORKS version installed on your system by checking the Windows Registry at:</p>

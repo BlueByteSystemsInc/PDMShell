@@ -8,10 +8,12 @@ title: INFOVAR Command Documentation | PDMShell | SOLIDWORKS PDM
 Gets information about a variable.
 
 ## SYNTAX:
-infovar [-v variable_name]
+```bash
+infovar -variableName
+```
 
 ## PARAMETERS:
--v variable_name - The variable name to retrieve information for.
+- `variableName`: The variable name to retrieve information for.
 
 ## EXAMPLES:
 infovar -v Description

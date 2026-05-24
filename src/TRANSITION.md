@@ -18,24 +18,24 @@ This command supports three modes:
 # SYNTAX
 ```bash
 # single file
-transition -transitionid <id> -filePath <path>
+transition -transitionidorname <id-or-name> -filePath <path>
 # search and transition all results
-transition -transitionid <id> -search <pattern> [-recursive]
+transition -transitionidorname <id-or-name> -search <pattern> [-recursive]
 # transition all files in the csv via the specified transition
 transition -source <csv> -password <password> [-batch <size>] [-comment <text>]
 ```
 
 # PARAMETERS
 
-## transitionid
-Specifies the workflow transition ID.
+## `transitionidorname`
+Specifies the workflow transition ID or name.
 Required for search and filepath modes.
 
 Example:
 ```bash
--transitionid 12
+-transitionidorname 12
 ```
-## source
+## `source`
 
 Specifies a CSV file containing files to transition in batch.
 
@@ -50,7 +50,7 @@ Example:
 >[!IMPORTANT]
 >The file must be locally cached.
 
-## password
+## `password`
 
 Specifies the PDM user password required to execute the transition.
 Only used with `source` parameter.
@@ -63,7 +63,7 @@ Example:
 >Your password remains visible in your session output. Do not start PDMShell with winlog parameter.
 
 
-## batch
+## `batch`
 
 Specifies how many files to process per batch.
 
@@ -76,7 +76,7 @@ Example:
 Recommended values:
 500
 
-## comment
+## `comment`
 
 Specifies the transition comment.
 
@@ -90,7 +90,7 @@ Example:
 ```
 ---
 
-## search
+## `search`
 
 Searches for files matching a pattern in the current directory.
 
@@ -101,13 +101,13 @@ Example:
 ```
 ---
 
-## recursive
+## `recursive`
 
 Includes subfolders when used with search.
 
 ---
 
-## filePath
+## `filePath`
 
 Specifies a single file to transition.
 
@@ -166,7 +166,7 @@ Transitions files found using search.
 
 Example:
 ```bash
-transition -search %.sldasm -transitionid 12 -recursive
+transition -search %.sldasm -transitionidorname 12 -recursive
 ```
  
 
@@ -176,7 +176,7 @@ Transitions one file.
 
 Example:
 ```bash
-transition -filePath part.sldprt -transitionid 12
+transition -filePath part.sldprt -transitionidorname 12
 ```
  
 

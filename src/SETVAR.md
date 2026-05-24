@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets the value of a variable for a specified checked out file or many checked out files.
 title: SETVAR Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
@@ -12,17 +12,21 @@ Sets the value of a variable for a specified checked out file or many checked ou
 setvar [-filePath|-search]  -variableName -value [-configNames] [-stringformat] 
 ```
 ## PARAMETERS:
--`filePath`: The file to set the variable for.
+- `filePath`: The file to set the variable for.
 
--`variableName`: The variable to set.
+- `variableName`: The variable to set.
 
--`value`: The value to assign to the variable.
+- `value`: The value to assign to the variable.
 
--`configNames`: The configuration names to set the variable for, separated by commas.
+- `configNames`: The configuration names to set the variable for, separated by commas.
 
--`search`: The search operation to use.
 
--`stringformat`: string format. See remarks section. 
+- `clear`: Clears the variable value.
+- `search`: The search operation to use.
+
+
+- `recursive`: When used with `search`, includes files in subfolders.
+- `stringformat`: string format. See remarks section. 
 
 ## EXAMPLES:
 ```bash

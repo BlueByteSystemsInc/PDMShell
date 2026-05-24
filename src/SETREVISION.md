@@ -22,7 +22,7 @@ The command resolves all bracketed variables before applying the revision.
 
 ## SYNTAX:
 ```bash
-setrevision -filePath|-search -value 
+setrevision -filePath|-search -recursive -value -csv
 ```
 ## PARAMETERS:
 
@@ -32,6 +32,9 @@ setrevision -filePath|-search -value
 
 - `search`  
   Search query in the current folder
+
+- `recursive`  
+  When used with `search`, includes files in subfolders.
 
 - `value`  
   The revision value to apply.  

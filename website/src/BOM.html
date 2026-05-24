@@ -91,7 +91,7 @@
 <p>The <code>BOMCommand</code> allows you to extract a Bill of Materials from a SOLIDWORKS file inside the PDM vault and export it to a CSV file.<br>
 This command supports configuration evaluation using <strong>$configuration</strong>, allows specifying <strong>configNames</strong>, and supports selecting a <strong>layout</strong> from all available BOM layouts.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">bom -filePath -name -directory -configNames -layout
+<pre><code class="lang-bash">bom -filePath -name -directory -search -recursive -configNames -layout
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
@@ -105,6 +105,12 @@ Supports evaluation (e.g., <code>$configuration</code>).<br>
 </li>
 <li><p><code>directory</code><br>
 Target folder where the CSV will be saved.</p>
+</li>
+<li><p><code>search</code><br>
+Search query used to find files in the current directory and run the BOM command on each result.</p>
+</li>
+<li><p><code>recursive</code><br>
+When used with <code>search</code>, includes files in subfolders.</p>
 </li>
 <li><p><code>configNames</code><br>
 Comma-separated list of configurations to extract the BOM from. If unspecified, all configurations are processed.

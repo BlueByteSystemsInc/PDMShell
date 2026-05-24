@@ -1,4 +1,4 @@
----
+﻿---
 description: Performs a check-in operation on a specified file or many files.
 title: CHECKIN Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
@@ -11,11 +11,13 @@ Performs a check-in operation on a specified file or many files.
 ## SYNTAX:
 
 ```bash
-checkin -search -filePath -comment -Checkinoptions
+checkin -search -recursive -filePath -comment -Checkinoptions
 ```
 ## PARAMETERS:
 - `search`: The search operation to use.
 
+
+- `recursive`: When used with `search`, includes files in subfolders.
 - `filePath`: The file(s) to be checked in. This is the default parameter.
 
 - `comment`: The comment to add to the check-in.

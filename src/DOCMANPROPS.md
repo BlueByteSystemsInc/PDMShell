@@ -24,13 +24,13 @@ This command supports two primary modes:
 # SYNTAX
 
 ```bash
-docmanprops -directory <path> -csv <csvPath> [-recursive] [-configNames] [-update] [-refresh] [-extensions]
+docmanprops -directory <path> -csv <csvPath> [-recursive] [-configNames] [-update] [-refresh] [-extension]
 ```
 ---
 
 # PARAMETERS
 
-## directory
+## `directory`
 
 Specifies the folder containing SOLIDWORKS files.
 
@@ -40,7 +40,7 @@ Example:
 ```
 ---
 
-## csv
+## `csv`
 
 Specifies the CSV file path.
 
@@ -53,14 +53,14 @@ Example: `-csv "C:\temp\props.csv"`
 
 ---
 
-## update
+## `update`
 
 When specified, the command runs in **Update Mode**.
 
 Reads the CSV file and writes the properties back into the SOLIDWORKS files.
 
 ---
-## refresh
+## `refresh`
 
 When specified, the command runs in **Refresh Mode**.
 
@@ -68,12 +68,12 @@ Reads the CSV file and refreshes the content of the properties in the csv file.
 
 
 ---
-## recursive
+## `recursive`
 
 When specified, searches subfolders.
 ---
 
-## configNames
+## `configNames`
 
 Specifies which configurations to include.
 
@@ -83,9 +83,9 @@ Example: `-configNames "Default,Config1"` Use space for custom property.
 
 ---
 
-## extensions
+## `extension`
 
-Specifies which file extensions to include when exporting or updateing properties.
+Specifies which file extension filters to include when exporting or updating properties.
 
 Default: `*` (all files)
 
@@ -96,21 +96,21 @@ Special value for all solidworks file extensions is: `solidworks`
 Examples:
 ```bash
 #all solidworks files
--extensions "solidworks"
+-extension "solidworks"
 
--extensions "*.sld*"
+-extension "*.sld*"
 
--extensions "*.sldprt,*.sldasm"
+-extension "*.sldprt,*.sldasm"
 
--extensions "*.sld*,*.pdf"
+-extension "*.sld*,*.pdf"
 
--extensions "*"
+-extension "*"
 ```
 If an extension filter contains spaces, wrap it in quotes.
 
 Example:
 ```bash
--extensions "*.sld*,*.step,*.pdf"
+-extension "*.sld*,*.step,*.pdf"
 ```
 Use `*.*` to include all files regardless of extension.
 --

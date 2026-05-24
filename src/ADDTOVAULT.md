@@ -1,4 +1,4 @@
----
+﻿---
 description: The ADDTOVAULT command is used to add files or directories to the PDM vault. It supports adding from a single file, folder, or CSV mapping map, and includes options such as batch processing, ignoring existing files, updating references, recursion, and exporting results to CSV.
 title: ADDTOVAULT Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
@@ -59,6 +59,24 @@ addtovault -map "C:\Users\hawkridge\Downloads\map\map.csv" -batch 50 -propertyma
 ```
 
 This parameter overrides `-source`.
+
+---
+
+- `skip`:
+
+(Optional)
+
+Number of rows to skip from the map CSV file before processing begins. Header row is not included in this count.
+
+---
+
+- `count`:
+
+(Optional)
+
+Maximum number of rows to process from the map CSV file after applying the skip value.
+
+---
 
 >[!Important]
 >Please make sure you don't have duplicates copies to the **same** target directory. 
@@ -157,6 +175,14 @@ addtovault -map "C:\export\map.csv" -skip 10 -count 3 -label "Migration;Migratio
 search -search "Name=%.sldprt;Label=Migration;Recursive=true"
 ```
 ![label](/images/label.png)
+---
+
+- `clear`:
+
+(Optional)
+
+Clears existing properties from the file before applying `propertymap`.
+
 ---
 
 - `csv`:

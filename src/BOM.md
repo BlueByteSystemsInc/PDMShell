@@ -1,4 +1,4 @@
----
+﻿---
 description: Exports the Bill of Materials (BOM) of a SOLIDWORKS assembly to a CSV file.
 title: BOM Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
@@ -11,7 +11,7 @@ This command supports configuration evaluation using **$configuration**, allows 
 
 ## SYNTAX:
 ```bash
-bom -filePath -name -directory -configNames -layout
+bom -filePath -name -directory -search -recursive -configNames -layout
 ```
 ## PARAMETERS:
 
@@ -25,6 +25,13 @@ bom -filePath -name -directory -configNames -layout
 
 - `directory`  
   Target folder where the CSV will be saved.
+
+
+- `search`  
+  Search query used to find files in the current directory and run the BOM command on each result.
+
+- `recursive`  
+  When used with `search`, includes files in subfolders.
 
 - `configNames`  
   Comma-separated list of configurations to extract the BOM from. If unspecified, all configurations are processed. 

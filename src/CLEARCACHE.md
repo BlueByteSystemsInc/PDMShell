@@ -1,4 +1,4 @@
----
+﻿---
 description: Clears the local cache of a folder or many files..
 title: CLEARCACHE Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
@@ -14,10 +14,10 @@ clearcache -directory -search -toolboxflag -source
 ```
 
 ## PARAMETERS:
-- `-directory`: The directory to clear the local cache of.
-- `-search`: Search query.
-- `-toolboxflag`: Ignore toolbox files.
-- `-source`: CSV files containing complete local file paths to clear. First row is header.
+- `Directory`: The directory to clear the local cache of.
+- `search`: Search query.
+- `toolboxflag`: Ignore toolbox files.
+- `source`: CSV files containing complete local file paths to clear. First row is header.
 
 ## EXAMPLES:
 ```bash

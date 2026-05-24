@@ -100,12 +100,12 @@
 </ul>
 <hr>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">whereused -filepath|-search -csv
+<pre><code class="lang-bash">whereused -filePath|-search -csv
 </code></pre>
 <hr>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
-<li><p><code>filepath</code><br>
+<li><p><code>filePath</code><br>
 Full or relative path of the file to evaluate.</p>
 </li>
 <li><p><code>search</code><br>
@@ -118,7 +118,7 @@ Optional filter applied to parent results. Supports SQL wildcard <code>%</code>.
 <h2 id="examples">EXAMPLES:</h2>
 <h3 id="example-1-basic-where-used">Example 1: Basic Where Used</h3>
 <pre><code class="lang-bash">## Lists all parent files that reference `Bracket.SLDPRT`.
-whereused -filepath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot;
+whereused -filePath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot;
 </code></pre>
 <hr>
 <h3 id="example-2-filter-parent-results">Example 2: Filter Parent Results</h3>
@@ -127,7 +127,7 @@ whereused -filepath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot;
 </code></pre>
 <hr>
 <h3 id="example-3-export-to-csv">Example 3: Export to CSV</h3>
-<pre><code class="lang-bash">whereused -filepath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot; -csv parents.csv
+<pre><code class="lang-bash">whereused -filePath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot; -csv parents.csv
 ## Exports results to CSV with columns:
 ## ChildID,ChildName,ParentName,ParentID,FolderPath
 </code></pre>

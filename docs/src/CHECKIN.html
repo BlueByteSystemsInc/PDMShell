@@ -90,11 +90,13 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Performs a check-in operation on a specified file or many files.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">checkin -search -filePath -comment -Checkinoptions
+<pre><code class="lang-bash">checkin -search -recursive -filePath -comment -Checkinoptions
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
 <li><p><code>search</code>: The search operation to use.</p>
+</li>
+<li><p><code>recursive</code>: When used with <code>search</code>, includes files in subfolders.</p>
 </li>
 <li><p><code>filePath</code>: The file(s) to be checked in. This is the default parameter.</p>
 </li>

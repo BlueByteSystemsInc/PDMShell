@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes the current PDM directory.
 title: CD  Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
@@ -14,8 +14,8 @@ cd [-directory|-id]
 ```
 
 ## PARAMETERS:
--`directory`(or `d`): The directory to switch to. The directory parameter can be a relative or absolute path in PDM.
--`id`: ID of the folder to navigate to.
+- `directory` (or `d`): The directory to switch to. The directory parameter can be a relative or absolute path in PDM.
+- `id`: ID of the folder to navigate to.
 
 ## EXAMPLES:
 ```bash

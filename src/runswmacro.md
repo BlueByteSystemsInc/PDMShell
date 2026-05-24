@@ -1,4 +1,4 @@
----
+﻿---
 description: Execute a SOLIDWORKS macro on a specific file or on multiple files found via search in the PDM vault.
 title: RUNSWMACRO Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
@@ -28,6 +28,8 @@ The command requires the following parameters:
 - `timeout`: Macro timeout in seconds (for both the macro to execute and for SOLIDWORKS to start too)
 - `version`: SOLIDWORKS year version. Example 2023. Default is latest.
 
+
+- `csv`: CSV file path used to report macro execution errors and success.
 ## What version of SOLIDWORKS will PDMShell use?
 PDMShell will use the latest SOLIDWORKS version installed on your system by checking the Windows Registry at:
 ```

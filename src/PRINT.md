@@ -1,4 +1,4 @@
----
+﻿---
 description: Displays the biographical information about the specified file.
 title: PRINT Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
@@ -12,6 +12,9 @@ Displays the biographical information about the specified file.
 print [-filePath|-id]
 ```
 ## PARAMETERS:
+- `filePath`: The file to print.
+- `id`: PDM internal ID of the file to print.
+
 -filePath: The file to print biographical information for.
 
 ## EXAMPLES:

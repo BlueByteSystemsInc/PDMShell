@@ -97,20 +97,20 @@
 </ul>
 <h1 id="syntax">SYNTAX</h1>
 <pre><code class="lang-bash"># single file
-transition -transitionid &lt;id&gt; -filePath &lt;path&gt;
+transition -transitionidorname &lt;id-or-name&gt; -filePath &lt;path&gt;
 # search and transition all results
-transition -transitionid &lt;id&gt; -search &lt;pattern&gt; [-recursive]
+transition -transitionidorname &lt;id-or-name&gt; -search &lt;pattern&gt; [-recursive]
 # transition all files in the csv via the specified transition
 transition -source &lt;csv&gt; -password &lt;password&gt; [-batch &lt;size&gt;] [-comment &lt;text&gt;]
 </code></pre>
 <h1 id="parameters">PARAMETERS</h1>
-<h2 id="transitionid">transitionid</h2>
-<p>Specifies the workflow transition ID.
+<h2 id="transitionidorname"><code>transitionidorname</code></h2>
+<p>Specifies the workflow transition ID or name.
 Required for search and filepath modes.</p>
 <p>Example:</p>
-<pre><code class="lang-bash">-transitionid 12
+<pre><code class="lang-bash">-transitionidorname 12
 </code></pre>
-<h2 id="source">source</h2>
+<h2 id="source"><code>source</code></h2>
 <p>Specifies a CSV file containing files to transition in batch.</p>
 <p>The CSV may be:</p>
 <ul>
@@ -123,7 +123,7 @@ Required for search and filepath modes.</p>
 <h5>Important</h5>
 <p>The file must be locally cached.</p>
 </div>
-<h2 id="password">password</h2>
+<h2 id="password"><code>password</code></h2>
 <p>Specifies the PDM user password required to execute the transition.
 Only used with <code>source</code> parameter.
 Example:</p>
@@ -133,7 +133,7 @@ Example:</p>
 <h5>Important</h5>
 <p>Your password remains visible in your session output. Do not start PDMShell with winlog parameter.</p>
 </div>
-<h2 id="batch">batch</h2>
+<h2 id="batch"><code>batch</code></h2>
 <p>Specifies how many files to process per batch.</p>
 <p>Default:
 1000
@@ -142,7 +142,7 @@ Example:</p>
 </code></pre>
 <p>Recommended values:
 500</p>
-<h2 id="comment">comment</h2>
+<h2 id="comment"><code>comment</code></h2>
 <p>Specifies the transition comment.</p>
 <p>Default:</p>
 <p>Transitioned by PDMShell</p>
@@ -150,17 +150,17 @@ Example:</p>
 <pre><code class="lang-bash">-comment &quot;Released by migration script&quot;
 </code></pre>
 <hr>
-<h2 id="search">search</h2>
+<h2 id="search"><code>search</code></h2>
 <p>Searches for files matching a pattern in the current directory.</p>
 <p>Example:</p>
 <pre><code class="lang-bash"># find all parts in the current directory
 -search %.sldprt
 </code></pre>
 <hr>
-<h2 id="recursive">recursive</h2>
+<h2 id="recursive"><code>recursive</code></h2>
 <p>Includes subfolders when used with search.</p>
 <hr>
-<h2 id="filepath">filePath</h2>
+<h2 id="filepath"><code>filePath</code></h2>
 <p>Specifies a single file to transition.</p>
 <p>Example:</p>
 <pre><code class="lang-bash"># part is found the current directory
@@ -196,12 +196,12 @@ Example:</p>
 <h1 id="search-mode">SEARCH MODE</h1>
 <p>Transitions files found using search.</p>
 <p>Example:</p>
-<pre><code class="lang-bash">transition -search %.sldasm -transitionid 12 -recursive
+<pre><code class="lang-bash">transition -search %.sldasm -transitionidorname 12 -recursive
 </code></pre>
 <h1 id="single-file-mode">SINGLE FILE MODE</h1>
 <p>Transitions one file.</p>
 <p>Example:</p>
-<pre><code class="lang-bash">transition -filePath part.sldprt -transitionid 12
+<pre><code class="lang-bash">transition -filePath part.sldprt -transitionidorname 12
 </code></pre>
 <h1 id="validation">VALIDATION</h1>
 <p>The command automatically:</p>

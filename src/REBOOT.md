@@ -9,10 +9,10 @@ Hard PDM reboot.
 
 ## SYNTAX:
 ```bash
-reboot
+reboot -pdmaddins
 ```
 ## PARAMETERS:
-This command has no parameters.
+- `pdmaddins`: Targets SOLIDWORKS PDM add-ins during the reboot operation.
 
 ## EXAMPLES:
 ```bash

@@ -967,6 +967,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/ADDADDIN.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/ADDADDIN.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/ADDTOVAULT.md",
       "output": {
         ".html": {
@@ -1067,6 +1077,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/CREATEVIRTUALFROMSOURCE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/CREATEVIRTUALFROMSOURCE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/DELETE.md",
       "output": {
         ".html": {
@@ -1101,6 +1121,16 @@
       "output": {
         ".html": {
           "relative_path": "src/DIR.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/DOCMAN.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/DOCMAN.html"
         }
       },
       "version": ""
@@ -1327,6 +1357,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/PREVIEW.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/PREVIEW.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/PRINT.md",
       "output": {
         ".html": {
@@ -1361,6 +1401,16 @@
       "output": {
         ".html": {
           "relative_path": "src/REBOOT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/REBUILD.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/REBUILD.html"
         }
       },
       "version": ""
@@ -1501,6 +1551,16 @@
       "output": {
         ".html": {
           "relative_path": "src/TASKSCRIPT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/TOOLBOX.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/TOOLBOX.html"
         }
       },
       "version": ""

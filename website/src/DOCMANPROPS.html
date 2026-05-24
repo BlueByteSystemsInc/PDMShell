@@ -101,17 +101,17 @@
 </div>
 <hr>
 <h1 id="syntax">SYNTAX</h1>
-<pre><code class="lang-bash">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-update] [-refresh] [-extensions]
+<pre><code class="lang-bash">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-update] [-refresh] [-extension]
 </code></pre>
 <hr>
 <h1 id="parameters">PARAMETERS</h1>
-<h2 id="directory">directory</h2>
+<h2 id="directory"><code>directory</code></h2>
 <p>Specifies the folder containing SOLIDWORKS files.</p>
 <p>Example:</p>
 <pre><code class="lang-bash">`-directory &quot;C:\Vault\Projects&quot;`
 </code></pre>
 <hr>
-<h2 id="csv">csv</h2>
+<h2 id="csv"><code>csv</code></h2>
 <p>Specifies the CSV file path.</p>
 <p>Used for:</p>
 <ul>
@@ -120,41 +120,41 @@
 </ul>
 <p>Example: <code>-csv &quot;C:\temp\props.csv&quot;</code></p>
 <hr>
-<h2 id="update">update</h2>
+<h2 id="update"><code>update</code></h2>
 <p>When specified, the command runs in <strong>Update Mode</strong>.</p>
 <p>Reads the CSV file and writes the properties back into the SOLIDWORKS files.</p>
 <hr>
-<h2 id="refresh">refresh</h2>
+<h2 id="refresh"><code>refresh</code></h2>
 <p>When specified, the command runs in <strong>Refresh Mode</strong>.</p>
 <p>Reads the CSV file and refreshes the content of the properties in the csv file.</p>
 <hr>
-<h2 id="recursive">recursive</h2>
+<h2 id="recursive"><code>recursive</code></h2>
 <h2 id="when-specified-searches-subfolders">When specified, searches subfolders.</h2>
-<h2 id="confignames">configNames</h2>
+<h2 id="confignames"><code>configNames</code></h2>
 <p>Specifies which configurations to include.</p>
 <p>Default: All configurations</p>
 <p>Example: <code>-configNames &quot;Default,Config1&quot;</code> Use space for custom property.</p>
 <hr>
-<h2 id="extensions">extensions</h2>
-<p>Specifies which file extensions to include when exporting or updateing properties.</p>
+<h2 id="extension"><code>extension</code></h2>
+<p>Specifies which file extension filters to include when exporting or updating properties.</p>
 <p>Default: <code>*</code> (all files)</p>
 <p>Supports wildcards and multiple values separated by commas.</p>
 <p>Special value for all solidworks file extensions is: <code>solidworks</code></p>
 <p>Examples:</p>
 <pre><code class="lang-bash">#all solidworks files
--extensions &quot;solidworks&quot;
+-extension &quot;solidworks&quot;
 
--extensions &quot;*.sld*&quot;
+-extension &quot;*.sld*&quot;
 
--extensions &quot;*.sldprt,*.sldasm&quot;
+-extension &quot;*.sldprt,*.sldasm&quot;
 
--extensions &quot;*.sld*,*.pdf&quot;
+-extension &quot;*.sld*,*.pdf&quot;
 
--extensions &quot;*&quot;
+-extension &quot;*&quot;
 </code></pre>
 <p>If an extension filter contains spaces, wrap it in quotes.</p>
 <p>Example:</p>
-<pre><code class="lang-bash">-extensions &quot;*.sld*,*.step,*.pdf&quot;
+<pre><code class="lang-bash">-extension &quot;*.sld*,*.step,*.pdf&quot;
 </code></pre>
 <h2 id="use--to-include-all-files-regardless-of-extension">Use <code>*.*</code> to include all files regardless of extension.</h2>
 <h1 id="csv-format">CSV FORMAT</h1>

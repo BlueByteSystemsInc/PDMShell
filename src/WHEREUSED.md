@@ -23,13 +23,13 @@ The output columns are:
 ## SYNTAX:
 
 ```bash
-whereused -filepath|-search -csv
+whereused -filePath|-search -csv
 ```
 ---
 
 ## PARAMETERS:
 
-- `filepath`  
+- `filePath`  
   Full or relative path of the file to evaluate.
 
 - `search`  
@@ -45,7 +45,7 @@ whereused -filepath|-search -csv
 
 ```bash
 ## Lists all parent files that reference `Bracket.SLDPRT`.
-whereused -filepath "C:\Vault\Parts\Bracket.SLDPRT"
+whereused -filePath "C:\Vault\Parts\Bracket.SLDPRT"
 ```
 ---
 
@@ -60,7 +60,7 @@ whereused -search "%.SLDASM"
 ### Example 3: Export to CSV
 
 ```bash
-whereused -filepath "C:\Vault\Parts\Bracket.SLDPRT" -csv parents.csv
+whereused -filePath "C:\Vault\Parts\Bracket.SLDPRT" -csv parents.csv
 ## Exports results to CSV with columns:
 ## ChildID,ChildName,ParentName,ParentID,FolderPath
 ```

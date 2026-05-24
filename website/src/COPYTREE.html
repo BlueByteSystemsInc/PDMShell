@@ -94,14 +94,14 @@
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
-<li><code>-filePath</code>: The source file or directory to copy.</li>
-<li><code>-directory</code>: Specifies the target directory where the files will be copied.</li>
-<li><code>-search</code>: A search query to filter files to be copied.</li>
-<li><code>-suffix</code>: Adds a suffix to the copied files.</li>
-<li><code>-prefix</code>:  Adds a prefix to the copied files.</li>
-<li><code>-recursive</code>: Copies files recursively from subdirectories.</li>
-<li><code>-includedrawings</code>: Includes associated drawing files in the copy operation.</li>
-<li><code>-latest</code>: Ensures the latest version of the files is copied.</li>
+<li><code>filePath</code>: The source file or directory to copy.</li>
+<li><code>directory</code>: Specifies the target directory where the files will be copied.</li>
+<li><code>search</code>: A search query to filter files to be copied.</li>
+<li><code>suffix</code>: Adds a suffix to the copied files.</li>
+<li><code>prefix</code>:  Adds a prefix to the copied files.</li>
+<li><code>recursive</code>: Copies files recursively from subdirectories.</li>
+<li><code>includedrawings</code>: Includes associated drawing files in the copy operation.</li>
+<li><code>latest</code>: Ensures the latest version of the files is copied.</li>
 </ul>
 <h2 id="examples">EXAMPLES:</h2>
 <pre><code class="lang-bash">  copytree -filePath &quot;fidget spinner.sldasm&quot; -suffix _ -directory &quot;\new project&quot; #copies the fidget spinner to new project folder with suffix _
@@ -110,9 +110,9 @@
 <h2 id="remarks">REMARKS:</h2>
 <ul>
 <li>The <code>-dir</code> parameter specifies the target directory. If omitted, the current directory is used.</li>
-<li>Use the <code>-recursive</code> parameter to include all subdirectories in the operation.</li>
-<li>The <code>-includedrawings</code> parameter ensures that associated drawing files are included in the copy.</li>
-<li>The <code>-latest</code> parameter ensures that only the latest versions of files are copied.</li>
+<li>Use the <code>recursive</code> parameter to include all subdirectories in the operation.</li>
+<li>The <code>includedrawings</code> parameter ensures that associated drawing files are included in the copy.</li>
+<li>The <code>latest</code> parameter ensures that only the latest versions of files are copied.</li>
 </ul>
 
 </article>

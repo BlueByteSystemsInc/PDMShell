@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets the revision of SOLIDWORKS PDM files from a CSV source containing file IDs and revision values.
 title: SETRECISIONFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
@@ -24,7 +24,7 @@ setrevisionfromsource -source -csv
 ```
 ## PARAMETERS
 
-- `-source`  
+- `source`  
   Path to the CSV file that contains the input dataset.  
   Required columns:  
   - `ID` — the file’s PDM ID inside the vault.  
@@ -37,7 +37,7 @@ setrevisionfromsource -source -csv
 >[!NOTE]
 >  You can generate IDs and variables into a CSV by using the [search command](SEARCH.md).
 
-- `-csv` *(optional)*  
+- `csv` *(optional)*  
   Path to an output CSV file where results will be written.  
   The results file contains:  
   - File ID  

@@ -101,7 +101,7 @@ Example: <code>[Revision]</code><br>
 This evaluates the variable on the file and applies its value as the new revision.</p>
 <p>The command resolves all bracketed variables before applying the revision.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">setrevision -filePath|-search -value 
+<pre><code class="lang-bash">setrevision -filePath|-search -recursive -value -csv
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
@@ -111,6 +111,9 @@ Only a single file is affected by this command.</p>
 </li>
 <li><p><code>search</code><br>
 Search query in the current folder</p>
+</li>
+<li><p><code>recursive</code><br>
+When used with <code>search</code>, includes files in subfolders.</p>
 </li>
 <li><p><code>value</code><br>
 The revision value to apply.<br>

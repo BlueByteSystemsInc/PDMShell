@@ -126,6 +126,19 @@ C:\Data\Part2.sldprt,ProjectB\Mechanical
 addtovault -map &quot;C:\Users\hawkridge\Downloads\map\map.csv&quot; -batch 50 -propertymap &quot;C:\Users\hawkridge\Downloads\map\property.csv&quot; -skip 5243 -count 540 -clear -ignoreexisting -csv &quot;result.csv&quot;
 </code></pre>
 <p>This parameter overrides <code>-source</code>.</p>
+<hr>
+<ul>
+<li><code>skip</code>:</li>
+</ul>
+<p>(Optional)</p>
+<p>Number of rows to skip from the map CSV file before processing begins. Header row is not included in this count.</p>
+<hr>
+<ul>
+<li><code>count</code>:</li>
+</ul>
+<p>(Optional)</p>
+<p>Maximum number of rows to process from the map CSV file after applying the skip value.</p>
+<hr>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>Please make sure you don't have duplicates copies to the <strong>same</strong> target directory.</p>
@@ -202,6 +215,12 @@ addtovault -map &quot;C:\export\map.csv&quot; -skip 10 -count 3 -label &quot;Mig
 search -search &quot;Name=%.sldprt;Label=Migration;Recursive=true&quot;
 </code></pre>
 <h2 id="label"><img src="/images/label.png" alt="label"></h2>
+<ul>
+<li><code>clear</code>:</li>
+</ul>
+<p>(Optional)</p>
+<p>Clears existing properties from the file before applying <code>propertymap</code>.</p>
+<hr>
 <ul>
 <li><code>csv</code>:</li>
 </ul>

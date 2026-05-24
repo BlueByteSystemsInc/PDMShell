@@ -1,4 +1,4 @@
----
+﻿---
 description: Kills a process.
 title: KILL Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
@@ -12,7 +12,7 @@ Kills a process.
 kill -process 
 ```
 ## PARAMETERS:
-- `process`: The process to terminate (with extension)
+- `programName`: The process to terminate (with extension).
 
 ## EXAMPLES:
 ```bash
