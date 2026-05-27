@@ -2,9 +2,7 @@
 name: Rebuild SOLIDWORKS Document
 id: REBUILDSOLIDWORKSDOC
 description: Rebuilds a SOLIDWORKS document through PDMShell.
-icon: 🔄
 requiresSolidWorks: true
-requiresPDM: true
 scriptFile: REBUILDSOLIDWORKSDOC.pdmshell
 macroFile: REBUILDSOLIDWORKSDOC.swb
 tags:
@@ -56,6 +54,6 @@ checkin -filePath "$localPath"
 | Placeholder | Description |
 |---|---|
 | `$localPath` | Full local path of the selected file |
-| `$localFolder` | Local folder path of the selected file |
+| `$folderPath` | Local folder path of the selected file |
 | `$fileName` | File name of the selected file |
 | `$tempFolder` | Temporary folder in your Windows session |
