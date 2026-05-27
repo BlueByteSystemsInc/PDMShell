@@ -43,6 +43,8 @@
     items:
     - name: Rebuild SOLIDWORKS Document
       href: scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md  
+    - name: Change Sheet Format
+      href: scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md  
 - name: SQL Examples 
   expanded: true
   items:
