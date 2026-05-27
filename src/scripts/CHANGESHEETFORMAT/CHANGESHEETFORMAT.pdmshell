@@ -1,0 +1,7 @@
+checkout -filePath "$folderPath\$fileNameWithoutExtension.slddrw"
+
+cd -directory "$folderPath"
+
+runswmacro -filePath "$tempFolder\ChangeSheetFormat.swb" -search "Name=$fileNameWithoutExtension.slddrw" -timeout 500
+
+checkin -filePath "$folderPath\$fileNameWithoutExtension.slddrw"

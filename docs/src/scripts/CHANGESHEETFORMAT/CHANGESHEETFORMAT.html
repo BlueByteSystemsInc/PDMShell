@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Change Drawing Sheet Format | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Change Drawing Sheet Format | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Changes the sheet format of a matching SOLIDWORKS drawing through PDMShell.">
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="change-drawing-sheet-format">Change Drawing Sheet Format</h1>
+
+<p>This script checks out the matching SOLIDWORKS drawing for the selected file, runs a macro that replaces drawing sheet formats, and checks the drawing back into SOLIDWORKS PDM.</p>
+<p>The target drawing is resolved from the selected file name:</p>
+<pre><code class="lang-text">$folderPath\$fileNameWithoutExtension.slddrw
+</code></pre>
+<h2 id="script">Script</h2>
+<pre><code class="lang-pdmshell">checkout -filePath &quot;$folderPath\$fileNameWithoutExtension.slddrw&quot;
+
+cd -directory &quot;$folderPath&quot;
+
+runswmacro -filePath &quot;$tempFolder\ChangeSheetFormat.swb&quot; -search &quot;Name=$fileNameWithoutExtension.slddrw&quot; -timeout 500
+
+checkin -filePath &quot;$folderPath\$fileNameWithoutExtension.slddrw&quot;
+</code></pre>
+<h2 id="what-it-does">What it does</h2>
+<ul>
+<li>Checks out the drawing with the same base name as the selected file.</li>
+<li>Changes the PDMShell working directory to the selected file folder.</li>
+<li>Runs a SOLIDWORKS macro against the matching drawing.</li>
+<li>Prompts once for the original and replacement sheet formats if no saved settings exist.</li>
+<li>Saves those settings beside the macro as <code>ChangeSheetFormat.ini</code>.</li>
+<li>Reuses the saved settings for subsequent files in a batch.</li>
+<li>Checks the drawing back into PDM.</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>SOLIDWORKS must be installed on the machine running PDMShell.</li>
+<li>The user must have permission to check out and check in the drawing.</li>
+<li>The matching drawing must exist beside the selected file.</li>
+<li>The selected file should have a same-name <code>.slddrw</code> drawing in the same folder.</li>
+<li>The macro is downloaded to <code>$tempFolder\ChangeSheetFormat.swb</code>.</li>
+</ul>
+<h2 id="macro-code">Macro code</h2>
+<pre><code class="lang-vba">Option Explicit
+
+Const swDocDRAWING As Long = 3
+Const swSaveAsOptions_Silent As Long = 1
+
+Dim swApp As SldWorks.SldWorks
+Dim swModel As SldWorks.ModelDoc2
+Dim swDraw As SldWorks.DrawingDoc
+
+Sub main()
+
+    Set swApp = Application.SldWorks
+    Set swModel = swApp.ActiveDoc
+
+    If swModel Is Nothing Then Exit Sub
+    If swModel.GetType &lt;&gt; swDocDRAWING Then Exit Sub
+
+    Set swDraw = swModel
+
+    Dim configPath As String
+    configPath = GetConfigPath()
+
+    Dim oldFormat As String
+    Dim newFormat As String
+
+    LoadSettings configPath, oldFormat, newFormat
+
+    oldFormat = Trim(oldFormat)
+    newFormat = Trim(newFormat)
+
+    If oldFormat = &quot;&quot; Or newFormat = &quot;&quot; Then
+
+        oldFormat = InputBox(&quot;Enter the original sheet format name or path to replace.&quot;, &quot;Change Sheet Format&quot;)
+        If Trim(oldFormat) = &quot;&quot; Then Exit Sub
+
+        newFormat = InputBox(&quot;Enter the new sheet format path.&quot;, &quot;Change Sheet Format&quot;)
+        If Trim(newFormat) = &quot;&quot; Then Exit Sub
+
+        SaveSettings configPath, oldFormat, newFormat
+
+    End If
+
+    Dim sheetNames As Variant
+    sheetNames = swDraw.GetSheetNames
+
+    If IsEmpty(sheetNames) Then Exit Sub
+
+    Dim changed As Boolean
+    changed = False
+
+    Dim i As Long
+    For i = LBound(sheetNames) To UBound(sheetNames)
+
+        swDraw.ActivateSheet CStr(sheetNames(i))
+
+        Dim swSheet As SldWorks.Sheet
+        Set swSheet = swDraw.GetCurrentSheet
+
+        If Not swSheet Is Nothing Then
+
+            Dim currentFormat As String
+            currentFormat = swSheet.GetTemplateName
+
+            If ShouldReplaceFormat(currentFormat, oldFormat) Then
+
+                swSheet.SetTemplateName newFormat
+                swSheet.ReloadTemplate True
+
+                changed = True
+
+            End If
+
+        End If
+
+    Next i
+
+    If changed Then
+
+        swModel.ForceRebuild3 True
+
+        Dim errors As Long
+        Dim warnings As Long
+
+        swModel.Save3 swSaveAsOptions_Silent, errors, warnings
+
+    End If
+
+End Sub
+
+Function ShouldReplaceFormat(ByVal currentFormat As String, ByVal oldFormat As String) As Boolean
+
+    Dim currentLower As String
+    Dim oldLower As String
+
+    currentLower = LCase(Trim(currentFormat))
+    oldLower = LCase(Trim(oldFormat))
+
+    If currentLower = oldLower Then
+        ShouldReplaceFormat = True
+        Exit Function
+    End If
+
+    If GetFileNameOnly(currentLower) = GetFileNameOnly(oldLower) Then
+        ShouldReplaceFormat = True
+        Exit Function
+    End If
+
+    ShouldReplaceFormat = False
+
+End Function
+
+Function GetConfigPath() As String
+
+    Dim macroPath As String
+    macroPath = swApp.GetCurrentMacroPathName
+
+    If Trim(macroPath) = &quot;&quot; Then
+        GetConfigPath = Environ$(&quot;TEMP&quot;) &amp; Chr(92) &amp; &quot;ChangeSheetFormat.ini&quot;
+    Else
+        GetConfigPath = Left(macroPath, InStrRev(macroPath, Chr(92))) &amp; &quot;ChangeSheetFormat.ini&quot;
+    End If
+
+End Function
+
+Sub LoadSettings(ByVal configPath As String, ByRef oldFormat As String, ByRef newFormat As String)
+
+    oldFormat = &quot;&quot;
+    newFormat = &quot;&quot;
+
+    If Dir(configPath) = &quot;&quot; Then Exit Sub
+
+    Dim fileNo As Integer
+    fileNo = FreeFile
+
+    Open configPath For Input As #fileNo
+
+    Do Until EOF(fileNo)
+
+        Dim line As String
+        Line Input #fileNo, line
+
+        If LCase(Left(line, 10)) = &quot;oldformat=&quot; Then
+            oldFormat = Mid(line, 11)
+        ElseIf LCase(Left(line, 10)) = &quot;newformat=&quot; Then
+            newFormat = Mid(line, 11)
+        End If
+
+    Loop
+
+    Close #fileNo
+
+End Sub
+
+Sub SaveSettings(ByVal configPath As String, ByVal oldFormat As String, ByVal newFormat As String)
+
+    Dim fileNo As Integer
+    fileNo = FreeFile
+
+    Open configPath For Output As #fileNo
+
+    Print #fileNo, &quot;OldFormat=&quot; &amp; oldFormat
+    Print #fileNo, &quot;NewFormat=&quot; &amp; newFormat
+
+    Close #fileNo
+
+End Sub
+
+Function GetFileNameOnly(ByVal path As String) As String
+
+    Dim slashPos As Long
+    slashPos = InStrRev(path, Chr(92))
+
+    If slashPos &gt; 0 Then
+        GetFileNameOnly = Mid(path, slashPos + 1)
+    Else
+        GetFileNameOnly = path
+    End If
+
+End Function
+</code></pre>
+<h2 id="settings-file">Settings file</h2>
+<p>The macro creates and reuses this file beside the macro:</p>
+<pre><code class="lang-ini">OldFormat=OldSheetFormat.slddrt
+NewFormat=C:\SOLIDWORKS Sheet Formats\NewSheetFormat.slddrt
+</code></pre>
+<h2 id="placeholders-used">Placeholders used</h2>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$folderPath</code></td>
+<td>Local folder path of the selected file</td>
+</tr>
+<tr>
+<td><code>$fileNameWithoutExtension</code></td>
+<td>Selected file name without its extension</td>
+</tr>
+<tr>
+<td><code>$tempFolder</code></td>
+<td>Temporary folder in your Windows session</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://bluebyte.biz'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
