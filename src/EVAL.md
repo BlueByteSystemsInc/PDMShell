@@ -36,22 +36,22 @@ The `value` parameter in supported commands can include placeholders that are dy
 ### Placeholders for Files
 - `$value`: Existing value of the variable.
 - `$name`: The file name with extension.
-- `$namewithoutextension`: The file name without extension.
+- `$nameWithoutExtension` or `$fileNameWithoutExtension`: The file name without extension.
 - `$extension`: The file extension.
 - `$id`: The file ID.
 - `$revision`: The current revision of the file (PDM revision, not the PDM variable).
 - `$version`: The current version of the file.
-- `$fullyqualifiedname`: The full local path of the file.
-- `$fullyqualifiedfoldername`: The full local path of the folder containing the file.
-- `$foldername`: The name of the folder containing the file.
+- `$filePath`: The full local path of the file.
+- `$folderPath`: The full local path of the folder containing the file.
+- `$folderName`: The name of the folder containing the file.
 - `$configuration`: configuration name. Only valid for BOM command.
 
 ### Placeholders for Folders
 - `$value`: Existing value of the variable.
 - `$name`: The folder name.
-- `$foldername`: The name of the parent folder.
+- `$folderName`: The name of the parent folder.
 - `$id`: The folder ID.
-- `$fullyqualifiedname`: The full local path of the folder.
+- `$folderPath`: The full local path of the folder.
 
 ### Common Placeholders (Applicable to Both Files and Folders)
 - `$username`: The name of the logged-in user.
