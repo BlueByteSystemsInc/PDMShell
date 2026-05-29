@@ -48,9 +48,8 @@ The `value` parameter in supported commands can include placeholders that are dy
 
 ### Placeholders for Folders
 - `$value`: Existing value of the variable.
-- `$name`: The folder name.
 - `$folderName`: The name of the parent folder.
-- `$id`: The folder ID.
+- `$folderID`: The folder ID.
 - `$folderPath`: The full local path of the folder.
 
 ### Common Placeholders (Applicable to Both Files and Folders)
@@ -64,6 +63,7 @@ The `value` parameter in supported commands can include placeholders that are dy
 - `$date`: The current date.
 - `$time`: The current time in the current locale.
 - `$guid`: Unique identifier.
+- `$tempFolder`: User's local temp folder under App Data
 ---
 
 ## Using Variables in Dynamic Placeholders
