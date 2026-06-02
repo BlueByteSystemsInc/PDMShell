@@ -45,14 +45,17 @@ The `value` parameter in supported commands can include placeholders that are dy
 - `$folderPath`: The full local path of the folder containing the file.
 - `$folderName`: The name of the folder containing the file.
 - `$configuration`: configuration name. Only valid for BOM command.
+- `[Variable]`: @ Variable value.
 
 ### Placeholders for Folders
 - `$value`: Existing value of the variable.
 - `$folderName`: The name of the parent folder.
 - `$folderID`: The folder ID.
 - `$folderPath`: The full local path of the folder.
+- `[Variable]`:  Variable value.
 
 ### Common Placeholders (Applicable to Both Files and Folders)
+- `$localPath`: Local path
 - `$username`: The name of the logged-in user.
 - `$vaultname`: The name of the vault.
 - `$yyyy`: The current year.
