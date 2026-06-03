@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>PDMShell 4.0.0 Visual Code Editor | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="PDMShell 4.0.0 Visual Code Editor | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Overview of the PDMShell 4.0.0 Visual Code Editor for building PDMShell scripts as a canvas workflow.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/visual-code-editor-4.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="pdmshell-400-visual-code-editor">PDMShell 4.0.0 Visual Code Editor</h1>
+
+<p>PDMShell 4.0.0 introduces the <strong>Visual Code Editor</strong>, a workflow-style editor for building PDMShell scripts on a canvas.</p>
+<p>Instead of writing every command by hand, you can add command nodes, connect them in order, edit parameters from a side panel, and run the resulting script directly from PDMShell. The command line is still available below the canvas, so advanced users can keep working with text while using the visual editor to organize and validate the workflow.</p>
+<p><img src="../images/visual-code-editor-empty.png" alt="Visual Code Editor start screen"></p>
+<h2 id="canvas-workflow">Canvas Workflow</h2>
+<p>The editor starts with a <strong>Begin</strong> node and an action button for adding the first command. Each command becomes a node on the canvas. Nodes are connected in execution order, making the script easier to understand at a glance.</p>
+<p><img src="../images/visual-code-editor-add-new-action.png" alt="Adding the first visual action"></p>
+<p>This is especially helpful for longer PDMShell scripts because you can see the process as a flow:</p>
+<ul>
+<li>Start with the current vault context.</li>
+<li>Add one command at a time.</li>
+<li>Connect commands in the order they should run.</li>
+<li>Review the full workflow visually before running it.</li>
+</ul>
+<h2 id="command-picker">Command Picker</h2>
+<p>The command picker lets you search for commands by name, description, or category. Selecting a command inserts it into the canvas as a node.</p>
+<p>For example, searching for <code>checkout</code> shows related command choices such as <strong>Check out</strong> and <strong>Undo checkout</strong>. This makes discovery easier for users who do not remember the exact command syntax.</p>
+<h2 id="parameter-panel">Parameter Panel</h2>
+<p>When a command node is selected, the <strong>Command Parameters</strong> panel shows the editable parameters for that command.</p>
+<p><img src="../images/visual-code-editor-field-placeholder.png" alt="Editing command parameters"></p>
+<p>The parameter grid includes:</p>
+<ul>
+<li>A visual display name for the node.</li>
+<li>Command parameters such as <code>filePath</code>, <code>search</code>, <code>recursive</code>, and command-specific options.</li>
+<li>Inline descriptions for the selected parameter.</li>
+<li>Browse buttons for file and folder parameters when available.</li>
+</ul>
+<p>The visual name is only the label shown on the canvas. The real command parameters are still used when PDMShell generates and runs the script.</p>
+<h2 id="validation">Validation</h2>
+<p>The Visual Code Editor validates command nodes while you build the script.</p>
+<p>If a required parameter is missing or incompatible parameters are used together, the node shows an error indicator. Selecting the node shows the validation message so you can fix the command before running it.</p>
+<p><img src="../images/visual-code-editor-validation.png" alt="Visual command validation"></p>
+<p>For example, the <code>checkout</code> command requires either <code>filePath</code> or <code>search</code>. If neither is set, the editor reports:</p>
+<pre><code class="lang-text">Specify either -filePath or -search.
+</code></pre>
+<p>This reduces the trial-and-error normally involved in command-line scripting.</p>
+<h2 id="run-options">Run Options</h2>
+<p>The run menu gives multiple ways to execute the visual script:</p>
+<ul>
+<li><strong>Run</strong> runs the current workflow.</li>
+<li><strong>Run (Browse to File(s))</strong> runs the workflow against selected files.</li>
+<li><strong>Run (Search Favorite)</strong> runs the workflow using a saved PDM search favorite.</li>
+<li><strong>Run (CSV of File Paths)</strong> runs the workflow against a CSV file containing file paths.</li>
+</ul>
+<p>These options make the same visual workflow reusable across a single file, a search result, or a batch list.</p>
+<p><img src="../images/visual-code-editor-field-run-menu.png" alt="Visual Code Editor run options"></p>
+<h2 id="script-library">Script Library</h2>
+<p>PDMShell 4.0.0 also includes a script library window for downloading ready-to-use PDMShell scripts and any required SOLIDWORKS macros.</p>
+<p><img src="../images/visual-code-editor-script-library.png" alt="PDMShell Script Library"></p>
+<p>The library is designed to make common automation examples easier to find and reuse. Downloaded PDMShell scripts are saved to the Downloads folder, and macro files are saved to the evaluated temp folder.</p>
+<h2 id="saving-visual-scripts">Saving Visual Scripts</h2>
+<p>Scripts continue to use the <code>.pdmshell</code> extension.</p>
+<p>In PDMShell 4.0.0, saved scripts can include both:</p>
+<ul>
+<li>The PDMShell script text.</li>
+<li>The visual canvas state, including node positions and visual layout.</li>
+</ul>
+<p>This means a script can be reopened later with the visual workflow restored, not just the generated command text.</p>
+<p><img src="../images/visual-code-editor-templated-macro-run.png" alt="Multi-step visual workflow"></p>
+<h2 id="when-to-use-it">When To Use It</h2>
+<p>Use the Visual Code Editor when:</p>
+<ul>
+<li>You are building a multi-step PDMShell script.</li>
+<li>You want to validate command parameters before running the script.</li>
+<li>You want a clearer view of how commands connect together.</li>
+<li>You want to reuse the same workflow with files, searches, favorites, or CSV input.</li>
+<li>You are helping users who prefer a visual workflow over command-line syntax.</li>
+</ul>
+<p>Use the text editor or command line directly when you need quick one-line commands or already know the exact syntax.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/visual-code-editor-4.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

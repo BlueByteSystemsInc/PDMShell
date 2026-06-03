@@ -9,7 +9,7 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 then **install** the latest version. **Do not update installed version.**
 
 # 4.0.0 (06/01/2026)
-- Visual Code Editor (Workflow like editor).
+- Added [Visual Code Editor](visual-code-editor-4.md) for building PDMShell scripts as a workflow-style canvas.
 - Added `Favorite=SEARCH FAVORITE` token to the advanced search.
 - Added [runtemplate](RUNTEMPLATE.md) command to run SOLIDWORKS PDM templates from PDMShell.
 - Added [pasteasreference](PASTEASREFERENCE.md) command to replace custom references from a file or search result.

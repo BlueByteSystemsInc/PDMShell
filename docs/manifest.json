@@ -947,6 +947,76 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/visual-code-editor-add-new-action.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/visual-code-editor-add-new-action.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/visual-code-editor-empty.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/visual-code-editor-empty.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/visual-code-editor-field-placeholder.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/visual-code-editor-field-placeholder.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/visual-code-editor-field-run-menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/visual-code-editor-field-run-menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/visual-code-editor-script-library.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/visual-code-editor-script-library.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/visual-code-editor-templated-macro-run.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/visual-code-editor-templated-macro-run.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/visual-code-editor-validation.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/visual-code-editor-validation.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/worktransition.png",
       "output": {
         "resource": {
@@ -1844,6 +1914,16 @@
         },
         ".json": {
           "relative_path": "src/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/visual-code-editor-4.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/visual-code-editor-4.html"
         }
       },
       "version": ""
