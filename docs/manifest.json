@@ -1357,6 +1357,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/PASTEASREFERENCE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/PASTEASREFERENCE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/PREVIEW.md",
       "output": {
         ".html": {
@@ -1471,6 +1481,16 @@
       "output": {
         ".html": {
           "relative_path": "src/RUNTASK.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/RUNTEMPLATE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/RUNTEMPLATE.html"
         }
       },
       "version": ""

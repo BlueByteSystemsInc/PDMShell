@@ -177,6 +177,10 @@
 - name: print
   href: print.md
 
+- name: Paste as custom reference
+- name: pasteAsReference
+  href: PASTEASREFERENCE.md
+
 - name: Pack and Go
 - name: pack and Go (SOLIDWORKS)
   href: packandgo.md
@@ -221,6 +225,10 @@
 - name: Run a PDM task
 - name: RunTask
   href: RUNTASK.md
+
+- name: Run a PDM template
+- name: runTemplate
+  href: RUNTEMPLATE.md
 
 - name: Search for files
 - name: search
