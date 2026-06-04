@@ -88,10 +88,14 @@
 <h1 id="check-in-all-files">Check In All Files</h1>
 
 <p>This script checks in all files found recursively from the current PDMShell directory, then exits PDMShell silently.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can download this script directly from the PDMShell Script Library. Open PDMShell, open the Script Library, choose <strong>Check In All Files</strong>, and load the script into the active session.</p>
+</div>
 <p>This script does not log in automatically. Make sure PDMShell is already logged in to the correct vault before running it. The script ends with <code>quit -silent</code>, so it is intended for unattended use after the session is already authenticated.</p>
 <p>This script does not use a SOLIDWORKS macro.</p>
 <h2 id="script">Script</h2>
-<pre><code class="lang-pdmshell">checkin -search &quot;Name=%;Recursive=true&quot; -checkinoptions IgnoreReferencesNotLockedByCaller+IgnoreRefsOutsideVault+IgnoreCorruptFile
+<pre><code class="lang-pdmshell">Checkin -search &quot;Name=%;Recursive=true&quot; -comment &quot;checked in by script&quot; -Checkinoptions &quot;EdmUnlock_IgnoreCorruptFile+EdmUnlock_IgnoreRefsOutsideVault+EdmUnlock_IgnoreRefsNotLockedByCaller&quot;
 
 quit -silent
 </code></pre>
@@ -128,7 +132,7 @@ quit -silent
 <p>Run the scheduled task with a Windows account that has access to the vault view and is already authenticated in SOLIDWORKS PDM.</p>
 <h2 id="customization">Customization</h2>
 <p>To narrow the files being checked in, change the search query:</p>
-<pre><code class="lang-pdmshell">checkin -search &quot;Name=%.sldprt;Recursive=true&quot; -checkinoptions IgnoreReferencesNotLockedByCaller+IgnoreRefsOutsideVault+IgnoreCorruptFile
+<pre><code class="lang-pdmshell">Checkin -search &quot;Name=%.sldprt;Recursive=true&quot; -comment &quot;checked in by script&quot; -Checkinoptions &quot;EdmUnlock_IgnoreCorruptFile+EdmUnlock_IgnoreRefsOutsideVault+EdmUnlock_IgnoreRefsNotLockedByCaller&quot;
 </code></pre>
 <p>To keep PDMShell open after the script runs, remove:</p>
 <pre><code class="lang-pdmshell">quit -silent

@@ -9,7 +9,7 @@ description: PowerShell like commandline interpreter and data migration tool for
     background-color: #121212;
     color: #e0e0e0;
     font-family: Arial, sans-serif;
-  }git 
+  }
   h2 {
     color: #bb86fc;
   }
@@ -70,6 +70,35 @@ description: PowerShell like commandline interpreter and data migration tool for
   }
   .download-button:hover {
     background-color: #9b6fcf;
+  }
+
+  .quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin: 28px auto;
+    max-width: 1100px;
+  }
+
+  .quick-link {
+    display: block;
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  .quick-link strong {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .quick-link span {
+    color: #cfcfcf;
+    display: block;
+    line-height: 1.4;
   }
 
  body {
@@ -136,6 +165,33 @@ description: PowerShell like commandline interpreter and data migration tool for
 **PDMShell**, a command-line interpreter designed to streamline and automate tasks within **SOLIDWORKS PDM Professional**. We also provide helpful articles on PDM best practices and tooling. Before submitting a support ticket, we highly recommend reviewing the documentation and troubleshooting guides available on this site. Click on PDM Commands to get [started](../src/introduction.html).
 
 <br>
+
+<div class="quick-links">
+  <a class="quick-link" href="../src/introduction.html">
+    <strong>Start Here</strong>
+    <span>Learn the basics and run your first PDMShell commands.</span>
+  </a>
+  <a class="quick-link" href="../src/HELP.html">
+    <strong>Command Reference</strong>
+    <span>Browse commands, parameters, and examples.</span>
+  </a>
+  <a class="quick-link" href="../src/scripting.html">
+    <strong>Scripting</strong>
+    <span>Automate repeated workflows with `.pdmshell` scripts.</span>
+  </a>
+  <a class="quick-link" href="../src/scripts/CHECKINALLFILES/CHECKINALLFILES.html">
+    <strong>Script Library</strong>
+    <span>Download ready-to-use PDMShell automation scripts.</span>
+  </a>
+  <a class="quick-link" href="../src/visual-code-editor-4.html">
+    <strong>Visual Code Editor</strong>
+    <span>Build and validate workflows on a visual canvas.</span>
+  </a>
+  <a class="quick-link" href="../src/advancedsearch.html">
+    <strong>Advanced Search</strong>
+    <span>Use search tokens, variables, favorites, and recursive filters.</span>
+  </a>
+</div>
 
 <div align="center">
   <a href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell" class="download-button">DOWNLOAD PDMSHELL DIRECTLY</a>

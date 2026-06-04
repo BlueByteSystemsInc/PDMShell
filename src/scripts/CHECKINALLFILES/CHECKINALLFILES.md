@@ -15,6 +15,9 @@ tags:
 
 This script checks in all files found recursively from the current PDMShell directory, then exits PDMShell silently.
 
+>[!TIP]
+> You can download this script directly from the PDMShell Script Library. Open PDMShell, open the Script Library, choose **Check In All Files**, and load the script into the active session.
+
 This script does not log in automatically. Make sure PDMShell is already logged in to the correct vault before running it. The script ends with `quit -silent`, so it is intended for unattended use after the session is already authenticated.
 
 This script does not use a SOLIDWORKS macro.
@@ -22,7 +25,7 @@ This script does not use a SOLIDWORKS macro.
 ## Script
 
 ```pdmshell
-checkin -search "Name=%;Recursive=true" -checkinoptions IgnoreReferencesNotLockedByCaller+IgnoreRefsOutsideVault+IgnoreCorruptFile
+Checkin -search "Name=%;Recursive=true" -comment "checked in by script" -Checkinoptions "EdmUnlock_IgnoreCorruptFile+EdmUnlock_IgnoreRefsOutsideVault+EdmUnlock_IgnoreRefsNotLockedByCaller"
 
 quit -silent
 ```
@@ -78,7 +81,7 @@ Run the scheduled task with a Windows account that has access to the vault view 
 To narrow the files being checked in, change the search query:
 
 ```pdmshell
-checkin -search "Name=%.sldprt;Recursive=true" -checkinoptions IgnoreReferencesNotLockedByCaller+IgnoreRefsOutsideVault+IgnoreCorruptFile
+Checkin -search "Name=%.sldprt;Recursive=true" -comment "checked in by script" -Checkinoptions "EdmUnlock_IgnoreCorruptFile+EdmUnlock_IgnoreRefsOutsideVault+EdmUnlock_IgnoreRefsNotLockedByCaller"
 ```
 
 To keep PDMShell open after the script runs, remove:

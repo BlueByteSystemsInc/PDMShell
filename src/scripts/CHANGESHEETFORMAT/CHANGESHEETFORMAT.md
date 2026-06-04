@@ -18,6 +18,9 @@ tags:
 
 This script checks out the matching SOLIDWORKS drawing for the selected file, runs a macro that replaces drawing sheet formats, and checks the drawing back into SOLIDWORKS PDM.
 
+>[!TIP]
+> You can download this script directly from the PDMShell Script Library. Open PDMShell, open the Script Library, choose **Change Drawing Sheet Format**, and load the script into the active session.
+
 The target drawing is resolved from the selected file name:
 
 ```text

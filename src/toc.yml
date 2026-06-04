@@ -47,6 +47,8 @@
       href: scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md  
     - name: Change Sheet Format
       href: scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md  
+    - name: Check In All Files
+      href: scripts/CHECKINALLFILES/CHECKINALLFILES.md
 - name: SQL Examples 
   expanded: true
   items:
@@ -55,239 +57,153 @@
 - name: Commands
   expanded: true
   items:
-- name: Add to Vault
-- name: addToVault
-  href: ADDTOVAULT.md
-
-- name: Bill of Materials
-- name: BOM
-  href: BOM.md
-
-- name: change directory
-- name: cd
-  href: cd.md
-
-- name: check in
-- name: checkin
-  href: CHECKIN.md
-
-- name: check out
-- name: checkout
-  href: checkout.md
-
-- name: Copy files (within the vault)
-- name: Copy
-  href: COPY.md
-
-- name: clear cache
-- name: clearCache
-  href: CLEARCACHE.md
-  
-- name: clear screen
-- name: cls
-  href: cls.md
-
-- name: Mass edit SOLIDWORKS custom properties
-- name: docManProps
-  href: DOCMANPROPS.md
-
-- name: Enhanced copy tree
-- name: copyTree
-  href: COPYTREE.md
-
-- name: Delete files or directories
-- name: delete
-  href: DELETE.md
-
-- name: Delete files (from CSV)
-- name: deleteFromSource
-  href: DELETEFROMSOURCE.md
-
-- name: Destroy files or directories
-- name: destroy
-  href: DESTORY.md
-
-- name: List directory contents
-- name: dir
-  href: dir.md
-
-- name: Save session output to a file
-- name: dump
-  href: dump.md
-
-- name: Launch Variable Editor
-- name: editVars
-  href: editvars.md
-
-- name: Launch SOLIDWORKS Export
-- name: Export
-  href: EXPORT.md
-
-- name: Frog Leap files version
-- name: frogLeap
-  href: frogleap.md
-
-- name: Locally cache files from PDM
-- name: get
-  href: get.md
-
-- name: Get variable value
-- name: getVar
-  href: getvar.md
-
-- name: Get variable value from database
-- name: getVarFromDb
-  href: getvarfromdb.md
-
-- name: List all commands
-- name: help
-  href: help.md
-
-- name: View complete file history
-- name: history
-  href: HISTORY.md
-
-- name: Open PDM Inbox
-- name: inbox
-  href: Inbox.md
-
-- name: Get file variable information
-- name: infoVar
-  href: infovar.md
-
-- name: Terminate Windows processes
-- name: kill
-  href: kill.md
-
-- name: Log in to PDM
-- name: login
-  href: login.md
-
-- name: Create a new PDM directory
-- name: mkdir
-  href: mkdir.md
-
-- name: Create a new PDM variable
-- name: mkVar
-  href: mkvar.md
-
-- name: Print information (from CSV)
-- name: PrintFromSource
-  href: PRINTFROMSOURCE.md
-
-- name: Print information about files
-- name: print
-  href: print.md
-
-- name: Paste as custom reference
-- name: pasteAsReference
-  href: PASTEASREFERENCE.md
-
-- name: Pack and Go
-- name: pack and Go (SOLIDWORKS)
-  href: packandgo.md
-
-- name: Move file (or files via advanced search)
-- name: Move
-  href: MOVE.md
-
-- name: Move files (from CSV) 
-- name: MoveFromSource
-  href: MOVEFROMSOURCE.md
-
-- name: Quit PDMShell
-- name: quit
-  href: quit.md
-
-
-- name: Force Reboot PDM
-- name: reboot
-  href: REBOOT.md
-
-- name: Recover deleted files
-- name: recover
-  href: RECOVER.md
-
-- name: Rename files
-- name: rename
-  href: rename.md
-
-- name: Rename files (from CSV)
-- name: renameFromSource
-  href: RENAMEFROMSOURCE.md
-
-- name: Run a PDMShell script
-- name: runScript
-  href: RUNSCRIPT.md
-
-- name: Run a SOLIDWORKS macro
-- name: runSWMacro
-  href: RUNSWMACRO.md
-
-- name: Run a PDM task
-- name: RunTask
-  href: RUNTASK.md
-
-- name: Run a PDM template
-- name: runTemplate
-  href: RUNTEMPLATE.md
-
-- name: Search for files
-- name: search
-  href: search.md
-
-- name: Search for files (from CSV)
-- name: searchFromSource
-  href: SEARCHFROMSOURCE.md
-
-- name: Set file PDM revision
-- name: setRevision
-  href: SETREVISION.md
-
-- name: Set file PDM revision (from CSV)
-- name: SetRevisionFromSource
-  href: SETREVISIONFROMSOURCE.md
-
-- name: Set variable value
-- name: setVar
-  href: setvar.md
-
-- name: Set variables (from CSV)
-- name: setVarsFromSource
-  href: SETVARSFROMSOURCE.md
-
-- name: Start a process
-- name: start
-  href: start.md
-
-- name: Transition files or many files
-- name: Transition
-  href: TRANSITION.md
-
-- name: Undo checkout
-- name: undoCheckout
-  href: undocheckout.md
-
-- name: List references
-- name: List references
-  href: LISTREFERENCES.md
-
-- name: Update references
-- name: Update references
-  href: UPDATEREFERENCES.md
-
-- name: Show version information
-- name: version
-  href: version.md
-  
-- name: Upgrade Version (After PDM Upgrade)
-- name: upgradeVersion
-  href: VERSIONUPGRADE.md
-
-- name: Find Parents
-- name: Where Used
-  href: WHEREUSED.md
-
-- name: Find Recursive Parents
-- name: Where Used Tree
-  href: WHEREUSEDTREE.md
+  - name: Vault
+    items:
+    - name: Log in to PDM
+      href: LOGIN.md
+    - name: Change directory
+      href: CD.md
+    - name: List directory contents
+      href: DIR.md
+    - name: Create a new PDM directory
+      href: MKDIR.md
+    - name: Clear cache
+      href: CLEARCACHE.md
+    - name: View complete file history
+      href: HISTORY.md
+    - name: Open PDM Inbox
+      href: INBOX.md
+    - name: Add files to vault
+      href: ADDTOVAULT.md
+    - name: List users
+      href: USERS.md
+  - name: File Operations
+    items:
+    - name: Get latest or selected version
+      href: GET.md
+    - name: Check out
+      href: CHECKOUT.md
+    - name: Check in
+      href: CHECKIN.md
+    - name: Undo checkout
+      href: UNDOCHECKOUT.md
+    - name: Copy files
+      href: COPY.md
+    - name: Copy tree
+      href: COPYTREE.md
+    - name: Paste as custom reference
+      href: PASTEASREFERENCE.md
+    - name: Pack and Go
+      href: PACKANDGO.md
+    - name: Move files
+      href: MOVE.md
+    - name: Rename files
+      href: RENAME.md
+    - name: Delete files or folders
+      href: DELETE.md
+    - name: Destroy deleted files
+      href: DESTORY.md
+    - name: Recover deleted files
+      href: RECOVER.md
+    - name: List references
+      href: LISTREFERENCES.md
+    - name: Update references
+      href: UPDATEREFERENCES.md
+    - name: Change workflow state
+      href: TRANSITION.md
+  - name: Variables
+    items:
+    - name: Get variable value
+      href: GETVAR.md
+    - name: Get variable value from database
+      href: GETVARFROMDB.md
+    - name: Set variable value
+      href: SETVAR.md
+    - name: Get variable information
+      href: INFOVAR.md
+    - name: Create a new PDM variable
+      href: MKVAR.md
+    - name: Launch Variable Editor
+      href: EDITVARS.md
+  - name: Source / CSV
+    items:
+    - name: Delete files from CSV
+      href: DELETEFROMSOURCE.md
+    - name: Move files from CSV
+      href: MOVEFROMSOURCE.md
+    - name: Print information from CSV
+      href: PRINTFROMSOURCE.md
+    - name: Rename files from CSV
+      href: RENAMEFROMSOURCE.md
+    - name: Search from CSV
+      href: SEARCHFROMSOURCE.md
+    - name: Set revision from CSV
+      href: SETREVISIONFROMSOURCE.md
+    - name: Set variables from CSV
+      href: SETVARSFROMSOURCE.md
+    - name: Upgrade version from CSV
+      href: VERSIONUPGRADEFROMSOURCE.md
+    - name: Create virtual documents from CSV
+      href: CREATEVIRTUALFROMSOURCE.md
+  - name: Automation
+    items:
+    - name: Run a PDMShell script
+      href: RUNSCRIPT.md
+    - name: Run a SOLIDWORKS macro
+      href: RUNSWMACRO.md
+    - name: Run a PDM task
+      href: RUNTASK.md
+    - name: Run a PDM template
+      href: RUNTEMPLATE.md
+    - name: Rebuild SOLIDWORKS files
+      href: REBUILD.md
+    - name: Process Toolbox flag
+      href: TOOLBOX.md
+    - name: Add add-in
+      href: ADDADDIN.md
+    - name: Stop process
+      href: KILL.md
+  - name: Revision / Version
+    items:
+    - name: Show version information
+      href: VERSION.md
+    - name: Set revision
+      href: SETREVISION.md
+    - name: Upgrade version after PDM upgrade
+      href: VERSIONUPGRADE.md
+    - name: Frog leap file version
+      href: FROGLEAP.md
+  - name: Document Manager
+    items:
+    - name: Document Manager operations
+      href: DOCMAN.md
+    - name: Read CAD properties
+      href: DOCMANPROPS.md
+  - name: Utilities
+    items:
+    - name: List all commands
+      href: HELP.md
+    - name: Clear screen
+      href: CLS.md
+    - name: Save session output to a file
+      href: DUMP.md
+    - name: Export files
+      href: EXPORT.md
+    - name: Export bill of materials
+      href: BOM.md
+    - name: Preview files
+      href: PREVIEW.md
+    - name: Print file information
+      href: PRINT.md
+    - name: Search for files
+      href: SEARCH.md
+    - name: Start a process
+      href: START.md
+    - name: Quit PDMShell
+      href: QUIT.md
+    - name: Restart PDMShell
+      href: REBOOT.md
+    - name: Find parents
+      href: WHEREUSED.md
+    - name: Find recursive parents
+      href: WHEREUSEDTREE.md

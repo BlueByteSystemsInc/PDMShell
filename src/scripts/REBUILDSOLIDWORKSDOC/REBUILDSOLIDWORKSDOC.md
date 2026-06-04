@@ -17,6 +17,9 @@ tags:
 
 This script checks out the selected SOLIDWORKS document, changes the working directory to the file folder, runs a rebuild macro, and checks the file back into SOLIDWORKS PDM.
 
+>[!TIP]
+> You can download this script directly from the PDMShell Script Library. Open PDMShell, open the Script Library, choose **Rebuild SOLIDWORKS Document**, and load the script into the active session.
+
 ## Script
 
 ```pdmshell
