@@ -1,5 +1,5 @@
 ---
-description: Creates a new variable.
+description: Creates a new PDM variable.
 title: MKVAR Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # MKVAR Command Documentation

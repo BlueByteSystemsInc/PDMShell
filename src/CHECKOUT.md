@@ -1,5 +1,5 @@
 ---
-description: Performs a check out operation on a specified file or many files.
+description: Checks out one file or multiple files found by search.
 title: CHECKOUT Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # CHECKOUT Command Documentation

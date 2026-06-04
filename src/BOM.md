@@ -1,5 +1,5 @@
 ﻿---
-description: Exports the Bill of Materials (BOM) of a SOLIDWORKS assembly to a CSV file.
+description: Exports a bill of materials for a file or files found by search.
 title: BOM Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # BOM Command Documentation

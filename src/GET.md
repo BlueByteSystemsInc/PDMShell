@@ -1,5 +1,5 @@
 ﻿---
-description: Retrieves a specified version of a file or files (via search).
+description: Gets a file version from the vault into the local cache.
 title: Get Command Documentation  | PDMShell | SOLIDWORKS PDM
 ---
 # GET Command Documentation

@@ -2,7 +2,7 @@
   href: index.md
 - name: Changelog
   href: releasenotes.md
-- name: Visual Code Editor 4.0.0
+- name: Visual Code Editor
   href: visual-code-editor-4.md
 - name: Free Vs Premium
   href: FREEVSPREMIUM.md
@@ -288,4 +288,6 @@
 - name: Where Used
   href: WHEREUSED.md
 
-
+- name: Find Recursive Parents
+- name: Where Used Tree
+  href: WHEREUSEDTREE.md

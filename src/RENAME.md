@@ -1,5 +1,5 @@
 ﻿---
-description: Renames a specified file.
+description: Renames one file or multiple files found by search.
 title: RENAME Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # RENAME Command Documentation

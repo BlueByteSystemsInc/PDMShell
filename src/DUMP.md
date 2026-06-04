@@ -1,5 +1,5 @@
 ---
-description: Dumps all session text into a log file.
+description: Writes the current session output to a log file.
 title: DELETEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # DUMP Command Documentation
@@ -24,4 +24,4 @@ dump -filePath "$release_script_$yyyy_$mm_$dd_$guid.txt"
 
 - To make sure your logs are always unique, use `$guid` or the date/time place holders. You can get more information about these place holders [here](/src/EVAL.html).
 
-- If you start PDMShell as a Windows administrator with the `-winlog` or `/winlog` parameter, PDMShell will create logs in the Windows event viewer. 
+- If you start PDMShell as a Windows administrator with the `-winlog` or `/winlog` parameter, PDMShell will create logs in the Windows event viewer.

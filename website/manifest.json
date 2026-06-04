@@ -1737,6 +1737,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/WHEREUSEDTREE.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/WHEREUSEDTREE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/advancedsearch.md",
       "output": {
         ".html": {
@@ -1871,6 +1881,16 @@
       "output": {
         ".html": {
           "relative_path": "src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/scripts/CHECKINALLFILES/CHECKINALLFILES.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/scripts/CHECKINALLFILES/CHECKINALLFILES.html"
         }
       },
       "version": ""

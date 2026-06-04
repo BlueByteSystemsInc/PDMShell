@@ -1,5 +1,5 @@
 ---
-description: Checks and upgrades SOLIDWORKS PDM file versions, performs reference validation, and optionally exports broken references to CSV.
+description: Upgrades file versions from a CSV source and optionally moves revision values after a PDM upgrade.
 title: UPGRADEVERSIONFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # UPGRADEVERSIONFROMSOURCE Command Documentation

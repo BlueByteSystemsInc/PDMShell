@@ -1,5 +1,5 @@
 ﻿---
-description: Quits the application.
+description: Exits PDMShell.
 title: QUIT Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # QUIT Command Documentation

@@ -1,5 +1,5 @@
 ---
-description: The MOVEFROMSOURCE command moves file(s) based on file IDs and target directories provided in a CSV file.
+description: Moves files listed in a CSV source to a target vault folder.
 title: MOVEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 

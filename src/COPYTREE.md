@@ -1,11 +1,11 @@
 ﻿---
-description: The COPTYREE command is used to copy files and their associated metadata from a source directory or search results, with options to apply prefixes, suffixes, and other filters. This only works with assembly files.
+description: Copies a file tree in the SOLIDWORKS PDM vault.
 title: COPYTREE Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # COPYTREE Command Documentation
 
 ## DESCRIPTION:
-The `copytree` command is used to copy files and their associated metadata from a source directory or search results, with options to apply prefixes, suffixes, and other filters. This only works with assembly files.
+The `copytree` command copies a file tree in the SOLIDWORKS PDM vault, with options to apply prefixes, suffixes, and other filters. This only works with assembly files.
 
 ## SYNTAX:
 ```bash

@@ -1,11 +1,11 @@
 ﻿---
-description: Displays the biographical information about the specified file.
+description: Displays information about the specified file.
 title: PRINT Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # PRINT Command Documentation
 
 ## DESCRIPTION:
-Displays the biographical information about the specified file.
+Displays information about the specified file.
 
 ## SYNTAX:
 ```bash
@@ -15,7 +15,7 @@ print [-filePath|-id]
 - `filePath`: The file to print.
 - `id`: PDM internal ID of the file to print.
 
--filePath: The file to print biographical information for.
+-filePath: The file to print information for.
 
 ## EXAMPLES:
 ```bash

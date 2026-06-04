@@ -1,11 +1,11 @@
 ---
-description: The recover command is used to recover files from a specified directory or source. It supports optional parameters for search queries and recursive operations.
+description: Recovers deleted files from a folder or CSV source.
 title: RECOVER Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # RECOVER Command Documentation
 
 ## DESCRIPTION:
-The `recover` command is used to recover files from a specified directory or source. It supports optional parameters for search queries and recursive operations.
+The `recover` command recovers deleted files from a folder or CSV source. It supports optional parameters for search queries and recursive operations.
 
 ## SYNTAX:
 ```bash

@@ -1,5 +1,5 @@
 ---
-description: The DELETEFROMSOURCE command is used to delete files from a CSV file and optionally export the results.
+description: Deletes files listed in a CSV source.
 title: DELETEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 

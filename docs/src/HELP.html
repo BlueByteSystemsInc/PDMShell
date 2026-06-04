@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="HELP Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Provides help about a command.">
+      <meta name="description" content="Lists commands and opens command documentation.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -88,14 +88,18 @@
 <h1 id="help-command-documentation">HELP Command Documentation</h1>
 
 <h2 id="description">DESCRIPTION:</h2>
-<p>Provides help about a command.</p>
+<p>The <code>help</code> command lists available commands grouped by category. It can also open the documentation page for a specific command.</p>
 <h2 id="syntax">SYNTAX:</h2>
 <pre><code class="lang-bash">help [-command|-c]
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
-<p>-<code>command</code>: The specific command you need help with.</p>
+<ul>
+<li><code>command</code>: Optional command name to open documentation for.</li>
+</ul>
 <h2 id="examples">EXAMPLES:</h2>
 <pre><code class="lang-bash">help -c cd #opens the help page about the change directory command
+</code></pre>
+<pre><code class="lang-bash">help #lists commands by category
 </code></pre>
 
 </article>

@@ -1,12 +1,12 @@
 ---
-description: Learn how to use the destroy command in PDMShell to permanently delete files marked as deleted in a specified directory. Supports recursive deletion and date filtering.
+description: Permanently destroys deleted files in a folder.
 title: Destroy Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 
 # DESTROY Command Documentation
 
 ## DESCRIPTION:
-The `destroy` command is used to permanently delete files that have been marked as deleted in a specified directory. This command supports recursive deletion and filtering by date.
+The `destroy` command permanently deletes files that have already been marked as deleted in a specified directory. This command supports recursive deletion and filtering by date.
 
 ## SYNTAX:
 ```bash

@@ -1,5 +1,5 @@
 ---
-description: Execute a PDM task on specific file found or via search in the PDM vault.
+description: Runs a PDM task on one file or files found by search.
 title: RUNTASK Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # RUNTASK Command Documentation

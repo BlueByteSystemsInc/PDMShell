@@ -8,6 +8,16 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 4.0.1 (06/03/2026)
+- Bumped PDMShell project versions to `4.0.1`.
+- Updated `help` output to organize commands by category.
+- Improved `help` responsiveness by reducing repeated UI updates and command metadata lookups.
+- Standardized command descriptions in PDMShell and aligned command documentation wording.
+- Added and documented the [whereusedtree](WHEREUSEDTREE.md) command for recursive where-used trees.
+- Improved Visual Code Editor script saving, loading, canvas state restoration, and unsaved-change handling.
+- Added Visual Code Editor canvas navigation controls such as zoom in, zoom out, and zoom to fit.
+- Added the Check In All Files script to the script library.
+
 # 4.0.0 (06/01/2026)
 - Added [Visual Code Editor](visual-code-editor-4.md) for building PDMShell scripts as a workflow-style canvas.
 - Added `Favorite=SEARCH FAVORITE` token to the advanced search.

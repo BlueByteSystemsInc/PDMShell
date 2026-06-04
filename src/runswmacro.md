@@ -1,5 +1,5 @@
 ﻿---
-description: Execute a SOLIDWORKS macro on a specific file or on multiple files found via search in the PDM vault.
+description: Runs a SOLIDWORKS macro on files found by search.
 title: RUNSWMACRO Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # RUNSWMACRO Command Documentation

@@ -1,5 +1,5 @@
 ---
-description: The WHEREUSED command lists all parents that reference a specific file.
+description: Lists the direct parent files that reference a file.
 title: WHEREUSED Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 

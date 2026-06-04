@@ -1,5 +1,5 @@
 ---
-description: Sets the revision of a SOLIDWORKS PDM file using built-in revision keywords or evaluated variables.
+description: Sets the revision for one file or for files found by search.
 title: SETREVISION Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # SETREVISION Command Documentation

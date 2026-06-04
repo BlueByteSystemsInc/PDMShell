@@ -1,11 +1,11 @@
 ﻿---
-description: The START command is used to launch programs, tools, or specific applications. It supports launching SOLIDWORKS, the PDM administration tool, Notepad, Windows Explorer, and other custom programs. Additionally, it can open the SOLIDWORKS API help file or the current folder in Explorer.
+description: Starts a program, tool, or supported application.
 title: START Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # START Command Documentation
 
 ## DESCRIPTION:
-The `start` command is used to launch programs, tools, or specific applications. It supports launching SOLIDWORKS, the PDM administration tool, Notepad, Windows Explorer, and other custom programs. Additionally, it can open the SOLIDWORKS API help file or the current folder in Explorer.
+The `start` command launches programs, tools, or supported applications. It supports launching SOLIDWORKS, the PDM administration tool, Notepad, Windows Explorer, and other custom programs. It can also open the SOLIDWORKS API help file or the current folder in Explorer.
 
 ## SYNTAX:
 ```bash

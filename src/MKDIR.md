@@ -1,5 +1,5 @@
 ---
-description: Creates a new folder.
+description: Creates a new vault folder.
 title: MKDIR Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # MKDIR Command Documentation

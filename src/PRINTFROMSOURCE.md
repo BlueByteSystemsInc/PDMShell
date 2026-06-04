@@ -1,11 +1,11 @@
 ---
-description: The PRINTFROMSOURCE command is used to validate a list filepaths the PDM system based on a source CSV file. This command supports alias evaluation for dynamic renaming.
+description: Prints file information for paths listed in a CSV source.
 title: PRINTFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # PRINTFROMSOURCE Command Documentation
 
 ## DESCRIPTION:
-The `printfromsource` command is used to validate a list of filepaths in the PDM system based on a source CSV file. The CSV file must contain a header and a list of complete file paths in the first column.
+The `printfromsource` command prints file information for paths listed in a CSV source. The CSV file must contain a header and a list of complete file paths in the first column.
 
 ---
 

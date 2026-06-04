@@ -1,5 +1,5 @@
 ---
-description: The searchfromsource command reads a CSV file containing file names or search tokens, searches for each item in the SOLIDWORKS PDM vault, and optionally exports results to a CSV file.
+description: Searches the vault for files listed in a CSV source and reports whether they exist.
 title: SEARCHFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 

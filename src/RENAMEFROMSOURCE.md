@@ -1,11 +1,11 @@
 ---
-description: The RENAMEFROMSOURCE command is used to rename files in the PDM system based on a source CSV file. The CSV file provides the necessary information to map file IDs to their new names and folder IDs. This command supports alias evaluation for dynamic renaming.
+description: Renames files listed in a CSV source.
 title: RENAMEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # RENAMEFROMSOURCE Command Documentation
 
 ## DESCRIPTION:
-The `renamefromsource` command is used to rename files in the PDM system based on a source CSV file. The CSV file provides the necessary information to map file IDs to their new names and folder IDs. This command supports alias evaluation for dynamic renaming.
+The `renamefromsource` command renames files listed in a CSV source. The CSV file provides the information needed to map file IDs to their new names and folder IDs. This command supports alias evaluation for dynamic renaming.
 
 ---
 

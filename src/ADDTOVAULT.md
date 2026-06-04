@@ -1,12 +1,12 @@
 ﻿---
-description: The ADDTOVAULT command is used to add files or directories to the PDM vault. It supports adding from a single file, folder, or CSV mapping map, and includes options such as batch processing, ignoring existing files, updating references, recursion, and exporting results to CSV.
+description: Adds one or more files from disk to the SOLIDWORKS PDM vault.
 title: ADDTOVAULT Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 
 # ADDTOVAULT Command Documentation
 
 ## DESCRIPTION:
-The `addtovault` command is used to add files and/or directories to the SOLIDWORKS PDM vault. It supports multiple input methods including direct file paths, folders, and CSV mapping maps. Additional options allow batch processing, filtering, ignoring existing files, updating references, and exporting results.
+The `addtovault` command adds one or more files from disk to the SOLIDWORKS PDM vault. It supports single files, folders, and CSV mapping files. Additional options allow batch processing, filtering, ignoring existing files, updating references, and exporting results.
 
 > [!NOTE]
 > It is highly recommended that you run PDMShell as **Administrator** before using this command.

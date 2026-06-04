@@ -1,11 +1,11 @@
 ﻿---
-description: Frog leaps an old version as newest. 
+description: Promotes an older file version to become the latest version.
 title: FROGLEAP Command Documentation  | PDMShell | SOLIDWORKS PDM
 ---
 # FROGLEAP Command Documentation
 
 ## DESCRIPTION:
-Frog leaps an old version as newest. 
+The `frogleap` command promotes an older file version to become the latest version.
 
 ## SYNTAX:
 ```bash

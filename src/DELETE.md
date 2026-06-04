@@ -1,12 +1,12 @@
 ---
-description: The DELETE command is used to delete files or directories from the PDM system. It supports various parameters to specify the target files or directories, including file paths, directory paths, search queries, and IDs. The command also supports recursive deletion for directories.
+description: Deletes one file, one folder, or multiple files found by search.
 title: DELETE Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 
  # DELETE Command Documentation
 
 ## DESCRIPTION:
-The `delete` command is used to delete files or directories from the PDM system. It supports various parameters to specify the target files or directories, including file paths, directory paths, search queries, and IDs. The command also supports recursive deletion for directories.
+The `delete` command deletes one file, one folder, or multiple files found by search. It supports target selection by file path, directory path, search query, or ID.
 
 ## SYNTAX:
 ```bash

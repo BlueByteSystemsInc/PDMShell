@@ -24,6 +24,16 @@ This is especially helpful for longer PDMShell scripts because you can see the p
 - Connect commands in the order they should run.
 - Review the full workflow visually before running it.
 
+## Canvas Navigation
+
+The canvas includes navigation controls for working with larger scripts:
+
+- **Zoom In** increases the canvas scale.
+- **Zoom Out** decreases the canvas scale.
+- **Zoom To Fit** fits the visible workflow into the canvas view.
+
+These controls are useful when a script grows beyond the visible area or when you want to review the full workflow before running it.
+
 ## Command Picker
 
 The command picker lets you search for commands by name, description, or category. Selecting a command inserts it into the canvas as a node.
@@ -94,6 +104,12 @@ In PDMShell 4.0.0, saved scripts can include both:
 This means a script can be reopened later with the visual workflow restored, not just the generated command text.
 
 ![Multi-step visual workflow](../images/visual-code-editor-templated-macro-run.png)
+
+The editor supports both normal save and Save As workflows. When you open an existing script, PDMShell tracks the current script path so saving can update the same file. Save As lets you write the current script to a different file.
+
+If a script has unsaved changes and you close PDMShell, the application prompts you before closing. This warning is suppressed when PDMShell is launched with the silent mode argument.
+
+Older `.pdmshell` files that contain only script text can still be opened. Newer saved scripts may include encrypted structured data for the script text and canvas visual state.
 
 ## When To Use It
 

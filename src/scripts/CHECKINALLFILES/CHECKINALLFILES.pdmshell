@@ -1,0 +1,3 @@
+checkin -search "Name=%;Recursive=true" -checkinoptions IgnoreReferencesNotLockedByCaller+IgnoreRefsOutsideVault+IgnoreCorruptFile
+
+quit -silent

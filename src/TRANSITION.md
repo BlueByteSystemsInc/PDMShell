@@ -1,13 +1,13 @@
 ---
 title: TRANSITION Command Documentation | PDMShell | SOLIDWORKS PDM
-description: Batch and single-file workflow state transitions using PDMShell
+description: Changes the workflow state for one file, files found by search, or files listed in a CSV source.
 ---
 
 # TRANSITION Command Documentation
 
 ## DESCRIPTION
 
-The `transition` command is used to move SOLIDWORKS PDM files from one workflow state to another using a specified transition.
+The `transition` command changes SOLIDWORKS PDM files from one workflow state to another using a specified transition.
 
 This command supports three modes:
 

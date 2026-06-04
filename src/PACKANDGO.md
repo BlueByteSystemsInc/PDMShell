@@ -1,5 +1,5 @@
 ---
-description: The PACKG command performs a SOLIDWORKS Pack and Go on a specified assembly or multiple assemblies discovered via search.
+description: Runs SOLIDWORKS Pack and Go for one assembly or for multiple assemblies from a folder search or CSV source.
 title: PACKG Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 

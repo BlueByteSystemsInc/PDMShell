@@ -100,6 +100,14 @@
 <li>Connect commands in the order they should run.</li>
 <li>Review the full workflow visually before running it.</li>
 </ul>
+<h2 id="canvas-navigation">Canvas Navigation</h2>
+<p>The canvas includes navigation controls for working with larger scripts:</p>
+<ul>
+<li><strong>Zoom In</strong> increases the canvas scale.</li>
+<li><strong>Zoom Out</strong> decreases the canvas scale.</li>
+<li><strong>Zoom To Fit</strong> fits the visible workflow into the canvas view.</li>
+</ul>
+<p>These controls are useful when a script grows beyond the visible area or when you want to review the full workflow before running it.</p>
 <h2 id="command-picker">Command Picker</h2>
 <p>The command picker lets you search for commands by name, description, or category. Selecting a command inserts it into the canvas as a node.</p>
 <p>For example, searching for <code>checkout</code> shows related command choices such as <strong>Check out</strong> and <strong>Undo checkout</strong>. This makes discovery easier for users who do not remember the exact command syntax.</p>
@@ -145,6 +153,9 @@
 </ul>
 <p>This means a script can be reopened later with the visual workflow restored, not just the generated command text.</p>
 <p><img src="../images/visual-code-editor-templated-macro-run.png" alt="Multi-step visual workflow"></p>
+<p>The editor supports both normal save and Save As workflows. When you open an existing script, PDMShell tracks the current script path so saving can update the same file. Save As lets you write the current script to a different file.</p>
+<p>If a script has unsaved changes and you close PDMShell, the application prompts you before closing. This warning is suppressed when PDMShell is launched with the silent mode argument.</p>
+<p>Older <code>.pdmshell</code> files that contain only script text can still be opened. Newer saved scripts may include encrypted structured data for the script text and canvas visual state.</p>
 <h2 id="when-to-use-it">When To Use It</h2>
 <p>Use the Visual Code Editor when:</p>
 <ul>

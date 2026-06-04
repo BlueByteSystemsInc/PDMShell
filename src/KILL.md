@@ -1,5 +1,5 @@
 ﻿---
-description: Kills a process.
+description: Stops a running process by name.
 title: KILL Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # KILL Command Documentation

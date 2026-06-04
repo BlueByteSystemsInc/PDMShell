@@ -1,5 +1,5 @@
 ---
-description: Exports SOLIDWORKS Document Manager data for files in a directory or search result.
+description: Renames SOLIDWORKS files and updates their properties and references.
 title: DOCMAN Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # DOCMAN Command Documentation
@@ -19,4 +19,3 @@ docman -directory -csv -search -recursive -extensions
 - `recursive`: When used with `search`, includes files in subfolders.
 - `updaterefs`: Reserved parameter for reference update behavior.
 - `extensions`: File extensions to include.
-

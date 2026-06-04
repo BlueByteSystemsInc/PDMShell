@@ -1,11 +1,11 @@
 ---
-description: Hard PDM reboot.
+description: Restarts the PDMShell session.
 title: REBOOT Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # REBOOT Command Documentation
 
 ## DESCRIPTION:
-Hard PDM reboot.
+The `reboot` command restarts the PDMShell session.
 
 ## SYNTAX:
 ```bash

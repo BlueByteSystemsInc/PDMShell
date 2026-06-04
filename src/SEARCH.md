@@ -1,5 +1,5 @@
 ---
-description: The SEARCH command allows users to search for files and folders in the current directory. It supports recursive searches, filtering, and output customization.
+description: Searches for files and folders in the current vault directory.
 title: SEARCH Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # SEARCH Command Documentation

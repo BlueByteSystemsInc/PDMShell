@@ -1,5 +1,5 @@
 ---
-description: Exports a specified SOLIDWORKS file or many SOLIDWORKS files the specified extensions.
+description: Exports one file or multiple files found by search to the specified formats.
 title: EXPORT Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 # EXPORT Command Documentation

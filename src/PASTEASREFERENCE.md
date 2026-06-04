@@ -1,5 +1,5 @@
 ---
-description: Clears and replaces a file's custom references with a file or search result.
+description: Clears and replaces a file's custom references with one file or files found by search.
 title: PASTEASREFERENCE Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 
