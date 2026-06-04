@@ -22,7 +22,7 @@
         "description":  "Checks in all files found recursively from the current PDMShell directory.",
         "icon":  "https://raw.githubusercontent.com/BlueByteSystemsInc/PDMShell/refs/heads/master/src/scripts/CHECKINALLFILES/CHECKINALLFILES.jpg",
         "link":  "https://pdmshell.bluebyte.biz/src/scripts/CHECKINALLFILES/CHECKINALLFILES.html",
-        "pdmShellScript":  "Checkin -search \"Name=%;Recursive=true\" -comment \"checked in by script\" -Checkinoptions \"EdmUnlock_IgnoreCorruptFile+EdmUnlock_IgnoreRefsOutsideVault+EdmUnlock_IgnoreRefsNotLockedByCaller\"\n\nquit -silent",
+        "pdmShellScript":  "Checkin -search \"Name=%;Locked=true;Recursive=true\" -comment \"checked in by script\" -Checkinoptions \"EdmUnlock_IgnoreCorruptFile+EdmUnlock_IgnoreRefsOutsideVault+EdmUnlock_IgnoreRefsNotLockedByCaller\"\n\nquit -silent",
         "macroScript":  "",
         "macroDownloadUrl":  ""
     }

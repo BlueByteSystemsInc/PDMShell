@@ -25,7 +25,7 @@ This script does not use a SOLIDWORKS macro.
 ## Script
 
 ```pdmshell
-Checkin -search "Name=%;Recursive=true" -comment "checked in by script" -Checkinoptions "EdmUnlock_IgnoreCorruptFile+EdmUnlock_IgnoreRefsOutsideVault+EdmUnlock_IgnoreRefsNotLockedByCaller"
+Checkin -search "Name=%;Locked=true;Recursive=true" -comment "checked in by script" -Checkinoptions "EdmUnlock_IgnoreCorruptFile+EdmUnlock_IgnoreRefsOutsideVault+EdmUnlock_IgnoreRefsNotLockedByCaller"
 
 quit -silent
 ```
@@ -81,7 +81,7 @@ Run the scheduled task with a Windows account that has access to the vault view 
 To narrow the files being checked in, change the search query:
 
 ```pdmshell
-Checkin -search "Name=%.sldprt;Recursive=true" -comment "checked in by script" -Checkinoptions "EdmUnlock_IgnoreCorruptFile+EdmUnlock_IgnoreRefsOutsideVault+EdmUnlock_IgnoreRefsNotLockedByCaller"
+Checkin -search "Name=%.sldprt;Locked=true;Recursive=true" -comment "checked in by script" -Checkinoptions "EdmUnlock_IgnoreCorruptFile+EdmUnlock_IgnoreRefsOutsideVault+EdmUnlock_IgnoreRefsNotLockedByCaller"
 ```
 
 To keep PDMShell open after the script runs, remove:
@@ -98,4 +98,4 @@ dump -filePath "checkin-log.txt"
 
 ## Notes
 
-This script is intentionally broad because `Name=%;Recursive=true` matches all files under the current directory. Review the current directory before running it.
+This script is intentionally broad because `Name=%;Locked=true;Recursive=true` matches all locked files under the current directory. Review the current directory before running it.

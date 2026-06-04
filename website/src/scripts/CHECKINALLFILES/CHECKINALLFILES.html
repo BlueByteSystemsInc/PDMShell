@@ -95,7 +95,7 @@
 <p>This script does not log in automatically. Make sure PDMShell is already logged in to the correct vault before running it. The script ends with <code>quit -silent</code>, so it is intended for unattended use after the session is already authenticated.</p>
 <p>This script does not use a SOLIDWORKS macro.</p>
 <h2 id="script">Script</h2>
-<pre><code class="lang-pdmshell">Checkin -search &quot;Name=%;Recursive=true&quot; -comment &quot;checked in by script&quot; -Checkinoptions &quot;EdmUnlock_IgnoreCorruptFile+EdmUnlock_IgnoreRefsOutsideVault+EdmUnlock_IgnoreRefsNotLockedByCaller&quot;
+<pre><code class="lang-pdmshell">Checkin -search &quot;Name=%;Locked=true;Recursive=true&quot; -comment &quot;checked in by script&quot; -Checkinoptions &quot;EdmUnlock_IgnoreCorruptFile+EdmUnlock_IgnoreRefsOutsideVault+EdmUnlock_IgnoreRefsNotLockedByCaller&quot;
 
 quit -silent
 </code></pre>
@@ -132,7 +132,7 @@ quit -silent
 <p>Run the scheduled task with a Windows account that has access to the vault view and is already authenticated in SOLIDWORKS PDM.</p>
 <h2 id="customization">Customization</h2>
 <p>To narrow the files being checked in, change the search query:</p>
-<pre><code class="lang-pdmshell">Checkin -search &quot;Name=%.sldprt;Recursive=true&quot; -comment &quot;checked in by script&quot; -Checkinoptions &quot;EdmUnlock_IgnoreCorruptFile+EdmUnlock_IgnoreRefsOutsideVault+EdmUnlock_IgnoreRefsNotLockedByCaller&quot;
+<pre><code class="lang-pdmshell">Checkin -search &quot;Name=%.sldprt;Locked=true;Recursive=true&quot; -comment &quot;checked in by script&quot; -Checkinoptions &quot;EdmUnlock_IgnoreCorruptFile+EdmUnlock_IgnoreRefsOutsideVault+EdmUnlock_IgnoreRefsNotLockedByCaller&quot;
 </code></pre>
 <p>To keep PDMShell open after the script runs, remove:</p>
 <pre><code class="lang-pdmshell">quit -silent
@@ -141,7 +141,7 @@ quit -silent
 <pre><code class="lang-pdmshell">dump -filePath &quot;checkin-log.txt&quot;
 </code></pre>
 <h2 id="notes">Notes</h2>
-<p>This script is intentionally broad because <code>Name=%;Recursive=true</code> matches all files under the current directory. Review the current directory before running it.</p>
+<p>This script is intentionally broad because <code>Name=%;Locked=true;Recursive=true</code> matches all locked files under the current directory. Review the current directory before running it.</p>
 
 </article>
 
