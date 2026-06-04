@@ -8,6 +8,10 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 4.0.3 (06/04/2026)
+- Rebuild release.
+- Fixed automatic login behavior when selecting or using vault view names.
+
 # 4.0.1 (06/03/2026)
 - Bumped PDMShell project versions to `4.0.1`.
 - Updated `help` output to organize commands by category.
