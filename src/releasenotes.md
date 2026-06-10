@@ -8,6 +8,16 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+# 4.0.4 (06/10/2026)
+- Added and documented the [wait](WAIT.md) command.
+- Added condition expression support for file/folder/process existence, variable and placeholder comparisons, grouped `and` / `or` logic, and arithmetic comparisons.
+- Simplified the Visual Code Editor wait conditions dialog to use a variable/placeholder field, operator dropdown, and conditional value field.
+- Expanded wait-condition placeholder autocomplete and runtime placeholder evaluation.
+- Fixed visual script editor command node icon rendering.
+- Fixed visual script loading for root directory `cd -directory "\"` usage.
+- Improved `setvar` evaluation so `$value` falls back to an empty string when null or empty, and literal `\n` writes a real newline.
+- Updated `pasteasreference` behavior so `source` is the source file, `search` finds files to paste references to, and `filePath` is the reference to append.
+
 # 4.0.3 (06/04/2026)
 - Rebuild release.
 - Fixed automatic login behavior when selecting or using vault view names.

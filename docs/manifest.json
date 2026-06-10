@@ -1727,6 +1727,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/WAIT.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/WAIT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/WHEREUSED.md",
       "output": {
         ".html": {

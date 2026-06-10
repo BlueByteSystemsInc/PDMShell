@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>WAIT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="WAIT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Waits until file, folder, process, variable, placeholder, or expression conditions become true.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/WAIT.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="wait-command-documentation">WAIT Command Documentation</h1>
+
+<h2 id="description">DESCRIPTION:</h2>
+<p>Waits until the supplied condition expression evaluates to true, or until the timeout is reached.</p>
+<p>Use <code>wait</code> after commands such as <code>runtask</code>, <code>runtemplate</code>, <code>export</code>, or any automation step that creates files asynchronously. This prevents the next command from running before the expected files, variables, or process state are ready.</p>
+<h2 id="syntax">SYNTAX:</h2>
+<pre><code class="lang-bash">wait -conditions condition_expression [-timeout seconds] [-match all|any] [-filePath path | -search query]
+</code></pre>
+<h2 id="parameters">PARAMETERS:</h2>
+<ul>
+<li><code>conditions</code>: The condition expression to evaluate. Supports <code>and</code>, <code>or</code>, nested groups, file/folder/process exists checks, comparisons, PDM variables, placeholders, and simple arithmetic comparisons.</li>
+<li><code>timeout</code>: Maximum number of seconds to wait before the command fails. If omitted, PDMShell uses the command default.</li>
+<li><code>match</code>: When <code>search</code> returns multiple files, controls how many files must satisfy the conditions. Use <code>all</code> when every matching file must pass, or <code>any</code> when one matching file is enough.</li>
+<li><code>filePath</code>: Optional file context used to evaluate PDM variables and file placeholders.</li>
+<li><code>search</code>: Optional search query. When supplied, PDMShell evaluates the condition against the files returned by the search.</li>
+</ul>
+<h2 id="examples">EXAMPLES:</h2>
+<pre><code class="lang-bash">wait -conditions &quot;$localPath exists&quot; -timeout 60
+
+wait -conditions &quot;$folderPath\$fileNameWithoutExtension.pdf exists&quot; -timeout 500
+
+wait -conditions &quot;$folderPath\$fileNameWithoutExtension.pdf exists and $folderPath\$fileNameWithoutExtension.dxf exists&quot; -timeout 500
+
+wait -conditions &quot;$(Description.@) contains A&quot; -filePath &quot;C:\Vault\Parts\1001.sldprt&quot; -timeout 30
+
+wait -conditions &quot;1 + 3 greater than 3&quot; -timeout 5
+
+wait -search &quot;Name=%.sldprt;Locked=true&quot; -conditions &quot;$(Description.@) contains ECO&quot; -match any -timeout 120
+</code></pre>
+<h2 id="condition-format">CONDITION FORMAT:</h2>
+<p>The visual editor builds conditions as three fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable / placeholder</td>
+<td>The left side of the condition. This can be a PDM variable, placeholder, path, text, or arithmetic expression.</td>
+<td><code>$localPath</code>, <code>$(Description.@)</code>, <code>1 + 3</code></td>
+</tr>
+<tr>
+<td>Operator</td>
+<td>The operation to apply.</td>
+<td><code>Exists</code>, <code>Contains</code>, <code>Equal To</code>, <code>Greater Than</code></td>
+</tr>
+<tr>
+<td>Value</td>
+<td>The right side of the condition. Hidden for <code>Exists</code>.</td>
+<td><code>A</code>, <code>3</code>, <code>$fileName</code></td>
+</tr>
+</tbody>
+</table>
+<p>Examples of generated conditions:</p>
+<pre><code class="lang-bash">$localPath exists
+&quot;$(Description.@)&quot; contains &quot;A&quot;
+&quot;$(Revision.@)&quot; equals &quot;A&quot;
+1 + 3 greater than 3
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>PDM variables use <code>$(</code> and <code>)</code>, for example <code>$(Description.@)</code>. When writing conditions manually, quote PDM variable tokens if they appear inside a larger expression so the parser does not treat the parentheses as condition grouping.</p>
+</div>
+<h2 id="supported-operators">SUPPORTED OPERATORS:</h2>
+<ul>
+<li><code>exists</code> or <code>exist</code></li>
+<li><code>equals</code>, <code>equal</code>, <code>is</code>, <code>=</code>, <code>==</code></li>
+<li><code>not equals</code>, <code>!=</code>, <code>&lt;&gt;</code></li>
+<li><code>contains</code></li>
+<li><code>starts with</code></li>
+<li><code>ends with</code></li>
+<li><code>matches</code> or <code>regex</code></li>
+<li><code>less than</code>, <code>&lt;</code></li>
+<li><code>less than or equal</code>, <code>&lt;=</code></li>
+<li><code>greater than</code>, <code>&gt;</code></li>
+<li><code>greater than or equal</code>, <code>&gt;=</code></li>
+</ul>
+<h2 id="exists-conditions">EXISTS CONDITIONS:</h2>
+<p>Use <code>exists</code> when the condition should wait for a file or folder path.</p>
+<pre><code class="lang-bash">$localPath exists
+$folderPath\ready.txt exists
+file exists &quot;$folderPath\ready.txt&quot;
+folder exists &quot;$folderPath&quot;
+process exists &quot;notepad&quot;
+</code></pre>
+<p>When the left side is not explicitly <code>file</code>, <code>folder</code>, or <code>process</code>, PDMShell treats the condition as a file exists check by default. If the value looks like a folder path, PDMShell evaluates it as a folder check.</p>
+<h2 id="grouping-conditions">GROUPING CONDITIONS:</h2>
+<p>Use <code>and</code>, <code>or</code>, and parentheses to combine checks.</p>
+<pre><code class="lang-bash">$folderPath\ready.pdf exists and $folderPath\ready.dxf exists
+
+($folderPath\ready.pdf exists or $folderPath\ready.dxf exists) and &quot;$(Description.@)&quot; contains &quot;Released&quot;
+</code></pre>
+<h2 id="placeholders">PLACEHOLDERS:</h2>
+<p>The <code>wait</code> command supports dynamic placeholders in conditions. The most commonly used placeholders are:</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$localPath</code> / <code>$filePath</code></td>
+<td>Local path of the current file, or folder path when the context is a folder.</td>
+</tr>
+<tr>
+<td><code>$folderPath</code></td>
+<td>Local path of the file folder or current folder.</td>
+</tr>
+<tr>
+<td><code>$fileName</code> / <code>$filename</code> / <code>$name</code></td>
+<td>File name with extension.</td>
+</tr>
+<tr>
+<td><code>$fileNameWithoutExtension</code> / <code>$nameWithoutExtension</code> / <code>$namewithoutextension</code></td>
+<td>File name without extension.</td>
+</tr>
+<tr>
+<td><code>$extension</code></td>
+<td>File extension.</td>
+</tr>
+<tr>
+<td><code>$id</code></td>
+<td>File or folder ID.</td>
+</tr>
+<tr>
+<td><code>$version</code></td>
+<td>Current file version.</td>
+</tr>
+<tr>
+<td><code>$revision</code></td>
+<td>Current file revision.</td>
+</tr>
+<tr>
+<td><code>$folderName</code></td>
+<td>Folder name.</td>
+</tr>
+<tr>
+<td><code>$folderID</code></td>
+<td>Folder ID.</td>
+</tr>
+<tr>
+<td><code>$vaultName</code> / <code>$vaultname</code></td>
+<td>Vault name.</td>
+</tr>
+<tr>
+<td><code>$vaultRootFolder</code> / <code>$vaultrootfolder</code></td>
+<td>Local path of the vault root folder.</td>
+</tr>
+<tr>
+<td><code>$GUID</code> / <code>$guid</code></td>
+<td>Script or task GUID context when available.</td>
+</tr>
+<tr>
+<td><code>$taskName</code></td>
+<td>Task name context when available.</td>
+</tr>
+<tr>
+<td><code>$tempFolder</code> / <code>$TempFolder</code></td>
+<td>Windows temporary folder.</td>
+</tr>
+<tr>
+<td><code>$machineName</code> / <code>$computerName</code></td>
+<td>Current machine name.</td>
+</tr>
+<tr>
+<td><code>$userName</code> / <code>$username</code></td>
+<td>PDM logged-in user, or Windows user when no PDM user is available.</td>
+</tr>
+<tr>
+<td><code>$windowsUser</code></td>
+<td>Windows user name.</td>
+</tr>
+<tr>
+<td><code>$userDomain</code> / <code>$domain</code></td>
+<td>Windows user domain.</td>
+</tr>
+<tr>
+<td><code>$configuration</code></td>
+<td>Current configuration context when available.</td>
+</tr>
+<tr>
+<td><code>$value</code></td>
+<td>Current value context when available.</td>
+</tr>
+</tbody>
+</table>
+<p>Date and time placeholders:</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$yyyy</code> / <code>$year</code></td>
+<td>Four-digit year.</td>
+</tr>
+<tr>
+<td><code>$yy</code></td>
+<td>Two-digit year.</td>
+</tr>
+<tr>
+<td><code>$MM</code></td>
+<td>Two-digit month number.</td>
+</tr>
+<tr>
+<td><code>$M</code></td>
+<td>Month number.</td>
+</tr>
+<tr>
+<td><code>$dd</code></td>
+<td>Two-digit day of month.</td>
+</tr>
+<tr>
+<td><code>$d</code></td>
+<td>Day of month.</td>
+</tr>
+<tr>
+<td><code>$month</code></td>
+<td>Full month name.</td>
+</tr>
+<tr>
+<td><code>$mon</code></td>
+<td>Short month name.</td>
+</tr>
+<tr>
+<td><code>$day</code></td>
+<td>Full day name.</td>
+</tr>
+<tr>
+<td><code>$dayShort</code></td>
+<td>Short day name.</td>
+</tr>
+<tr>
+<td><code>$HH</code></td>
+<td>24-hour hour.</td>
+</tr>
+<tr>
+<td><code>$hh</code></td>
+<td>12-hour hour.</td>
+</tr>
+<tr>
+<td><code>$mi</code> / <code>$mm</code></td>
+<td>Minutes.</td>
+</tr>
+<tr>
+<td><code>$ss</code></td>
+<td>Seconds.</td>
+</tr>
+<tr>
+<td><code>$tt</code></td>
+<td>AM/PM designator.</td>
+</tr>
+<tr>
+<td><code>$timestamp</code></td>
+<td>Timestamp in <code>yyyyMMdd_HHmmss</code> format.</td>
+</tr>
+<tr>
+<td><code>$date</code></td>
+<td>Date in <code>yyyy-MM-dd</code> format.</td>
+</tr>
+<tr>
+<td><code>$time</code></td>
+<td>Time in <code>HH-mm-ss</code> format.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Placeholder names are evaluated case-insensitively in wait conditions.</p>
+</div>
+<h2 id="pdm-variables">PDM VARIABLES:</h2>
+<p>Use <code>$(VariableName.ConfigurationName)</code> to read a PDM variable from the file context.</p>
+<pre><code class="lang-bash">&quot;$(Description.@)&quot; contains &quot;ECO&quot;
+&quot;$(Revision.@)&quot; equals &quot;A&quot;
+</code></pre>
+<p>If the configuration is omitted, PDMShell uses <code>@</code>.</p>
+<h2 id="arithmetic-comparisons">ARITHMETIC COMPARISONS:</h2>
+<p>Numeric expressions can be used on either side of a comparison.</p>
+<pre><code class="lang-bash">1 + 3 greater than 3
+2 * 5 equals 10
+&quot;$(Quantity.@)&quot; greater than 0
+</code></pre>
+<p>Arithmetic is evaluated only for simple numeric expressions containing numbers, parentheses, and arithmetic operators.</p>
+<h2 id="remarks">REMARKS:</h2>
+<ul>
+<li>Use <code>filePath</code> when you need placeholders or PDM variables to be evaluated against one specific file.</li>
+<li>Use <code>search</code> and <code>match</code> when the same condition should be evaluated across multiple matching files.</li>
+<li><code>exists</code> does not need a value in the visual editor.</li>
+<li>For generated PDF/DXF workflows, use placeholders such as <code>$folderPath</code>, <code>$fileNameWithoutExtension</code>, and <code>$extension</code> to avoid hard-coded output paths.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell.Docs/blob/master/src/WAIT.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://bluebyte.biz'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

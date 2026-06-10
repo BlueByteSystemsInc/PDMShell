@@ -34,7 +34,7 @@ The following commands support the use of dynamic placeholders:
 The `value` parameter in supported commands can include placeholders that are dynamically replaced with actual values based on the context. The placeholders differ slightly depending on whether the backing object is a **file** or a **folder**.
 
 ### Placeholders for Files
-- `$value`: Existing value of the variable.
+- `$value`: Existing value of the variable. If the existing value is null or empty, this evaluates to an empty string.
 - `$name`: The file name with extension.
 - `$nameWithoutExtension` or `$fileNameWithoutExtension`: The file name without extension.
 - `$extension`: The file extension.
@@ -48,7 +48,7 @@ The `value` parameter in supported commands can include placeholders that are dy
 - `[Variable]`: @ Variable value.
 
 ### Placeholders for Folders
-- `$value`: Existing value of the variable.
+- `$value`: Existing value of the variable. If the existing value is null or empty, this evaluates to an empty string.
 - `$folderName`: The name of the parent folder.
 - `$folderID`: The folder ID.
 - `$folderPath`: The full local path of the folder.
@@ -67,6 +67,8 @@ The `value` parameter in supported commands can include placeholders that are dy
 - `$time`: The current time in the current locale.
 - `$guid`: Unique identifier.
 - `$tempFolder`: User's local temp folder under App Data
+
+Literal `\n` sequences in evaluated values are converted to `Environment.NewLine`.
 ---
 
 ## Using Variables in Dynamic Placeholders

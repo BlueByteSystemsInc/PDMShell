@@ -155,6 +155,8 @@
       href: RUNTASK.md
     - name: Run a PDM template
       href: RUNTEMPLATE.md
+    - name: Wait for conditions
+      href: WAIT.md
     - name: Rebuild SOLIDWORKS files
       href: REBUILD.md
     - name: Process Toolbox flag

@@ -1,5 +1,5 @@
 ---
-description: Clears and replaces a file's custom references with one file or files found by search.
+description: Appends one custom reference file to a source file or to files found by search.
 title: PASTEASREFERENCE Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
 
@@ -7,54 +7,54 @@ title: PASTEASREFERENCE Command Documentation | PDMShell | SOLIDWORKS PDM
 
 ## DESCRIPTION
 
-Clears and replaces a file's custom references in SOLIDWORKS PDM.
+Appends one custom reference file to a source file or to files found by search in SOLIDWORKS PDM.
 
-The `pasteasreference` command removes the existing custom references from the source file, then adds one or more files as custom references. References can be supplied as a single file path or found with a search query.
+The `pasteasreference` command uses `filePath` as the reference file to append. Use `source` to append that reference to one file, or use `search` to append that reference to multiple matching files.
 
-This command is useful when rebuilding custom references from a controlled source, such as a selected file, a search result, or a scripted workflow.
+This command is useful when a workflow creates or finds a supporting file and then needs to append it as a custom reference to one or more target files.
 
 ## SYNTAX
 
 ```bash
-pasteasreference -source original_file [-filePath reference_file | -search search_query] [-recursive]
+pasteasreference -filePath reference_file (-source source_file | -search search_query) [-recursive]
 ```
 
 ## PARAMETERS
 
-- `source` Required. Original file that will receive the custom references.
-- `filePath` Optional. Single file to paste as a custom reference.
-- `search` Optional. Search query used to find files to paste as custom references.
+- `filePath` Required. Reference file to append.
+- `source` Optional. Single file that will receive the appended reference. Use either `source` or `search`.
+- `search` Optional. Search query used to find files that will receive the appended reference. Use either `source` or `search`.
 - `recursive` Optional. When used with `search`, includes matching files in subfolders.
 
 ## VALIDATION
 
-- `source` is required.
-- Specify either `filePath` or `search`, but not both.
+- `filePath` is required.
+- Specify either `source` or `search`, but not both.
 - `recursive` is only valid when used with `search`.
 
 ## BEHAVIOR
 
-- Clears all existing custom references from the source file.
-- Adds each selected reference file as a custom reference.
-- Uses a quantity of `1` for each added custom reference.
-- Skips the source file if it appears in the reference results.
-- Removes duplicate reference files from the operation.
+- Appends the `filePath` reference to each selected target file.
+- Does not clear existing custom references.
+- Uses a quantity of `1` for the appended custom reference.
+- Skips a target file if it is the same file as `filePath`.
+- Skips duplicates.
 
 ## EXAMPLES
 
 ```bash
-# Replace custom references with a single file
-pasteasreference -source "Assembly.sldasm" -filePath "Part.sldprt"
+# Append Part.sldprt as a custom reference to one assembly
+pasteasreference -filePath "Part.sldprt" -source "Assembly.sldasm"
 
-# Replace custom references with all matching parts in the current folder
-pasteasreference -source "Assembly.sldasm" -search "%.sldprt"
+# Append Part.sldprt as a custom reference to all matching assemblies in the current folder
+pasteasreference -filePath "Part.sldprt" -search "Name=%.sldasm"
 
-# Replace custom references with matching parts in the current folder and subfolders
-pasteasreference -source "Assembly.sldasm" -search "%.sldprt" -recursive true
+# Append Part.sldprt as a custom reference to matching assemblies in the current folder and subfolders
+pasteasreference -filePath "Part.sldprt" -search "Name=%.sldasm" -recursive
 ```
 
 ## REMARKS
 
 - This command modifies custom references directly in SOLIDWORKS PDM.
-- Existing custom references are removed before new references are added.
-- Use this command carefully in production vaults because it replaces the current custom reference set.
+- Existing custom references are preserved.
+- If the selected target already has the reference, PDMShell reports it and does not add a duplicate.

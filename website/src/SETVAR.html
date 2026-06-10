@@ -90,15 +90,15 @@
 <h2 id="description">DESCRIPTION:</h2>
 <p>Sets the value of a variable for a specified checked out file or many checked out files.</p>
 <h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">setvar [-filePath|-search]  -variableName -value [-configNames] [-stringformat] 
+<pre><code class="lang-bash">setvar (-filePath path | -search query) -variableName variable_name [-value value | -clear] [-configNames configuration_names] [-recursive] [-stringformat format]
 </code></pre>
 <h2 id="parameters">PARAMETERS:</h2>
 <ul>
-<li><p><code>filePath</code>: The file to set the variable for.</p>
+<li><p><code>filePath</code>: The file or folder to set the variable for.</p>
 </li>
 <li><p><code>variableName</code>: The variable to set.</p>
 </li>
-<li><p><code>value</code>: The value to assign to the variable.</p>
+<li><p><code>value</code>: The value to assign to the variable. This parameter supports dynamic placeholders. When using <code>$value</code>, PDMShell substitutes the existing variable value; if the existing value is null or empty, <code>$value</code> evaluates to an empty string. Literal <code>\n</code> sequences are converted to <code>Environment.NewLine</code>.</p>
 </li>
 <li><p><code>configNames</code>: The configuration names to set the variable for, separated by commas.</p>
 </li>
@@ -113,9 +113,15 @@
 </ul>
 <h2 id="examples">EXAMPLES:</h2>
 <pre><code class="lang-bash">setvar -filePath file1.sldprt -variableName Description -value $value -stringformat UpperCase # Upper case the current value.
+
+setvar -filePath file1.sldprt -variableName Description -value &quot;$value\n$fileNameWithoutExtension.pdf&quot; # Append a new line and a generated PDF name.
+
+setvar -search &quot;Name=%.sldprt&quot; -variableName Description -value &quot;$value\nChecked by $username&quot; -recursive
 </code></pre>
 <h2 id="evaluation">EVALUATION:</h2>
-<p>The <code>value</code> parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables. The following placeholders are supported:</p>
+<p>The <code>value</code> parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables.</p>
+<p><code>$value</code> is the current value of the same variable before the command writes the new value. If the current value is null or empty, <code>$value</code> evaluates to an empty string instead of staying as literal <code>$value</code>.</p>
+<p>Use <code>\n</code> inside the value when you want PDMShell to write a real newline to the variable.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Please read more information about placeholder evaluation <a href="EVAL.html">here</a>.</p>
@@ -138,6 +144,7 @@
 <h2 id="changelogs">CHANGELOGS</h2>
 <ul>
 <li>As of version <a href="releasenotes.html">3.0.9</a>, we have added support for setting folder daracard variables</li>
+<li><code>$value</code> now evaluates to an empty string when the existing value is null or empty, and literal <code>\n</code> in evaluated values is converted to a newline.</li>
 </ul>
 
 </article>

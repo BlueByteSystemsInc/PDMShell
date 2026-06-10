@@ -9,14 +9,14 @@ Sets the value of a variable for a specified checked out file or many checked ou
 
 ## SYNTAX:
 ```bash
-setvar [-filePath|-search]  -variableName -value [-configNames] [-stringformat] 
+setvar (-filePath path | -search query) -variableName variable_name [-value value | -clear] [-configNames configuration_names] [-recursive] [-stringformat format]
 ```
 ## PARAMETERS:
-- `filePath`: The file to set the variable for.
+- `filePath`: The file or folder to set the variable for.
 
 - `variableName`: The variable to set.
 
-- `value`: The value to assign to the variable.
+- `value`: The value to assign to the variable. This parameter supports dynamic placeholders. When using `$value`, PDMShell substitutes the existing variable value; if the existing value is null or empty, `$value` evaluates to an empty string. Literal `\n` sequences are converted to `Environment.NewLine`.
 
 - `configNames`: The configuration names to set the variable for, separated by commas.
 
@@ -31,9 +31,17 @@ setvar [-filePath|-search]  -variableName -value [-configNames] [-stringformat]
 ## EXAMPLES:
 ```bash
 setvar -filePath file1.sldprt -variableName Description -value $value -stringformat UpperCase # Upper case the current value.
+
+setvar -filePath file1.sldprt -variableName Description -value "$value\n$fileNameWithoutExtension.pdf" # Append a new line and a generated PDF name.
+
+setvar -search "Name=%.sldprt" -variableName Description -value "$value\nChecked by $username" -recursive
 ```
 ## EVALUATION:
-The `value` parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables. The following placeholders are supported:
+The `value` parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables.
+
+`$value` is the current value of the same variable before the command writes the new value. If the current value is null or empty, `$value` evaluates to an empty string instead of staying as literal `$value`.
+
+Use `\n` inside the value when you want PDMShell to write a real newline to the variable.
 
 >[!Note]
 > Please read more information about placeholder evaluation [here](EVAL.md).
@@ -53,3 +61,4 @@ The `value` parameter gets evaluated by PDMShell. This feature allows you to use
 
 ## CHANGELOGS
 - As of version [3.0.9](releasenotes.md), we have added support for setting folder daracard variables
+- `$value` now evaluates to an empty string when the existing value is null or empty, and literal `\n` in evaluated values is converted to a newline.
