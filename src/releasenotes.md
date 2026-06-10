@@ -8,7 +8,7 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
-# 4.0.4 (06/10/2026)
+# 4.0.5 (06/10/2026)
 - Enhanced script processing logic.
 
 # 4.0.4 (06/10/2026)
