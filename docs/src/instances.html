@@ -140,6 +140,22 @@
 <h5>Important</h5>
 <p>When calling from <code>cmd.exe</code>, /single or -single cannot be contained in the double quote.</p>
 </div>
+<h2 id="headless-mode-and-script-startup">Headless Mode and Script Startup</h2>
+<p>Headless mode starts PDMShell with a smaller shell window titled <code>PDMShell Headless</code>.</p>
+<pre><code class="lang-bash">pdmcli.exe -headless
+</code></pre>
+<p>or</p>
+<pre><code class="lang-bash">pdmcli.exe /headless
+</code></pre>
+<p>Headless mode hides visual-editor controls and status text that are not needed during command execution. It also skips visual-only startup work and online startup license validation. Command-level license checks still run when a licensed command is executed.</p>
+<p>PDMShell can also detect a <code>.pdmshell</code> script path on the command line and run it through <code>runscript</code>.</p>
+<pre><code class="lang-bash">pdmcli.exe &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
+pdmcli.exe &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -items &quot;123,45;678,90&quot;
+</code></pre>
+<p>Use <code>-edit</code> when you want to open the script in the visual editor without running it.</p>
+<pre><code class="lang-bash">pdmcli.exe -edit &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
+pdmcli.exe &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -edit
+</code></pre>
 <h2 id="tips-for-single-instance-mode">Tips for Single Instance Mode</h2>
 <ul>
 <li>Always include <code>/single</code> in <strong>every call</strong></li>

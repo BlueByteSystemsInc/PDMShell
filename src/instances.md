@@ -78,6 +78,36 @@ This will:
 >[!IMPORTANT]
 > When calling from `cmd.exe`, /single or -single cannot be contained in the double quote.
 
+## Headless Mode and Script Startup
+
+Headless mode starts PDMShell with a smaller shell window titled `PDMShell Headless`.
+
+```bash
+pdmcli.exe -headless
+```
+
+or
+
+```bash
+pdmcli.exe /headless
+```
+
+Headless mode hides visual-editor controls and status text that are not needed during command execution. It also skips visual-only startup work and online startup license validation. Command-level license checks still run when a licensed command is executed.
+
+PDMShell can also detect a `.pdmshell` script path on the command line and run it through `runscript`.
+
+```bash
+pdmcli.exe "C:\Vault\Scripts\CreateECO.pdmshell"
+pdmcli.exe "C:\Vault\Scripts\CreateECO.pdmshell" -items "123,45;678,90"
+```
+
+Use `-edit` when you want to open the script in the visual editor without running it.
+
+```bash
+pdmcli.exe -edit "C:\Vault\Scripts\CreateECO.pdmshell"
+pdmcli.exe "C:\Vault\Scripts\CreateECO.pdmshell" -edit
+```
+
 ## Tips for Single Instance Mode
 
 - Always include `/single` in **every call**

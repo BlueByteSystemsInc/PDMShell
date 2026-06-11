@@ -98,7 +98,7 @@ The `wait` command supports dynamic placeholders in conditions. The most commonl
 | Placeholder | Meaning |
 | --- | --- |
 | `$localPath` / `$filePath` | Local path of the current file, or folder path when the context is a folder. |
-| `$folderPath` | Local path of the file folder or current folder. |
+| `$folderPath` / `$directory` | Local path of the file folder or current folder. |
 | `$fileName` / `$filename` / `$name` | File name with extension. |
 | `$fileNameWithoutExtension` / `$nameWithoutExtension` / `$namewithoutextension` | File name without extension. |
 | `$extension` | File extension. |
@@ -118,6 +118,8 @@ The `wait` command supports dynamic placeholders in conditions. The most commonl
 | `$userDomain` / `$domain` | Windows user domain. |
 | `$configuration` | Current configuration context when available. |
 | `$value` | Current value context when available. |
+| `$completefilename` | Legacy complete file path placeholder. |
+| `$completefoldername` | Legacy complete folder path placeholder. |
 
 Date and time placeholders:
 

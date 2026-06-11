@@ -1,35 +1,113 @@
 ---
-description: Runs a PDMShell script.
-title: RUNSCRIPT Command Documentation | PDMShell | SOLIDWORKS PDM
+title: RunScript command
+description: Run a PDMShell script from another script, the visual editor, or pdmcli.exe.
 ---
-# RUNSCRIPT Command Documentation
 
-## DESCRIPTION:
-Runs a PDMShell script.
+# RunScript command
 
-## SYNTAX:
-```bash
-runscript -source -filePath -search -recursive
+`runscript` loads and runs a `.pdmshell` script file.
+
+Use it when you want to keep shared automation in one script and call it from another command, from the visual editor, or directly from `pdmcli.exe`.
+
+## Syntax
+
+```pdmshell
+runscript -source "C:\Vault\Scripts\CreateECO.pdmshell"
+runscript -source "C:\Vault\Scripts\CreateECO.pdmshell" -filePath "C:\Vault\Parts\1001.sldprt"
+runscript -source "C:\Vault\Scripts\CreateECO.pdmshell" -search "Name=%.sldprt" -recursive
+runscript -source "C:\Vault\Scripts\CreateECO.pdmshell" -items "123,45;678,90"
 ```
 
-## PARAMETERS:
-- `source`:  Script file.  **Must end in `.pdmshell`** 
+## Parameters
 
->[!IMPORTANT]
-> Script extension is `.pdmshell`
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `source` | Yes | Path to the `.pdmshell` script file to run. |
+| `filePath` | No | Runs the script with one file as the current file context. |
+| `search` | No | Runs the script for files or folders returned by a PDM search. |
+| `recursive` | No | Includes child folders when used with `search`. |
+| `items` | No | Semicolon-separated file or folder ID pairs supplied by command-line integrations. |
 
-- `filePath`:  File path to run the script on. 
-- `search`:  Search query to filter files.
-- `recursive`: If specified, the command will run script on all files recursively in subdirectories.  
-## EXAMPLES:
- ```bash
-runscript -source pdmscript.pdmshell -search "Name=%.sldprt;Recursive=true"
-# this will run pdmscript.pdmshell on all part files in the active directory and its subdirectories
- ```
+Only one targeting mode is normally needed: `filePath`, `search`, or `items`.
 
-## REMARKS:
-- A good way to start a script is using the `start notepad.exe` command to open up notepad.exe.
-- In your script, you must use the alias `$completefilename` and `$completefoldername` to reference the file your script is targeting. This is required with the `search` or `filePath` parameters. 
+## Items format
 
-## FREE VERSION LIMIT:
-- The free version is limited to 10 lines per script.
+Use `items` when an external command already knows the PDM IDs to process.
+
+```pdmshell
+runscript -source "C:\Vault\Scripts\CreateECO.pdmshell" -items "123,45;678,90"
+```
+
+Each item is separated by a semicolon.
+
+| Item type | Format | Meaning |
+| --- | --- | --- |
+| File | `fileId,folderId` | The first value is the file ID. The second value is the containing folder ID. |
+| Folder | `folderId,parentFolderId` | The first value is the folder ID. The second value is the parent folder ID. |
+
+## Command-line shortcuts
+
+`pdmcli.exe` can detect a `.pdmshell` path and convert it to `runscript`.
+
+```powershell
+pdmcli.exe "C:\Vault\Scripts\CreateECO.pdmshell"
+pdmcli.exe "C:\Vault\Scripts\CreateECO.pdmshell" -items "123,45;678,90"
+```
+
+Use `-edit` to open a script in the visual editor without executing it.
+
+```powershell
+pdmcli.exe -edit "C:\Vault\Scripts\CreateECO.pdmshell"
+pdmcli.exe "C:\Vault\Scripts\CreateECO.pdmshell" -edit
+```
+
+When `runscript` loads a script, the visual editor is hydrated only when the current editor is empty or clean. If the user has unsaved script changes, `runscript` still executes normally but does not replace the editor contents.
+
+## Placeholder evaluation
+
+When `runscript` is executed with `items`, `filePath`, or `search`, placeholders are evaluated with the same context used by visual Run command execution.
+
+Normal lines run once. Consecutive item-specific lines run once for each resolved file or folder.
+
+An item-specific line is a line that contains a file, folder, vault, date/time, or PDM variable placeholder.
+
+## Supported placeholders
+
+| Placeholder | Description |
+| --- | --- |
+| `$localPath`, `$filePath` | Local path to the current file. |
+| `$fileName`, `$filename`, `$name` | Current file or folder name. |
+| `$fileNameWithoutExtension`, `$nameWithoutExtension` | File name without extension. |
+| `$extension` | File extension. |
+| `$id` | Current file or folder ID. |
+| `$folderPath`, `$directory` | Current folder path. |
+| `$folderName` | Current folder name. |
+| `$folderID` | Current folder ID. |
+| `$vaultName` | Current vault name. |
+| `$vaultRootFolder` | Local vault root folder. |
+| `$GUID` | Current command/session GUID. |
+| `$taskName` | Current task name when available. |
+| `$tempFolder`, `$TempFolder` | Temporary folder path. |
+| `$machineName`, `$computerName` | Windows machine name. |
+| `$userName`, `$windowsUser` | Current user name. |
+| `$userDomain`, `$domain` | Current Windows domain. |
+| `$yyyy`, `$yy`, `$MM`, `$M`, `$dd`, `$d` | Date values. |
+| `$month`, `$mon`, `$day`, `$dayShort` | Date name values. |
+| `$HH`, `$hh`, `$mm`, `$ss`, `$tt` | Time values. |
+| `$timestamp`, `$date`, `$time` | Common date/time formats. |
+| `$completefilename` | Legacy complete file path placeholder. |
+| `$completefoldername` | Legacy complete folder path placeholder. |
+| `$(Variable.Config)` | PDM variable value for the current file and configuration. |
+
+## Example
+
+The source script can use file placeholders and conditions. When the script is run for multiple items, these lines are evaluated for each target item.
+
+```pdmshell
+RunTask -filePath "$localPath" -taskName "Publish PDF & DXF"
+wait -conditions "$folderPath\$fileNameWithoutExtension.pdf exists" -timeout 500
+```
+
+## Free version limit
+
+The free version is limited to 10 lines per script.

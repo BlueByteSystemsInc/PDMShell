@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>RUNSCRIPT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>RunScript command | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="RUNSCRIPT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="RunScript command | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Runs a PDMShell script.">
+      <meta name="description" content="Run a PDMShell script from another script, the visual editor, or pdmcli.exe.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,39 +85,204 @@
         </div>
 
         <article data-uid="">
-<h1 id="runscript-command-documentation">RUNSCRIPT Command Documentation</h1>
+<h1 id="runscript-command">RunScript command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
-<p>Runs a PDMShell script.</p>
-<h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">runscript -source -filePath -search -recursive
+<p><code>runscript</code> loads and runs a <code>.pdmshell</code> script file.</p>
+<p>Use it when you want to keep shared automation in one script and call it from another command, from the visual editor, or directly from <code>pdmcli.exe</code>.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-pdmshell">runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
+runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -filePath &quot;C:\Vault\Parts\1001.sldprt&quot;
+runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -search &quot;Name=%.sldprt&quot; -recursive
+runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -items &quot;123,45;678,90&quot;
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
-<ul>
-<li><code>source</code>:  Script file.  <strong>Must end in <code>.pdmshell</code></strong></li>
-</ul>
-<div class="IMPORTANT">
-<h5>Important</h5>
-<p>Script extension is <code>.pdmshell</code></p>
-</div>
-<ul>
-<li><code>filePath</code>:  File path to run the script on.</li>
-<li><code>search</code>:  Search query to filter files.</li>
-<li><code>recursive</code>: If specified, the command will run script on all files recursively in subdirectories.</li>
-</ul>
-<h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">runscript -source pdmscript.pdmshell -search &quot;Name=%.sldprt;Recursive=true&quot;
-# this will run pdmscript.pdmshell on all part files in the active directory and its subdirectories
+<h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source</code></td>
+<td>Yes</td>
+<td>Path to the <code>.pdmshell</code> script file to run.</td>
+</tr>
+<tr>
+<td><code>filePath</code></td>
+<td>No</td>
+<td>Runs the script with one file as the current file context.</td>
+</tr>
+<tr>
+<td><code>search</code></td>
+<td>No</td>
+<td>Runs the script for files or folders returned by a PDM search.</td>
+</tr>
+<tr>
+<td><code>recursive</code></td>
+<td>No</td>
+<td>Includes child folders when used with <code>search</code>.</td>
+</tr>
+<tr>
+<td><code>items</code></td>
+<td>No</td>
+<td>Semicolon-separated file or folder ID pairs supplied by command-line integrations.</td>
+</tr>
+</tbody>
+</table>
+<p>Only one targeting mode is normally needed: <code>filePath</code>, <code>search</code>, or <code>items</code>.</p>
+<h2 id="items-format">Items format</h2>
+<p>Use <code>items</code> when an external command already knows the PDM IDs to process.</p>
+<pre><code class="lang-pdmshell">runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -items &quot;123,45;678,90&quot;
 </code></pre>
-<h2 id="remarks">REMARKS:</h2>
-<ul>
-<li>A good way to start a script is using the <code>start notepad.exe</code> command to open up notepad.exe.</li>
-<li>In your script, you must use the alias <code>$completefilename</code> and <code>$completefoldername</code> to reference the file your script is targeting. This is required with the <code>search</code> or <code>filePath</code> parameters.</li>
-</ul>
-<h2 id="free-version-limit">FREE VERSION LIMIT:</h2>
-<ul>
-<li>The free version is limited to 10 lines per script.</li>
-</ul>
+<p>Each item is separated by a semicolon.</p>
+<table>
+<thead>
+<tr>
+<th>Item type</th>
+<th>Format</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File</td>
+<td><code>fileId,folderId</code></td>
+<td>The first value is the file ID. The second value is the containing folder ID.</td>
+</tr>
+<tr>
+<td>Folder</td>
+<td><code>folderId,parentFolderId</code></td>
+<td>The first value is the folder ID. The second value is the parent folder ID.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="command-line-shortcuts">Command-line shortcuts</h2>
+<p><code>pdmcli.exe</code> can detect a <code>.pdmshell</code> path and convert it to <code>runscript</code>.</p>
+<pre><code class="lang-powershell">pdmcli.exe &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
+pdmcli.exe &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -items &quot;123,45;678,90&quot;
+</code></pre>
+<p>Use <code>-edit</code> to open a script in the visual editor without executing it.</p>
+<pre><code class="lang-powershell">pdmcli.exe -edit &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
+pdmcli.exe &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -edit
+</code></pre>
+<p>When <code>runscript</code> loads a script, the visual editor is hydrated only when the current editor is empty or clean. If the user has unsaved script changes, <code>runscript</code> still executes normally but does not replace the editor contents.</p>
+<h2 id="placeholder-evaluation">Placeholder evaluation</h2>
+<p>When <code>runscript</code> is executed with <code>items</code>, <code>filePath</code>, or <code>search</code>, placeholders are evaluated with the same context used by visual Run command execution.</p>
+<p>Normal lines run once. Consecutive item-specific lines run once for each resolved file or folder.</p>
+<p>An item-specific line is a line that contains a file, folder, vault, date/time, or PDM variable placeholder.</p>
+<h2 id="supported-placeholders">Supported placeholders</h2>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$localPath</code>, <code>$filePath</code></td>
+<td>Local path to the current file.</td>
+</tr>
+<tr>
+<td><code>$fileName</code>, <code>$filename</code>, <code>$name</code></td>
+<td>Current file or folder name.</td>
+</tr>
+<tr>
+<td><code>$fileNameWithoutExtension</code>, <code>$nameWithoutExtension</code></td>
+<td>File name without extension.</td>
+</tr>
+<tr>
+<td><code>$extension</code></td>
+<td>File extension.</td>
+</tr>
+<tr>
+<td><code>$id</code></td>
+<td>Current file or folder ID.</td>
+</tr>
+<tr>
+<td><code>$folderPath</code>, <code>$directory</code></td>
+<td>Current folder path.</td>
+</tr>
+<tr>
+<td><code>$folderName</code></td>
+<td>Current folder name.</td>
+</tr>
+<tr>
+<td><code>$folderID</code></td>
+<td>Current folder ID.</td>
+</tr>
+<tr>
+<td><code>$vaultName</code></td>
+<td>Current vault name.</td>
+</tr>
+<tr>
+<td><code>$vaultRootFolder</code></td>
+<td>Local vault root folder.</td>
+</tr>
+<tr>
+<td><code>$GUID</code></td>
+<td>Current command/session GUID.</td>
+</tr>
+<tr>
+<td><code>$taskName</code></td>
+<td>Current task name when available.</td>
+</tr>
+<tr>
+<td><code>$tempFolder</code>, <code>$TempFolder</code></td>
+<td>Temporary folder path.</td>
+</tr>
+<tr>
+<td><code>$machineName</code>, <code>$computerName</code></td>
+<td>Windows machine name.</td>
+</tr>
+<tr>
+<td><code>$userName</code>, <code>$windowsUser</code></td>
+<td>Current user name.</td>
+</tr>
+<tr>
+<td><code>$userDomain</code>, <code>$domain</code></td>
+<td>Current Windows domain.</td>
+</tr>
+<tr>
+<td><code>$yyyy</code>, <code>$yy</code>, <code>$MM</code>, <code>$M</code>, <code>$dd</code>, <code>$d</code></td>
+<td>Date values.</td>
+</tr>
+<tr>
+<td><code>$month</code>, <code>$mon</code>, <code>$day</code>, <code>$dayShort</code></td>
+<td>Date name values.</td>
+</tr>
+<tr>
+<td><code>$HH</code>, <code>$hh</code>, <code>$mm</code>, <code>$ss</code>, <code>$tt</code></td>
+<td>Time values.</td>
+</tr>
+<tr>
+<td><code>$timestamp</code>, <code>$date</code>, <code>$time</code></td>
+<td>Common date/time formats.</td>
+</tr>
+<tr>
+<td><code>$completefilename</code></td>
+<td>Legacy complete file path placeholder.</td>
+</tr>
+<tr>
+<td><code>$completefoldername</code></td>
+<td>Legacy complete folder path placeholder.</td>
+</tr>
+<tr>
+<td><code>$(Variable.Config)</code></td>
+<td>PDM variable value for the current file and configuration.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<p>The source script can use file placeholders and conditions. When the script is run for multiple items, these lines are evaluated for each target item.</p>
+<pre><code class="lang-pdmshell">RunTask -filePath &quot;$localPath&quot; -taskName &quot;Publish PDF &amp; DXF&quot;
+wait -conditions &quot;$folderPath\$fileNameWithoutExtension.pdf exists&quot; -timeout 500
+</code></pre>
+<h2 id="free-version-limit">Free version limit</h2>
+<p>The free version is limited to 10 lines per script.</p>
 
 </article>
 
