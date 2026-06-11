@@ -8,7 +8,14 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+<<<<<<< HEAD
 # 4.0.5 (06/30/2026)
+=======
+# 4.0.5 (06/10/2026)
+- Enhanced script processing logic.
+
+# 4.0.4 (06/10/2026)
+>>>>>>> 6b43dc852589810aa6d4eefef78eda7005b66cb3
 - Added and documented the [wait](WAIT.md) command.
 - Added condition expression support for file/folder/process existence, variable and placeholder comparisons, grouped `and` / `or` logic, and arithmetic comparisons.
 - Simplified the Visual Code Editor wait conditions dialog to use a variable/placeholder field, operator dropdown, and conditional value field.
