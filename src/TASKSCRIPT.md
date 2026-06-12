@@ -15,6 +15,18 @@ title: Run Script as a Task | PDMShell | SOLIDWORKS PDM
 
 With TaskScript, administrators can create configurable tasks that run custom `.pdmshell` scripts using the `pdmcli` engine on selected files within the vault.
 
+## Headless Mode
+
+TaskScript can run PDMShell in headless mode for task execution. Headless mode starts a lighter `PDMShell Headless` shell, hides visual-editor controls that are not needed while a task is running, and skips visual-only startup work.
+
+Use headless mode when a script is launched by a PDM task or another unattended automation flow:
+
+```bash
+pdmcli.exe -headless "C:\Vault\Scripts\CreateECO.pdmshell" -items "123,45;678,90"
+```
+
+You can also enable **Headless** in PDMShell settings so TaskScript and other command-line launches use headless mode when no command-line headless argument is supplied.
+
 ## Key Features
 
 - Execute PDMShell commands in response to PDM task triggers

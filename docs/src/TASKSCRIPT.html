@@ -95,6 +95,12 @@
 <p>TaskScript is found in your Blue Byte Systems Inc <a href="https://bluebyte.biz/account">account</a> for users with the premium version (active license). You can download also TaskScript using <a href="https://docs.bluebyte.biz/src/cdpdm.html">PDMDeploy</a>.</p>
 </div>
 <p>With TaskScript, administrators can create configurable tasks that run custom <code>.pdmshell</code> scripts using the <code>pdmcli</code> engine on selected files within the vault.</p>
+<h2 id="headless-mode">Headless Mode</h2>
+<p>TaskScript can run PDMShell in headless mode for task execution. Headless mode starts a lighter <code>PDMShell Headless</code> shell, hides visual-editor controls that are not needed while a task is running, and skips visual-only startup work.</p>
+<p>Use headless mode when a script is launched by a PDM task or another unattended automation flow:</p>
+<pre><code class="lang-bash">pdmcli.exe -headless &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -items &quot;123,45;678,90&quot;
+</code></pre>
+<p>You can also enable <strong>Headless</strong> in PDMShell settings so TaskScript and other command-line launches use headless mode when no command-line headless argument is supplied.</p>
 <h2 id="key-features">Key Features</h2>
 <ul>
 <li>Execute PDMShell commands in response to PDM task triggers</li>

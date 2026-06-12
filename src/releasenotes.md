@@ -8,14 +8,21 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
-<<<<<<< HEAD
-# 4.0.5 (06/30/2026)
-=======
+# 4.0.6 (06/12/2026)
+- Added headless mode support for TaskScript and command-line script automation. Use `pdmcli.exe -headless` or enable **Headless** in PDMShell settings to start a lighter execution shell for task runs.
+- Added the **Error Mode** setting. `Default` mode reports missing-file delete operations as warnings, while `Aggressive` mode keeps the previous hard-error behavior.
+- Added `runscript -items` for TaskScript and other command-line integrations that pass file and folder ID pairs.
+- Updated `runscript` so `items`, `filePath`, and `search` use the same placeholder and PDM variable evaluation path as visual Run command execution.
+- Added command-line `.pdmshell` detection so `pdmcli.exe "script.pdmshell"` runs the script and forwards supported parameters such as `-items`.
+- Added `pdmcli.exe -edit "script.pdmshell"` support to open a script in the visual editor without executing it.
+- Protected unsaved visual editor work by hydrating the editor from `runscript` only when the current editor is empty or clean.
+- Added a default check-in comment value of `Checked by PDMShell` in the visual command builder.
+- Updated the installer package for this release.
+
 # 4.0.5 (06/10/2026)
 - Enhanced script processing logic.
 
 # 4.0.4 (06/10/2026)
->>>>>>> 6b43dc852589810aa6d4eefef78eda7005b66cb3
 - Added and documented the [wait](WAIT.md) command.
 - Added condition expression support for file/folder/process existence, variable and placeholder comparisons, grouped `and` / `or` logic, and arithmetic comparisons.
 - Simplified the Visual Code Editor wait conditions dialog to use a variable/placeholder field, operator dropdown, and conditional value field.
@@ -24,13 +31,6 @@ then **install** the latest version. **Do not update installed version.**
 - Fixed visual script loading for root directory `cd -directory "\"` usage.
 - Improved `setvar` evaluation so `$value` falls back to an empty string when null or empty, and literal `\n` writes a real newline.
 - Updated `pasteasreference` behavior so `source` is the source file, `search` finds files to paste references to, and `filePath` is the reference to append.
-- Added `runscript -items` for command-line integrations that pass file and folder ID pairs.
-- Updated `runscript` so `items`, `filePath`, and `search` use the same placeholder and PDM variable evaluation path as visual Run command execution.
-- Added command-line `.pdmshell` detection so `pdmcli.exe "script.pdmshell"` runs the script and forwards supported parameters such as `-items`.
-- Added `pdmcli.exe -edit "script.pdmshell"` support to open a script in the visual editor without executing it.
-- Protected unsaved visual editor work by hydrating the editor from `runscript` only when the current editor is empty or clean.
-- Improved headless mode startup by skipping visual-only startup work and online startup license validation while preserving command-level license checks.
-- Simplified the headless shell title, size, resize behavior, and top bar so it presents as `PDMShell Headless`.
 
 # 4.0.3 (06/04/2026)
 - Rebuild release.

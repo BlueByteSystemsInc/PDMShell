@@ -92,29 +92,23 @@
 <p>To update PDMShell properly, <strong>download</strong> the latest version, <strong>uninstall</strong> PDMShell and
 then <strong>install</strong> the latest version. <strong>Do not update installed version.</strong></p>
 </div>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<h1 id="405-06302026">4.0.5 (06/30/2026)</h1>
-<p>=======</p>
+<h1 id="406-06122026">4.0.6 (06/12/2026)</h1>
+<ul>
+<li>Added headless mode support for TaskScript and command-line script automation. Use <code>pdmcli.exe -headless</code> or enable <strong>Headless</strong> in PDMShell settings to start a lighter execution shell for task runs.</li>
+<li>Added the <strong>Error Mode</strong> setting. <code>Default</code> mode reports missing-file delete operations as warnings, while <code>Aggressive</code> mode keeps the previous hard-error behavior.</li>
+<li>Added <code>runscript -items</code> for TaskScript and other command-line integrations that pass file and folder ID pairs.</li>
+<li>Updated <code>runscript</code> so <code>items</code>, <code>filePath</code>, and <code>search</code> use the same placeholder and PDM variable evaluation path as visual Run command execution.</li>
+<li>Added command-line <code>.pdmshell</code> detection so <code>pdmcli.exe &quot;script.pdmshell&quot;</code> runs the script and forwards supported parameters such as <code>-items</code>.</li>
+<li>Added <code>pdmcli.exe -edit &quot;script.pdmshell&quot;</code> support to open a script in the visual editor without executing it.</li>
+<li>Protected unsaved visual editor work by hydrating the editor from <code>runscript</code> only when the current editor is empty or clean.</li>
+<li>Added a default check-in comment value of <code>Checked by PDMShell</code> in the visual command builder.</li>
+<li>Updated the installer package for this release.</li>
+</ul>
 <h1 id="405-06102026">4.0.5 (06/10/2026)</h1>
 <ul>
 <li>Enhanced script processing logic.</li>
 </ul>
 <h1 id="404-06102026">4.0.4 (06/10/2026)</h1>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>6b43dc852589810aa6d4eefef78eda7005b66cb3</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
 <ul>
 <li>Added and documented the <a href="WAIT.html">wait</a> command.</li>
 <li>Added condition expression support for file/folder/process existence, variable and placeholder comparisons, grouped <code>and</code> / <code>or</code> logic, and arithmetic comparisons.</li>
@@ -124,13 +118,6 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 <li>Fixed visual script loading for root directory <code>cd -directory &quot;\&quot;</code> usage.</li>
 <li>Improved <code>setvar</code> evaluation so <code>$value</code> falls back to an empty string when null or empty, and literal <code>\n</code> writes a real newline.</li>
 <li>Updated <code>pasteasreference</code> behavior so <code>source</code> is the source file, <code>search</code> finds files to paste references to, and <code>filePath</code> is the reference to append.</li>
-<li>Added <code>runscript -items</code> for command-line integrations that pass file and folder ID pairs.</li>
-<li>Updated <code>runscript</code> so <code>items</code>, <code>filePath</code>, and <code>search</code> use the same placeholder and PDM variable evaluation path as visual Run command execution.</li>
-<li>Added command-line <code>.pdmshell</code> detection so <code>pdmcli.exe &quot;script.pdmshell&quot;</code> runs the script and forwards supported parameters such as <code>-items</code>.</li>
-<li>Added <code>pdmcli.exe -edit &quot;script.pdmshell&quot;</code> support to open a script in the visual editor without executing it.</li>
-<li>Protected unsaved visual editor work by hydrating the editor from <code>runscript</code> only when the current editor is empty or clean.</li>
-<li>Improved headless mode startup by skipping visual-only startup work and online startup license validation while preserving command-level license checks.</li>
-<li>Simplified the headless shell title, size, resize behavior, and top bar so it presents as <code>PDMShell Headless</code>.</li>
 </ul>
 <h1 id="403-06042026">4.0.3 (06/04/2026)</h1>
 <ul>
