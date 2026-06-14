@@ -8,7 +8,7 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
-# 4.0.6 (06/12/2026)
+# 4.0.7 (planned by end of June 2026)
 - Added headless mode support for TaskScript and command-line script automation. Use `pdmcli.exe -headless` or enable **Headless** in PDMShell settings to start a lighter execution shell for task runs.
 - Added the **Error Mode** setting. `Default` mode reports missing-file delete operations as warnings, while `Aggressive` mode keeps the previous hard-error behavior.
 - Added `runscript -items` for TaskScript and other command-line integrations that pass file and folder ID pairs.
