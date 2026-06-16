@@ -199,7 +199,7 @@ Ghost builds
 - Added `checkoutoptions` in [Checkout](CHECKOUT.md)
 
 # 3.0.20 (2025-12-12)
-- Fixed timeout issue with [Export](EXPORT.md) and [RunSwMacro](RUNSWMACRO.md).
+- Fixed timeout issue with [Export](EXPORT.md) and [RunSwMacro](runswmacro.md).
 - Added `name`, `filePath` and `value` parameters to [INBOX](INBOX.md). 
 - `source` parameter default to current directory in [addtovaultcommmand](ADDTOVAULT.md). 
 
@@ -216,7 +216,7 @@ Ghost builds
 
 # 3.0.16 (2025-12-07)
 - [Export: Added timeout parameter launching SOLIDWORKS](EXPORT.md).
-- [RunSwMacro: timeout parameter is also enabled for launching SOLIDWORKS](RUNSWMACRO.md).
+- [RunSwMacro: timeout parameter is also enabled for launching SOLIDWORKS](runswmacro.md).
 - Enforced `.pdmshell` extension across all commands as the scripting file extension.
 # 3.0.15
 - skipped

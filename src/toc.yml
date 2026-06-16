@@ -150,7 +150,7 @@
     - name: Run a PDMShell script
       href: RUNSCRIPT.md
     - name: Run a SOLIDWORKS macro
-      href: RUNSWMACRO.md
+      href: runswmacro.md
     - name: Run a PDM task
       href: RUNTASK.md
     - name: Run a PDM template
