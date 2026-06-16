@@ -34,8 +34,8 @@
   - name: "Advanced Search:"
   - name: Using Advanced Search
     href: advancedsearch.md 
-  - name: "Custom Task (Like Convert Task):"
-  - name: Using TaskScript 
+  - name: "PDMShell add-in:"
+  - name: Using the PDMShell add-in
     href: TASKSCRIPT.md
   - name: "Invoke a PDMShell Script From Transition Action:"
   - name: From Workflow Transitions

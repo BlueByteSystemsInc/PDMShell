@@ -1,6 +1,6 @@
 ---
-description: Documentation page of TaskScript.
-title: Run Script as a Task | PDMShell | SOLIDWORKS PDM
+description: Documentation page of the PDMShell add-in.
+title: PDMShell add-in | PDMShell | SOLIDWORKS PDM
 ---
 ## Overview
 
@@ -8,16 +8,29 @@ title: Run Script as a Task | PDMShell | SOLIDWORKS PDM
 
 ---
 
-**TaskScript** is a custom PDM task add-in developed by **Blue Byte Systems Inc.** that allows you to execute **PDMShell scripts** the same way you would use the built-in **Convert** task.
+The **PDMShell add-in** is a SOLIDWORKS PDM add-in developed by **Blue Byte Systems Inc.** that lets administrators run **PDMShell scripts** from PDM, similar to Dispatch but with PDMShell's visual script editor and command engine.
 
 >[!Note]
-> TaskScript is found in your Blue Byte Systems Inc [account](https://bluebyte.biz/account) for users with the premium version (active license). You can download also TaskScript using [PDMDeploy](https://docs.bluebyte.biz/src/cdpdm.html).
+> The PDMShell add-in is found in your Blue Byte Systems Inc [account](https://bluebyte.biz/account) for users with the premium version (active license). You can also download the add-in using [PDMDeploy](https://docs.bluebyte.biz/src/cdpdm.html).
 
-With TaskScript, administrators can create configurable tasks that run custom `.pdmshell` scripts using the `pdmcli` engine on selected files within the vault.
+With the PDMShell add-in, administrators can create configurable scripts that run custom `.pdmshell` workflows against selected files and folders in the vault.
+
+![PDMShell add-in script editor](../images/pdmshell-addin-script-editor.png)
+
+## Script Configuration
+
+Each script can be configured with:
+
+- permitted users and groups
+- conditions that decide whether the script is available or allowed to run
+- right-click command menu text
+- PDM command hooks and event trigger points
+
+This lets the PDMShell add-in cover workflows that are normally handled by Dispatch, while keeping the script logic in PDMShell.
 
 ## Headless Mode
 
-TaskScript can run PDMShell in headless mode for task execution. Headless mode starts a lighter `PDMShell Headless` shell, hides visual-editor controls that are not needed while a task is running, and skips visual-only startup work.
+The PDMShell add-in can run PDMShell in headless mode for add-in automation. Headless mode starts a lighter `PDMShell Headless` shell, hides visual-editor controls that are not needed while a script is running, and skips visual-only startup work.
 
 Use headless mode when a script is launched by a PDM task or another unattended automation flow:
 
@@ -25,11 +38,14 @@ Use headless mode when a script is launched by a PDM task or another unattended 
 pdmcli.exe -headless "C:\Vault\Scripts\CreateECO.pdmshell" -items "123,45;678,90"
 ```
 
-You can also enable **Headless** in PDMShell settings so TaskScript and other command-line launches use headless mode when no command-line headless argument is supplied.
+You can also enable **Headless** in PDMShell settings so add-in and other command-line launches use headless mode when no command-line headless argument is supplied.
 
 ## Key Features
 
-- Execute PDMShell commands in response to PDM task triggers
+- Execute PDMShell commands from PDM right-click menus
+- Execute PDMShell commands in response to PDM event triggers
+- Restrict scripts to selected users and groups
+- Add conditions that control when scripts are available or can run
 - Dynamic script editing and variable binding
 - Reuses existing scripts stored locally or downloaded
 - Supports file filtering based on extensions
@@ -40,12 +56,12 @@ You can also enable **Headless** in PDMShell settings so TaskScript and other co
 ## Remarks
 
 - You can include the extensions: `sldprt;sldasm;slddrw` are the default value.
-- TaskScript will run PDMShell sessions on all affected documents by the task.
+- The PDMShell add-in will run PDMShell sessions on the affected documents.
 - Do not forget to set the Command Menu tab.
 
 ## Placeholder Variables
 
-TaskScript supports dynamic variables that are replaced at runtime for each selected file. Below is a list of available placeholders:
+The PDMShell add-in supports dynamic variables that are replaced at runtime for each selected file. Below is a list of available placeholders:
 
 | Placeholder                  | Description                                                      |
 |-----------------------------|------------------------------------------------------------------|

@@ -8,14 +8,15 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
-# 4.0.7 (planned by end of June 2026)
-- Added headless mode support for TaskScript and command-line script automation. Use `pdmcli.exe -headless` or enable **Headless** in PDMShell settings to start a lighter execution shell for task runs.
+# 6.0.3 (June 2026)
+- Added headless mode support for the PDMShell add-in and command-line script automation. Use `pdmcli.exe -headless` or enable **Headless** in PDMShell settings to start a lighter execution shell for automation runs.
 - Added the **Error Mode** setting. `Default` mode reports missing-file delete operations as warnings, while `Aggressive` mode keeps the previous hard-error behavior.
-- Added `runscript -items` for TaskScript and other command-line integrations that pass file and folder ID pairs.
+- Added `runscript -items` for the PDMShell add-in and other command-line integrations that pass file and folder ID pairs.
 - Updated `runscript` so `items`, `filePath`, and `search` use the same placeholder and PDM variable evaluation path as visual Run command execution.
 - Added command-line `.pdmshell` detection so `pdmcli.exe "script.pdmshell"` runs the script and forwards supported parameters such as `-items`.
 - Added `pdmcli.exe -edit "script.pdmshell"` support to open a script in the visual editor without executing it.
 - Protected unsaved visual editor work by hydrating the editor from `runscript` only when the current editor is empty or clean.
+- Updated the PDMShell add-in so scripts can be configured for permitted users and groups, guarded by conditions, exposed from the right-click command menu, and triggered from PDM event hooks.
 - Added a default check-in comment value of `Checked by PDMShell` in the visual command builder.
 - Updated the installer package for this release.
 
@@ -79,8 +80,8 @@ then **install** the latest version. **Do not update installed version.**
 - `dir`: Fixed search bug causing dir listing to be incomplete. 
 
 # 3.0.56 (2026-03-22)
-- Enhanced `runscript` and fixed minor bugs in TaskScript. 
-- Added a new TaskScript demo
+- Enhanced `runscript` and fixed minor bugs in the PDMShell add-in. 
+- Added a new PDMShell add-in demo
 # 3.0.55 (2026-03-20)
 - Added a quick access button to PDMShell AI assistant
 # 3.0.54 (2026-03-20)
@@ -102,7 +103,7 @@ then **install** the latest version. **Do not update installed version.**
 
 # 3.0.48 (2026-03-15)
 - Minor change to `addtovault`: existing files found during add will be added to results file from parameter `csv`.
-- Added TaskScript add-in to run tasks with PDMShell (Similar to convert task). 
+- Added the PDMShell add-in to run scripts from PDM. 
 
 # 3.0.47 (2026-03-07)
 - Added `edit` token to search. This will force a check out and check-in when using a PDM `-search` during any command. 

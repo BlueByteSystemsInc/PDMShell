@@ -807,6 +807,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/pdmshell-addin-script-editor.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-addin-script-editor.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell.gif",
       "output": {
         "resource": {
