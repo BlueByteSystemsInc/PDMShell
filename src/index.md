@@ -9,67 +9,123 @@ description: PowerShell like commandline interpreter and data migration tool for
     background-color: #121212;
     color: #e0e0e0;
     font-family: Arial, sans-serif;
+    margin: 0;
   }
-  h2 {
-    color: #bb86fc;
+
+  h1, h2, h3 {
+    color: #ffffff;
   }
+
   p {
-    color: #e0e0e0;
+    color: #d9d9d9;
+    line-height: 1.55;
   }
+
   a {
     color: #bb86fc;
     text-decoration: none;
   }
+
   a:hover {
     text-decoration: underline;
   }
-  .container {
+
+  .home-hero {
+    background: #171717;
+    border: 1px solid #2d2d2d;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px auto 28px;
+    max-width: 1120px;
+  }
+
+  .home-eyebrow {
+    color: #bb86fc;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .home-title {
+    font-size: 38px;
+    line-height: 1.15;
+    margin: 10px 0 14px;
+  }
+
+  .home-lede {
+    color: #e7e7e7;
+    font-size: 18px;
+    max-width: 860px;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin: 24px 0 6px;
+  }
+
+  .hero-image {
+    border: 1px solid #343434;
+    border-radius: 8px;
+    display: block;
+    margin: 0 0 24px;
+    max-width: 100%;
+  }
+
+  .feature-card {
+    background-color: #1f1f1f;
+    border: 1px solid #343434;
+    border-radius: 8px;
+    padding: 18px;
+  }
+
+  .feature-card h2 {
+    color: #ffffff;
+    font-size: 22px;
+    margin: 0 0 10px;
+  }
+
+  .feature-card p {
+    margin: 0 0 14px;
+  }
+
+  .home-actions {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px 0;
+    gap: 12px;
+    margin-top: 22px;
   }
-    
-  .card {
-    background-color: #1f1f1f;
-    border: 1px solid #333;
+
+  .download-button,
+  .secondary-button {
     border-radius: 8px;
-    margin: 10px;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-  }
-  .card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  .video-container {
-    background-color: black;
-    width: 100%;
- padding: 10px;
-      margin: auto;
-    text-align: center;
-  }
-  .video-container video {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 8px;
-  }
-  .download-button {
     display: inline-block;
+    font-weight: bold;
+    padding: 11px 18px;
+  }
+
+  .download-button {
     background-color: #bb86fc;
     color: #ffffff;
-    font-weight: bold;
     text-transform: uppercase;
-    padding: 10px 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-    text-align: center;
   }
+
   .download-button:hover {
     background-color: #9b6fcf;
+    text-decoration: none;
+  }
+
+  .secondary-button {
+    background-color: #262626;
+    border: 1px solid #454545;
+    color: #ffffff;
+  }
+
+  .secondary-button:hover {
+    border-color: #bb86fc;
+    text-decoration: none;
   }
 
   .quick-links {
@@ -77,20 +133,20 @@ description: PowerShell like commandline interpreter and data migration tool for
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 14px;
     margin: 28px auto;
-    max-width: 1100px;
+    max-width: 1120px;
   }
 
   .quick-link {
-    display: block;
     background-color: #1f1f1f;
     border: 1px solid #333;
     border-radius: 8px;
+    display: block;
     padding: 16px;
   }
 
   .quick-link strong {
-    display: block;
     color: #ffffff;
+    display: block;
     font-size: 18px;
     margin-bottom: 6px;
   }
@@ -101,189 +157,116 @@ description: PowerShell like commandline interpreter and data migration tool for
     line-height: 1.4;
   }
 
- body {
-      background-color: #1a1a1a;
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
+  .content-section {
+    margin: 30px auto;
+    max-width: 1120px;
+  }
+
+  .video-container {
+    background-color: #000000;
+    border: 1px solid #2d2d2d;
+    border-radius: 10px;
+    margin: 38px auto 0;
+    max-width: 1120px;
+    padding: 22px;
+    text-align: center;
+  }
+
+  .video-container iframe {
+    border-radius: 8px;
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .home-title {
+      font-size: 30px;
     }
 
-    .header-container {
-      display: flex;
-      padding: 10px;
-      margin: auto;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
+    .home-hero {
+      padding: 22px;
     }
-
-    .header-text {
-      color: white;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-      font-weight: 600;
-      font-size: 32px;
-      margin: auto;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      line-height: 1.4;
-      max-width: 600px;
-    }
-
-  
-
-    @media (max-width: 768px) {
-      .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-    
-    }
-
-
+  }
 </style>
 
+<div class="home-hero">
+  <div class="home-eyebrow">PDMShell for SOLIDWORKS PDM Professional</div>
+  <h1 class="home-title">Automate PDM with scripts, menus, event triggers, and a visual editor.</h1>
+  <p class="home-lede">
+    PDMShell is a command-line and automation platform for SOLIDWORKS PDM Professional. Use it for one-off commands, repeatable `.pdmshell` scripts, visual workflows, and Dispatch-style add-in automation directly inside PDM.
+  </p>
 
-<div class="video-container">
-<div class="header-container">
-   
-    <div class="header-text">
-      Best Commandline for <br>
-      SOLIDWORKS PDM Professional. 
+  <img class="hero-image" src="../images/pdmshell-addin-visual-editor.png" alt="PDMShell add-in Script Editor beside the PDMShell Visual Code Editor in SOLIDWORKS PDM Administration">
+
+  <div class="feature-grid">
+    <div class="feature-card">
+      <h2>PDMShell add-in</h2>
+      <p>Run scripts from PDM right-click menus and event trigger points, with permissions, conditions, placeholders, and headless execution.</p>
+      <a href="TASKSCRIPT.md">Read the add-in guide</a>
     </div>
+    <div class="feature-card">
+      <h2>Visual Code Editor</h2>
+      <p>Build, edit, validate, and reuse PDMShell scripts from a workflow-style visual canvas.</p>
+      <a href="visual-code-editor-4.md">Open the visual editor docs</a>
     </div>
- <iframe width="850" height="500" src="https://www.youtube.com/embed/UgNCkIuo-CM?si=h3U4PrZX-ES0bC8T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    
-  </video>
-<p style="color: #bbbbbb; margin:auto; font-family:  'Open Sans', sans-serif;">
-  A 29-min walkthrough of PDMShell covering the most commonly used commands
-</p>
+  </div>
+
+  <div class="home-actions">
+    <a href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell" class="download-button">Download PDMShell directly</a>
+    <a href="introduction.md" class="secondary-button">Start with the basics</a>
+  </div>
 </div>
-
-</div>
-<br>
-
-**PDMShell**, a command-line interpreter designed to streamline and automate tasks within **SOLIDWORKS PDM Professional**. We also provide helpful articles on PDM best practices and tooling. Before submitting a support ticket, we highly recommend reviewing the documentation and troubleshooting guides available on this site. Click on PDM Commands to get [started](../src/introduction.html).
-
-<br>
 
 <div class="quick-links">
-  <a class="quick-link" href="../src/introduction.html">
-    <strong>Start Here</strong>
-    <span>Learn the basics and run your first PDMShell commands.</span>
+  <a class="quick-link" href="TASKSCRIPT.md">
+    <strong>PDMShell add-in</strong>
+    <span>Configure PDM menu commands, event trigger points, conditions, and permissions.</span>
   </a>
-  <a class="quick-link" href="../src/HELP.html">
-    <strong>Command Reference</strong>
-    <span>Browse commands, parameters, and examples.</span>
-  </a>
-  <a class="quick-link" href="../src/scripting.html">
-    <strong>Scripting</strong>
-    <span>Automate repeated workflows with `.pdmshell` scripts.</span>
-  </a>
-  <a class="quick-link" href="../src/scripts/CHECKINALLFILES/CHECKINALLFILES.html">
-    <strong>Script Library</strong>
-    <span>Download ready-to-use PDMShell automation scripts.</span>
-  </a>
-  <a class="quick-link" href="../src/visual-code-editor-4.html">
+  <a class="quick-link" href="visual-code-editor-4.md">
     <strong>Visual Code Editor</strong>
     <span>Build and validate workflows on a visual canvas.</span>
   </a>
-  <a class="quick-link" href="../src/advancedsearch.html">
+  <a class="quick-link" href="HELP.md">
+    <strong>Command Reference</strong>
+    <span>Browse commands, parameters, and examples.</span>
+  </a>
+  <a class="quick-link" href="scripting.md">
+    <strong>Scripting</strong>
+    <span>Automate repeated workflows with `.pdmshell` scripts.</span>
+  </a>
+  <a class="quick-link" href="RUNSCRIPT.md">
+    <strong>RunScript</strong>
+    <span>Run `.pdmshell` files from PDMShell, `pdmcli.exe`, or integrations.</span>
+  </a>
+  <a class="quick-link" href="advancedsearch.md">
     <strong>Advanced Search</strong>
     <span>Use search tokens, variables, favorites, and recursive filters.</span>
   </a>
 </div>
 
-<div align="center">
-  <a href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell" class="download-button">DOWNLOAD PDMSHELL DIRECTLY</a>
+<div class="content-section">
+  <h2>Need more power? Choose Premium.</h2>
+  <p>Upgrade to the <strong>Premium Version</strong> of PDMShell to unlock advanced automation features for PDM administrators and power users.</p>
+
+  <ul>
+    <li>Use the <strong>PDMShell add-in</strong> to run scripts from PDM command menus and event trigger points.</li>
+    <li>Build workflows with the <strong>Visual Code Editor</strong>.</li>
+    <li>Call PDMShell directly from other applications.</li>
+    <li>Run PDMShell as a workflow transition action.</li>
+    <li>Process an unlimited number of files.</li>
+  </ul>
+
+  <p><a href="https://bluebyte.biz/product/pdmshell">Buy the Premium Version Now</a></p>
+  <p>Need more information or want to discuss how PDMShell can fit into your workflow? <a href="https://calendly.com/bluebyte">Schedule a call</a>.</p>
 </div>
 
-<br>
-<!-- 
-<div style="text-align: center;">
-  <h2 style="color: #bb86fc; margin-bottom: 10px;">PDMShell is free to download and use*.</h2>
-  <p style="color: #e0e0e0; font-family: Arial, sans-serif; margin: 0 auto; max-width: 800px;">
-    PDMShell is free to use and allows you to test all commands with some limits without committing to a license. To buy a license, please visit the 
-    <a href="https://bluebyte.biz/product/pdmshell" style="color: #bb86fc; text-decoration: none;">Blue Byte Systems online shop</a>. Read details below.
-  </p>
+<div class="video-container">
+  <h2>PDMShell walkthrough</h2>
+  <iframe width="850" height="500" src="https://www.youtube.com/embed/UgNCkIuo-CM?si=h3U4PrZX-ES0bC8T" title="PDMShell walkthrough video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p>A 29-minute walkthrough of PDMShell covering the most commonly used commands.</p>
 </div>
-
-<br>
-
- 
-<div class="container" style="flex-direction: column; align-items: center;">
-  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
-    <h2 style="color: #ffffff;">Find Any File Archive Path</h2>
-    <p style="color: #bbbbbb;">Learn how to manage archive paths effectively in PDMShell.</p>
-    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/archive path.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
-  </div>
- 
-  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
-    <h2 style="color: #ffffff;">Edit Datacards like a Boss</h2>
-    <p style="color: #bbbbbb;">Change datacard values for one of many files using the SetVar command.</p>
-    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/setvar.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
-  </div>
-
-  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
-    <h2 style="color: #ffffff;">Change Directory</h2>
-    <p style="color: #bbbbbb;">Understand how to use the CD command to navigate directories in PDMShell.</p>
-    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
-  </div>
-
-  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
-    <h2 style="color: #ffffff;">Checkout, 1, 10 or 1000 Files In One Line</h2>
-    <p style="color: #bbbbbb;">Discover how to use the CHECKOUT command to check out files from the vault.</p>
-    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/checkout.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
-  </div>
-
-  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
-    <h2 style="color: #ffffff;">List Directory Content</h2>
-    <p style="color: #bbbbbb;">Explore the DIR command to list files and folders in the current directory.</p>
-    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/dir.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
-  </div>
-
-  
-  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
-    <h2 style="color: #ffffff;">Concurrent PDM Sessions</h2>
-    <p style="color: #bbbbbb;">Learn how to use the  LOGIN command to authenticate with the vault.</p>
-    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/login.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
-  </div>
-
-  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
-    <h2 style="color: #ffffff;">Options</h2>
-    <p style="color: #bbbbbb;">Understand the various options available in PDMShell to customize your experience.</p>
-    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/options.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
-  </div>
-
-  <div class="card" style="width: 100%; max-width: 800px; background-color: #000000; border-radius: 12px; padding: 20px; margin: 10px;">
-    <h2 style="color: #ffffff;">Power Search Capabilitiy</h2>
-    <p style="color: #bbbbbb;">Learn how to use the Search command to find files and folders efficiently.</p>
-    <video src="https://bluebyte.biz/wp-content/pdmshellvideos/search.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
-  </div>
-
-<div align="center">
-  <a href="https://apps.microsoft.com/detail/XPFFXTTJDCW85C?hl=en-US&gl=CA&ocid=pdpshare" target="_blank">
-    <img src="../images/microsoftstore.png" alt="Microsoft Store" width="300" height="150">
-  </a>
-</div> -->
-
-## Need more power? Choose Premium.
-
-Upgrade to the **Premium Version** of PDMShell to unlock advanced features that take your productivity to the next level. With the Premium Version, you can:
-
-- Call PDMShell directly from other applications, enabling seamless integration into your workflows.
-- Run PDMShell as a **workflow transition action**, automating complex tasks and saving time.
-- Process **unlimited** number of files. Free version caps at items per search.
-
-Take advantage of these powerful features to streamline your PDM operations and enhance your team's efficiency.
-
-[Buy the Premium Version Now](https://bluebyte.biz/product/pdmshell)
-
-Need more information or want to discuss how PDMShell can fit into your workflow? Schedule a call with us today:  
-[Schedule a Call](https://calendly.com/bluebyte)
 
 ## Contact Us
 
 For more information or to get in touch with our support team, please refer to the [Contact Us](https://bluebyte.biz/contact) page.
 
 *See EULA page for licensing requirements and restrictions for SOLIDWORKS partners and resellers.
-

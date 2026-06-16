@@ -1,111 +1,62 @@
 ---
-description: Documentation page of the PDMShell add-in.
+description: Overview of the PDMShell add-in for SOLIDWORKS PDM.
 title: PDMShell add-in | PDMShell | SOLIDWORKS PDM
 ---
-## Overview
+# PDMShell add-in
 
-<div style="position: relative; padding-bottom: 42.1875%; height: 0;"><iframe src="https://www.loom.com/embed/9503c0835345445aa71254736e07e402" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+The **PDMShell add-in** lets SOLIDWORKS PDM administrators run `.pdmshell` scripts directly from PDM menus and PDM event trigger points. It is designed for the same class of automation normally handled with Dispatch: user commands, event-driven rules, file and folder automation, condition checks, and administrator-controlled deployment.
 
----
-
-The **PDMShell add-in** is a SOLIDWORKS PDM add-in developed by **Blue Byte Systems Inc.** that lets administrators run **PDMShell scripts** from PDM, similar to Dispatch but with PDMShell's visual script editor and command engine.
+Instead of building automation from a fixed list of Dispatch actions, the add-in runs PDMShell scripts. This gives administrators access to the PDMShell command engine, the visual script editor, dynamic placeholders, PDM variables, and headless execution through `pdmcli.exe`.
 
 >[!Note]
-> The PDMShell add-in is found in your Blue Byte Systems Inc [account](https://bluebyte.biz/account) for users with the premium version (active license). You can also download the add-in using [PDMDeploy](https://docs.bluebyte.biz/src/cdpdm.html).
-
-With the PDMShell add-in, administrators can create configurable scripts that run custom `.pdmshell` workflows against selected files and folders in the vault.
+> The PDMShell add-in is included with the premium version. You can download it from your Blue Byte Systems Inc [account](https://bluebyte.biz/account) or deploy it with [PDMDeploy](https://docs.bluebyte.biz/src/cdpdm.html).
 
 ![PDMShell add-in script editor](../images/pdmshell-addin-script-editor.png)
 
-## Script Configuration
+## What you can automate
 
-Each script can be configured with:
+- Add right-click commands such as `PDMShell\Rename Files`.
+- Run scripts before or after checkout, check-in, undo checkout, state change, add, delete, move, copy, rename, get, label, card button, and folder commands.
+- Restrict scripts to selected PDM users or groups.
+- Validate conditions before a script runs.
+- Pass selected files and folders to PDMShell with `runscript -items`.
+- Test condition values with a message before enabling production automation.
 
-- permitted users and groups
-- conditions that decide whether the script is available or allowed to run
-- right-click command menu text
-- PDM command hooks and event trigger points
+## Documentation
 
-This lets the PDMShell add-in cover workflows that are normally handled by Dispatch, while keeping the script logic in PDMShell.
+| Article | Use it for |
+| --- | --- |
+| [Installation and access](addin/installation.md) | Loading the add-in and opening the Script Editor |
+| [Script Editor](addin/script-editor.md) | Creating, cloning, saving, and editing script entries |
+| [Permissions](addin/permissions.md) | Limiting scripts to users and groups |
+| [Conditions](addin/conditions.md) | Building wait-style condition expressions |
+| [Command menu scripts](addin/command-menu.md) | Adding right-click PDM menu commands |
+| [Event trigger points](addin/trigger-points.md) | Running scripts from PDM command hooks |
+| [Placeholders and command context](addin/placeholders.md) | Using file, folder, command, and variable placeholders |
+| [Runtime execution](addin/runtime-execution.md) | Understanding `pdmcli.exe`, headless mode, and `-items` |
+| [Testing and troubleshooting](addin/troubleshooting.md) | Validating scripts and diagnosing common issues |
 
-## Headless Mode
+## Dispatch comparison
 
-The PDMShell add-in can run PDMShell in headless mode for add-in automation. Headless mode starts a lighter `PDMShell Headless` shell, hides visual-editor controls that are not needed while a script is running, and skips visual-only startup work.
+Dispatch action scripts typically combine triggers, conditions, variables, and actions. The PDMShell add-in uses a similar administrator workflow, but the action body is a PDMShell script.
 
-Use headless mode when a script is launched by a PDM task or another unattended automation flow:
+| Dispatch idea | PDMShell add-in equivalent |
+| --- | --- |
+| Action script | A configured PDMShell script |
+| Administrative action | Script configured in the Script Editor |
+| Menu command activation | Menu trigger with command menu text |
+| PDM event activation | Trigger points such as checkout, check-in, state change, add, delete, move, copy, rename, and folder events |
+| Conditions | PDMShell wait-style condition expression |
+| Variables | PDMShell placeholders and PDM variable placeholders |
+| Shell execute action | `pdmcli.exe` running the configured `.pdmshell` script |
+| Debugging a script | Condition test message, visual script editor, and standalone `pdmcli.exe -edit` |
 
-```bash
-pdmcli.exe -headless "C:\Vault\Scripts\CreateECO.pdmshell" -items "123,45;678,90"
-```
+## Recommended rollout
 
-You can also enable **Headless** in PDMShell settings so add-in and other command-line launches use headless mode when no command-line headless argument is supplied.
-
-## Key Features
-
-- Execute PDMShell commands from PDM right-click menus
-- Execute PDMShell commands in response to PDM event triggers
-- Restrict scripts to selected users and groups
-- Add conditions that control when scripts are available or can run
-- Dynamic script editing and variable binding
-- Reuses existing scripts stored locally or downloaded
-- Supports file filtering based on extensions
-- Evaluates placeholders like `$fileName`, `$localPath`, and more
-- Handles script failure with detailed logging
-
-
-## Remarks
-
-- You can include the extensions: `sldprt;sldasm;slddrw` are the default value.
-- The PDMShell add-in will run PDMShell sessions on the affected documents.
-- Do not forget to set the Command Menu tab.
-
-## Placeholder Variables
-
-The PDMShell add-in supports dynamic variables that are replaced at runtime for each selected file. Below is a list of available placeholders:
-
-| Placeholder                  | Description                                                      |
-|-----------------------------|------------------------------------------------------------------|
-| `$localPath`                | Full local path to the selected file                            |
-| `$fileName`                 | File name (including extension)                                 |
-| `$fileNameWithoutExtension` | File name without the extension                                 |
-| `$name`                     | Alias for file name                                             |
-| `$extension`                | File extension                                                  |
-| `$id`                       | Internal PDM file ID                                            |
-| `$GUID`                     | Unique Identifier                                               |
-| `$taskName`                 | Name of the running task                                        |
-| `$folderPath`               | Full local path to the file's parent folder                     |
-| `$folderID`                 | Internal PDM folder ID                                          |
-| `$vaultName`                | Name of the vault the file belongs to                           |
-| `$vaultRootFolder`          | Local root path of the vault                                    |
-| `$(Variable.Configuration)` | Value of a custom PDM variable for a given configuration        |
-| `$machineName`              | Name of the current machine                                     |
-| `$computerName`             | Alias for machine name                                          |
-| `$userName`                 | Logged-in PDM user name                                         |
-| `$windowsUser`              | Windows user name                                               |
-| `$userDomain`               | Windows domain name                                             |
-| `$domain`                   | Alias for domain name                                           |
-| `$yyyy`                     | Current year (4 digits)                                         |
-| `$yy`                       | Current year (2 digits)                                         |
-| `$MM`                       | Month (2 digits)                                                |
-| `$M`                        | Month (no leading zero)                                         |
-| `$dd`                       | Day (2 digits)                                                  |
-| `$d`                        | Day (no leading zero)                                           |
-| `$month`                    | Full month name (e.g., January)                                 |
-| `$mon`                      | Short month name (e.g., Jan)                                    |
-| `$day`                      | Full day name (e.g., Monday)                                    |
-| `$dayShort`                 | Short day name (e.g., Mon)                                      |
-| `$HH`                       | Hour (24-hour format)                                           |
-| `$hh`                       | Hour (12-hour format)                                           |
-| `$mm`                       | Minutes                                                        |
-| `$ss`                       | Seconds                                                        |
-| `$tt`                       | AM/PM designator                                               |
-| `$timestamp`                | Combined date and time (yyyyMMdd_HHmmss)                        |
-| `$date`                     | Current date (yyyy-MM-dd)                                       |
-| `$time`                     | Current time (HH-mm-ss)                                         |
-
-## $(Variable.Configuration)
-- Use `@` for the `@` tab. Example: `$(Description.@)`
-- Use empty string for files with no configurations. Example: `$(Description. )`
-
-
- 
+1. Build and test the `.pdmshell` script outside the add-in.
+2. Add the script in the Script Editor.
+3. Enable the condition test message while validating conditions.
+4. Configure permissions for a small administrator group first.
+5. Enable a command menu or trigger point.
+6. Test against a small set of files.
+7. Expand permissions after the automation behaves as expected.

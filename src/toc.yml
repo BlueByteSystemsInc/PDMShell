@@ -34,9 +34,29 @@
   - name: "Advanced Search:"
   - name: Using Advanced Search
     href: advancedsearch.md 
-  - name: "PDMShell add-in:"
-  - name: Using the PDMShell add-in
-    href: TASKSCRIPT.md
+  - name: PDMShell add-in
+    expanded: true
+    items:
+    - name: Overview
+      href: TASKSCRIPT.md
+    - name: Installation and access
+      href: addin/installation.md
+    - name: Script Editor
+      href: addin/script-editor.md
+    - name: Permissions
+      href: addin/permissions.md
+    - name: Conditions
+      href: addin/conditions.md
+    - name: Command menu scripts
+      href: addin/command-menu.md
+    - name: Event trigger points
+      href: addin/trigger-points.md
+    - name: Placeholders and command context
+      href: addin/placeholders.md
+    - name: Runtime execution
+      href: addin/runtime-execution.md
+    - name: Testing and troubleshooting
+      href: addin/troubleshooting.md
   - name: "Invoke a PDMShell Script From Transition Action:"
   - name: From Workflow Transitions
     href: scriptsfromtransition.md

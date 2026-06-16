@@ -4,7 +4,7 @@
     "changefreq": "weekly",
     "priority": 1
   },
-  "source_base_path": "C:/Users/jlili/source/repos/BlueByteSystemsInc/PDMShell.Docs",
+  "source_base_path": "C:/Users/jlili/source/repos/BlueByteSystemsInc/PDMShell",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -817,6 +817,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/pdmshell-addin-visual-editor.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-addin-visual-editor.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell.gif",
       "output": {
         "resource": {
@@ -1251,16 +1261,6 @@
       "output": {
         ".html": {
           "relative_path": "src/EVAL.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "src/EXPORT.md",
-      "output": {
-        ".html": {
-          "relative_path": "src/EXPORT.html"
         }
       },
       "version": ""
@@ -1757,6 +1757,96 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/addin/command-menu.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/addin/command-menu.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/addin/conditions.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/addin/conditions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/addin/installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/addin/installation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/addin/permissions.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/addin/permissions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/addin/placeholders.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/addin/placeholders.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/addin/runtime-execution.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/addin/runtime-execution.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/addin/script-editor.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/addin/script-editor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/addin/trigger-points.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/addin/trigger-points.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/addin/troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/addin/troubleshooting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/advancedsearch.md",
       "output": {
         ".html": {
@@ -1801,6 +1891,16 @@
       "output": {
         ".html": {
           "relative_path": "src/eula.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/export.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/export.html"
         }
       },
       "version": ""

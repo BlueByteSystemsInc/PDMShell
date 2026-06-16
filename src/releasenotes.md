@@ -8,17 +8,26 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
-# 6.0.3 (June 2026)
-- Added headless mode support for the PDMShell add-in and command-line script automation. Use `pdmcli.exe -headless` or enable **Headless** in PDMShell settings to start a lighter execution shell for automation runs.
-- Added the **Error Mode** setting. `Default` mode reports missing-file delete operations as warnings, while `Aggressive` mode keeps the previous hard-error behavior.
-- Added `runscript -items` for the PDMShell add-in and other command-line integrations that pass file and folder ID pairs.
-- Updated `runscript` so `items`, `filePath`, and `search` use the same placeholder and PDM variable evaluation path as visual Run command execution.
-- Added command-line `.pdmshell` detection so `pdmcli.exe "script.pdmshell"` runs the script and forwards supported parameters such as `-items`.
+# 4.0.7 (June 2026)
+- Added the PDMShell add-in for SOLIDWORKS PDM.
+- Added the Script Editor for configuring PDMShell scripts from inside PDM.
+- Added script permissions for permitted users and groups.
+- Added script conditions that control whether a script should run for the selected file, folder, or command context.
+- Added right-click command menu support so configured scripts can appear as PDM menu commands.
+- Added PDM event trigger points so scripts can run on supported PDM command hooks.
+- Added condition test messages to help administrators validate scripts before production use.
 - Added `pdmcli.exe -edit "script.pdmshell"` support to open a script in the visual editor without executing it.
+- Added headless mode support for add-in automation. Use `pdmcli.exe -headless` or enable **Headless** in PDMShell settings to start a lighter execution shell for automation runs.
 - Protected unsaved visual editor work by hydrating the editor from `runscript` only when the current editor is empty or clean.
-- Updated the PDMShell add-in so scripts can be configured for permitted users and groups, guarded by conditions, exposed from the right-click command menu, and triggered from PDM event hooks.
 - Added a default check-in comment value of `Checked by PDMShell` in the visual command builder.
 - Updated the installer package for this release.
+
+# 4.0.6 (06/12/2026)
+- Enhanced script execution for command-line and automation scenarios.
+- Added `runscript -items` for integrations that pass file and folder ID pairs.
+- Updated `runscript` so `items`, `filePath`, and `search` use the same placeholder and PDM variable evaluation path as visual Run command execution.
+- Added command-line `.pdmshell` detection so `pdmcli.exe "script.pdmshell"` runs the script and forwards supported parameters such as `-items`.
+- Added the **Error Mode** setting. `Default` mode reports missing-file delete operations as warnings, while `Aggressive` mode keeps the previous hard-error behavior.
 
 # 4.0.5 (06/10/2026)
 - Enhanced script processing logic.
