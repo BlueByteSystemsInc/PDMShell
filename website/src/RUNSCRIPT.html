@@ -279,7 +279,7 @@ pdmcli.exe &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -edit
 <h2 id="example">Example</h2>
 <p>The source script can use file placeholders and conditions. When the script is run for multiple items, these lines are evaluated for each target item.</p>
 <pre><code class="lang-pdmshell">RunTask -filePath &quot;$localPath&quot; -taskName &quot;Publish PDF &amp; DXF&quot;
-wait -conditions &quot;$folderPath\$fileNameWithoutExtension.pdf exists&quot; -timeout 500
+until -conditions &quot;$folderPath\$fileNameWithoutExtension.pdf exists&quot; -timeout 500
 </code></pre>
 <h2 id="free-version-limit">Free version limit</h2>
 <p>The free version is limited to 10 lines per script.</p>

@@ -6,7 +6,7 @@ title: Conditions | PDMShell add-in
 
 The **Conditions** section controls whether a script should run for the current file, folder, or command context.
 
-Conditions use the same expression style as the PDMShell [wait](../WAIT.md) command.
+Conditions use the same expression style as the PDMShell [until](../UNTIL.md) command.
 
 ## Supported condition features
 

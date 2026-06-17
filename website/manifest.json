@@ -1327,6 +1327,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/GLOBALVARIABLES.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/GLOBALVARIABLES.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/HELP.md",
       "output": {
         ".html": {
@@ -1681,6 +1691,16 @@
       "output": {
         ".html": {
           "relative_path": "src/UNDOCHECKOUT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/UNTIL.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/UNTIL.html"
         }
       },
       "version": ""

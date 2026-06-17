@@ -20,6 +20,8 @@ then **install** the latest version. **Do not update installed version.**
 - Added headless mode support for add-in automation. Use `pdmcli.exe -headless` or enable **Headless** in PDMShell settings to start a lighter execution shell for automation runs.
 - Protected unsaved visual editor work by hydrating the editor from `runscript` only when the current editor is empty or clean.
 - Added a default check-in comment value of `Checked by PDMShell` in the visual command builder.
+- Changed `wait` to a fixed-duration pause and moved condition polling to the new [until](UNTIL.md) command.
+- Added session global variables with `setglobal`, `getglobal`, `clearglobal`, and `${global.Name}` evaluation.
 - Updated the installer package for this release.
 
 # 4.0.6 (06/12/2026)

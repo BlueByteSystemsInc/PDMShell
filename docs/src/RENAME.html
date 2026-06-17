@@ -122,12 +122,17 @@
 <li><code>$extension</code> - The file extension.</li>
 </ul>
 <p>Additionally, you can use variables enclosed in square brackets (e.g., <code>[VariableName]</code>) to include values from other variables.</p>
+<p>String functions are also supported after placeholders are evaluated. For example, <code>${replace($nameWithoutExtension, &quot; &quot;, &quot;_&quot;)}</code> replaces spaces in the file name before the rename value is written. Use <code>${before($nameWithoutExtension, &quot;-&quot;)}</code> to keep only the part of the name before a separator.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Please read more information about placeholder evaluation <a href="EVAL.html">here</a>.</p>
 </div>
 <h2 id="examples-1">EXAMPLES:</h2>
 <p>If you use the value <code>&quot;$filename_$date_$version$extension&quot;</code>, it will be replaced with the file name, current date, and version, resulting in something like <code>&quot;oldname_10-12-2023_3&quot;</code>.</p>
+<pre><code class="lang-bash">rename -filePath &quot;Part 123 Draft.sldprt&quot; -value &quot;${left(${replace($nameWithoutExtension, \&quot; \&quot;, \&quot;_\&quot;)}, 12)}$extension&quot;
+
+rename -filePath &quot;ABC-123.sldprt&quot; -value &quot;${before($nameWithoutExtension, \&quot;-\&quot;)}$extension&quot;
+</code></pre>
 
 </article>
 

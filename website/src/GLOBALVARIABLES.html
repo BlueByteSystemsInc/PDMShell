@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>RENAME Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>Global Variables | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="RENAME Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="Global Variables | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Renames one file or multiple files found by search.">
+      <meta name="description" content="Store and reuse session global variables in PDMShell scripts.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/RENAME.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/GLOBALVARIABLES.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,59 +85,56 @@
         </div>
 
         <article data-uid="">
-<h1 id="rename-command-documentation">RENAME Command Documentation</h1>
+<h1 id="global-variables">Global Variables</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
-<p>Renames a specified file.</p>
-<h2 id="syntax">SYNTAX:</h2>
-<pre><code class="lang-bash">rename -filePath -value -search
+<p>Global variables store temporary values for the current PDMShell session or script run. They are not SOLIDWORKS PDM datacard variables and they are not written to the vault.</p>
+<p>Use global variables when several commands need the same value, or when a script needs to calculate a value once and reuse it later.</p>
+<h2 id="commands">Commands</h2>
+<pre><code class="lang-pdmshell">setglobal -name Project -value &quot;ABC-100&quot;
+getglobal -name Project
+getglobal
+clearglobal -name Project
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
-<ul>
-<li><p><code>filePath</code>: The filerename.</p>
-</li>
-<li><p><code>directory</code>: The directory to rename.</p>
-</li>
-<li><p><code>value</code>: The new name for the file. <strong>YOU MUST INCLUDE THE EXTENSION</strong></p>
-</li>
-<li><p><code>search</code>: The search operation to use.</p>
-</li>
-</ul>
-<h2 id="examples">EXAMPLES:</h2>
-<pre><code class="lang-bash">rename -filePath &quot;oldname.sldprt&quot; -val &quot;newname.sldprt&quot;
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-pdmshell">setglobal -name variableName -value value
+getglobal [-name variableName]
+clearglobal -name variableName
 </code></pre>
-<h2 id="remarks">REMARKS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
-<li>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
+<li><code>name</code>: Global variable name. Names must start with a letter or underscore and can contain letters, numbers, and underscores.</li>
+<li><code>value</code>: Value to store for the global variable.</li>
 </ul>
-<h2 id="value-evaluation">VALUE EVALUATION:</h2>
-<p>The <code>value</code> parameter gets evaluated by PDMShell. PDMShell allows you to use placeholders in the new name, which will be replaced with actual values from the file. This can be useful to dynamically generate new names based on file properties or other variables. The following placeholders are supported:</p>
-<ul>
-<li><code>$filename</code> - The file name without extension.</li>
-<li><code>$id</code> - The file ID.</li>
-<li><code>$revision</code> - The current revision of the file.</li>
-<li><code>$date</code> - The current date.</li>
-<li><code>$time</code> - The current time.</li>
-<li><code>$version</code> - The current version of the file.</li>
-<li><code>$extension</code> - The file extension.</li>
-</ul>
-<p>Additionally, you can use variables enclosed in square brackets (e.g., <code>[VariableName]</code>) to include values from other variables.</p>
-<p>String functions are also supported after placeholders are evaluated. For example, <code>${replace($nameWithoutExtension, &quot; &quot;, &quot;_&quot;)}</code> replaces spaces in the file name before the rename value is written. Use <code>${before($nameWithoutExtension, &quot;-&quot;)}</code> to keep only the part of the name before a separator.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Please read more information about placeholder evaluation <a href="EVAL.html">here</a>.</p>
-</div>
-<h2 id="examples-1">EXAMPLES:</h2>
-<p>If you use the value <code>&quot;$filename_$date_$version$extension&quot;</code>, it will be replaced with the file name, current date, and version, resulting in something like <code>&quot;oldname_10-12-2023_3&quot;</code>.</p>
-<pre><code class="lang-bash">rename -filePath &quot;Part 123 Draft.sldprt&quot; -value &quot;${left(${replace($nameWithoutExtension, \&quot; \&quot;, \&quot;_\&quot;)}, 12)}$extension&quot;
+<h2 id="using-global-variables">Using Global Variables</h2>
+<p>Use <code>${global.Name}</code> inside evaluated command parameters.</p>
+<pre><code class="lang-pdmshell">setglobal -name Project -value &quot;ABC-100&quot;
+rename -filePath &quot;$localPath&quot; -value &quot;${global.Project}-$fileName&quot;
+setvar -variableName Description -filePath &quot;$localPath&quot; -value &quot;${global.Project} - $value&quot;
+</code></pre>
+<p>Global variables can also be used with string evaluation functions.</p>
+<pre><code class="lang-pdmshell">setglobal -name BaseName -value &quot;$fileNameWithoutExtension&quot;
+rename -filePath &quot;$localPath&quot; -value &quot;${replace(${global.BaseName},OLD,NEW)}.pdf&quot;
+</code></pre>
+<h2 id="wait-and-until">Wait And Until</h2>
+<p>Global variables work with <code>wait</code> and <code>until</code>.</p>
+<pre><code class="lang-pdmshell">setglobal -name Delay -value &quot;10&quot;
+wait -timeout &quot;${global.Delay}&quot;
 
-rename -filePath &quot;ABC-123.sldprt&quot; -value &quot;${before($nameWithoutExtension, \&quot;-\&quot;)}$extension&quot;
+setglobal -name ReadyFile -value &quot;C:\Temp\ready.txt&quot;
+until -conditions &quot;${global.ReadyFile} exists&quot; -timeout 60
 </code></pre>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>Global variable names are case-insensitive.</li>
+<li><code>getglobal</code> without <code>name</code> prints all currently set global variables.</li>
+<li>Unknown <code>${global.Name}</code> references are left unchanged so typos are visible.</li>
+<li>Global variables are cleared when the PDMShell session ends.</li>
+</ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/RENAME.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/GLOBALVARIABLES.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

@@ -69,6 +69,57 @@ The `value` parameter in supported commands can include placeholders that are dy
 - `$tempFolder`: User's local temp folder under App Data
 
 Literal `\n` sequences in evaluated values are converted to `Environment.NewLine`.
+
+---
+
+## Global Variables
+Session global variables use the `${global.Name}` syntax. They are set with `setglobal`, printed with `getglobal`, and cleared with `clearglobal`.
+
+```bash
+setglobal -name Project -value "ABC-100"
+rename -filePath "$localPath" -value "${global.Project}-$name"
+setvar -variableName Description -filePath "$localPath" -value "${global.Project} - $value"
+```
+
+Global variables are temporary and last only for the current PDMShell session or script run. See [Global Variables](GLOBALVARIABLES.md).
+
+---
+
+## String Functions
+Dynamic placeholders also support a small set of string functions. Functions are evaluated after placeholders such as `$value`, `$name`, and `[Variable]` have been resolved, so they can be used to manipulate the evaluated text.
+
+String functions use the `${...}` syntax:
+
+```bash
+${left($value, 5)}
+${replace($nameWithoutExtension, " ", "_")}
+${before($nameWithoutExtension, "-")}
+```
+
+Supported functions:
+
+| Function | Description |
+| --- | --- |
+| `${left(value, count)}` | Returns the first `count` characters. If `count` is longer than the value, the whole value is returned. |
+| `${right(value, count)}` | Returns the last `count` characters. If `count` is longer than the value, the whole value is returned. |
+| `${len(value)}` | Returns the number of characters in `value`. |
+| `${pos(value, search)}` | Returns the zero-based position of `search` in `value`, or `-1` when it is not found. |
+| `${replace(value, old, new)}` | Replaces all occurrences of `old` with `new`. |
+| `${before(value, search)}` | Returns the text before `search`. If `search` is not found, the original value is returned. |
+| `${after(value, search)}` | Returns the text after `search`. If `search` is not found, an empty string is returned. |
+
+String functions can be nested when the nested function also uses `${...}`:
+
+```bash
+${left(${replace($value, " ", "_")}, 10)}
+```
+
+For example, if `$value` is `ABC 123 DRAFT`, the expression above evaluates to `ABC_123_DR`.
+
+Unknown or invalid function expressions are left unchanged.
+
+When a full command value is wrapped in double quotes, escape quotes inside function arguments with `\"`.
+
 ---
 
 ## Using Variables in Dynamic Placeholders
@@ -82,3 +133,19 @@ Here’s an example of how to use dynamic placeholders in a command:
 ### Renaming a File
 ```bash
 rename -filePath 1.sldprt -value "$nameWithoutExtension_$yyyy$mm$dd$extension"
+```
+
+### Updating a Variable From Its Current Value
+```bash
+setvar -filePath file1.sldprt -variableName Description -value "${replace($value, \"DRAFT\", \"RELEASED\")}"
+```
+
+### Renaming With Nested String Functions
+```bash
+rename -filePath "Part 123 Draft.sldprt" -value "${left(${replace($nameWithoutExtension, \" \", \"_\")}, 12)}$extension"
+```
+
+### Renaming Everything Before a Separator
+```bash
+rename -filePath "ABC-123.sldprt" -value "${before($nameWithoutExtension, \"-\")}$extension"
+```

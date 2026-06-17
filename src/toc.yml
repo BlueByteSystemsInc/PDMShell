@@ -139,6 +139,8 @@
       href: GETVARFROMDB.md
     - name: Set variable value
       href: SETVAR.md
+    - name: Global variables
+      href: GLOBALVARIABLES.md
     - name: Get variable information
       href: INFOVAR.md
     - name: Create a new PDM variable
@@ -175,8 +177,10 @@
       href: RUNTASK.md
     - name: Run a PDM template
       href: RUNTEMPLATE.md
-    - name: Wait for conditions
+    - name: Wait for seconds
       href: WAIT.md
+    - name: Wait until conditions
+      href: UNTIL.md
     - name: Rebuild SOLIDWORKS files
       href: REBUILD.md
     - name: Process Toolbox flag

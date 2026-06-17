@@ -2,21 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Conditions | PDMShell add-in | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>Global Variables | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Conditions | PDMShell add-in | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="Global Variables | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Configure PDMShell add-in conditions with placeholders, variables, and nested groups.">
-      <link rel="icon" href="../../favicon.ico">
-      <link rel="stylesheet" href="../../public/docfx.min.css">
-      <link rel="stylesheet" href="../../public/main.css">
-      <meta name="docfx:navrel" content="../../toc.html">
-      <meta name="docfx:tocrel" content="../toc.html">
+      <meta name="description" content="Store and reuse session global variables in PDMShell scripts.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
       
-      <meta name="docfx:rel" content="../../">
+      <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/addin/conditions.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/GLOBALVARIABLES.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -30,7 +30,7 @@
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
 
-      <script type="module" src="./../../public/docfx.min.js"></script>
+      <script type="module" src="./../public/docfx.min.js"></script>
 
       <script>
         const theme = localStorage.getItem('theme') || 'auto'
@@ -43,8 +43,8 @@
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../images/fav.png" alt="PDMShell">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
             PDMShell
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,37 +85,56 @@
         </div>
 
         <article data-uid="">
-<h1 id="conditions">Conditions</h1>
+<h1 id="global-variables">Global Variables</h1>
 
-<p>The <strong>Conditions</strong> section controls whether a script should run for the current file, folder, or command context.</p>
-<p>Conditions use the same expression style as the PDMShell <a href="../UNTIL.html">until</a> command.</p>
-<h2 id="supported-condition-features">Supported condition features</h2>
-<ul>
-<li><code>and</code> and <code>or</code></li>
-<li>nested groups with parentheses</li>
-<li>file, folder, and process exists checks</li>
-<li>text comparisons such as equals, contains, starts with, ends with, and regex matches</li>
-<li>numeric comparisons</li>
-<li>PDMShell placeholders such as <code>$fileName</code>, <code>$localPath</code>, and <code>$folderPath</code></li>
-<li>PDM variables such as <code>$(Description.@)</code> or <code>$(Revision.@)</code></li>
-</ul>
-<h2 id="examples">Examples</h2>
-<pre><code class="lang-pdmshell">$localPath exists
-&quot;$(Description.@)&quot; contains &quot;ECO&quot;
-($folderPath\ready.pdf exists or $folderPath\ready.dxf exists) and &quot;$(State.@)&quot; equals &quot;Released&quot;
+<p>Global variables store temporary values for the current PDMShell session or script run. They are not SOLIDWORKS PDM datacard variables and they are not written to the vault.</p>
+<p>Use global variables when several commands need the same value, or when a script needs to calculate a value once and reuse it later.</p>
+<h2 id="commands">Commands</h2>
+<pre><code class="lang-pdmshell">setglobal -name Project -value &quot;ABC-100&quot;
+getglobal -name Project
+getglobal
+clearglobal -name Project
 </code></pre>
-<h2 id="condition-test-message">Condition test message</h2>
-<p>Enable <strong>Always show condition test message</strong> while building a script. This displays the condition expression and resolved values so you can confirm what PDM is passing into the script context.</p>
-<h2 id="related-articles">Related articles</h2>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-pdmshell">setglobal -name variableName -value value
+getglobal [-name variableName]
+clearglobal -name variableName
+</code></pre>
+<h2 id="parameters">Parameters</h2>
 <ul>
-<li><a href="placeholders.html">Placeholders and command context</a></li>
-<li><a href="troubleshooting.html">Testing and troubleshooting</a></li>
+<li><code>name</code>: Global variable name. Names must start with a letter or underscore and can contain letters, numbers, and underscores.</li>
+<li><code>value</code>: Value to store for the global variable.</li>
+</ul>
+<h2 id="using-global-variables">Using Global Variables</h2>
+<p>Use <code>${global.Name}</code> inside evaluated command parameters.</p>
+<pre><code class="lang-pdmshell">setglobal -name Project -value &quot;ABC-100&quot;
+rename -filePath &quot;$localPath&quot; -value &quot;${global.Project}-$fileName&quot;
+setvar -variableName Description -filePath &quot;$localPath&quot; -value &quot;${global.Project} - $value&quot;
+</code></pre>
+<p>Global variables can also be used with string evaluation functions.</p>
+<pre><code class="lang-pdmshell">setglobal -name BaseName -value &quot;$fileNameWithoutExtension&quot;
+rename -filePath &quot;$localPath&quot; -value &quot;${replace(${global.BaseName},OLD,NEW)}.pdf&quot;
+</code></pre>
+<h2 id="wait-and-until">Wait And Until</h2>
+<p>Global variables work with <code>wait</code> and <code>until</code>.</p>
+<pre><code class="lang-pdmshell">setglobal -name Delay -value &quot;10&quot;
+wait -timeout &quot;${global.Delay}&quot;
+
+setglobal -name ReadyFile -value &quot;C:\Temp\ready.txt&quot;
+until -conditions &quot;${global.ReadyFile} exists&quot; -timeout 60
+</code></pre>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>Global variable names are case-insensitive.</li>
+<li><code>getglobal</code> without <code>name</code> prints all currently set global variables.</li>
+<li>Unknown <code>${global.Name}</code> references are left unchanged so typos are visible.</li>
+<li>Global variables are cleared when the PDMShell session ends.</li>
 </ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/addin/conditions.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/GLOBALVARIABLES.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

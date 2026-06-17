@@ -105,7 +105,7 @@ The source script can use file placeholders and conditions. When the script is r
 
 ```pdmshell
 RunTask -filePath "$localPath" -taskName "Publish PDF & DXF"
-wait -conditions "$folderPath\$fileNameWithoutExtension.pdf exists" -timeout 500
+until -conditions "$folderPath\$fileNameWithoutExtension.pdf exists" -timeout 500
 ```
 
 ## Free version limit
