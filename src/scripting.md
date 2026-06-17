@@ -29,7 +29,7 @@ cd "\api\sandbox\fidget spinner"
 mkdir "$name-export-$date"
 
 # Export all SolidWorks part files to the new folder as STEP files
-export -search %.sldprt -directory "$name-export-$date" -extensions stp -name $namewithoutextension-$yyyy-$mm-$dd
+export -search %.sldprt -directory "$name-export-$date" -extensions stp -name $fileNameWithoutExtension-$yyyy-$mm-$dd
 
 # Change to the newly created export folder
 cd "$name-export-$date"

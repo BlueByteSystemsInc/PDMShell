@@ -115,7 +115,7 @@
 <ul>
 <li><code>$value</code>: Existing value of the variable. If the existing value is null or empty, this evaluates to an empty string.</li>
 <li><code>$name</code>: The file name with extension.</li>
-<li><code>$nameWithoutExtension</code> or <code>$fileNameWithoutExtension</code>: The file name without extension.</li>
+<li><code>$fileNameWithoutExtension</code>: The file name without extension.</li>
 <li><code>$extension</code>: The file extension.</li>
 <li><code>$id</code>: The file ID.</li>
 <li><code>$revision</code>: The current revision of the file (PDM revision, not the PDM variable).</li>
@@ -163,8 +163,8 @@ setvar -variableName Description -filePath &quot;$localPath&quot; -value &quot;$
 <p>Dynamic placeholders also support a small set of string functions. Functions are evaluated after placeholders such as <code>$value</code>, <code>$name</code>, and <code>[Variable]</code> have been resolved, so they can be used to manipulate the evaluated text.</p>
 <p>String functions use the <code>${...}</code> syntax:</p>
 <pre><code class="lang-bash">${left($value, 5)}
-${replace($nameWithoutExtension, &quot; &quot;, &quot;_&quot;)}
-${before($nameWithoutExtension, &quot;-&quot;)}
+${replace($fileNameWithoutExtension, &quot; &quot;, &quot;_&quot;)}
+${before($fileNameWithoutExtension, &quot;-&quot;)}
 </code></pre>
 <p>Supported functions:</p>
 <table>
@@ -218,16 +218,16 @@ ${before($nameWithoutExtension, &quot;-&quot;)}
 <h2 id="example-usage">Example Usage</h2>
 <p>Here’s an example of how to use dynamic placeholders in a command:</p>
 <h3 id="renaming-a-file">Renaming a File</h3>
-<pre><code class="lang-bash">rename -filePath 1.sldprt -value &quot;$nameWithoutExtension_$yyyy$mm$dd$extension&quot;
+<pre><code class="lang-bash">rename -filePath 1.sldprt -value &quot;$fileNameWithoutExtension_$yyyy$mm$dd$extension&quot;
 </code></pre>
 <h3 id="updating-a-variable-from-its-current-value">Updating a Variable From Its Current Value</h3>
 <pre><code class="lang-bash">setvar -filePath file1.sldprt -variableName Description -value &quot;${replace($value, \&quot;DRAFT\&quot;, \&quot;RELEASED\&quot;)}&quot;
 </code></pre>
 <h3 id="renaming-with-nested-string-functions">Renaming With Nested String Functions</h3>
-<pre><code class="lang-bash">rename -filePath &quot;Part 123 Draft.sldprt&quot; -value &quot;${left(${replace($nameWithoutExtension, \&quot; \&quot;, \&quot;_\&quot;)}, 12)}$extension&quot;
+<pre><code class="lang-bash">rename -filePath &quot;Part 123 Draft.sldprt&quot; -value &quot;${left(${replace($fileNameWithoutExtension, \&quot; \&quot;, \&quot;_\&quot;)}, 12)}$extension&quot;
 </code></pre>
 <h3 id="renaming-everything-before-a-separator">Renaming Everything Before a Separator</h3>
-<pre><code class="lang-bash">rename -filePath &quot;ABC-123.sldprt&quot; -value &quot;${before($nameWithoutExtension, \&quot;-\&quot;)}$extension&quot;
+<pre><code class="lang-bash">rename -filePath &quot;ABC-123.sldprt&quot; -value &quot;${before($fileNameWithoutExtension, \&quot;-\&quot;)}$extension&quot;
 </code></pre>
 
 </article>

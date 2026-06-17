@@ -77,7 +77,7 @@ An item-specific line is a line that contains a file, folder, vault, date/time, 
 | --- | --- |
 | `$localPath`, `$filePath` | Local path to the current file. |
 | `$fileName`, `$filename`, `$name` | Current file or folder name. |
-| `$fileNameWithoutExtension`, `$nameWithoutExtension` | File name without extension. |
+| `$fileNameWithoutExtension` | File name without extension. |
 | `$extension` | File extension. |
 | `$id` | Current file or folder ID. |
 | `$folderPath`, `$directory` | Current folder path. |

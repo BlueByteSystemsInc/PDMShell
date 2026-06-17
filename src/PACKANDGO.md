@@ -28,7 +28,7 @@ packg -source -directory [-search] [-includedrawings] [-recursive] [-prefix] [-s
   Destination folder where Pack and Go results will be saved.  
   Supports dynamic placeholders:
   - $filename
-  - $nameWithoutExtension
+  - $fileNameWithoutExtension
   - $directory
   - $date
   - $year

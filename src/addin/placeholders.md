@@ -10,7 +10,7 @@ The add-in evaluates placeholders for the current command context and the affect
 | --- | --- |
 | `$localPath`, `$filePath` | Local path of the current file, or folder path when the context is a folder |
 | `$fileName`, `$filename`, `$name` | Current file or folder name |
-| `$fileNameWithoutExtension`, `$nameWithoutExtension` | File name without extension |
+| `$fileNameWithoutExtension` | File name without extension |
 | `$extension` | File extension |
 | `$id` | Current file or folder ID |
 | `$folderPath`, `$directory` | Current folder path |

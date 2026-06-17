@@ -101,7 +101,7 @@ The `until` command supports dynamic placeholders in conditions. The most common
 | `$localPath` / `$filePath` | Local path of the current file, or folder path when the context is a folder. |
 | `$folderPath` / `$directory` | Local path of the file folder or current folder. |
 | `$fileName` / `$filename` / `$name` | File name with extension. |
-| `$fileNameWithoutExtension` / `$nameWithoutExtension` / `$namewithoutextension` | File name without extension. |
+| `$fileNameWithoutExtension` | File name without extension. |
 | `$extension` | File extension. |
 | `$id` | File or folder ID. |
 | `$version` | Current file version. |

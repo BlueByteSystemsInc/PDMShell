@@ -36,7 +36,7 @@ The `value` parameter in supported commands can include placeholders that are dy
 ### Placeholders for Files
 - `$value`: Existing value of the variable. If the existing value is null or empty, this evaluates to an empty string.
 - `$name`: The file name with extension.
-- `$nameWithoutExtension` or `$fileNameWithoutExtension`: The file name without extension.
+- `$fileNameWithoutExtension`: The file name without extension.
 - `$extension`: The file extension.
 - `$id`: The file ID.
 - `$revision`: The current revision of the file (PDM revision, not the PDM variable).
@@ -92,8 +92,8 @@ String functions use the `${...}` syntax:
 
 ```bash
 ${left($value, 5)}
-${replace($nameWithoutExtension, " ", "_")}
-${before($nameWithoutExtension, "-")}
+${replace($fileNameWithoutExtension, " ", "_")}
+${before($fileNameWithoutExtension, "-")}
 ```
 
 Supported functions:
@@ -132,7 +132,7 @@ Here’s an example of how to use dynamic placeholders in a command:
 
 ### Renaming a File
 ```bash
-rename -filePath 1.sldprt -value "$nameWithoutExtension_$yyyy$mm$dd$extension"
+rename -filePath 1.sldprt -value "$fileNameWithoutExtension_$yyyy$mm$dd$extension"
 ```
 
 ### Updating a Variable From Its Current Value
@@ -142,10 +142,10 @@ setvar -filePath file1.sldprt -variableName Description -value "${replace($value
 
 ### Renaming With Nested String Functions
 ```bash
-rename -filePath "Part 123 Draft.sldprt" -value "${left(${replace($nameWithoutExtension, \" \", \"_\")}, 12)}$extension"
+rename -filePath "Part 123 Draft.sldprt" -value "${left(${replace($fileNameWithoutExtension, \" \", \"_\")}, 12)}$extension"
 ```
 
 ### Renaming Everything Before a Separator
 ```bash
-rename -filePath "ABC-123.sldprt" -value "${before($nameWithoutExtension, \"-\")}$extension"
+rename -filePath "ABC-123.sldprt" -value "${before($fileNameWithoutExtension, \"-\")}$extension"
 ```

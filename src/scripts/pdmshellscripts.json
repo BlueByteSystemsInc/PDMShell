@@ -1,4 +1,4 @@
-﻿[
+[
     {
         "name":  "Rebuild SOLIDWORKS Document",
         "description":  "Rebuilds a SOLIDWORKS document through PDMShell.",
