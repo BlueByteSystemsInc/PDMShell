@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>KILL Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>KILL Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="KILL Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="KILL Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Stops a running process by name.">
       <link rel="icon" href="../favicon.ico">
@@ -85,27 +85,29 @@
         </div>
 
         <article data-uid="">
-<h1 id="kill-command-documentation">KILL Command Documentation</h1>
+<h1 id="kill-command">KILL Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>Kills a process.</p>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">kill -process 
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>programName</code>: The process to terminate (with extension).</li>
 </ul>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <pre><code class="lang-bash">kill sldworks.exe
 # terminates all open SOLIDWORKS sessions.
 </code></pre>
-<h2 id="remarks">REMARKS:</h2>
+<h2 id="remarks">Remarks</h2>
 <ul>
 <li>This command uses <code>taskkill</code> from the command line.</li>
 <li><strong>This command requires PDM to be run as an administrator</strong>.</li>
 <li>PDMShell adds a note called <code>ADMIN</code> in the top-right area of its window when it is open as admin.</li>
 </ul>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

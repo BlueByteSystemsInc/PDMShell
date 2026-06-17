@@ -75,6 +75,7 @@
   - name: Find All Part Numbers And Descriptions
     href: ALLPARTNUMBERSANDESCRIPTIONS.md
 - name: Commands
+  href: COMMANDS.md
   expanded: true
   items:
   - name: Vault
@@ -223,6 +224,8 @@
       href: PRINT.md
     - name: Search for files
       href: SEARCH.md
+    - name: Show message box
+      href: MSGBOX.md
     - name: Start a process
       href: START.md
     - name: Quit PDMShell

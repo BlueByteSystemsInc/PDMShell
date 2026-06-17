@@ -1,12 +1,11 @@
 ---
 description: Reads SOLIDWORKS custom and configuration properties using Document Manager and exports them to CSV.
-title: DOCMANPROPS Command Documentation | PDMShell | SOLIDWORKS PDM
+title: DOCMANPROPS Command | PDMShell | SOLIDWORKS PDM
 ---
 
 # DOCMANPROPS Command  
 
-## DESCRIPTION
-
+## Description
 The `docmanprops` command **exports and updates SOLIDWORKS file custom properties** without opening SOLIDWORKS.
 
 This command supports two primary modes:
@@ -21,15 +20,13 @@ This command supports two primary modes:
 
 ---
 
-# SYNTAX
-
+## Syntax
 ```bash
 docmanprops -directory <path> -csv <csvPath> [-recursive] [-configNames] [-update] [-refresh] [-extension]
 ```
 ---
 
-# PARAMETERS
-
+## Parameters
 ## `directory`
 
 Specifies the folder containing SOLIDWORKS files.
@@ -115,8 +112,7 @@ Example:
 Use `*.*` to include all files regardless of extension.
 --
 
-# CSV FORMAT
-
+## CSV Format
 The CSV contains the following columns:
 ```bash
 Folder  
@@ -139,10 +135,8 @@ C:\Vault\Part, C:\Vault\Part\Part1.SLDPRT, Part1, .SLDPRT, Default, Description,
 
 ---
 
-# EXPORT MODE
-
-## DESCRIPTION
-
+## Export Mode
+## Description
 Reads properties from files and writes them to CSV.
 
 Properties include:
@@ -154,19 +148,17 @@ Properties include:
 
 ---
 
-## EXAMPLE
+## Examples
 ```bash
 docmanprops -directory "C:\Vault\Parts" -csv "C:\temp\props.csv" -recursive
 ```
 
-## OUTPUT
+## Output
 ![export mode](/images/exportmode.png)
 ---
 
-# UPDATE MODE
-
-## DESCRIPTION
-
+## Update Mode
+## Description
 Reads CSV file and writes properties back into files.
 
 Features:
@@ -179,12 +171,12 @@ Features:
 
 ---
 
-## EXAMPLE
+## Examples
 ```bash
 docmanprops -csv "C:\temp\props.csv" -update
 ```
 
-## OUTPUT
+## Output
 ![updatemode](/images/refreshmode.png)
 
 
@@ -194,8 +186,7 @@ docmanprops -csv "C:\temp\props.csv" -update
 
 ---
 
-# SUCCESS AND ERROR TRACKING
-
+## Success And Error Tracking
 The CSV is updated during update:
 
 Success column:
@@ -215,4 +206,6 @@ Description,True,
 PartNumber,False,Configuration Default not found
 ```
 ---
- 
+
+## Availability
+Available since PDMShell 3.0.30.

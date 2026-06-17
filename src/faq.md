@@ -17,14 +17,15 @@ It is designed for administrators, developers, and power users who want to exten
 
 | Feature | **Free License** | **Premium License** |
 |----------|------------------|---------------------|
-| Max items processed per command | **5 items** | **Unlimited** |
-| Access to all `search` commands | ✅ Included | ✅ Included |
-| Workflow and transition integration | ❌ Not available | ✅ Available |
-| Technical support & updates | ❌ Not available | Priority |
-| Commercial use | ❌ Not available | ✅ Allowed |
+| `search` result limit | **5 items** | **Unlimited** |
+| `runscript` script length | **5 lines** | **Unlimited** |
+| Access to all `search` commands | Included, limited to 5 results | Included, unlimited |
+| Workflow and transition integration | Not available | Available |
+| Technical support & updates | Not available | Priority |
+| Commercial use | Not available | Allowed |
 
 The **Free License** is ideal for evaluation and lightweight tasks.  
-The **Premium License** unlocks full automation, workflow integration, and unlimited command processing.
+The **Premium License** unlocks full automation, workflow integration, unlimited search results, and unlimited scripting.
 
 ---
 
@@ -38,7 +39,7 @@ If you are updating from a previous version, uninstall the old one first to ensu
 
 ---
 
-## 4. Why are some commands marked as “N/A” or missing descriptions after an update?
+## 4. Why are some commands marked as N/A or missing descriptions after an update?
 This usually happens when PDMShell is updated over an existing installation without removing old files.
 
 ### Solution:
@@ -71,7 +72,7 @@ Please include your PDMShell version, command name, and error message when repor
 ---
 
 ## 8. Which commands are available in the Free version?
-All **search-related commands** and basic file utilities are free to use (limited to processing **5 items per run**).  
+Search-related commands and basic file utilities are free to use. In the Free edition, `search` returns up to **5 items** and `runscript` runs scripts up to **5 lines**.
 
 These commands are ideal for quick lookups, validation, and testing automation workflows before upgrading to Premium.
 

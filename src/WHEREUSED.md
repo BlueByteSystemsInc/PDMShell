@@ -1,11 +1,9 @@
 ---
 description: Lists the direct parent files that reference a file.
-title: WHEREUSED Command Documentation | PDMShell | SOLIDWORKS PDM
+title: WHEREUSED Command | PDMShell | SOLIDWORKS PDM
 ---
-
-# WHEREUSED Command Documentation
-
-## DESCRIPTION:
+# WHEREUSED Command
+## Description
 The `whereused` command lists all parent files that reference a specified file.
 
 This command helps identify assemblies or drawings that use a particular part or subassembly.
@@ -20,15 +18,13 @@ The output columns are:
 
 ---
 
-## SYNTAX:
-
+## Syntax
 ```bash
 whereused -filePath|-search -csv
 ```
 ---
 
-## PARAMETERS:
-
+## Parameters
 - `filePath`  
   Full or relative path of the file to evaluate.
 
@@ -39,8 +35,7 @@ whereused -filePath|-search -csv
 
 ---
 
-## EXAMPLES:
-
+## Examples
 ### Example 1: Basic Where Used
 
 ```bash
@@ -64,3 +59,6 @@ whereused -filePath "C:\Vault\Parts\Bracket.SLDPRT" -csv parents.csv
 ## Exports results to CSV with columns:
 ## ChildID,ChildName,ParentName,ParentID,FolderPath
 ```
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

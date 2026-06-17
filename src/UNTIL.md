@@ -1,20 +1,19 @@
 ---
 description: Waits until file, folder, process, variable, placeholder, or expression conditions become true.
-title: UNTIL Command Documentation | PDMShell | SOLIDWORKS PDM
+title: UNTIL Command | PDMShell | SOLIDWORKS PDM
 ---
-# UNTIL Command Documentation
-
-## DESCRIPTION:
+# UNTIL Command
+## Description
 Waits until the supplied condition expression evaluates to true, or until the timeout is reached.
 
 Use `until` after commands such as `runtask`, `runtemplate`, `export`, or any automation step that creates files asynchronously. This prevents the next command from running before the expected files, variables, or process state are ready.
 
-## SYNTAX:
+## Syntax
 ```bash
 until -conditions condition_expression [-timeout seconds] [-match all|any|one] [-filePath path | -search query]
 ```
 
-## PARAMETERS:
+## Parameters
 - `conditions`: The condition expression to evaluate. Supports `and`, `or`, nested groups, file/folder/process exists checks, comparisons, PDM variables, placeholders, and simple arithmetic comparisons.
 - `timeout`: Maximum number of seconds to wait before the command fails. If omitted, PDMShell uses the command default.
 - `match`: When `search` returns multiple files, controls how many files must satisfy the conditions. Use `any` when one matching file is enough, `all` when every matching file must pass, or `one` when exactly one matching file must pass.
@@ -23,7 +22,7 @@ until -conditions condition_expression [-timeout seconds] [-match all|any|one] [
 - `directory`: Optional vault folder used as the search scope. Only valid with `search`.
 - `recursive`: Includes subfolders when used with `search`.
 
-## EXAMPLES:
+## Examples
 ```bash
 until -conditions "$localPath exists" -timeout 60
 
@@ -38,7 +37,7 @@ until -conditions "1 + 3 greater than 3" -timeout 5
 until -search "Name=%.sldprt;Locked=true" -conditions "$(Description.@) contains ECO" -match any -timeout 120
 ```
 
-## CONDITION FORMAT:
+## Condition Format
 The visual editor builds conditions as three fields:
 
 | Field | Meaning | Example |
@@ -59,7 +58,7 @@ $localPath exists
 >[!Note]
 > PDM variables use `$(` and `)`, for example `$(Description.@)`. When writing conditions manually, quote PDM variable tokens if they appear inside a larger expression so the parser does not treat the parentheses as condition grouping.
 
-## SUPPORTED OPERATORS:
+## Supported Operators
 - `exists` or `exist`
 - `equals`, `equal`, `is`, `=`, `==`
 - `not equals`, `!=`, `<>`
@@ -72,7 +71,7 @@ $localPath exists
 - `greater than`, `>`
 - `greater than or equal`, `>=`
 
-## EXISTS CONDITIONS:
+## Exists Conditions
 Use `exists` when the condition should wait for a file or folder path.
 
 ```bash
@@ -85,7 +84,7 @@ process exists "notepad"
 
 When the left side is not explicitly `file`, `folder`, or `process`, PDMShell treats the condition as a file exists check by default. If the value looks like a folder path, PDMShell evaluates it as a folder check.
 
-## GROUPING CONDITIONS:
+## Grouping Conditions
 Use `and`, `or`, and parentheses to combine checks.
 
 ```bash
@@ -94,7 +93,7 @@ $folderPath\ready.pdf exists and $folderPath\ready.dxf exists
 ($folderPath\ready.pdf exists or $folderPath\ready.dxf exists) and "$(Description.@)" contains "Released"
 ```
 
-## PLACEHOLDERS:
+## Placeholders
 The `until` command supports dynamic placeholders in conditions. The most commonly used placeholders are:
 
 | Placeholder | Meaning |
@@ -149,7 +148,7 @@ Date and time placeholders:
 >[!Note]
 > Placeholder names are evaluated case-insensitively in until conditions.
 
-## PDM VARIABLES:
+## PDM Variables
 Use `$(VariableName.ConfigurationName)` to read a PDM variable from the file context.
 
 ```bash
@@ -159,7 +158,7 @@ Use `$(VariableName.ConfigurationName)` to read a PDM variable from the file con
 
 If the configuration is omitted, PDMShell uses `@`.
 
-## ARITHMETIC COMPARISONS:
+## Arithmetic Comparisons
 Numeric expressions can be used on either side of a comparison.
 
 ```bash
@@ -170,8 +169,11 @@ Numeric expressions can be used on either side of a comparison.
 
 Arithmetic is evaluated only for simple numeric expressions containing numbers, parentheses, and arithmetic operators.
 
-## REMARKS:
+## Remarks
 - Use `filePath` when you need placeholders or PDM variables to be evaluated against one specific file.
 - Use `search` and `match` when the same condition should be evaluated across multiple matching files.
 - `exists` does not need a value in the visual editor.
 - For generated PDF/DXF workflows, use placeholders such as `$folderPath`, `$fileNameWithoutExtension`, and `$extension` to avoid hard-coded output paths.
+
+## Availability
+Available since PDMShell 4.0.7.

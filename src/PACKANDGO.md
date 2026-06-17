@@ -1,11 +1,9 @@
 ---
 description: Runs SOLIDWORKS Pack and Go for one assembly or for multiple assemblies from a folder search or CSV source.
-title: PACKG Command Documentation | PDMShell | SOLIDWORKS PDM
+title: PACKG Command | PDMShell | SOLIDWORKS PDM
 ---
-
-# PACKG Command Documentation
-
-## DESCRIPTION:
+# PACKG Command
+## Description
 The `packg` command performs a SOLIDWORKS Pack and Go operation on:
 
 - A single assembly file  
@@ -16,15 +14,13 @@ This command launches SOLIDWORKS, executes Pack and Go for each assembly, and sa
 
 By default, only `.sldasm` files are processed.
 
-## SYNTAX:
-
+## Syntax
 ```bash
 packg -source -directory [-search] [-includedrawings] [-recursive] [-prefix] [-suffix] [-timeout]
 ```
 
 
-## PARAMETERS:
-
+## Parameters
 - `source`  
   Single assembly file, directory of assemblies, or CSV file containing assembly paths.
 
@@ -57,8 +53,7 @@ packg -source -directory [-search] [-includedrawings] [-recursive] [-prefix] [-s
 
 ---
 
-## EXAMPLES:
-
+## Examples
 ### Example 1: Pack a Single Assembly
 ```bash
 ## Packs a single assembly and saves results to D:\Packages
@@ -113,3 +108,6 @@ packg -source "C:\Projects\Top.sldasm" -directory "D:\Packages" -prefix "SW_" -s
 ## Allows more time for SOLIDWORKS to launch
 packg -source "C:\Projects" -directory "D:\Packages" -timeout 300
 ```
+
+## Availability
+Available since PDMShell 3.0.27.

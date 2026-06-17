@@ -65,3 +65,6 @@ until -conditions "${global.ReadyFile} exists" -timeout 60
 - `getglobal` without `name` prints all currently set global variables.
 - Unknown `${global.Name}` references are left unchanged so typos are visible.
 - Global variables are cleared when the PDMShell session ends.
+
+## Availability
+Available since PDMShell 4.0.7.

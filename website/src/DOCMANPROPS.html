@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>DOCMANPROPS Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>DOCMANPROPS Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="DOCMANPROPS Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="DOCMANPROPS Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Reads SOLIDWORKS custom and configuration properties using Document Manager and exports them to CSV.">
       <link rel="icon" href="../favicon.ico">
@@ -87,7 +87,7 @@
         <article data-uid="">
 <h1 id="docmanprops-command">DOCMANPROPS Command</h1>
 
-<h2 id="description">DESCRIPTION</h2>
+<h2 id="description">Description</h2>
 <p>The <code>docmanprops</code> command <strong>exports and updates SOLIDWORKS file custom properties</strong> without opening SOLIDWORKS.</p>
 <p>This command supports two primary modes:</p>
 <ul>
@@ -100,11 +100,11 @@
 <p>This command works with the file system and requires files to be locally cached. It reads and writes files both inside and outside the vault. Relative paths only work in the vault directory (and requires you to be logged in).</p>
 </div>
 <hr>
-<h1 id="syntax">SYNTAX</h1>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-update] [-refresh] [-extension]
 </code></pre>
 <hr>
-<h1 id="parameters">PARAMETERS</h1>
+<h2 id="parameters">Parameters</h2>
 <h2 id="directory"><code>directory</code></h2>
 <p>Specifies the folder containing SOLIDWORKS files.</p>
 <p>Example:</p>
@@ -157,7 +157,7 @@
 <pre><code class="lang-bash">-extension &quot;*.sld*,*.step,*.pdf&quot;
 </code></pre>
 <h2 id="use--to-include-all-files-regardless-of-extension">Use <code>*.*</code> to include all files regardless of extension.</h2>
-<h1 id="csv-format">CSV FORMAT</h1>
+<h2 id="csv-format">CSV Format</h2>
 <p>The CSV contains the following columns:</p>
 <pre><code class="lang-bash">Folder  
 FullPath  
@@ -175,8 +175,8 @@ Exception
 <pre><code class="lang-bash">C:\Vault\Part, C:\Vault\Part\Part1.SLDPRT, Part1, .SLDPRT, Default, Description, Plate, Plate, Text, True,
 </code></pre>
 <hr>
-<h1 id="export-mode">EXPORT MODE</h1>
-<h2 id="description-1">DESCRIPTION</h2>
+<h2 id="export-mode">Export Mode</h2>
+<h2 id="description-1">Description</h2>
 <p>Reads properties from files and writes them to CSV.</p>
 <p>Properties include:</p>
 <ul>
@@ -186,13 +186,13 @@ Exception
 <li>Property types</li>
 </ul>
 <hr>
-<h2 id="example">EXAMPLE</h2>
+<h2 id="examples">Examples</h2>
 <pre><code class="lang-bash">docmanprops -directory &quot;C:\Vault\Parts&quot; -csv &quot;C:\temp\props.csv&quot; -recursive
 </code></pre>
-<h2 id="output">OUTPUT</h2>
+<h2 id="output">Output</h2>
 <h2 id="export-mode-1"><img src="/images/exportmode.png" alt="export mode"></h2>
-<h1 id="update-mode">UPDATE MODE</h1>
-<h2 id="description-2">DESCRIPTION</h2>
+<h2 id="update-mode">Update Mode</h2>
+<h2 id="description-2">Description</h2>
 <p>Reads CSV file and writes properties back into files.</p>
 <p>Features:</p>
 <ul>
@@ -203,17 +203,17 @@ Exception
 <li>Parallel processing</li>
 </ul>
 <hr>
-<h2 id="example-1">EXAMPLE</h2>
+<h2 id="examples-1">Examples</h2>
 <pre><code class="lang-bash">docmanprops -csv &quot;C:\temp\props.csv&quot; -update
 </code></pre>
-<h2 id="output-1">OUTPUT</h2>
+<h2 id="output-1">Output</h2>
 <p><img src="/images/refreshmode.png" alt="updatemode"></p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Temporary files start with ~ are ignored.</p>
 </div>
 <hr>
-<h1 id="success-and-error-tracking">SUCCESS AND ERROR TRACKING</h1>
+<h2 id="success-and-error-tracking">Success And Error Tracking</h2>
 <p>The CSV is updated during update:</p>
 <p>Success column:</p>
 <p>True — Property updated successfully<br>
@@ -226,6 +226,8 @@ Description,True,
 PartNumber,False,Configuration Default not found
 </code></pre>
 <hr>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 3.0.30.</p>
 
 </article>
 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>MSGBOX Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="MSGBOX Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Shows a Windows message box from a PDMShell command or script.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/MSGBOX.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="msgbox-command">MSGBOX Command</h1>
+
+<h2 id="description">Description</h2>
+<p>The <code>msgbox</code> command shows a Windows message box with the specified text.</p>
+<p>Use <code>msgbox</code> in scripts when you need to display a simple notification or checkpoint message to the user.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-bash">msgbox -value message [-title title] [-icon icon]
+</code></pre>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><p><strong><code>value</code></strong>:<br>
+<em>(Required)</em> Message text to display in the message box.</p>
+</li>
+<li><p><strong><code>title</code></strong>:<br>
+<em>(Optional)</em> Message box title. If omitted, PDMShell uses the current PDMShell version as the title.</p>
+</li>
+<li><p><strong><code>icon</code></strong>:<br>
+<em>(Optional)</em> Message box icon. Valid values are <code>None</code>, <code>Information</code>, <code>Warning</code>, <code>Error</code>, and <code>Question</code>. If omitted, PDMShell uses <code>Information</code>.</p>
+</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash">msgbox -value &quot;Hello from PDMShell&quot;
+</code></pre>
+<pre><code class="lang-bash">msgbox -value &quot;Script completed successfully.&quot; -title &quot;Batch Complete&quot; -icon Information
+</code></pre>
+<pre><code class="lang-bash">msgbox -value &quot;The export failed.&quot; -title &quot;Export Error&quot; -icon Error
+</code></pre>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>The command displays an informational Windows message box.</li>
+<li>When <code>title</code> is not specified, the message box title defaults to the PDMShell version.</li>
+<li>When <code>icon</code> is not specified, the message box uses the <code>Information</code> icon.</li>
+<li>Wrap the value in quotes when the message contains spaces.</li>
+<li>Wrap the title in quotes when it contains spaces.</li>
+<li>The script continues after the user closes the message box.</li>
+</ul>
+<h2 id="availability">Availability</h2>
+<p>Unreleased after 4.0.7.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/MSGBOX.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://bluebyte.biz'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

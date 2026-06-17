@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>SETREVISION Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>SETREVISION Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="SETREVISION Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="SETREVISION Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Sets the revision for one file or for files found by search.">
       <link rel="icon" href="../favicon.ico">
@@ -85,9 +85,9 @@
         </div>
 
         <article data-uid="">
-<h1 id="setrevision-command-documentation">SETREVISION Command Documentation</h1>
+<h1 id="setrevision-command">SETREVISION Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>The <code>SetRevisionCommand</code> allows you to set the <strong>PDM-managed revision</strong> of a file inside the vault.<br>
 This command updates the official <strong>PDM Revision</strong> (the value shown on the version tab), <em>not</em> the datacard one.</p>
 <p>You may set the revision using:</p>
@@ -100,10 +100,10 @@ This command updates the official <strong>PDM Revision</strong> (the value shown
 Example: <code>[Revision]</code><br>
 This evaluates the variable on the file and applies its value as the new revision.</p>
 <p>The command resolves all bracketed variables before applying the revision.</p>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">setrevision -filePath|-search -recursive -value -csv
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><p><code>filePath</code><br>
 Path to the file whose revision you want to update.<br>
@@ -130,17 +130,15 @@ This can be:</p>
 Save results to a csv file</p>
 </li>
 </ul>
-<h3 id="notes">NOTES:</h3>
+<h2 id="notes">Notes</h2>
 <ul>
 <li>This command affects <strong>only the PDM Revision</strong>, not custom properties or configuration-specific metadata.</li>
 <li>When using <code>[VariableName]</code>, ensure the variable is present on the file card.</li>
 <li><code>%previousrevision%</code> will adjust the counter only if the revision scheme allows backward movement.</li>
 <li><code>%nextrevision%</code> respects all revision scheme rules defined in the PDM Administration tool.</li>
 </ul>
-<h1 id="availability">AVAILABILITY</h1>
-<ul>
-<li>3.0.11</li>
-</ul>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 3.0.11.</p>
 
 </article>
 

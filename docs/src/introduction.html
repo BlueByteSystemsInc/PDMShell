@@ -103,34 +103,34 @@ For example:
 </code></pre>
 </li>
 </ul>
-<h3 id="understanding-the-command-documentation-structure">Understanding the Command Documentation Structure</h3>
+<h3 id="command-page-structure">Command Page Structure</h3>
 <p>Each command page in PDMShell documentation is organized into the following sections:</p>
 <ol>
-<li><strong>DESCRIPTION</strong>: A brief explanation of what the command does.</li>
-<li><strong>SYNTAX</strong>: The syntax for using the command, including required and optional parameters.</li>
-<li><strong>PARAMETERS</strong>: A detailed explanation of each parameter, including whether it is required or optional.</li>
-<li><strong>EXAMPLES</strong>: Practical examples of how to use the command.</li>
-<li><strong>REMARKS</strong>: Additional notes, tips, or special considerations for using the command.</li>
-<li><strong>TUTORIAL</strong>: A short video tutorial demonstrating the command in action (if available).</li>
+<li><strong>Description</strong>: A brief explanation of what the command does.</li>
+<li><strong>Syntax</strong>: The syntax for using the command, including required and optional parameters.</li>
+<li><strong>Parameters</strong>: A detailed explanation of each parameter, including whether it is required or optional.</li>
+<li><strong>Examples</strong>: Practical examples of how to use the command.</li>
+<li><strong>Remarks</strong>: Additional notes, tips, or special considerations for using the command.</li>
+<li><strong>Availability</strong>: The PDMShell version where the command first became available.</li>
 </ol>
-<h3 id="example-command-documentation">Example Command Documentation</h3>
+<h3 id="example-command-page">Example Command Page</h3>
 <p>Here’s an example of how a command is documented:</p>
-<h4 id="cd-command-documentation">CD Command Documentation</h4>
-<p><strong>DESCRIPTION</strong>:<br>
+<h4 id="cd-command">CD Command</h4>
+<p><strong>Description</strong>:<br>
 Changes the current PDM directory.</p>
-<p><strong>SYNTAX</strong>:</p>
+<p><strong>Syntax</strong>:</p>
 <pre><code class="lang-bash">cd [-directory|-id]
 </code></pre>
-<p><strong>PARAMETERS</strong>:</p>
+<p><strong>Parameters</strong>:</p>
 <ul>
 <li><code>directory</code>: The directory to switch to. The directory parameter can be a relative or absolute path in PDM.</li>
 <li><code>id</code>: ID of the folder to navigate to.</li>
 </ul>
-<p><strong>EXAMPLES</strong>:</p>
+<p><strong>Examples</strong>:</p>
 <pre><code class="lang-bash">cd -directory 'C:\Vault\NewFolder' # Navigates to NewFolder
 cd -id 755 # Navigates to the folder with ID 755
 </code></pre>
-<p><strong>REMARKS</strong>:</p>
+<p><strong>Remarks</strong>:</p>
 <ul>
 <li>Use <code>cd..</code> to navigate to the parent folder or <code>cd\</code> to navigate to the root of the vault.</li>
 <li>If you just created a new folder and want to <code>cd</code> to it using autocomplete, use the <code>dir</code> command with the <code>-refresh</code> parameter to reload the session.</li>
@@ -140,7 +140,7 @@ cd -id 755 # Navigates to the folder with ID 755
 <p>As of <strong>PDMShell 3.0.1</strong>, all <strong>command names</strong>, <strong>parameter names</strong>, and <strong>values</strong> are <strong>case-sensitive</strong>.</p>
 <h3 id="escaping-quotes">Escaping Quotes</h3>
 <p>Escaping quotes when passing arguments to PDMShell depends on <strong>where the command originates</strong>. <a href="escapingquotes.html">Please read this dedicated article</a>.</p>
-<p><strong>TUTORIAL</strong>:<br>
+<p><strong>Tutorial</strong>:<br>
 <video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
 <p>By following this structure, you can quickly learn how to use any command in PDMShell and integrate it into your workflows.</p>
 <hr>

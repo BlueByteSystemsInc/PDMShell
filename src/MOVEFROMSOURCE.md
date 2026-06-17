@@ -1,11 +1,9 @@
 ---
 description: Moves files listed in a CSV source to a target vault folder.
-title: MOVEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM
+title: MOVEFROMSOURCE Command | PDMShell | SOLIDWORKS PDM
 ---
-
-# MOVEFROMSOURCE Command Documentation
-
-## DESCRIPTION:
+# MOVEFROMSOURCE Command
+## Description
 The `movefromsource` command moves file(s) in the vault using a CSV file as input.
 
 Each row in the CSV specifies:
@@ -21,14 +19,13 @@ When a file is moved:
 
 ---
 
-## SYNTAX:
+## Syntax
 ```bash
 movefromsource -source
 ```
 ---
 
-## PARAMETERS:
-
+## Parameters
 - `source`  
   Path to a CSV file containing file IDs and target directories.  
   The CSV must contain at least two columns:
@@ -38,8 +35,7 @@ movefromsource -source
 
 ---
 
-## CSV FORMAT:
-
+## CSV Format
 ### With Header:
 
 FileID,TargetDirectory  
@@ -53,8 +49,7 @@ FileID,TargetDirectory
 
 ---
 
-## EXAMPLES:
-
+## Examples
 ### Example 1: Basic CSV Move
 ```bash
 movefromsource -source "C:\temp\movefiles.csv"
@@ -62,11 +57,13 @@ movefromsource -source "C:\temp\movefiles.csv"
 ```
 ---
 
-## NOTES:
-
+## Notes
 - Target directories must already exist in the vault.
 - You must have permission to move the specified files.
 - If a FileID does not exist, that row will be skipped and logged.
 - If a move fails due to permission or state restrictions, it will be reported.
 - Reference updates are handled automatically by SOLIDWORKS PDM.
 - CSV rows with invalid format will be skipped and logged.
+
+## Availability
+Available since PDMShell 3.0.28.

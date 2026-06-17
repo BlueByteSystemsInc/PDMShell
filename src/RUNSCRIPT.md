@@ -110,4 +110,7 @@ until -conditions "$folderPath\$fileNameWithoutExtension.pdf exists" -timeout 50
 
 ## Free version limit
 
-The free version is limited to 10 lines per script.
+The free version is limited to 5 lines per script.
+
+## Availability
+Available since PDMShell 2.0.1.

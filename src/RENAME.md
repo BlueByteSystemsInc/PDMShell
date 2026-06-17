@@ -1,17 +1,16 @@
-﻿---
-description: Renames one file or multiple files found by search.
-title: RENAME Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
-# RENAME Command Documentation
-
-## DESCRIPTION:
+description: Renames one file or multiple files found by search.
+title: RENAME Command | PDMShell | SOLIDWORKS PDM
+---
+# RENAME Command
+## Description
 Renames a specified file.
 
-## SYNTAX:
+## Syntax
 ```bash
 rename -filePath -value -search
 ```
-## PARAMETERS:
+## Parameters
 - `filePath`: The filerename.
 
 - `directory`: The directory to rename.
@@ -20,14 +19,14 @@ rename -filePath -value -search
 
 
 
-## EXAMPLES:
+## Examples
 ```bash
 rename -filePath "oldname.sldprt" -val "newname.sldprt"
 ```
-## REMARKS:
+## Remarks
 - The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
 
-## VALUE EVALUATION:
+## Value Evaluation
 The `value` parameter gets evaluated by PDMShell. PDMShell allows you to use placeholders in the new name, which will be replaced with actual values from the file. This can be useful to dynamically generate new names based on file properties or other variables. The following placeholders are supported:
 
 - `$filename` - The file name without extension.
@@ -46,7 +45,7 @@ String functions are also supported after placeholders are evaluated. For exampl
 > Please read more information about placeholder evaluation [here](EVAL.md).
 
 
-## EXAMPLES:
+## Examples
 If you use the value `"$filename_$date_$version$extension"`, it will be replaced with the file name, current date, and version, resulting in something like `"oldname_10-12-2023_3"`.
 
 ```bash
@@ -54,3 +53,6 @@ rename -filePath "Part 123 Draft.sldprt" -value "${left(${replace($nameWithoutEx
 
 rename -filePath "ABC-123.sldprt" -value "${before($nameWithoutExtension, \"-\")}$extension"
 ```
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

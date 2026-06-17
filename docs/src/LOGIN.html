@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>LOGIN Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>LOGIN Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="LOGIN Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="LOGIN Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Authenticates a user to a specified vault.">
       <link rel="icon" href="../favicon.ico">
@@ -85,25 +85,25 @@
         </div>
 
         <article data-uid="">
-<h1 id="login-command-documentation">LOGIN Command Documentation</h1>
+<h1 id="login-command">LOGIN Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>Authenticates a user to a specified vault.</p>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">login [-auto|-win -username -password|-external -username -password ] -vaultname 
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <p><code>auto</code>: Automatic authentication with current user. Displays login dialog box if not logged in.</p>
 <p><code>win</code>: Automatic Windows authentication with current user. Does not display login dialog box.</p>
 <p><code>external</code>: Toggle ensures that a license is consumed.</p>
 <p><code>username</code>:  Username.</p>
 <p><code>password</code>:  Password.</p>
 <p><code>vaultName</code>: Vault Name.</p>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <pre><code class="lang-bash">login -username admin -password ******** -vaultName bluebyte #logs into the bluebyte vault with a username ans a password
 login -auto -vaultName bluebyte #logs into the blue byte vault using the existing PDM session
 </code></pre>
-<h1 id="remarks">REMARKS:</h1>
+<h2 id="remarks">Remarks</h2>
 <ul>
 <li>You must have a local vault view before you can start using PDMShell.</li>
 <li>The <code>external</code> parameter allows an application that is not supplied and supported by SOLIDWORKS Corporation to:
@@ -113,8 +113,10 @@ login -auto -vaultName bluebyte #logs into the blue byte vault using the existin
 </ul>
 </li>
 </ul>
-<h2 id="tutorial">TUTORIAL:</h2>
+<h2 id="tutorial">Tutorial</h2>
 <p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/login.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

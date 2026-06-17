@@ -1,12 +1,9 @@
 ---
-title: TRANSITION Command Documentation | PDMShell | SOLIDWORKS PDM
+title: TRANSITION Command | PDMShell | SOLIDWORKS PDM
 description: Changes the workflow state for one file, files found by search, or files listed in a CSV source.
 ---
-
-# TRANSITION Command Documentation
-
-## DESCRIPTION
-
+# TRANSITION Command
+## Description
 The `transition` command changes SOLIDWORKS PDM files from one workflow state to another using a specified transition.
 
 This command supports three modes:
@@ -15,7 +12,7 @@ This command supports three modes:
 - Search-based transition
 - Single file transition
 
-# SYNTAX
+## Syntax
 ```bash
 # single file
 transition -transitionidorname <id-or-name> -filePath <path>
@@ -25,8 +22,7 @@ transition -transitionidorname <id-or-name> -search <pattern> [-recursive]
 transition -source <csv> -password <password> [-batch <size>] [-comment <text>]
 ```
 
-# PARAMETERS
-
+## Parameters
 ## `transitionidorname`
 Specifies the workflow transition ID or name.
 Required for search and filepath modes.
@@ -118,8 +114,7 @@ Example:
 ```
 ---
 
-# CSV FORMAT
-
+## CSV Format
 Required format:
 
 FileID,ParentFolderID,TransitionID
@@ -135,8 +130,7 @@ FileID,ParentFolderID,TransitionID
 ![transition.csv](/images/transitioncsv.png)
 ---
 
-# BATCH MODE (SOURCE)
-
+## Batch Mode
 This is the recommended mode for:
 
 - Data migrations
@@ -152,16 +146,14 @@ transition -source transitions.csv -password mypass -batch 2000
 ```
 ---
 
-# IMPORTANT CONSIDERSATIONS FOR BATCH MODE
-
+## Important Considerations For Batch Mode
 ![ReferenceDialogSettings](/images/ReferenceDialogSettings.png)
 
 PDMShell batch transitions are affected by the logged-in user’s Reference Dialog settings. If “Select child references during state change” and “Select references that are defined as drawing nodes during state change” are enabled, PDM will also transition referenced files, not just the source files from the CSV. If you want PDMShell batch mode to transition only the source files, these options must be disabled for the logged-in user.
 
 
 
-# SEARCH MODE
-
+## Search Mode
 Transitions files found using search.
 
 Example:
@@ -170,8 +162,7 @@ transition -search %.sldasm -transitionidorname 12 -recursive
 ```
  
 
-# SINGLE FILE MODE
-
+## Single File Mode
 Transitions one file.
 
 Example:
@@ -180,8 +171,7 @@ transition -filePath part.sldprt -transitionidorname 12
 ```
  
 
-# VALIDATION
-
+## Validation
 The command automatically:
 
 - Validates transition IDs
@@ -190,15 +180,16 @@ The command automatically:
 - Skips invalid files
 
 
-# LICENSE LIMITATIONS
-
+## License Limitations
 Free version limits number of files processed.
 
 To remove limit: https://bluebyte.biz/product/pdmshell
 
-# BEST PRACTICES
-
+## Best Practices
 - Use source mode for large operations.
 - Use batch size between 500 and 5000.
 - Always test with small batch first.
 - Backup vault before large operations.
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

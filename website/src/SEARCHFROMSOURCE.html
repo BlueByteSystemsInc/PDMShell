@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>SEARCHFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>SEARCHFROMSOURCE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="SEARCHFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="SEARCHFROMSOURCE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Searches the vault for files listed in a CSV source and reports whether they exist.">
       <link rel="icon" href="../favicon.ico">
@@ -85,9 +85,9 @@
         </div>
 
         <article data-uid="">
-<h1 id="searchfromsource-command-documentation">SEARCHFROMSOURCE Command Documentation</h1>
+<h1 id="searchfromsource-command">SEARCHFROMSOURCE Command</h1>
 
-<h2 id="description">DESCRIPTION</h2>
+<h2 id="description">Description</h2>
 <p>The <code>searchfromsource</code> command reads a <strong>CSV source file</strong> and uses the <strong>first column</strong> (ignoring the header) as input items to search for in the vault.</p>
 <p>For every row in the source CSV, PDMShell performs a vault search and returns information such as:</p>
 <ul>
@@ -99,11 +99,11 @@
 </ul>
 <p>Optionally, the command can write the results to a CSV file and add/update that CSV in the vault.</p>
 <hr>
-<h2 id="syntax">SYNTAX</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">searchfromsource -filePath -recursive -csv
 </code></pre>
 <hr>
-<h2 id="parameters">PARAMETERS</h2>
+<h2 id="parameters">Parameters</h2>
 <h3 id="filepath"><code>filePath</code></h3>
 <p>Path to the <strong>source CSV file</strong> to read input values.</p>
 <ul>
@@ -131,7 +131,7 @@
 <li>If the CSV file does not exist, PDMShell will create it and add it to the vault.</li>
 </ul>
 <hr>
-<h2 id="input-csv-format">INPUT CSV FORMAT</h2>
+<h2 id="input-csv-format">Input CSV Format</h2>
 <p>The command reads:</p>
 <ul>
 <li>Comma-delimited CSV</li>
@@ -208,7 +208,7 @@ SpecSheet.docx
 <p>For full syntax and supported fields/operators, see: <a href="advancedsearch.html">advancedsearch.md</a></p>
 </div>
 <hr>
-<h2 id="output-csv-format">OUTPUT CSV FORMAT</h2>
+<h2 id="output-csv-format">Output CSV Format</h2>
 <p>When <code>-csv</code> is used, PDMShell generates the following columns:</p>
 <p>ID,FileName,Path,ParentFolderID,ParentFolder,IsCheckedOut,WhereUsedIds</p>
 <h3 id="column-definitions">Column Definitions</h3>
@@ -222,7 +222,7 @@ SpecSheet.docx
 <li><strong>WhereUsedIds</strong>: Comma-separated list of parent file IDs (from the reference tree)</li>
 </ul>
 <hr>
-<h2 id="examples">EXAMPLES</h2>
+<h2 id="examples">Examples</h2>
 <h3 id="example-1-run-search-from-a-source-csv">Example 1: Run search from a source CSV</h3>
 <pre><code class="lang-bash">searchfromsource -filePath &quot;input.csv&quot;
 </code></pre>
@@ -240,7 +240,7 @@ SpecSheet.docx
 If <code>results.csv</code> exists in the vault, the command attempts to update it.<br>
 If it does not exist, the command creates it and adds it to the vault.</p>
 <hr>
-<h2 id="notes">NOTES</h2>
+<h2 id="notes">Notes</h2>
 <ul>
 <li>This command requires the user to be logged in to a vault.</li>
 <li>The input CSV must be accessible locally (PDM will download the file when needed).</li>
@@ -249,12 +249,14 @@ If it does not exist, the command creates it and adds it to the vault.</p>
 <li>Where Used results are generated using the reference tree lookup.</li>
 </ul>
 <hr>
-<h2 id="limitations">LIMITATIONS</h2>
+<h2 id="limitations">Limitations</h2>
 <ul>
 <li>Only the first search result is used (<code>GetFirstResult()</code>).</li>
 <li>Only file results are processed (folder results are ignored).</li>
 <li>The input file is interpreted as comma-delimited CSV only.</li>
 </ul>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>SETRECISIONFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>SETRECISIONFROMSOURCE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="SETRECISIONFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="SETRECISIONFROMSOURCE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Sets the revision of SOLIDWORKS PDM files from a CSV source containing file IDs and revision values.">
       <link rel="icon" href="../favicon.ico">
@@ -85,29 +85,29 @@
         </div>
 
         <article data-uid="">
-<h1 id="setrecisionfromsource-command-documentation">SETRECISIONFROMSOURCE Command Documentation</h1>
+<h1 id="setrecisionfromsource-command">SETRECISIONFROMSOURCE Command</h1>
 
-<h2 id="description">DESCRIPTION</h2>
+<h2 id="description">Description</h2>
 <p>The <code>SetRecisionFromSourceCommand</code> allows you to batch-update the <strong>PDM-managed revision</strong> for multiple files by reading values from a CSV input source.</p>
 <p>The <strong>source CSV</strong> must contain at minimum:</p>
 <ul>
-<li><strong>Id</strong> → the PDM file ID</li>
-<li><strong>Value</strong> → the revision value to apply</li>
+<li><strong>Id</strong> ? the PDM file ID</li>
+<li><strong>Value</strong> ? the revision value to apply</li>
 </ul>
 <p>This command applies the revision exactly as supplied in the CSV just like in the <a href="SETREVISION.html">set revision command</a>.<br>
-It does  <strong>evaluate</strong> <code>%nextrevision%</code>, <code>%previousrevision%</code>,<code>%initial%</code>, or bracketed variables—only literal revision values.</p>
+It does  <strong>evaluate</strong> <code>%nextrevision%</code>, <code>%previousrevision%</code>,<code>%initial%</code>, or bracketed variables�only literal revision values.</p>
 <p>You may optionally output a <strong>results CSV</strong> that includes success/failure information for each processed row.</p>
-<h2 id="syntax">SYNTAX</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">setrevisionfromsource -source -csv
 </code></pre>
-<h2 id="parameters">PARAMETERS</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>source</code><br>
 Path to the CSV file that contains the input dataset.<br>
 Required columns:
 <ul>
-<li><code>ID</code> — the file’s PDM ID inside the vault.</li>
-<li><code>Revision</code> — the revision string supported by the revision scheme</li>
+<li><code>ID</code> � the file�s PDM ID inside the vault.</li>
+<li><code>Revision</code> � the revision string supported by the revision scheme</li>
 </ul>
 </li>
 </ul>
@@ -127,22 +127,20 @@ The results file contains:
 </ul>
 </li>
 </ul>
-<h2 id="examplaes">EXAMPLAES</h2>
+<h2 id="examples">Examples</h2>
 <pre><code class="lang-bash">
 setrevisionfromsource -source source.csv -csv results.csv
 
 </code></pre>
-<h2 id="notes">NOTES</h2>
+<h2 id="notes">Notes</h2>
 <ul>
 <li>This command updates the <strong>PDM Revision</strong> shown on the Version tab, not datacard variables.</li>
 <li>All revisions must already exist in the active revision scheme.</li>
 <li>If a file ID does not exist or cannot be updated, the error will be logged and processing continues for the remaining records.</li>
 <li>Output CSV is optional; if omitted, results are printed to console only.</li>
 </ul>
-<h2 id="availability">AVAILABILITY</h2>
-<ul>
-<li>3.0.12</li>
-</ul>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 3.0.12.</p>
 
 </article>
 

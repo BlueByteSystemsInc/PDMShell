@@ -1,19 +1,16 @@
-﻿---
-description: Checks in one file or multiple files found by search.
-title: CHECKIN Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
-
-# CHECKIN Command Documentation
-
-## DESCRIPTION:
+description: Checks in one file or multiple files found by search.
+title: CHECKIN Command | PDMShell | SOLIDWORKS PDM
+---
+# CHECKIN Command
+## Description
 Performs a check-in operation on a specified file or many files.
 
-## SYNTAX:
-
+## Syntax
 ```bash
 checkin -search -recursive -filePath -comment -Checkinoptions
 ```
-## PARAMETERS:
+## Parameters
 - `search`: The search operation to use.
 
 
@@ -24,12 +21,12 @@ checkin -search -recursive -filePath -comment -Checkinoptions
 
 - `Checkinoptions`: The check-in options to use.
 
-## EXAMPLES:
+## Examples
 ```bash
 checkin -filePath "file1.sldprt"
 ```
 
-## REMARKS:
+## Remarks
 - The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
 - If combining `Checkinoptions` parameters, the user needs to add `+` between the values.
 
@@ -47,3 +44,6 @@ checkin -filePath "file1.sldprt"
 | EdmUnlock_OverwriteLatestVersion          | Do not create a new version; overwrite the last version of the file with new changes                             |
 | EdmUnlock_RemoveLocalCopy                 | Remove the local copy of the file from the hard disk after the file has been checked in                          |
 | EdmUnlock_Simple                          | Check in the file using default behavior                                                                         |
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

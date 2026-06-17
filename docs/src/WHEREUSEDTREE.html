@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>WHEREUSEDTREE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>WHEREUSEDTREE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="WHEREUSEDTREE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="WHEREUSEDTREE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Builds a recursive where-used tree for one file or files found by search.">
       <link rel="icon" href="../favicon.ico">
@@ -85,18 +85,18 @@
         </div>
 
         <article data-uid="">
-<h1 id="whereusedtree-command-documentation">WHEREUSEDTREE Command Documentation</h1>
+<h1 id="whereusedtree-command">WHEREUSEDTREE Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>The <code>whereusedtree</code> command builds a recursive where-used tree for one file or for each file found by a search in the current directory.</p>
 <p>Use this when you need to see not only the direct parents of a file, but also the parents of those parents.</p>
 <p>The command prints a tree in the session output and can optionally export the results to CSV.</p>
 <hr>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">whereusedtree (-filePath &lt;path&gt; | -search &lt;query&gt;) [-depth &lt;number&gt;] [-csv &lt;file.csv&gt;]
 </code></pre>
 <hr>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><p><code>filePath</code>
 Full or relative path of the file to evaluate. Use either <code>-filePath</code> or <code>-search</code>, not both.</p>
@@ -112,7 +112,7 @@ Optional CSV output file. Include the <code>.csv</code> extension.</p>
 </li>
 </ul>
 <hr>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <h3 id="example-1-recursive-where-used-for-one-file">Example 1: Recursive Where Used For One File</h3>
 <pre><code class="lang-bash">whereusedtree -filePath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot;
 </code></pre>
@@ -140,12 +140,14 @@ Optional CSV output file. Include the <code>.csv</code> extension.</p>
 <li>Circular</li>
 </ul>
 <hr>
-<h2 id="remarks">REMARKS:</h2>
+<h2 id="remarks">Remarks</h2>
 <ul>
 <li><code>-filePath</code> and <code>-search</code> are mutually exclusive. You must specify exactly one.</li>
 <li><code>-search</code> is scoped to the current PDMShell directory.</li>
 <li>Circular parent chains are detected and marked as <code>Circular</code> in CSV output.</li>
 </ul>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 4.0.1.</p>
 
 </article>
 

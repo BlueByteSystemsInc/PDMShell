@@ -1,17 +1,18 @@
 ---
 description: Adds a PDM add-in from a specified directory.
-title: ADDADDIN Command Documentation | PDMShell | SOLIDWORKS PDM
+title: ADDADDIN Command | PDMShell | SOLIDWORKS PDM
 ---
-# ADDADDIN Command Documentation
-
-## DESCRIPTION:
+# ADDADDIN Command
+## Description
 Adds a PDM add-in from a specified directory.
 
-## SYNTAX:
+## Syntax
 ```bash
 addaddin -Directory
 ```
 
-## PARAMETERS:
+## Parameters
 - `Directory`: Directory that contains the add-in files.
 
+## Availability
+Available since PDMShell 2.0.0 or earlier.

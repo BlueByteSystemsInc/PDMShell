@@ -1,11 +1,9 @@
 ---
 description: Copies files inside the SOLIDWORKS PDM vault from a source file or folder to a target directory.
-title: COPY Command Documentation | PDMShell | SOLIDWORKS PDM
+title: COPY Command | PDMShell | SOLIDWORKS PDM
 ---
-
-# COPY Command Documentation
-
-## DESCRIPTION
+# COPY Command
+## Description
 Performs a vault-to-vault copy operation in SOLIDWORKS PDM.
 
 The `copy` command creates **new files with new File IDs** inside the vault by copying:
@@ -15,13 +13,12 @@ The `copy` command creates **new files with new File IDs** inside the vault by c
 
 This command does **not** add files from disk and does **not** modify the original files.
 
-## SYNTAX
+## Syntax
 ```bash
 copy -source -directory -search -recursive -name -ignoreexisting
 ```
 
-## PARAMETERS
-
+## Parameters
 - `source`  
   The source file or folder inside the vault.  
   - If a file path is provided (ends with an extension), only that file is copied.
@@ -45,8 +42,7 @@ copy -source -directory -search -recursive -name -ignoreexisting
 - `ignoreexisting`  
   Not implemented
 
-## EXAMPLES
-
+## Examples
 ### Copy a single file to another folder
 ```bash
 copy -source part1.sldprt -directory /Vault/Projects/Released -name part2.sldprt
@@ -72,8 +68,10 @@ copy -source Vault/Projects/WIP -search %.slddrw -directory Vault/Projects/Relea
 copy -source Vault/Projects/WIP -search %.sldprt -directory Vault/Projects/Released -name "$namewithouextension-new$extension"
 ```
 
-## REMARKS
-
+## Remarks
 - If `source` is a file, `search` and `recursive` are ignored.
 - If `source` is a folder and `search` is not provided, all files in that folder are copied.
 - The `search` parameter does not search the entire vault, only the source folder
+
+## Availability
+Available since PDMShell 2.0.74.

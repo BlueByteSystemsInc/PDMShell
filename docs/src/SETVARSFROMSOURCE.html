@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>SETVARSFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>SETVARSFROMSOURCE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="SETVARSFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="SETVARSFROMSOURCE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Sets variable values for files listed in a CSV source.">
       <link rel="icon" href="../favicon.ico">
@@ -85,27 +85,27 @@
         </div>
 
         <article data-uid="">
-<h1 id="setvarsfromsource-command-documentation">SETVARSFROMSOURCE Command Documentation</h1>
+<h1 id="setvarsfromsource-command">SETVARSFROMSOURCE Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>Sets variables for multiple files using a CSV file as the source.</p>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">setvarsfromsource -source -evaluatealias
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>filePath</code>: The CSV file containing the file IDs and variable values.</li>
 </ul>
-<h2 id="csv-file-format">CSV FILE FORMAT:</h2>
+<h2 id="csv-file-format">CSV File Format</h2>
 <p>The CSV file should have the following format:</p>
 <pre><code>FileID,Variable1,Variable2,... 
 XXXX,Value1,Value2,... 
 XXXX,Value1,Value2,...
 </code></pre>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <pre><code class="lang-bash">setvarsfromsource -source variables.csv # the source file must be exist in the current directory
 </code></pre>
-<h2 id="remarks">REMARKS:</h2>
+<h2 id="remarks">Remarks</h2>
 <ul>
 <li>The CSV file should have the first column as the file ID and the subsequent columns as the variable names.</li>
 <li>You need to include the extension in the filename. This file can be outside the vault.</li>
@@ -114,8 +114,10 @@ XXXX,Value1,Value2,...
 <pre><code class="lang-bash">dir -columns Description,&quot;Part Number&quot; -csv data.csv
 search -search %.sldprt -recursive -columns Description,&quot;Part Number&quot; -csv data.csv #this will save all parts from all levels in the current directory with the columns Description and Part Number
 </code></pre>
-<h2 id="tutorial">TUTORIAL:</h2>
+<h2 id="tutorial">Tutorial</h2>
 <p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/setvarsfromsource.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.1.</p>
 
 </article>
 

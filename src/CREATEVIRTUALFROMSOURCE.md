@@ -1,17 +1,18 @@
 ---
 description: Creates virtual documents from a CSV source.
-title: CREATEVIRTUALFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM
+title: CREATEVIRTUALFROMSOURCE Command | PDMShell | SOLIDWORKS PDM
 ---
-# CREATEVIRTUALFROMSOURCE Command Documentation
-
-## DESCRIPTION:
+# CREATEVIRTUALFROMSOURCE Command
+## Description
 Creates virtual documents from a CSV source.
 
-## SYNTAX:
+## Syntax
 ```bash
 createvirtualfromsource -filePath
 ```
 
-## PARAMETERS:
+## Parameters
 - `filePath`: CSV source file used to create virtual documents.
 
+## Availability
+Available since PDMShell 2.0.34.

@@ -1157,6 +1157,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/COMMANDS.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/COMMANDS.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/COPY.md",
       "output": {
         ".html": {
@@ -1441,6 +1451,16 @@
       "output": {
         ".html": {
           "relative_path": "src/MOVEFROMSOURCE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/MSGBOX.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/MSGBOX.html"
         }
       },
       "version": ""

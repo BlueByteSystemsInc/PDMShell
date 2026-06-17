@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>WHEREUSED Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>WHEREUSED Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="WHEREUSED Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="WHEREUSED Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Lists the direct parent files that reference a file.">
       <link rel="icon" href="../favicon.ico">
@@ -85,9 +85,9 @@
         </div>
 
         <article data-uid="">
-<h1 id="whereused-command-documentation">WHEREUSED Command Documentation</h1>
+<h1 id="whereused-command">WHEREUSED Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>The <code>whereused</code> command lists all parent files that reference a specified file.</p>
 <p>This command helps identify assemblies or drawings that use a particular part or subassembly.</p>
 <p>The output columns are:</p>
@@ -99,11 +99,11 @@
 <li>FolderPath</li>
 </ul>
 <hr>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">whereused -filePath|-search -csv
 </code></pre>
 <hr>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><p><code>filePath</code><br>
 Full or relative path of the file to evaluate.</p>
@@ -115,7 +115,7 @@ Optional filter applied to parent results. Supports SQL wildcard <code>%</code>.
 </li>
 </ul>
 <hr>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <h3 id="example-1-basic-where-used">Example 1: Basic Where Used</h3>
 <pre><code class="lang-bash">## Lists all parent files that reference `Bracket.SLDPRT`.
 whereused -filePath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot;
@@ -131,6 +131,8 @@ whereused -filePath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot;
 ## Exports results to CSV with columns:
 ## ChildID,ChildName,ParentName,ParentID,FolderPath
 </code></pre>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

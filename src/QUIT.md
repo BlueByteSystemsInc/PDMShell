@@ -1,20 +1,21 @@
-﻿---
-description: Exits PDMShell.
-title: QUIT Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
-# QUIT Command Documentation
-
-## DESCRIPTION:
+description: Exits PDMShell.
+title: QUIT Command | PDMShell | SOLIDWORKS PDM
+---
+# QUIT Command
+## Description
 Quits the application.
 
-## SYNTAX:
+## Syntax
 ```bash
 quit -silent
 ```
-## PARAMETERS:
+## Parameters
 - `silent`:
 (Optional) suppresses the close dialog box.
 
-## REMARKS:
+## Remarks
 - This command runs silently in scripts. Read more about [scripting](/src/scripting.html).
- 
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

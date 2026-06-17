@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>COPY Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>COPY Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="COPY Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="COPY Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Copies files inside the SOLIDWORKS PDM vault from a source file or folder to a target directory.">
       <link rel="icon" href="../favicon.ico">
@@ -85,9 +85,9 @@
         </div>
 
         <article data-uid="">
-<h1 id="copy-command-documentation">COPY Command Documentation</h1>
+<h1 id="copy-command">COPY Command</h1>
 
-<h2 id="description">DESCRIPTION</h2>
+<h2 id="description">Description</h2>
 <p>Performs a vault-to-vault copy operation in SOLIDWORKS PDM.</p>
 <p>The <code>copy</code> command creates <strong>new files with new File IDs</strong> inside the vault by copying:</p>
 <ul>
@@ -96,10 +96,10 @@
 <li>Files found using a search scoped to a source folder</li>
 </ul>
 <p>This command does <strong>not</strong> add files from disk and does <strong>not</strong> modify the original files.</p>
-<h2 id="syntax">SYNTAX</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">copy -source -directory -search -recursive -name -ignoreexisting
 </code></pre>
-<h2 id="parameters">PARAMETERS</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><p><code>source</code><br>
 The source file or folder inside the vault.</p>
@@ -127,7 +127,7 @@ Required. Specifies the destination file name.<br>
 Not implemented</p>
 </li>
 </ul>
-<h2 id="examples">EXAMPLES</h2>
+<h2 id="examples">Examples</h2>
 <h3 id="copy-a-single-file-to-another-folder">Copy a single file to another folder</h3>
 <pre><code class="lang-bash">copy -source part1.sldprt -directory /Vault/Projects/Released -name part2.sldprt
 </code></pre>
@@ -143,12 +143,14 @@ Not implemented</p>
 <h3 id="copy-files-and-append-new-to-the-old-name">Copy files and append new to the old name</h3>
 <pre><code class="lang-bash">copy -source Vault/Projects/WIP -search %.sldprt -directory Vault/Projects/Released -name &quot;$namewithouextension-new$extension&quot;
 </code></pre>
-<h2 id="remarks">REMARKS</h2>
+<h2 id="remarks">Remarks</h2>
 <ul>
 <li>If <code>source</code> is a file, <code>search</code> and <code>recursive</code> are ignored.</li>
 <li>If <code>source</code> is a folder and <code>search</code> is not provided, all files in that folder are copied.</li>
 <li>The <code>search</code> parameter does not search the entire vault, only the source folder</li>
 </ul>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.74.</p>
 
 </article>
 

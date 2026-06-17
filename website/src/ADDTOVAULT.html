@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>ADDTOVAULT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>ADDTOVAULT Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="ADDTOVAULT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="ADDTOVAULT Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Adds one or more files from disk to the SOLIDWORKS PDM vault.">
       <link rel="icon" href="../favicon.ico">
@@ -85,27 +85,27 @@
         </div>
 
         <article data-uid="">
-<h1 id="addtovault-command-documentation">ADDTOVAULT Command Documentation</h1>
+<h1 id="addtovault-command">ADDTOVAULT Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>The <code>addtovault</code> command adds one or more files from disk to the SOLIDWORKS PDM vault. It supports single files, folders, and CSV mapping files. Additional options allow batch processing, filtering, ignoring existing files, updating references, and exporting results.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>It is highly recommended that you run PDMShell as <strong>Administrator</strong> before using this command.</p>
 </div>
 <hr>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">addtovault [-source &lt;path&gt; | -map &lt;csvPath&gt;]  [-skip] [-count] | [-directory &lt;Vault or outside directory&gt;] [-search &lt;pattern&gt;] [-recursive] [-batch &lt;size&gt;] [-ignoreexisting] [-updaterefs] [-csv &lt;outputPath&gt;] [-propertymap] [-clear] [-label]
 </code></pre>
 <hr>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>source</code>:
 Specifies the source file or directory to be added to the vault.</li>
 </ul>
 <p>Supports:</p>
-<p>• Single file<br>
-• Folder</p>
+<p>� Single file<br>
+� Folder</p>
 <p>If a folder is specified, files can be filtered using <code>-search</code> and <code>-recursive</code>.</p>
 <p>If not specified, the current working directory is used.</p>
 <hr>
@@ -159,9 +159,9 @@ addtovault -map &quot;C:\Users\hawkridge\Downloads\map\map.csv&quot; -batch 50 -
 <p>(Optional)</p>
 <p>File Explorer search pattern used to filter files when <code>-source</code> is a folder.</p>
 <p>Supports:</p>
-<p>• Wildcards (<code>*</code>)<br>
-• Multiple extensions<br>
-• Separators: <code>,</code> <code>;</code> <code>|</code></p>
+<p>� Wildcards (<code>*</code>)<br>
+� Multiple extensions<br>
+� Separators: <code>,</code> <code>;</code> <code>|</code></p>
 <p>Examples:</p>
 <pre><code class="lang-bash">-search &quot;*.sldprt&quot;  
 -search &quot;*.sldprt;*.sldasm&quot;  
@@ -244,7 +244,7 @@ A csv file path containing a list of files and their properties. Use <a href="DO
 </div>
 <p>If you specify <code>-clear</code>, PDMShell will clear all the properties from the file before adding it to the vault and prior to apply the property map.</p>
 <hr>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <p>Adds a single file to the current vault directory:</p>
 <pre><code class="lang-bash">addtovault -source &quot;C:\Projects\file.txt&quot;
 </code></pre>
@@ -272,23 +272,25 @@ A csv file path containing a list of files and their properties. Use <a href="DO
 <pre><code class="lang-bash">addtovault -map &quot;c:\export\map.csv&quot; -ignoreexisting -csv &quot;ret.csv&quot; -batch 10 -propertymap &quot;c:\export\propertymap.csv&quot;
 </code></pre>
 <hr>
-<h2 id="remarks">REMARKS:</h2>
-<p>• Files are left <strong>checked out</strong> after being added.
-• Use <code>checkin</code> command to check in files after adding.</p>
+<h2 id="remarks">Remarks</h2>
+<p>� Files are left <strong>checked out</strong> after being added.
+� Use <code>checkin</code> command to check in files after adding.</p>
 <p>Example:</p>
 <pre><code class="lang-bash">checkin -search % -recursive
 </code></pre>
 <hr>
-<p>• Batch processing is strongly recommended for large migrations.</p>
-<p>• The <code>ignoreexisting</code> parameter prevents duplicate files from being added.</p>
-<p>• The <code>updaterefs</code> parameter should be used when adding SOLIDWORKS assemblies.</p>
-<p>• Ensure you have sufficient vault permissions before running this command.</p>
-<p>• The <code>map</code> parameter overrides <code>source</code> if both are specified.</p>
+<p>� Batch processing is strongly recommended for large migrations.</p>
+<p>� The <code>ignoreexisting</code> parameter prevents duplicate files from being added.</p>
+<p>� The <code>updaterefs</code> parameter should be used when adding SOLIDWORKS assemblies.</p>
+<p>� Ensure you have sufficient vault permissions before running this command.</p>
+<p>� The <code>map</code> parameter overrides <code>source</code> if both are specified.</p>
 <hr>
 <div class="NOTE">
 <h5>Note</h5>
 <p>It is recommended to perform large add operations in stages and verify results using the exported CSV report.</p>
 </div>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

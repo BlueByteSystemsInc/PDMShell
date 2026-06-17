@@ -1,23 +1,22 @@
-﻿---
-description: Displays information about the specified file.
-title: PRINT Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
-# PRINT Command Documentation
-
-## DESCRIPTION:
+description: Displays information about the specified file.
+title: PRINT Command | PDMShell | SOLIDWORKS PDM
+---
+# PRINT Command
+## Description
 Displays information about the specified file.
 
-## SYNTAX:
+## Syntax
 ```bash
 print [-filePath|-id]
 ```
-## PARAMETERS:
+## Parameters
 - `filePath`: The file to print.
 - `id`: PDM internal ID of the file to print.
 
 -filePath: The file to print information for.
 
-## EXAMPLES:
+## Examples
 ```bash
 print -filePath "C:\SOLIDWORKSPDM\Bluebyte\API\Sandbox\fidget spinner\___108545.SLDPRT"
 ```
@@ -46,3 +45,6 @@ Transitions   :
 Return Engineering [193] From New State [158] To In Design [9]
 
 ```
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

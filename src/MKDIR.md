@@ -1,27 +1,29 @@
 ---
 description: Creates a new vault folder.
-title: MKDIR Command Documentation | PDMShell | SOLIDWORKS PDM
+title: MKDIR Command | PDMShell | SOLIDWORKS PDM
 ---
-# MKDIR Command Documentation
-
-## DESCRIPTION:
+# MKDIR Command
+## Description
 Creates a new folder.
 
-## SYNTAX:
+## Syntax
 ```bash
 mkdir -directory
 ```
-## PARAMETERS:
+## Parameters
 - `directory`: The folder to create. Supports placeholders.
 
 >[!NOTE]
 > For more information about placeholders, refer to the [placeholders documentation](src/EVAL.html).
 
-## EXAMPLES:
+## Examples
 ```bash
 mkdir -directory "NewFolder"
 # Creates a new folder called NewFolder
 ```
-## REMARKS:
+## Remarks
 - To get the new folder to show up in the auto-complete, please use the command `cd -refresh`.
 - `directory` is the default parameter. You do not need to specify it.
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

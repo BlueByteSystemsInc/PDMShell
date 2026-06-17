@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>PACKG Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>PACKG Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="PACKG Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="PACKG Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Runs SOLIDWORKS Pack and Go for one assembly or for multiple assemblies from a folder search or CSV source.">
       <link rel="icon" href="../favicon.ico">
@@ -85,9 +85,9 @@
         </div>
 
         <article data-uid="">
-<h1 id="packg-command-documentation">PACKG Command Documentation</h1>
+<h1 id="packg-command">PACKG Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>The <code>packg</code> command performs a SOLIDWORKS Pack and Go operation on:</p>
 <ul>
 <li>A single assembly file</li>
@@ -96,10 +96,10 @@
 </ul>
 <p>This command launches SOLIDWORKS, executes Pack and Go for each assembly, and saves the results into a specified output directory.</p>
 <p>By default, only <code>.sldasm</code> files are processed.</p>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">packg -source -directory [-search] [-includedrawings] [-recursive] [-prefix] [-suffix] [-timeout]
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><p><code>source</code><br>
 Single assembly file, directory of assemblies, or CSV file containing assembly paths.</p>
@@ -135,7 +135,7 @@ Adds a suffix to all generated file names.</p>
 </li>
 </ul>
 <hr>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <h3 id="example-1-pack-a-single-assembly">Example 1: Pack a Single Assembly</h3>
 <pre><code class="lang-bash">## Packs a single assembly and saves results to D:\Packages
 packg -source &quot;C:\Projects\Top.sldasm&quot; -directory &quot;D:\Packages&quot;
@@ -168,6 +168,8 @@ packg -source &quot;C:\Projects\Top.sldasm&quot; -directory &quot;D:\Packages&qu
 <pre><code class="lang-bash">## Allows more time for SOLIDWORKS to launch
 packg -source &quot;C:\Projects&quot; -directory &quot;D:\Packages&quot; -timeout 300
 </code></pre>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 3.0.27.</p>
 
 </article>
 

@@ -1,23 +1,19 @@
 ---
 description: Deletes files listed in a CSV source.
-title: DELETEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM
+title: DELETEFROMSOURCE Command | PDMShell | SOLIDWORKS PDM
 ---
-
-# DELETEFROMSOURCE Command Documentation
-
-## DESCRIPTION:
-
+# DELETEFROMSOURCE Command
+## Description
 The `deletefromsource` command deletes files listed in a CSV file. It can also optionally destroy the files and export the operation results to a CSV file for auditing and reporting purposes.
 
 
 
-## SYNTAX:
+## Syntax
 ```bash
     deletefromsource -filePath -destroy -csv -batch
 ```
 
-## PARAMETERS:
-
+## Parameters
 | Parameter | Type | Required | Description |
 |---|---|---|---|
 | `filePath` | string | Yes | Path to the source CSV file containing File IDs and Folder IDs. This can be outside the vault. |
@@ -39,8 +35,7 @@ This approach allows you to:
 >[!Important]
 >For previously deleted files, you only need to provide the file name in the Name column.
 
-## SOURCE CSV FORMAT:
-
+## Source CSV Format
 The source CSV file must contain a header row with the following columns:
 
 ```bash
@@ -56,8 +51,7 @@ FileID,FolderID,Name
 | FileID | The document ID of the file |
 | FolderID | The folder ID containing the file |
 
-## RESULTS CSV FORMAT:
-
+## Results CSV Format
 If `-csv` is specified, PDMShell will generate a results file containing:
 
 ```bash
@@ -65,8 +59,7 @@ FileID,FolderID,Error
 12345,678,"DELETE error: File Not Found"
 ```
 
-## RESULTS CSV COLUMNS:
-
+## Results CSV Columns
 | Column | Description |
 |---|---|
 | FileID | File ID |
@@ -74,12 +67,10 @@ FileID,FolderID,Error
 | Error | Error message |
 
 
-## REMARKS:
-
+## Remarks
 - The source file **must be a CSV file with a header row**.
 
-## EXAMPLES:
-
+## Examples
 ```bash
 ## Delete files from CSV:
 deletefromsource -filePath "files to delete.csv"
@@ -96,3 +87,6 @@ deletefromsource -filePath "files to delete.csv" -destroy -csv "results.csv"
 ## Delete, destroy (50 files at a time in each folder), and export results:
 deletefromsource -filePath "files to delete.csv" -destroy -csv "results.csv" -batch 50
 ```
+
+## Availability
+Available since PDMShell 2.0.2.

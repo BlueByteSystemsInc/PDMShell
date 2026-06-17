@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>CHECKOUT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>CHECKOUT Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="CHECKOUT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="CHECKOUT Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Checks out one file or multiple files found by search.">
       <link rel="icon" href="../favicon.ico">
@@ -85,14 +85,14 @@
         </div>
 
         <article data-uid="">
-<h1 id="checkout-command-documentation">CHECKOUT Command Documentation</h1>
+<h1 id="checkout-command">CHECKOUT Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>Performs a check out operation on a specified file or many files.</p>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">checkout -search -recursive -filePath -checkoutOptions
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <p>-<code>search</code>: Search keyword</p>
 <p>-<code>filePath</code>: The file(s) to be checked out. This is the default parameter</p>
 <p>-<code>recursive</code>: Recursively check out all files in the current directory. Use in combination with search</p>
@@ -172,15 +172,17 @@
 </tbody>
 </table>
 <p>You combine values by using <code>+</code>. Please make sure to wrap the parameter value in &quot;&quot;. Example: <code>&quot;SkipExisting + LockReferencedFilesToo&quot;</code></p>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <pre><code class="lang-bash">checkout -filePath file1.sldprt
 </code></pre>
-<h2 id="remarks">REMARKS:</h2>
+<h2 id="remarks">Remarks</h2>
 <ul>
 <li>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
 </ul>
-<h2 id="tutorial">TUTORIAL:</h2>
+<h2 id="tutorial">Tutorial</h2>
 <p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/checkout.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

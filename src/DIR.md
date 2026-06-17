@@ -1,21 +1,17 @@
 ---
 description: Displays a list of files and subdirectories in a directory.
-title: DIR Command Documentation | PDMShell | SOLIDWORKS PDM
+title: DIR Command | PDMShell | SOLIDWORKS PDM
 ---
-
-# DIR Command Documentation
-
-## DESCRIPTION:
+# DIR Command
+## Description
 Displays a list of files and subdirectories in a directory.
 
-## SYNTAX:
-
+## Syntax
 ```bash
 dir -sort -columns -csv -refresh
 ```
 
-## PARAMETERS:
-
+## Parameters
 -`sort`: The column name to sort the list of files and folders with.
 
 -`columns`: The columns to display, separated by commas. These are PDM variables drawn from the @ tab.
@@ -26,16 +22,18 @@ dir -sort -columns -csv -refresh
 
 -`recursive`: Lists all files and all folders in the current directory recursively. 
 
-## EXAMPLES:
+## Examples
 ```bash
 dir  #"C:\Vault\Documents"
 dir  -sort "name" -cols "description,partnumber" -csv "output.csv" -refresh
 ```
 
-## REMARKS:
-
+## Remarks
 - Use the `-refresh` parameter to force the session to load the current files and sub-folders in the active directory. Do not use this when the current folder has many items.
 - The CSV file will be checked into the current directory.
 
-## TUTORIAL:
+## Tutorial
  <video src="https://bluebyte.biz/wp-content/pdmshellvideos/dir.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

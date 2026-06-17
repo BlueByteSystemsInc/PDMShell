@@ -1,17 +1,16 @@
-﻿---
-description: Gets a file version from the vault into the local cache.
-title: Get Command Documentation  | PDMShell | SOLIDWORKS PDM
 ---
-# GET Command Documentation
-
-## DESCRIPTION:
+description: Gets a file version from the vault into the local cache.
+title: Get Command | PDMShell | SOLIDWORKS PDM
+---
+# GET Command
+## Description
 Retrieves a specified version of a file or files (via search).
 
-## SYNTAX:
+## Syntax
 ```bash
 get -search -recursive -filePath -version -directory -getoptions
 ```
-## PARAMETERS:
+## Parameters
 - `search`: The search operation to use.
 
 - `filePath`: The file(s) to retrieve. This is the default parameter.
@@ -35,9 +34,12 @@ get -search -recursive -filePath -version -directory -getoptions
 | ForPreview               | Retrieves only referenced files required for SOLIDWORKS PDM preview when retrieving the referencing file. |
 
 
-## EXAMPLES:
+## Examples
 ```bash
 get -filePath "file1.sldprt" -Version 2
 ```
-## REMARKS:
+## Remarks
 - The `search` parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

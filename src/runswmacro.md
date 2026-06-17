@@ -1,22 +1,18 @@
-﻿---
-description: Runs a SOLIDWORKS macro on files found by search.
-title: RUNSWMACRO Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
-# RUNSWMACRO Command Documentation
-
-## DESCRIPTION:
-
+description: Runs a SOLIDWORKS macro on files found by search.
+title: RUNSWMACRO Command | PDMShell | SOLIDWORKS PDM
+---
+# RUNSWMACRO Command
+## Description
 The `RunSWMacro` command allows you to execute a SOLIDWORKS macro on a specific file or on multiple files found via search in the PDM vault. This is useful for automating repetitive tasks or applying custom logic to many files.
 
 
-## SYNTAX:
-
+## Syntax
 ```bash
 runswmacro -filePath -search -recursive -list -skip -count -timeout
 ```
 
-## PARAMETERS:
-
+## Parameters
 The command requires the following parameters:
 
 - `filePath`: Path to the SOLIDWORKS macro file (`.swp` or `.dll`). This is required and the file needs to cached in PDM.
@@ -299,8 +295,7 @@ runswmacro -filePath "Macros/MyMacro.dll" -search "%.sldprt" -timeout 12000
 >[!NOTE]
 > The DLL must be built against .NET Framework 4.7.2 or higher
 
-## EXAMPLES:
-
+## Examples
 ```bash
 # run batch export macro on all part in the current directory
  runswmacro -filePath "Macros/BatchExport.swp" -search "%.sldprt" 
@@ -313,3 +308,6 @@ runswmacro -filePath "Macros/MyMacro.dll" -search "%.sldprt" -timeout 12000
 # run batch export macro on all part in the current directory (does a checkout and check in of the parts)
  runswmacro -filePath "Macros/BatchExport.swp" -search "Name=%.sldprt;Edit" 
  ```
+
+## Availability
+Available since PDMShell 2.0.83.

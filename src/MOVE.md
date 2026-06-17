@@ -1,11 +1,9 @@
 ---
 description: Moves files or folders from one vault location to another.
-title: MOVE Command Documentation | PDMShell | SOLIDWORKS PDM
+title: MOVE Command | PDMShell | SOLIDWORKS PDM
 ---
-
-# MOVE Command Documentation
-
-## DESCRIPTION:
+# MOVE Command
+## Description
 The `move` command moves file(s) from one folder in the vault to another.
 
 You can move:
@@ -20,14 +18,13 @@ When a file is moved:
 
 ---
 
-## SYNTAX:
+## Syntax
 ```bash
 move -source -directory -search -recursive
 ```
 ---
 
-## PARAMETERS:
-
+## Parameters
 - `source`  
   The complete file path of the file to move.  
   You can also specify a folder path. This will move the actual folder.
@@ -45,8 +42,7 @@ move -source -directory -search -recursive
 
 ---
 
-## EXAMPLES:
-
+## Examples
 ### Example 1: Move a Single File
 ```bash
 move -source "C:\Vault\Parts\Bracket.SLDPRT" -directory "\Released"
@@ -68,10 +64,12 @@ move -source "\Projects" -search "Name=%.sldprt%" -recursive -directory "\Archiv
 ```
 ---
 
-## NOTES:
-
+## Notes
 - You must have permission to move the file(s).
 - If the file is referenced by other files, referencing paths are updated automatically.
 - If the file has references, those reference paths are updated automatically.
 - Target directory must already exist in the vault.
 - Move operations preserve version history.
+
+## Availability
+Available since PDMShell 3.0.28.

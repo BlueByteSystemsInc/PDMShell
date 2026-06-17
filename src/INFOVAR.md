@@ -1,24 +1,26 @@
 ---
 description: Gets information about a variable.
-title: INFOVAR Command Documentation | PDMShell | SOLIDWORKS PDM
+title: INFOVAR Command | PDMShell | SOLIDWORKS PDM
 ---
-# INFOVAR Command Documentation
-
-## DESCRIPTION:
+# INFOVAR Command
+## Description
 Gets information about a variable.
 
-## SYNTAX:
+## Syntax
 ```bash
 infovar -variableName
 ```
 
-## PARAMETERS:
+## Parameters
 - `variableName`: The variable name to retrieve information for.
 
-## EXAMPLES:
+## Examples
 infovar -v Description
 
 
 ## Preview 
 
 ![InfoVar Command](../images/infovar.png)
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

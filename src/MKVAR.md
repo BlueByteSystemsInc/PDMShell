@@ -1,17 +1,16 @@
 ---
 description: Creates a new PDM variable.
-title: MKVAR Command Documentation | PDMShell | SOLIDWORKS PDM
+title: MKVAR Command | PDMShell | SOLIDWORKS PDM
 ---
-# MKVAR Command Documentation
-
-## DESCRIPTION:
+# MKVAR Command
+## Description
 Creates a new variable.
 
-## SYNTAX:
+## Syntax
 ```bash
 mkvar -name -varType -mkvarflags -mkvarattributes 
 ```
-## PARAMETERS:
+## Parameters
 - `name`: The name of the variable to create.
 
 - `varType`: The type of the variable.
@@ -20,14 +19,13 @@ mkvar -name -varType -mkvarflags -mkvarattributes
 
 - `mkvarattributes`: The attributes for the variable. Seperated by `#`
 
-## EXAMPLES:
+## Examples
 ```bash
 mkvar -name "NewVariable" -varType "Text" -mkvarflags "ReadOnly" -mkvarattributes "Attribute1#Attribute2"
 ```
 
 
-## VAR TYPE VALUES:
-
+## Variable Type Values
 | Description                  |
 |------------------------------|
 | None                         |
@@ -37,11 +35,13 @@ mkvar -name "NewVariable" -varType "Text" -mkvarflags "ReadOnly" -mkvarattribute
 | Bool                         |
 | Date                         |
 
-## MKVAR FLAGS VALUES:
-
+## Mkvar Flag Values
 | Value | Description                                                         |
 |-----------------------------------------------------------------------------|
 | Unique | Values of the variable must be unique; only used for files, ignored for folders |
 | Mandatory | Missing values are not permitted; only used for files, ignored for folders |
 | VerFreeUpdateAll | Every version and every revision, regardless access, workflow states etc., are affected by the variable update |
 | VerFreeLatest | Only the latest version is affected by the variable update  |
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

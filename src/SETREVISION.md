@@ -1,11 +1,9 @@
 ---
 description: Sets the revision for one file or for files found by search.
-title: SETREVISION Command Documentation | PDMShell | SOLIDWORKS PDM
+title: SETREVISION Command | PDMShell | SOLIDWORKS PDM
 ---
-# SETREVISION Command Documentation
-
-## DESCRIPTION:
-
+# SETREVISION Command
+## Description
 The `SetRevisionCommand` allows you to set the **PDM-managed revision** of a file inside the vault.  
 This command updates the official **PDM Revision** (the value shown on the version tab), *not* the datacard one.
 
@@ -20,12 +18,11 @@ This evaluates the variable on the file and applies its value as the new revisio
 
 The command resolves all bracketed variables before applying the revision.
 
-## SYNTAX:
+## Syntax
 ```bash
 setrevision -filePath|-search -recursive -value -csv
 ```
-## PARAMETERS:
-
+## Parameters
 - `filePath`  
   Path to the file whose revision you want to update.  
   Only a single file is affected by this command.
@@ -50,13 +47,12 @@ setrevision -filePath|-search -recursive -value -csv
   Save results to a csv file
 
 
-### NOTES:
+## Notes
 
 - This command affects **only the PDM Revision**, not custom properties or configuration-specific metadata.  
 - When using `[VariableName]`, ensure the variable is present on the file card.  
 - `%previousrevision%` will adjust the counter only if the revision scheme allows backward movement.  
 - `%nextrevision%` respects all revision scheme rules defined in the PDM Administration tool.
 
-
-# AVAILABILITY 
-- 3.0.11
+## Availability
+Available since PDMShell 3.0.11.

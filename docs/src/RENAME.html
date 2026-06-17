@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>RENAME Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>RENAME Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="RENAME Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="RENAME Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Renames one file or multiple files found by search.">
       <link rel="icon" href="../favicon.ico">
@@ -85,14 +85,14 @@
         </div>
 
         <article data-uid="">
-<h1 id="rename-command-documentation">RENAME Command Documentation</h1>
+<h1 id="rename-command">RENAME Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>Renames a specified file.</p>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">rename -filePath -value -search
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><p><code>filePath</code>: The filerename.</p>
 </li>
@@ -103,14 +103,14 @@
 <li><p><code>search</code>: The search operation to use.</p>
 </li>
 </ul>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <pre><code class="lang-bash">rename -filePath &quot;oldname.sldprt&quot; -val &quot;newname.sldprt&quot;
 </code></pre>
-<h2 id="remarks">REMARKS:</h2>
+<h2 id="remarks">Remarks</h2>
 <ul>
 <li>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
 </ul>
-<h2 id="value-evaluation">VALUE EVALUATION:</h2>
+<h2 id="value-evaluation">Value Evaluation</h2>
 <p>The <code>value</code> parameter gets evaluated by PDMShell. PDMShell allows you to use placeholders in the new name, which will be replaced with actual values from the file. This can be useful to dynamically generate new names based on file properties or other variables. The following placeholders are supported:</p>
 <ul>
 <li><code>$filename</code> - The file name without extension.</li>
@@ -127,12 +127,14 @@
 <h5>Note</h5>
 <p>Please read more information about placeholder evaluation <a href="EVAL.html">here</a>.</p>
 </div>
-<h2 id="examples-1">EXAMPLES:</h2>
+<h2 id="examples-1">Examples</h2>
 <p>If you use the value <code>&quot;$filename_$date_$version$extension&quot;</code>, it will be replaced with the file name, current date, and version, resulting in something like <code>&quot;oldname_10-12-2023_3&quot;</code>.</p>
 <pre><code class="lang-bash">rename -filePath &quot;Part 123 Draft.sldprt&quot; -value &quot;${left(${replace($nameWithoutExtension, \&quot; \&quot;, \&quot;_\&quot;)}, 12)}$extension&quot;
 
 rename -filePath &quot;ABC-123.sldprt&quot; -value &quot;${before($nameWithoutExtension, \&quot;-\&quot;)}$extension&quot;
 </code></pre>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

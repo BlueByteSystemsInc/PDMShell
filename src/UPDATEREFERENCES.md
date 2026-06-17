@@ -1,11 +1,9 @@
 ---
 description: Updates file references inside the SOLIDWORKS PDM vault using the Raw Reference Manager.
-title: UPDATEREFERENCES Command Documentation | PDMShell | SOLIDWORKS PDM
+title: UPDATEREFERENCES Command | PDMShell | SOLIDWORKS PDM
 ---
-
-# UPDATEREFERENCES Command Documentation
-
-## DESCRIPTION
+# UPDATEREFERENCES Command
+## Description
 Updates file references inside the SOLIDWORKS PDM vault.
 
 The `updatereferences` command modifies references stored **inside files**, without opening SOLIDWORKS, and allows you to:
@@ -17,13 +15,12 @@ The `updatereferences` command modifies references stored **inside files**, with
 
 This command is especially useful for fixing broken references, updating references after migrations, or correcting references that point outside the vault.
 
-## SYNTAX
+## Syntax
 ```bash
 updatereferences -filepath -search -directory -scope -recursive -csv
 ```
 
-## PARAMETERS
-
+## Parameters
 - `filepath`  
   Optional. Updates references for a single file.  
   - If a relative path is provided, it is resolved against the current directory.
@@ -52,8 +49,7 @@ updatereferences -filepath -search -directory -scope -recursive -csv
 - `csv`
   Saves the update references operations in a csv file.
 
-## BEHAVIOR
-
+## Behavior
 - Operates directly on file reference data
 - Does not open SOLIDWORKS
 - **Requires files to be checked out**
@@ -61,10 +57,7 @@ updatereferences -filepath -search -directory -scope -recursive -csv
 - Updates references by matching file names inside the specified directory scope
 - Commits changes directly back into the file
 
-## EXAMPLES
-
-
-
+## Examples
 ###  Update only references that point outside the vault
 ```bash
 updatereferences -filepath speaker.sldasm -directory Libraries -scope UpdateOutsideVaultReferenceOnly
@@ -75,8 +68,7 @@ updatereferences -filepath speaker.sldasm -directory Libraries -scope UpdateOuts
 updatereferences -search %.sldasm -scope UpdateBrokenReferences
 ```
  
-## REMARKS
-
+## Remarks
 - Either `filepath` or `search` must be specified.
 - If both are provided, `filepath` takes precedence.
 - The `search` parameter only searches within the current directory unless `recursive` is specified.
@@ -84,4 +76,5 @@ updatereferences -search %.sldasm -scope UpdateBrokenReferences
 - The first matching file found is used to update the reference.
 - This command modifies files directly; use with care in controlled workflows.
 
- 
+## Availability
+Available since PDMShell 3.0.23.

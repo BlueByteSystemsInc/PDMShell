@@ -1,25 +1,27 @@
-﻿---
-description: Stops a running process by name.
-title: KILL Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
-# KILL Command Documentation
-
-## DESCRIPTION:
+description: Stops a running process by name.
+title: KILL Command | PDMShell | SOLIDWORKS PDM
+---
+# KILL Command
+## Description
 Kills a process.
 
-## SYNTAX:
+## Syntax
 ```bash
 kill -process 
 ```
-## PARAMETERS:
+## Parameters
 - `programName`: The process to terminate (with extension).
 
-## EXAMPLES:
+## Examples
 ```bash
 kill sldworks.exe
 # terminates all open SOLIDWORKS sessions.
 ```
-## REMARKS:
+## Remarks
 - This command uses `taskkill` from the command line.
 - **This command requires PDM to be run as an administrator**. 
 - PDMShell adds a note called `ADMIN` in the top-right area of its window when it is open as admin.
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

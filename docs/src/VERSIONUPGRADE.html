@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>VERSIONUPGRADE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>VERSIONUPGRADE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="VERSIONUPGRADE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="VERSIONUPGRADE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Upgrades file versions and optionally moves revision values after a PDM upgrade.">
       <link rel="icon" href="../favicon.ico">
@@ -85,9 +85,9 @@
         </div>
 
         <article data-uid="">
-<h1 id="versionupgrade-command-documentation">VERSIONUPGRADE Command Documentation</h1>
+<h1 id="versionupgrade-command">VERSIONUPGRADE Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>The <code>VersionUpgradeCommand</code> provides tools for <strong>bumping PDM revisions</strong>, <strong>validating file references</strong>, and <strong>exporting broken reference results to a CSV file</strong>.</p>
 <div class="NOTE">
 <h5>Note</h5>
@@ -111,11 +111,11 @@
 </ul>
 <p>Each result row represents a reference that is out of date, missing, or mismatched according to PDM rules.</p>
 <hr>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">versionupgrade -search &lt;query&gt; [-recursive] [-bumprevision] [-referencescheck] [-csv &lt;fileName&gt;]
 </code></pre>
 <hr>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>search</code><br>
 Search query used to locate files for the version upgrade operation.<br>
@@ -162,7 +162,7 @@ If the file does not exist, it is <strong>added</strong> to the vault.</p>
 <li>If the CSV file is checked out, a warning is returned.</li>
 </ul>
 <hr>
-<h2 id="workflow-overview">WORKFLOW OVERVIEW</h2>
+<h2 id="workflow-overview">Workflow Overview</h2>
 <h3 id="1-search-for-files">1. Search for files</h3>
 <p>The command executes a PDM search using the supplied query and optional recursion.</p>
 <h3 id="2-perform-requested-operations">2. Perform requested operations</h3>
@@ -179,7 +179,7 @@ If the file does not exist, it is <strong>added</strong> to the vault.</p>
 <li>Displays success, warnings, and error messages</li>
 </ul>
 <hr>
-<h2 id="notes">NOTES:</h2>
+<h2 id="notes">Notes</h2>
 <ul>
 <li><code>bumprevision</code> and <code>referencescheck</code> operate <em>only</em> on files returned by the search.</li>
 <li>CSV exporting is only active when <strong>both</strong><br>
@@ -189,10 +189,8 @@ If the file does not exist, it is <strong>added</strong> to the vault.</p>
 <li>Bulk operations respect PDM permissions and may fail if the user lacks rights.</li>
 </ul>
 <hr>
-<h2 id="availability">AVAILABILITY</h2>
-<ul>
-<li><strong>3.0.13</strong></li>
-</ul>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 3.0.13.</p>
 
 </article>
 

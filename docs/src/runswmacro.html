@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>RUNSWMACRO Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>RUNSWMACRO Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="RUNSWMACRO Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="RUNSWMACRO Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Runs a SOLIDWORKS macro on files found by search.">
       <link rel="icon" href="../favicon.ico">
@@ -85,14 +85,14 @@
         </div>
 
         <article data-uid="">
-<h1 id="runswmacro-command-documentation">RUNSWMACRO Command Documentation</h1>
+<h1 id="runswmacro-command">RUNSWMACRO Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>The <code>RunSWMacro</code> command allows you to execute a SOLIDWORKS macro on a specific file or on multiple files found via search in the PDM vault. This is useful for automating repetitive tasks or applying custom logic to many files.</p>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">runswmacro -filePath -search -recursive -list -skip -count -timeout
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <p>The command requires the following parameters:</p>
 <ul>
 <li><p><code>filePath</code>: Path to the SOLIDWORKS macro file (<code>.swp</code> or <code>.dll</code>). This is required and the file needs to cached in PDM.</p>
@@ -369,7 +369,7 @@ runswmacro -filePath &quot;Macros/MyMacro.dll&quot; -search &quot;%.sldprt&quot;
 <h5>Note</h5>
 <p>The DLL must be built against .NET Framework 4.7.2 or higher</p>
 </div>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <pre><code class="lang-bash"># run batch export macro on all part in the current directory
  runswmacro -filePath &quot;Macros/BatchExport.swp&quot; -search &quot;%.sldprt&quot; 
 </code></pre>
@@ -380,6 +380,8 @@ runswmacro -filePath &quot;Macros/MyMacro.dll&quot; -search &quot;%.sldprt&quot;
 <pre><code class="lang-bash"># run batch export macro on all part in the current directory (does a checkout and check in of the parts)
  runswmacro -filePath &quot;Macros/BatchExport.swp&quot; -search &quot;Name=%.sldprt;Edit&quot; 
 </code></pre>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.83.</p>
 
 </article>
 

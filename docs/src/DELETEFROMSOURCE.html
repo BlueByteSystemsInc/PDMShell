@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>DELETEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>DELETEFROMSOURCE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="DELETEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="DELETEFROMSOURCE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Deletes files listed in a CSV source.">
       <link rel="icon" href="../favicon.ico">
@@ -85,14 +85,14 @@
         </div>
 
         <article data-uid="">
-<h1 id="deletefromsource-command-documentation">DELETEFROMSOURCE Command Documentation</h1>
+<h1 id="deletefromsource-command">DELETEFROMSOURCE Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>The <code>deletefromsource</code> command deletes files listed in a CSV file. It can also optionally destroy the files and export the operation results to a CSV file for auditing and reporting purposes.</p>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">    deletefromsource -filePath -destroy -csv -batch
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <table>
 <thead>
 <tr>
@@ -142,7 +142,7 @@ Since these files no longer exist in the vault in a normal state, they cannot be
 <h5>Important</h5>
 <p>For previously deleted files, you only need to provide the file name in the Name column.</p>
 </div>
-<h2 id="source-csv-format">SOURCE CSV FORMAT:</h2>
+<h2 id="source-csv-format">Source CSV Format</h2>
 <p>The source CSV file must contain a header row with the following columns:</p>
 <pre><code class="lang-bash">FileID,FolderID,Name
 12345,678,1.sldprt
@@ -170,12 +170,12 @@ Since these files no longer exist in the vault in a normal state, they cannot be
 </tr>
 </tbody>
 </table>
-<h2 id="results-csv-format">RESULTS CSV FORMAT:</h2>
+<h2 id="results-csv-format">Results CSV Format</h2>
 <p>If <code>-csv</code> is specified, PDMShell will generate a results file containing:</p>
 <pre><code class="lang-bash">FileID,FolderID,Error
 12345,678,&quot;DELETE error: File Not Found&quot;
 </code></pre>
-<h2 id="results-csv-columns">RESULTS CSV COLUMNS:</h2>
+<h2 id="results-csv-columns">Results CSV Columns</h2>
 <table>
 <thead>
 <tr>
@@ -198,11 +198,11 @@ Since these files no longer exist in the vault in a normal state, they cannot be
 </tr>
 </tbody>
 </table>
-<h2 id="remarks">REMARKS:</h2>
+<h2 id="remarks">Remarks</h2>
 <ul>
 <li>The source file <strong>must be a CSV file with a header row</strong>.</li>
 </ul>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <pre><code class="lang-bash">## Delete files from CSV:
 deletefromsource -filePath &quot;files to delete.csv&quot;
 </code></pre>
@@ -215,6 +215,8 @@ deletefromsource -filePath &quot;files to delete.csv&quot; -destroy -csv &quot;r
 <pre><code class="lang-bash">## Delete, destroy (50 files at a time in each folder), and export results:
 deletefromsource -filePath &quot;files to delete.csv&quot; -destroy -csv &quot;results.csv&quot; -batch 50
 </code></pre>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.2.</p>
 
 </article>
 

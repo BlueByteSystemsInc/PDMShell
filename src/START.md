@@ -1,19 +1,17 @@
-﻿---
-description: Starts a program, tool, or supported application.
-title: START Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
-# START Command Documentation
-
-## DESCRIPTION:
+description: Starts a program, tool, or supported application.
+title: START Command | PDMShell | SOLIDWORKS PDM
+---
+# START Command
+## Description
 The `start` command launches programs, tools, or supported applications. It supports launching SOLIDWORKS, the PDM administration tool, Notepad, Windows Explorer, and other custom programs. It can also open the SOLIDWORKS API help file or the current folder in Explorer.
 
-## SYNTAX:
+## Syntax
 ```bash
 start -process -swversion
 ```
 
-## PARAMETERS:
-
+## Parameters
 - **`filePath`**:  
   *(Optional)* File path or executable to start. This is the default parameter.
 
@@ -29,14 +27,13 @@ start -process -swversion
   *(Optional)* Specifies the version of SOLIDWORKS to launch. The year should be provided (e.g., `2023`).
 
 
-## EXAMPLES:
-  
+## Examples
    ```bash
 # Launch the PDM administration tool.  
    start admin
    ```
 
-## REMARKS:
+## Remarks
 - **Launching SOLIDWORKS**:  
   If the `-swversion` parameter is provided, the command attempts to locate and launch the specified version of SOLIDWORKS. If the version is not found, an error message will be displayed.
 
@@ -54,3 +51,6 @@ start -process -swversion
 
 - **Error Handling**:  
   If the specified program or process cannot be found, an error message will be displayed.
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

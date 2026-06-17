@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>DIR Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>DIR Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="DIR Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="DIR Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Displays a list of files and subdirectories in a directory.">
       <link rel="icon" href="../favicon.ico">
@@ -85,30 +85,32 @@
         </div>
 
         <article data-uid="">
-<h1 id="dir-command-documentation">DIR Command Documentation</h1>
+<h1 id="dir-command">DIR Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>Displays a list of files and subdirectories in a directory.</p>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">dir -sort -columns -csv -refresh
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <p>-<code>sort</code>: The column name to sort the list of files and folders with.</p>
 <p>-<code>columns</code>: The columns to display, separated by commas. These are PDM variables drawn from the @ tab.</p>
 <p>-<code>csv</code>: Export the directory listing to a CSV file. Must include the csv extension</p>
 <p>-<code>refresh</code>: Refreshes the session to load the current files and sub-folders in the active directory in the autocomplete list.</p>
 <p>-<code>recursive</code>: Lists all files and all folders in the current directory recursively.</p>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <pre><code class="lang-bash">dir  #&quot;C:\Vault\Documents&quot;
 dir  -sort &quot;name&quot; -cols &quot;description,partnumber&quot; -csv &quot;output.csv&quot; -refresh
 </code></pre>
-<h2 id="remarks">REMARKS:</h2>
+<h2 id="remarks">Remarks</h2>
 <ul>
 <li>Use the <code>-refresh</code> parameter to force the session to load the current files and sub-folders in the active directory. Do not use this when the current folder has many items.</li>
 <li>The CSV file will be checked into the current directory.</li>
 </ul>
-<h2 id="tutorial">TUTORIAL:</h2>
+<h2 id="tutorial">Tutorial</h2>
 <p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/dir.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

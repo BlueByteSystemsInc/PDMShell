@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>DELETE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>DELETE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="DELETE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="DELETE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Deletes one file, one folder, or multiple files found by search.">
       <link rel="icon" href="../favicon.ico">
@@ -85,14 +85,14 @@
         </div>
 
         <article data-uid="">
-<h1 id="delete-command-documentation">DELETE Command Documentation</h1>
+<h1 id="delete-command">DELETE Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>The <code>delete</code> command deletes one file, one folder, or multiple files found by search. It supports target selection by file path, directory path, search query, or ID.</p>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">delete [-filePath|-id] -directory -search -recursive -list -csv -destroy
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><p><code>filePath</code>:
 (Optional) Specifies the file path of the file to be deleted.</p>
@@ -125,19 +125,21 @@
 <h5>Note</h5>
 <p><code>-destroy</code> only affects results from the <code>search</code> parameter.</p>
 </div>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <p>Delete files matching a search query:</p>
 <pre><code class="lang-bash">delete -search &quot;%.sldprt&quot;
 # delete all parts in the current directory
 </code></pre>
-<h2 id="remarks">REMARKS:</h2>
+<h2 id="remarks">Remarks</h2>
 <ul>
 <li>The delete command requires at least one of the following parameters: <code>filePath</code>, <code>dir</code>, <code>search</code>, or <code>id</code>.</li>
 <li>Use the <code>recursive</code> parameter with caution, as it will delete all contents within the specified directory.</li>
 <li>Ensure you have the necessary permissions to delete files or directories in the PDM system.</li>
 </ul>
-<h2 id="tutorial">TUTORIAL:</h2>
+<h2 id="tutorial">Tutorial</h2>
 <p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/delete.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

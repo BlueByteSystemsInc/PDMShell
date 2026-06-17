@@ -1,18 +1,17 @@
 ---
 description: Searches for files and folders in the current vault directory.
-title: SEARCH Command Documentation | PDMShell | SOLIDWORKS PDM
+title: SEARCH Command | PDMShell | SOLIDWORKS PDM
 ---
-# SEARCH Command Documentation
-
-## DESCRIPTION:
+# SEARCH Command
+## Description
 The `search` command allows users to search for files and folders in the current directory. It supports recursive searches, filtering, and output customization.
 
-## SYNTAX:
+## Syntax
 ```bash
 search -search -recursive -includesubfolders -csv -columns -duplicatesstrategy
 ```
 
-## PARAMETERS:
+## Parameters
 - `search`: Search keyword. This supports SQL wildcard %.
 
 - `recursive`: Searches through all subdirectories recursively.
@@ -37,7 +36,7 @@ search -search "Name=%.sld%;Recursive=true;DuplicatedBy=Name" -columns "FileDate
 > We have introduced Advanced Search capabilities that can be used in the `-search` parameter. Please see more information [here](advancedsearch.md).
 
 
-## EXAMPLES:
+## Examples
 ### Example 1: Basic Search
 ```bash
 search -search % # prints all the files in the current directory
@@ -57,8 +56,7 @@ search -search -csv -columns "Description,PartNumber" # Prints all the files in 
 Exports the search results to a CSV file with specified columns.
 
 
-## DUPLICATE STRATEGY OPTIONS
-
+## Duplicate Strategy Options
 The following strategies are supported for the `-duplicatesstrategy` parameter:
 
 | Strategy | Description |
@@ -87,9 +85,12 @@ search -search "Name=%.sld%;Recursive=true;DuplicatedBy=Name" -duplicatesstrateg
 
 
 
-## NOTES:
+## Notes
 - Ensure the current directory is set correctly before running the command.
 - Use the `-columns` parameter to customize the output format. Data is pulled from @ for configuration-supported documents.
 
-## TUTORIAL:
+## Tutorial
  <video src="https://bluebyte.biz/wp-content/pdmshellvideos/search.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+
+## Availability
+Available since PDMShell 2.0.5.

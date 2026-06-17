@@ -1,17 +1,16 @@
 ---
 description: Checks out one file or multiple files found by search.
-title: CHECKOUT Command Documentation | PDMShell | SOLIDWORKS PDM
+title: CHECKOUT Command | PDMShell | SOLIDWORKS PDM
 ---
-# CHECKOUT Command Documentation
-
-## DESCRIPTION:
+# CHECKOUT Command
+## Description
 Performs a check out operation on a specified file or many files.
 
-## SYNTAX:
+## Syntax
 ```bash
 checkout -search -recursive -filePath -checkoutOptions
 ```
-## PARAMETERS:
+## Parameters
 -`search`: Search keyword
 
 -`filePath`: The file(s) to be checked out. This is the default parameter
@@ -43,12 +42,15 @@ checkout -search -recursive -filePath -checkoutOptions
 You combine values by using `+`. Please make sure to wrap the parameter value in "". Example: `"SkipExisting + LockReferencedFilesToo"`
 
 
-## EXAMPLES:
+## Examples
 ```bash
 checkout -filePath file1.sldprt
 ```
-## REMARKS:
+## Remarks
 - The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
 
-## TUTORIAL:
+## Tutorial
  <video src="https://bluebyte.biz/wp-content/pdmshellvideos/checkout.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

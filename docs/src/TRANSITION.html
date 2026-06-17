@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>TRANSITION Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>TRANSITION Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="TRANSITION Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="TRANSITION Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Changes the workflow state for one file, files found by search, or files listed in a CSV source.">
       <link rel="icon" href="../favicon.ico">
@@ -85,9 +85,9 @@
         </div>
 
         <article data-uid="">
-<h1 id="transition-command-documentation">TRANSITION Command Documentation</h1>
+<h1 id="transition-command">TRANSITION Command</h1>
 
-<h2 id="description">DESCRIPTION</h2>
+<h2 id="description">Description</h2>
 <p>The <code>transition</code> command changes SOLIDWORKS PDM files from one workflow state to another using a specified transition.</p>
 <p>This command supports three modes:</p>
 <ul>
@@ -95,7 +95,7 @@
 <li>Search-based transition</li>
 <li>Single file transition</li>
 </ul>
-<h1 id="syntax">SYNTAX</h1>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash"># single file
 transition -transitionidorname &lt;id-or-name&gt; -filePath &lt;path&gt;
 # search and transition all results
@@ -103,7 +103,7 @@ transition -transitionidorname &lt;id-or-name&gt; -search &lt;pattern&gt; [-recu
 # transition all files in the csv via the specified transition
 transition -source &lt;csv&gt; -password &lt;password&gt; [-batch &lt;size&gt;] [-comment &lt;text&gt;]
 </code></pre>
-<h1 id="parameters">PARAMETERS</h1>
+<h2 id="parameters">Parameters</h2>
 <h2 id="transitionidorname"><code>transitionidorname</code></h2>
 <p>Specifies the workflow transition ID or name.
 Required for search and filepath modes.</p>
@@ -167,7 +167,7 @@ Example:</p>
 -filePath part.sldprt
 </code></pre>
 <hr>
-<h1 id="csv-format">CSV FORMAT</h1>
+<h2 id="csv-format">CSV Format</h2>
 <p>Required format:</p>
 <p>FileID,ParentFolderID,TransitionID</p>
 <p>Example:</p>
@@ -177,7 +177,7 @@ Example:</p>
 34523,1205,18
 </code></pre>
 <h2 id="transitioncsv"><img src="/images/transitioncsv.png" alt="transition.csv"></h2>
-<h1 id="batch-mode-source">BATCH MODE (SOURCE)</h1>
+<h2 id="batch-mode">Batch Mode</h2>
 <p>This is the recommended mode for:</p>
 <ul>
 <li>Data migrations</li>
@@ -190,20 +190,20 @@ Example:</p>
 <pre><code class="lang-bash">transition -source transitions.csv -password mypass -batch 2000
 </code></pre>
 <hr>
-<h1 id="important-considersations-for-batch-mode">IMPORTANT CONSIDERSATIONS FOR BATCH MODE</h1>
+<h2 id="important-considerations-for-batch-mode">Important Considerations For Batch Mode</h2>
 <p><img src="/images/ReferenceDialogSettings.png" alt="ReferenceDialogSettings"></p>
 <p>PDMShell batch transitions are affected by the logged-in user’s Reference Dialog settings. If “Select child references during state change” and “Select references that are defined as drawing nodes during state change” are enabled, PDM will also transition referenced files, not just the source files from the CSV. If you want PDMShell batch mode to transition only the source files, these options must be disabled for the logged-in user.</p>
-<h1 id="search-mode">SEARCH MODE</h1>
+<h2 id="search-mode">Search Mode</h2>
 <p>Transitions files found using search.</p>
 <p>Example:</p>
 <pre><code class="lang-bash">transition -search %.sldasm -transitionidorname 12 -recursive
 </code></pre>
-<h1 id="single-file-mode">SINGLE FILE MODE</h1>
+<h2 id="single-file-mode">Single File Mode</h2>
 <p>Transitions one file.</p>
 <p>Example:</p>
 <pre><code class="lang-bash">transition -filePath part.sldprt -transitionidorname 12
 </code></pre>
-<h1 id="validation">VALIDATION</h1>
+<h2 id="validation">Validation</h2>
 <p>The command automatically:</p>
 <ul>
 <li>Validates transition IDs</li>
@@ -211,16 +211,18 @@ Example:</p>
 <li>Validates file state eligibility</li>
 <li>Skips invalid files</li>
 </ul>
-<h1 id="license-limitations">LICENSE LIMITATIONS</h1>
+<h2 id="license-limitations">License Limitations</h2>
 <p>Free version limits number of files processed.</p>
 <p>To remove limit: <a href="https://bluebyte.biz/product/pdmshell">https://bluebyte.biz/product/pdmshell</a></p>
-<h1 id="best-practices">BEST PRACTICES</h1>
+<h2 id="best-practices">Best Practices</h2>
 <ul>
 <li>Use source mode for large operations.</li>
 <li>Use batch size between 500 and 5000.</li>
 <li>Always test with small batch first.</li>
 <li>Backup vault before large operations.</li>
 </ul>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

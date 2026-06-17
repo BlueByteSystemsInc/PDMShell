@@ -1,11 +1,9 @@
 ---
 description: Searches the vault for files listed in a CSV source and reports whether they exist.
-title: SEARCHFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM
+title: SEARCHFROMSOURCE Command | PDMShell | SOLIDWORKS PDM
 ---
-
-# SEARCHFROMSOURCE Command Documentation
-
-## DESCRIPTION
+# SEARCHFROMSOURCE Command
+## Description
 The `searchfromsource` command reads a **CSV source file** and uses the **first column** (ignoring the header) as input items to search for in the vault. 
 
 For every row in the source CSV, PDMShell performs a vault search and returns information such as:
@@ -20,14 +18,13 @@ Optionally, the command can write the results to a CSV file and add/update that 
 
 ---
 
-## SYNTAX
+## Syntax
 ```bash
 searchfromsource -filePath -recursive -csv
 ```
 ---
 
-## PARAMETERS
-
+## Parameters
 ### `filePath`
 Path to the **source CSV file** to read input values.
 
@@ -58,8 +55,7 @@ Supported behaviors:
 
 ---
 
-## INPUT CSV FORMAT
-
+## Input CSV Format
 The command reads:
 
 - Comma-delimited CSV
@@ -150,7 +146,7 @@ How it behaves:
 
 
 
-## OUTPUT CSV FORMAT
+## Output CSV Format
 When `-csv` is used, PDMShell generates the following columns:
 
 ID,FileName,Path,ParentFolderID,ParentFolder,IsCheckedOut,WhereUsedIds
@@ -166,8 +162,7 @@ ID,FileName,Path,ParentFolderID,ParentFolder,IsCheckedOut,WhereUsedIds
 
 ---
 
-## EXAMPLES
-
+## Examples
 ### Example 1: Run search from a source CSV
 ```bash
 searchfromsource -filePath "input.csv"
@@ -195,7 +190,7 @@ If it does not exist, the command creates it and adds it to the vault.
 
 ---
 
-## NOTES
+## Notes
 - This command requires the user to be logged in to a vault.
 - The input CSV must be accessible locally (PDM will download the file when needed).
 - If the vault search yields no result for a row, the command prints a warning and continues.
@@ -204,7 +199,10 @@ If it does not exist, the command creates it and adds it to the vault.
 
 ---
 
-## LIMITATIONS
+## Limitations
 - Only the first search result is used (`GetFirstResult()`).
 - Only file results are processed (folder results are ignored).
 - The input file is interpreted as comma-delimited CSV only.
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>MOVEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>MOVEFROMSOURCE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="MOVEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="MOVEFROMSOURCE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Moves files listed in a CSV source to a target vault folder.">
       <link rel="icon" href="../favicon.ico">
@@ -85,9 +85,9 @@
         </div>
 
         <article data-uid="">
-<h1 id="movefromsource-command-documentation">MOVEFROMSOURCE Command Documentation</h1>
+<h1 id="movefromsource-command">MOVEFROMSOURCE Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>The <code>movefromsource</code> command moves file(s) in the vault using a CSV file as input.</p>
 <p>Each row in the CSV specifies:</p>
 <ul>
@@ -102,11 +102,11 @@
 <li>File history and versions are preserved.</li>
 </ul>
 <hr>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">movefromsource -source
 </code></pre>
 <hr>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><p><code>source</code><br>
 Path to a CSV file containing file IDs and target directories.<br>
@@ -118,7 +118,7 @@ The CSV must contain at least two columns:</p>
 </li>
 </ul>
 <hr>
-<h2 id="csv-format">CSV FORMAT:</h2>
+<h2 id="csv-format">CSV Format</h2>
 <h3 id="with-header">With Header:</h3>
 <p>FileID,TargetDirectory<br>
 1234,\Released<br>
@@ -127,13 +127,13 @@ The CSV must contain at least two columns:</p>
 <p>1234,\Released<br>
 5678,\Archive\2026</p>
 <hr>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <h3 id="example-1-basic-csv-move">Example 1: Basic CSV Move</h3>
 <pre><code class="lang-bash">movefromsource -source &quot;C:\temp\movefiles.csv&quot;
 ## Moves all files listed in the CSV to their respective target folders.
 </code></pre>
 <hr>
-<h2 id="notes">NOTES:</h2>
+<h2 id="notes">Notes</h2>
 <ul>
 <li>Target directories must already exist in the vault.</li>
 <li>You must have permission to move the specified files.</li>
@@ -142,6 +142,8 @@ The CSV must contain at least two columns:</p>
 <li>Reference updates are handled automatically by SOLIDWORKS PDM.</li>
 <li>CSV rows with invalid format will be skipped and logged.</li>
 </ul>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 3.0.28.</p>
 
 </article>
 

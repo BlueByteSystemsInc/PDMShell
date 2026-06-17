@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>COPYTREE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>COPYTREE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="COPYTREE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="COPYTREE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Copies a file tree in the SOLIDWORKS PDM vault.">
       <link rel="icon" href="../favicon.ico">
@@ -85,14 +85,14 @@
         </div>
 
         <article data-uid="">
-<h1 id="copytree-command-documentation">COPYTREE Command Documentation</h1>
+<h1 id="copytree-command">COPYTREE Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>The <code>copytree</code> command copies a file tree in the SOLIDWORKS PDM vault, with options to apply prefixes, suffixes, and other filters. This only works with assembly files.</p>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">copytree [-search|-filePath] -suffix -prefix -recursive -includedrawings -latest -directory
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>filePath</code>: The source file or directory to copy.</li>
 <li><code>directory</code>: Specifies the target directory where the files will be copied.</li>
@@ -103,17 +103,19 @@
 <li><code>includedrawings</code>: Includes associated drawing files in the copy operation.</li>
 <li><code>latest</code>: Ensures the latest version of the files is copied.</li>
 </ul>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <pre><code class="lang-bash">  copytree -filePath &quot;fidget spinner.sldasm&quot; -suffix _ -directory &quot;\new project&quot; #copies the fidget spinner to new project folder with suffix _
   copytree -search &quot;*.sldasm&quot; -includedrawings -directory &quot;c:\export&quot; #copies all assemblies in current directory to the export under c drive
 </code></pre>
-<h2 id="remarks">REMARKS:</h2>
+<h2 id="remarks">Remarks</h2>
 <ul>
 <li>The <code>-dir</code> parameter specifies the target directory. If omitted, the current directory is used.</li>
 <li>Use the <code>recursive</code> parameter to include all subdirectories in the operation.</li>
 <li>The <code>includedrawings</code> parameter ensures that associated drawing files are included in the copy.</li>
 <li>The <code>latest</code> parameter ensures that only the latest versions of files are copied.</li>
 </ul>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.46.</p>
 
 </article>
 

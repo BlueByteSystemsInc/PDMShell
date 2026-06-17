@@ -1,27 +1,25 @@
-﻿---
-description: Changes the current PDM directory.
-title: CD  Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
-
-# CD Command Documentation
-
-## DESCRIPTION:
+description: Changes the current PDM directory.
+title: CD Command | PDMShell | SOLIDWORKS PDM
+---
+# CD Command
+## Description
 Changes the current PDM directory.
 
-## SYNTAX:
+## Syntax
 ```bash
 cd [-directory|-id]
 ```
 
-## PARAMETERS:
+## Parameters
 - `directory` (or `d`): The directory to switch to. The directory parameter can be a relative or absolute path in PDM.
 - `id`: ID of the folder to navigate to.
 
-## EXAMPLES:
+## Examples
 ```bash
 cd -directory 'C:\Vault\NewFolder' # Navigates its newFolder
 ```
-## REMARKS:
+## Remarks
 - Please be aware of the following special ways to change directory:
 ```bash
 cd.. # Navigates to the parent folder
@@ -35,5 +33,8 @@ cd api #navigates to the api folder
 cd -id 755 #navigates to the folder with id 755
 ```
 
-## TUTORIAL:
+## Tutorial
  <video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>EXPORT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>EXPORT Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="EXPORT Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="EXPORT Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Exports one file or multiple files found by search to the specified formats.">
       <link rel="icon" href="../favicon.ico">
@@ -85,14 +85,14 @@
         </div>
 
         <article data-uid="">
-<h1 id="export-command-documentation">EXPORT Command Documentation</h1>
+<h1 id="export-command">EXPORT Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>The <code>ExportCommand</code> allows you to export SOLIDWORKS files from the PDM vault to various formats using SOLIDWORKS. This command supports exporting a single file or multiple files found via search, with options for specifying file extensions, export location, and more.</p>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">export [-search|-filePath] -name -directory -extensions -recursive -version
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <p>The export command requires several parameters:</p>
 <ul>
 <li><code>filePath</code>: Path to the file to export (relative or absolute).</li>
@@ -104,10 +104,12 @@
 <li><code>timeout</code>: timeout in seconds (for starting SOLIDWORKS only)</li>
 <li><code>version</code>: SOLIDWORKS year version. Example 2023. Default is latest.</li>
 </ul>
-<h2 id="example">EXAMPLE:</h2>
+<h2 id="examples">Examples</h2>
 <p>Export a file to PDF and DXF in a specific directory using SOLIDWORKS 2023:</p>
 <pre><code class="lang-bash">export -filePath&quot;Designs/part1.sldprt&quot; -name &quot;part1_export&quot; -directory &quot;Exports&quot; -extensions &quot;pdf,dxf&quot; -version 2023
 </code></pre>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

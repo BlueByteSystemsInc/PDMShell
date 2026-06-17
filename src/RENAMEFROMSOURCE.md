@@ -1,20 +1,19 @@
 ---
 description: Renames files listed in a CSV source.
-title: RENAMEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM
+title: RENAMEFROMSOURCE Command | PDMShell | SOLIDWORKS PDM
 ---
-# RENAMEFROMSOURCE Command Documentation
-
-## DESCRIPTION:
+# RENAMEFROMSOURCE Command
+## Description
 The `renamefromsource` command renames files listed in a CSV source. The CSV file provides the information needed to map file IDs to their new names and folder IDs. This command supports alias evaluation for dynamic renaming.
 
 ---
 
-## SYNTAX:
+## Syntax
 ```bash
 renamefromsource -filePath -evaluatealias -csv 
 ```
 
-## PARAMETERS:
+## Parameters
 - `filePath`: (Required) The source file path. This must be a CSV file with three columns:
 
 1. File ID: The ID of the file to be renamed.
@@ -24,14 +23,14 @@ renamefromsource -filePath -evaluatealias -csv
 - `evaluatealias`: Toggle. This allows placeholders to be used in the new file name.
 - `csv`: Specifies the path to an additional CSV file for batch renaming.
 
-## EXAMPLES:
+## Examples
 Rename files using a source CSV file:
 ```bash
 renamefromsource -filePath "C:\data\rename.csv" -evaluatealias  
 # renames all the files in rename.csv while evaluating aliases
 ```
 
-## CSV FORMAT:
+## CSV Format
 The source CSV file must have the following structure:
 
 | File ID | New File Name           | Folder ID |
@@ -44,12 +43,15 @@ The source CSV file must have the following structure:
 - **New File Name**: The desired new name for the file, including the extension.  
 - **Folder ID**: The ID of the folder containing the file.
 
-## REMARKS:
+## Remarks
 - The `filePath` parameter is mandatory and must point to a valid CSV file.
 - The `evaluatealias` parameter supports dynamic placeholders for renaming, such as $name, $revision, $yyyy, etc. Ensure the CSV file is properly formatted with three columns: File -ID, New File Name, and Folder ID.
 - The `csv` parameter is optional and can be used to provide additional renaming data.
 
 For more information about alias evaluation, refer to the [Dynamic Placeholders in PDMShell](EVAL.html).
 
-## TUTORIAL:
+## Tutorial
  <video src="https://bluebyte.biz/wp-content/pdmshellvideos/renamefromsource.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
+
+## Availability
+Available since PDMShell 2.0.2.

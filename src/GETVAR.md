@@ -1,17 +1,16 @@
-﻿---
-description: Gets the value of a variable for a specified file or folder.
-title: GETVAR Command Documentation  | PDMShell | SOLIDWORKS PDM
 ---
-# GETVAR Command Documentation
-
-## DESCRIPTION:
+description: Gets the value of a variable for a specified file or folder.
+title: GETVAR Command | PDMShell | SOLIDWORKS PDM
+---
+# GETVAR Command
+## Description
 Gets the value of a variable for a specified file or folder.
 
-## SYNTAX:
+## Syntax
 ```bash
 getvar -filePath -variableName -configNames -clear -version
 ```
-## PARAMETERS:
+## Parameters
 - `filePath` :  
   The file or folder to get the variable from.
 
@@ -27,11 +26,14 @@ getvar -filePath -variableName -configNames -clear -version
 - `version` :  
   The version of the file to retrieve the variable from.
 
-## EXAMPLES:
+## Examples
 ```bash
 getvar -filePath "file1.sldprt" -variableName "CustomVar"
 ```
-## REMARKS:
+## Remarks
 - The configuration names should be separated by commas.
 - The variable must be in the data card.
 - **This comand will return what's in the locale cache which may not be necessarily the latest version. For that, please use `getVarFromDB`**.
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

@@ -1,11 +1,9 @@
 ---
 description: Upgrades file versions and optionally moves revision values after a PDM upgrade.
-title: VERSIONUPGRADE Command Documentation | PDMShell | SOLIDWORKS PDM
+title: VERSIONUPGRADE Command | PDMShell | SOLIDWORKS PDM
 ---
-# VERSIONUPGRADE Command Documentation
-
-## DESCRIPTION:
-
+# VERSIONUPGRADE Command
+## Description
 The `VersionUpgradeCommand` provides tools for **bumping PDM revisions**, **validating file references**, and **exporting broken reference results to a CSV file**.
 
 >[!Note]
@@ -31,14 +29,13 @@ Each result row represents a reference that is out of date, missing, or mismatch
 
 ---
 
-## SYNTAX:
+## Syntax
 ```bash
 versionupgrade -search <query> [-recursive] [-bumprevision] [-referencescheck] [-csv <fileName>]
 ```
 ---
 
-## PARAMETERS:
-
+## Parameters
 - `search`  
 Search query used to locate files for the version upgrade operation.  
 If omitted, no files will be processed.
@@ -84,8 +81,7 @@ ParentFileID,RefFileID,ParentPath,RefPath,RefVersion,RefLatestVersion,RefFolderI
 
 ---
 
-## WORKFLOW OVERVIEW
-
+## Workflow Overview
 ### 1. Search for files  
 The command executes a PDM search using the supplied query and optional recursion.
 
@@ -104,8 +100,7 @@ If both `search` and `referencescheck` are supplied, and `csv` is specified:
 
 ---
 
-## NOTES:
-
+## Notes
 - `bumprevision` and `referencescheck` operate *only* on files returned by the search.
 - CSV exporting is only active when **both**  
   `search` **and** `referencescheck` are supplied.
@@ -115,5 +110,5 @@ If both `search` and `referencescheck` are supplied, and `csv` is specified:
 
 ---
 
-## AVAILABILITY  
--  **3.0.13**
+## Availability
+Available since PDMShell 3.0.13.

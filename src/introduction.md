@@ -23,40 +23,40 @@ PDMShell provides a comprehensive help system and detailed command documentation
   help -command cd
   ```
 
-### Understanding the Command Documentation Structure
+### Command Page Structure
 Each command page in PDMShell documentation is organized into the following sections:
 
-1. **DESCRIPTION**: A brief explanation of what the command does.
-2. **SYNTAX**: The syntax for using the command, including required and optional parameters.
-3. **PARAMETERS**: A detailed explanation of each parameter, including whether it is required or optional.
-4. **EXAMPLES**: Practical examples of how to use the command.
-5. **REMARKS**: Additional notes, tips, or special considerations for using the command.
-6. **TUTORIAL**: A short video tutorial demonstrating the command in action (if available).
+1. **Description**: A brief explanation of what the command does.
+2. **Syntax**: The syntax for using the command, including required and optional parameters.
+3. **Parameters**: A detailed explanation of each parameter, including whether it is required or optional.
+4. **Examples**: Practical examples of how to use the command.
+5. **Remarks**: Additional notes, tips, or special considerations for using the command.
+6. **Availability**: The PDMShell version where the command first became available.
 
-### Example Command Documentation
+### Example Command Page
 Here’s an example of how a command is documented:
 
-#### CD Command Documentation
+#### CD Command
 
-**DESCRIPTION**:  
+**Description**:  
 Changes the current PDM directory.
 
-**SYNTAX**:  
+**Syntax**:  
 ```bash
 cd [-directory|-id]
 ```
 
-**PARAMETERS**:  
+**Parameters**:  
 - `directory`: The directory to switch to. The directory parameter can be a relative or absolute path in PDM.  
 - `id`: ID of the folder to navigate to.
 
-**EXAMPLES**:  
+**Examples**:  
 ```bash
 cd -directory 'C:\Vault\NewFolder' # Navigates to NewFolder
 cd -id 755 # Navigates to the folder with ID 755
 ```
 
-**REMARKS**:  
+**Remarks**:  
 - Use `cd..` to navigate to the parent folder or `cd\` to navigate to the root of the vault.  
 - If you just created a new folder and want to `cd` to it using autocomplete, use the `dir` command with the `-refresh` parameter to reload the session.  
 - `directory` is the default parameter, so you don’t need to specify it if it’s the only parameter in your command.  
@@ -71,7 +71,7 @@ As of **PDMShell 3.0.1**, all **command names**, **parameter names**, and **valu
 Escaping quotes when passing arguments to PDMShell depends on **where the command originates**. [Please read this dedicated article](escapingquotes.md).
 
 
-**TUTORIAL**:  
+**Tutorial**:  
 <video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
 
 

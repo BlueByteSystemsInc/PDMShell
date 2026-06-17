@@ -1,23 +1,25 @@
 ---
 description: Opens the PDM variable editor.
-title: EDITVARS Command Documentation | PDMShell | SOLIDWORKS PDM
+title: EDITVARS Command | PDMShell | SOLIDWORKS PDM
 ---
-# EDITVARS Command Documentation
-
-## DESCRIPTION:
+# EDITVARS Command
+## Description
 Opens the PDM variable editor.
 
-## SYNTAX:
+## Syntax
 ```bash 
 editvars
 ```
-## PARAMETERS:
+## Parameters
 None
 
-## EXAMPLES:
+## Examples
 ```bash
 editvars
 # open the PDM variable editor 
 ```
-## TUTORIAL:
+## Tutorial
 ![Variable Editor Manager](../images/editvars.png)
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

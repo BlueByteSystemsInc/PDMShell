@@ -1,18 +1,17 @@
-﻿---
-description: Gets the value of a variable for a specified file or folder directly from the database.
-title: GETVARFROMDB Command Documentation | PDMShell | SOLIDWORKS PDM
 ---
-# GETVARFROMDB Command Documentation
-
-## DESCRIPTION:
+description: Gets the value of a variable for a specified file or folder directly from the database.
+title: GETVARFROMDB Command | PDMShell | SOLIDWORKS PDM
+---
+# GETVARFROMDB Command
+## Description
 Gets the value of a variable for a specified file or folder directly from the database.
 
-## SYNTAX:
+## Syntax
 ```bash
 getvarfromdb -filePath -variableName -configNames
 ```
 
-## PARAMETERS:
+## Parameters
 - `filePath` :  
   The file or folder to get the variable from.
 
@@ -22,9 +21,12 @@ getvarfromdb -filePath -variableName -configNames
 - `configNames` :  
   The configuration names to retrieve the variable from, separated by commas.
 
-## EXAMPLES:
+## Examples
 getvarfromdb -f "file1.sldprt" -variableName "CustomVar"
 
-## REMARKS:
+## Remarks
 - The configuration names should be separated by commas.
 - This command will always return the latest value.
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

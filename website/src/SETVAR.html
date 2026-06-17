@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>SETVAR Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>SETVAR Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="SETVAR Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="SETVAR Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Sets the value of a variable for a specified checked out file or many checked out files.">
       <link rel="icon" href="../favicon.ico">
@@ -85,14 +85,14 @@
         </div>
 
         <article data-uid="">
-<h1 id="setvar-command-documentation">SETVAR Command Documentation</h1>
+<h1 id="setvar-command">SETVAR Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>Sets the value of a variable for a specified checked out file or many checked out files.</p>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">setvar (-filePath path | -search query) -variableName variable_name [-value value | -clear] [-configNames configuration_names] [-recursive] [-stringformat format]
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><p><code>filePath</code>: The file or folder to set the variable for.</p>
 </li>
@@ -111,7 +111,7 @@
 <li><p><code>stringformat</code>: string format. See remarks section.</p>
 </li>
 </ul>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <pre><code class="lang-bash">setvar -filePath file1.sldprt -variableName Description -value $value -stringformat UpperCase # Upper case the current value.
 
 setvar -filePath file1.sldprt -variableName Description -value &quot;$value\n$fileNameWithoutExtension.pdf&quot; # Append a new line and a generated PDF name.
@@ -122,7 +122,7 @@ setvar -filePath file1.sldprt -variableName Code -value &quot;${left(${replace($
 
 setvar -search &quot;Name=%.sldprt&quot; -variableName Description -value &quot;$value\nChecked by $username&quot; -recursive
 </code></pre>
-<h2 id="evaluation">EVALUATION:</h2>
+<h2 id="evaluation">Evaluation</h2>
 <p>The <code>value</code> parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables.</p>
 <p><code>$value</code> is the current value of the same variable before the command writes the new value. If the current value is null or empty, <code>$value</code> evaluates to an empty string instead of staying as literal <code>$value</code>.</p>
 <p>Use <code>\n</code> inside the value when you want PDMShell to write a real newline to the variable.</p>
@@ -131,7 +131,7 @@ setvar -search &quot;Name=%.sldprt&quot; -variableName Description -value &quot;
 <h5>Note</h5>
 <p>Please read more information about placeholder evaluation <a href="EVAL.html">here</a>.</p>
 </div>
-<h2 id="remarks">REMARKS</h2>
+<h2 id="remarks">Remarks</h2>
 <ul>
 <li>The <code>configNames</code> parameter should be separated by commas. If omitted, PDMShell uses <code>@</code> for configuration-supported documents.</li>
 <li>The <code>search</code> parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
@@ -144,14 +144,16 @@ setvar -search &quot;Name=%.sldprt&quot; -variableName Description -value &quot;
 </ul>
 </li>
 </ul>
-<h2 id="tutorial">TUTORIAL:</h2>
+<h2 id="tutorial">Tutorial</h2>
 <p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/setvar.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
-<h2 id="changelogs">CHANGELOGS</h2>
+<h2 id="changelog">Changelog</h2>
 <ul>
 <li>As of version <a href="releasenotes.html">3.0.9</a>, we have added support for setting folder daracard variables</li>
 <li><code>$value</code> now evaluates to an empty string when the existing value is null or empty, and literal <code>\n</code> in evaluated values is converted to a newline.</li>
 <li>Dynamic placeholder evaluation supports string functions such as <code>${left(...)}</code>, <code>${right(...)}</code>, <code>${len(...)}</code>, <code>${pos(...)}</code>, <code>${replace(...)}</code>, <code>${before(...)}</code>, and <code>${after(...)}</code>.</li>
 </ul>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

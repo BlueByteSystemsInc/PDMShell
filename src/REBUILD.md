@@ -1,19 +1,20 @@
 ---
 description: Rebuilds SOLIDWORKS files from a file path or search result.
-title: REBUILD Command Documentation | PDMShell | SOLIDWORKS PDM
+title: REBUILD Command | PDMShell | SOLIDWORKS PDM
 ---
-# REBUILD Command Documentation
-
-## DESCRIPTION:
+# REBUILD Command
+## Description
 Rebuilds SOLIDWORKS files from a file path or search result.
 
-## SYNTAX:
+## Syntax
 ```bash
 rebuild -filePath -search -swversion
 ```
 
-## PARAMETERS:
+## Parameters
 - `filePath`: File to rebuild.
 - `search`: Search query used to find files to rebuild.
 - `swversion`: SOLIDWORKS version year to use.
 
+## Availability
+Available since PDMShell 2.0.0 or earlier.

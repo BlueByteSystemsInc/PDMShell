@@ -225,9 +225,9 @@ description: PowerShell like commandline interpreter and data migration tool for
     <strong>Visual Code Editor</strong>
     <span>Build and validate workflows on a visual canvas.</span>
   </a>
-  <a class="quick-link" href="HELP.md">
+  <a class="quick-link" href="COMMANDS.md">
     <strong>Command Reference</strong>
-    <span>Browse commands, parameters, and examples.</span>
+    <span>Browse commands, categories, examples, and availability.</span>
   </a>
   <a class="quick-link" href="scripting.md">
     <strong>Scripting</strong>

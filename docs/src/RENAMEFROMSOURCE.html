@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>RENAMEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>RENAMEFROMSOURCE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="RENAMEFROMSOURCE Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="RENAMEFROMSOURCE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Renames files listed in a CSV source.">
       <link rel="icon" href="../favicon.ico">
@@ -85,15 +85,15 @@
         </div>
 
         <article data-uid="">
-<h1 id="renamefromsource-command-documentation">RENAMEFROMSOURCE Command Documentation</h1>
+<h1 id="renamefromsource-command">RENAMEFROMSOURCE Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>The <code>renamefromsource</code> command renames files listed in a CSV source. The CSV file provides the information needed to map file IDs to their new names and folder IDs. This command supports alias evaluation for dynamic renaming.</p>
 <hr>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">renamefromsource -filePath -evaluatealias -csv 
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>filePath</code>: (Required) The source file path. This must be a CSV file with three columns:</li>
 </ul>
@@ -106,12 +106,12 @@
 <li><code>evaluatealias</code>: Toggle. This allows placeholders to be used in the new file name.</li>
 <li><code>csv</code>: Specifies the path to an additional CSV file for batch renaming.</li>
 </ul>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <p>Rename files using a source CSV file:</p>
 <pre><code class="lang-bash">renamefromsource -filePath &quot;C:\data\rename.csv&quot; -evaluatealias  
 # renames all the files in rename.csv while evaluating aliases
 </code></pre>
-<h2 id="csv-format">CSV FORMAT:</h2>
+<h2 id="csv-format">CSV Format</h2>
 <p>The source CSV file must have the following structure:</p>
 <table>
 <thead>
@@ -144,15 +144,17 @@
 <li><strong>New File Name</strong>: The desired new name for the file, including the extension.</li>
 <li><strong>Folder ID</strong>: The ID of the folder containing the file.</li>
 </ul>
-<h2 id="remarks">REMARKS:</h2>
+<h2 id="remarks">Remarks</h2>
 <ul>
 <li>The <code>filePath</code> parameter is mandatory and must point to a valid CSV file.</li>
 <li>The <code>evaluatealias</code> parameter supports dynamic placeholders for renaming, such as $name, $revision, $yyyy, etc. Ensure the CSV file is properly formatted with three columns: File -ID, New File Name, and Folder ID.</li>
 <li>The <code>csv</code> parameter is optional and can be used to provide additional renaming data.</li>
 </ul>
 <p>For more information about alias evaluation, refer to the <a href="EVAL.html">Dynamic Placeholders in PDMShell</a>.</p>
-<h2 id="tutorial">TUTORIAL:</h2>
+<h2 id="tutorial">Tutorial</h2>
 <p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/renamefromsource.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.2.</p>
 
 </article>
 

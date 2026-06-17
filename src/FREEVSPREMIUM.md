@@ -9,36 +9,37 @@ PDMShell comes in two editions: **Free** for light use and **Premium** for full 
 
 ---
 
-## OVERVIEW
+## Overview
 
 | Edition | Description |
 |----------|--------------|
-| **Free** | Ideal for testing and small jobs. Processes up to **5 items per command**. |
-| **Premium** | Full access with **unlimited processing**, workflow automation, and scripting. |
+| **Free** | Ideal for testing and small jobs. `search` returns up to **5 items**, and `runscript` runs scripts up to **5 lines**. |
+| **Premium** | Full access with **unlimited search results**, unlimited scripting, and workflow automation. |
 
 ---
 
-## FEATURE COMPARISON
+## Feature Comparison
 
 | Feature | Free | Premium |
 |----------|------|----------|
-| Max items per command | 5 | Unlimited |
-| All `search` commands | ✅ | ✅ |
-| `printfromsource`, `getvar` | ✅ (5-limit) | ✅ Unlimited |
-| Workflow & transitions | ❌ | ✅ |
-| Automation scripting | ❌ | ✅ |
-| Alias & renaming | ✅ | ✅ |
-| Priority support | ❌ | Full |
-| Commercial use | ✅ (non-resellers) | ✅ |
-| Reseller use | ❌ | ✅ |
+| `search` result limit | 5 items | Unlimited |
+| `runscript` script length | 5 lines | Unlimited |
+| All `search` commands | Yes, limited to 5 results | Yes, unlimited |
+| `printfromsource`, `getvar` | Yes | Yes, unlimited |
+| Workflow & transitions | No | Yes |
+| Automation scripting | Yes, limited to 5 script lines | Yes, unlimited |
+| Alias & renaming | Yes | Yes |
+| Priority support | No | Full |
+| Commercial use | Yes, non-resellers only | Yes |
+| Reseller use | No | Yes |
 | Cost | Free | Paid |
 
 ---
 
-## FREE EDITION
+## Free Edition
 
 Perfect for evaluation, quick lookups, and validation tasks.  
-**Limit:** 5 items per command.  
+**Limits:** `search` returns up to 5 items, and `runscript` runs scripts up to 5 lines.  
 **Note:** Resellers and VARs may not use the Free version commercially.
 
 **Example:**
@@ -46,7 +47,7 @@ Perfect for evaluation, quick lookups, and validation tasks.
 printfromsource -filePath "source.csv" -csv "output.csv"
 ```
 
-## BUY PREMIUM
+## Buy Premium
 
 To buy a Premium PDMShell license, visit:
 http://bluebyte.biz/product/pdmshell

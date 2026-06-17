@@ -1,25 +1,26 @@
 ---
 description: Clears the current session.
-title: CLS Command Documentation | PDMShell | SOLIDWORKS PDM
+title: CLS Command | PDMShell | SOLIDWORKS PDM
 ---
-# CLS Command Documentation
-
-## DESCRIPTION:
+# CLS Command
+## Description
 Clears the current session.
 
-## SYNTAX:
+## Syntax
 ```bash
 cls
 ```
 
-## PARAMETERS:
-
+## Parameters
 Command has no parameters.
 
-## EXAMPLES:
+## Examples
 ```bash
 cls
 ```
 
-## REMARKS
+## Remarks
 - You can alternatively set the Line Limit Count from the settings to remind the session to clear every count of lines.
+
+## Availability
+Available since PDMShell 2.0.0 or earlier.

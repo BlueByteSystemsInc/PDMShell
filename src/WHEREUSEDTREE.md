@@ -1,11 +1,9 @@
 ---
 description: Builds a recursive where-used tree for one file or files found by search.
-title: WHEREUSEDTREE Command Documentation | PDMShell | SOLIDWORKS PDM
+title: WHEREUSEDTREE Command | PDMShell | SOLIDWORKS PDM
 ---
-
-# WHEREUSEDTREE Command Documentation
-
-## DESCRIPTION:
+# WHEREUSEDTREE Command
+## Description
 The `whereusedtree` command builds a recursive where-used tree for one file or for each file found by a search in the current directory.
 
 Use this when you need to see not only the direct parents of a file, but also the parents of those parents.
@@ -14,16 +12,14 @@ The command prints a tree in the session output and can optionally export the re
 
 ---
 
-## SYNTAX:
-
+## Syntax
 ```bash
 whereusedtree (-filePath <path> | -search <query>) [-depth <number>] [-csv <file.csv>]
 ```
 
 ---
 
-## PARAMETERS:
-
+## Parameters
 - `filePath`
   Full or relative path of the file to evaluate. Use either `-filePath` or `-search`, not both.
 
@@ -38,8 +34,7 @@ whereusedtree (-filePath <path> | -search <query>) [-depth <number>] [-csv <file
 
 ---
 
-## EXAMPLES:
-
+## Examples
 ### Example 1: Recursive Where Used For One File
 
 ```bash
@@ -80,8 +75,10 @@ The CSV includes:
 
 ---
 
-## REMARKS:
-
+## Remarks
 - `-filePath` and `-search` are mutually exclusive. You must specify exactly one.
 - `-search` is scoped to the current PDMShell directory.
 - Circular parent chains are detected and marked as `Circular` in CSV output.
+
+## Availability
+Available since PDMShell 4.0.1.

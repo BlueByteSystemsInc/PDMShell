@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>SEARCH Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>SEARCH Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="SEARCH Command Documentation | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="SEARCH Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Searches for files and folders in the current vault directory.">
       <link rel="icon" href="../favicon.ico">
@@ -85,14 +85,14 @@
         </div>
 
         <article data-uid="">
-<h1 id="search-command-documentation">SEARCH Command Documentation</h1>
+<h1 id="search-command">SEARCH Command</h1>
 
-<h2 id="description">DESCRIPTION:</h2>
+<h2 id="description">Description</h2>
 <p>The <code>search</code> command allows users to search for files and folders in the current directory. It supports recursive searches, filtering, and output customization.</p>
-<h2 id="syntax">SYNTAX:</h2>
+<h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">search -search -recursive -includesubfolders -csv -columns -duplicatesstrategy
 </code></pre>
-<h2 id="parameters">PARAMETERS:</h2>
+<h2 id="parameters">Parameters</h2>
 <ul>
 <li><p><code>search</code>: Search keyword. This supports SQL wildcard %.</p>
 </li>
@@ -118,7 +118,7 @@ search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns
 <h5>Note</h5>
 <p>We have introduced Advanced Search capabilities that can be used in the <code>-search</code> parameter. Please see more information <a href="advancedsearch.html">here</a>.</p>
 </div>
-<h2 id="examples">EXAMPLES:</h2>
+<h2 id="examples">Examples</h2>
 <h3 id="example-1-basic-search">Example 1: Basic Search</h3>
 <pre><code class="lang-bash">search -search % # prints all the files in the current directory
 </code></pre>
@@ -131,7 +131,7 @@ search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns
 <pre><code class="lang-bash">search -search -csv -columns &quot;Description,PartNumber&quot; # Prints all the files in the current directory with their descriptions and part numbers
 </code></pre>
 <p>Exports the search results to a CSV file with specified columns.</p>
-<h2 id="duplicate-strategy-options">DUPLICATE STRATEGY OPTIONS</h2>
+<h2 id="duplicate-strategy-options">Duplicate Strategy Options</h2>
 <p>The following strategies are supported for the <code>-duplicatesstrategy</code> parameter:</p>
 <table>
 <thead>
@@ -203,13 +203,15 @@ search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns
 search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -duplicatesstrategy KeepNewest -columns &quot;FileDate,Hash,Revision&quot;
 </code></pre>
 <p><img src="image.png" alt="duplicatedby"></p>
-<h2 id="notes">NOTES:</h2>
+<h2 id="notes">Notes</h2>
 <ul>
 <li>Ensure the current directory is set correctly before running the command.</li>
 <li>Use the <code>-columns</code> parameter to customize the output format. Data is pulled from @ for configuration-supported documents.</li>
 </ul>
-<h2 id="tutorial">TUTORIAL:</h2>
+<h2 id="tutorial">Tutorial</h2>
 <p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/search.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.5.</p>
 
 </article>
 
