@@ -4,7 +4,7 @@
     "changefreq": "weekly",
     "priority": 1
   },
-  "source_base_path": "C:/Users/jlili/source/repos/BlueByteSystemsInc/PDMShell",
+  "source_base_path": "C:/Users/jlili/source/repos/BlueByteSystemsInc/PDMShell.Docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -617,10 +617,40 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/assembly.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/assembly.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/command.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/command.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/commandslist.png",
       "output": {
         "resource": {
           "relative_path": "images/commandslist.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/directory.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/directory.png"
         }
       },
       "version": ""
@@ -637,10 +667,30 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/drawing.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/drawing.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/editvars.png",
       "output": {
         "resource": {
           "relative_path": "images/editvars.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/edrawing.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/edrawing.png"
         }
       },
       "version": ""
@@ -691,6 +741,16 @@
       "output": {
         "resource": {
           "relative_path": "images/favicon.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/file.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/file.png"
         }
       },
       "version": ""
@@ -801,6 +861,36 @@
       "output": {
         "resource": {
           "relative_path": "images/migrate.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/parameter.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/parameter.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/part.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/part.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmcli.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmcli.ico"
         }
       },
       "version": ""
@@ -971,6 +1061,26 @@
       "output": {
         "resource": {
           "relative_path": "images/updateissue.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/variable.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/variable.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/vault.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/vault.png"
         }
       },
       "version": ""
