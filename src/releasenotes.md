@@ -8,8 +8,8 @@ title: Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
-# 4.0.7 (June 2026)
-- Added the PDMShell add-in for SOLIDWORKS PDM.
+# 4.0.7 (07/17/2026)
+- **Added the PDMShell add-in for SOLIDWORKS PDM (Downloadable for Premium Users).**
 - Added the Script Editor for configuring PDMShell scripts from inside PDM.
 - Added script permissions for permitted users and groups.
 - Added script conditions that control whether a script should run for the selected file, folder, or command context.
