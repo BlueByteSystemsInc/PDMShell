@@ -2077,6 +2077,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/scriptsfromtransition.md",
       "output": {
         ".html": {

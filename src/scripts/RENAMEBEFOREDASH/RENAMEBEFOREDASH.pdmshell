@@ -1,0 +1,3 @@
+# If you run this from the PDMShell add-in, add quit -silent as the last line.
+rename -filePath "$localPath" -value "${before($fileNameWithoutExtension,-)}$extension"
+msgbox -value "Rename complete" -title "Rename Script" -icon "Information"

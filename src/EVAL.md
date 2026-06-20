@@ -94,6 +94,7 @@ String functions use the `${...}` syntax:
 ${left($value, 5)}
 ${replace($fileNameWithoutExtension, " ", "_")}
 ${before($fileNameWithoutExtension, "-")}
+${regex($fileNameWithoutExtension, "^([^-]+)-", 1)}
 ```
 
 Supported functions:
@@ -107,6 +108,8 @@ Supported functions:
 | `${replace(value, old, new)}` | Replaces all occurrences of `old` with `new`. |
 | `${before(value, search)}` | Returns the text before `search`. If `search` is not found, the original value is returned. |
 | `${after(value, search)}` | Returns the text after `search`. If `search` is not found, an empty string is returned. |
+| `${regex(value, pattern)}` | Returns the first regular expression match. If no match is found, an empty string is returned. |
+| `${regex(value, pattern, group)}` | Returns a capture group from the first regular expression match. `group` can be a group number or group name. If the group is not found, an empty string is returned. |
 
 String functions can be nested when the nested function also uses `${...}`:
 
@@ -148,4 +151,9 @@ rename -filePath "Part 123 Draft.sldprt" -value "${left(${replace($fileNameWitho
 ### Renaming Everything Before a Separator
 ```bash
 rename -filePath "ABC-123.sldprt" -value "${before($fileNameWithoutExtension, \"-\")}$extension"
+```
+
+### Renaming With a Regular Expression
+```bash
+rename -filePath "ABC-123.sldprt" -value "${regex($fileNameWithoutExtension, \"^([^-]+)-\", 1)}$extension"
 ```

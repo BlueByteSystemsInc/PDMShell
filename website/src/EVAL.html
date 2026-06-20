@@ -165,6 +165,7 @@ setvar -variableName Description -filePath &quot;$localPath&quot; -value &quot;$
 <pre><code class="lang-bash">${left($value, 5)}
 ${replace($fileNameWithoutExtension, &quot; &quot;, &quot;_&quot;)}
 ${before($fileNameWithoutExtension, &quot;-&quot;)}
+${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
 </code></pre>
 <p>Supported functions:</p>
 <table>
@@ -203,6 +204,14 @@ ${before($fileNameWithoutExtension, &quot;-&quot;)}
 <td><code>${after(value, search)}</code></td>
 <td>Returns the text after <code>search</code>. If <code>search</code> is not found, an empty string is returned.</td>
 </tr>
+<tr>
+<td><code>${regex(value, pattern)}</code></td>
+<td>Returns the first regular expression match. If no match is found, an empty string is returned.</td>
+</tr>
+<tr>
+<td><code>${regex(value, pattern, group)}</code></td>
+<td>Returns a capture group from the first regular expression match. <code>group</code> can be a group number or group name. If the group is not found, an empty string is returned.</td>
+</tr>
 </tbody>
 </table>
 <p>String functions can be nested when the nested function also uses <code>${...}</code>:</p>
@@ -228,6 +237,9 @@ ${before($fileNameWithoutExtension, &quot;-&quot;)}
 </code></pre>
 <h3 id="renaming-everything-before-a-separator">Renaming Everything Before a Separator</h3>
 <pre><code class="lang-bash">rename -filePath &quot;ABC-123.sldprt&quot; -value &quot;${before($fileNameWithoutExtension, \&quot;-\&quot;)}$extension&quot;
+</code></pre>
+<h3 id="renaming-with-a-regular-expression">Renaming With a Regular Expression</h3>
+<pre><code class="lang-bash">rename -filePath &quot;ABC-123.sldprt&quot; -value &quot;${regex($fileNameWithoutExtension, \&quot;^([^-]+)-\&quot;, 1)}$extension&quot;
 </code></pre>
 
 </article>

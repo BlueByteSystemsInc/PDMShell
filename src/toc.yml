@@ -69,6 +69,8 @@
       href: scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md  
     - name: Check In All Files
       href: scripts/CHECKINALLFILES/CHECKINALLFILES.md
+    - name: Rename Before Dash
+      href: scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md
 - name: SQL Examples 
   expanded: true
   items:

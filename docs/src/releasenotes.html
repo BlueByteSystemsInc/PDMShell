@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>PDMShell Changelog and Release Notes | SOLIDWORKS PDM Automation | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Release Notes of PDMShell | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="PDMShell Changelog and Release Notes | SOLIDWORKS PDM Automation | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Release Notes of PDMShell">
+      <meta name="description" content="PDMShell changelog and release notes for SOLIDWORKS PDM automation, including new commands, add-in updates, script templates, bug fixes, and upgrade notes.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,14 +85,22 @@
         </div>
 
         <article data-uid="">
+<h1 id="pdmshell-changelog-and-release-notes">PDMShell Changelog And Release Notes</h1>
 
-
+<p>Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in updates, script library templates, bug fixes, and upgrade notes.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>To update PDMShell properly, <strong>download</strong> the latest version, <strong>uninstall</strong> PDMShell and
 then <strong>install</strong> the latest version. <strong>Do not update installed version.</strong></p>
 </div>
-<h1 id="407-07172026">4.0.7 (07/17/2026)</h1>
+<h2 id="408-07182026">4.0.8 (07/18/2026)</h2>
+<ul>
+<li>Added <code>${regex(value, pattern)}</code> and <code>${regex(value, pattern, group)}</code> dynamic placeholder string functions.</li>
+<li>Added the <strong>Rename Before Dash</strong> script template to the PDMShell Script Library.</li>
+<li>Fixed Script Library downloads so templates without a SOLIDWORKS macro no longer create or report an empty <code>Macro.swb</code> file.</li>
+<li>Updated the AI Assistant toolbar button to open the hosted PDMShell Assistant website.</li>
+</ul>
+<h2 id="407-07172026">4.0.7 (07/17/2026)</h2>
 <ul>
 <li><strong>Added the PDMShell add-in for SOLIDWORKS PDM (Downloadable for Premium Users).</strong></li>
 <li>Added the Script Editor for configuring PDMShell scripts from inside PDM.</li>
@@ -109,7 +117,7 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 <li>Added session global variables with <code>setglobal</code>, <code>getglobal</code>, <code>clearglobal</code>, and <code>${global.Name}</code> evaluation.</li>
 <li>Updated the installer package for this release.</li>
 </ul>
-<h1 id="406-06122026">4.0.6 (06/12/2026)</h1>
+<h2 id="406-06122026">4.0.6 (06/12/2026)</h2>
 <ul>
 <li>Enhanced script execution for command-line and automation scenarios.</li>
 <li>Added <code>runscript -items</code> for integrations that pass file and folder ID pairs.</li>
@@ -117,11 +125,11 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 <li>Added command-line <code>.pdmshell</code> detection so <code>pdmcli.exe &quot;script.pdmshell&quot;</code> runs the script and forwards supported parameters such as <code>-items</code>.</li>
 <li>Added the <strong>Error Mode</strong> setting. <code>Default</code> mode reports missing-file delete operations as warnings, while <code>Aggressive</code> mode keeps the previous hard-error behavior.</li>
 </ul>
-<h1 id="405-06102026">4.0.5 (06/10/2026)</h1>
+<h2 id="405-06102026">4.0.5 (06/10/2026)</h2>
 <ul>
 <li>Enhanced script processing logic.</li>
 </ul>
-<h1 id="404-06102026">4.0.4 (06/10/2026)</h1>
+<h2 id="404-06102026">4.0.4 (06/10/2026)</h2>
 <ul>
 <li>Added and documented the <a href="WAIT.html">wait</a> command.</li>
 <li>Added condition expression support for file/folder/process existence, variable and placeholder comparisons, grouped <code>and</code> / <code>or</code> logic, and arithmetic comparisons.</li>
@@ -132,12 +140,12 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 <li>Improved <code>setvar</code> evaluation so <code>$value</code> falls back to an empty string when null or empty, and literal <code>\n</code> writes a real newline.</li>
 <li>Updated <code>pasteasreference</code> behavior so <code>source</code> is the source file, <code>search</code> finds files to paste references to, and <code>filePath</code> is the reference to append.</li>
 </ul>
-<h1 id="403-06042026">4.0.3 (06/04/2026)</h1>
+<h2 id="403-06042026">4.0.3 (06/04/2026)</h2>
 <ul>
 <li>Rebuild release.</li>
 <li>Fixed automatic login behavior when selecting or using vault view names.</li>
 </ul>
-<h1 id="401-06032026">4.0.1 (06/03/2026)</h1>
+<h2 id="401-06032026">4.0.1 (06/03/2026)</h2>
 <ul>
 <li>Bumped PDMShell project versions to <code>4.0.1</code>.</li>
 <li>Updated <code>help</code> output to organize commands by category.</li>
@@ -148,263 +156,263 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 <li>Added Visual Code Editor canvas navigation controls such as zoom in, zoom out, and zoom to fit.</li>
 <li>Added the Check In All Files script to the script library.</li>
 </ul>
-<h1 id="400-06012026">4.0.0 (06/01/2026)</h1>
+<h2 id="400-06012026">4.0.0 (06/01/2026)</h2>
 <ul>
 <li>Added <a href="visual-code-editor-4.html">Visual Code Editor</a> for building PDMShell scripts as a workflow-style canvas.</li>
 <li>Added <code>Favorite=SEARCH FAVORITE</code> token to the advanced search.</li>
 <li>Added <a href="RUNTEMPLATE.html">runtemplate</a> command to run SOLIDWORKS PDM templates from PDMShell.</li>
 <li>Added <a href="PASTEASREFERENCE.html">pasteasreference</a> command to replace custom references from a file or search result.</li>
 </ul>
-<h1 id="3071">3.0.71</h1>
+<h2 id="3071">3.0.71</h2>
 <ul>
 <li>Fixed solidworks exception with <code>ruswmacrocommand</code></li>
 <li><code>list</code> parameter in <code>runswmacrocommand</code> now assumes first row is header</li>
 <li>Improved cancellation message when the user cancels the search</li>
 <li>Improved search with variables.</li>
 </ul>
-<h1 id="3070">3.0.70</h1>
+<h2 id="3070">3.0.70</h2>
 <ul>
 <li>Fixed issue related to PDMShell staying in the task manager when it closes.</li>
 <li>Add <code>listreferencescommand</code> command</li>
 </ul>
-<h1 id="3066-69">3.0.66-69</h1>
+<h2 id="3066-69">3.0.66-69</h2>
 <ul>
 <li>Remove dialog when calling <code>quit</code> command</li>
 <li>Fixed few issues with updater</li>
 </ul>
-<h1 id="3066">3.0.66</h1>
+<h2 id="3066">3.0.66</h2>
 <ul>
 <li>Added dark mode to the updates available dialog</li>
 <li>Added automatic update when you click on <code>Yes, update right now</code> in the updates available dialog</li>
 </ul>
-<h1 id="3059-65">3.0.59-65</h1>
+<h2 id="3059-65">3.0.59-65</h2>
 <ul>
 <li>Added fallback logic for when <code>addtovaultcommand</code> fails.</li>
 </ul>
-<h1 id="3058-2026-03-23">3.0.58 (2026-03-23)</h1>
+<h2 id="3058-2026-03-23">3.0.58 (2026-03-23)</h2>
 <ul>
 <li>Added retry logic for verifying license due to server overload.</li>
 </ul>
-<h1 id="3057-2026-03-22">3.0.57 (2026-03-22)</h1>
+<h2 id="3057-2026-03-22">3.0.57 (2026-03-22)</h2>
 <ul>
 <li><code>dir</code>: Fixed search bug causing dir listing to be incomplete.</li>
 </ul>
-<h1 id="3056-2026-03-22">3.0.56 (2026-03-22)</h1>
+<h2 id="3056-2026-03-22">3.0.56 (2026-03-22)</h2>
 <ul>
 <li>Enhanced <code>runscript</code> and fixed minor bugs in the PDMShell add-in.</li>
 <li>Added a new PDMShell add-in demo</li>
 </ul>
-<h1 id="3055-2026-03-20">3.0.55 (2026-03-20)</h1>
+<h2 id="3055-2026-03-20">3.0.55 (2026-03-20)</h2>
 <ul>
 <li>Added a quick access button to PDMShell AI assistant</li>
 </ul>
-<h1 id="3054-2026-03-20">3.0.54 (2026-03-20)</h1>
+<h2 id="3054-2026-03-20">3.0.54 (2026-03-20)</h2>
 <ul>
 <li><code>deletefromsource</code>: API workaround for IEdmBatchDelete3</li>
 </ul>
-<h1 id="3053-2026-03-18">3.0.53 (2026-03-18)</h1>
+<h2 id="3053-2026-03-18">3.0.53 (2026-03-18)</h2>
 <ul>
 <li><code>deletefromsource</code>: Fixed some bugs</li>
 </ul>
-<h1 id="3052-2026-03-17">3.0.52 (2026-03-17)</h1>
+<h2 id="3052-2026-03-17">3.0.52 (2026-03-17)</h2>
 <ul>
 <li>internal build</li>
 </ul>
-<h1 id="3051-2026-03-17">3.0.51 (2026-03-17)</h1>
+<h2 id="3051-2026-03-17">3.0.51 (2026-03-17)</h2>
 <ul>
 <li>internal build</li>
 </ul>
-<h1 id="3050-2026-03-16">3.0.50 (2026-03-16)</h1>
+<h2 id="3050-2026-03-16">3.0.50 (2026-03-16)</h2>
 <ul>
 <li><code>updatesreferences</code>: added <code>csv</code> to save output.</li>
 </ul>
-<h1 id="3049-2026-03-16">3.0.49 (2026-03-16)</h1>
+<h2 id="3049-2026-03-16">3.0.49 (2026-03-16)</h2>
 <ul>
 <li>Adding verbose logging to to <code>addtovault</code></li>
 <li><code>setvarfromsource</code>: Added error message to error code.</li>
 </ul>
-<h1 id="3048-2026-03-15">3.0.48 (2026-03-15)</h1>
+<h2 id="3048-2026-03-15">3.0.48 (2026-03-15)</h2>
 <ul>
 <li>Minor change to <code>addtovault</code>: existing files found during add will be added to results file from parameter <code>csv</code>.</li>
 <li>Added the PDMShell add-in to run scripts from PDM.</li>
 </ul>
-<h1 id="3047-2026-03-07">3.0.47 (2026-03-07)</h1>
+<h2 id="3047-2026-03-07">3.0.47 (2026-03-07)</h2>
 <ul>
 <li>Added <code>edit</code> token to search. This will force a check out and check-in when using a PDM <code>-search</code> during any command.</li>
 <li>Added <code>version</code> to specify the version of SOLIDWORKS to use in <code>export</code> and <code>runswmacro</code> commands.</li>
 </ul>
-<h1 id="3046-2026-03-06">3.0.46 (2026-03-06)</h1>
+<h2 id="3046-2026-03-06">3.0.46 (2026-03-06)</h2>
 <ul>
 <li>Expanded <code>source</code> to take folder in <a href="MOVE.html">move</a>: This allow folders to be moved.</li>
 </ul>
-<h1 id="3045-2026-03-06">3.0.45 (2026-03-06)</h1>
+<h2 id="3045-2026-03-06">3.0.45 (2026-03-06)</h2>
 <ul>
 <li>Add <code>label</code> parameter to <a href="ADDTOVAULT.html">addtovault</a></li>
 </ul>
-<h1 id="3044-2026-03-03">3.0.44 (2026-03-03)</h1>
+<h2 id="3044-2026-03-03">3.0.44 (2026-03-03)</h2>
 <ul>
 <li>Add <code>count</code>, <code>clear</code>, <code>skip</code> parameters to <a href="ADDTOVAULT.html">addtovault</a></li>
 </ul>
-<h1 id="3042-2026-03-02">3.0.42 (2026-03-02)</h1>
+<h2 id="3042-2026-03-02">3.0.42 (2026-03-02)</h2>
 <ul>
 <li>Small bugs fixes with the <code>csv</code> parameter in <a href="ADDTOVAULT.html">addtovault</a></li>
 <li>If you specify the word &quot;DELETE&quot; in the value of the custom property in the <code>propertymap</code>, PDMShell will delete the property prior to adding the file.</li>
 </ul>
-<h1 id="3041-2026-03-01">3.0.41 (2026-03-01)</h1>
+<h2 id="3041-2026-03-01">3.0.41 (2026-03-01)</h2>
 <ul>
 <li>Added <code>propertymap</code> parameter to allow to set custom property prior to adding files to vault from a csv file.</li>
 <li>Changed <code>list</code> parameter in <a href="ADDTOVAULT.html">addtovault</a> to <code>map</code></li>
 </ul>
-<h1 id="3040">3.0.40</h1>
-<h1 id="3039">3.0.39</h1>
+<h2 id="3040">3.0.40</h2>
+<h2 id="3039">3.0.39</h2>
 <p>Ghost builds</p>
-<h1 id="3038-2026-02-26">3.0.38 (2026-02-26)</h1>
+<h2 id="3038-2026-02-26">3.0.38 (2026-02-26)</h2>
 <ul>
 <li>Added <code>update</code> parameter and changed the logic <code>refresh</code> parameter <a href="DOCMANPROPS.html">DocManProps</a>: <code>Update</code> now updates the files and <code>refresh</code> refresh the csv.</li>
 </ul>
-<h1 id="3037-2026-02-25">3.0.37 (2026-02-25)</h1>
+<h2 id="3037-2026-02-25">3.0.37 (2026-02-25)</h2>
 <ul>
 <li>Added <code>list</code> parameter to <a href="ADDTOVAULT.html">addtovault</a>: CSV mapping file list</li>
 <li>Added <code>batch</code> parameter to <a href="ADDTOVAULT.html">addtovault</a>.</li>
 <li>Improved performance with large data sets <a href="ADDTOVAULT.html">addtovault</a>.</li>
 </ul>
-<h1 id="3036-2026-02-24">3.0.36 (2026-02-24)</h1>
+<h2 id="3036-2026-02-24">3.0.36 (2026-02-24)</h2>
 <ul>
 <li>Ignored temporary files in <a href="DOCMANPROPS.html">DocManProps</a>.</li>
 <li>Added support for listing non-solidworks in output of <a href="DOCMANPROPS.html">DocManProps</a>.</li>
 </ul>
-<h1 id="3035-2026-02-23">3.0.35 (2026-02-23)</h1>
-<h1 id="3034-2026-02-23">3.0.34 (2026-02-23)</h1>
+<h2 id="3035-2026-02-23">3.0.35 (2026-02-23)</h2>
+<h2 id="3034-2026-02-23">3.0.34 (2026-02-23)</h2>
 <ul>
 <li>Fixed bug when enumerating large data volume <a href="DOCMANPROPS.html">DocManProps</a>.</li>
 <li>pdmcli.exe now signed with a verified publisher.</li>
 </ul>
-<h1 id="3033-2026-02-21">3.0.33 (2026-02-21)</h1>
+<h2 id="3033-2026-02-21">3.0.33 (2026-02-21)</h2>
 <ul>
 <li>Fixed escape and unescape bug in default mode in <a href="DOCMANPROPS.html">DocManProps</a> command.</li>
 <li>Add <code>extensions</code> parameter to <a href="DOCMANPROPS.html">DocManProps</a> command.</li>
 </ul>
-<h1 id="3032-2026-02-20">3.0.32 (2026-02-20)</h1>
+<h2 id="3032-2026-02-20">3.0.32 (2026-02-20)</h2>
 <ul>
 <li>Added documentation for the <code>transition</code>  <a href="TRANSITION.html">Transition</a> command.</li>
 </ul>
-<h1 id="3031-2026-02-20">3.0.31 (2026-02-20)</h1>
+<h2 id="3031-2026-02-20">3.0.31 (2026-02-20)</h2>
 <ul>
 <li>Added <code>docmanprops</code> to edit properties using the document manager <a href="DOCMANPROPS.html">DocManProps</a> command.</li>
 </ul>
-<h1 id="3030-2026-02-17">3.0.30 (2026-02-17)</h1>
+<h2 id="3030-2026-02-17">3.0.30 (2026-02-17)</h2>
 <ul>
 <li>Added <code>batch</code> parameter for destroying files in the <a href="DELETEFROMSOURCE.html">DeleteFromSource</a> command.</li>
 </ul>
-<h1 id="3029-2026-02-16">3.0.29 (2026-02-16)</h1>
+<h2 id="3029-2026-02-16">3.0.29 (2026-02-16)</h2>
 <ul>
 <li>Minor changes and updates to the docs.</li>
 </ul>
-<h1 id="3028-2026-02-11">3.0.28 (2026-02-11)</h1>
+<h2 id="3028-2026-02-11">3.0.28 (2026-02-11)</h2>
 <ul>
 <li>Added <code>DuplicatedBy</code> token to advanced search and <code>DuplicateStrategy</code> parameter to the search command.</li>
 <li>Added <a href="MOVE.html">Move</a> and <a href="MOVEFROMSOURCE.html">MoveFromSource</a> commands.</li>
 </ul>
-<h1 id="3027-2026-02-09">3.0.27 (2026-02-09)</h1>
+<h2 id="3027-2026-02-09">3.0.27 (2026-02-09)</h2>
 <ul>
 <li>Added <a href="PACKANDGO.html">Pack And Go</a></li>
 <li>Updated <a href="WHEREUSED.html">Where Used</a></li>
 </ul>
-<h1 id="3026-2026-01-05">3.0.26 (2026-01-05)</h1>
+<h2 id="3026-2026-01-05">3.0.26 (2026-01-05)</h2>
 <ul>
 <li>Happy New Year 2026 🎊!</li>
 <li><a href="GET.html">get command</a>: <code>Directory</code> parameter is now <strong>optional</strong>. If not specified, the file is cached in its folder. If specified with an empty value, the file is cached at the root of the vault.</li>
 <li>Update tooltip for the <code>source</code> parameter in the <a href="CLEARACACHE.md">clear cache command</a></li>
 </ul>
-<h1 id="3025-2025-12-23">3.0.25 (2025-12-23)</h1>
+<h2 id="3025-2025-12-23">3.0.25 (2025-12-23)</h2>
 <ul>
 <li>No added commands or bug fixes.</li>
 <li>Updated parameters tooltip in <code>addtovault</code>, <code>rename</code>, <code>cd</code> and others.</li>
 </ul>
-<h1 id="3024-2025-12-22">3.0.24 (2025-12-22)</h1>
+<h2 id="3024-2025-12-22">3.0.24 (2025-12-22)</h2>
 <ul>
 <li>parameter tooltips (little box that shows up next to the parameter when you type in the command box) are now uniaue for each command. Over the next releases, we will update all tooltips for all parameters to make them more clear. The same parameter can be used in multiple commands having different function in each.</li>
 </ul>
-<h1 id="3023-2025-12-20">3.0.23 (2025-12-20)</h1>
+<h2 id="3023-2025-12-20">3.0.23 (2025-12-20)</h2>
 <ul>
 <li>Added <a href="UPDATEREFERENCES.html">update references command</a></li>
 </ul>
-<h1 id="3022-2025-12-19">3.0.22 (2025-12-19)</h1>
+<h2 id="3022-2025-12-19">3.0.22 (2025-12-19)</h2>
 <ul>
 <li>Added <a href="COPY.html">copy command</a></li>
 </ul>
-<h1 id="3021-2025-12-18">3.0.21 (2025-12-18)</h1>
+<h2 id="3021-2025-12-18">3.0.21 (2025-12-18)</h2>
 <ul>
 <li>Fixed single instance bug. All commands are now executed sequentially. Output is not during commands execution anymore. This was in 3.0.19 and 20</li>
 <li>Added <code>getoptions</code> in <a href="GET.html">Get</a></li>
 <li>Added <code>checkoutoptions</code> in <a href="CHECKOUT.html">Checkout</a></li>
 </ul>
-<h1 id="3020-2025-12-12">3.0.20 (2025-12-12)</h1>
+<h2 id="3020-2025-12-12">3.0.20 (2025-12-12)</h2>
 <ul>
 <li>Fixed timeout issue with <a href="export.html">Export</a> and <a href="runswmacro.html">RunSwMacro</a>.</li>
 <li>Added <code>name</code>, <code>filePath</code> and <code>value</code> parameters to <a href="INBOX.html">INBOX</a>.</li>
 <li><code>source</code> parameter default to current directory in <a href="ADDTOVAULT.html">addtovaultcommmand</a>.</li>
 </ul>
-<h1 id="3019-2025-12-11">3.0.19 (2025-12-11)</h1>
+<h2 id="3019-2025-12-11">3.0.19 (2025-12-11)</h2>
 <ul>
 <li>Added <code>winlog</code> parameter for pdmcli.exe. See remarks section of <a href="DUMP.html">dump command</a>.</li>
 <li>Fixed single instance bug. All commands are now executed sequentially. Output is blocked during commands execution.</li>
 </ul>
-<h1 id="3018-2025-12-08">3.0.18 (2025-12-08)</h1>
+<h2 id="3018-2025-12-08">3.0.18 (2025-12-08)</h2>
 <ul>
 <li>Rebuild. Previous faulty build.</li>
 </ul>
-<h1 id="3017-2025-12-08">3.0.17 (2025-12-08)</h1>
+<h2 id="3017-2025-12-08">3.0.17 (2025-12-08)</h2>
 <ul>
 <li>Fixed single instance issue related to Windows enviornment variables</li>
 <li>Added note for <code>solidworks</code> and <code>pdm</code>parameters in the <a href="VERSION.html">Version</a> command: <strong>RESERVED FOR FUTURE. NOT IMPLEMENTED</strong></li>
 </ul>
-<h1 id="3016-2025-12-07">3.0.16 (2025-12-07)</h1>
+<h2 id="3016-2025-12-07">3.0.16 (2025-12-07)</h2>
 <ul>
 <li><a href="export.html">Export: Added timeout parameter launching SOLIDWORKS</a>.</li>
 <li><a href="runswmacro.html">RunSwMacro: timeout parameter is also enabled for launching SOLIDWORKS</a>.</li>
 <li>Enforced <code>.pdmshell</code> extension across all commands as the scripting file extension.</li>
 </ul>
-<h1 id="3015">3.0.15</h1>
+<h2 id="3015">3.0.15</h2>
 <ul>
 <li>skipped</li>
 </ul>
-<h1 id="3014-2025-12-05">3.0.14 (2025-12-05)</h1>
+<h2 id="3014-2025-12-05">3.0.14 (2025-12-05)</h2>
 <ul>
 <li><a href="LOGIN.html">Login: Fix bug with parameter casing</a>.</li>
 <li><a href="TRANSITION.html">Login: Added implementation with the transition command</a>.</li>
 <li>Updated documentation</li>
 </ul>
-<h1 id="3013-2025-12-04">3.0.13 (2025-12-04)</h1>
+<h2 id="3013-2025-12-04">3.0.13 (2025-12-04)</h2>
 <ul>
 <li><a href="VERSIONUPGRADE.html">VERSIONUPGRADE: Added a new command</a>.</li>
 <li><a href="VERSIONUPGRADEFROMSOURCE.html">VERSIONUPGRADEFROMSOURCE: Added a new command (Reserved but not implemented)</a>.</li>
 </ul>
-<h1 id="3012-2025-12-03">3.0.12 (2025-12-03)</h1>
+<h2 id="3012-2025-12-03">3.0.12 (2025-12-03)</h2>
 <ul>
 <li><a href="SETREVISIONFROMSOURCE.html">SetRevisionFromSource: Added a new command</a>.</li>
 </ul>
-<h1 id="3011-2025-12-02">3.0.11 (2025-12-02)</h1>
+<h2 id="3011-2025-12-02">3.0.11 (2025-12-02)</h2>
 <ul>
 <li><a href="SETREVISION.html">SetRevision: Added a new command</a>.</li>
 <li>Fixed evaluation bug: Bracketed variable <code>[Variable]</code> fail to evaluate in <code>name</code> and <code>value</code> parameters</li>
 </ul>
-<h1 id="3010-2025-12-01">3.0.10 (2025-12-01)</h1>
+<h2 id="3010-2025-12-01">3.0.10 (2025-12-01)</h2>
 <ul>
 <li>Rebuild</li>
 </ul>
-<h1 id="309-2025-12-01">3.0.9 (2025-12-01)</h1>
+<h2 id="309-2025-12-01">3.0.9 (2025-12-01)</h2>
 <ul>
 <li><a href="INFOVAR.html">INFOVAR: Fixed bug with related to single flag variables</a></li>
 <li><a href="SETVAR.html">SETVAR: Added support for handling folder cards</a></li>
 </ul>
-<h1 id="308-2025-11-30">3.0.8 (2025-11-30)</h1>
+<h2 id="308-2025-11-30">3.0.8 (2025-11-30)</h2>
 <ul>
 <li>Fixed unhandled exception when license is limited that causes a crash in all commands</li>
 <li>Fixed evaluation bug (order)</li>
 <li>Fixed some minor bugs in BOM command</li>
 </ul>
-<h1 id="307-2025-11-29">3.0.7 (2025-11-29)</h1>
+<h2 id="307-2025-11-29">3.0.7 (2025-11-29)</h2>
 <ul>
 <li><a href="BOM.html">BOM: Added a new command</a>. Please see notes <a href="howtoinstall.html#common-update-issues">here</a> about new commands in the <strong>Common Update Issues</strong> section.</li>
 <li><a href="EVAL.html">Added <code>$configuration</code> placeholder</a></li>
