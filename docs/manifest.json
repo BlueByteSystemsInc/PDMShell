@@ -777,6 +777,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/home-page-gif.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/home-page-gif.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/image-1.png",
       "output": {
         "resource": {
@@ -921,6 +931,16 @@
       "output": {
         "resource": {
           "relative_path": "images/pdmshell-addin-visual-editor.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-home-visual-editor.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-home-visual-editor.png"
         }
       },
       "version": ""
@@ -1087,6 +1107,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/visual editor.mp4",
+      "output": {
+        "resource": {
+          "relative_path": "images/visual editor.mp4"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/visual-code-editor-add-new-action.png",
       "output": {
         "resource": {
@@ -1151,6 +1181,16 @@
       "output": {
         "resource": {
           "relative_path": "images/visual-code-editor-validation.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/visual-editor.mp4",
+      "output": {
+        "resource": {
+          "relative_path": "images/visual-editor.mp4"
         }
       },
       "version": ""

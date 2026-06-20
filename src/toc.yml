@@ -8,7 +8,7 @@
   href: FREEVSPREMIUM.md
 - name: EULA
   href: eula.md
-- name: Installing/Updating PDMShell
+- name: Install or Update
   href: howtoinstall.md
 - name: Introduction
   href: introduction.md
@@ -23,15 +23,15 @@
     href: scripting.md
   - name: Short Format for Parameters
     href: parameter_short_format.md
-  - name: "Run PDMShell Scripts From Dispatch:"
+  - name: Run Scripts from Dispatch
   - name: From Dispatch
     href: dispatch.md
-  - name: "Special Characters and Modes:"
+  - name: Special Characters and Modes
   - name: Single Instance Vs Multi Instance
     href: instances.md
   - name: Escaping Characters 
     href: escapingquotes.md
-  - name: "Advanced Search:"
+  - name: Advanced Search
   - name: Using Advanced Search
     href: advancedsearch.md 
   - name: PDMShell add-in
@@ -57,7 +57,7 @@
       href: addin/runtime-execution.md
     - name: Testing and troubleshooting
       href: addin/troubleshooting.md
-  - name: "Invoke a PDMShell Script From Transition Action:"
+  - name: Run Scripts from Workflow Transitions
   - name: From Workflow Transitions
     href: scriptsfromtransition.md
   - name: Scripts

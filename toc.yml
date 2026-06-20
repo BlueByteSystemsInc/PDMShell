@@ -1,12 +1,14 @@
-- name: Home 
+- name: Home
   href: src/index.md
-- name: ✨ Shell AI Assistant
+- name: AI Assistant
   href: https://pdmshell-assistant.bluebyte.biz/
-- name: PDM Migration Services
-  href: https://calendly.com/bluebyte/datamigration?back=1
-- name: Buy PDMShell Premium
-  href: https://bluebyte.biz/product/pdmshell
-- name: Download PDMShell Now 
+- name: PDMShell Add-in
+  href: src/TASKSCRIPT.md
+- name: Download
   href: https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell
+- name: Buy Premium
+  href: https://bluebyte.biz/product/pdmshell
+- name: Migration Services
+  href: https://calendly.com/bluebyte/datamigration?back=1
 - name: Testimonials
   href: src/testimonials.md

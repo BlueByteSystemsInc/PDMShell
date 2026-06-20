@@ -1,10 +1,13 @@
 ---
-description: Learn how you use PDMShell scripts with Dispatch
-title: Notes About Running PDMShell Scripts from Dispatch | SOLIDWORKS PDM
+description: Learn how to run PDMShell scripts from SOLIDWORKS PDM Dispatch and when to use the PDMShell add-in instead.
+title: Run PDMShell Scripts from Dispatch | SOLIDWORKS PDM
 ---
-# Notes About Running PDMShell Scripts from Dispatch
+# Run PDMShell Scripts from Dispatch
 
 When you want to run PDMShell scripts from Dispatch, you can use the **Shell Command** action.
+
+> [!Did You Know?]
+> The [PDMShell add-in](TASKSCRIPT.md) can run PDMShell scripts from PDM right-click menus and event trigger points. It covers the same kind of automation you would normally build with Dispatch, and adds permissions, conditions, placeholders, command menu scripts, trigger points, headless execution, and the visual script editor.
 
 
 
