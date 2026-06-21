@@ -12,8 +12,12 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+## 4.0.11 (06/21/2026)
+- Added documentation for the WPF **Expression Evaluator**, including how to safely preview placeholder expressions against a selected PDM file or folder, use `$value`, choose configurations, and test string functions before running commands or scripts.
+
 ## 4.0.10 (07/18/2026)
 - Added logged-in PDM user profile placeholders: `$username.firstName`, `$username.lastName`, `$username.FullName`, and `$username.email`.
+- Added a dark themed WPF **Expression Evaluator** dialog for testing placeholder expressions against a selected PDM file or folder before running a command.
 
 ## 4.0.9 (07/18/2026)
 - Added the [`pasteasshared`](PASTEASSHARED.md) command to share one file or search results into another vault folder.
