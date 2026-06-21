@@ -89,7 +89,11 @@ An item-specific line is a line that contains a file, folder, vault, date/time, 
 | `$taskName` | Current task name when available. |
 | `$tempFolder`, `$TempFolder` | Temporary folder path. |
 | `$machineName`, `$computerName` | Windows machine name. |
-| `$userName`, `$windowsUser` | Current user name. |
+| `$userName`, `$username` | Current PDM user name. |
+| `$username.firstName`, `$username.lastName` | Current PDM user's first and last name when available. |
+| `$username.FullName` | Current PDM user's full name when available. |
+| `$username.email` | Current PDM user's email address when available. |
+| `$windowsUser` | Current Windows user name. |
 | `$userDomain`, `$domain` | Current Windows domain. |
 | `$yyyy`, `$yy`, `$MM`, `$M`, `$dd`, `$d` | Date values. |
 | `$month`, `$mon`, `$day`, `$dayShort` | Date name values. |

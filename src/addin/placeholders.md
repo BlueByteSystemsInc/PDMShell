@@ -21,7 +21,11 @@ The add-in evaluates placeholders for the current command context and the affect
 | `$GUID` | Current script execution identifier |
 | `$tempFolder`, `$TempFolder` | Windows temporary folder |
 | `$machineName`, `$computerName` | Current machine name |
-| `$userName`, `$windowsUser` | Current user name |
+| `$userName`, `$username` | Current PDM user name |
+| `$username.firstName`, `$username.lastName` | Current PDM user's first and last name when available |
+| `$username.FullName` | Current PDM user's full name when available |
+| `$username.email` | Current PDM user's email address when available |
+| `$windowsUser` | Current Windows user name |
 | `$userDomain`, `$domain` | Current Windows domain |
 | `$configuration`, `$configurationName` | Configuration context when provided by the PDM event |
 | `$buttonText` | Card button text when provided by the PDM event |

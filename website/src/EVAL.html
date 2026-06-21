@@ -98,7 +98,7 @@
 <li><strong><a href="CD.html"><code>cd</code></a></strong>: Change the current directory.</li>
 <li><strong><a href="MKDIR.html"><code>mkdir</code></a></strong>: Create a new directory.</li>
 <li><strong><a href="export.html"><code>export</code></a></strong>: Export commands to a file.</li>
-<li><strong><code>addtvault</code></strong>: Add a vault with the directory as the backing object.</li>
+<li><strong><a href="ADDTOVAULT.html"><code>addtovault</code></a></strong>: Add files to the vault with the directory as the backing object.</li>
 </ul>
 <h3 id="commands-using-files-or-folders-as-the-backing-object">Commands Using Files or Folders as the Backing Object:</h3>
 <ul>
@@ -137,7 +137,11 @@
 <h3 id="common-placeholders-applicable-to-both-files-and-folders">Common Placeholders (Applicable to Both Files and Folders)</h3>
 <ul>
 <li><code>$localPath</code>: Local path</li>
-<li><code>$username</code>: The name of the logged-in user.</li>
+<li><code>$username</code>: The name of the logged-in PDM user.</li>
+<li><code>$username.firstName</code>: The logged-in PDM user's first name when available.</li>
+<li><code>$username.lastName</code>: The logged-in PDM user's last name when available.</li>
+<li><code>$username.FullName</code>: The logged-in PDM user's full name when available.</li>
+<li><code>$username.email</code>: The logged-in PDM user's email address when available.</li>
 <li><code>$vaultname</code>: The name of the vault.</li>
 <li><code>$yyyy</code>: The current year.</li>
 <li><code>$mm</code>: The current month (two digits).</li>

@@ -19,7 +19,7 @@ The following commands support the use of dynamic placeholders:
 - **[`cd`](CD.md)**: Change the current directory.
 - **[`mkdir`](MKDIR.md)**: Create a new directory.
 - **[`export`](EXPORT.md)**: Export commands to a file.
-- **`addtvault`**: Add a vault with the directory as the backing object.
+- **[`addtovault`](ADDTOVAULT.md)**: Add files to the vault with the directory as the backing object.
 
 ### Commands Using Files or Folders as the Backing Object:
 - **[`rename`](RENAME.md)**: Uses the `value` parameter for renaming files or folders.
@@ -56,7 +56,11 @@ The `value` parameter in supported commands can include placeholders that are dy
 
 ### Common Placeholders (Applicable to Both Files and Folders)
 - `$localPath`: Local path
-- `$username`: The name of the logged-in user.
+- `$username`: The name of the logged-in PDM user.
+- `$username.firstName`: The logged-in PDM user's first name when available.
+- `$username.lastName`: The logged-in PDM user's last name when available.
+- `$username.FullName`: The logged-in PDM user's full name when available.
+- `$username.email`: The logged-in PDM user's email address when available.
 - `$vaultname`: The name of the vault.
 - `$yyyy`: The current year.
 - `$mm`: The current month (two digits).

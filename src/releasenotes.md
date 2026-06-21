@@ -12,6 +12,9 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+## 4.0.10 (07/18/2026)
+- Added logged-in PDM user profile placeholders: `$username.firstName`, `$username.lastName`, `$username.FullName`, and `$username.email`.
+
 ## 4.0.9 (07/18/2026)
 - Added the [`pasteasshared`](PASTEASSHARED.md) command to share one file or search results into another vault folder.
 
