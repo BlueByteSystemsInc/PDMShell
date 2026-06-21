@@ -1,82 +1,84 @@
-- name: PDMShell
-  href: index.md
-- name: Changelog
-  href: releasenotes.md
+- name: Getting Started
+  expanded: true
+  items:
+  - name: Home
+    href: index.md
+  - name: Introduction
+    href: introduction.md
+  - name: Install or Update
+    href: howtoinstall.md
+  - name: Free vs Premium
+    href: FREEVSPREMIUM.md
+  - name: FAQ
+    href: faq.md
 - name: Visual Code Editor
   href: visual-code-editor-4.md
-- name: Free Vs Premium
-  href: FREEVSPREMIUM.md
-- name: EULA
-  href: eula.md
-- name: Install or Update
-  href: howtoinstall.md
-- name: Introduction
-  href: introduction.md
-- name: Dynamic Placeholders in PDMShell
-  href: EVAL.md
-- name: FAQ
-  href: faq.md
 - name: Scripting
   expanded: true
   items:
-  - name: Introduction
+  - name: Scripting overview
     href: scripting.md
-  - name: Short Format for Parameters
+  - name: Run a PDMShell script
+    href: RUNSCRIPT.md
+  - name: Short format for parameters
     href: parameter_short_format.md
-  - name: Run Scripts from Dispatch
-  - name: From Dispatch
-    href: dispatch.md
-  - name: Special Characters and Modes
-  - name: Single Instance Vs Multi Instance
-    href: instances.md
-  - name: Escaping Characters 
+  - name: Escaping characters
     href: escapingquotes.md
-  - name: Advanced Search
-  - name: Using Advanced Search
-    href: advancedsearch.md 
-  - name: PDMShell add-in
-    expanded: true
-    items:
-    - name: Overview
-      href: TASKSCRIPT.md
-    - name: Installation and access
-      href: addin/installation.md
-    - name: Script Editor
-      href: addin/script-editor.md
-    - name: Permissions
-      href: addin/permissions.md
-    - name: Conditions
-      href: addin/conditions.md
-    - name: Command menu scripts
-      href: addin/command-menu.md
-    - name: Event trigger points
-      href: addin/trigger-points.md
-    - name: Placeholders and command context
-      href: addin/placeholders.md
-    - name: Runtime execution
-      href: addin/runtime-execution.md
-    - name: Testing and troubleshooting
-      href: addin/troubleshooting.md
-  - name: Run Scripts from Workflow Transitions
-  - name: From Workflow Transitions
-    href: scriptsfromtransition.md
-  - name: Scripts
-    expanded: true
-    items:
-    - name: Rebuild SOLIDWORKS Document
-      href: scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md  
-    - name: Change Sheet Format
-      href: scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md  
-    - name: Check In All Files
-      href: scripts/CHECKINALLFILES/CHECKINALLFILES.md
-    - name: Rename Before Dash
-      href: scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md
-- name: SQL Examples 
+  - name: Single instance vs multi instance
+    href: instances.md
+- name: PDMShell Add-in
   expanded: true
   items:
-  - name: Find All Part Numbers And Descriptions
-    href: ALLPARTNUMBERSANDESCRIPTIONS.md
-- name: Commands
+  - name: Overview
+    href: TASKSCRIPT.md
+  - name: Installation and access
+    href: addin/installation.md
+  - name: Script Editor
+    href: addin/script-editor.md
+  - name: Permissions
+    href: addin/permissions.md
+  - name: Conditions
+    href: addin/conditions.md
+  - name: Command menu scripts
+    href: addin/command-menu.md
+  - name: Event trigger points
+    href: addin/trigger-points.md
+  - name: Placeholders and command context
+    href: addin/placeholders.md
+  - name: Runtime execution
+    href: addin/runtime-execution.md
+  - name: Testing and troubleshooting
+    href: addin/troubleshooting.md
+- name: Integrations
+  expanded: true
+  items:
+  - name: Dispatch
+    href: dispatch.md
+  - name: Workflow transitions
+    href: scriptsfromtransition.md
+- name: Script Templates
+  expanded: true
+  items:
+  - name: Rebuild SOLIDWORKS Document
+    href: scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md
+  - name: Change Sheet Format
+    href: scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md
+  - name: Check In All Files
+    href: scripts/CHECKINALLFILES/CHECKINALLFILES.md
+  - name: Rename Before Dash
+    href: scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md
+- name: Advanced Topics
+  expanded: true
+  items:
+  - name: Dynamic Placeholders
+    href: EVAL.md
+  - name: Advanced Search
+    href: advancedsearch.md
+  - name: SQL Examples
+    items:
+    - name: Find All Part Numbers And Descriptions
+      href: ALLPARTNUMBERSANDESCRIPTIONS.md
+- name: Command Reference
   href: COMMANDS.md
   expanded: true
   items:
@@ -172,8 +174,6 @@
       href: CREATEVIRTUALFROMSOURCE.md
   - name: Automation
     items:
-    - name: Run a PDMShell script
-      href: RUNSCRIPT.md
     - name: Run a SOLIDWORKS macro
       href: runswmacro.md
     - name: Run a PDM task
@@ -238,3 +238,7 @@
       href: WHEREUSED.md
     - name: Find recursive parents
       href: WHEREUSEDTREE.md
+- name: Release Notes
+  href: releasenotes.md
+- name: EULA
+  href: eula.md

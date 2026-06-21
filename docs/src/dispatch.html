@@ -103,37 +103,63 @@
 <p>Do not wrap the path in quotes (<code>&quot;&quot;</code>), even if it contains spaces.</p>
 </div>
 <ol start="3">
-<li><strong>Parameters</strong>: Use the following format:
-<pre><code class="lang-bash">runscript &quot;pathToScript&quot; [additional parameters]
+<li><strong>Parameters</strong>: For current PDMShell versions, use the following format:
+<pre><code class="lang-bash">runscript -source &quot;pathToScript&quot; -filePath &quot;%PathToSelectedFile%&quot;
 </code></pre>
 </li>
 </ol>
 <ul>
-<li>The pathToScript must be wrapped in quotes (&quot;&quot;) if it contains spaces.</li>
-<li>Additional parameters can be passed to the script as needed.</li>
+<li>The script path must be wrapped in quotes (<code>&quot;&quot;</code>) if it contains spaces.</li>
+<li>Use <code>-filePath &quot;%PathToSelectedFile%&quot;</code> when the Dispatch action is running against the selected PDM file.</li>
+<li>Inside the script, use PDMShell file placeholders such as <code>$localPath</code>, <code>$fileName</code>, <code>$fileNameWithoutExtension</code>, <code>$extension</code>, <code>$folderPath</code>, and PDM variable placeholders.</li>
 </ul>
 <h2 id="example-dispatch-shell-execute-configuration">Example: Dispatch Shell Execute Configuration</h2>
-<pre><code class="lang-bash">Verb: #leave this empty
+<pre><code class="lang-bash">Verb:
+Filename: C:\Program Files (x86)\BLUE BYTE SYSTEMS INC\PDMShell\PDMCLI.exe
+Parameters: runscript -source &quot;C:\Scripts\checkin-selected-file.pdmshell&quot; -filePath &quot;%PathToSelectedFile%&quot;
+</code></pre>
+<p>Example script:</p>
+<p>In the PDMShell script (<code>checkin-selected-file.pdmshell</code>), reference the selected file with <code>$localPath</code>:</p>
+<pre><code class="lang-bash"># Check out the selected file.
+checkout -filePath &quot;$localPath&quot;
+
+# Save changes.
+checkin -filePath &quot;$localPath&quot; -comment &quot;Checked in from Dispatch&quot;
+
+# Required when running from Dispatch or another external automation host.
+quit
+</code></pre>
+<h2 id="passing-extra-dispatch-values">Passing Extra Dispatch Values</h2>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Positional Dispatch values such as <code>$parameter1$</code> and <code>$parameter2$</code> are legacy behavior and should not be used with PDMShell 4.0.6 or later. Starting with PDMShell 4.0.6, <code>runscript</code> should receive context through <code>-filePath</code>, <code>-items</code>, or <code>-search</code>, and scripts should use PDMShell placeholders such as <code>$localPath</code> instead.</p>
+</div>
+<p>Older scripts may use the positional argument format to pass Dispatch-only values such as <code>%OldVersion%</code>:</p>
+<pre><code class="lang-bash">Verb:
 Filename: C:\Program Files (x86)\BLUE BYTE SYSTEMS INC\PDMShell\PDMCLI.exe
 Parameters: runscript &quot;C:\Scripts\frogleap.pdmshell&quot; &quot;%PathToSelectedFile%&quot; &quot;%OldVersion%&quot;
 </code></pre>
-<p>Example Script:</p>
-<p>In the PDMShell script (frogleap.pdmshell), you can reference the parameters as follows:</p>
-<pre><code class="lang-bash"># check selected file out
+<p>In this legacy format, the script used <code>$parameter1$</code>, <code>$parameter2$</code>, and so on:</p>
+<pre><code class="lang-bash"># Check the selected file out.
 checkout -filePath &quot;$parameter1$&quot;
-# frogleap version to specified version 
+
+# Frog leap to the specified old version.
 frogleap -filePath &quot;$parameter1$&quot; -oldVersion &quot;$parameter2$&quot;
-# save changes
-checkin -filePath &quot;$parameter1$&quot; -comment &quot;prompted version $parameter2$&quot;
-# you must call this
+
+# Save changes.
+checkin -filePath &quot;$parameter1$&quot; -comment &quot;Prompted version $parameter2$&quot;
+
+# Required when running from Dispatch or another external automation host.
 quit
 </code></pre>
+<p>For current PDMShell versions, use the <code>-source</code> and <code>-filePath</code> format shown above. If you need a Dispatch value that is not available as a PDMShell placeholder, write it to a PDM variable, pass a selected file with <code>-filePath</code>, or move the automation to the PDMShell add-in where command context and conditions are available.</p>
 <h2 id="tutorial">Tutorial</h2>
 <p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/dispatch.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
 <h2 id="tips-for-running-pdmshell-scripts-from-dispatch">Tips for Running PDMShell Scripts from Dispatch</h2>
 <ul>
 <li>Test Your Scripts: Always test your PDMShell scripts independently before integrating them with Dispatch.</li>
-<li>Use Quotes for Paths: Wrap paths and parameters in quotes (&quot;&quot;) if they contain spaces to avoid errors.</li>
+<li>Use Quotes for Paths: Wrap paths and parameters in quotes (<code>&quot;&quot;</code>) if they contain spaces to avoid errors.</li>
+<li>Use <code>quit</code> at the end of scripts launched from Dispatch so the external PDMShell process closes after the script runs.</li>
 </ul>
 
 </article>
