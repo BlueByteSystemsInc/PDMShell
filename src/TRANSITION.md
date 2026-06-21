@@ -86,7 +86,7 @@ Example:
 ```
 ---
 
-## `search`
+## [`search`](SEARCH.md)
 
 Searches for files matching a pattern in the current directory.
 

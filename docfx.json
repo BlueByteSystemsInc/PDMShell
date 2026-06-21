@@ -19,7 +19,8 @@
     "resource": [
       {
         "files": [
-          "images/**"
+          "images/**",
+          "src/scripts/**/*.{jpg,png,gif}"
         ]
       }
     ],

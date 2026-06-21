@@ -28,7 +28,7 @@ bom -filePath -name -directory -search -recursive -configNames -layout
   Search query used to find files in the current directory and run the BOM command on each result.
 
 - `recursive`  
-  When used with `search`, includes files in subfolders.
+  When used with [`search`](SEARCH.md), includes files in subfolders.
 
 - `configNames`  
   Comma-separated list of configurations to extract the BOM from. If unspecified, all configurations are processed. 

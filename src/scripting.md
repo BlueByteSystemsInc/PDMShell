@@ -1,4 +1,4 @@
----
+﻿---
 description: PDMShell supports scripting to automate tasks and streamline workflows in SOLIDWORKS PDM.
 title: Scripting | PDMShell | SOLIDWORKS PDM
 ---
@@ -47,10 +47,10 @@ start .
 ### Script Annotations
 1. **`cd "\api\sandbox\fidget spinner"`**: Changes the current working directory to the specified path.
 2. **`mkdir "$name-export-$date"`**: Creates a new folder with a dynamic name based on the current date and the folder name.
-3. **`export`**: Exports all `.sldprt` files in the current directory to the newly created folder as `.stp` files, appending the current date to the file names.
+3. **[`export`](EXPORT.md)**: Exports all `.sldprt` files in the current directory to the newly created folder as `.stp` files, appending the current date to the file names.
 4. **`cd "$name-export-$date"`**: Changes the working directory to the newly created export folder.
-5. **`addtovault`**: Adds the exported files to the vault.
-6. **`checkin`**: Checks in all files in the current folder to the vault.
+5. **[`addtovault`](ADDTOVAULT.md)**: Adds the exported files to the vault.
+6. **[`checkin`](CHECKIN.md)**: Checks in all files in the current folder to the vault.
 7. **`start .`**: Opens the current folder in File Explorer.
 
 ---
@@ -72,8 +72,8 @@ pdmcli.exe "C:\Scripts\example.pdmshell"
 
 The `pdmcli.exe` tool can be found in the installation folder under `Program Files (x86)\BLUE BYTE SYSTEMS INC`.
 
-### 2. Using the `runscript` Command
-You can also execute scripts directly from the PDMShell console using the `runscript` command.
+### 2. Using the [`runscript`](RUNSCRIPT.md) Command
+You can also execute scripts directly from the PDMShell console using the [`runscript`](RUNSCRIPT.md) command.
 
 [Note]
 
@@ -82,7 +82,7 @@ You can also execute scripts directly from the PDMShell console using the `runsc
 runscript -source "C:\Scripts\example.pdmshell"
 ```
 > [!NOTE]
-> For more information about the `runscript` command, refer to the [runscript documentation](RUNSCRIPT.html).
+> For more information about the [`runscript`](RUNSCRIPT.md) command, refer to the [runscript documentation](RUNSCRIPT.md).
 
 ---
 

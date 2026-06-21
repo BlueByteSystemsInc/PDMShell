@@ -28,7 +28,7 @@ runscript -source "C:\Vault\Scripts\CreateECO.pdmshell" -items "123,45;678,90"
 | `recursive` | No | Includes child folders when used with `search`. |
 | `items` | No | Semicolon-separated file or folder ID pairs supplied by command-line integrations. |
 
-Only one targeting mode is normally needed: `filePath`, `search`, or `items`.
+Only one targeting mode is normally needed: `filePath`, [`search`](SEARCH.md), or `items`.
 
 ## Items format
 
@@ -65,7 +65,7 @@ When `runscript` loads a script, the visual editor is hydrated only when the cur
 
 ## Placeholder evaluation
 
-When `runscript` is executed with `items`, `filePath`, or `search`, placeholders are evaluated with the same context used by visual Run command execution.
+When `runscript` is executed with `items`, `filePath`, or [`search`](SEARCH.md), placeholders are evaluated with the same context used by visual Run command execution.
 
 Normal lines run once. Consecutive item-specific lines run once for each resolved file or folder.
 

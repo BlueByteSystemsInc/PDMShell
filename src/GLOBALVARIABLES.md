@@ -1,4 +1,4 @@
----
+﻿---
 description: Store and reuse session global variables in PDMShell scripts.
 title: Global Variables | PDMShell | SOLIDWORKS PDM
 ---
@@ -49,7 +49,7 @@ rename -filePath "$localPath" -value "${replace(${global.BaseName},OLD,NEW)}.pdf
 
 ## Wait And Until
 
-Global variables work with `wait` and `until`.
+Global variables work with [`wait`](WAIT.md) and [`until`](UNTIL.md).
 
 ```pdmshell
 setglobal -name Delay -value "10"

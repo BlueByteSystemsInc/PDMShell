@@ -29,9 +29,9 @@
     {
         "name":  "Rename Before Dash",
         "description":  "Renames the selected file by removing everything after the first dash in the file name.",
-        "icon":  "",
+        "icon":  "https://raw.githubusercontent.com/BlueByteSystemsInc/PDMShell/refs/heads/master/src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.jpg",
         "link":  "https://pdmshell.bluebyte.biz/src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.html",
-        "pdmShellScript":  "# If you run this from the PDMShell add-in, add quit -silent as the last line.\nrename -filePath \"$localPath\" -value \"${before($fileNameWithoutExtension,-)}$extension\"\nmsgbox -value \"Rename complete\" -title \"Rename Script\" -icon \"Information\"",
+        "pdmShellScript":  "rename -filePath \"$localPath\" -value \"${before($fileNameWithoutExtension,-)}$extension\"\nmsgbox -value \"Rename complete\" -title \"Rename Script\" -icon \"Information\"",
         "macroScript":  "",
         "macroDownloadUrl":  ""
     }

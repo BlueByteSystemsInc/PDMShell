@@ -1637,6 +1637,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/PASTEASSHARED.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/PASTEASSHARED.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/PREVIEW.md",
       "output": {
         ".html": {
@@ -2196,11 +2206,31 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md",
       "output": {
         ".html": {
           "relative_path": "src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "src/scripts/CHECKINALLFILES/CHECKINALLFILES.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "src/scripts/CHECKINALLFILES/CHECKINALLFILES.jpg"
         }
       },
       "version": ""
@@ -2216,11 +2246,31 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md",
       "output": {
         ".html": {
           "relative_path": "src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.jpg"
         }
       },
       "version": ""

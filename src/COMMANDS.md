@@ -31,6 +31,7 @@ Use this page to browse PDMShell commands by category. Availability is listed at
 | [copy](COPY.md) | Copy files | Available since PDMShell 2.0.74. |
 | [copytree](COPYTREE.md) | Copy tree | Available since PDMShell 2.0.46. |
 | [pasteasreference](PASTEASREFERENCE.md) | Paste as custom reference | Available since PDMShell 4.0.0. |
+| [pasteasshared](PASTEASSHARED.md) | Paste as shared file | Available since PDMShell 4.0.9. |
 | [packandgo](PACKANDGO.md) | Pack and Go | Available since PDMShell 3.0.27. |
 | [move](MOVE.md) | Move files | Available since PDMShell 3.0.28. |
 | [rename](RENAME.md) | Rename files | Available since PDMShell 2.0.0 or earlier. |

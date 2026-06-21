@@ -14,7 +14,7 @@ toolbox -filePath -search -recursive -toolboxflag
 ## Parameters
 - `filePath`: File to process.
 - `search`: Search query used to find files to process.
-- `recursive`: When used with `search`, includes files in subfolders.
+- `recursive`: When used with [`search`](SEARCH.md), includes files in subfolders.
 - `toolboxflag`: Toolbox flag value to apply or filter by.
 
 ## Availability

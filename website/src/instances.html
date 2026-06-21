@@ -106,16 +106,16 @@
 <pre><code class="lang-bash">pdmcli.exe -single
 </code></pre>
 <p><img src="../images/singleinstance.png" alt="singleinstance"></p>
-<p>When PDMShell is running in <strong>Single Instance Mode</strong>, you’ll see a <strong>single-instance indicator</strong> in the top-right corner of the window. It shows a <strong>“1” icon</strong>, confirming that all commands will be routed to this instance from other <strong>single</strong> instances.</p>
-<p>If PDMShell is <strong>not</strong> running in single instance mode, the indicator will display an <strong>infinity symbol (∞)</strong>, meaning <strong>multiple PDMShell instances are allowed</strong> and each command launches independently in its own PDMShell process.</p>
+<p>When PDMShell is running in <strong>Single Instance Mode</strong>, youâ€™ll see a <strong>single-instance indicator</strong> in the top-right corner of the window. It shows a <strong>â€œ1â€ icon</strong>, confirming that all commands will be routed to this instance from other <strong>single</strong> instances.</p>
+<p>If PDMShell is <strong>not</strong> running in single instance mode, the indicator will display an <strong>infinity symbol (âˆž)</strong>, meaning <strong>multiple PDMShell instances are allowed</strong> and each command launches independently in its own PDMShell process.</p>
 <p>With single instance, you can:</p>
-<p>✅ launch PDMShell as a single instance controller<br>
-✅ allow subsequent commands to reuse the same PDMShell instance<br>
-✅ improve performance if triggered from <code>cmd.exe</code> or <code>Dispatch</code><br>
-✅ prevent multiple conflicting PDMShell instances</p>
+<p>âœ… launch PDMShell as a single instance controller<br>
+âœ… allow subsequent commands to reuse the same PDMShell instance<br>
+âœ… improve performance if triggered from <code>cmd.exe</code> or <code>Dispatch</code><br>
+âœ… prevent multiple conflicting PDMShell instances</p>
 <h3 id="uac-permissions-and-single-instance-mode">UAC, Permissions, and Single Instance Mode</h3>
 <p><img src="../images/singlemodeuac.png" alt="singlemodeuac"></p>
-<p>PDMShell’s <strong>Single Instance Mode</strong> relies on Windows’ global mutex system.  Because of this, <strong>User Account Control (UAC)</strong> and <strong>process elevation</strong> matter.</p>
+<p>PDMShellâ€™s <strong>Single Instance Mode</strong> relies on Windowsâ€™ global mutex system.  Because of this, <strong>User Account Control (UAC)</strong> and <strong>process elevation</strong> matter.</p>
 <p>To attach to the single instance, you must ensure that:</p>
 <ul>
 <li>If the first instance is started as <strong>Admin</strong>, all following calls must also run <strong>as Admin</strong></li>
@@ -123,7 +123,7 @@
 </ul>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>Avoid running PDMShell as a Windows Administrator if you have custom add-ins installed.  Check-in and check-out commands can create instances of your add-in inside the host application's memory. If the add-in was registered under a different user or UAC level, PDM will throw a <strong>“Class not registered”</strong> error.</p>
+<p>Avoid running PDMShell as a Windows Administrator if you have custom add-ins installed.  Check-in and check-out commands can create instances of your add-in inside the host application's memory. If the add-in was registered under a different user or UAC level, PDM will throw a <strong>â€œClass not registeredâ€</strong> error.</p>
 </div>
 <h2 id="executing-commands-in-single-instance-mode">Executing Commands in Single Instance Mode</h2>
 <p>Once PDMShell is running with <code>/single</code>, <strong>all subsequent calls to <code>pdmcli.exe</code> must also include <code>/single</code></strong>, or PDMShell will launch a new instance instead of attaching.</p>
@@ -148,7 +148,7 @@
 <pre><code class="lang-bash">pdmcli.exe /headless
 </code></pre>
 <p>Headless mode hides visual-editor controls and status text that are not needed during command execution. It also skips visual-only startup work and online startup license validation. Command-level license checks still run when a licensed command is executed.</p>
-<p>PDMShell can also detect a <code>.pdmshell</code> script path on the command line and run it through <code>runscript</code>.</p>
+<p>PDMShell can also detect a <code>.pdmshell</code> script path on the command line and run it through <a href="RUNSCRIPT.html"><code>runscript</code></a>.</p>
 <pre><code class="lang-bash">pdmcli.exe &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
 pdmcli.exe &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -items &quot;123,45;678,90&quot;
 </code></pre>

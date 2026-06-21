@@ -16,17 +16,17 @@ Dynamic Placeholders are not a standalone command but a **feature** used by spec
 The following commands support the use of dynamic placeholders:
 
 ### Commands Using the Current Folder as the Backing Object (`directory` parameter):
-- **`cd`**: Change the current directory.
-- **`mkdir`**: Create a new directory.
-- **`export`**: Export commands to a file.
+- **[`cd`](CD.md)**: Change the current directory.
+- **[`mkdir`](MKDIR.md)**: Create a new directory.
+- **[`export`](EXPORT.md)**: Export commands to a file.
 - **`addtvault`**: Add a vault with the directory as the backing object.
 
 ### Commands Using Files or Folders as the Backing Object:
-- **`rename`**: Uses the `value` parameter for renaming files or folders.
-- **`renamefromsource`**: The new file is evaluated if the `evaluatealiases` parameter is specified.
-- **`setvar`**: Uses the `value` parameter to set variables for files or folders.
-- **`bom`**: Uses the `name` parameter to set the exported bom csv name.
-- **`export`**: Uses the `name` parameter to set the exported files name pattern.
+- **[`rename`](RENAME.md)**: Uses the `value` parameter for renaming files or folders.
+- **[`renamefromsource`](RENAMEFROMSOURCE.md)**: The new file is evaluated if the `evaluatealiases` parameter is specified.
+- **[`setvar`](SETVAR.md)**: Uses the `value` parameter to set variables for files or folders.
+- **[`bom`](BOM.md)**: Uses the `name` parameter to set the exported bom csv name.
+- **[`export`](EXPORT.md)**: Uses the `name` parameter to set the exported files name pattern.
 
 ---
 
@@ -131,7 +131,7 @@ In addition to placeholders, you can include other variables by enclosing them i
 ---
 
 ## Example Usage
-Here’s an example of how to use dynamic placeholders in a command:
+Hereâ€™s an example of how to use dynamic placeholders in a command:
 
 ### Renaming a File
 ```bash

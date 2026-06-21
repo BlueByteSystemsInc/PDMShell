@@ -63,7 +63,7 @@ PDMShell supports short formats for many of its parameters to make commands more
 
 ## Usage Example
 
-Here’s an example of using short formats in a command:
+Hereâ€™s an example of using short formats in a command:
 
 ### Full Format
 ```bash

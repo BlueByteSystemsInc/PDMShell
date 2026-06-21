@@ -106,7 +106,7 @@
 Optional. Updates references for a single file.</p>
 <ul>
 <li>If a relative path is provided, it is resolved against the current directory.</li>
-<li>When specified, the <code>search</code> parameter is ignored.</li>
+<li>When specified, the <a href="SEARCH.html"><code>search</code></a> parameter is ignored.</li>
 </ul>
 </li>
 <li><p><code>search</code><br>
@@ -131,7 +131,7 @@ Valid values:</p>
 </ul>
 </li>
 <li><p><code>recursive</code><br>
-Optional. When used with <code>search</code>, includes subfolders of the current directory when locating files whose references should be updated.</p>
+Optional. When used with <a href="SEARCH.html"><code>search</code></a>, includes subfolders of the current directory when locating files whose references should be updated.</p>
 </li>
 <li><p><code>csv</code>
 Saves the update references operations in a csv file.</p>
@@ -155,9 +155,9 @@ Saves the update references operations in a csv file.</p>
 </code></pre>
 <h2 id="remarks">Remarks</h2>
 <ul>
-<li>Either <code>filepath</code> or <code>search</code> must be specified.</li>
+<li>Either <code>filepath</code> or <a href="SEARCH.html"><code>search</code></a> must be specified.</li>
 <li>If both are provided, <code>filepath</code> takes precedence.</li>
-<li>The <code>search</code> parameter only searches within the current directory unless <code>recursive</code> is specified.</li>
+<li>The <a href="SEARCH.html"><code>search</code></a> parameter only searches within the current directory unless <code>recursive</code> is specified.</li>
 <li>Reference resolution is based on matching file names within the directory scope.</li>
 <li>The first matching file found is used to update the reference.</li>
 <li>This command modifies files directly; use with care in controlled workflows.</li>

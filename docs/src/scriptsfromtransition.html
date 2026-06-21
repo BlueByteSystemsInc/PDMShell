@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Notes About Running PDMShell Scripts from Workflow Transitions | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>Run PDMShell Scripts from Workflow Transitions | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Notes About Running PDMShell Scripts from Workflow Transitions | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="Run PDMShell Scripts from Workflow Transitions | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Learn how to use PDMShell scripts with workflow transitions in SOLIDWORKS PDM.">
+      <meta name="description" content="Learn how to run PDMShell scripts from SOLIDWORKS PDM workflow transitions and when to use the PDMShell add-in instead.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,51 +85,77 @@
         </div>
 
         <article data-uid="">
-<h1 id="notes-about-running-pdmshell-scripts-from-workflow-transitions">Notes About Running PDMShell Scripts from Workflow Transitions</h1>
+<h1 id="run-pdmshell-scripts-from-workflow-transitions">Run PDMShell Scripts from Workflow Transitions</h1>
 
-<p>When you want to run PDMShell scripts as part of a workflow transition in SOLIDWORKS PDM, you can configure the transition to execute scripts seamlessly. This allows you to automate complex tasks during transitions, such as updating variables, exporting files, or triggering external processes.</p>
-<h2 id="workflow-transition-configuration">Workflow Transition Configuration</h2>
+<p>SOLIDWORKS PDM workflow transitions can run external commands. You can use this to start <code>pdmcli.exe</code> and run a <code>.pdmshell</code> script when a file moves through a workflow transition.</p>
+<div class="alert alert-success">
+<h5>DID YOU KNOW?</h5>
+<p>The <a href="TASKSCRIPT.html">PDMShell add-in</a> can run PDMShell scripts directly from PDM command menus and event trigger points. For many workflow automations, the add-in is easier than creating a workflow task or external command because it includes permissions, conditions, placeholders, trigger points, headless execution, and the visual script editor.</p>
+</div>
+<h2 id="workflow-transition-settings">Workflow Transition Settings</h2>
 <p><img src="../images/worktransition.png" alt="workflowtransition"></p>
 <ol>
 <li><strong>Action Type</strong>: Set the action type to <strong>Execute Command</strong>.</li>
-<li><strong>Command</strong>: Specify the path to the PDMShell executable, which is <code>pdmcli.exe</code>.
-<pre><code class="lang-bash">&quot;path_to_pdmcli.exe&quot; runscript &quot;pathToScript&quot; [additional parameters]
-</code></pre>
-</li>
+<li><strong>Command</strong>: Specify the full path to <code>pdmcli.exe</code>.</li>
+<li><strong>Arguments</strong>: Use <code>runscript -source</code> and pass the selected file with <code>-filePath</code>.</li>
+<li><strong>Wait</strong>: Enable <strong>Wait until the started program terminates</strong>.</li>
 </ol>
-<ul>
-<li>The <code>pathToScript</code> must be wrapped in quotes (<code>&quot;&quot;</code>) if it contains spaces.</li>
-<li>Additional parameters can be passed to the script as needed aslo wrapped in quotes (<code>&quot;&quot;</code>).</li>
-<li>Make to sure to check <code>Wait until the started program terminates.</code></li>
-</ul>
-<h2 id="example-workflow-transition-execute-command-configuration">Example: Workflow Transition Execute Command Configuration</h2>
-<pre><code class="lang-bash">&quot;C:\Program Files (x86)\BLUE BYTE SYSTEMS INC\PDMShell\PDMCLI.exe&quot; runscript &quot;C:\Scripts\clearvariables.pdmshell&quot; &quot;FilePath&quot; 
+<p>Command:</p>
+<pre><code class="lang-bash">C:\Program Files (x86)\BLUE BYTE SYSTEMS INC\PDMShell\PDMCLI.exe
 </code></pre>
-<h3 id="example-script">Example Script</h3>
-<p>In the PDMShell script (<code>clearvariables.pdmshell</code>), you can reference the parameters as follows:</p>
-<pre><code class="lang-bash"># Check the selected file out
-checkout -filePath &quot;$parameter1$&quot;
+<p>Arguments:</p>
+<pre><code class="lang-bash">runscript -source &quot;C:\Scripts\clearvariables.pdmshell&quot; -filePath &quot;%PathToSelectedFile%&quot;
+</code></pre>
+<ul>
+<li>Wrap the script path in quotes if it contains spaces.</li>
+<li>Use <code>-filePath &quot;%PathToSelectedFile%&quot;</code> when the transition runs against the selected PDM file.</li>
+<li>Inside the script, use PDMShell placeholders such as <code>$localPath</code>, <code>$fileName</code>, <code>$fileNameWithoutExtension</code>, <code>$extension</code>, <code>$folderPath</code>, and PDM variable placeholders.</li>
+</ul>
+<h2 id="example-workflow-transition-configuration">Example: Workflow Transition Configuration</h2>
+<pre><code class="lang-bash">Command: C:\Program Files (x86)\BLUE BYTE SYSTEMS INC\PDMShell\PDMCLI.exe
+Arguments: runscript -source &quot;C:\Scripts\clearvariables.pdmshell&quot; -filePath &quot;%PathToSelectedFile%&quot;
+</code></pre>
+<p>Example script:</p>
+<p>In the PDMShell script (<code>clearvariables.pdmshell</code>), reference the selected file with <code>$localPath</code>:</p>
+<pre><code class="lang-bash"># Check the selected file out.
+checkout -filePath &quot;$localPath&quot;
 
-# clear description variable
-setvar -filePath &quot;$parameter1$&quot; -variableName Description -Value &quot;&quot;
+# Clear the Description variable.
+setvar -filePath &quot;$localPath&quot; -variableName Description -value &quot;&quot;
 
-# Save changes
-checkin -filePath &quot;$parameter1$&quot; -comment &quot;cleared description&quot;
-# cd to root folder
-cd\
-# cd to logs folder
-cd logs
-# save log
-dump clearvariables_$yyyy-$mm-$dd_$guid.txt
-# You must call quit at the end of the script
+# Save changes.
+checkin -filePath &quot;$localPath&quot; -comment &quot;Cleared description from workflow transition&quot;
+
+# Optional: save a log.
+cd -directory &quot;\&quot;
+cd -directory &quot;logs&quot;
+dump -filePath &quot;clearvariables_$yyyy-$mm-$dd_$guid.txt&quot;
+
+# Required when running from a workflow transition or another external automation host.
 quit
 </code></pre>
+<h2 id="passing-extra-transition-values">Passing Extra Transition Values</h2>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Positional values such as <code>$parameter1$</code> and <code>$parameter2$</code> are legacy behavior and should not be used with PDMShell 4.0.6 or later. Starting with PDMShell 4.0.6, <a href="RUNSCRIPT.html"><code>runscript</code></a> should receive context through <code>-filePath</code>, <code>-items</code>, or <code>-search</code>, and scripts should use PDMShell placeholders such as <code>$localPath</code> instead.</p>
+</div>
+<p>Older scripts may use this positional format:</p>
+<pre><code class="lang-bash">runscript &quot;C:\Scripts\clearvariables.pdmshell&quot; &quot;%PathToSelectedFile%&quot;
+</code></pre>
+<p>In that legacy format, the script used <code>$parameter1$</code>:</p>
+<pre><code class="lang-bash">checkout -filePath &quot;$parameter1$&quot;
+setvar -filePath &quot;$parameter1$&quot; -variableName Description -value &quot;&quot;
+checkin -filePath &quot;$parameter1$&quot; -comment &quot;Cleared description&quot;
+quit
+</code></pre>
+<p>For current PDMShell versions, use the <code>-source</code> and <code>-filePath</code> format shown above. If the workflow transition needs richer context, conditions, or user/group permissions, use the PDMShell add-in instead of a transition Execute Command action.</p>
 <h2 id="tutorial">Tutorial</h2>
 <p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/workflowtransition.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
-<h2 id="tips-for-running-pdmshell-scripts-from-workflow-transitions">Tips for Running PDMShell Scripts from Workflow Transitions</h2>
+<h2 id="tips">Tips</h2>
 <ul>
-<li><strong>Test Your Scripts</strong>: Always test your PDMShell scripts independently before integrating them with workflow transitions.</li>
-<li><strong>Use Quotes for Paths</strong>: Wrap paths and parameters in quotes (<code>&quot;&quot;</code>) if they contain spaces to avoid errors.</li>
+<li>Test scripts in PDMShell before attaching them to a workflow transition.</li>
+<li>Use <a href="QUIT.html"><code>quit</code></a> at the end of scripts launched from workflow transitions so the external PDMShell process closes after the script runs.</li>
+<li>Prefer the PDMShell add-in for automations that need conditions, permissions, right-click menu commands, or event trigger points.</li>
 </ul>
 
 </article>

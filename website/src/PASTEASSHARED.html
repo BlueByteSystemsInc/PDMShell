@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>PASTEASSHARED Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="PASTEASSHARED Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Shares one SOLIDWORKS PDM file or files found by search into another vault folder.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/PASTEASSHARED.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="pasteasshared-command">PASTEASSHARED Command</h1>
+
+<h2 id="description">Description</h2>
+<p>Shares one SOLIDWORKS PDM file, or files found by search, into another vault folder.</p>
+<p>The <code>pasteasshared</code> command uses <code>filePath</code> or <a href="SEARCH.html"><code>search</code></a> to select the source file or files. The <code>directory</code> parameter is the destination vault folder where the shared file entries are created.</p>
+<p>This command uses the SOLIDWORKS PDM shared-file behavior. It does not create a copy of the file; it shares the same PDM file into another folder.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-bash">pasteasshared (-filePath file_path | -search search_query) -directory target_vault_folder [-recursive]
+</code></pre>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>filePath</code> Optional. Single source file to share. Use either <code>filePath</code> or <a href="SEARCH.html"><code>search</code></a>.</li>
+<li><code>search</code> Optional. Search query used to find files to share. Use either <code>filePath</code> or <code>search</code>.</li>
+<li><code>directory</code> Required. Destination vault folder where the shared file entries are created.</li>
+<li><code>recursive</code> Optional. When used with <code>search</code>, includes matching files in subfolders.</li>
+</ul>
+<h2 id="validation">Validation</h2>
+<ul>
+<li><code>directory</code> is required.</li>
+<li>Specify either <code>filePath</code> or <code>search</code>, but not both.</li>
+<li><code>recursive</code> applies only when using <code>search</code>.</li>
+</ul>
+<h2 id="behavior">Behavior</h2>
+<ul>
+<li>Shares each selected source file into the destination folder.</li>
+<li>Keeps the same PDM file ID because this is a shared file, not a copied file.</li>
+<li>Reports files that cannot be shared, for example when a file with the same name already exists in the destination folder or the user does not have permission.</li>
+<li>Skips duplicate search results before attempting to share.</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash"># Share one part into another vault folder
+pasteasshared -filePath &quot;Part.sldprt&quot; -directory &quot;Shared Parts&quot;
+
+# Share all matching parts from the current folder into another vault folder
+pasteasshared -search &quot;Name=%.sldprt&quot; -directory &quot;Shared Parts&quot;
+
+# Share all matching parts from the current folder and subfolders
+pasteasshared -search &quot;Name=%.sldprt&quot; -directory &quot;Shared Parts&quot; -recursive
+</code></pre>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>The destination <code>directory</code> must be a vault folder.</li>
+<li>If a file with the same name already exists in the destination folder, SOLIDWORKS PDM refuses the share.</li>
+<li>The user must have permission to share the selected files into the destination folder.</li>
+</ul>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 4.0.9.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/PASTEASSHARED.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

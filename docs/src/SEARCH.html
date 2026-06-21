@@ -109,7 +109,7 @@
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p><strong>Special columns</strong>: You can use <code>FileDate</code>, <code>Version</code>, <code>State</code> and <code>Hash</code> to list information that is not captured in the datacard. This is useful when searching for duplicates. The hash requires that the file be locally cached. Example:</p>
+<p><strong>Special columns</strong>: You can use <code>FileDate</code>, <a href="VERSION.html"><code>version</code></a>, <code>State</code> and <code>Hash</code> to list information that is not captured in the datacard. This is useful when searching for duplicates. The hash requires that the file be locally cached. Example:</p>
 </div>
 <pre><code class="lang-bash">## lists all duplicates in the current directory by name and prints their file date, hash and revision
 search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns &quot;FileDate,Hash,Revision&quot;
@@ -202,7 +202,7 @@ search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns
 <pre><code class="lang-bash">## Lists all duplicates in the current directory by name and prints their file date, hash and revision
 search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -duplicatesstrategy KeepNewest -columns &quot;FileDate,Hash,Revision&quot;
 </code></pre>
-<p><img src="image.png" alt="duplicatedby"></p>
+<p><img src="/images/image.png" alt="duplicatedby"></p>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>Ensure the current directory is set correctly before running the command.</li>

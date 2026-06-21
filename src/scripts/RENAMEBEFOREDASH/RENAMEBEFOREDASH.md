@@ -14,6 +14,8 @@ tags:
 
 This script renames the selected file by keeping only the part of the file name before the first dash (`-`) and preserving the original extension.
 
+![Rename Before Dash](RENAMEBEFOREDASH.jpg)
+
 For example, a file named `ABC-123.sldprt` becomes `ABC.sldprt`.
 
 >[!TIP]
@@ -24,7 +26,6 @@ This script does not use a SOLIDWORKS macro.
 ## Script
 
 ```pdmshell
-# If you run this from the PDMShell add-in, add quit -silent as the last line.
 rename -filePath "$localPath" -value "${before($fileNameWithoutExtension,-)}$extension"
 msgbox -value "Rename complete" -title "Rename Script" -icon "Information"
 ```

@@ -16,7 +16,7 @@ get -search -recursive -filePath -version -directory -getoptions
 - `filePath`: The file(s) to retrieve. This is the default parameter.
 
 
-- `recursive`: When used with `search`, includes files in subfolders.
+- `recursive`: When used with [`search`](SEARCH.md), includes files in subfolders.
 - `version`:  (Optional) The version of the file to retrieve
 
 - `directory`: (Optional) Folder where to deposit the file. Can be outside vault. Do not end with \\. If not specified, file is cached in its folder. 
@@ -39,7 +39,7 @@ get -search -recursive -filePath -version -directory -getoptions
 get -filePath "file1.sldprt" -Version 2
 ```
 ## Remarks
-- The `search` parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
+- The [`search`](SEARCH.md) parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
 
 ## Availability
 Available since PDMShell 2.0.0 or earlier.

@@ -90,7 +90,7 @@ To keep PDMShell open after the script runs, remove:
 quit -silent
 ```
 
-To create a log file, add a `dump` command before `checkin`, for example:
+To create a log file, add a [`dump`](../../DUMP.md) command before [`checkin`](../../CHECKIN.md), for example:
 
 ```pdmshell
 dump -filePath "checkin-log.txt"

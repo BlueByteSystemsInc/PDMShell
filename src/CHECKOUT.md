@@ -11,7 +11,7 @@ Performs a check out operation on a specified file or many files.
 checkout -search -recursive -filePath -checkoutOptions
 ```
 ## Parameters
--`search`: Search keyword
+`-search`: Search keyword
 
 -`filePath`: The file(s) to be checked out. This is the default parameter
 

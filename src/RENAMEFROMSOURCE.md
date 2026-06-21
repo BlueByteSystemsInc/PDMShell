@@ -48,7 +48,7 @@ The source CSV file must have the following structure:
 - The `evaluatealias` parameter supports dynamic placeholders for renaming, such as $name, $revision, $yyyy, etc. Ensure the CSV file is properly formatted with three columns: File -ID, New File Name, and Folder ID.
 - The `csv` parameter is optional and can be used to provide additional renaming data.
 
-For more information about alias evaluation, refer to the [Dynamic Placeholders in PDMShell](EVAL.html).
+For more information about alias evaluation, refer to the [Dynamic Placeholders in PDMShell](EVAL.md).
 
 ## Tutorial
  <video src="https://bluebyte.biz/wp-content/pdmshellvideos/renamefromsource.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>

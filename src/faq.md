@@ -72,7 +72,7 @@ Please include your PDMShell version, command name, and error message when repor
 ---
 
 ## 8. Which commands are available in the Free version?
-Search-related commands and basic file utilities are free to use. In the Free edition, `search` returns up to **5 items** and `runscript` runs scripts up to **5 lines**.
+Search-related commands and basic file utilities are free to use. In the Free edition, [`search`](SEARCH.md) returns up to **5 items** and [`runscript`](RUNSCRIPT.md) runs scripts up to **5 lines**.
 
 These commands are ideal for quick lookups, validation, and testing automation workflows before upgrading to Premium.
 

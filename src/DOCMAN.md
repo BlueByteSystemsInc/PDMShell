@@ -15,7 +15,7 @@ docman -directory -csv -search -recursive -extensions
 - `directory`: Directory containing files to process.
 - `csv`: CSV file path used for output.
 - `search`: Search query used to find matching files.
-- `recursive`: When used with `search`, includes files in subfolders.
+- `recursive`: When used with [`search`](SEARCH.md), includes files in subfolders.
 - `updaterefs`: Reserved parameter for reference update behavior.
 - `extensions`: File extensions to include.
 

@@ -104,8 +104,8 @@
 Specifies the source file or directory to be added to the vault.</li>
 </ul>
 <p>Supports:</p>
-<p>� Single file<br>
-� Folder</p>
+<p>• Single file<br>
+• Folder</p>
 <p>If a folder is specified, files can be filtered using <code>-search</code> and <code>-recursive</code>.</p>
 <p>If not specified, the current working directory is used.</p>
 <hr>
@@ -159,9 +159,9 @@ addtovault -map &quot;C:\Users\hawkridge\Downloads\map\map.csv&quot; -batch 50 -
 <p>(Optional)</p>
 <p>File Explorer search pattern used to filter files when <code>-source</code> is a folder.</p>
 <p>Supports:</p>
-<p>� Wildcards (<code>*</code>)<br>
-� Multiple extensions<br>
-� Separators: <code>,</code> <code>;</code> <code>|</code></p>
+<p>• Wildcards (<code>*</code>)<br>
+• Multiple extensions<br>
+• Separators: <code>,</code> <code>;</code> <code>|</code></p>
 <p>Examples:</p>
 <pre><code class="lang-bash">-search &quot;*.sldprt&quot;  
 -search &quot;*.sldprt;*.sldasm&quot;  
@@ -273,17 +273,17 @@ A csv file path containing a list of files and their properties. Use <a href="DO
 </code></pre>
 <hr>
 <h2 id="remarks">Remarks</h2>
-<p>� Files are left <strong>checked out</strong> after being added.
-� Use <code>checkin</code> command to check in files after adding.</p>
+<p>• Files are left <strong>checked out</strong> after being added.
+• Use <a href="CHECKIN.html"><code>checkin</code></a> command to check in files after adding.</p>
 <p>Example:</p>
 <pre><code class="lang-bash">checkin -search % -recursive
 </code></pre>
 <hr>
-<p>� Batch processing is strongly recommended for large migrations.</p>
-<p>� The <code>ignoreexisting</code> parameter prevents duplicate files from being added.</p>
-<p>� The <code>updaterefs</code> parameter should be used when adding SOLIDWORKS assemblies.</p>
-<p>� Ensure you have sufficient vault permissions before running this command.</p>
-<p>� The <code>map</code> parameter overrides <code>source</code> if both are specified.</p>
+<p>• Batch processing is strongly recommended for large migrations.</p>
+<p>• The <code>ignoreexisting</code> parameter prevents duplicate files from being added.</p>
+<p>• The <code>updaterefs</code> parameter should be used when adding SOLIDWORKS assemblies.</p>
+<p>• Ensure you have sufficient vault permissions before running this command.</p>
+<p>• The <code>map</code> parameter overrides <code>source</code> if both are specified.</p>
 <hr>
 <div class="NOTE">
 <h5>Note</h5>

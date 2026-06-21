@@ -89,7 +89,7 @@
 
 <h2 id="description">Description</h2>
 <p>Appends one custom reference file to a source file or to files found by search in SOLIDWORKS PDM.</p>
-<p>The <code>pasteasreference</code> command uses <code>filePath</code> as the reference file to append. Use <code>source</code> to append that reference to one file, or use <code>search</code> to append that reference to multiple matching files.</p>
+<p>The <code>pasteasreference</code> command uses <code>filePath</code> as the reference file to append. Use <code>source</code> to append that reference to one file, or use <a href="SEARCH.html"><code>search</code></a> to append that reference to multiple matching files.</p>
 <p>This command is useful when a workflow creates or finds a supporting file and then needs to append it as a custom reference to one or more target files.</p>
 <h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">pasteasreference -filePath reference_file (-source source_file | -search search_query) [-recursive]
@@ -97,15 +97,15 @@
 <h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>filePath</code> Required. Reference file to append.</li>
-<li><code>source</code> Optional. Single file that will receive the appended reference. Use either <code>source</code> or <code>search</code>.</li>
-<li><code>search</code> Optional. Search query used to find files that will receive the appended reference. Use either <code>source</code> or <code>search</code>.</li>
-<li><code>recursive</code> Optional. When used with <code>search</code>, includes matching files in subfolders.</li>
+<li><code>source</code> Optional. Single file that will receive the appended reference. Use either <code>source</code> or <a href="SEARCH.html"><code>search</code></a>.</li>
+<li><a href="SEARCH.html"><code>search</code></a> Optional. Search query used to find files that will receive the appended reference. Use either <code>source</code> or <a href="SEARCH.html"><code>search</code></a>.</li>
+<li><code>recursive</code> Optional. When used with <a href="SEARCH.html"><code>search</code></a>, includes matching files in subfolders.</li>
 </ul>
 <h2 id="validation">Validation</h2>
 <ul>
 <li><code>filePath</code> is required.</li>
-<li>Specify either <code>source</code> or <code>search</code>, but not both.</li>
-<li><code>recursive</code> is only valid when used with <code>search</code>.</li>
+<li>Specify either <code>source</code> or <a href="SEARCH.html"><code>search</code></a>, but not both.</li>
+<li><code>recursive</code> is only valid when used with <a href="SEARCH.html"><code>search</code></a>.</li>
 </ul>
 <h2 id="behavior">Behavior</h2>
 <ul>

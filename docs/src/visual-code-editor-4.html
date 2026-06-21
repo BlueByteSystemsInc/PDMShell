@@ -110,14 +110,14 @@
 <p>These controls are useful when a script grows beyond the visible area or when you want to review the full workflow before running it.</p>
 <h2 id="command-picker">Command Picker</h2>
 <p>The command picker lets you search for commands by name, description, or category. Selecting a command inserts it into the canvas as a node.</p>
-<p>For example, searching for <code>checkout</code> shows related command choices such as <strong>Check out</strong> and <strong>Undo checkout</strong>. This makes discovery easier for users who do not remember the exact command syntax.</p>
+<p>For example, searching for <a href="CHECKOUT.html"><code>checkout</code></a> shows related command choices such as <strong>Check out</strong> and <strong>Undo checkout</strong>. This makes discovery easier for users who do not remember the exact command syntax.</p>
 <h2 id="parameter-panel">Parameter Panel</h2>
 <p>When a command node is selected, the <strong>Command Parameters</strong> panel shows the editable parameters for that command.</p>
 <p><img src="../images/visual-code-editor-field-placeholder.png" alt="Editing command parameters"></p>
 <p>The parameter grid includes:</p>
 <ul>
 <li>A visual display name for the node.</li>
-<li>Command parameters such as <code>filePath</code>, <code>search</code>, <code>recursive</code>, and command-specific options.</li>
+<li>Command parameters such as <code>filePath</code>, <a href="SEARCH.html"><code>search</code></a>, <code>recursive</code>, and command-specific options.</li>
 <li>Inline descriptions for the selected parameter.</li>
 <li>Browse buttons for file and folder parameters when available.</li>
 </ul>
@@ -126,7 +126,7 @@
 <p>The Visual Code Editor validates command nodes while you build the script.</p>
 <p>If a required parameter is missing or incompatible parameters are used together, the node shows an error indicator. Selecting the node shows the validation message so you can fix the command before running it.</p>
 <p><img src="../images/visual-code-editor-validation.png" alt="Visual command validation"></p>
-<p>For example, the <code>checkout</code> command requires either <code>filePath</code> or <code>search</code>. If neither is set, the editor reports:</p>
+<p>For example, the <a href="CHECKOUT.html"><code>checkout</code></a> command requires either <code>filePath</code> or <a href="SEARCH.html"><code>search</code></a>. If neither is set, the editor reports:</p>
 <pre><code class="lang-text">Specify either -filePath or -search.
 </code></pre>
 <p>This reduces the trial-and-error normally involved in command-line scripting.</p>

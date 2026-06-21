@@ -1,4 +1,4 @@
----
+﻿---
 description: Learn how to run PDMShell scripts from SOLIDWORKS PDM Dispatch and when to use the PDMShell add-in instead.
 title: Run PDMShell Scripts from Dispatch | SOLIDWORKS PDM
 ---
@@ -55,7 +55,7 @@ quit
 ## Passing Extra Dispatch Values
 
 > [!WARNING]
-> Positional Dispatch values such as `$parameter1$` and `$parameter2$` are legacy behavior and should not be used with PDMShell 4.0.6 or later. Starting with PDMShell 4.0.6, `runscript` should receive context through `-filePath`, `-items`, or `-search`, and scripts should use PDMShell placeholders such as `$localPath` instead.
+> Positional Dispatch values such as `$parameter1$` and `$parameter2$` are legacy behavior and should not be used with PDMShell 4.0.6 or later. Starting with PDMShell 4.0.6, [`runscript`](RUNSCRIPT.md) should receive context through `-filePath`, `-items`, or `-search`, and scripts should use PDMShell placeholders such as `$localPath` instead.
 
 Older scripts may use the positional argument format to pass Dispatch-only values such as `%OldVersion%`:
 
@@ -89,4 +89,4 @@ For current PDMShell versions, use the `-source` and `-filePath` format shown ab
 ## Tips for Running PDMShell Scripts from Dispatch
 - Test Your Scripts: Always test your PDMShell scripts independently before integrating them with Dispatch.
 - Use Quotes for Paths: Wrap paths and parameters in quotes (`""`) if they contain spaces to avoid errors.
-- Use `quit` at the end of scripts launched from Dispatch so the external PDMShell process closes after the script runs.
+- Use [`quit`](QUIT.md) at the end of scripts launched from Dispatch so the external PDMShell process closes after the script runs.

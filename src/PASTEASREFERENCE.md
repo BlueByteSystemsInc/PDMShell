@@ -6,7 +6,7 @@ title: PASTEASREFERENCE Command | PDMShell | SOLIDWORKS PDM
 ## Description
 Appends one custom reference file to a source file or to files found by search in SOLIDWORKS PDM.
 
-The `pasteasreference` command uses `filePath` as the reference file to append. Use `source` to append that reference to one file, or use `search` to append that reference to multiple matching files.
+The `pasteasreference` command uses `filePath` as the reference file to append. Use `source` to append that reference to one file, or use [`search`](SEARCH.md) to append that reference to multiple matching files.
 
 This command is useful when a workflow creates or finds a supporting file and then needs to append it as a custom reference to one or more target files.
 
@@ -17,14 +17,14 @@ pasteasreference -filePath reference_file (-source source_file | -search search_
 
 ## Parameters
 - `filePath` Required. Reference file to append.
-- `source` Optional. Single file that will receive the appended reference. Use either `source` or `search`.
-- `search` Optional. Search query used to find files that will receive the appended reference. Use either `source` or `search`.
-- `recursive` Optional. When used with `search`, includes matching files in subfolders.
+- `source` Optional. Single file that will receive the appended reference. Use either `source` or [`search`](SEARCH.md).
+- [`search`](SEARCH.md) Optional. Search query used to find files that will receive the appended reference. Use either `source` or [`search`](SEARCH.md).
+- `recursive` Optional. When used with [`search`](SEARCH.md), includes matching files in subfolders.
 
 ## Validation
 - `filePath` is required.
-- Specify either `source` or `search`, but not both.
-- `recursive` is only valid when used with `search`.
+- Specify either `source` or [`search`](SEARCH.md), but not both.
+- `recursive` is only valid when used with [`search`](SEARCH.md).
 
 ## Behavior
 - Appends the `filePath` reference to each selected target file.

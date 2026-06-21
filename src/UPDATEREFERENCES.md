@@ -24,7 +24,7 @@ updatereferences -filepath -search -directory -scope -recursive -csv
 - `filepath`  
   Optional. Updates references for a single file.  
   - If a relative path is provided, it is resolved against the current directory.
-  - When specified, the `search` parameter is ignored.
+  - When specified, the [`search`](SEARCH.md) parameter is ignored.
 
 - `search`  
   Optional. Search query used to find files whose references should be updated.  
@@ -44,7 +44,7 @@ updatereferences -filepath -search -directory -scope -recursive -csv
   - `UpdateAllReferences` – Updates all references found in the file
 
 - `recursive`  
-  Optional. When used with `search`, includes subfolders of the current directory when locating files whose references should be updated.
+  Optional. When used with [`search`](SEARCH.md), includes subfolders of the current directory when locating files whose references should be updated.
 
 - `csv`
   Saves the update references operations in a csv file.
@@ -69,9 +69,9 @@ updatereferences -search %.sldasm -scope UpdateBrokenReferences
 ```
  
 ## Remarks
-- Either `filepath` or `search` must be specified.
+- Either `filepath` or [`search`](SEARCH.md) must be specified.
 - If both are provided, `filepath` takes precedence.
-- The `search` parameter only searches within the current directory unless `recursive` is specified.
+- The [`search`](SEARCH.md) parameter only searches within the current directory unless `recursive` is specified.
 - Reference resolution is based on matching file names within the directory scope.
 - The first matching file found is used to update the reference.
 - This command modifies files directly; use with care in controlled workflows.

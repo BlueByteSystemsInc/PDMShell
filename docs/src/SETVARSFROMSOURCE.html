@@ -109,7 +109,7 @@ XXXX,Value1,Value2,...
 <ul>
 <li>The CSV file should have the first column as the file ID and the subsequent columns as the variable names.</li>
 <li>You need to include the extension in the filename. This file can be outside the vault.</li>
-<li>The best way to generate a source CSV is to use the <code>dir</code> command or the <code>search</code> command on a folder with the <code>-csv</code> parameter and the <code>columns</code>, like:</li>
+<li>The best way to generate a source CSV is to use the <a href="DIR.html"><code>dir</code></a> command or the <a href="SEARCH.html"><code>search</code></a> command on a folder with the <code>-csv</code> parameter and the <code>columns</code>, like:</li>
 </ul>
 <pre><code class="lang-bash">dir -columns Description,&quot;Part Number&quot; -csv data.csv
 search -search %.sldprt -recursive -columns Description,&quot;Part Number&quot; -csv data.csv #this will save all parts from all levels in the current directory with the columns Description and Part Number

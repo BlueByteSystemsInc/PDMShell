@@ -33,7 +33,7 @@ copy -source -directory -search -recursive -name -ignoreexisting
   The search is scoped to the source folder and supports `%` wildcards.
 
 - `recursive`  
-  Optional. When used with `search`, includes subfolders of the source folder.
+  Optional. When used with [`search`](SEARCH.md), includes subfolders of the source folder.
 
 - `name`  
   Required. Specifies the destination file name.  
@@ -69,9 +69,9 @@ copy -source Vault/Projects/WIP -search %.sldprt -directory Vault/Projects/Relea
 ```
 
 ## Remarks
-- If `source` is a file, `search` and `recursive` are ignored.
-- If `source` is a folder and `search` is not provided, all files in that folder are copied.
-- The `search` parameter does not search the entire vault, only the source folder
+- If `source` is a file, [`search`](SEARCH.md) and `recursive` are ignored.
+- If `source` is a folder and [`search`](SEARCH.md) is not provided, all files in that folder are copied.
+- The [`search`](SEARCH.md) parameter does not search the entire vault, only the source folder
 
 ## Availability
 Available since PDMShell 2.0.74.

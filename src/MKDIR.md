@@ -14,7 +14,7 @@ mkdir -directory
 - `directory`: The folder to create. Supports placeholders.
 
 >[!NOTE]
-> For more information about placeholders, refer to the [placeholders documentation](src/EVAL.html).
+> For more information about placeholders, refer to the [placeholders documentation](EVAL.md).
 
 ## Examples
 ```bash

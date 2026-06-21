@@ -22,7 +22,7 @@ listreferences -filepath -search -recursive -csv
 
 ## Parameters
 - `filepath` Optional. Lists references for a single file. If a relative path is provided, it is resolved against the current directory. When specified, the search parameter is ignored.
-- `search` Optional. Search query used to find files whose references should be listed. The search is scoped to the current directory. Supports % wildcards. Can be combined with recursive.
+- [`search`](SEARCH.md) Optional. Search query used to find files whose references should be listed. The search is scoped to the current directory. Supports % wildcards. Can be combined with recursive.
 - `recursive` Optional. When used with search, includes subfolders of the current directory when locating files whose references should be listed.
 - `csv` Optional. Saves the reference listing results to a CSV file.
 

@@ -45,7 +45,7 @@ If omitted, no files will be processed.
 
 
 - `recursive`   
-  Searches through all subfolders from the current folder. Not required if using `Recursive=true` in `search`.
+  Searches through all subfolders from the current folder. Not required if using `Recursive=true` in [`search`](SEARCH.md).
 
 - `bumprevision`  
   Increments the PDM revision of each file returned from the search.  
@@ -92,7 +92,7 @@ Depending on parameters:
 - `-referencescheck` → checks all references for correctness  
 
 ### 3. CSV Export (optional)  
-If both `search` and `referencescheck` are supplied, and `csv` is specified:
+If both [`search`](SEARCH.md) and `referencescheck` are supplied, and `csv` is specified:
 
 - Writes reference errors to a CSV  
 - Adds or updates the file in the vault  
@@ -103,7 +103,7 @@ If both `search` and `referencescheck` are supplied, and `csv` is specified:
 ## Notes
 - `bumprevision` and `referencescheck` operate *only* on files returned by the search.
 - CSV exporting is only active when **both**  
-  `search` **and** `referencescheck` are supplied.
+  [`search`](SEARCH.md) **and** `referencescheck` are supplied.
 - The reference check output may include many entries depending on assembly depth.
 - This command does **not** modify file content — it only updates revision metadata or reference validation results.
 - Bulk operations respect PDM permissions and may fail if the user lacks rights.

@@ -109,10 +109,11 @@ cd &quot;\Projects&quot;
 dir
 </code></pre>
 <h3 id="script-files">Script Files</h3>
-<p>Save repeatable work in <code>.pdmshell</code> files and run them with <code>pdmcli.exe</code> or the <code>runscript</code> command.</p>
+<p>Save repeatable work in <code>.pdmshell</code> files and run them with <code>pdmcli.exe</code> or the <a href="RUNSCRIPT.html"><code>runscript</code></a> command.</p>
 <pre><code class="lang-bash">runscript -source &quot;C:\Scripts\UpdateVariables.pdmshell&quot;
 </code></pre>
-<p>Scripts are plain text, so they are easy to store in a PDM vault, review, version, and reuse.</p>
+<p>PDMShell can read normal <code>.pdmshell</code> script files as plain text, which makes them easy to store in a PDM vault, review, version, and reuse.</p>
+<p>When you save a script from the PDMShell toolbar or visual editor, PDMShell may convert the saved file to an encrypted script format for security. This helps protect scripts that are intended to be distributed or run by users without exposing the editable source text.</p>
 <h3 id="visual-code-editor">Visual Code Editor</h3>
 <p>The visual editor helps you build PDMShell workflows with command nodes, connections, and command parameters. It is useful when a script needs to be easier to understand, document, or hand off to another administrator.</p>
 <p>See <a href="visual-code-editor-4.html">Visual Code Editor</a>.</p>
@@ -181,7 +182,7 @@ dir
 <li><strong>Availability</strong>: The PDMShell version where the command first became available.</li>
 </ol>
 <h2 id="example-command-page">Example Command Page</h2>
-<p>Here is a small example using the <code>cd</code> command.</p>
+<p>Here is a small example using the <a href="CD.html"><code>cd</code></a> command.</p>
 <pre><code class="lang-bash">cd [-directory|-id]
 </code></pre>
 <p>Examples:</p>
@@ -208,7 +209,7 @@ cd\
 <p>Escaping quotes depends on where the command starts, such as Command Prompt, Dispatch, a workflow transition, or an existing PDMShell session.</p>
 <p>See <a href="escapingquotes.html">Escaping Characters</a>.</p>
 <h2 id="quick-tutorial">Quick Tutorial</h2>
-<p>This short tutorial shows basic folder navigation with the <code>cd</code> command.</p>
+<p>This short tutorial shows basic folder navigation with the <a href="CD.html"><code>cd</code></a> command.</p>
 <p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 8px;"></video></p>
 <h2 id="getting-support">Getting Support</h2>
 <p>If you need help building scripts or planning automation, contact Blue Byte Systems support:</p>

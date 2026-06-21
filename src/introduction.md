@@ -1,4 +1,4 @@
----
+﻿---
 description: Learn what PDMShell is, how it helps automate SOLIDWORKS PDM Professional, and where to start with commands, scripts, the add-in, and visual workflows.
 title: Getting Started with PDMShell | SOLIDWORKS PDM Automation
 ---
@@ -35,13 +35,15 @@ dir
 
 ### Script Files
 
-Save repeatable work in `.pdmshell` files and run them with `pdmcli.exe` or the `runscript` command.
+Save repeatable work in `.pdmshell` files and run them with `pdmcli.exe` or the [`runscript`](RUNSCRIPT.md) command.
 
 ```bash
 runscript -source "C:\Scripts\UpdateVariables.pdmshell"
 ```
 
-Scripts are plain text, so they are easy to store in a PDM vault, review, version, and reuse.
+PDMShell can read normal `.pdmshell` script files as plain text, which makes them easy to store in a PDM vault, review, version, and reuse.
+
+When you save a script from the PDMShell toolbar or visual editor, PDMShell may convert the saved file to an encrypted script format for security. This helps protect scripts that are intended to be distributed or run by users without exposing the editable source text.
 
 ### Visual Code Editor
 
@@ -97,7 +99,7 @@ Each command page in this documentation follows the same structure:
 
 ## Example Command Page
 
-Here is a small example using the `cd` command.
+Here is a small example using the [`cd`](CD.md) command.
 
 ```bash
 cd [-directory|-id]
@@ -141,7 +143,7 @@ See [Escaping Characters](escapingquotes.md).
 
 ## Quick Tutorial
 
-This short tutorial shows basic folder navigation with the `cd` command.
+This short tutorial shows basic folder navigation with the [`cd`](CD.md) command.
 
 <video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 8px;"></video>
 

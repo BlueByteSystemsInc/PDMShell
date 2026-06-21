@@ -132,7 +132,7 @@ quit
 <h2 id="passing-extra-dispatch-values">Passing Extra Dispatch Values</h2>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>Positional Dispatch values such as <code>$parameter1$</code> and <code>$parameter2$</code> are legacy behavior and should not be used with PDMShell 4.0.6 or later. Starting with PDMShell 4.0.6, <code>runscript</code> should receive context through <code>-filePath</code>, <code>-items</code>, or <code>-search</code>, and scripts should use PDMShell placeholders such as <code>$localPath</code> instead.</p>
+<p>Positional Dispatch values such as <code>$parameter1$</code> and <code>$parameter2$</code> are legacy behavior and should not be used with PDMShell 4.0.6 or later. Starting with PDMShell 4.0.6, <a href="RUNSCRIPT.html"><code>runscript</code></a> should receive context through <code>-filePath</code>, <code>-items</code>, or <code>-search</code>, and scripts should use PDMShell placeholders such as <code>$localPath</code> instead.</p>
 </div>
 <p>Older scripts may use the positional argument format to pass Dispatch-only values such as <code>%OldVersion%</code>:</p>
 <pre><code class="lang-bash">Verb:
@@ -159,7 +159,7 @@ quit
 <ul>
 <li>Test Your Scripts: Always test your PDMShell scripts independently before integrating them with Dispatch.</li>
 <li>Use Quotes for Paths: Wrap paths and parameters in quotes (<code>&quot;&quot;</code>) if they contain spaces to avoid errors.</li>
-<li>Use <code>quit</code> at the end of scripts launched from Dispatch so the external PDMShell process closes after the script runs.</li>
+<li>Use <a href="QUIT.html"><code>quit</code></a> at the end of scripts launched from Dispatch so the external PDMShell process closes after the script runs.</li>
 </ul>
 
 </article>

@@ -24,7 +24,7 @@ setvar (-filePath path | -search query) -variableName variable_name [-value valu
 - `search`: The search operation to use.
 
 
-- `recursive`: When used with `search`, includes files in subfolders.
+- `recursive`: When used with [`search`](SEARCH.md), includes files in subfolders.
 - `stringformat`: string format. See remarks section. 
 
 ## Examples
@@ -53,7 +53,7 @@ String functions can be used after placeholder evaluation. This is useful with `
 
 ## Remarks
 - The `configNames` parameter should be separated by commas. If omitted, PDMShell uses `@` for configuration-supported documents.
-- The `search` parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
+- The [`search`](SEARCH.md) parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
 - The `stringformat` parameter allows you to format the value of the variable using predefined string formatting options. The following formats are supported:
   - **UpperCase**: Converts the entire string to uppercase.
   - **LowerCase**: Converts the entire string to lowercase.

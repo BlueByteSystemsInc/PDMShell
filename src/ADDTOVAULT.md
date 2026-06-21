@@ -23,8 +23,8 @@ Specifies the source file or directory to be added to the vault.
 
 Supports:
 
-• Single file  
-• Folder  
+â€¢ Single file  
+â€¢ Folder  
 
 If a folder is specified, files can be filtered using `-search` and `-recursive`.
 
@@ -100,9 +100,9 @@ File Explorer search pattern used to filter files when `-source` is a folder.
 
 Supports:
 
-• Wildcards (`*`)  
-• Multiple extensions  
-• Separators: `,` `;` `|`
+â€¢ Wildcards (`*`)  
+â€¢ Multiple extensions  
+â€¢ Separators: `,` `;` `|`
 
 Examples:
 ```bash
@@ -254,8 +254,8 @@ addtovault -map "c:\export\map.csv" -ignoreexisting -csv "ret.csv" -batch 10 -pr
 ---
 
 ## Remarks
-• Files are left **checked out** after being added.
-• Use `checkin` command to check in files after adding.
+â€¢ Files are left **checked out** after being added.
+â€¢ Use [`checkin`](CHECKIN.md) command to check in files after adding.
 
 Example:
 ```bash
@@ -263,15 +263,15 @@ checkin -search % -recursive
 ```
 ---
 
-• Batch processing is strongly recommended for large migrations.
+â€¢ Batch processing is strongly recommended for large migrations.
 
-• The `ignoreexisting` parameter prevents duplicate files from being added.
+â€¢ The `ignoreexisting` parameter prevents duplicate files from being added.
 
-• The `updaterefs` parameter should be used when adding SOLIDWORKS assemblies.
+â€¢ The `updaterefs` parameter should be used when adding SOLIDWORKS assemblies.
 
-• Ensure you have sufficient vault permissions before running this command.
+â€¢ Ensure you have sufficient vault permissions before running this command.
 
-• The `map` parameter overrides `source` if both are specified.
+â€¢ The `map` parameter overrides `source` if both are specified.
 
 ---
 

@@ -38,7 +38,7 @@ These controls are useful when a script grows beyond the visible area or when yo
 
 The command picker lets you search for commands by name, description, or category. Selecting a command inserts it into the canvas as a node.
 
-For example, searching for `checkout` shows related command choices such as **Check out** and **Undo checkout**. This makes discovery easier for users who do not remember the exact command syntax.
+For example, searching for [`checkout`](CHECKOUT.md) shows related command choices such as **Check out** and **Undo checkout**. This makes discovery easier for users who do not remember the exact command syntax.
 
 ## Parameter Panel
 
@@ -49,7 +49,7 @@ When a command node is selected, the **Command Parameters** panel shows the edit
 The parameter grid includes:
 
 - A visual display name for the node.
-- Command parameters such as `filePath`, `search`, `recursive`, and command-specific options.
+- Command parameters such as `filePath`, [`search`](SEARCH.md), `recursive`, and command-specific options.
 - Inline descriptions for the selected parameter.
 - Browse buttons for file and folder parameters when available.
 
@@ -63,7 +63,7 @@ If a required parameter is missing or incompatible parameters are used together,
 
 ![Visual command validation](../images/visual-code-editor-validation.png)
 
-For example, the `checkout` command requires either `filePath` or `search`. If neither is set, the editor reports:
+For example, the [`checkout`](CHECKOUT.md) command requires either `filePath` or [`search`](SEARCH.md). If neither is set, the editor reports:
 
 ```text
 Specify either -filePath or -search.

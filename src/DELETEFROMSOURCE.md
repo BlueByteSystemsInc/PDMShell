@@ -29,7 +29,7 @@ After that initial pass, it performs a second step using the Name column. This i
 Since these files no longer exist in the vault in a normal state, they cannot be deleted again and their IDs do not exist anymore. Instead, PDMShell uses the file name to locate these previously deleted items and destroy them directly.
 
 This approach allows you to:
-- Handle active files (delete → destroy)
+- Handle active files (delete â†’ destroy)
 - Handle already deleted files (destroy only) if there a value in the name column. See structure of the CSV file.
 
 >[!Important]

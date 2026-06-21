@@ -127,7 +127,7 @@ If omitted, no files will be processed.</li>
 </div>
 <ul>
 <li><p><code>recursive</code><br>
-Searches through all subfolders from the current folder. Not required if using <code>Recursive=true</code> in <code>search</code>.</p>
+Searches through all subfolders from the current folder. Not required if using <code>Recursive=true</code> in <a href="SEARCH.html"><code>search</code></a>.</p>
 </li>
 <li><p><code>bumprevision</code><br>
 Increments the PDM revision of each file returned from the search.<br>
@@ -172,7 +172,7 @@ If the file does not exist, it is <strong>added</strong> to the vault.</p>
 <li><code>-referencescheck</code> → checks all references for correctness</li>
 </ul>
 <h3 id="3-csv-export-optional">3. CSV Export (optional)</h3>
-<p>If both <code>search</code> and <code>referencescheck</code> are supplied, and <code>csv</code> is specified:</p>
+<p>If both <a href="SEARCH.html"><code>search</code></a> and <code>referencescheck</code> are supplied, and <code>csv</code> is specified:</p>
 <ul>
 <li>Writes reference errors to a CSV</li>
 <li>Adds or updates the file in the vault</li>
@@ -183,7 +183,7 @@ If the file does not exist, it is <strong>added</strong> to the vault.</p>
 <ul>
 <li><code>bumprevision</code> and <code>referencescheck</code> operate <em>only</em> on files returned by the search.</li>
 <li>CSV exporting is only active when <strong>both</strong><br>
-<code>search</code> <strong>and</strong> <code>referencescheck</code> are supplied.</li>
+<a href="SEARCH.html"><code>search</code></a> <strong>and</strong> <code>referencescheck</code> are supplied.</li>
 <li>The reference check output may include many entries depending on assembly depth.</li>
 <li>This command does <strong>not</strong> modify file content — it only updates revision metadata or reference validation results.</li>
 <li>Bulk operations respect PDM permissions and may fail if the user lacks rights.</li>

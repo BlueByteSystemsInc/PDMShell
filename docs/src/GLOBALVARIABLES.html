@@ -116,7 +116,7 @@ setvar -variableName Description -filePath &quot;$localPath&quot; -value &quot;$
 rename -filePath &quot;$localPath&quot; -value &quot;${replace(${global.BaseName},OLD,NEW)}.pdf&quot;
 </code></pre>
 <h2 id="wait-and-until">Wait And Until</h2>
-<p>Global variables work with <code>wait</code> and <code>until</code>.</p>
+<p>Global variables work with <a href="WAIT.html"><code>wait</code></a> and <a href="UNTIL.html"><code>until</code></a>.</p>
 <pre><code class="lang-pdmshell">setglobal -name Delay -value &quot;10&quot;
 wait -timeout &quot;${global.Delay}&quot;
 

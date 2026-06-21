@@ -33,7 +33,7 @@ getvar -filePath "file1.sldprt" -variableName "CustomVar"
 ## Remarks
 - The configuration names should be separated by commas.
 - The variable must be in the data card.
-- **This comand will return what's in the locale cache which may not be necessarily the latest version. For that, please use `getVarFromDB`**.
+- **This comand will return what's in the locale cache which may not be necessarily the latest version. For that, please use [`getvarfromdb`](GETVARFROMDB.md)**.
 
 ## Availability
 Available since PDMShell 2.0.0 or earlier.

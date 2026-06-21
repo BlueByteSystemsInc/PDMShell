@@ -89,7 +89,7 @@
 
 <h2 id="description">Description</h2>
 <p>Waits until the supplied condition expression evaluates to true, or until the timeout is reached.</p>
-<p>Use <code>until</code> after commands such as <code>runtask</code>, <code>runtemplate</code>, <code>export</code>, or any automation step that creates files asynchronously. This prevents the next command from running before the expected files, variables, or process state are ready.</p>
+<p>Use <code>until</code> after commands such as <a href="RUNTASK.html"><code>runtask</code></a>, <a href="RUNTEMPLATE.html"><code>runtemplate</code></a>, <a href="export.html"><code>export</code></a>, or any automation step that creates files asynchronously. This prevents the next command from running before the expected files, variables, or process state are ready.</p>
 <h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">until -conditions condition_expression [-timeout seconds] [-match all|any|one] [-filePath path | -search query]
 </code></pre>
@@ -97,11 +97,11 @@
 <ul>
 <li><code>conditions</code>: The condition expression to evaluate. Supports <code>and</code>, <code>or</code>, nested groups, file/folder/process exists checks, comparisons, PDM variables, placeholders, and simple arithmetic comparisons.</li>
 <li><code>timeout</code>: Maximum number of seconds to wait before the command fails. If omitted, PDMShell uses the command default.</li>
-<li><code>match</code>: When <code>search</code> returns multiple files, controls how many files must satisfy the conditions. Use <code>any</code> when one matching file is enough, <code>all</code> when every matching file must pass, or <code>one</code> when exactly one matching file must pass.</li>
+<li><code>match</code>: When <a href="SEARCH.html"><code>search</code></a> returns multiple files, controls how many files must satisfy the conditions. Use <code>any</code> when one matching file is enough, <code>all</code> when every matching file must pass, or <code>one</code> when exactly one matching file must pass.</li>
 <li><code>filePath</code>: Optional file context used to evaluate PDM variables and file placeholders.</li>
 <li><code>search</code>: Optional search query. When supplied, PDMShell evaluates the condition against the files returned by the search.</li>
-<li><code>directory</code>: Optional vault folder used as the search scope. Only valid with <code>search</code>.</li>
-<li><code>recursive</code>: Includes subfolders when used with <code>search</code>.</li>
+<li><code>directory</code>: Optional vault folder used as the search scope. Only valid with <a href="SEARCH.html"><code>search</code></a>.</li>
+<li><code>recursive</code>: Includes subfolders when used with <a href="SEARCH.html"><code>search</code></a>.</li>
 </ul>
 <h2 id="examples">Examples</h2>
 <pre><code class="lang-bash">until -conditions &quot;$localPath exists&quot; -timeout 60
@@ -390,7 +390,7 @@ process exists &quot;notepad&quot;
 <h2 id="remarks">Remarks</h2>
 <ul>
 <li>Use <code>filePath</code> when you need placeholders or PDM variables to be evaluated against one specific file.</li>
-<li>Use <code>search</code> and <code>match</code> when the same condition should be evaluated across multiple matching files.</li>
+<li>Use <a href="SEARCH.html"><code>search</code></a> and <code>match</code> when the same condition should be evaluated across multiple matching files.</li>
 <li><code>exists</code> does not need a value in the visual editor.</li>
 <li>For generated PDF/DXF workflows, use placeholders such as <code>$folderPath</code>, <code>$fileNameWithoutExtension</code>, and <code>$extension</code> to avoid hard-coded output paths.</li>
 </ul>

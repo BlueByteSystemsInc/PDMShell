@@ -127,7 +127,7 @@ How it behaves:
 
 ### Input Example 4: Advanced Search expressions in the input
 
-You can pass more powerful search values in the first column (same idea as `-search` in the `search` command).
+You can pass more powerful search values in the first column (same idea as `-search` in the [`search`](SEARCH.md) command).
 
 Query  
 ```

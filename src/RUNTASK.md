@@ -4,7 +4,7 @@ title: RUNTASK Command | PDMShell | SOLIDWORKS PDM
 ---
 # RUNTASK Command
 ## Description
-The `RUNTASK` command allows you to execute a PDM task on a specific file or via search in the PDM vault. 
+The `runtask` command allows you to execute a PDM task on a specific file or via search in the PDM vault. 
 
 ## Syntax
 ```bash

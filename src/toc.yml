@@ -118,6 +118,8 @@
       href: COPYTREE.md
     - name: Paste as custom reference
       href: PASTEASREFERENCE.md
+    - name: Paste as shared file
+      href: PASTEASSHARED.md
     - name: Pack and Go
       href: PACKANDGO.md
     - name: Move files

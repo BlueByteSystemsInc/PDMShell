@@ -10,9 +10,9 @@ The `docmanprops` command **exports and updates SOLIDWORKS file custom propertie
 
 This command supports two primary modes:
 
-- **Export Mode (Default)** — Reads properties from SOLIDWORKS files and writes them to a CSV file
-- **Update Mode** — Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)
-- **Refresh Mode** — Reads a CSV file and refreshes the content of the csv.
+- **Export Mode (Default)** â€” Reads properties from SOLIDWORKS files and writes them to a CSV file
+- **Update Mode** â€” Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)
+- **Refresh Mode** â€” Reads a CSV file and refreshes the content of the csv.
 
 
 > [!NOTE]
@@ -191,8 +191,8 @@ The CSV is updated during update:
 
 Success column:
 
-True — Property updated successfully  
-False — Property update failed  
+True â€” Property updated successfully  
+False â€” Property update failed  
 
 Exception column:
 

@@ -6,7 +6,7 @@ title: UNTIL Command | PDMShell | SOLIDWORKS PDM
 ## Description
 Waits until the supplied condition expression evaluates to true, or until the timeout is reached.
 
-Use `until` after commands such as `runtask`, `runtemplate`, `export`, or any automation step that creates files asynchronously. This prevents the next command from running before the expected files, variables, or process state are ready.
+Use `until` after commands such as [`runtask`](RUNTASK.md), [`runtemplate`](RUNTEMPLATE.md), [`export`](export.md), or any automation step that creates files asynchronously. This prevents the next command from running before the expected files, variables, or process state are ready.
 
 ## Syntax
 ```bash
@@ -16,11 +16,11 @@ until -conditions condition_expression [-timeout seconds] [-match all|any|one] [
 ## Parameters
 - `conditions`: The condition expression to evaluate. Supports `and`, `or`, nested groups, file/folder/process exists checks, comparisons, PDM variables, placeholders, and simple arithmetic comparisons.
 - `timeout`: Maximum number of seconds to wait before the command fails. If omitted, PDMShell uses the command default.
-- `match`: When `search` returns multiple files, controls how many files must satisfy the conditions. Use `any` when one matching file is enough, `all` when every matching file must pass, or `one` when exactly one matching file must pass.
+- `match`: When [`search`](SEARCH.md) returns multiple files, controls how many files must satisfy the conditions. Use `any` when one matching file is enough, `all` when every matching file must pass, or `one` when exactly one matching file must pass.
 - `filePath`: Optional file context used to evaluate PDM variables and file placeholders.
 - `search`: Optional search query. When supplied, PDMShell evaluates the condition against the files returned by the search.
-- `directory`: Optional vault folder used as the search scope. Only valid with `search`.
-- `recursive`: Includes subfolders when used with `search`.
+- `directory`: Optional vault folder used as the search scope. Only valid with [`search`](SEARCH.md).
+- `recursive`: Includes subfolders when used with [`search`](SEARCH.md).
 
 ## Examples
 ```bash
@@ -171,7 +171,7 @@ Arithmetic is evaluated only for simple numeric expressions containing numbers, 
 
 ## Remarks
 - Use `filePath` when you need placeholders or PDM variables to be evaluated against one specific file.
-- Use `search` and `match` when the same condition should be evaluated across multiple matching files.
+- Use [`search`](SEARCH.md) and `match` when the same condition should be evaluated across multiple matching files.
 - `exists` does not need a value in the visual editor.
 - For generated PDF/DXF workflows, use placeholders such as `$folderPath`, `$fileNameWithoutExtension`, and `$extension` to avoid hard-coded output paths.
 

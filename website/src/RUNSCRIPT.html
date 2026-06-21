@@ -132,7 +132,7 @@ runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -items &quot;1
 </tr>
 </tbody>
 </table>
-<p>Only one targeting mode is normally needed: <code>filePath</code>, <code>search</code>, or <code>items</code>.</p>
+<p>Only one targeting mode is normally needed: <code>filePath</code>, <a href="SEARCH.html"><code>search</code></a>, or <code>items</code>.</p>
 <h2 id="items-format">Items format</h2>
 <p>Use <code>items</code> when an external command already knows the PDM IDs to process.</p>
 <pre><code class="lang-pdmshell">runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -items &quot;123,45;678,90&quot;
@@ -170,7 +170,7 @@ pdmcli.exe &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -edit
 </code></pre>
 <p>When <code>runscript</code> loads a script, the visual editor is hydrated only when the current editor is empty or clean. If the user has unsaved script changes, <code>runscript</code> still executes normally but does not replace the editor contents.</p>
 <h2 id="placeholder-evaluation">Placeholder evaluation</h2>
-<p>When <code>runscript</code> is executed with <code>items</code>, <code>filePath</code>, or <code>search</code>, placeholders are evaluated with the same context used by visual Run command execution.</p>
+<p>When <code>runscript</code> is executed with <code>items</code>, <code>filePath</code>, or <a href="SEARCH.html"><code>search</code></a>, placeholders are evaluated with the same context used by visual Run command execution.</p>
 <p>Normal lines run once. Consecutive item-specific lines run once for each resolved file or folder.</p>
 <p>An item-specific line is a line that contains a file, folder, vault, date/time, or PDM variable placeholder.</p>
 <h2 id="supported-placeholders">Supported placeholders</h2>

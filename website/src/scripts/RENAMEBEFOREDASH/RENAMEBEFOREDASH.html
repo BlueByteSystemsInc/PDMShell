@@ -88,6 +88,7 @@
 <h1 id="rename-before-dash">Rename Before Dash</h1>
 
 <p>This script renames the selected file by keeping only the part of the file name before the first dash (<code>-</code>) and preserving the original extension.</p>
+<p><img src="RENAMEBEFOREDASH.jpg" alt="Rename Before Dash"></p>
 <p>For example, a file named <code>ABC-123.sldprt</code> becomes <code>ABC.sldprt</code>.</p>
 <div class="TIP">
 <h5>Tip</h5>
@@ -95,8 +96,7 @@
 </div>
 <p>This script does not use a SOLIDWORKS macro.</p>
 <h2 id="script">Script</h2>
-<pre><code class="lang-pdmshell"># If you run this from the PDMShell add-in, add quit -silent as the last line.
-rename -filePath &quot;$localPath&quot; -value &quot;${before($fileNameWithoutExtension,-)}$extension&quot;
+<pre><code class="lang-pdmshell">rename -filePath &quot;$localPath&quot; -value &quot;${before($fileNameWithoutExtension,-)}$extension&quot;
 msgbox -value &quot;Rename complete&quot; -title &quot;Rename Script&quot; -icon &quot;Information&quot;
 </code></pre>
 <h2 id="what-it-does">What it does</h2>

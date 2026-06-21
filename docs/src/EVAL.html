@@ -95,18 +95,18 @@
 <p>The following commands support the use of dynamic placeholders:</p>
 <h3 id="commands-using-the-current-folder-as-the-backing-object-directory-parameter">Commands Using the Current Folder as the Backing Object (<code>directory</code> parameter):</h3>
 <ul>
-<li><strong><code>cd</code></strong>: Change the current directory.</li>
-<li><strong><code>mkdir</code></strong>: Create a new directory.</li>
-<li><strong><code>export</code></strong>: Export commands to a file.</li>
+<li><strong><a href="CD.html"><code>cd</code></a></strong>: Change the current directory.</li>
+<li><strong><a href="MKDIR.html"><code>mkdir</code></a></strong>: Create a new directory.</li>
+<li><strong><a href="export.html"><code>export</code></a></strong>: Export commands to a file.</li>
 <li><strong><code>addtvault</code></strong>: Add a vault with the directory as the backing object.</li>
 </ul>
 <h3 id="commands-using-files-or-folders-as-the-backing-object">Commands Using Files or Folders as the Backing Object:</h3>
 <ul>
-<li><strong><code>rename</code></strong>: Uses the <code>value</code> parameter for renaming files or folders.</li>
-<li><strong><code>renamefromsource</code></strong>: The new file is evaluated if the <code>evaluatealiases</code> parameter is specified.</li>
-<li><strong><code>setvar</code></strong>: Uses the <code>value</code> parameter to set variables for files or folders.</li>
-<li><strong><code>bom</code></strong>: Uses the <code>name</code> parameter to set the exported bom csv name.</li>
-<li><strong><code>export</code></strong>: Uses the <code>name</code> parameter to set the exported files name pattern.</li>
+<li><strong><a href="RENAME.html"><code>rename</code></a></strong>: Uses the <code>value</code> parameter for renaming files or folders.</li>
+<li><strong><a href="RENAMEFROMSOURCE.html"><code>renamefromsource</code></a></strong>: The new file is evaluated if the <code>evaluatealiases</code> parameter is specified.</li>
+<li><strong><a href="SETVAR.html"><code>setvar</code></a></strong>: Uses the <code>value</code> parameter to set variables for files or folders.</li>
+<li><strong><a href="BOM.html"><code>bom</code></a></strong>: Uses the <code>name</code> parameter to set the exported bom csv name.</li>
+<li><strong><a href="export.html"><code>export</code></a></strong>: Uses the <code>name</code> parameter to set the exported files name pattern.</li>
 </ul>
 <hr>
 <h2 id="placeholders-for-dynamic-substitution">Placeholders for Dynamic Substitution</h2>
@@ -225,7 +225,7 @@ ${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
 <p>In addition to placeholders, you can include other variables by enclosing them in square brackets (e.g., <code>[VariableName]</code>). These variables are dynamically resolved based on the context of the file or folder.</p>
 <hr>
 <h2 id="example-usage">Example Usage</h2>
-<p>Here’s an example of how to use dynamic placeholders in a command:</p>
+<p>Hereâ€™s an example of how to use dynamic placeholders in a command:</p>
 <h3 id="renaming-a-file">Renaming a File</h3>
 <pre><code class="lang-bash">rename -filePath 1.sldprt -value &quot;$fileNameWithoutExtension_$yyyy$mm$dd$extension&quot;
 </code></pre>

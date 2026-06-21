@@ -4,7 +4,7 @@ title: RUNSWMACRO Command | PDMShell | SOLIDWORKS PDM
 ---
 # RUNSWMACRO Command
 ## Description
-The `RunSWMacro` command allows you to execute a SOLIDWORKS macro on a specific file or on multiple files found via search in the PDM vault. This is useful for automating repetitive tasks or applying custom logic to many files.
+The `runswmacro` command allows you to execute a SOLIDWORKS macro on a specific file or on multiple files found via search in the PDM vault. This is useful for automating repetitive tasks or applying custom logic to many files.
 
 
 ## Syntax

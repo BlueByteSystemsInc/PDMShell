@@ -8,9 +8,9 @@ The `SetRevisionCommand` allows you to set the **PDM-managed revision** of a fil
 This command updates the official **PDM Revision** (the value shown on the version tab), *not* the datacard one.
 
 You may set the revision using:
-- **%nextrevision%** — moves the revision forward  
-- **%previousrevision%** — moves the revision backward  
-- **%initial%** — resets to the first revision in the revision scheme  
+- **%nextrevision%** â€” moves the revision forward  
+- **%previousrevision%** â€” moves the revision backward  
+- **%initial%** â€” resets to the first revision in the revision scheme  
 
 You can also use **PDM variables** by enclosing them in brackets:  
 Example: `[Revision]`  
@@ -31,19 +31,19 @@ setrevision -filePath|-search -recursive -value -csv
   Search query in the current folder
 
 - `recursive`  
-  When used with `search`, includes files in subfolders.
+  When used with [`search`](SEARCH.md), includes files in subfolders.
 
 - `value`  
   The revision value to apply.  
   This can be:
   
-  - `%nextrevision%` → increments the PDM revision counter  
-  - `%previousrevision%` → decrements the PDM revision counter  
-  - `%initial%` → resets revision to the scheme’s first value  
-  - `[VariableName]` → evaluates the PDM variable and uses its value  
-  - A literal revision string supported by the vault’s revision scheme  
+  - `%nextrevision%` â†’ increments the PDM revision counter  
+  - `%previousrevision%` â†’ decrements the PDM revision counter  
+  - `%initial%` â†’ resets revision to the schemeâ€™s first value  
+  - `[VariableName]` â†’ evaluates the PDM variable and uses its value  
+  - A literal revision string supported by the vaultâ€™s revision scheme  
 
-- `csv` (only valid with `search`)
+- `csv` (only valid with [`search`](SEARCH.md))
   Save results to a csv file
 
 

@@ -31,13 +31,13 @@ delete [-filePath|-id] -directory -search -recursive -list -csv -destroy
 
 - `csv`: Exports a list of deleted files to a csv. This only works if `list is specified`. 
 
-- `destroy`: If specified, the deleted file will be also destroyed. `-destroy` only affects results from the `search` parameter.
+- `destroy`: If specified, the deleted file will be also destroyed. `-destroy` only affects results from the [`search`](SEARCH.md) parameter.
 
 >[!NOTE]
-> Use the exported csv from -csv with the [recover](RECOVER.html) command.
+> Use the exported csv from -csv with the [recover](RECOVER.md) command.
 
 >[!NOTE]
->  `-destroy` only affects results from the `search` parameter. 
+>  `-destroy` only affects results from the [`search`](SEARCH.md) parameter. 
 
 ## Examples
 Delete files matching a search query:
@@ -46,7 +46,7 @@ delete -search "%.sldprt"
 # delete all parts in the current directory
 ```
 ## Remarks
-- The delete command requires at least one of the following parameters: `filePath`, `dir`, `search`, or `id`.
+- The delete command requires at least one of the following parameters: `filePath`, [`dir`](DIR.md), [`search`](SEARCH.md), or `id`.
 - Use the `recursive` parameter with caution, as it will delete all contents within the specified directory.
 - Ensure you have the necessary permissions to delete files or directories in the PDM system.
 

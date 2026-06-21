@@ -14,7 +14,7 @@ checkin -search -recursive -filePath -comment -Checkinoptions
 - `search`: The search operation to use.
 
 
-- `recursive`: When used with `search`, includes files in subfolders.
+- `recursive`: When used with [`search`](SEARCH.md), includes files in subfolders.
 - `filePath`: The file(s) to be checked in. This is the default parameter.
 
 - `comment`: The comment to add to the check-in. In the visual command builder, the default value is `Checked by PDMShell`.

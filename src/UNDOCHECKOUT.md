@@ -17,7 +17,7 @@ undocheckout [-filePath | -search]
 
 
 
-- `recursive`: When used with `search`, includes files in subfolders.
+- `recursive`: When used with [`search`](SEARCH.md), includes files in subfolders.
 ## Examples
 ```bash
 undocheckout -f "file1.sldprt"

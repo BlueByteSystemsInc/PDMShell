@@ -25,7 +25,7 @@ search -search -recursive -includesubfolders -csv -columns -duplicatesstrategy
 - `duplicatesstrategy`: Defines how duplicate results are resolved when DuplicatedBy is specified in the search query. You must `DuplicatedBy` token in the `search` parameter. 
 
 >[!NOTE]
-> **Special columns**: You can use `FileDate`, `Version`, `State` and `Hash` to list information that is not captured in the datacard. This is useful when searching for duplicates. The hash requires that the file be locally cached. Example:
+> **Special columns**: You can use `FileDate`, [`version`](VERSION.md), `State` and `Hash` to list information that is not captured in the datacard. This is useful when searching for duplicates. The hash requires that the file be locally cached. Example:
 
 ```bash 
 ## lists all duplicates in the current directory by name and prints their file date, hash and revision
@@ -81,7 +81,7 @@ The following strategies are supported for the `-duplicatesstrategy` parameter:
 search -search "Name=%.sld%;Recursive=true;DuplicatedBy=Name" -duplicatesstrategy KeepNewest -columns "FileDate,Hash,Revision"
 ```
 
-![duplicatedby](image.png)
+![duplicatedby](/images/image.png)
 
 
 

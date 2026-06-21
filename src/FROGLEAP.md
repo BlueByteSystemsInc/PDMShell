@@ -20,7 +20,7 @@ frogleap -search -filePath -oldVersion
 frogleap -filePath "file1.sldprt" -oldVersion 2
 ```
 ## Remarks
-- The `search` parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
+- The [`search`](SEARCH.md) parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
 
 ## Tutorial
  <video src="https://bluebyte.biz/wp-content/pdmshellvideos/frogleap.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
