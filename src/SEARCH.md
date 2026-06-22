@@ -81,10 +81,6 @@ The following strategies are supported for the `-duplicatesstrategy` parameter:
 search -search "Name=%.sld%;Recursive=true;DuplicatedBy=Name" -duplicatesstrategy KeepNewest -columns "FileDate,Hash,Revision"
 ```
 
-![duplicatedby](/images/image.png)
-
-
-
 ## Notes
 - Ensure the current directory is set correctly before running the command.
 - Use the `-columns` parameter to customize the output format. Data is pulled from @ for configuration-supported documents.
