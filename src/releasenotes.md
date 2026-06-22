@@ -14,6 +14,7 @@ then **install** the latest version. **Do not update installed version.**
 
 ## 4.0.11 (06/21/2026)
 - Added documentation for the WPF **Expression Evaluator**, including how to safely preview placeholder expressions against a selected PDM file or folder, use `$value`, choose configurations, and test string functions before running commands or scripts.
+- Added an on-demand PDMShell add-in script demo to the **Command menu scripts** documentation, showing how users can launch a rename script from SOLIDWORKS PDM without creating a PDM Task.
 
 ## 4.0.10 (07/18/2026)
 - Added logged-in PDM user profile placeholders: `$username.firstName`, `$username.lastName`, `$username.FullName`, and `$username.email`.

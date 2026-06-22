@@ -39,7 +39,7 @@
     href: addin/permissions.md
   - name: Conditions
     href: addin/conditions.md
-  - name: Command menu scripts
+  - name: On-demand add-in scripts
     href: addin/command-menu.md
   - name: Event trigger points
     href: addin/trigger-points.md

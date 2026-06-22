@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Command menu scripts | PDMShell add-in | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>On-demand add-in scripts | PDMShell add-in | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Command menu scripts | PDMShell add-in | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="On-demand add-in scripts | PDMShell add-in | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Add SOLIDWORKS PDM command menu entries that run PDMShell scripts.">
+      <meta name="description" content="Run PDMShell add-in scripts on demand from SOLIDWORKS PDM command menus.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -85,15 +85,22 @@
         </div>
 
         <article data-uid="">
-<h1 id="command-menu-scripts">Command menu scripts</h1>
+<h1 id="on-demand-add-in-scripts">On-demand add-in scripts</h1>
 
 <p>Enable <strong>Menu</strong> when a script should appear as a right-click PDM command.</p>
+<p>Command menu scripts are on-demand add-in commands. They are not SOLIDWORKS PDM Tasks and they do not have to wait for a workflow transition or event trigger. Administrators configure the script once in the PDMShell add-in, then users launch it when needed from the PDM command menu against the selected file or folder. This is useful for repeatable operations such as file rename automation, metadata cleanup, export helpers, or any workflow where standard Dispatch actions are too limited for the required scripting logic.</p>
 <p>Enter the menu text exactly as it should appear in the menu. Use backslashes to group commands:</p>
 <pre><code class="lang-text">PDMShell\Script 1
 PDMShell\Rename Files
 PDMShell\Engineering\Create PDF
 </code></pre>
 <p>When the user clicks the command, the add-in checks permissions, evaluates conditions, and runs the script against the selected file or folder context.</p>
+<h2 id="video-run-a-script-on-demand">Video: run a script on demand</h2>
+<p>This demo shows how the PDMShell add-in can run a script on demand inside SOLIDWORKS PDM. The example uses file rename scripting to show how custom logic can be launched directly from the PDM environment without creating a PDM Task.</p>
+<div class="ratio ratio-16x9">
+  <iframe src="https://www.youtube.com/embed/S7YZ04am8pI" title="Run PDMShell scripts on demand from SOLIDWORKS PDM" allowfullscreen></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=S7YZ04am8pI">Watch on YouTube</a></p>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>The command menu text is the user-facing label.</li>
