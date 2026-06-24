@@ -947,6 +947,46 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/pdmshell-task-addin.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-task-addin.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-task-command-menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-task-command-menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-task-permissions.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-task-permissions.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-task-script.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-task-script.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell.gif",
       "output": {
         "resource": {
@@ -2031,6 +2071,16 @@
       "output": {
         ".html": {
           "relative_path": "src/addin/script-editor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/addin/tasks.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/addin/tasks.html"
         }
       },
       "version": ""

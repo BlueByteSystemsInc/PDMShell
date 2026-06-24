@@ -85,45 +85,45 @@
         </div>
 
         <article data-uid="">
-<h1 id="bom-command">BOM Command</h1>
+<h1 id="bom-command" sourcefile="src/BOM.md" sourcestartlinenumber="5">BOM Command</h1>
 
-<h2 id="description">Description</h2>
-<p>The <code>BOMCommand</code> allows you to extract a Bill of Materials from a SOLIDWORKS file inside the PDM vault and export it to a CSV file.<br>
-This command supports configuration evaluation using <strong>$configuration</strong>, allows specifying <strong>configNames</strong>, and supports selecting a <strong>layout</strong> from all available BOM layouts.</p>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">bom -filePath -name -directory -search -recursive -configNames -layout
+<h2 id="description" sourcefile="src/BOM.md" sourcestartlinenumber="6">Description</h2>
+<p sourcefile="src/BOM.md" sourcestartlinenumber="7">The <code sourcefile="src/BOM.md" sourcestartlinenumber="7">BOMCommand</code> allows you to extract a Bill of Materials from a SOLIDWORKS file inside the PDM vault and export it to a CSV file.<br>
+This command supports configuration evaluation using <strong sourcefile="src/BOM.md" sourcestartlinenumber="8">$configuration</strong>, allows specifying <strong sourcefile="src/BOM.md" sourcestartlinenumber="8">configNames</strong>, and supports selecting a <strong sourcefile="src/BOM.md" sourcestartlinenumber="8">layout</strong> from all available BOM layouts.</p>
+<h2 id="syntax" sourcefile="src/BOM.md" sourcestartlinenumber="10">Syntax</h2>
+<pre><code class="lang-bash" sourcefile="src/BOM.md" sourcestartlinenumber="11">bom -filePath -name -directory -search -recursive -configNames -layout
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<ul>
-<li><p><code>filePath</code><br>
+<h2 id="parameters" sourcefile="src/BOM.md" sourcestartlinenumber="14">Parameters</h2>
+<ul sourcefile="src/BOM.md" sourcestartlinenumber="15">
+<li sourcefile="src/BOM.md" sourcestartlinenumber="15"><p sourcefile="src/BOM.md" sourcestartlinenumber="15"><code sourcefile="src/BOM.md" sourcestartlinenumber="15">filePath</code><br>
 Path to the SOLIDWORKS file whose BOM you want to export.</p>
 </li>
-<li><p><code>name</code><br>
+<li sourcefile="src/BOM.md" sourcestartlinenumber="18"><p sourcefile="src/BOM.md" sourcestartlinenumber="18"><code sourcefile="src/BOM.md" sourcestartlinenumber="18">name</code><br>
 The base name for the exported CSV file.<br>
-Supports evaluation (e.g., <code>$configuration</code>).<br>
-<a href="EVAL.html">More information here</a>.</p>
+Supports evaluation (e.g., <code sourcefile="src/BOM.md" sourcestartlinenumber="20">$configuration</code>).<br>
+<a href="EVAL.html" sourcefile="src/BOM.md" sourcestartlinenumber="21">More information here</a>.</p>
 </li>
-<li><p><code>directory</code><br>
+<li sourcefile="src/BOM.md" sourcestartlinenumber="23"><p sourcefile="src/BOM.md" sourcestartlinenumber="23"><code sourcefile="src/BOM.md" sourcestartlinenumber="23">directory</code><br>
 Target folder where the CSV will be saved.</p>
 </li>
-<li><p><code>search</code><br>
+<li sourcefile="src/BOM.md" sourcestartlinenumber="27"><p sourcefile="src/BOM.md" sourcestartlinenumber="27"><code sourcefile="src/BOM.md" sourcestartlinenumber="27">search</code><br>
 Search query used to find files in the current directory and run the BOM command on each result.</p>
 </li>
-<li><p><code>recursive</code><br>
-When used with <a href="SEARCH.html"><code>search</code></a>, includes files in subfolders.</p>
+<li sourcefile="src/BOM.md" sourcestartlinenumber="30"><p sourcefile="src/BOM.md" sourcestartlinenumber="30"><code sourcefile="src/BOM.md" sourcestartlinenumber="30">recursive</code><br>
+When used with <a href="SEARCH.html" sourcefile="src/BOM.md" sourcestartlinenumber="31"><code sourcefile="src/BOM.md" sourcestartlinenumber="31">search</code></a>, includes files in subfolders.</p>
 </li>
-<li><p><code>configNames</code><br>
+<li sourcefile="src/BOM.md" sourcestartlinenumber="33"><p sourcefile="src/BOM.md" sourcestartlinenumber="33"><code sourcefile="src/BOM.md" sourcestartlinenumber="33">configNames</code><br>
 Comma-separated list of configurations to extract the BOM from. If unspecified, all configurations are processed.
-Example: <code>@,Default,Manufacturing</code>.</p>
+Example: <code sourcefile="src/BOM.md" sourcestartlinenumber="35">@,Default,Manufacturing</code>.</p>
 </li>
-<li><p><code>layout</code><br>
+<li sourcefile="src/BOM.md" sourcestartlinenumber="37"><p sourcefile="src/BOM.md" sourcestartlinenumber="37"><code sourcefile="src/BOM.md" sourcestartlinenumber="37">layout</code><br>
 A comma-separated list of BOM layout names to export.<br>
-Example: <code>Engineering,Manufacturing</code>.<br>
+Example: <code sourcefile="src/BOM.md" sourcestartlinenumber="39">Engineering,Manufacturing</code>.<br>
 PDMShell validates layout names against PDM before exporting.</p>
 </li>
 </ul>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 2.0.0 or earlier.</p>
+<h2 id="availability" sourcefile="src/BOM.md" sourcestartlinenumber="42">Availability</h2>
+<p sourcefile="src/BOM.md" sourcestartlinenumber="43">Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

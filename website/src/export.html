@@ -85,31 +85,31 @@
         </div>
 
         <article data-uid="">
-<h1 id="export-command">EXPORT Command</h1>
+<h1 id="export-command" sourcefile="src/export.md" sourcestartlinenumber="5">EXPORT Command</h1>
 
-<h2 id="description">Description</h2>
-<p>The <code>ExportCommand</code> allows you to export SOLIDWORKS files from the PDM vault to various formats using SOLIDWORKS. This command supports exporting a single file or multiple files found via search, with options for specifying file extensions, export location, and more.</p>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">export [-search|-filePath] -name -directory -extensions -recursive -version
+<h2 id="description" sourcefile="src/export.md" sourcestartlinenumber="6">Description</h2>
+<p sourcefile="src/export.md" sourcestartlinenumber="7">The <code sourcefile="src/export.md" sourcestartlinenumber="7">ExportCommand</code> allows you to export SOLIDWORKS files from the PDM vault to various formats using SOLIDWORKS. This command supports exporting a single file or multiple files found via search, with options for specifying file extensions, export location, and more.</p>
+<h2 id="syntax" sourcefile="src/export.md" sourcestartlinenumber="10">Syntax</h2>
+<pre><code class="lang-bash" sourcefile="src/export.md" sourcestartlinenumber="11">export [-search|-filePath] -name -directory -extensions -recursive -version
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<p>The export command requires several parameters:</p>
-<ul>
-<li><code>filePath</code>: Path to the file to export (relative or absolute).</li>
-<li><code>name</code>: The base name for the exported file(s). This supports evaluation. More <a href="/src/EVAL.html">information here</a>.</li>
-<li><code>directory</code>: The target folder for exported files.</li>
-<li><code>extensions</code>: Comma-separated list of file extensions to export to (e.g., <code>pdf,dxf</code>).</li>
-<li><code>search</code>: Search query to find files for export.</li>
-<li><code>recursive</code>: If set, search will include subfolders.</li>
-<li><code>timeout</code>: timeout in seconds (for starting SOLIDWORKS only)</li>
-<li><code>version</code>: SOLIDWORKS year version. Example 2023. Default is latest.</li>
+<h2 id="parameters" sourcefile="src/export.md" sourcestartlinenumber="14">Parameters</h2>
+<p sourcefile="src/export.md" sourcestartlinenumber="15">The export command requires several parameters:</p>
+<ul sourcefile="src/export.md" sourcestartlinenumber="17">
+<li sourcefile="src/export.md" sourcestartlinenumber="17"><code sourcefile="src/export.md" sourcestartlinenumber="17">filePath</code>: Path to the file to export (relative or absolute).</li>
+<li sourcefile="src/export.md" sourcestartlinenumber="18"><code sourcefile="src/export.md" sourcestartlinenumber="18">name</code>: The base name for the exported file(s). This supports evaluation. More <a href="/src/EVAL.html" sourcefile="src/export.md" sourcestartlinenumber="18">information here</a>.</li>
+<li sourcefile="src/export.md" sourcestartlinenumber="19"><code sourcefile="src/export.md" sourcestartlinenumber="19">directory</code>: The target folder for exported files.</li>
+<li sourcefile="src/export.md" sourcestartlinenumber="20"><code sourcefile="src/export.md" sourcestartlinenumber="20">extensions</code>: Comma-separated list of file extensions to export to (e.g., <code sourcefile="src/export.md" sourcestartlinenumber="20">pdf,dxf</code>).</li>
+<li sourcefile="src/export.md" sourcestartlinenumber="21"><code sourcefile="src/export.md" sourcestartlinenumber="21">search</code>: Search query to find files for export.</li>
+<li sourcefile="src/export.md" sourcestartlinenumber="22"><code sourcefile="src/export.md" sourcestartlinenumber="22">recursive</code>: If set, search will include subfolders.</li>
+<li sourcefile="src/export.md" sourcestartlinenumber="23"><code sourcefile="src/export.md" sourcestartlinenumber="23">timeout</code>: timeout in seconds (for starting SOLIDWORKS only)</li>
+<li sourcefile="src/export.md" sourcestartlinenumber="24"><code sourcefile="src/export.md" sourcestartlinenumber="24">version</code>: SOLIDWORKS year version. Example 2023. Default is latest.</li>
 </ul>
-<h2 id="examples">Examples</h2>
-<p>Export a file to PDF and DXF in a specific directory using SOLIDWORKS 2023:</p>
-<pre><code class="lang-bash">export -filePath&quot;Designs/part1.sldprt&quot; -name &quot;part1_export&quot; -directory &quot;Exports&quot; -extensions &quot;pdf,dxf&quot; -version 2023
+<h2 id="examples" sourcefile="src/export.md" sourcestartlinenumber="26">Examples</h2>
+<p sourcefile="src/export.md" sourcestartlinenumber="27">Export a file to PDF and DXF in a specific directory using SOLIDWORKS 2023:</p>
+<pre><code class="lang-bash" sourcefile="src/export.md" sourcestartlinenumber="29">export -filePath&quot;Designs/part1.sldprt&quot; -name &quot;part1_export&quot; -directory &quot;Exports&quot; -extensions &quot;pdf,dxf&quot; -version 2023
 </code></pre>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 2.0.0 or earlier.</p>
+<h2 id="availability" sourcefile="src/export.md" sourcestartlinenumber="33">Availability</h2>
+<p sourcefile="src/export.md" sourcestartlinenumber="34">Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

@@ -37,4 +37,5 @@ For more details about script execution, see [RunScript](../RUNSCRIPT.md).
 
 - [Script Editor](script-editor.md)
 - [Command menu scripts](command-menu.md)
+- [PDM Tasks](tasks.md)
 - [Event trigger points](trigger-points.md)

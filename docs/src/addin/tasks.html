@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>PDM Tasks | PDMShell add-in | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="PDM Tasks | PDMShell add-in | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Create SOLIDWORKS PDM Tasks that run PDMShell scripts through the PDMShell add-in.">
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/addin/tasks.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="pdm-tasks">PDM Tasks</h1>
+
+<p>A <strong>SOLIDWORKS PDM Task</strong> can run a PDMShell script through the <strong>PDMShell</strong> task add-in. This lets administrators create task definitions similar to the built-in Convert task, but the task body is a <code>.pdmshell</code> script instead of a fixed conversion script.</p>
+<p>Use a PDMShell task when the automation should run through the PDM task system, appear in the Task List, use task host computers, run from a workflow transition, or process many selected files in the background.</p>
+<h2 id="what-pdmshell-tasks-can-do">What PDMShell tasks can do</h2>
+<p>PDMShell tasks can use the PDMShell command engine to automate vault operations from a PDM task definition.</p>
+<ul>
+<li>Run PDMShell scripts against selected files and folders.</li>
+<li>Use task execution methods and task host computers.</li>
+<li>Run immediately, on a schedule, or from a workflow transition.</li>
+<li>Limit the task to specific file extensions.</li>
+<li>Optionally expose the task in the File Explorer command menu.</li>
+<li>Control which users and groups can launch the task.</li>
+<li>Test scripts against a selected file or folder before saving the task.</li>
+</ul>
+<h2 id="create-a-task">Create a task</h2>
+<p>In the SOLIDWORKS PDM Administration tool, create a task under the <strong>Tasks</strong> node. On the <strong>Add-in</strong> page, select <strong>PDMShell</strong> as the add-in used by the task.</p>
+<p><img src="../../images/pdmshell-task-addin.png" alt="PDMShell task add-in selection"></p>
+<p>The standard PDM task pages still control the task shell:</p>
+<table>
+<thead>
+<tr>
+<th>Page</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add-in</td>
+<td>Selecting the PDMShell task add-in and optional input card</td>
+</tr>
+<tr>
+<td>Execution Method</td>
+<td>Choosing which computers can execute the task</td>
+</tr>
+<tr>
+<td>Scheduling</td>
+<td>Running the task immediately, later, or on a schedule</td>
+</tr>
+<tr>
+<td>Permissions</td>
+<td>Controlling who can see, launch, or administer the task</td>
+</tr>
+<tr>
+<td>Success Notification</td>
+<td>Sending task success messages</td>
+</tr>
+<tr>
+<td>Error Notification</td>
+<td>Sending task failure messages</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pdmshell-script-page">PDMShell Script page</h2>
+<p>The <strong>PDMShell Script</strong> page is the main PDMShell-specific task page. Enter the script that should run when the task starts.</p>
+<p><img src="../../images/pdmshell-task-script.png" alt="PDMShell task script page"></p>
+<p>Use this page to:</p>
+<ul>
+<li>Write or paste the <code>.pdmshell</code> script.</li>
+<li>Open the script in the PDMShell code editor.</li>
+<li>Select the file extensions the task should process, such as <code>sldprt;sldasm;slddrw</code>.</li>
+<li>Enable folder processing with <strong>Also run on folders</strong>.</li>
+<li>Test the task script with a selected folder or file.</li>
+</ul>
+<p>All computers selected in <strong>Execution Method</strong> must have PDMShell installed.</p>
+<h2 id="command-menu-page">Command Menu page</h2>
+<p>Use the <strong>Command Menu</strong> page when users should launch the task from File Explorer.</p>
+<p><img src="../../images/pdmshell-task-command-menu.png" alt="PDMShell task command menu page"></p>
+<p>The command menu name is the label shown to users. Enable <strong>Show Command in File Explorer</strong> when the task should appear in the PDM right-click menu.</p>
+<p>If the task should only run from workflow transitions, scheduled execution, or the Task List, leave the command hidden from File Explorer.</p>
+<h2 id="pdmshell-permissions-page">PDMShell Permissions page</h2>
+<p>The <strong>PDMShell Permissions</strong> page controls which users and groups are permitted to launch the PDMShell task, including from workflow transitions.</p>
+<p><img src="../../images/pdmshell-task-permissions.png" alt="PDMShell task permissions page"></p>
+<p>This page is separate from the standard PDM <strong>Permissions</strong> page. Use both permission pages together:</p>
+<table>
+<thead>
+<tr>
+<th>Permission page</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PDM Permissions</td>
+<td>Standard task visibility, administration, and launch permissions</td>
+</tr>
+<tr>
+<td>PDMShell Permissions</td>
+<td>PDMShell-specific launch permission for this script task</td>
+</tr>
+</tbody>
+</table>
+<p>Start with a small administrator group while testing. Expand access after the script, execution method, and file extension filters have been validated.</p>
+<h2 id="similar-to-the-convert-task">Similar to the Convert task</h2>
+<p>The PDMShell task follows the same task setup pattern users may already know from the SOLIDWORKS PDM Convert task:</p>
+<ol>
+<li>Select the task add-in.</li>
+<li>Choose where the task can execute.</li>
+<li>Configure scheduling and launch permissions.</li>
+<li>Define task-specific options.</li>
+<li>Run the task from File Explorer, workflow transitions, the Task List, or a schedule.</li>
+</ol>
+<p>The difference is that PDMShell task logic is written as a PDMShell script. This makes it useful for custom automation such as metadata cleanup, batch variable updates, file exports, migration helpers, reference maintenance, task chaining, and scripted PDM administration.</p>
+<h2 id="video-demo">Video demo</h2>
+<p>This demo shows a PDMShell task being configured in the PDM task properties dialog.</p>
+<div class="ratio ratio-16x9">
+  <iframe src="https://www.loom.com/embed/8dd02ac8f0fa43a48541b04bc3ef114f" title="Create a PDMShell task in SOLIDWORKS PDM" allowfullscreen></iframe>
+</div>
+<p><a href="https://www.loom.com/share/8dd02ac8f0fa43a48541b04bc3ef114f">Watch on Loom</a></p>
+<h2 id="related-articles">Related articles</h2>
+<ul>
+<li><a href="runtime-execution.html">Runtime execution</a></li>
+<li><a href="command-menu.html">Command menu scripts</a></li>
+<li><a href="trigger-points.html">Event trigger points</a></li>
+<li><a href="../RUNTASK.html">Run a PDM task</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/addin/tasks.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://bluebyte.biz'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

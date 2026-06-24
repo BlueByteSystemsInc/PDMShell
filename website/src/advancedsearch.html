@@ -87,474 +87,474 @@
         <article data-uid="">
 
 
-<div class="alert alert-info">
+<div class="alert alert-info" sourcefile="src/advancedsearch.md" sourcestartlinenumber="6">
 <h5>TLDR;</h5>
-<p>If you use search favorites, use the following search query: <code>-search &quot;Favorite=MY SEARCH FAVORITE NAME&quot;</code> to retrieve the favorite search results and configure your search criteria from the search tool.</p>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="7">If you use search favorites, use the following search query: <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="7">-search &quot;Favorite=MY SEARCH FAVORITE NAME&quot;</code> to retrieve the favorite search results and configure your search criteria from the search tool.</p>
 </div>
-<h1 id="pdmshell-advanced-search-guide">PDMShell Advanced Search Guide</h1>
-<p>PDMShell provides a complete search engine based on PDM's own search. This feature is extremely useful with commands that have a <code>-search</code> parameter.</p>
-<p>This guide explains how the <code>-search</code> parameter works, how to use tokens, variables, operators, and how PDMShell parses and applies search rules.</p>
-<h1 id="wildcards-in-pdmshell-sql-style-pattern-matching">Wildcards in PDMShell (SQL-Style Pattern Matching)</h1>
-<p>PDMShell supports the same wildcard patterns used in SOLIDWORKS PDM and standard SQL-like matching rules. These allow you to control how filenames are matched inside any <code>-search</code> query.</p>
-<table>
+<h1 id="pdmshell-advanced-search-guide" sourcefile="src/advancedsearch.md" sourcestartlinenumber="9">PDMShell Advanced Search Guide</h1>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="11">PDMShell provides a complete search engine based on PDM's own search. This feature is extremely useful with commands that have a <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="11">-search</code> parameter.</p>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="13">This guide explains how the <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="13">-search</code> parameter works, how to use tokens, variables, operators, and how PDMShell parses and applies search rules.</p>
+<h1 id="wildcards-in-pdmshell-sql-style-pattern-matching" sourcefile="src/advancedsearch.md" sourcestartlinenumber="15">Wildcards in PDMShell (SQL-Style Pattern Matching)</h1>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="17">PDMShell supports the same wildcard patterns used in SOLIDWORKS PDM and standard SQL-like matching rules. These allow you to control how filenames are matched inside any <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="17">-search</code> query.</p>
+<table sourcefile="src/advancedsearch.md" sourcestartlinenumber="19">
 <thead>
-<tr>
-<th>Wildcard</th>
-<th>Meaning</th>
-<th>Example</th>
-<th>Result</th>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="19">
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="19">Wildcard</th>
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="19">Meaning</th>
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="19">Example</th>
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="19">Result</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>%</code></td>
-<td>Matches <strong>zero or more characters</strong></td>
-<td><code>%.sldprt</code></td>
-<td>Returns all part files</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="21">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="21"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="21">%</code></td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="21">Matches <strong sourcefile="src/advancedsearch.md" sourcestartlinenumber="21">zero or more characters</strong></td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="21"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="21">%.sldprt</code></td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="21">Returns all part files</td>
 </tr>
-<tr>
-<td><code>_</code></td>
-<td>Matches <strong>exactly one character</strong></td>
-<td><code>pump_.sldprt</code></td>
-<td>Matches <code>pump1.sldprt</code>, <code>pumpA.sldprt</code>, <strong>not</strong> <code>pump10.sldprt</code></td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="22">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="22"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="22">_</code></td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="22">Matches <strong sourcefile="src/advancedsearch.md" sourcestartlinenumber="22">exactly one character</strong></td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="22"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="22">pump_.sldprt</code></td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="22">Matches <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="22">pump1.sldprt</code>, <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="22">pumpA.sldprt</code>, <strong sourcefile="src/advancedsearch.md" sourcestartlinenumber="22">not</strong> <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="22">pump10.sldprt</code></td>
 </tr>
 </tbody>
 </table>
-<h2 id="1-overview">1. Overview</h2>
-<p>The <code>-search</code> parameter accepts simple text queries or advanced multi-condition expressions that filter files and folders using PDM system tokens and variable values.</p>
-<h2 id="2-simple-searches">2. Simple Searches</h2>
-<p>If no operators are present, the entire input is treated as a Name filter.</p>
-<p>Examples:</p>
-<pre><code class="lang-bash">pump.sldprt     # Searches for files explicitly named pump.sldprt
+<h2 id="1-overview" sourcefile="src/advancedsearch.md" sourcestartlinenumber="25">1. Overview</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="27">The <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="27">-search</code> parameter accepts simple text queries or advanced multi-condition expressions that filter files and folders using PDM system tokens and variable values.</p>
+<h2 id="2-simple-searches" sourcefile="src/advancedsearch.md" sourcestartlinenumber="29">2. Simple Searches</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="31">If no operators are present, the entire input is treated as a Name filter.</p>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="33">Examples:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="34">pump.sldprt     # Searches for files explicitly named pump.sldprt
 assembly_1001   # Searches for any file whose name contains 'assembly_1001'
 %.sldasm        # Searches for all SOLIDWORKS assembly files in the current folder
 
 </code></pre>
-<p>Equivalent to:</p>
-<pre><code class="lang-bash">Name=pump.sldprt
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="40">Equivalent to:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="42">Name=pump.sldprt
 Name=passembly_1001
 Name=%.sldasm  
 </code></pre>
-<h2 id="3-advanced-syntax">3. Advanced Syntax</h2>
-<p>Multiple conditions are separated using semicolons.</p>
-<p>Example:</p>
-<pre><code class="lang-bash">Name=%Pump%;Recursive=true;VersionsBefore=20200101   # Finds files with 'Pump' in the name, searches subfolders, and only returns versions created before Jan 1st 2020
+<h2 id="3-advanced-syntax" sourcefile="src/advancedsearch.md" sourcestartlinenumber="50">3. Advanced Syntax</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="52">Multiple conditions are separated using semicolons.</p>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="54">Example:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="56">Name=%Pump%;Recursive=true;VersionsBefore=20200101   # Finds files with 'Pump' in the name, searches subfolders, and only returns versions created before Jan 1st 2020
 </code></pre>
-<div class="NOTE">
+<div class="NOTE" sourcefile="src/advancedsearch.md" sourcestartlinenumber="59">
 <h5>Note</h5>
-<p>Dates must follow the <code>yyyMMdd</code> format.</p>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="60">Dates must follow the <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="60">yyyMMdd</code> format.</p>
 </div>
-<p>Escaping rules:</p>
-<pre><code class="lang-bash">\; inserts a semicolon  
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="62">Escaping rules:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="63">\; inserts a semicolon  
 \= inserts an equals sign  
 \\ inserts a literal backslash
 </code></pre>
-<p>Example:</p>
-<pre><code class="lang-bash">Name=Valve\=A;Label=Released\;Approved   # Searches for files literally named &quot;Valve=A&quot; and having a label containing the text &quot;Released;Approved&quot;
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="69">Example:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="71">Name=Valve\=A;Label=Released\;Approved   # Searches for files literally named &quot;Valve=A&quot; and having a label containing the text &quot;Released;Approved&quot;
 </code></pre>
-<h2 id="4-built-in-search-tokens">4. Built-in Search Tokens</h2>
-<p>These tokens map directly to EdmSearchToken values and control how PDMShell filters PDM objects.</p>
-<h3 id="table-supported-search-tokens">Table: Supported Search Tokens</h3>
-<table>
+<h2 id="4-built-in-search-tokens" sourcefile="src/advancedsearch.md" sourcestartlinenumber="75">4. Built-in Search Tokens</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="77">These tokens map directly to EdmSearchToken values and control how PDMShell filters PDM objects.</p>
+<h3 id="table-supported-search-tokens" sourcefile="src/advancedsearch.md" sourcestartlinenumber="79">Table: Supported Search Tokens</h3>
+<table sourcefile="src/advancedsearch.md" sourcestartlinenumber="81">
 <thead>
-<tr>
-<th>Token</th>
-<th>Description</th>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="81">
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="81">Token</th>
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="81">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Name</td>
-<td>File or folder name filter</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="83">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="83">Name</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="83">File or folder name filter</td>
 </tr>
-<tr>
-<td>AllVersions</td>
-<td>Search all versions</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="84">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="84">AllVersions</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="84">Search all versions</td>
 </tr>
-<tr>
-<td>ContentText</td>
-<td>Full-text content search string</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="85">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="85">ContentText</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="85">Full-text content search string</td>
 </tr>
-<tr>
-<td>ContentTextExact</td>
-<td>Exact match of content</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="86">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="86">ContentTextExact</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="86">Exact match of content</td>
 </tr>
-<tr>
-<td>ContentTextInBody</td>
-<td>Search inside file body</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="87">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="87">ContentTextInBody</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="87">Search inside file body</td>
 </tr>
-<tr>
-<td>ContentTextInProperties</td>
-<td>Search in custom properties</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="88">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="88">ContentTextInProperties</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="88">Search in custom properties</td>
 </tr>
-<tr>
-<td>ContentTextOr</td>
-<td>Match any word</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="89">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="89">ContentTextOr</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="89">Match any word</td>
 </tr>
-<tr>
-<td>FindFiles</td>
-<td>Include files in results</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="90">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="90">FindFiles</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="90">Include files in results</td>
 </tr>
-<tr>
-<td>FindFolders</td>
-<td>Include folders in results</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="91">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="91">FindFolders</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="91">Include folders in results</td>
 </tr>
-<tr>
-<td>FindItems</td>
-<td>Include items in results</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="92">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="92">FindItems</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="92">Include items in results</td>
 </tr>
-<tr>
-<td>FolderID</td>
-<td>Starting folder ID</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="93">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="93">FolderID</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="93">Starting folder ID</td>
 </tr>
-<tr>
-<td>HistoryAfter</td>
-<td>Search history after date</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="94">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="94">HistoryAfter</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="94">Search history after date</td>
 </tr>
-<tr>
-<td>HistoryBefore</td>
-<td>Search history before date</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="95">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="95">HistoryBefore</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="95">Search history before date</td>
 </tr>
-<tr>
-<td>HistoryString</td>
-<td>History string search</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="96">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="96">HistoryString</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="96">History string search</td>
 </tr>
-<tr>
-<td>HistoryStringConfiguration</td>
-<td>Search configuration names</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="97">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="97">HistoryStringConfiguration</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="97">Search configuration names</td>
 </tr>
-<tr>
-<td>HistoryStringFileName</td>
-<td>Search file names in history</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="98">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="98">HistoryStringFileName</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="98">Search file names in history</td>
 </tr>
-<tr>
-<td>HistoryStringLabels</td>
-<td>Search labels in history</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="99">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="99">HistoryStringLabels</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="99">Search labels in history</td>
 </tr>
-<tr>
-<td>HistoryStringRevisionComment</td>
-<td>Search revision comments</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="100">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="100">HistoryStringRevisionComment</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="100">Search revision comments</td>
 </tr>
-<tr>
-<td>HistoryStringStateComment</td>
-<td>Search state change comments</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="101">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="101">HistoryStringStateComment</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="101">Search state change comments</td>
 </tr>
-<tr>
-<td>HistoryStringVariableValues</td>
-<td>Search variable changes</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="102">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="102">HistoryStringVariableValues</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="102">Search variable changes</td>
 </tr>
-<tr>
-<td>HistoryStringVersionComment</td>
-<td>Search version comments</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="103">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="103">HistoryStringVersionComment</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="103">Search version comments</td>
 </tr>
-<tr>
-<td>Label</td>
-<td>Search label text</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="104">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="104">Label</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="104">Search label text</td>
 </tr>
-<tr>
-<td>LabelAfter</td>
-<td>Labels after date</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="105">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="105">LabelAfter</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="105">Labels after date</td>
 </tr>
-<tr>
-<td>LabelBefore</td>
-<td>Labels before date</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="106">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="106">LabelBefore</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="106">Labels before date</td>
 </tr>
-<tr>
-<td>LabelByUser</td>
-<td>Labels created by user</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="107">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="107">LabelByUser</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="107">Labels created by user</td>
 </tr>
-<tr>
-<td>LabelComment</td>
-<td>Search label comment</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="108">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="108">LabelComment</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="108">Search label comment</td>
 </tr>
-<tr>
-<td>Locked</td>
-<td>Return checked-out files</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="109">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="109">Locked</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="109">Return checked-out files</td>
 </tr>
-<tr>
-<td>LockedBy</td>
-<td>Return files locked by user</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="110">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="110">LockedBy</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="110">Return files locked by user</td>
 </tr>
-<tr>
-<td>Recursive</td>
-<td>Include subfolders</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="111">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="111">Recursive</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="111">Include subfolders</td>
 </tr>
-<tr>
-<td>StateAfter</td>
-<td>State changes after date</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="112">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="112">StateAfter</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="112">State changes after date</td>
 </tr>
-<tr>
-<td>StateBefore</td>
-<td>State changes before date</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="113">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="113">StateBefore</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="113">State changes before date</td>
 </tr>
-<tr>
-<td>StateByUser</td>
-<td>User who changed state</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="114">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="114">StateByUser</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="114">User who changed state</td>
 </tr>
-<tr>
-<td>StateHistoric</td>
-<td>Search historic states</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="115">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="115">StateHistoric</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="115">Search historic states</td>
 </tr>
-<tr>
-<td>StateID</td>
-<td>Workflow state ID</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="116">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="116">StateID</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="116">Workflow state ID</td>
 </tr>
-<tr>
-<td>StateName</td>
-<td>Workflow state name</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="117">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="117">StateName</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="117">Workflow state name</td>
 </tr>
-<tr>
-<td>Unlocked</td>
-<td>Return checked-in files</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="118">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="118">Unlocked</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="118">Return checked-in files</td>
 </tr>
-<tr>
-<td>VersionComment</td>
-<td>Search version comment</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="119">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="119">VersionComment</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="119">Search version comment</td>
 </tr>
-<tr>
-<td>VersionsAfter</td>
-<td>Versions after date</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="120">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="120">VersionsAfter</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="120">Versions after date</td>
 </tr>
-<tr>
-<td>VersionsBefore</td>
-<td>Versions before date</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="121">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="121">VersionsBefore</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="121">Versions before date</td>
 </tr>
-<tr>
-<td>VersionsByUser</td>
-<td>Versions created by user</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="122">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="122">VersionsByUser</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="122">Versions created by user</td>
 </tr>
-<tr>
-<td>WorkflowName</td>
-<td>Search by workflow name</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="123">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="123">WorkflowName</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="123">Search by workflow name</td>
 </tr>
-<tr>
-<td><strong>DuplicatedBy</strong></td>
-<td><strong>Finds duplicates either by name, variables, hash and filedate</strong></td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="124">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="124"><strong sourcefile="src/advancedsearch.md" sourcestartlinenumber="124">DuplicatedBy</strong></td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="124"><strong sourcefile="src/advancedsearch.md" sourcestartlinenumber="124">Finds duplicates either by name, variables, hash and filedate</strong></td>
 </tr>
-<tr>
-<td><strong>Edit</strong></td>
-<td><strong>Performs a checkout and a check-in on the search results. Only use with <code>export</code> and <code>runswmacro</code> commands.</strong></td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="125">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="125"><strong sourcefile="src/advancedsearch.md" sourcestartlinenumber="125">Edit</strong></td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="125"><strong sourcefile="src/advancedsearch.md" sourcestartlinenumber="125">Performs a checkout and a check-in on the search results. Only use with <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="125">export</code> and <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="125">runswmacro</code> commands.</strong></td>
 </tr>
-<tr>
-<td><strong>Favorite</strong></td>
-<td><strong>Use search favorite.</strong></td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="126">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="126"><strong sourcefile="src/advancedsearch.md" sourcestartlinenumber="126">Favorite</strong></td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="126"><strong sourcefile="src/advancedsearch.md" sourcestartlinenumber="126">Use search favorite.</strong></td>
 </tr>
 </tbody>
 </table>
-<h4 id="edit">Edit</h4>
-<p>Use the <code>edit</code> token to check out and check-in the search results with the <a href="export.html"><code>export</code></a> and <a href="runswmacro.html"><code>runswmacro</code></a>'s <code>-search</code> parameter. If specify <code>Edit=Force</code>, the check-in process will be forced.</p>
-<pre><code class="lang-bash"># run rebuild macro on all parts in the current directory and force a check out and checkout using SOLIDWORKS 2023
+<h4 id="edit" sourcefile="src/advancedsearch.md" sourcestartlinenumber="127">Edit</h4>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="129">Use the <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="129">edit</code> token to check out and check-in the search results with the <a href="export.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="129"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="129">export</code></a> and <a href="runswmacro.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="129"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="129">runswmacro</code></a>'s <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="129">-search</code> parameter. If specify <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="129">Edit=Force</code>, the check-in process will be forced.</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="131"># run rebuild macro on all parts in the current directory and force a check out and checkout using SOLIDWORKS 2023
 runswmacro -search &quot;Name=%.sldprt;Edit=Force&quot; -filePath rebuild.swp -timeout 500 -version 2023
 </code></pre>
-<h4 id="duplicates">Duplicates</h4>
-<p>You can use <code>DuplicatedBy</code> to list the items either filename, variable, ash or last date the file was modified. To use the hash, files must be locally cached.</p>
-<pre><code class="lang-bash"># finds all solidworks duplicate solidworks files by name and list their file date, hash and revision variable
+<h4 id="duplicates" sourcefile="src/advancedsearch.md" sourcestartlinenumber="136">Duplicates</h4>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="138">You can use <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="138">DuplicatedBy</code> to list the items either filename, variable, ash or last date the file was modified. To use the hash, files must be locally cached.</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="141"># finds all solidworks duplicate solidworks files by name and list their file date, hash and revision variable
 search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns &quot;FileDate,Hash,Revision&quot;
 </code></pre>
-<pre><code class="lang-bash"># finds all solidworks duplicate solidworks files by revision and list their file date, hash and revision variable
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="147"># finds all solidworks duplicate solidworks files by revision and list their file date, hash and revision variable
 search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=@Revision&quot; -columns &quot;FileDate,Hash,Revision&quot;
 </code></pre>
-<h2 id="5-default-behavior">5. Default Behavior</h2>
-<p><code>FolderID</code> defaults to the active directory.<br>
-<code>Recursive</code> defaults to the global flag.<br>
-<code>FindFolders</code> defaults to the includefolders flag.<br>
-<code>FindFiles</code> is always true.</p>
-<h2 id="6-variable-search">6. Variable Search</h2>
-<p>Conditions beginning with @ use PDM variables.</p>
-<p>Format:</p>
-<pre><code class="lang-bash">@VariableName Operator Value
+<h2 id="5-default-behavior" sourcefile="src/advancedsearch.md" sourcestartlinenumber="152">5. Default Behavior</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="154"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="154">FolderID</code> defaults to the active directory.<br>
+<code sourcefile="src/advancedsearch.md" sourcestartlinenumber="155">Recursive</code> defaults to the global flag.<br>
+<code sourcefile="src/advancedsearch.md" sourcestartlinenumber="156">FindFolders</code> defaults to the includefolders flag.<br>
+<code sourcefile="src/advancedsearch.md" sourcestartlinenumber="157">FindFiles</code> is always true.</p>
+<h2 id="6-variable-search" sourcefile="src/advancedsearch.md" sourcestartlinenumber="159">6. Variable Search</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="161">Conditions beginning with @ use PDM variables.</p>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="163">Format:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="164">@VariableName Operator Value
 </code></pre>
-<p>Examples:</p>
-<pre><code class="lang-bash">@Description=Pump      # Variable 'Description' must equal &quot;Pump&quot;
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="168">Examples:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="169">@Description=Pump      # Variable 'Description' must equal &quot;Pump&quot;
 @Weight&gt;=10            # Numeric variable 'Weight' must be greater than or equal to 10
 @Revision!=A           # Variable 'Revision' must NOT be &quot;A&quot;
 @Material~Steel        # Variable 'Material' must contain the text &quot;Steel&quot;
 @ProjectCode!~TEST     # Variable 'ProjectCode' must NOT contain the text &quot;TEST&quot;
 </code></pre>
-<p>You can chain mutiple variables. The chain of variables uses the AND operator:</p>
-<pre><code class="lang-bash">@Description=Pump.sldprt;@Weight&gt;=10      # Part files named pump that have weight above 10
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="177">You can chain mutiple variables. The chain of variables uses the AND operator:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="179">@Description=Pump.sldprt;@Weight&gt;=10      # Part files named pump that have weight above 10
 </code></pre>
-<h2 id="7-supported-variable-operators">7. Supported Variable Operators</h2>
-<p>PDMShell supports all major comparison operators for variables.</p>
-<h3 id="table-supported-operators">Table: Supported Operators</h3>
-<table>
+<h2 id="7-supported-variable-operators" sourcefile="src/advancedsearch.md" sourcestartlinenumber="184">7. Supported Variable Operators</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="186">PDMShell supports all major comparison operators for variables.</p>
+<h3 id="table-supported-operators" sourcefile="src/advancedsearch.md" sourcestartlinenumber="188">Table: Supported Operators</h3>
+<table sourcefile="src/advancedsearch.md" sourcestartlinenumber="190">
 <thead>
-<tr>
-<th>Symbol</th>
-<th>Meaning</th>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="190">
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="190">Symbol</th>
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="190">Meaning</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>=</td>
-<td>Equal</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="192">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="192">=</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="192">Equal</td>
 </tr>
-<tr>
-<td>!=</td>
-<td>Not equal</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="193">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="193">!=</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="193">Not equal</td>
 </tr>
-<tr>
-<td>&lt;&gt;</td>
-<td>Not equal</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="194">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="194">&lt;&gt;</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="194">Not equal</td>
 </tr>
-<tr>
-<td>&gt;</td>
-<td>Greater than</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="195">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="195">&gt;</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="195">Greater than</td>
 </tr>
-<tr>
-<td>&lt;</td>
-<td>Less than</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="196">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="196">&lt;</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="196">Less than</td>
 </tr>
-<tr>
-<td>&gt;=</td>
-<td>Greater or equal</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="197">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="197">&gt;=</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="197">Greater or equal</td>
 </tr>
-<tr>
-<td>&lt;=</td>
-<td>Less or equal</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="198">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="198">&lt;=</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="198">Less or equal</td>
 </tr>
-<tr>
-<td>~</td>
-<td>Contains</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="199">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="199">~</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="199">Contains</td>
 </tr>
-<tr>
-<td>!~</td>
-<td>Does not contain</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="200">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="200">!~</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="200">Does not contain</td>
 </tr>
 </tbody>
 </table>
-<h2 id="8-variable-operator-to-enum-mapping">8. Variable Operator-to-Enum Mapping</h2>
-<h3 id="table-string-variable-operator-mapping">Table: String Variable Operator Mapping</h3>
-<table>
+<h2 id="8-variable-operator-to-enum-mapping" sourcefile="src/advancedsearch.md" sourcestartlinenumber="202">8. Variable Operator-to-Enum Mapping</h2>
+<h3 id="table-string-variable-operator-mapping" sourcefile="src/advancedsearch.md" sourcestartlinenumber="204">Table: String Variable Operator Mapping</h3>
+<table sourcefile="src/advancedsearch.md" sourcestartlinenumber="206">
 <thead>
-<tr>
-<th>Symbol</th>
-<th>Enum</th>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="206">
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="206">Symbol</th>
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="206">Enum</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>=</td>
-<td>Equals</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="208">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="208">=</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="208">Equals</td>
 </tr>
-<tr>
-<td>!= / &lt;&gt;</td>
-<td>Different</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="209">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="209">!= / &lt;&gt;</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="209">Different</td>
 </tr>
-<tr>
-<td>&gt;</td>
-<td>Greater</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="210">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="210">&gt;</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="210">Greater</td>
 </tr>
-<tr>
-<td>&lt;</td>
-<td>Less</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="211">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="211">&lt;</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="211">Less</td>
 </tr>
-<tr>
-<td>&gt;=</td>
-<td>Greater or equal</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="212">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="212">&gt;=</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="212">Greater or equal</td>
 </tr>
-<tr>
-<td>&lt;=</td>
-<td>Less or equal</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="213">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="213">&lt;=</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="213">Less or equal</td>
 </tr>
-<tr>
-<td>~</td>
-<td>Contains</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="214">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="214">~</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="214">Contains</td>
 </tr>
-<tr>
-<td>!~</td>
-<td>Not contains</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="215">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="215">!~</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="215">Not contains</td>
 </tr>
 </tbody>
 </table>
-<h3 id="numeric-and-date-types-use-the-corresponding-numericdate-enum-sets">Numeric and date types use the corresponding numeric/date enum sets.</h3>
-<p>Dates must be in the format: yyyyMMdd</p>
-<h2 id="9-operator-detection">9. Operator Detection</h2>
-<p>Operators are detected longest-first to avoid ambiguity.</p>
-<h3 id="table-operator-detection-order">Table: Operator Detection Order</h3>
-<table>
+<h3 id="numeric-and-date-types-use-the-corresponding-numericdate-enum-sets" sourcefile="src/advancedsearch.md" sourcestartlinenumber="217">Numeric and date types use the corresponding numeric/date enum sets.</h3>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="219">Dates must be in the format: yyyyMMdd</p>
+<h2 id="9-operator-detection" sourcefile="src/advancedsearch.md" sourcestartlinenumber="221">9. Operator Detection</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="223">Operators are detected longest-first to avoid ambiguity.</p>
+<h3 id="table-operator-detection-order" sourcefile="src/advancedsearch.md" sourcestartlinenumber="225">Table: Operator Detection Order</h3>
+<table sourcefile="src/advancedsearch.md" sourcestartlinenumber="227">
 <thead>
-<tr>
-<th>Order</th>
-<th>Operator</th>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="227">
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="227">Order</th>
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="227">Operator</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>1</td>
-<td>&gt;=</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="229">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="229">1</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="229">&gt;=</td>
 </tr>
-<tr>
-<td>2</td>
-<td>&lt;=</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="230">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="230">2</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="230">&lt;=</td>
 </tr>
-<tr>
-<td>3</td>
-<td>!=</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="231">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="231">3</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="231">!=</td>
 </tr>
-<tr>
-<td>4</td>
-<td>&lt;&gt;</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="232">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="232">4</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="232">&lt;&gt;</td>
 </tr>
-<tr>
-<td>5</td>
-<td>!~</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="233">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="233">5</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="233">!~</td>
 </tr>
-<tr>
-<td>6</td>
-<td>~</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="234">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="234">6</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="234">~</td>
 </tr>
-<tr>
-<td>7</td>
-<td>&gt;</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="235">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="235">7</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="235">&gt;</td>
 </tr>
-<tr>
-<td>8</td>
-<td>&lt;</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="236">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="236">8</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="236">&lt;</td>
 </tr>
-<tr>
-<td>9</td>
-<td>=</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="237">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="237">9</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="237">=</td>
 </tr>
 </tbody>
 </table>
-<p>This ensures &gt;= is not incorrectly parsed as &gt;.</p>
-<h2 id="10-combining-tokens-and-variables">10. Combining Tokens and Variables</h2>
-<p>Tokens and variable conditions can be mixed:</p>
-<pre><code class="lang-bash">Name=%Pump%;@Description~Steel;StateName=Released;@Weight&gt;=5   # Files with names containing 'Pump', description containing 'Steel', state equal to Released, and weight &gt;= 5
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="239">This ensures &gt;= is not incorrectly parsed as &gt;.</p>
+<h2 id="10-combining-tokens-and-variables" sourcefile="src/advancedsearch.md" sourcestartlinenumber="241">10. Combining Tokens and Variables</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="243">Tokens and variable conditions can be mixed:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="245">Name=%Pump%;@Description~Steel;StateName=Released;@Weight&gt;=5   # Files with names containing 'Pump', description containing 'Steel', state equal to Released, and weight &gt;= 5
 </code></pre>
-<p>All conditions must match.</p>
-<h2 id="11-invalid-input-handling">11. Invalid Input Handling</h2>
-<p>Invalid expressions are ignored silently. PDMShell continues applying valid conditions.</p>
-<p>Examples ignored:</p>
-<pre><code class="lang-bash">@MissingVar=Test  
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="249">All conditions must match.</p>
+<h2 id="11-invalid-input-handling" sourcefile="src/advancedsearch.md" sourcestartlinenumber="251">11. Invalid Input Handling</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="253">Invalid expressions are ignored silently. PDMShell continues applying valid conditions.</p>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="255">Examples ignored:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="256">@MissingVar=Test  
 HistoryBefore=BADDATE  
 UnknownKey=Value  
 </code></pre>
-<h2 id="12-examples">12. Examples</h2>
-<p>Search by name:</p>
-<pre><code class="lang-bash">Name=%Valve%
+<h2 id="12-examples" sourcefile="src/advancedsearch.md" sourcestartlinenumber="262">12. Examples</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="264">Search by name:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="265">Name=%Valve%
 # Finds all files whose name contains 'Valve'
 </code></pre>
-<p>Search by folder:</p>
-<pre><code class="lang-bash">Name=%Valve%;FolderID=102          
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="270">Search by folder:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="271">Name=%Valve%;FolderID=102          
 # Same search, but restricted to folder with ID 102
 </code></pre>
-<p>Variable contains:</p>
-<pre><code class="lang-bash">@Description~Pump                
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="276">Variable contains:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="277">@Description~Pump                
 # Matches files where Description contains the text 'Pump'
 </code></pre>
-<p>Token and variable together:</p>
-<pre><code class="lang-bash">StateName=Approved;@Revision!=A  
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="282">Token and variable together:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="283">StateName=Approved;@Revision!=A  
 # Files in state 'Approved' AND Revision variable not equal to 'A'
 </code></pre>
-<p>More complex:</p>
-<pre><code class="lang-bash">Name=%Pump%;@Material~Steel;@Weight&gt;=15;Recursive=true;VersionsBefore=20200101
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="288">More complex:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="289">Name=%Pump%;@Material~Steel;@Weight&gt;=15;Recursive=true;VersionsBefore=20200101
 # Files with 'Pump' in the name, Material containing 'Steel', Weight &gt;= 15,
 # include subfolders, and versions created before Jan 1st 2020
 </code></pre>
-<h2 id="13-technical-support">13. Technical support</h2>
-<p>Please reach out to us if you have a premium license or considering getting one from our contact <a href="https://bluebyte.biz/contact">page</a> on our main website.</p>
+<h2 id="13-technical-support" sourcefile="src/advancedsearch.md" sourcestartlinenumber="294">13. Technical support</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="296">Please reach out to us if you have a premium license or considering getting one from our contact <a href="https://bluebyte.biz/contact" sourcefile="src/advancedsearch.md" sourcestartlinenumber="296">page</a> on our main website.</p>
 
 </article>
 

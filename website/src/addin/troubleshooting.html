@@ -85,55 +85,55 @@
         </div>
 
         <article data-uid="">
-<h1 id="testing-and-troubleshooting">Testing and troubleshooting</h1>
+<h1 id="testing-and-troubleshooting" sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="5">Testing and troubleshooting</h1>
 
-<p>Test every add-in script with a small set of files before enabling it for production users.</p>
-<h2 id="recommended-test-workflow">Recommended test workflow</h2>
-<ol>
-<li>Build and test the <code>.pdmshell</code> script outside the add-in.</li>
-<li>Add the script in the Script Editor.</li>
-<li>Enable <strong>Always show condition test message</strong> while validating conditions.</li>
-<li>Configure permissions for a small administrator group.</li>
-<li>Enable a command menu or trigger point.</li>
-<li>Test against known files and folders.</li>
-<li>Expand permissions after the automation behaves as expected.</li>
+<p sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="7">Test every add-in script with a small set of files before enabling it for production users.</p>
+<h2 id="recommended-test-workflow" sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="9">Recommended test workflow</h2>
+<ol sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="11">
+<li sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="11">Build and test the <code sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="11">.pdmshell</code> script outside the add-in.</li>
+<li sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="12">Add the script in the Script Editor.</li>
+<li sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="13">Enable <strong sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="13">Always show condition test message</strong> while validating conditions.</li>
+<li sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="14">Configure permissions for a small administrator group.</li>
+<li sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="15">Enable a command menu or trigger point.</li>
+<li sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="16">Test against known files and folders.</li>
+<li sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="17">Expand permissions after the automation behaves as expected.</li>
 </ol>
-<h2 id="common-issues">Common issues</h2>
-<table>
+<h2 id="common-issues" sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="19">Common issues</h2>
+<table sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="21">
 <thead>
-<tr>
-<th>Symptom</th>
-<th>What to check</th>
+<tr sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="21">
+<th sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="21">Symptom</th>
+<th sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="21">What to check</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Menu command does not appear</td>
-<td>Confirm the script is enabled, <strong>Menu</strong> is enabled, command menu text is not empty, and the current user passes permissions.</td>
+<tr sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="23">
+<td sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="23">Menu command does not appear</td>
+<td sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="23">Confirm the script is enabled, <strong sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="23">Menu</strong> is enabled, command menu text is not empty, and the current user passes permissions.</td>
 </tr>
-<tr>
-<td>Script does not run from a trigger</td>
-<td>Confirm the trigger point is selected and the add-in was reloaded after changing trigger configuration.</td>
+<tr sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="24">
+<td sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="24">Script does not run from a trigger</td>
+<td sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="24">Confirm the trigger point is selected and the add-in was reloaded after changing trigger configuration.</td>
 </tr>
-<tr>
-<td>Conditions do not match</td>
-<td>Enable the condition test message and verify the resolved placeholder and variable values.</td>
+<tr sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="25">
+<td sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="25">Conditions do not match</td>
+<td sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="25">Enable the condition test message and verify the resolved placeholder and variable values.</td>
 </tr>
-<tr>
-<td>PDMShell editor does not open</td>
-<td>Confirm <code>pdmcli.exe</code> is installed and available in the expected PDMShell installation path.</td>
+<tr sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="26">
+<td sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="26">PDMShell editor does not open</td>
+<td sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="26">Confirm <code sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="26">pdmcli.exe</code> is installed and available in the expected PDMShell installation path.</td>
 </tr>
-<tr>
-<td>Script runs against the wrong item</td>
-<td>Check the PDM command context and whether the event supplies files, folders, or command-only data.</td>
+<tr sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="27">
+<td sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="27">Script runs against the wrong item</td>
+<td sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="27">Check the PDM command context and whether the event supplies files, folders, or command-only data.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="related-articles">Related articles</h2>
-<ul>
-<li><a href="conditions.html">Conditions</a></li>
-<li><a href="placeholders.html">Placeholders and command context</a></li>
-<li><a href="runtime-execution.html">Runtime execution</a></li>
+<h2 id="related-articles" sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="29">Related articles</h2>
+<ul sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="31">
+<li sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="31"><a href="conditions.html" sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="31">Conditions</a></li>
+<li sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="32"><a href="placeholders.html" sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="32">Placeholders and command context</a></li>
+<li sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="33"><a href="runtime-execution.html" sourcefile="src/addin/troubleshooting.md" sourcestartlinenumber="33">Runtime execution</a></li>
 </ul>
 
 </article>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>PDM Tasks | PDMShell add-in | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="PDM Tasks | PDMShell add-in | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Create SOLIDWORKS PDM Tasks that run PDMShell scripts through the PDMShell add-in.">
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/addin/tasks.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="pdm-tasks" sourcefile="src/addin/tasks.md" sourcestartlinenumber="5">PDM Tasks</h1>
+
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="7">A <strong sourcefile="src/addin/tasks.md" sourcestartlinenumber="7">SOLIDWORKS PDM Task</strong> can run a PDMShell script through the <strong sourcefile="src/addin/tasks.md" sourcestartlinenumber="7">PDMShell</strong> task add-in. This lets administrators create task definitions similar to the built-in Convert task, but the task body is a <code sourcefile="src/addin/tasks.md" sourcestartlinenumber="7">.pdmshell</code> script instead of a fixed conversion script.</p>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="9">Use a PDMShell task when the automation should run through the PDM task system, appear in the Task List, use task host computers, run from a workflow transition, or process many selected files in the background.</p>
+<h2 id="what-pdmshell-tasks-can-do" sourcefile="src/addin/tasks.md" sourcestartlinenumber="11">What PDMShell tasks can do</h2>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="13">PDMShell tasks can use the PDMShell command engine to automate vault operations from a PDM task definition.</p>
+<ul sourcefile="src/addin/tasks.md" sourcestartlinenumber="15">
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="15">Run PDMShell scripts against selected files and folders.</li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="16">Use task execution methods and task host computers.</li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="17">Run immediately, on a schedule, or from a workflow transition.</li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="18">Limit the task to specific file extensions.</li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="19">Optionally expose the task in the File Explorer command menu.</li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="20">Control which users and groups can launch the task.</li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="21">Test scripts against a selected file or folder before saving the task.</li>
+</ul>
+<h2 id="create-a-task" sourcefile="src/addin/tasks.md" sourcestartlinenumber="23">Create a task</h2>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="25">In the SOLIDWORKS PDM Administration tool, create a task under the <strong sourcefile="src/addin/tasks.md" sourcestartlinenumber="25">Tasks</strong> node. On the <strong sourcefile="src/addin/tasks.md" sourcestartlinenumber="25">Add-in</strong> page, select <strong sourcefile="src/addin/tasks.md" sourcestartlinenumber="25">PDMShell</strong> as the add-in used by the task.</p>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="27"><img src="../../images/pdmshell-task-addin.png" sourcefile="src/addin/tasks.md" sourcestartlinenumber="27" alt="PDMShell task add-in selection"></p>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="29">The standard PDM task pages still control the task shell:</p>
+<table sourcefile="src/addin/tasks.md" sourcestartlinenumber="31">
+<thead>
+<tr sourcefile="src/addin/tasks.md" sourcestartlinenumber="31">
+<th sourcefile="src/addin/tasks.md" sourcestartlinenumber="31">Page</th>
+<th sourcefile="src/addin/tasks.md" sourcestartlinenumber="31">Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="src/addin/tasks.md" sourcestartlinenumber="33">
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="33">Add-in</td>
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="33">Selecting the PDMShell task add-in and optional input card</td>
+</tr>
+<tr sourcefile="src/addin/tasks.md" sourcestartlinenumber="34">
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="34">Execution Method</td>
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="34">Choosing which computers can execute the task</td>
+</tr>
+<tr sourcefile="src/addin/tasks.md" sourcestartlinenumber="35">
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="35">Scheduling</td>
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="35">Running the task immediately, later, or on a schedule</td>
+</tr>
+<tr sourcefile="src/addin/tasks.md" sourcestartlinenumber="36">
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="36">Permissions</td>
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="36">Controlling who can see, launch, or administer the task</td>
+</tr>
+<tr sourcefile="src/addin/tasks.md" sourcestartlinenumber="37">
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="37">Success Notification</td>
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="37">Sending task success messages</td>
+</tr>
+<tr sourcefile="src/addin/tasks.md" sourcestartlinenumber="38">
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="38">Error Notification</td>
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="38">Sending task failure messages</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pdmshell-script-page" sourcefile="src/addin/tasks.md" sourcestartlinenumber="40">PDMShell Script page</h2>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="42">The <strong sourcefile="src/addin/tasks.md" sourcestartlinenumber="42">PDMShell Script</strong> page is the main PDMShell-specific task page. Enter the script that should run when the task starts.</p>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="44"><img src="../../images/pdmshell-task-script.png" sourcefile="src/addin/tasks.md" sourcestartlinenumber="44" alt="PDMShell task script page"></p>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="46">Use this page to:</p>
+<ul sourcefile="src/addin/tasks.md" sourcestartlinenumber="48">
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="48">Write or paste the <code sourcefile="src/addin/tasks.md" sourcestartlinenumber="48">.pdmshell</code> script.</li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="49">Open the script in the PDMShell code editor.</li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="50">Select the file extensions the task should process, such as <code sourcefile="src/addin/tasks.md" sourcestartlinenumber="50">sldprt;sldasm;slddrw</code>.</li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="51">Enable folder processing with <strong sourcefile="src/addin/tasks.md" sourcestartlinenumber="51">Also run on folders</strong>.</li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="52">Test the task script with a selected folder or file.</li>
+</ul>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="54">All computers selected in <strong sourcefile="src/addin/tasks.md" sourcestartlinenumber="54">Execution Method</strong> must have PDMShell installed.</p>
+<h2 id="command-menu-page" sourcefile="src/addin/tasks.md" sourcestartlinenumber="56">Command Menu page</h2>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="58">Use the <strong sourcefile="src/addin/tasks.md" sourcestartlinenumber="58">Command Menu</strong> page when users should launch the task from File Explorer.</p>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="60"><img src="../../images/pdmshell-task-command-menu.png" sourcefile="src/addin/tasks.md" sourcestartlinenumber="60" alt="PDMShell task command menu page"></p>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="62">The command menu name is the label shown to users. Enable <strong sourcefile="src/addin/tasks.md" sourcestartlinenumber="62">Show Command in File Explorer</strong> when the task should appear in the PDM right-click menu.</p>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="64">If the task should only run from workflow transitions, scheduled execution, or the Task List, leave the command hidden from File Explorer.</p>
+<h2 id="pdmshell-permissions-page" sourcefile="src/addin/tasks.md" sourcestartlinenumber="66">PDMShell Permissions page</h2>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="68">The <strong sourcefile="src/addin/tasks.md" sourcestartlinenumber="68">PDMShell Permissions</strong> page controls which users and groups are permitted to launch the PDMShell task, including from workflow transitions.</p>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="70"><img src="../../images/pdmshell-task-permissions.png" sourcefile="src/addin/tasks.md" sourcestartlinenumber="70" alt="PDMShell task permissions page"></p>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="72">This page is separate from the standard PDM <strong sourcefile="src/addin/tasks.md" sourcestartlinenumber="72">Permissions</strong> page. Use both permission pages together:</p>
+<table sourcefile="src/addin/tasks.md" sourcestartlinenumber="74">
+<thead>
+<tr sourcefile="src/addin/tasks.md" sourcestartlinenumber="74">
+<th sourcefile="src/addin/tasks.md" sourcestartlinenumber="74">Permission page</th>
+<th sourcefile="src/addin/tasks.md" sourcestartlinenumber="74">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="src/addin/tasks.md" sourcestartlinenumber="76">
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="76">PDM Permissions</td>
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="76">Standard task visibility, administration, and launch permissions</td>
+</tr>
+<tr sourcefile="src/addin/tasks.md" sourcestartlinenumber="77">
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="77">PDMShell Permissions</td>
+<td sourcefile="src/addin/tasks.md" sourcestartlinenumber="77">PDMShell-specific launch permission for this script task</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="79">Start with a small administrator group while testing. Expand access after the script, execution method, and file extension filters have been validated.</p>
+<h2 id="similar-to-the-convert-task" sourcefile="src/addin/tasks.md" sourcestartlinenumber="81">Similar to the Convert task</h2>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="83">The PDMShell task follows the same task setup pattern users may already know from the SOLIDWORKS PDM Convert task:</p>
+<ol sourcefile="src/addin/tasks.md" sourcestartlinenumber="85">
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="85">Select the task add-in.</li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="86">Choose where the task can execute.</li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="87">Configure scheduling and launch permissions.</li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="88">Define task-specific options.</li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="89">Run the task from File Explorer, workflow transitions, the Task List, or a schedule.</li>
+</ol>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="91">The difference is that PDMShell task logic is written as a PDMShell script. This makes it useful for custom automation such as metadata cleanup, batch variable updates, file exports, migration helpers, reference maintenance, task chaining, and scripted PDM administration.</p>
+<h2 id="video-demo" sourcefile="src/addin/tasks.md" sourcestartlinenumber="93">Video demo</h2>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="95">This demo shows a PDMShell task being configured in the PDM task properties dialog.</p>
+<div class="ratio ratio-16x9">
+  <iframe src="https://www.loom.com/embed/8dd02ac8f0fa43a48541b04bc3ef114f" title="Create a PDMShell task in SOLIDWORKS PDM" allowfullscreen></iframe>
+</div>
+<p sourcefile="src/addin/tasks.md" sourcestartlinenumber="101"><a href="https://www.loom.com/share/8dd02ac8f0fa43a48541b04bc3ef114f" sourcefile="src/addin/tasks.md" sourcestartlinenumber="101">Watch on Loom</a></p>
+<h2 id="related-articles" sourcefile="src/addin/tasks.md" sourcestartlinenumber="103">Related articles</h2>
+<ul sourcefile="src/addin/tasks.md" sourcestartlinenumber="105">
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="105"><a href="runtime-execution.html" sourcefile="src/addin/tasks.md" sourcestartlinenumber="105">Runtime execution</a></li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="106"><a href="command-menu.html" sourcefile="src/addin/tasks.md" sourcestartlinenumber="106">Command menu scripts</a></li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="107"><a href="trigger-points.html" sourcefile="src/addin/tasks.md" sourcestartlinenumber="107">Event trigger points</a></li>
+<li sourcefile="src/addin/tasks.md" sourcestartlinenumber="108"><a href="../RUNTASK.html" sourcefile="src/addin/tasks.md" sourcestartlinenumber="108">Run a PDM task</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/addin/tasks.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

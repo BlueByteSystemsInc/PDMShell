@@ -85,104 +85,104 @@
         </div>
 
         <article data-uid="">
-<h1 id="checkout-command">CHECKOUT Command</h1>
+<h1 id="checkout-command" sourcefile="src/CHECKOUT.md" sourcestartlinenumber="5">CHECKOUT Command</h1>
 
-<h2 id="description">Description</h2>
-<p>Performs a check out operation on a specified file or many files.</p>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">checkout -search -recursive -filePath -checkoutOptions
+<h2 id="description" sourcefile="src/CHECKOUT.md" sourcestartlinenumber="6">Description</h2>
+<p sourcefile="src/CHECKOUT.md" sourcestartlinenumber="7">Performs a check out operation on a specified file or many files.</p>
+<h2 id="syntax" sourcefile="src/CHECKOUT.md" sourcestartlinenumber="9">Syntax</h2>
+<pre><code class="lang-bash" sourcefile="src/CHECKOUT.md" sourcestartlinenumber="10">checkout -search -recursive -filePath -checkoutOptions
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<p><code>-search</code>: Search keyword</p>
-<p>-<code>filePath</code>: The file(s) to be checked out. This is the default parameter</p>
-<p>-<code>recursive</code>: Recursively check out all files in the current directory. Use in combination with search</p>
-<p>-<code>checkoutOptions</code>: Optional. Use this to check a file and its references at once:</p>
-<table>
+<h2 id="parameters" sourcefile="src/CHECKOUT.md" sourcestartlinenumber="13">Parameters</h2>
+<p sourcefile="src/CHECKOUT.md" sourcestartlinenumber="14"><code sourcefile="src/CHECKOUT.md" sourcestartlinenumber="14">-search</code>: Search keyword</p>
+<p sourcefile="src/CHECKOUT.md" sourcestartlinenumber="16">-<code sourcefile="src/CHECKOUT.md" sourcestartlinenumber="16">filePath</code>: The file(s) to be checked out. This is the default parameter</p>
+<p sourcefile="src/CHECKOUT.md" sourcestartlinenumber="18">-<code sourcefile="src/CHECKOUT.md" sourcestartlinenumber="18">recursive</code>: Recursively check out all files in the current directory. Use in combination with search</p>
+<p sourcefile="src/CHECKOUT.md" sourcestartlinenumber="20">-<code sourcefile="src/CHECKOUT.md" sourcestartlinenumber="20">checkoutOptions</code>: Optional. Use this to check a file and its references at once:</p>
+<table sourcefile="src/CHECKOUT.md" sourcestartlinenumber="22">
 <thead>
-<tr>
-<th>Option Name (CLI)</th>
-<th>Description</th>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="22">
+<th sourcefile="src/CHECKOUT.md" sourcestartlinenumber="22">Option Name (CLI)</th>
+<th sourcefile="src/CHECKOUT.md" sourcestartlinenumber="22">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Nothing</td>
-<td>No checkout options are applied.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="24">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="24">Nothing</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="24">No checkout options are applied.</td>
 </tr>
-<tr>
-<td>AsBuilt1</td>
-<td>Uses the same versions of referenced files that were used when the referencing file was checked in; otherwise, the latest versions are used.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="25">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="25">AsBuilt1</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="25">Uses the same versions of referenced files that were used when the referencing file was checked in; otherwise, the latest versions are used.</td>
 </tr>
-<tr>
-<td>SkipUnlockedWritable</td>
-<td>Does not retrieve files that are writable and not checked out.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="26">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="26">SkipUnlockedWritable</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="26">Does not retrieve files that are writable and not checked out.</td>
 </tr>
-<tr>
-<td>SkipExisting</td>
-<td>Does not retrieve files that already exist in the local cache.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="27">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="27">SkipExisting</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="27">Does not retrieve files that already exist in the local cache.</td>
 </tr>
-<tr>
-<td>ForPreview</td>
-<td>Retrieves only referenced files required for preview; skips caching referenced files.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="28">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="28">ForPreview</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="28">Retrieves only referenced files required for preview; skips caching referenced files.</td>
 </tr>
-<tr>
-<td>RefreshFileListing</td>
-<td>Refreshes the File Explorer listing after files have been checked out.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="29">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="29">RefreshFileListing</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="29">Refreshes the File Explorer listing after files have been checked out.</td>
 </tr>
-<tr>
-<td>LockReferencedFilesToo</td>
-<td>Checks out (locks) files referenced by the checked-out file.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="30">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="30">LockReferencedFilesToo</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="30">Checks out (locks) files referenced by the checked-out file.</td>
 </tr>
-<tr>
-<td>AsBuiltNotDefault</td>
-<td>Uses the as-built versions when creating the reference tree.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="31">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="31">AsBuiltNotDefault</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="31">Uses the as-built versions when creating the reference tree.</td>
 </tr>
-<tr>
-<td>SkipOpenFileChecks</td>
-<td>Skips checking whether files are open in another application.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="32">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="32">SkipOpenFileChecks</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="32">Skips checking whether files are open in another application.</td>
 </tr>
-<tr>
-<td>SkipLockRefFiles</td>
-<td>Skips checking of lock file references.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="33">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="33">SkipLockRefFiles</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="33">Skips checking of lock file references.</td>
 </tr>
-<tr>
-<td>LockNoLclCopyFiles</td>
-<td>Locks referenced files even if no local cache copy exists.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="34">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="34">LockNoLclCopyFiles</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="34">Locks referenced files even if no local cache copy exists.</td>
 </tr>
-<tr>
-<td>IncludeAutoCacheFiles</td>
-<td>Automatically caches referenced files if the latest version is not already in the local cache.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="35">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="35">IncludeAutoCacheFiles</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="35">Automatically caches referenced files if the latest version is not already in the local cache.</td>
 </tr>
-<tr>
-<td>RollbackTree</td>
-<td>Provides the ability to roll back files in the checkout dialog.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="36">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="36">RollbackTree</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="36">Provides the ability to roll back files in the checkout dialog.</td>
 </tr>
-<tr>
-<td>ForViewer</td>
-<td>Retrieves only referenced files required by the viewer; skips caching referenced files.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="37">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="37">ForViewer</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="37">Retrieves only referenced files required by the viewer; skips caching referenced files.</td>
 </tr>
-<tr>
-<td>SingleFileRollback</td>
-<td>Rolls back a single file.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="38">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="38">SingleFileRollback</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="38">Rolls back a single file.</td>
 </tr>
-<tr>
-<td>XrefsOpenCheck</td>
-<td>Checks whether cross-reference files are open in another application.</td>
+<tr sourcefile="src/CHECKOUT.md" sourcestartlinenumber="39">
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="39">XrefsOpenCheck</td>
+<td sourcefile="src/CHECKOUT.md" sourcestartlinenumber="39">Checks whether cross-reference files are open in another application.</td>
 </tr>
 </tbody>
 </table>
-<p>You combine values by using <code>+</code>. Please make sure to wrap the parameter value in &quot;&quot;. Example: <code>&quot;SkipExisting + LockReferencedFilesToo&quot;</code></p>
-<h2 id="examples">Examples</h2>
-<pre><code class="lang-bash">checkout -filePath file1.sldprt
+<p sourcefile="src/CHECKOUT.md" sourcestartlinenumber="42">You combine values by using <code sourcefile="src/CHECKOUT.md" sourcestartlinenumber="42">+</code>. Please make sure to wrap the parameter value in &quot;&quot;. Example: <code sourcefile="src/CHECKOUT.md" sourcestartlinenumber="42">&quot;SkipExisting + LockReferencedFilesToo&quot;</code></p>
+<h2 id="examples" sourcefile="src/CHECKOUT.md" sourcestartlinenumber="45">Examples</h2>
+<pre><code class="lang-bash" sourcefile="src/CHECKOUT.md" sourcestartlinenumber="46">checkout -filePath file1.sldprt
 </code></pre>
-<h2 id="remarks">Remarks</h2>
-<ul>
-<li>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
+<h2 id="remarks" sourcefile="src/CHECKOUT.md" sourcestartlinenumber="49">Remarks</h2>
+<ul sourcefile="src/CHECKOUT.md" sourcestartlinenumber="50">
+<li sourcefile="src/CHECKOUT.md" sourcestartlinenumber="50">The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code sourcefile="src/CHECKOUT.md" sourcestartlinenumber="50">%</code> for wildcard.</li>
 </ul>
-<h2 id="tutorial">Tutorial</h2>
-<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/checkout.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 2.0.0 or earlier.</p>
+<h2 id="tutorial" sourcefile="src/CHECKOUT.md" sourcestartlinenumber="52">Tutorial</h2>
+<p sourcefile="src/CHECKOUT.md" sourcestartlinenumber="53"><video src="https://bluebyte.biz/wp-content/pdmshellvideos/checkout.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="availability" sourcefile="src/CHECKOUT.md" sourcestartlinenumber="55">Availability</h2>
+<p sourcefile="src/CHECKOUT.md" sourcestartlinenumber="56">Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

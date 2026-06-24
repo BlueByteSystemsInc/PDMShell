@@ -86,28 +86,28 @@
 
         <article data-uid="">
 
-<h3 id="when-calling-from-command-line-cmdexe-or-dispatch">When calling from <strong>command line (cmd.exe or Dispatch):</strong></h3>
-<hr>
-<h4 id="example-1">Example 1:</h4>
-<p><img src="../images/escapequotecommandline.png" alt="escapequotescommandline"></p>
-<p>Using <code>\&quot;</code> in <code>cmd.exe</code> will actually produce &quot; in the PDMShell session:</p>
-<pre><code class="lang-bash">pdmcli.exe /single help -command \&quot;checkout\&quot; 
+<h3 id="when-calling-from-command-line-cmdexe-or-dispatch" sourcefile="src/escapingquotes.md" sourcestartlinenumber="6">When calling from <strong sourcefile="src/escapingquotes.md" sourcestartlinenumber="6">command line (cmd.exe or Dispatch):</strong></h3>
+<hr sourcefile="src/escapingquotes.md" sourcestartlinenumber="7">
+<h4 id="example-1" sourcefile="src/escapingquotes.md" sourcestartlinenumber="8">Example 1:</h4>
+<p sourcefile="src/escapingquotes.md" sourcestartlinenumber="9"><img src="../images/escapequotecommandline.png" sourcefile="src/escapingquotes.md" sourcestartlinenumber="9" alt="escapequotescommandline"></p>
+<p sourcefile="src/escapingquotes.md" sourcestartlinenumber="11">Using <code sourcefile="src/escapingquotes.md" sourcestartlinenumber="11">\&quot;</code> in <code sourcefile="src/escapingquotes.md" sourcestartlinenumber="11">cmd.exe</code> will actually produce &quot; in the PDMShell session:</p>
+<pre><code class="lang-bash" sourcefile="src/escapingquotes.md" sourcestartlinenumber="13">pdmcli.exe /single help -command \&quot;checkout\&quot; 
 # This runs the command: help -command &quot;checkout&quot; (See above)
 </code></pre>
-<h4 id="example-2">Example 2:</h4>
-<p>Using <code>\\\&quot;&quot;</code> in <code>cmd.exe</code> will actually produce <code>\&quot;</code> in the PDMShell session command box which in turn gets evaluated as <code>&quot;</code> once executed:</p>
-<p><img src="../images/escapequotecommandline_1.png" alt="escapequotescommandline"></p>
-<pre><code class="lang-bash">pdmcli.exe /single setvar -filePath membrane.sldprt -variableName Description -value \&quot; 1 \\\&quot;&quot; 3\&quot;
+<h4 id="example-2" sourcefile="src/escapingquotes.md" sourcestartlinenumber="18">Example 2:</h4>
+<p sourcefile="src/escapingquotes.md" sourcestartlinenumber="20">Using <code sourcefile="src/escapingquotes.md" sourcestartlinenumber="20">\\\&quot;&quot;</code> in <code sourcefile="src/escapingquotes.md" sourcestartlinenumber="20">cmd.exe</code> will actually produce <code sourcefile="src/escapingquotes.md" sourcestartlinenumber="20">\&quot;</code> in the PDMShell session command box which in turn gets evaluated as <code sourcefile="src/escapingquotes.md" sourcestartlinenumber="20">&quot;</code> once executed:</p>
+<p sourcefile="src/escapingquotes.md" sourcestartlinenumber="22"><img src="../images/escapequotecommandline_1.png" sourcefile="src/escapingquotes.md" sourcestartlinenumber="22" alt="escapequotescommandline"></p>
+<pre><code class="lang-bash" sourcefile="src/escapingquotes.md" sourcestartlinenumber="23">pdmcli.exe /single setvar -filePath membrane.sldprt -variableName Description -value \&quot; 1 \\\&quot;&quot; 3\&quot;
 </code></pre>
-<p>will produce:</p>
-<pre><code class="lang-bash"># &gt;setvar -filePath membrane.sldprt -variableName Description -value &quot;1 \&quot; 3&quot;
+<p sourcefile="src/escapingquotes.md" sourcestartlinenumber="27">will produce:</p>
+<pre><code class="lang-bash" sourcefile="src/escapingquotes.md" sourcestartlinenumber="29"># &gt;setvar -filePath membrane.sldprt -variableName Description -value &quot;1 \&quot; 3&quot;
 # &gt;@: Set Description to 1 &quot; 3
 # \&quot; in PDMShell session evaluates to &quot;
 </code></pre>
-<h3 id="when-calling-from-pdmshell-regular-session">When calling from <strong>PDMShell regular session:</strong></h3>
-<hr>
-<p>To escape <code>&quot;</code>, use this <code>\&quot;</code>:</p>
-<pre><code class="lang-bash">setvar -filePath membrane.sldprt -VariableName Description -value &quot;3/1&quot;
+<h3 id="when-calling-from-pdmshell-regular-session" sourcefile="src/escapingquotes.md" sourcestartlinenumber="38">When calling from <strong sourcefile="src/escapingquotes.md" sourcestartlinenumber="38">PDMShell regular session:</strong></h3>
+<hr sourcefile="src/escapingquotes.md" sourcestartlinenumber="39">
+<p sourcefile="src/escapingquotes.md" sourcestartlinenumber="40">To escape <code sourcefile="src/escapingquotes.md" sourcestartlinenumber="40">&quot;</code>, use this <code sourcefile="src/escapingquotes.md" sourcestartlinenumber="40">\&quot;</code>:</p>
+<pre><code class="lang-bash" sourcefile="src/escapingquotes.md" sourcestartlinenumber="41">setvar -filePath membrane.sldprt -VariableName Description -value &quot;3/1&quot;
 # @: Set Description to 3/1
 setvar -filePath membrane.sldprt -VariableName Description -value &quot;3/\&quot;1&quot;
 # @: Set Description to 3/&quot;1

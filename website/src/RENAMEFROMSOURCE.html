@@ -85,76 +85,76 @@
         </div>
 
         <article data-uid="">
-<h1 id="renamefromsource-command">RENAMEFROMSOURCE Command</h1>
+<h1 id="renamefromsource-command" sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="5">RENAMEFROMSOURCE Command</h1>
 
-<h2 id="description">Description</h2>
-<p>The <code>renamefromsource</code> command renames files listed in a CSV source. The CSV file provides the information needed to map file IDs to their new names and folder IDs. This command supports alias evaluation for dynamic renaming.</p>
-<hr>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">renamefromsource -filePath -evaluatealias -csv 
+<h2 id="description" sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="6">Description</h2>
+<p sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="7">The <code sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="7">renamefromsource</code> command renames files listed in a CSV source. The CSV file provides the information needed to map file IDs to their new names and folder IDs. This command supports alias evaluation for dynamic renaming.</p>
+<hr sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="9">
+<h2 id="syntax" sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="11">Syntax</h2>
+<pre><code class="lang-bash" sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="12">renamefromsource -filePath -evaluatealias -csv 
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<ul>
-<li><code>filePath</code>: (Required) The source file path. This must be a CSV file with three columns:</li>
+<h2 id="parameters" sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="16">Parameters</h2>
+<ul sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="17">
+<li sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="17"><code sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="17">filePath</code>: (Required) The source file path. This must be a CSV file with three columns:</li>
 </ul>
-<ol>
-<li>File ID: The ID of the file to be renamed.</li>
-<li>New File Name: The new file name, including the extension.</li>
-<li>Folder ID: The ID of the folder containing the file.</li>
+<ol sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="19">
+<li sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="19">File ID: The ID of the file to be renamed.</li>
+<li sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="20">New File Name: The new file name, including the extension.</li>
+<li sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="21">Folder ID: The ID of the folder containing the file.</li>
 </ol>
-<ul>
-<li><code>evaluatealias</code>: Toggle. This allows placeholders to be used in the new file name.</li>
-<li><code>csv</code>: Specifies the path to an additional CSV file for batch renaming.</li>
+<ul sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="23">
+<li sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="23"><code sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="23">evaluatealias</code>: Toggle. This allows placeholders to be used in the new file name.</li>
+<li sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="24"><code sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="24">csv</code>: Specifies the path to an additional CSV file for batch renaming.</li>
 </ul>
-<h2 id="examples">Examples</h2>
-<p>Rename files using a source CSV file:</p>
-<pre><code class="lang-bash">renamefromsource -filePath &quot;C:\data\rename.csv&quot; -evaluatealias  
+<h2 id="examples" sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="26">Examples</h2>
+<p sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="27">Rename files using a source CSV file:</p>
+<pre><code class="lang-bash" sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="28">renamefromsource -filePath &quot;C:\data\rename.csv&quot; -evaluatealias  
 # renames all the files in rename.csv while evaluating aliases
 </code></pre>
-<h2 id="csv-format">CSV Format</h2>
-<p>The source CSV file must have the following structure:</p>
-<table>
+<h2 id="csv-format" sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="33">CSV Format</h2>
+<p sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="34">The source CSV file must have the following structure:</p>
+<table sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="36">
 <thead>
-<tr>
-<th>File ID</th>
-<th>New File Name</th>
-<th>Folder ID</th>
+<tr sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="36">
+<th sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="36">File ID</th>
+<th sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="36">New File Name</th>
+<th sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="36">Folder ID</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>123</td>
-<td>newfile1.txt</td>
-<td>456</td>
+<tr sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="38">
+<td sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="38">123</td>
+<td sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="38">newfile1.txt</td>
+<td sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="38">456</td>
 </tr>
-<tr>
-<td>124</td>
-<td>anotherfile.docx</td>
-<td>457</td>
+<tr sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="39">
+<td sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="39">124</td>
+<td sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="39">anotherfile.docx</td>
+<td sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="39">457</td>
 </tr>
-<tr>
-<td>125</td>
-<td>examplefile_backup.pdf</td>
-<td>458</td>
+<tr sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="40">
+<td sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="40">125</td>
+<td sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="40">examplefile_backup.pdf</td>
+<td sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="40">458</td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li><strong>File ID</strong>: The ID of the file to be renamed.</li>
-<li><strong>New File Name</strong>: The desired new name for the file, including the extension.</li>
-<li><strong>Folder ID</strong>: The ID of the folder containing the file.</li>
+<ul sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="42">
+<li sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="42"><strong sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="42">File ID</strong>: The ID of the file to be renamed.</li>
+<li sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="43"><strong sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="43">New File Name</strong>: The desired new name for the file, including the extension.</li>
+<li sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="44"><strong sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="44">Folder ID</strong>: The ID of the folder containing the file.</li>
 </ul>
-<h2 id="remarks">Remarks</h2>
-<ul>
-<li>The <code>filePath</code> parameter is mandatory and must point to a valid CSV file.</li>
-<li>The <code>evaluatealias</code> parameter supports dynamic placeholders for renaming, such as $name, $revision, $yyyy, etc. Ensure the CSV file is properly formatted with three columns: File -ID, New File Name, and Folder ID.</li>
-<li>The <code>csv</code> parameter is optional and can be used to provide additional renaming data.</li>
+<h2 id="remarks" sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="46">Remarks</h2>
+<ul sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="47">
+<li sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="47">The <code sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="47">filePath</code> parameter is mandatory and must point to a valid CSV file.</li>
+<li sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="48">The <code sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="48">evaluatealias</code> parameter supports dynamic placeholders for renaming, such as $name, $revision, $yyyy, etc. Ensure the CSV file is properly formatted with three columns: File -ID, New File Name, and Folder ID.</li>
+<li sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="49">The <code sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="49">csv</code> parameter is optional and can be used to provide additional renaming data.</li>
 </ul>
-<p>For more information about alias evaluation, refer to the <a href="EVAL.html">Dynamic Placeholders in PDMShell</a>.</p>
-<h2 id="tutorial">Tutorial</h2>
-<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/renamefromsource.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 2.0.2.</p>
+<p sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="51">For more information about alias evaluation, refer to the <a href="EVAL.html" sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="51">Dynamic Placeholders in PDMShell</a>.</p>
+<h2 id="tutorial" sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="53">Tutorial</h2>
+<p sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="54"><video src="https://bluebyte.biz/wp-content/pdmshellvideos/renamefromsource.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="availability" sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="56">Availability</h2>
+<p sourcefile="src/RENAMEFROMSOURCE.md" sourcestartlinenumber="57">Available since PDMShell 2.0.2.</p>
 
 </article>
 

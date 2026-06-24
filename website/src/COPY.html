@@ -85,72 +85,72 @@
         </div>
 
         <article data-uid="">
-<h1 id="copy-command">COPY Command</h1>
+<h1 id="copy-command" sourcefile="src/COPY.md" sourcestartlinenumber="5">COPY Command</h1>
 
-<h2 id="description">Description</h2>
-<p>Performs a vault-to-vault copy operation in SOLIDWORKS PDM.</p>
-<p>The <code>copy</code> command creates <strong>new files with new File IDs</strong> inside the vault by copying:</p>
-<ul>
-<li>A single file</li>
-<li>All files in a folder</li>
-<li>Files found using a search scoped to a source folder</li>
+<h2 id="description" sourcefile="src/COPY.md" sourcestartlinenumber="6">Description</h2>
+<p sourcefile="src/COPY.md" sourcestartlinenumber="7">Performs a vault-to-vault copy operation in SOLIDWORKS PDM.</p>
+<p sourcefile="src/COPY.md" sourcestartlinenumber="9">The <code sourcefile="src/COPY.md" sourcestartlinenumber="9">copy</code> command creates <strong sourcefile="src/COPY.md" sourcestartlinenumber="9">new files with new File IDs</strong> inside the vault by copying:</p>
+<ul sourcefile="src/COPY.md" sourcestartlinenumber="10">
+<li sourcefile="src/COPY.md" sourcestartlinenumber="10">A single file</li>
+<li sourcefile="src/COPY.md" sourcestartlinenumber="11">All files in a folder</li>
+<li sourcefile="src/COPY.md" sourcestartlinenumber="12">Files found using a search scoped to a source folder</li>
 </ul>
-<p>This command does <strong>not</strong> add files from disk and does <strong>not</strong> modify the original files.</p>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">copy -source -directory -search -recursive -name -ignoreexisting
+<p sourcefile="src/COPY.md" sourcestartlinenumber="14">This command does <strong sourcefile="src/COPY.md" sourcestartlinenumber="14">not</strong> add files from disk and does <strong sourcefile="src/COPY.md" sourcestartlinenumber="14">not</strong> modify the original files.</p>
+<h2 id="syntax" sourcefile="src/COPY.md" sourcestartlinenumber="16">Syntax</h2>
+<pre><code class="lang-bash" sourcefile="src/COPY.md" sourcestartlinenumber="17">copy -source -directory -search -recursive -name -ignoreexisting
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<ul>
-<li><p><code>source</code><br>
+<h2 id="parameters" sourcefile="src/COPY.md" sourcestartlinenumber="21">Parameters</h2>
+<ul sourcefile="src/COPY.md" sourcestartlinenumber="22">
+<li sourcefile="src/COPY.md" sourcestartlinenumber="22"><p sourcefile="src/COPY.md" sourcestartlinenumber="22"><code sourcefile="src/COPY.md" sourcestartlinenumber="22">source</code><br>
 The source file or folder inside the vault.</p>
-<ul>
-<li>If a file path is provided (ends with an extension), only that file is copied.</li>
-<li>If a folder path is provided, all matching files in that folder are copied.</li>
-<li>Relative paths are resolved against the current folder.</li>
+<ul sourcefile="src/COPY.md" sourcestartlinenumber="24">
+<li sourcefile="src/COPY.md" sourcestartlinenumber="24">If a file path is provided (ends with an extension), only that file is copied.</li>
+<li sourcefile="src/COPY.md" sourcestartlinenumber="25">If a folder path is provided, all matching files in that folder are copied.</li>
+<li sourcefile="src/COPY.md" sourcestartlinenumber="26">Relative paths are resolved against the current folder.</li>
 </ul>
 </li>
-<li><p><code>directory</code><br>
+<li sourcefile="src/COPY.md" sourcestartlinenumber="28"><p sourcefile="src/COPY.md" sourcestartlinenumber="28"><code sourcefile="src/COPY.md" sourcestartlinenumber="28">directory</code><br>
 The destination folder inside the vault where files will be copied.</p>
 </li>
-<li><p><code>search</code><br>
+<li sourcefile="src/COPY.md" sourcestartlinenumber="31"><p sourcefile="src/COPY.md" sourcestartlinenumber="31"><code sourcefile="src/COPY.md" sourcestartlinenumber="31">search</code><br>
 Optional PDM search keyword used to filter files in the source folder.<br>
-The search is scoped to the source folder and supports <code>%</code> wildcards.</p>
+The search is scoped to the source folder and supports <code sourcefile="src/COPY.md" sourcestartlinenumber="33">%</code> wildcards.</p>
 </li>
-<li><p><code>recursive</code><br>
-Optional. When used with <a href="SEARCH.html"><code>search</code></a>, includes subfolders of the source folder.</p>
+<li sourcefile="src/COPY.md" sourcestartlinenumber="35"><p sourcefile="src/COPY.md" sourcestartlinenumber="35"><code sourcefile="src/COPY.md" sourcestartlinenumber="35">recursive</code><br>
+Optional. When used with <a href="SEARCH.html" sourcefile="src/COPY.md" sourcestartlinenumber="36"><code sourcefile="src/COPY.md" sourcestartlinenumber="36">search</code></a>, includes subfolders of the source folder.</p>
 </li>
-<li><p><code>name</code><br>
+<li sourcefile="src/COPY.md" sourcestartlinenumber="38"><p sourcefile="src/COPY.md" sourcestartlinenumber="38"><code sourcefile="src/COPY.md" sourcestartlinenumber="38">name</code><br>
 Required. Specifies the destination file name.<br>
-<a href="EVAL.html">Alias expressions are evaluated <strong>only for the destination name</strong></a>. Extension required.</p>
+<a href="EVAL.html" sourcefile="src/COPY.md" sourcestartlinenumber="40">Alias expressions are evaluated <strong sourcefile="src/COPY.md" sourcestartlinenumber="40">only for the destination name</strong></a>. Extension required.</p>
 </li>
-<li><p><code>ignoreexisting</code><br>
+<li sourcefile="src/COPY.md" sourcestartlinenumber="42"><p sourcefile="src/COPY.md" sourcestartlinenumber="42"><code sourcefile="src/COPY.md" sourcestartlinenumber="42">ignoreexisting</code><br>
 Not implemented</p>
 </li>
 </ul>
-<h2 id="examples">Examples</h2>
-<h3 id="copy-a-single-file-to-another-folder">Copy a single file to another folder</h3>
-<pre><code class="lang-bash">copy -source part1.sldprt -directory /Vault/Projects/Released -name part2.sldprt
+<h2 id="examples" sourcefile="src/COPY.md" sourcestartlinenumber="45">Examples</h2>
+<h3 id="copy-a-single-file-to-another-folder" sourcefile="src/COPY.md" sourcestartlinenumber="46">Copy a single file to another folder</h3>
+<pre><code class="lang-bash" sourcefile="src/COPY.md" sourcestartlinenumber="47">copy -source part1.sldprt -directory /Vault/Projects/Released -name part2.sldprt
 </code></pre>
-<h3 id="copy-a-file-and-rename-it">Copy a file and rename it</h3>
-<pre><code class="lang-bash">copy -source part1.sldprt -directory /Vault/Projects/Released -name part1_revA.sldprt
+<h3 id="copy-a-file-and-rename-it" sourcefile="src/COPY.md" sourcestartlinenumber="51">Copy a file and rename it</h3>
+<pre><code class="lang-bash" sourcefile="src/COPY.md" sourcestartlinenumber="52">copy -source part1.sldprt -directory /Vault/Projects/Released -name part1_revA.sldprt
 </code></pre>
-<h3 id="copy-all-files-from-a-folder">Copy all files from a folder</h3>
-<pre><code class="lang-bash">copy -source Vault/Projects/WIP -directory /Vault/Projects/Released -name &quot;$namewithouextension-new$extension&quot;
+<h3 id="copy-all-files-from-a-folder" sourcefile="src/COPY.md" sourcestartlinenumber="56">Copy all files from a folder</h3>
+<pre><code class="lang-bash" sourcefile="src/COPY.md" sourcestartlinenumber="57">copy -source Vault/Projects/WIP -directory /Vault/Projects/Released -name &quot;$namewithouextension-new$extension&quot;
 </code></pre>
-<h3 id="copy-files-using-a-search-filter">Copy files using a search filter</h3>
-<pre><code class="lang-bash">copy -source Vault/Projects/WIP -search %.slddrw -directory Vault/Projects/Released -name &quot;$namewithouextension-new$extension&quot;
+<h3 id="copy-files-using-a-search-filter" sourcefile="src/COPY.md" sourcestartlinenumber="61">Copy files using a search filter</h3>
+<pre><code class="lang-bash" sourcefile="src/COPY.md" sourcestartlinenumber="62">copy -source Vault/Projects/WIP -search %.slddrw -directory Vault/Projects/Released -name &quot;$namewithouextension-new$extension&quot;
 </code></pre>
-<h3 id="copy-files-and-append-new-to-the-old-name">Copy files and append new to the old name</h3>
-<pre><code class="lang-bash">copy -source Vault/Projects/WIP -search %.sldprt -directory Vault/Projects/Released -name &quot;$namewithouextension-new$extension&quot;
+<h3 id="copy-files-and-append-new-to-the-old-name" sourcefile="src/COPY.md" sourcestartlinenumber="66">Copy files and append new to the old name</h3>
+<pre><code class="lang-bash" sourcefile="src/COPY.md" sourcestartlinenumber="67">copy -source Vault/Projects/WIP -search %.sldprt -directory Vault/Projects/Released -name &quot;$namewithouextension-new$extension&quot;
 </code></pre>
-<h2 id="remarks">Remarks</h2>
-<ul>
-<li>If <code>source</code> is a file, <a href="SEARCH.html"><code>search</code></a> and <code>recursive</code> are ignored.</li>
-<li>If <code>source</code> is a folder and <a href="SEARCH.html"><code>search</code></a> is not provided, all files in that folder are copied.</li>
-<li>The <a href="SEARCH.html"><code>search</code></a> parameter does not search the entire vault, only the source folder</li>
+<h2 id="remarks" sourcefile="src/COPY.md" sourcestartlinenumber="71">Remarks</h2>
+<ul sourcefile="src/COPY.md" sourcestartlinenumber="72">
+<li sourcefile="src/COPY.md" sourcestartlinenumber="72">If <code sourcefile="src/COPY.md" sourcestartlinenumber="72">source</code> is a file, <a href="SEARCH.html" sourcefile="src/COPY.md" sourcestartlinenumber="72"><code sourcefile="src/COPY.md" sourcestartlinenumber="72">search</code></a> and <code sourcefile="src/COPY.md" sourcestartlinenumber="72">recursive</code> are ignored.</li>
+<li sourcefile="src/COPY.md" sourcestartlinenumber="73">If <code sourcefile="src/COPY.md" sourcestartlinenumber="73">source</code> is a folder and <a href="SEARCH.html" sourcefile="src/COPY.md" sourcestartlinenumber="73"><code sourcefile="src/COPY.md" sourcestartlinenumber="73">search</code></a> is not provided, all files in that folder are copied.</li>
+<li sourcefile="src/COPY.md" sourcestartlinenumber="74">The <a href="SEARCH.html" sourcefile="src/COPY.md" sourcestartlinenumber="74"><code sourcefile="src/COPY.md" sourcestartlinenumber="74">search</code></a> parameter does not search the entire vault, only the source folder</li>
 </ul>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 2.0.74.</p>
+<h2 id="availability" sourcefile="src/COPY.md" sourcestartlinenumber="76">Availability</h2>
+<p sourcefile="src/COPY.md" sourcestartlinenumber="77">Available since PDMShell 2.0.74.</p>
 
 </article>
 

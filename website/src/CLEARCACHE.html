@@ -85,22 +85,22 @@
         </div>
 
         <article data-uid="">
-<h1 id="clearcache-command">CLEARCACHE Command</h1>
+<h1 id="clearcache-command" sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="5">CLEARCACHE Command</h1>
 
-<h2 id="description">Description</h2>
-<p>Clears the local cache of a folder or many files.</p>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">clearcache -directory -search -toolboxflag -source
+<h2 id="description" sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="6">Description</h2>
+<p sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="7">Clears the local cache of a folder or many files.</p>
+<h2 id="syntax" sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="9">Syntax</h2>
+<pre><code class="lang-bash" sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="10">clearcache -directory -search -toolboxflag -source
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<ul>
-<li><code>Directory</code>: The directory to clear the local cache of.</li>
-<li><code>search</code>: Search query.</li>
-<li><code>toolboxflag</code>: Ignore toolbox files.</li>
-<li><code>source</code>: CSV files containing complete local file paths to clear. First row is header.</li>
+<h2 id="parameters" sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="14">Parameters</h2>
+<ul sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="15">
+<li sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="15"><code sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="15">Directory</code>: The directory to clear the local cache of.</li>
+<li sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="16"><code sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="16">search</code>: Search query.</li>
+<li sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="17"><code sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="17">toolboxflag</code>: Ignore toolbox files.</li>
+<li sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="18"><code sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="18">source</code>: CSV files containing complete local file paths to clear. First row is header.</li>
 </ul>
-<h2 id="examples">Examples</h2>
-<pre><code class="lang-bash">clearcache -search &quot;*.sldprt&quot;
+<h2 id="examples" sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="20">Examples</h2>
+<pre><code class="lang-bash" sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="21">clearcache -search &quot;*.sldprt&quot;
 # Clears the cache of all `.sldprt` files in the current directory.
 
 clearcache -directory project -toolboxflag
@@ -109,8 +109,8 @@ clearcache -directory project -toolboxflag
 clearcache -source &quot;source.csv&quot;
 # Clears the cache for the specified source.
 </code></pre>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 2.0.0 or earlier.</p>
+<h2 id="availability" sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="32">Availability</h2>
+<p sourcefile="src/CLEARCACHE.md" sourcestartlinenumber="33">Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

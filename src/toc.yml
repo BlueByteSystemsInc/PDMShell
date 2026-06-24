@@ -41,6 +41,8 @@
     href: addin/conditions.md
   - name: On-demand add-in scripts
     href: addin/command-menu.md
+  - name: PDM Tasks
+    href: addin/tasks.md
   - name: Event trigger points
     href: addin/trigger-points.md
   - name: Placeholders and command context

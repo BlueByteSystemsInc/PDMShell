@@ -85,60 +85,60 @@
         </div>
 
         <article data-uid="">
-<h1 id="script-editor">Script Editor</h1>
+<h1 id="script-editor" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="5">Script Editor</h1>
 
-<p>The <strong>Script Editor</strong> stores the scripts that the add-in can run from PDM. Each script entry has its own enabled state, permissions, conditions, command menu settings, trigger points, and script code.</p>
-<h2 id="add-or-delete-scripts">Add or delete scripts</h2>
-<p>Use <strong>Add</strong> to create a new script entry. Use <strong>Delete</strong> to remove the selected entry.</p>
-<p>The editor does not create dummy scripts. A new script entry is empty until you enter the script name, configuration, and code.</p>
-<h2 id="save-or-discard-changes">Save or discard changes</h2>
-<p>The editor works on a copy of the saved configuration.</p>
-<ul>
-<li>Click <strong>OK</strong> to save the edited configuration.</li>
-<li>Click <strong>Cancel</strong> to discard changes made in the dialog.</li>
+<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="7">The <strong sourcefile="src/addin/script-editor.md" sourcestartlinenumber="7">Script Editor</strong> stores the scripts that the add-in can run from PDM. Each script entry has its own enabled state, permissions, conditions, command menu settings, trigger points, and script code.</p>
+<h2 id="add-or-delete-scripts" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="9">Add or delete scripts</h2>
+<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="11">Use <strong sourcefile="src/addin/script-editor.md" sourcestartlinenumber="11">Add</strong> to create a new script entry. Use <strong sourcefile="src/addin/script-editor.md" sourcestartlinenumber="11">Delete</strong> to remove the selected entry.</p>
+<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="13">The editor does not create dummy scripts. A new script entry is empty until you enter the script name, configuration, and code.</p>
+<h2 id="save-or-discard-changes" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="15">Save or discard changes</h2>
+<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="17">The editor works on a copy of the saved configuration.</p>
+<ul sourcefile="src/addin/script-editor.md" sourcestartlinenumber="19">
+<li sourcefile="src/addin/script-editor.md" sourcestartlinenumber="19">Click <strong sourcefile="src/addin/script-editor.md" sourcestartlinenumber="19">OK</strong> to save the edited configuration.</li>
+<li sourcefile="src/addin/script-editor.md" sourcestartlinenumber="20">Click <strong sourcefile="src/addin/script-editor.md" sourcestartlinenumber="20">Cancel</strong> to discard changes made in the dialog.</li>
 </ul>
-<h2 id="script-sections">Script sections</h2>
-<p>Each script is organized into these sections:</p>
-<table>
+<h2 id="script-sections" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="22">Script sections</h2>
+<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="24">Each script is organized into these sections:</p>
+<table sourcefile="src/addin/script-editor.md" sourcestartlinenumber="26">
 <thead>
-<tr>
-<th>Section</th>
-<th>Purpose</th>
+<tr sourcefile="src/addin/script-editor.md" sourcestartlinenumber="26">
+<th sourcefile="src/addin/script-editor.md" sourcestartlinenumber="26">Section</th>
+<th sourcefile="src/addin/script-editor.md" sourcestartlinenumber="26">Purpose</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Overview</td>
-<td>Script name and enabled state</td>
+<tr sourcefile="src/addin/script-editor.md" sourcestartlinenumber="28">
+<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="28">Overview</td>
+<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="28">Script name and enabled state</td>
 </tr>
-<tr>
-<td>Permissions</td>
-<td>Users and groups allowed to run the script</td>
+<tr sourcefile="src/addin/script-editor.md" sourcestartlinenumber="29">
+<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="29">Permissions</td>
+<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="29">Users and groups allowed to run the script</td>
 </tr>
-<tr>
-<td>Conditions</td>
-<td>Expression that must pass before the script runs</td>
+<tr sourcefile="src/addin/script-editor.md" sourcestartlinenumber="30">
+<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="30">Conditions</td>
+<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="30">Expression that must pass before the script runs</td>
 </tr>
-<tr>
-<td>Trigger Points</td>
-<td>Command menu and PDM event trigger configuration</td>
+<tr sourcefile="src/addin/script-editor.md" sourcestartlinenumber="31">
+<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="31">Trigger Points</td>
+<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="31">Command menu and PDM event trigger configuration</td>
 </tr>
-<tr>
-<td>Code</td>
-<td>The <code>.pdmshell</code> script body</td>
+<tr sourcefile="src/addin/script-editor.md" sourcestartlinenumber="32">
+<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="32">Code</td>
+<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="32">The <code sourcefile="src/addin/script-editor.md" sourcestartlinenumber="32">.pdmshell</code> script body</td>
 </tr>
 </tbody>
 </table>
-<h2 id="edit-with-pdmshell">Edit with PDMShell</h2>
-<p>Use <strong>Edit with PDMShell</strong> to open the script in the PDMShell visual editor. The add-in saves the script to a temporary <code>.pdmshell</code> file and opens:</p>
-<pre><code class="lang-powershell">pdmcli.exe -edit &quot;C:\Path\To\TempScript.pdmshell&quot;
+<h2 id="edit-with-pdmshell" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="34">Edit with PDMShell</h2>
+<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="36">Use <strong sourcefile="src/addin/script-editor.md" sourcestartlinenumber="36">Edit with PDMShell</strong> to open the script in the PDMShell visual editor. The add-in saves the script to a temporary <code sourcefile="src/addin/script-editor.md" sourcestartlinenumber="36">.pdmshell</code> file and opens:</p>
+<pre><code class="lang-powershell" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="38">pdmcli.exe -edit &quot;C:\Path\To\TempScript.pdmshell&quot;
 </code></pre>
-<p>When the PDMShell editor closes, the add-in reloads the script text from the temporary file.</p>
-<h2 id="related-articles">Related articles</h2>
-<ul>
-<li><a href="permissions.html">Permissions</a></li>
-<li><a href="conditions.html">Conditions</a></li>
-<li><a href="runtime-execution.html">Runtime execution</a></li>
+<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="42">When the PDMShell editor closes, the add-in reloads the script text from the temporary file.</p>
+<h2 id="related-articles" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="44">Related articles</h2>
+<ul sourcefile="src/addin/script-editor.md" sourcestartlinenumber="46">
+<li sourcefile="src/addin/script-editor.md" sourcestartlinenumber="46"><a href="permissions.html" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="46">Permissions</a></li>
+<li sourcefile="src/addin/script-editor.md" sourcestartlinenumber="47"><a href="conditions.html" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="47">Conditions</a></li>
+<li sourcefile="src/addin/script-editor.md" sourcestartlinenumber="48"><a href="runtime-execution.html" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="48">Runtime execution</a></li>
 </ul>
 
 </article>

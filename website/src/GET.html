@@ -85,75 +85,75 @@
         </div>
 
         <article data-uid="">
-<h1 id="get-command">GET Command</h1>
+<h1 id="get-command" sourcefile="src/GET.md" sourcestartlinenumber="5">GET Command</h1>
 
-<h2 id="description">Description</h2>
-<p>Retrieves a specified version of a file or files (via search).</p>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">get -search -recursive -filePath -version -directory -getoptions
+<h2 id="description" sourcefile="src/GET.md" sourcestartlinenumber="6">Description</h2>
+<p sourcefile="src/GET.md" sourcestartlinenumber="7">Retrieves a specified version of a file or files (via search).</p>
+<h2 id="syntax" sourcefile="src/GET.md" sourcestartlinenumber="9">Syntax</h2>
+<pre><code class="lang-bash" sourcefile="src/GET.md" sourcestartlinenumber="10">get -search -recursive -filePath -version -directory -getoptions
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<ul>
-<li><p><code>search</code>: The search operation to use.</p>
+<h2 id="parameters" sourcefile="src/GET.md" sourcestartlinenumber="13">Parameters</h2>
+<ul sourcefile="src/GET.md" sourcestartlinenumber="14">
+<li sourcefile="src/GET.md" sourcestartlinenumber="14"><p sourcefile="src/GET.md" sourcestartlinenumber="14"><code sourcefile="src/GET.md" sourcestartlinenumber="14">search</code>: The search operation to use.</p>
 </li>
-<li><p><code>filePath</code>: The file(s) to retrieve. This is the default parameter.</p>
+<li sourcefile="src/GET.md" sourcestartlinenumber="16"><p sourcefile="src/GET.md" sourcestartlinenumber="16"><code sourcefile="src/GET.md" sourcestartlinenumber="16">filePath</code>: The file(s) to retrieve. This is the default parameter.</p>
 </li>
-<li><p><code>recursive</code>: When used with <a href="SEARCH.html"><code>search</code></a>, includes files in subfolders.</p>
+<li sourcefile="src/GET.md" sourcestartlinenumber="19"><p sourcefile="src/GET.md" sourcestartlinenumber="19"><code sourcefile="src/GET.md" sourcestartlinenumber="19">recursive</code>: When used with <a href="SEARCH.html" sourcefile="src/GET.md" sourcestartlinenumber="19"><code sourcefile="src/GET.md" sourcestartlinenumber="19">search</code></a>, includes files in subfolders.</p>
 </li>
-<li><p><code>version</code>:  (Optional) The version of the file to retrieve</p>
+<li sourcefile="src/GET.md" sourcestartlinenumber="20"><p sourcefile="src/GET.md" sourcestartlinenumber="20"><code sourcefile="src/GET.md" sourcestartlinenumber="20">version</code>:  (Optional) The version of the file to retrieve</p>
 </li>
-<li><p><code>directory</code>: (Optional) Folder where to deposit the file. Can be outside vault. Do not end with \. If not specified, file is cached in its folder.</p>
+<li sourcefile="src/GET.md" sourcestartlinenumber="22"><p sourcefile="src/GET.md" sourcestartlinenumber="22"><code sourcefile="src/GET.md" sourcestartlinenumber="22">directory</code>: (Optional) Folder where to deposit the file. Can be outside vault. Do not end with \. If not specified, file is cached in its folder.</p>
 </li>
-<li><p><code>getoptions</code>: (Optional). Allows you to cache references as well:</p>
+<li sourcefile="src/GET.md" sourcestartlinenumber="24"><p sourcefile="src/GET.md" sourcestartlinenumber="24"><code sourcefile="src/GET.md" sourcestartlinenumber="24">getoptions</code>: (Optional). Allows you to cache references as well:</p>
 </li>
 </ul>
-<table>
+<table sourcefile="src/GET.md" sourcestartlinenumber="26">
 <thead>
-<tr>
-<th>Option Name (CLI)</th>
-<th>Description</th>
+<tr sourcefile="src/GET.md" sourcestartlinenumber="26">
+<th sourcefile="src/GET.md" sourcestartlinenumber="26">Option Name (CLI)</th>
+<th sourcefile="src/GET.md" sourcestartlinenumber="26">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Simple</td>
-<td>Retrieves the file with no additional options applied.</td>
+<tr sourcefile="src/GET.md" sourcestartlinenumber="28">
+<td sourcefile="src/GET.md" sourcestartlinenumber="28">Simple</td>
+<td sourcefile="src/GET.md" sourcestartlinenumber="28">Retrieves the file with no additional options applied.</td>
 </tr>
-<tr>
-<td>MakeReadOnly</td>
-<td>Marks the retrieved file as read-only in the local cache.</td>
+<tr sourcefile="src/GET.md" sourcestartlinenumber="29">
+<td sourcefile="src/GET.md" sourcestartlinenumber="29">MakeReadOnly</td>
+<td sourcefile="src/GET.md" sourcestartlinenumber="29">Marks the retrieved file as read-only in the local cache.</td>
 </tr>
-<tr>
-<td>DisableRefresh</td>
-<td>Does not refresh File Explorer after the file is retrieved.</td>
+<tr sourcefile="src/GET.md" sourcestartlinenumber="30">
+<td sourcefile="src/GET.md" sourcestartlinenumber="30">DisableRefresh</td>
+<td sourcefile="src/GET.md" sourcestartlinenumber="30">Does not refresh File Explorer after the file is retrieved.</td>
 </tr>
-<tr>
-<td>RefsOnlyMissing</td>
-<td>Retrieves only referenced files that are not already present on the local hard disk.</td>
+<tr sourcefile="src/GET.md" sourcestartlinenumber="31">
+<td sourcefile="src/GET.md" sourcestartlinenumber="31">RefsOnlyMissing</td>
+<td sourcefile="src/GET.md" sourcestartlinenumber="31">Retrieves only referenced files that are not already present on the local hard disk.</td>
 </tr>
-<tr>
-<td>RefsVerLatest</td>
-<td>Retrieves the latest versions of referenced files that the user has permission to see, instead of the attached (as-built) versions used when the file was checked in.</td>
+<tr sourcefile="src/GET.md" sourcestartlinenumber="32">
+<td sourcefile="src/GET.md" sourcestartlinenumber="32">RefsVerLatest</td>
+<td sourcefile="src/GET.md" sourcestartlinenumber="32">Retrieves the latest versions of referenced files that the user has permission to see, instead of the attached (as-built) versions used when the file was checked in.</td>
 </tr>
-<tr>
-<td>RefsOverwriteLocked</td>
-<td>Retrieves referenced files even if they are checked out and overwrites local changes; <strong>warning:</strong> any previous modifications to checked-out files will be lost.</td>
+<tr sourcefile="src/GET.md" sourcestartlinenumber="33">
+<td sourcefile="src/GET.md" sourcestartlinenumber="33">RefsOverwriteLocked</td>
+<td sourcefile="src/GET.md" sourcestartlinenumber="33">Retrieves referenced files even if they are checked out and overwrites local changes; <strong sourcefile="src/GET.md" sourcestartlinenumber="33">warning:</strong> any previous modifications to checked-out files will be lost.</td>
 </tr>
-<tr>
-<td>ForPreview</td>
-<td>Retrieves only referenced files required for SOLIDWORKS PDM preview when retrieving the referencing file.</td>
+<tr sourcefile="src/GET.md" sourcestartlinenumber="34">
+<td sourcefile="src/GET.md" sourcestartlinenumber="34">ForPreview</td>
+<td sourcefile="src/GET.md" sourcestartlinenumber="34">Retrieves only referenced files required for SOLIDWORKS PDM preview when retrieving the referencing file.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="examples">Examples</h2>
-<pre><code class="lang-bash">get -filePath &quot;file1.sldprt&quot; -Version 2
+<h2 id="examples" sourcefile="src/GET.md" sourcestartlinenumber="37">Examples</h2>
+<pre><code class="lang-bash" sourcefile="src/GET.md" sourcestartlinenumber="38">get -filePath &quot;file1.sldprt&quot; -Version 2
 </code></pre>
-<h2 id="remarks">Remarks</h2>
-<ul>
-<li>The <a href="SEARCH.html"><code>search</code></a> parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
+<h2 id="remarks" sourcefile="src/GET.md" sourcestartlinenumber="41">Remarks</h2>
+<ul sourcefile="src/GET.md" sourcestartlinenumber="42">
+<li sourcefile="src/GET.md" sourcestartlinenumber="42">The <a href="SEARCH.html" sourcefile="src/GET.md" sourcestartlinenumber="42"><code sourcefile="src/GET.md" sourcestartlinenumber="42">search</code></a> parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code sourcefile="src/GET.md" sourcestartlinenumber="42">%</code> for wildcard.</li>
 </ul>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 2.0.0 or earlier.</p>
+<h2 id="availability" sourcefile="src/GET.md" sourcestartlinenumber="44">Availability</h2>
+<p sourcefile="src/GET.md" sourcestartlinenumber="45">Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

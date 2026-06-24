@@ -16,6 +16,7 @@ Instead of building automation from a fixed list of Dispatch actions, the add-in
 ## What you can automate
 
 - Add right-click commands such as `PDMShell\Rename Files`.
+- Create SOLIDWORKS PDM Tasks that run PDMShell scripts, similar to the built-in Convert task.
 - Run scripts before or after checkout, check-in, undo checkout, state change, add, delete, move, copy, rename, get, label, card button, and folder commands.
 - Restrict scripts to selected PDM users or groups.
 - Validate conditions before a script runs.
@@ -31,6 +32,7 @@ Instead of building automation from a fixed list of Dispatch actions, the add-in
 | [Permissions](addin/permissions.md) | Limiting scripts to users and groups |
 | [Conditions](addin/conditions.md) | Building wait-style condition expressions |
 | [Command menu scripts](addin/command-menu.md) | Adding right-click PDM menu commands |
+| [PDM Tasks](addin/tasks.md) | Creating SOLIDWORKS PDM Tasks that run PDMShell scripts |
 | [Event trigger points](addin/trigger-points.md) | Running scripts from PDM command hooks |
 | [Placeholders and command context](addin/placeholders.md) | Using file, folder, command, and variable placeholders |
 | [Runtime execution](addin/runtime-execution.md) | Understanding `pdmcli.exe`, headless mode, and `-items` |
@@ -45,6 +47,7 @@ Dispatch action scripts typically combine triggers, conditions, variables, and a
 | Action script | A configured PDMShell script |
 | Administrative action | Script configured in the Script Editor |
 | Menu command activation | Menu trigger with command menu text |
+| PDM task | PDMShell task add-in running a `.pdmshell` script |
 | PDM event activation | Trigger points such as checkout, check-in, state change, add, delete, move, copy, rename, and folder events |
 | Conditions | PDMShell wait-style condition expression |
 | Variables | PDMShell placeholders and PDM variable placeholders |
