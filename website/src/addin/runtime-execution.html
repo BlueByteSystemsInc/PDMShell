@@ -85,47 +85,47 @@
         </div>
 
         <article data-uid="">
-<h1 id="runtime-execution" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="5">Runtime execution</h1>
+<h1 id="runtime-execution">Runtime execution</h1>
 
-<p sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="7">When a configured script runs, the add-in writes the script to a temporary <code sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="7">.pdmshell</code> file and launches PDMShell in automation mode.</p>
-<p sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="9">For selected files and folders, the add-in uses the <code sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="9">-items</code> path:</p>
-<pre><code class="lang-powershell" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="11">pdmcli.exe -headless &quot;C:\Temp\Script.pdmshell&quot; -items &quot;123,45;678,90&quot;
+<p>When a configured script runs, the add-in writes the script to a temporary <code>.pdmshell</code> file and launches PDMShell in automation mode.</p>
+<p>For selected files and folders, the add-in uses the <code>-items</code> path:</p>
+<pre><code class="lang-powershell">pdmcli.exe -headless &quot;C:\Temp\Script.pdmshell&quot; -items &quot;123,45;678,90&quot;
 </code></pre>
-<p sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="15">Each item is passed as an ID pair:</p>
-<table sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="17">
+<p>Each item is passed as an ID pair:</p>
+<table>
 <thead>
-<tr sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="17">
-<th sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="17">Item type</th>
-<th sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="17">Format</th>
-<th sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="17">Meaning</th>
+<tr>
+<th>Item type</th>
+<th>Format</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="19">
-<td sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="19">File</td>
-<td sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="19"><code sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="19">fileId,folderId</code></td>
-<td sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="19">File ID and containing folder ID</td>
+<tr>
+<td>File</td>
+<td><code>fileId,folderId</code></td>
+<td>File ID and containing folder ID</td>
 </tr>
-<tr sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="20">
-<td sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="20">Folder</td>
-<td sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="20"><code sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="20">folderId,parentFolderId</code></td>
-<td sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="20">Folder ID and parent folder ID</td>
+<tr>
+<td>Folder</td>
+<td><code>folderId,parentFolderId</code></td>
+<td>Folder ID and parent folder ID</td>
 </tr>
 </tbody>
 </table>
-<h2 id="headless-mode" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="22">Headless mode</h2>
-<p sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="24">Headless mode starts a lighter execution shell for add-in automation. Use it for unattended runs from command menus, trigger points, tasks, or other automated launches.</p>
-<h2 id="script-editing" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="26">Script editing</h2>
-<p sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="28">Use <code sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="28">-edit</code> when opening a script in the visual editor without executing it:</p>
-<pre><code class="lang-powershell" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="30">pdmcli.exe -edit &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
+<h2 id="headless-mode">Headless mode</h2>
+<p>Headless mode starts a lighter execution shell for add-in automation. Use it for unattended runs from command menus, trigger points, tasks, or other automated launches.</p>
+<h2 id="script-editing">Script editing</h2>
+<p>Use <code>-edit</code> when opening a script in the visual editor without executing it:</p>
+<pre><code class="lang-powershell">pdmcli.exe -edit &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
 </code></pre>
-<p sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="34">For more details about script execution, see <a href="../RUNSCRIPT.html" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="34">RunScript</a>.</p>
-<h2 id="related-articles" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="36">Related articles</h2>
-<ul sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="38">
-<li sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="38"><a href="script-editor.html" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="38">Script Editor</a></li>
-<li sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="39"><a href="command-menu.html" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="39">Command menu scripts</a></li>
-<li sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="40"><a href="tasks.html" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="40">PDM Tasks</a></li>
-<li sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="41"><a href="trigger-points.html" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="41">Event trigger points</a></li>
+<p>For more details about script execution, see <a href="../RUNSCRIPT.html">RunScript</a>.</p>
+<h2 id="related-articles">Related articles</h2>
+<ul>
+<li><a href="script-editor.html">Script Editor</a></li>
+<li><a href="command-menu.html">Command menu scripts</a></li>
+<li><a href="tasks.html">PDM Tasks</a></li>
+<li><a href="trigger-points.html">Event trigger points</a></li>
 </ul>
 
 </article>

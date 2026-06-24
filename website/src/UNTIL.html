@@ -85,26 +85,26 @@
         </div>
 
         <article data-uid="">
-<h1 id="until-command" sourcefile="src/UNTIL.md" sourcestartlinenumber="5">UNTIL Command</h1>
+<h1 id="until-command">UNTIL Command</h1>
 
-<h2 id="description" sourcefile="src/UNTIL.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="7">Waits until the supplied condition expression evaluates to true, or until the timeout is reached.</p>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="9">Use <code sourcefile="src/UNTIL.md" sourcestartlinenumber="9">until</code> after commands such as <a href="RUNTASK.html" sourcefile="src/UNTIL.md" sourcestartlinenumber="9"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="9">runtask</code></a>, <a href="RUNTEMPLATE.html" sourcefile="src/UNTIL.md" sourcestartlinenumber="9"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="9">runtemplate</code></a>, <a href="export.html" sourcefile="src/UNTIL.md" sourcestartlinenumber="9"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="9">export</code></a>, or any automation step that creates files asynchronously. This prevents the next command from running before the expected files, variables, or process state are ready.</p>
-<h2 id="syntax" sourcefile="src/UNTIL.md" sourcestartlinenumber="11">Syntax</h2>
-<pre><code class="lang-bash" sourcefile="src/UNTIL.md" sourcestartlinenumber="12">until -conditions condition_expression [-timeout seconds] [-match all|any|one] [-filePath path | -search query]
+<h2 id="description">Description</h2>
+<p>Waits until the supplied condition expression evaluates to true, or until the timeout is reached.</p>
+<p>Use <code>until</code> after commands such as <a href="RUNTASK.html"><code>runtask</code></a>, <a href="RUNTEMPLATE.html"><code>runtemplate</code></a>, <a href="export.html"><code>export</code></a>, or any automation step that creates files asynchronously. This prevents the next command from running before the expected files, variables, or process state are ready.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-bash">until -conditions condition_expression [-timeout seconds] [-match all|any|one] [-filePath path | -search query]
 </code></pre>
-<h2 id="parameters" sourcefile="src/UNTIL.md" sourcestartlinenumber="16">Parameters</h2>
-<ul sourcefile="src/UNTIL.md" sourcestartlinenumber="17">
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="17"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="17">conditions</code>: The condition expression to evaluate. Supports <code sourcefile="src/UNTIL.md" sourcestartlinenumber="17">and</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="17">or</code>, nested groups, file/folder/process exists checks, comparisons, PDM variables, placeholders, and simple arithmetic comparisons.</li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="18"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="18">timeout</code>: Maximum number of seconds to wait before the command fails. If omitted, PDMShell uses the command default.</li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="19"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="19">match</code>: When <a href="SEARCH.html" sourcefile="src/UNTIL.md" sourcestartlinenumber="19"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="19">search</code></a> returns multiple files, controls how many files must satisfy the conditions. Use <code sourcefile="src/UNTIL.md" sourcestartlinenumber="19">any</code> when one matching file is enough, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="19">all</code> when every matching file must pass, or <code sourcefile="src/UNTIL.md" sourcestartlinenumber="19">one</code> when exactly one matching file must pass.</li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="20"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="20">filePath</code>: Optional file context used to evaluate PDM variables and file placeholders.</li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="21"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="21">search</code>: Optional search query. When supplied, PDMShell evaluates the condition against the files returned by the search.</li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="22"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="22">directory</code>: Optional vault folder used as the search scope. Only valid with <a href="SEARCH.html" sourcefile="src/UNTIL.md" sourcestartlinenumber="22"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="22">search</code></a>.</li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="23"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="23">recursive</code>: Includes subfolders when used with <a href="SEARCH.html" sourcefile="src/UNTIL.md" sourcestartlinenumber="23"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="23">search</code></a>.</li>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>conditions</code>: The condition expression to evaluate. Supports <code>and</code>, <code>or</code>, nested groups, file/folder/process exists checks, comparisons, PDM variables, placeholders, and simple arithmetic comparisons.</li>
+<li><code>timeout</code>: Maximum number of seconds to wait before the command fails. If omitted, PDMShell uses the command default.</li>
+<li><code>match</code>: When <a href="SEARCH.html"><code>search</code></a> returns multiple files, controls how many files must satisfy the conditions. Use <code>any</code> when one matching file is enough, <code>all</code> when every matching file must pass, or <code>one</code> when exactly one matching file must pass.</li>
+<li><code>filePath</code>: Optional file context used to evaluate PDM variables and file placeholders.</li>
+<li><code>search</code>: Optional search query. When supplied, PDMShell evaluates the condition against the files returned by the search.</li>
+<li><code>directory</code>: Optional vault folder used as the search scope. Only valid with <a href="SEARCH.html"><code>search</code></a>.</li>
+<li><code>recursive</code>: Includes subfolders when used with <a href="SEARCH.html"><code>search</code></a>.</li>
 </ul>
-<h2 id="examples" sourcefile="src/UNTIL.md" sourcestartlinenumber="25">Examples</h2>
-<pre><code class="lang-bash" sourcefile="src/UNTIL.md" sourcestartlinenumber="26">until -conditions &quot;$localPath exists&quot; -timeout 60
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash">until -conditions &quot;$localPath exists&quot; -timeout 60
 
 until -conditions &quot;$folderPath\$fileNameWithoutExtension.pdf exists&quot; -timeout 500
 
@@ -116,298 +116,298 @@ until -conditions &quot;1 + 3 greater than 3&quot; -timeout 5
 
 until -search &quot;Name=%.sldprt;Locked=true&quot; -conditions &quot;$(Description.@) contains ECO&quot; -match any -timeout 120
 </code></pre>
-<h2 id="condition-format" sourcefile="src/UNTIL.md" sourcestartlinenumber="40">Condition Format</h2>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="41">The visual editor builds conditions as three fields:</p>
-<table sourcefile="src/UNTIL.md" sourcestartlinenumber="43">
+<h2 id="condition-format">Condition Format</h2>
+<p>The visual editor builds conditions as three fields:</p>
+<table>
 <thead>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="43">
-<th sourcefile="src/UNTIL.md" sourcestartlinenumber="43">Field</th>
-<th sourcefile="src/UNTIL.md" sourcestartlinenumber="43">Meaning</th>
-<th sourcefile="src/UNTIL.md" sourcestartlinenumber="43">Example</th>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="45">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="45">Variable / placeholder</td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="45">The left side of the condition. This can be a PDM variable, placeholder, path, text, or arithmetic expression.</td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="45"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="45">$localPath</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="45">$(Description.@)</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="45">1 + 3</code></td>
+<tr>
+<td>Variable / placeholder</td>
+<td>The left side of the condition. This can be a PDM variable, placeholder, path, text, or arithmetic expression.</td>
+<td><code>$localPath</code>, <code>$(Description.@)</code>, <code>1 + 3</code></td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="46">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="46">Operator</td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="46">The operation to apply.</td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="46"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="46">Exists</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="46">Contains</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="46">Equal To</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="46">Greater Than</code></td>
+<tr>
+<td>Operator</td>
+<td>The operation to apply.</td>
+<td><code>Exists</code>, <code>Contains</code>, <code>Equal To</code>, <code>Greater Than</code></td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="47">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="47">Value</td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="47">The right side of the condition. Hidden for <code sourcefile="src/UNTIL.md" sourcestartlinenumber="47">Exists</code>.</td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="47"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="47">A</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="47">3</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="47">$fileName</code></td>
+<tr>
+<td>Value</td>
+<td>The right side of the condition. Hidden for <code>Exists</code>.</td>
+<td><code>A</code>, <code>3</code>, <code>$fileName</code></td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="49">Examples of generated conditions:</p>
-<pre><code class="lang-bash" sourcefile="src/UNTIL.md" sourcestartlinenumber="51">$localPath exists
+<p>Examples of generated conditions:</p>
+<pre><code class="lang-bash">$localPath exists
 &quot;$(Description.@)&quot; contains &quot;A&quot;
 &quot;$(Revision.@)&quot; equals &quot;A&quot;
 1 + 3 greater than 3
 </code></pre>
-<div class="NOTE" sourcefile="src/UNTIL.md" sourcestartlinenumber="58">
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="59">PDM variables use <code sourcefile="src/UNTIL.md" sourcestartlinenumber="59">$(</code> and <code sourcefile="src/UNTIL.md" sourcestartlinenumber="59">)</code>, for example <code sourcefile="src/UNTIL.md" sourcestartlinenumber="59">$(Description.@)</code>. When writing conditions manually, quote PDM variable tokens if they appear inside a larger expression so the parser does not treat the parentheses as condition grouping.</p>
+<p>PDM variables use <code>$(</code> and <code>)</code>, for example <code>$(Description.@)</code>. When writing conditions manually, quote PDM variable tokens if they appear inside a larger expression so the parser does not treat the parentheses as condition grouping.</p>
 </div>
-<h2 id="supported-operators" sourcefile="src/UNTIL.md" sourcestartlinenumber="61">Supported Operators</h2>
-<ul sourcefile="src/UNTIL.md" sourcestartlinenumber="62">
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="62"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="62">exists</code> or <code sourcefile="src/UNTIL.md" sourcestartlinenumber="62">exist</code></li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="63"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="63">equals</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="63">equal</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="63">is</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="63">=</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="63">==</code></li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="64"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="64">not equals</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="64">!=</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="64">&lt;&gt;</code></li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="65"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="65">contains</code></li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="66"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="66">starts with</code></li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="67"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="67">ends with</code></li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="68"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="68">matches</code> or <code sourcefile="src/UNTIL.md" sourcestartlinenumber="68">regex</code></li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="69"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="69">less than</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="69">&lt;</code></li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="70"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="70">less than or equal</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="70">&lt;=</code></li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="71"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="71">greater than</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="71">&gt;</code></li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="72"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="72">greater than or equal</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="72">&gt;=</code></li>
+<h2 id="supported-operators">Supported Operators</h2>
+<ul>
+<li><code>exists</code> or <code>exist</code></li>
+<li><code>equals</code>, <code>equal</code>, <code>is</code>, <code>=</code>, <code>==</code></li>
+<li><code>not equals</code>, <code>!=</code>, <code>&lt;&gt;</code></li>
+<li><code>contains</code></li>
+<li><code>starts with</code></li>
+<li><code>ends with</code></li>
+<li><code>matches</code> or <code>regex</code></li>
+<li><code>less than</code>, <code>&lt;</code></li>
+<li><code>less than or equal</code>, <code>&lt;=</code></li>
+<li><code>greater than</code>, <code>&gt;</code></li>
+<li><code>greater than or equal</code>, <code>&gt;=</code></li>
 </ul>
-<h2 id="exists-conditions" sourcefile="src/UNTIL.md" sourcestartlinenumber="74">Exists Conditions</h2>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="75">Use <code sourcefile="src/UNTIL.md" sourcestartlinenumber="75">exists</code> when the condition should wait for a file or folder path.</p>
-<pre><code class="lang-bash" sourcefile="src/UNTIL.md" sourcestartlinenumber="77">$localPath exists
+<h2 id="exists-conditions">Exists Conditions</h2>
+<p>Use <code>exists</code> when the condition should wait for a file or folder path.</p>
+<pre><code class="lang-bash">$localPath exists
 $folderPath\ready.txt exists
 file exists &quot;$folderPath\ready.txt&quot;
 folder exists &quot;$folderPath&quot;
 process exists &quot;notepad&quot;
 </code></pre>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="85">When the left side is not explicitly <code sourcefile="src/UNTIL.md" sourcestartlinenumber="85">file</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="85">folder</code>, or <code sourcefile="src/UNTIL.md" sourcestartlinenumber="85">process</code>, PDMShell treats the condition as a file exists check by default. If the value looks like a folder path, PDMShell evaluates it as a folder check.</p>
-<h2 id="grouping-conditions" sourcefile="src/UNTIL.md" sourcestartlinenumber="87">Grouping Conditions</h2>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="88">Use <code sourcefile="src/UNTIL.md" sourcestartlinenumber="88">and</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="88">or</code>, and parentheses to combine checks.</p>
-<pre><code class="lang-bash" sourcefile="src/UNTIL.md" sourcestartlinenumber="90">$folderPath\ready.pdf exists and $folderPath\ready.dxf exists
+<p>When the left side is not explicitly <code>file</code>, <code>folder</code>, or <code>process</code>, PDMShell treats the condition as a file exists check by default. If the value looks like a folder path, PDMShell evaluates it as a folder check.</p>
+<h2 id="grouping-conditions">Grouping Conditions</h2>
+<p>Use <code>and</code>, <code>or</code>, and parentheses to combine checks.</p>
+<pre><code class="lang-bash">$folderPath\ready.pdf exists and $folderPath\ready.dxf exists
 
 ($folderPath\ready.pdf exists or $folderPath\ready.dxf exists) and &quot;$(Description.@)&quot; contains &quot;Released&quot;
 </code></pre>
-<h2 id="placeholders" sourcefile="src/UNTIL.md" sourcestartlinenumber="96">Placeholders</h2>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="97">The <code sourcefile="src/UNTIL.md" sourcestartlinenumber="97">until</code> command supports dynamic placeholders in conditions. The most commonly used placeholders are:</p>
-<table sourcefile="src/UNTIL.md" sourcestartlinenumber="99">
+<h2 id="placeholders">Placeholders</h2>
+<p>The <code>until</code> command supports dynamic placeholders in conditions. The most commonly used placeholders are:</p>
+<table>
 <thead>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="99">
-<th sourcefile="src/UNTIL.md" sourcestartlinenumber="99">Placeholder</th>
-<th sourcefile="src/UNTIL.md" sourcestartlinenumber="99">Meaning</th>
+<tr>
+<th>Placeholder</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="101">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="101"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="101">$localPath</code> / <code sourcefile="src/UNTIL.md" sourcestartlinenumber="101">$filePath</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="101">Local path of the current file, or folder path when the context is a folder.</td>
+<tr>
+<td><code>$localPath</code> / <code>$filePath</code></td>
+<td>Local path of the current file, or folder path when the context is a folder.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="102">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="102"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="102">$folderPath</code> / <code sourcefile="src/UNTIL.md" sourcestartlinenumber="102">$directory</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="102">Local path of the file folder or current folder.</td>
+<tr>
+<td><code>$folderPath</code> / <code>$directory</code></td>
+<td>Local path of the file folder or current folder.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="103">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="103"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="103">$fileName</code> / <code sourcefile="src/UNTIL.md" sourcestartlinenumber="103">$filename</code> / <code sourcefile="src/UNTIL.md" sourcestartlinenumber="103">$name</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="103">File name with extension.</td>
+<tr>
+<td><code>$fileName</code> / <code>$filename</code> / <code>$name</code></td>
+<td>File name with extension.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="104">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="104"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="104">$fileNameWithoutExtension</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="104">File name without extension.</td>
+<tr>
+<td><code>$fileNameWithoutExtension</code></td>
+<td>File name without extension.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="105">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="105"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="105">$extension</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="105">File extension.</td>
+<tr>
+<td><code>$extension</code></td>
+<td>File extension.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="106">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="106"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="106">$id</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="106">File or folder ID.</td>
+<tr>
+<td><code>$id</code></td>
+<td>File or folder ID.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="107">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="107"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="107">$version</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="107">Current file version.</td>
+<tr>
+<td><code>$version</code></td>
+<td>Current file version.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="108">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="108"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="108">$revision</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="108">Current file revision.</td>
+<tr>
+<td><code>$revision</code></td>
+<td>Current file revision.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="109">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="109"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="109">$folderName</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="109">Folder name.</td>
+<tr>
+<td><code>$folderName</code></td>
+<td>Folder name.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="110">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="110"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="110">$folderID</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="110">Folder ID.</td>
+<tr>
+<td><code>$folderID</code></td>
+<td>Folder ID.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="111">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="111"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="111">$vaultName</code> / <code sourcefile="src/UNTIL.md" sourcestartlinenumber="111">$vaultname</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="111">Vault name.</td>
+<tr>
+<td><code>$vaultName</code> / <code>$vaultname</code></td>
+<td>Vault name.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="112">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="112"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="112">$vaultRootFolder</code> / <code sourcefile="src/UNTIL.md" sourcestartlinenumber="112">$vaultrootfolder</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="112">Local path of the vault root folder.</td>
+<tr>
+<td><code>$vaultRootFolder</code> / <code>$vaultrootfolder</code></td>
+<td>Local path of the vault root folder.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="113">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="113"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="113">$GUID</code> / <code sourcefile="src/UNTIL.md" sourcestartlinenumber="113">$guid</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="113">Script or task GUID context when available.</td>
+<tr>
+<td><code>$GUID</code> / <code>$guid</code></td>
+<td>Script or task GUID context when available.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="114">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="114"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="114">$taskName</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="114">Task name context when available.</td>
+<tr>
+<td><code>$taskName</code></td>
+<td>Task name context when available.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="115">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="115"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="115">$tempFolder</code> / <code sourcefile="src/UNTIL.md" sourcestartlinenumber="115">$TempFolder</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="115">Windows temporary folder.</td>
+<tr>
+<td><code>$tempFolder</code> / <code>$TempFolder</code></td>
+<td>Windows temporary folder.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="116">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="116"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="116">$machineName</code> / <code sourcefile="src/UNTIL.md" sourcestartlinenumber="116">$computerName</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="116">Current machine name.</td>
+<tr>
+<td><code>$machineName</code> / <code>$computerName</code></td>
+<td>Current machine name.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="117">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="117"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="117">$userName</code> / <code sourcefile="src/UNTIL.md" sourcestartlinenumber="117">$username</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="117">PDM logged-in user, or Windows user when no PDM user is available.</td>
+<tr>
+<td><code>$userName</code> / <code>$username</code></td>
+<td>PDM logged-in user, or Windows user when no PDM user is available.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="118">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="118"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="118">$username.firstName</code> / <code sourcefile="src/UNTIL.md" sourcestartlinenumber="118">$username.lastName</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="118">PDM logged-in user's first and last name when available.</td>
+<tr>
+<td><code>$username.firstName</code> / <code>$username.lastName</code></td>
+<td>PDM logged-in user's first and last name when available.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="119">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="119"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="119">$username.FullName</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="119">PDM logged-in user's full name when available.</td>
+<tr>
+<td><code>$username.FullName</code></td>
+<td>PDM logged-in user's full name when available.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="120">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="120"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="120">$username.email</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="120">PDM logged-in user's email address when available.</td>
+<tr>
+<td><code>$username.email</code></td>
+<td>PDM logged-in user's email address when available.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="121">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="121"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="121">$windowsUser</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="121">Windows user name.</td>
+<tr>
+<td><code>$windowsUser</code></td>
+<td>Windows user name.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="122">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="122"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="122">$userDomain</code> / <code sourcefile="src/UNTIL.md" sourcestartlinenumber="122">$domain</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="122">Windows user domain.</td>
+<tr>
+<td><code>$userDomain</code> / <code>$domain</code></td>
+<td>Windows user domain.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="123">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="123"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="123">$configuration</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="123">Current configuration context when available.</td>
+<tr>
+<td><code>$configuration</code></td>
+<td>Current configuration context when available.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="124">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="124"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="124">$value</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="124">Current value context when available.</td>
+<tr>
+<td><code>$value</code></td>
+<td>Current value context when available.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="125">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="125"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="125">$completefilename</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="125">Legacy complete file path placeholder.</td>
+<tr>
+<td><code>$completefilename</code></td>
+<td>Legacy complete file path placeholder.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="126">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="126"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="126">$completefoldername</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="126">Legacy complete folder path placeholder.</td>
+<tr>
+<td><code>$completefoldername</code></td>
+<td>Legacy complete folder path placeholder.</td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="128">Date and time placeholders:</p>
-<table sourcefile="src/UNTIL.md" sourcestartlinenumber="130">
+<p>Date and time placeholders:</p>
+<table>
 <thead>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="130">
-<th sourcefile="src/UNTIL.md" sourcestartlinenumber="130">Placeholder</th>
-<th sourcefile="src/UNTIL.md" sourcestartlinenumber="130">Meaning</th>
+<tr>
+<th>Placeholder</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="132">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="132"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="132">$yyyy</code> / <code sourcefile="src/UNTIL.md" sourcestartlinenumber="132">$year</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="132">Four-digit year.</td>
+<tr>
+<td><code>$yyyy</code> / <code>$year</code></td>
+<td>Four-digit year.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="133">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="133"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="133">$yy</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="133">Two-digit year.</td>
+<tr>
+<td><code>$yy</code></td>
+<td>Two-digit year.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="134">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="134"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="134">$MM</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="134">Two-digit month number.</td>
+<tr>
+<td><code>$MM</code></td>
+<td>Two-digit month number.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="135">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="135"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="135">$M</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="135">Month number.</td>
+<tr>
+<td><code>$M</code></td>
+<td>Month number.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="136">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="136"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="136">$dd</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="136">Two-digit day of month.</td>
+<tr>
+<td><code>$dd</code></td>
+<td>Two-digit day of month.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="137">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="137"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="137">$d</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="137">Day of month.</td>
+<tr>
+<td><code>$d</code></td>
+<td>Day of month.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="138">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="138"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="138">$month</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="138">Full month name.</td>
+<tr>
+<td><code>$month</code></td>
+<td>Full month name.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="139">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="139"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="139">$mon</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="139">Short month name.</td>
+<tr>
+<td><code>$mon</code></td>
+<td>Short month name.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="140">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="140"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="140">$day</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="140">Full day name.</td>
+<tr>
+<td><code>$day</code></td>
+<td>Full day name.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="141">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="141"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="141">$dayShort</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="141">Short day name.</td>
+<tr>
+<td><code>$dayShort</code></td>
+<td>Short day name.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="142">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="142"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="142">$HH</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="142">24-hour hour.</td>
+<tr>
+<td><code>$HH</code></td>
+<td>24-hour hour.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="143">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="143"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="143">$hh</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="143">12-hour hour.</td>
+<tr>
+<td><code>$hh</code></td>
+<td>12-hour hour.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="144">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="144"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="144">$mi</code> / <code sourcefile="src/UNTIL.md" sourcestartlinenumber="144">$mm</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="144">Minutes.</td>
+<tr>
+<td><code>$mi</code> / <code>$mm</code></td>
+<td>Minutes.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="145">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="145"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="145">$ss</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="145">Seconds.</td>
+<tr>
+<td><code>$ss</code></td>
+<td>Seconds.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="146">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="146"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="146">$tt</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="146">AM/PM designator.</td>
+<tr>
+<td><code>$tt</code></td>
+<td>AM/PM designator.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="147">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="147"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="147">$timestamp</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="147">Timestamp in <code sourcefile="src/UNTIL.md" sourcestartlinenumber="147">yyyyMMdd_HHmmss</code> format.</td>
+<tr>
+<td><code>$timestamp</code></td>
+<td>Timestamp in <code>yyyyMMdd_HHmmss</code> format.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="148">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="148"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="148">$date</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="148">Date in <code sourcefile="src/UNTIL.md" sourcestartlinenumber="148">yyyy-MM-dd</code> format.</td>
+<tr>
+<td><code>$date</code></td>
+<td>Date in <code>yyyy-MM-dd</code> format.</td>
 </tr>
-<tr sourcefile="src/UNTIL.md" sourcestartlinenumber="149">
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="149"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="149">$time</code></td>
-<td sourcefile="src/UNTIL.md" sourcestartlinenumber="149">Time in <code sourcefile="src/UNTIL.md" sourcestartlinenumber="149">HH-mm-ss</code> format.</td>
+<tr>
+<td><code>$time</code></td>
+<td>Time in <code>HH-mm-ss</code> format.</td>
 </tr>
 </tbody>
 </table>
-<div class="NOTE" sourcefile="src/UNTIL.md" sourcestartlinenumber="151">
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="152">Placeholder names are evaluated case-insensitively in until conditions.</p>
+<p>Placeholder names are evaluated case-insensitively in until conditions.</p>
 </div>
-<h2 id="pdm-variables" sourcefile="src/UNTIL.md" sourcestartlinenumber="154">PDM Variables</h2>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="155">Use <code sourcefile="src/UNTIL.md" sourcestartlinenumber="155">$(VariableName.ConfigurationName)</code> to read a PDM variable from the file context.</p>
-<pre><code class="lang-bash" sourcefile="src/UNTIL.md" sourcestartlinenumber="157">&quot;$(Description.@)&quot; contains &quot;ECO&quot;
+<h2 id="pdm-variables">PDM Variables</h2>
+<p>Use <code>$(VariableName.ConfigurationName)</code> to read a PDM variable from the file context.</p>
+<pre><code class="lang-bash">&quot;$(Description.@)&quot; contains &quot;ECO&quot;
 &quot;$(Revision.@)&quot; equals &quot;A&quot;
 </code></pre>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="162">If the configuration is omitted, PDMShell uses <code sourcefile="src/UNTIL.md" sourcestartlinenumber="162">@</code>.</p>
-<h2 id="arithmetic-comparisons" sourcefile="src/UNTIL.md" sourcestartlinenumber="164">Arithmetic Comparisons</h2>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="165">Numeric expressions can be used on either side of a comparison.</p>
-<pre><code class="lang-bash" sourcefile="src/UNTIL.md" sourcestartlinenumber="167">1 + 3 greater than 3
+<p>If the configuration is omitted, PDMShell uses <code>@</code>.</p>
+<h2 id="arithmetic-comparisons">Arithmetic Comparisons</h2>
+<p>Numeric expressions can be used on either side of a comparison.</p>
+<pre><code class="lang-bash">1 + 3 greater than 3
 2 * 5 equals 10
 &quot;$(Quantity.@)&quot; greater than 0
 </code></pre>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="173">Arithmetic is evaluated only for simple numeric expressions containing numbers, parentheses, and arithmetic operators.</p>
-<h2 id="remarks" sourcefile="src/UNTIL.md" sourcestartlinenumber="175">Remarks</h2>
-<ul sourcefile="src/UNTIL.md" sourcestartlinenumber="176">
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="176">Use <code sourcefile="src/UNTIL.md" sourcestartlinenumber="176">filePath</code> when you need placeholders or PDM variables to be evaluated against one specific file.</li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="177">Use <a href="SEARCH.html" sourcefile="src/UNTIL.md" sourcestartlinenumber="177"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="177">search</code></a> and <code sourcefile="src/UNTIL.md" sourcestartlinenumber="177">match</code> when the same condition should be evaluated across multiple matching files.</li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="178"><code sourcefile="src/UNTIL.md" sourcestartlinenumber="178">exists</code> does not need a value in the visual editor.</li>
-<li sourcefile="src/UNTIL.md" sourcestartlinenumber="179">For generated PDF/DXF workflows, use placeholders such as <code sourcefile="src/UNTIL.md" sourcestartlinenumber="179">$folderPath</code>, <code sourcefile="src/UNTIL.md" sourcestartlinenumber="179">$fileNameWithoutExtension</code>, and <code sourcefile="src/UNTIL.md" sourcestartlinenumber="179">$extension</code> to avoid hard-coded output paths.</li>
+<p>Arithmetic is evaluated only for simple numeric expressions containing numbers, parentheses, and arithmetic operators.</p>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>Use <code>filePath</code> when you need placeholders or PDM variables to be evaluated against one specific file.</li>
+<li>Use <a href="SEARCH.html"><code>search</code></a> and <code>match</code> when the same condition should be evaluated across multiple matching files.</li>
+<li><code>exists</code> does not need a value in the visual editor.</li>
+<li>For generated PDF/DXF workflows, use placeholders such as <code>$folderPath</code>, <code>$fileNameWithoutExtension</code>, and <code>$extension</code> to avoid hard-coded output paths.</li>
 </ul>
-<h2 id="availability" sourcefile="src/UNTIL.md" sourcestartlinenumber="181">Availability</h2>
-<p sourcefile="src/UNTIL.md" sourcestartlinenumber="182">Available since PDMShell 4.0.7.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 4.0.7.</p>
 
 </article>
 

@@ -85,65 +85,65 @@
         </div>
 
         <article data-uid="">
-<h1 id="printfromsource-command" sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="5">PRINTFROMSOURCE Command</h1>
+<h1 id="printfromsource-command">PRINTFROMSOURCE Command</h1>
 
-<h2 id="description" sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="7">The <code sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="7">printfromsource</code> command prints file information for paths listed in a CSV source. The CSV file must contain a header and a list of complete file paths in the first column.</p>
-<hr sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="9">
-<h2 id="syntax" sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="11">Syntax</h2>
-<pre><code class="lang-bash" sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="12">printfromsource -filePath -csv 
+<h2 id="description">Description</h2>
+<p>The <code>printfromsource</code> command prints file information for paths listed in a CSV source. The CSV file must contain a header and a list of complete file paths in the first column.</p>
+<hr>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-bash">printfromsource -filePath -csv 
 </code></pre>
-<h2 id="parameters" sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="16">Parameters</h2>
-<ul sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="17">
-<li sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="17"><code sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="17">filePath</code>: (Required) The source file path. This must be a CSV file with one column:</li>
-<li sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="18">file Path: Complete file path.</li>
-<li sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="19"><code sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="19">csv</code>: Specifies the output csv. This will contains information about files from the source parameter.</li>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>filePath</code>: (Required) The source file path. This must be a CSV file with one column:</li>
+<li>file Path: Complete file path.</li>
+<li><code>csv</code>: Specifies the output csv. This will contains information about files from the source parameter.</li>
 </ul>
-<h2 id="examples" sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="21">Examples</h2>
-<p sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="22">Rename files using a source CSV file:</p>
-<pre><code class="lang-bash" sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="23">printfromsource -filePath &quot;source.csv&quot; -csv &quot;output.csv&quot; 
+<h2 id="examples">Examples</h2>
+<p>Rename files using a source CSV file:</p>
+<pre><code class="lang-bash">printfromsource -filePath &quot;source.csv&quot; -csv &quot;output.csv&quot; 
 </code></pre>
-<h2 id="remarks" sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="27">Remarks</h2>
-<ul sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="28">
-<li sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="28">The <code sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="28">filePath</code> parameter is mandatory and must point to a valid CSV file.</li>
-<li sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="29">The <code sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="29">csv</code> is the output from the verification process <code sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="29">printfromsource</code> performs:</li>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>The <code>filePath</code> parameter is mandatory and must point to a valid CSV file.</li>
+<li>The <code>csv</code> is the output from the verification process <code>printfromsource</code> performs:</li>
 </ul>
-<table sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="31">
+<table>
 <thead>
-<tr sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="31">
-<th sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="31">ID</th>
-<th sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="31">Complete File Path</th>
-<th sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="31">Folder ID</th>
-<th sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="31">Checked Out</th>
-<th sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="31">Where Used ID</th>
+<tr>
+<th>ID</th>
+<th>Complete File Path</th>
+<th>Folder ID</th>
+<th>Checked Out</th>
+<th>Where Used ID</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="33">
-<td sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="33">1</td>
-<td sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="33">C:\Vault\ProjectA\Part1.SLDPRT</td>
-<td sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="33">105</td>
-<td sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="33">FALSE</td>
-<td sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="33">5021</td>
+<tr>
+<td>1</td>
+<td>C:\Vault\ProjectA\Part1.SLDPRT</td>
+<td>105</td>
+<td>FALSE</td>
+<td>5021</td>
 </tr>
-<tr sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="34">
-<td sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="34">2</td>
-<td sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="34">C:\Vault\ProjectB\Drawing1.SLDDRW</td>
-<td sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="34">106</td>
-<td sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="34">TRUE</td>
-<td sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="34">5022</td>
+<tr>
+<td>2</td>
+<td>C:\Vault\ProjectB\Drawing1.SLDDRW</td>
+<td>106</td>
+<td>TRUE</td>
+<td>5022</td>
 </tr>
-<tr sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="35">
-<td sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="35">3</td>
-<td sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="35">C:\Vault\ProjectC\Assembly1.SLDASM</td>
-<td sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="35">107</td>
-<td sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="35">FALSE</td>
-<td sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="35">5023</td>
+<tr>
+<td>3</td>
+<td>C:\Vault\ProjectC\Assembly1.SLDASM</td>
+<td>107</td>
+<td>FALSE</td>
+<td>5023</td>
 </tr>
 </tbody>
 </table>
-<h2 id="availability" sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="37">Availability</h2>
-<p sourcefile="src/PRINTFROMSOURCE.md" sourcestartlinenumber="38">Available since PDMShell 2.0.0 or earlier.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

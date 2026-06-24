@@ -85,30 +85,30 @@
         </div>
 
         <article data-uid="">
-<h1 id="wait-command" sourcefile="src/WAIT.md" sourcestartlinenumber="5">WAIT Command</h1>
+<h1 id="wait-command">WAIT Command</h1>
 
-<h2 id="description" sourcefile="src/WAIT.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/WAIT.md" sourcestartlinenumber="7">Waits for the specified number of seconds, then continues to the next command.</p>
-<p sourcefile="src/WAIT.md" sourcestartlinenumber="9">Use <code sourcefile="src/WAIT.md" sourcestartlinenumber="9">wait</code> when a script needs a fixed pause between commands.</p>
-<h2 id="syntax" sourcefile="src/WAIT.md" sourcestartlinenumber="11">Syntax</h2>
-<pre><code class="lang-bash" sourcefile="src/WAIT.md" sourcestartlinenumber="12">wait -timeout seconds
+<h2 id="description">Description</h2>
+<p>Waits for the specified number of seconds, then continues to the next command.</p>
+<p>Use <code>wait</code> when a script needs a fixed pause between commands.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-bash">wait -timeout seconds
 </code></pre>
-<h2 id="parameters" sourcefile="src/WAIT.md" sourcestartlinenumber="16">Parameters</h2>
-<ul sourcefile="src/WAIT.md" sourcestartlinenumber="17">
-<li sourcefile="src/WAIT.md" sourcestartlinenumber="17"><code sourcefile="src/WAIT.md" sourcestartlinenumber="17">timeout</code>: Required. Number of seconds to wait. The value must be greater than zero.</li>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>timeout</code>: Required. Number of seconds to wait. The value must be greater than zero.</li>
 </ul>
-<h2 id="examples" sourcefile="src/WAIT.md" sourcestartlinenumber="19">Examples</h2>
-<pre><code class="lang-bash" sourcefile="src/WAIT.md" sourcestartlinenumber="20">wait -timeout 5
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash">wait -timeout 5
 
 wait -timeout 30
 </code></pre>
-<h2 id="remarks" sourcefile="src/WAIT.md" sourcestartlinenumber="26">Remarks</h2>
-<ul sourcefile="src/WAIT.md" sourcestartlinenumber="27">
-<li sourcefile="src/WAIT.md" sourcestartlinenumber="27"><code sourcefile="src/WAIT.md" sourcestartlinenumber="27">wait</code> does not evaluate file, folder, process, variable, or search conditions.</li>
-<li sourcefile="src/WAIT.md" sourcestartlinenumber="28">Use <a href="UNTIL.html" sourcefile="src/WAIT.md" sourcestartlinenumber="28"><code sourcefile="src/WAIT.md" sourcestartlinenumber="28">until</code></a> when a script needs to wait until a condition becomes true.</li>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li><code>wait</code> does not evaluate file, folder, process, variable, or search conditions.</li>
+<li>Use <a href="UNTIL.html"><code>until</code></a> when a script needs to wait until a condition becomes true.</li>
 </ul>
-<h2 id="availability" sourcefile="src/WAIT.md" sourcestartlinenumber="30">Availability</h2>
-<p sourcefile="src/WAIT.md" sourcestartlinenumber="31">Available since PDMShell 4.0.4.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 4.0.4.</p>
 
 </article>
 

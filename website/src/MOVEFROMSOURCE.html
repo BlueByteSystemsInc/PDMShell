@@ -85,65 +85,65 @@
         </div>
 
         <article data-uid="">
-<h1 id="movefromsource-command" sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="5">MOVEFROMSOURCE Command</h1>
+<h1 id="movefromsource-command">MOVEFROMSOURCE Command</h1>
 
-<h2 id="description" sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="7">The <code sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="7">movefromsource</code> command moves file(s) in the vault using a CSV file as input.</p>
-<p sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="9">Each row in the CSV specifies:</p>
-<ul sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="10">
-<li sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="10">The File ID</li>
-<li sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="11">The Target Directory</li>
+<h2 id="description">Description</h2>
+<p>The <code>movefromsource</code> command moves file(s) in the vault using a CSV file as input.</p>
+<p>Each row in the CSV specifies:</p>
+<ul>
+<li>The File ID</li>
+<li>The Target Directory</li>
 </ul>
-<p sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="13">This command is designed for bulk relocation of files.</p>
-<p sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="15">When a file is moved:</p>
-<ul sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="16">
-<li sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="16">All references are automatically updated by SOLIDWORKS PDM.</li>
-<li sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="17">Parent references are updated automatically.</li>
-<li sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="18">File history and versions are preserved.</li>
+<p>This command is designed for bulk relocation of files.</p>
+<p>When a file is moved:</p>
+<ul>
+<li>All references are automatically updated by SOLIDWORKS PDM.</li>
+<li>Parent references are updated automatically.</li>
+<li>File history and versions are preserved.</li>
 </ul>
-<hr sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="20">
-<h2 id="syntax" sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="22">Syntax</h2>
-<pre><code class="lang-bash" sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="23">movefromsource -source
+<hr>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-bash">movefromsource -source
 </code></pre>
-<hr sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="26">
-<h2 id="parameters" sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="28">Parameters</h2>
-<ul sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="29">
-<li sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="29"><p sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="29"><code sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="29">source</code><br>
+<hr>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><p><code>source</code><br>
 Path to a CSV file containing file IDs and target directories.<br>
 The CSV must contain at least two columns:</p>
-<ul sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="33">
-<li sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="33"><code sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="33">FileID</code></li>
-<li sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="34"><code sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="34">TargetDirectory</code></li>
+<ul>
+<li><code>FileID</code></li>
+<li><code>TargetDirectory</code></li>
 </ul>
 </li>
 </ul>
-<hr sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="36">
-<h2 id="csv-format" sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="38">CSV Format</h2>
-<h3 id="with-header" sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="39">With Header:</h3>
-<p sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="41">FileID,TargetDirectory<br>
+<hr>
+<h2 id="csv-format">CSV Format</h2>
+<h3 id="with-header">With Header:</h3>
+<p>FileID,TargetDirectory<br>
 1234,\Released<br>
 5678,\Archive\2026</p>
-<h3 id="without-header" sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="45">Without Header:</h3>
-<p sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="47">1234,\Released<br>
+<h3 id="without-header">Without Header:</h3>
+<p>1234,\Released<br>
 5678,\Archive\2026</p>
-<hr sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="50">
-<h2 id="examples" sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="52">Examples</h2>
-<h3 id="example-1-basic-csv-move" sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="53">Example 1: Basic CSV Move</h3>
-<pre><code class="lang-bash" sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="54">movefromsource -source &quot;C:\temp\movefiles.csv&quot;
+<hr>
+<h2 id="examples">Examples</h2>
+<h3 id="example-1-basic-csv-move">Example 1: Basic CSV Move</h3>
+<pre><code class="lang-bash">movefromsource -source &quot;C:\temp\movefiles.csv&quot;
 ## Moves all files listed in the CSV to their respective target folders.
 </code></pre>
-<hr sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="58">
-<h2 id="notes" sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="60">Notes</h2>
-<ul sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="61">
-<li sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="61">Target directories must already exist in the vault.</li>
-<li sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="62">You must have permission to move the specified files.</li>
-<li sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="63">If a FileID does not exist, that row will be skipped and logged.</li>
-<li sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="64">If a move fails due to permission or state restrictions, it will be reported.</li>
-<li sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="65">Reference updates are handled automatically by SOLIDWORKS PDM.</li>
-<li sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="66">CSV rows with invalid format will be skipped and logged.</li>
+<hr>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Target directories must already exist in the vault.</li>
+<li>You must have permission to move the specified files.</li>
+<li>If a FileID does not exist, that row will be skipped and logged.</li>
+<li>If a move fails due to permission or state restrictions, it will be reported.</li>
+<li>Reference updates are handled automatically by SOLIDWORKS PDM.</li>
+<li>CSV rows with invalid format will be skipped and logged.</li>
 </ul>
-<h2 id="availability" sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="68">Availability</h2>
-<p sourcefile="src/MOVEFROMSOURCE.md" sourcestartlinenumber="69">Available since PDMShell 3.0.28.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 3.0.28.</p>
 
 </article>
 

@@ -85,33 +85,33 @@
         </div>
 
         <article data-uid="">
-<h1 id="on-demand-add-in-scripts" sourcefile="src/addin/command-menu.md" sourcestartlinenumber="5">On-demand add-in scripts</h1>
+<h1 id="on-demand-add-in-scripts">On-demand add-in scripts</h1>
 
-<p sourcefile="src/addin/command-menu.md" sourcestartlinenumber="7">Enable <strong sourcefile="src/addin/command-menu.md" sourcestartlinenumber="7">Menu</strong> when a script should appear as a right-click PDM command.</p>
-<p sourcefile="src/addin/command-menu.md" sourcestartlinenumber="9">Command menu scripts are on-demand add-in commands. They are not SOLIDWORKS PDM Tasks and they do not have to wait for a workflow transition or event trigger. Administrators configure the script once in the PDMShell add-in, then users launch it when needed from the PDM command menu against the selected file or folder. This is useful for repeatable operations such as file rename automation, metadata cleanup, export helpers, or any workflow where standard Dispatch actions are too limited for the required scripting logic.</p>
-<p sourcefile="src/addin/command-menu.md" sourcestartlinenumber="11">Enter the menu text exactly as it should appear in the menu. Use backslashes to group commands:</p>
-<pre><code class="lang-text" sourcefile="src/addin/command-menu.md" sourcestartlinenumber="13">PDMShell\Script 1
+<p>Enable <strong>Menu</strong> when a script should appear as a right-click PDM command.</p>
+<p>Command menu scripts are on-demand add-in commands. They are not SOLIDWORKS PDM Tasks and they do not have to wait for a workflow transition or event trigger. Administrators configure the script once in the PDMShell add-in, then users launch it when needed from the PDM command menu against the selected file or folder. This is useful for repeatable operations such as file rename automation, metadata cleanup, export helpers, or any workflow where standard Dispatch actions are too limited for the required scripting logic.</p>
+<p>Enter the menu text exactly as it should appear in the menu. Use backslashes to group commands:</p>
+<pre><code class="lang-text">PDMShell\Script 1
 PDMShell\Rename Files
 PDMShell\Engineering\Create PDF
 </code></pre>
-<p sourcefile="src/addin/command-menu.md" sourcestartlinenumber="19">When the user clicks the command, the add-in checks permissions, evaluates conditions, and runs the script against the selected file or folder context.</p>
-<h2 id="video-run-a-script-on-demand" sourcefile="src/addin/command-menu.md" sourcestartlinenumber="21">Video: run a script on demand</h2>
-<p sourcefile="src/addin/command-menu.md" sourcestartlinenumber="23">This demo shows how the PDMShell add-in can run a script on demand inside SOLIDWORKS PDM. The example uses file rename scripting to show how custom logic can be launched directly from the PDM environment without creating a PDM Task.</p>
+<p>When the user clicks the command, the add-in checks permissions, evaluates conditions, and runs the script against the selected file or folder context.</p>
+<h2 id="video-run-a-script-on-demand">Video: run a script on demand</h2>
+<p>This demo shows how the PDMShell add-in can run a script on demand inside SOLIDWORKS PDM. The example uses file rename scripting to show how custom logic can be launched directly from the PDM environment without creating a PDM Task.</p>
 <div class="ratio ratio-16x9">
   <iframe src="https://www.youtube.com/embed/S7YZ04am8pI" title="Run PDMShell scripts on demand from SOLIDWORKS PDM" allowfullscreen></iframe>
 </div>
-<p sourcefile="src/addin/command-menu.md" sourcestartlinenumber="29"><a href="https://www.youtube.com/watch?v=S7YZ04am8pI" sourcefile="src/addin/command-menu.md" sourcestartlinenumber="29">Watch on YouTube</a></p>
-<h2 id="notes" sourcefile="src/addin/command-menu.md" sourcestartlinenumber="31">Notes</h2>
-<ul sourcefile="src/addin/command-menu.md" sourcestartlinenumber="33">
-<li sourcefile="src/addin/command-menu.md" sourcestartlinenumber="33">The command menu text is the user-facing label.</li>
-<li sourcefile="src/addin/command-menu.md" sourcestartlinenumber="34">The script name is the administrator-facing identifier in the Script Editor.</li>
-<li sourcefile="src/addin/command-menu.md" sourcestartlinenumber="35">If the menu command does not appear, reload the add-in after saving configuration changes.</li>
+<p><a href="https://www.youtube.com/watch?v=S7YZ04am8pI">Watch on YouTube</a></p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>The command menu text is the user-facing label.</li>
+<li>The script name is the administrator-facing identifier in the Script Editor.</li>
+<li>If the menu command does not appear, reload the add-in after saving configuration changes.</li>
 </ul>
-<h2 id="related-articles" sourcefile="src/addin/command-menu.md" sourcestartlinenumber="37">Related articles</h2>
-<ul sourcefile="src/addin/command-menu.md" sourcestartlinenumber="39">
-<li sourcefile="src/addin/command-menu.md" sourcestartlinenumber="39"><a href="permissions.html" sourcefile="src/addin/command-menu.md" sourcestartlinenumber="39">Permissions</a></li>
-<li sourcefile="src/addin/command-menu.md" sourcestartlinenumber="40"><a href="conditions.html" sourcefile="src/addin/command-menu.md" sourcestartlinenumber="40">Conditions</a></li>
-<li sourcefile="src/addin/command-menu.md" sourcestartlinenumber="41"><a href="runtime-execution.html" sourcefile="src/addin/command-menu.md" sourcestartlinenumber="41">Runtime execution</a></li>
+<h2 id="related-articles">Related articles</h2>
+<ul>
+<li><a href="permissions.html">Permissions</a></li>
+<li><a href="conditions.html">Conditions</a></li>
+<li><a href="runtime-execution.html">Runtime execution</a></li>
 </ul>
 
 </article>

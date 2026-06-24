@@ -85,222 +85,222 @@
         </div>
 
         <article data-uid="">
-<h1 id="runscript-command" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="6">RunScript command</h1>
+<h1 id="runscript-command">RunScript command</h1>
 
-<p sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="8"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="8">runscript</code> loads and runs a <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="8">.pdmshell</code> script file.</p>
-<p sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="10">Use it when you want to keep shared automation in one script and call it from another command, from the visual editor, or directly from <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="10">pdmcli.exe</code>.</p>
-<h2 id="syntax" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="12">Syntax</h2>
-<pre><code class="lang-pdmshell" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="14">runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
+<p><code>runscript</code> loads and runs a <code>.pdmshell</code> script file.</p>
+<p>Use it when you want to keep shared automation in one script and call it from another command, from the visual editor, or directly from <code>pdmcli.exe</code>.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-pdmshell">runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
 runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -filePath &quot;C:\Vault\Parts\1001.sldprt&quot;
 runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -search &quot;Name=%.sldprt&quot; -recursive
 runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -items &quot;123,45;678,90&quot;
 </code></pre>
-<h2 id="parameters" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="21">Parameters</h2>
-<table sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="23">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="23">
-<th sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="23">Parameter</th>
-<th sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="23">Required</th>
-<th sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="23">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="25">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="25"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="25">source</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="25">Yes</td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="25">Path to the <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="25">.pdmshell</code> script file to run.</td>
+<tr>
+<td><code>source</code></td>
+<td>Yes</td>
+<td>Path to the <code>.pdmshell</code> script file to run.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="26">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="26"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="26">filePath</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="26">No</td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="26">Runs the script with one file as the current file context.</td>
+<tr>
+<td><code>filePath</code></td>
+<td>No</td>
+<td>Runs the script with one file as the current file context.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="27">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="27"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="27">search</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="27">No</td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="27">Runs the script for files or folders returned by a PDM search.</td>
+<tr>
+<td><code>search</code></td>
+<td>No</td>
+<td>Runs the script for files or folders returned by a PDM search.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="28">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="28"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="28">recursive</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="28">No</td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="28">Includes child folders when used with <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="28">search</code>.</td>
+<tr>
+<td><code>recursive</code></td>
+<td>No</td>
+<td>Includes child folders when used with <code>search</code>.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="29">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="29"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="29">items</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="29">No</td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="29">Semicolon-separated file or folder ID pairs supplied by command-line integrations.</td>
+<tr>
+<td><code>items</code></td>
+<td>No</td>
+<td>Semicolon-separated file or folder ID pairs supplied by command-line integrations.</td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="31">Only one targeting mode is normally needed: <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="31">filePath</code>, <a href="SEARCH.html" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="31"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="31">search</code></a>, or <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="31">items</code>.</p>
-<h2 id="items-format" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="33">Items format</h2>
-<p sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="35">Use <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="35">items</code> when an external command already knows the PDM IDs to process.</p>
-<pre><code class="lang-pdmshell" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="37">runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -items &quot;123,45;678,90&quot;
+<p>Only one targeting mode is normally needed: <code>filePath</code>, <a href="SEARCH.html"><code>search</code></a>, or <code>items</code>.</p>
+<h2 id="items-format">Items format</h2>
+<p>Use <code>items</code> when an external command already knows the PDM IDs to process.</p>
+<pre><code class="lang-pdmshell">runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -items &quot;123,45;678,90&quot;
 </code></pre>
-<p sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="41">Each item is separated by a semicolon.</p>
-<table sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="43">
+<p>Each item is separated by a semicolon.</p>
+<table>
 <thead>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="43">
-<th sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="43">Item type</th>
-<th sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="43">Format</th>
-<th sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="43">Meaning</th>
+<tr>
+<th>Item type</th>
+<th>Format</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="45">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="45">File</td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="45"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="45">fileId,folderId</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="45">The first value is the file ID. The second value is the containing folder ID.</td>
+<tr>
+<td>File</td>
+<td><code>fileId,folderId</code></td>
+<td>The first value is the file ID. The second value is the containing folder ID.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="46">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="46">Folder</td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="46"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="46">folderId,parentFolderId</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="46">The first value is the folder ID. The second value is the parent folder ID.</td>
+<tr>
+<td>Folder</td>
+<td><code>folderId,parentFolderId</code></td>
+<td>The first value is the folder ID. The second value is the parent folder ID.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="command-line-shortcuts" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="48">Command-line shortcuts</h2>
-<p sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="50"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="50">pdmcli.exe</code> can detect a <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="50">.pdmshell</code> path and convert it to <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="50">runscript</code>.</p>
-<pre><code class="lang-powershell" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="52">pdmcli.exe &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
+<h2 id="command-line-shortcuts">Command-line shortcuts</h2>
+<p><code>pdmcli.exe</code> can detect a <code>.pdmshell</code> path and convert it to <code>runscript</code>.</p>
+<pre><code class="lang-powershell">pdmcli.exe &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
 pdmcli.exe &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -items &quot;123,45;678,90&quot;
 </code></pre>
-<p sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="57">Use <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="57">-edit</code> to open a script in the visual editor without executing it.</p>
-<pre><code class="lang-powershell" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="59">pdmcli.exe -edit &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
+<p>Use <code>-edit</code> to open a script in the visual editor without executing it.</p>
+<pre><code class="lang-powershell">pdmcli.exe -edit &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
 pdmcli.exe &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -edit
 </code></pre>
-<p sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="64">When <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="64">runscript</code> loads a script, the visual editor is hydrated only when the current editor is empty or clean. If the user has unsaved script changes, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="64">runscript</code> still executes normally but does not replace the editor contents.</p>
-<h2 id="placeholder-evaluation" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="66">Placeholder evaluation</h2>
-<p sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="68">When <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="68">runscript</code> is executed with <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="68">items</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="68">filePath</code>, or <a href="SEARCH.html" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="68"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="68">search</code></a>, placeholders are evaluated with the same context used by visual Run command execution.</p>
-<p sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="70">Normal lines run once. Consecutive item-specific lines run once for each resolved file or folder.</p>
-<p sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="72">An item-specific line is a line that contains a file, folder, vault, date/time, or PDM variable placeholder.</p>
-<h2 id="supported-placeholders" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="74">Supported placeholders</h2>
-<table sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="76">
+<p>When <code>runscript</code> loads a script, the visual editor is hydrated only when the current editor is empty or clean. If the user has unsaved script changes, <code>runscript</code> still executes normally but does not replace the editor contents.</p>
+<h2 id="placeholder-evaluation">Placeholder evaluation</h2>
+<p>When <code>runscript</code> is executed with <code>items</code>, <code>filePath</code>, or <a href="SEARCH.html"><code>search</code></a>, placeholders are evaluated with the same context used by visual Run command execution.</p>
+<p>Normal lines run once. Consecutive item-specific lines run once for each resolved file or folder.</p>
+<p>An item-specific line is a line that contains a file, folder, vault, date/time, or PDM variable placeholder.</p>
+<h2 id="supported-placeholders">Supported placeholders</h2>
+<table>
 <thead>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="76">
-<th sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="76">Placeholder</th>
-<th sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="76">Description</th>
+<tr>
+<th>Placeholder</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="78">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="78"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="78">$localPath</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="78">$filePath</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="78">Local path to the current file.</td>
+<tr>
+<td><code>$localPath</code>, <code>$filePath</code></td>
+<td>Local path to the current file.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="79">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="79"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="79">$fileName</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="79">$filename</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="79">$name</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="79">Current file or folder name.</td>
+<tr>
+<td><code>$fileName</code>, <code>$filename</code>, <code>$name</code></td>
+<td>Current file or folder name.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="80">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="80"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="80">$fileNameWithoutExtension</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="80">File name without extension.</td>
+<tr>
+<td><code>$fileNameWithoutExtension</code></td>
+<td>File name without extension.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="81">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="81"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="81">$extension</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="81">File extension.</td>
+<tr>
+<td><code>$extension</code></td>
+<td>File extension.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="82">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="82"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="82">$id</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="82">Current file or folder ID.</td>
+<tr>
+<td><code>$id</code></td>
+<td>Current file or folder ID.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="83">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="83"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="83">$folderPath</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="83">$directory</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="83">Current folder path.</td>
+<tr>
+<td><code>$folderPath</code>, <code>$directory</code></td>
+<td>Current folder path.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="84">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="84"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="84">$folderName</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="84">Current folder name.</td>
+<tr>
+<td><code>$folderName</code></td>
+<td>Current folder name.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="85">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="85"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="85">$folderID</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="85">Current folder ID.</td>
+<tr>
+<td><code>$folderID</code></td>
+<td>Current folder ID.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="86">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="86"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="86">$vaultName</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="86">Current vault name.</td>
+<tr>
+<td><code>$vaultName</code></td>
+<td>Current vault name.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="87">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="87"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="87">$vaultRootFolder</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="87">Local vault root folder.</td>
+<tr>
+<td><code>$vaultRootFolder</code></td>
+<td>Local vault root folder.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="88">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="88"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="88">$GUID</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="88">Current command/session GUID.</td>
+<tr>
+<td><code>$GUID</code></td>
+<td>Current command/session GUID.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="89">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="89"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="89">$taskName</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="89">Current task name when available.</td>
+<tr>
+<td><code>$taskName</code></td>
+<td>Current task name when available.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="90">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="90"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="90">$tempFolder</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="90">$TempFolder</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="90">Temporary folder path.</td>
+<tr>
+<td><code>$tempFolder</code>, <code>$TempFolder</code></td>
+<td>Temporary folder path.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="91">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="91"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="91">$machineName</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="91">$computerName</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="91">Windows machine name.</td>
+<tr>
+<td><code>$machineName</code>, <code>$computerName</code></td>
+<td>Windows machine name.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="92">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="92"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="92">$userName</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="92">$username</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="92">Current PDM user name.</td>
+<tr>
+<td><code>$userName</code>, <code>$username</code></td>
+<td>Current PDM user name.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="93">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="93"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="93">$username.firstName</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="93">$username.lastName</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="93">Current PDM user's first and last name when available.</td>
+<tr>
+<td><code>$username.firstName</code>, <code>$username.lastName</code></td>
+<td>Current PDM user's first and last name when available.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="94">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="94"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="94">$username.FullName</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="94">Current PDM user's full name when available.</td>
+<tr>
+<td><code>$username.FullName</code></td>
+<td>Current PDM user's full name when available.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="95">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="95"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="95">$username.email</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="95">Current PDM user's email address when available.</td>
+<tr>
+<td><code>$username.email</code></td>
+<td>Current PDM user's email address when available.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="96">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="96"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="96">$windowsUser</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="96">Current Windows user name.</td>
+<tr>
+<td><code>$windowsUser</code></td>
+<td>Current Windows user name.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="97">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="97"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="97">$userDomain</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="97">$domain</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="97">Current Windows domain.</td>
+<tr>
+<td><code>$userDomain</code>, <code>$domain</code></td>
+<td>Current Windows domain.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="98">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="98"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="98">$yyyy</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="98">$yy</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="98">$MM</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="98">$M</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="98">$dd</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="98">$d</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="98">Date values.</td>
+<tr>
+<td><code>$yyyy</code>, <code>$yy</code>, <code>$MM</code>, <code>$M</code>, <code>$dd</code>, <code>$d</code></td>
+<td>Date values.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="99">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="99"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="99">$month</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="99">$mon</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="99">$day</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="99">$dayShort</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="99">Date name values.</td>
+<tr>
+<td><code>$month</code>, <code>$mon</code>, <code>$day</code>, <code>$dayShort</code></td>
+<td>Date name values.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="100">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="100"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="100">$HH</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="100">$hh</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="100">$mm</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="100">$ss</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="100">$tt</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="100">Time values.</td>
+<tr>
+<td><code>$HH</code>, <code>$hh</code>, <code>$mm</code>, <code>$ss</code>, <code>$tt</code></td>
+<td>Time values.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="101">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="101"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="101">$timestamp</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="101">$date</code>, <code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="101">$time</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="101">Common date/time formats.</td>
+<tr>
+<td><code>$timestamp</code>, <code>$date</code>, <code>$time</code></td>
+<td>Common date/time formats.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="102">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="102"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="102">$completefilename</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="102">Legacy complete file path placeholder.</td>
+<tr>
+<td><code>$completefilename</code></td>
+<td>Legacy complete file path placeholder.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="103">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="103"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="103">$completefoldername</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="103">Legacy complete folder path placeholder.</td>
+<tr>
+<td><code>$completefoldername</code></td>
+<td>Legacy complete folder path placeholder.</td>
 </tr>
-<tr sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="104">
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="104"><code sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="104">$(Variable.Config)</code></td>
-<td sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="104">PDM variable value for the current file and configuration.</td>
+<tr>
+<td><code>$(Variable.Config)</code></td>
+<td>PDM variable value for the current file and configuration.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="example" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="106">Example</h2>
-<p sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="108">The source script can use file placeholders and conditions. When the script is run for multiple items, these lines are evaluated for each target item.</p>
-<pre><code class="lang-pdmshell" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="110">RunTask -filePath &quot;$localPath&quot; -taskName &quot;Publish PDF &amp; DXF&quot;
+<h2 id="example">Example</h2>
+<p>The source script can use file placeholders and conditions. When the script is run for multiple items, these lines are evaluated for each target item.</p>
+<pre><code class="lang-pdmshell">RunTask -filePath &quot;$localPath&quot; -taskName &quot;Publish PDF &amp; DXF&quot;
 until -conditions &quot;$folderPath\$fileNameWithoutExtension.pdf exists&quot; -timeout 500
 </code></pre>
-<h2 id="free-version-limit" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="115">Free version limit</h2>
-<p sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="117">The free version is limited to 5 lines per script.</p>
-<h2 id="availability" sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="119">Availability</h2>
-<p sourcefile="src/RUNSCRIPT.md" sourcestartlinenumber="120">Available since PDMShell 2.0.1.</p>
+<h2 id="free-version-limit">Free version limit</h2>
+<p>The free version is limited to 5 lines per script.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.1.</p>
 
 </article>
 

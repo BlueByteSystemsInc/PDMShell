@@ -85,31 +85,31 @@
         </div>
 
         <article data-uid="">
-<h1 id="conditions" sourcefile="src/addin/conditions.md" sourcestartlinenumber="5">Conditions</h1>
+<h1 id="conditions">Conditions</h1>
 
-<p sourcefile="src/addin/conditions.md" sourcestartlinenumber="7">The <strong sourcefile="src/addin/conditions.md" sourcestartlinenumber="7">Conditions</strong> section controls whether a script should run for the current file, folder, or command context.</p>
-<p sourcefile="src/addin/conditions.md" sourcestartlinenumber="9">Conditions use the same expression style as the PDMShell <a href="../UNTIL.html" sourcefile="src/addin/conditions.md" sourcestartlinenumber="9">until</a> command.</p>
-<h2 id="supported-condition-features" sourcefile="src/addin/conditions.md" sourcestartlinenumber="11">Supported condition features</h2>
-<ul sourcefile="src/addin/conditions.md" sourcestartlinenumber="13">
-<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="13"><code sourcefile="src/addin/conditions.md" sourcestartlinenumber="13">and</code> and <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="13">or</code></li>
-<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="14">nested groups with parentheses</li>
-<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="15">file, folder, and process exists checks</li>
-<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="16">text comparisons such as equals, contains, starts with, ends with, and regex matches</li>
-<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="17">numeric comparisons</li>
-<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="18">PDMShell placeholders such as <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="18">$fileName</code>, <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="18">$localPath</code>, and <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="18">$folderPath</code></li>
-<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="19">PDM variables such as <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="19">$(Description.@)</code> or <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="19">$(Revision.@)</code></li>
+<p>The <strong>Conditions</strong> section controls whether a script should run for the current file, folder, or command context.</p>
+<p>Conditions use the same expression style as the PDMShell <a href="../UNTIL.html">until</a> command.</p>
+<h2 id="supported-condition-features">Supported condition features</h2>
+<ul>
+<li><code>and</code> and <code>or</code></li>
+<li>nested groups with parentheses</li>
+<li>file, folder, and process exists checks</li>
+<li>text comparisons such as equals, contains, starts with, ends with, and regex matches</li>
+<li>numeric comparisons</li>
+<li>PDMShell placeholders such as <code>$fileName</code>, <code>$localPath</code>, and <code>$folderPath</code></li>
+<li>PDM variables such as <code>$(Description.@)</code> or <code>$(Revision.@)</code></li>
 </ul>
-<h2 id="examples" sourcefile="src/addin/conditions.md" sourcestartlinenumber="21">Examples</h2>
-<pre><code class="lang-pdmshell" sourcefile="src/addin/conditions.md" sourcestartlinenumber="23">$localPath exists
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-pdmshell">$localPath exists
 &quot;$(Description.@)&quot; contains &quot;ECO&quot;
 ($folderPath\ready.pdf exists or $folderPath\ready.dxf exists) and &quot;$(State.@)&quot; equals &quot;Released&quot;
 </code></pre>
-<h2 id="condition-test-message" sourcefile="src/addin/conditions.md" sourcestartlinenumber="29">Condition test message</h2>
-<p sourcefile="src/addin/conditions.md" sourcestartlinenumber="31">Enable <strong sourcefile="src/addin/conditions.md" sourcestartlinenumber="31">Always show condition test message</strong> while building a script. This displays the condition expression and resolved values so you can confirm what PDM is passing into the script context.</p>
-<h2 id="related-articles" sourcefile="src/addin/conditions.md" sourcestartlinenumber="33">Related articles</h2>
-<ul sourcefile="src/addin/conditions.md" sourcestartlinenumber="35">
-<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="35"><a href="placeholders.html" sourcefile="src/addin/conditions.md" sourcestartlinenumber="35">Placeholders and command context</a></li>
-<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="36"><a href="troubleshooting.html" sourcefile="src/addin/conditions.md" sourcestartlinenumber="36">Testing and troubleshooting</a></li>
+<h2 id="condition-test-message">Condition test message</h2>
+<p>Enable <strong>Always show condition test message</strong> while building a script. This displays the condition expression and resolved values so you can confirm what PDM is passing into the script context.</p>
+<h2 id="related-articles">Related articles</h2>
+<ul>
+<li><a href="placeholders.html">Placeholders and command context</a></li>
+<li><a href="troubleshooting.html">Testing and troubleshooting</a></li>
 </ul>
 
 </article>

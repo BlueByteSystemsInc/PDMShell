@@ -85,87 +85,87 @@
         </div>
 
         <article data-uid="">
-<h1 id="checkin-command" sourcefile="src/CHECKIN.md" sourcestartlinenumber="5">CHECKIN Command</h1>
+<h1 id="checkin-command">CHECKIN Command</h1>
 
-<h2 id="description" sourcefile="src/CHECKIN.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/CHECKIN.md" sourcestartlinenumber="7">Performs a check-in operation on a specified file or many files.</p>
-<h2 id="syntax" sourcefile="src/CHECKIN.md" sourcestartlinenumber="9">Syntax</h2>
-<pre><code class="lang-bash" sourcefile="src/CHECKIN.md" sourcestartlinenumber="10">checkin -search -recursive -filePath -comment -Checkinoptions
+<h2 id="description">Description</h2>
+<p>Performs a check-in operation on a specified file or many files.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-bash">checkin -search -recursive -filePath -comment -Checkinoptions
 </code></pre>
-<h2 id="parameters" sourcefile="src/CHECKIN.md" sourcestartlinenumber="13">Parameters</h2>
-<ul sourcefile="src/CHECKIN.md" sourcestartlinenumber="14">
-<li sourcefile="src/CHECKIN.md" sourcestartlinenumber="14"><p sourcefile="src/CHECKIN.md" sourcestartlinenumber="14"><code sourcefile="src/CHECKIN.md" sourcestartlinenumber="14">search</code>: The search operation to use.</p>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><p><code>search</code>: The search operation to use.</p>
 </li>
-<li sourcefile="src/CHECKIN.md" sourcestartlinenumber="17"><p sourcefile="src/CHECKIN.md" sourcestartlinenumber="17"><code sourcefile="src/CHECKIN.md" sourcestartlinenumber="17">recursive</code>: When used with <a href="SEARCH.html" sourcefile="src/CHECKIN.md" sourcestartlinenumber="17"><code sourcefile="src/CHECKIN.md" sourcestartlinenumber="17">search</code></a>, includes files in subfolders.</p>
+<li><p><code>recursive</code>: When used with <a href="SEARCH.html"><code>search</code></a>, includes files in subfolders.</p>
 </li>
-<li sourcefile="src/CHECKIN.md" sourcestartlinenumber="18"><p sourcefile="src/CHECKIN.md" sourcestartlinenumber="18"><code sourcefile="src/CHECKIN.md" sourcestartlinenumber="18">filePath</code>: The file(s) to be checked in. This is the default parameter.</p>
+<li><p><code>filePath</code>: The file(s) to be checked in. This is the default parameter.</p>
 </li>
-<li sourcefile="src/CHECKIN.md" sourcestartlinenumber="20"><p sourcefile="src/CHECKIN.md" sourcestartlinenumber="20"><code sourcefile="src/CHECKIN.md" sourcestartlinenumber="20">comment</code>: The comment to add to the check-in. In the visual command builder, the default value is <code sourcefile="src/CHECKIN.md" sourcestartlinenumber="20">Checked by PDMShell</code>.</p>
+<li><p><code>comment</code>: The comment to add to the check-in. In the visual command builder, the default value is <code>Checked by PDMShell</code>.</p>
 </li>
-<li sourcefile="src/CHECKIN.md" sourcestartlinenumber="22"><p sourcefile="src/CHECKIN.md" sourcestartlinenumber="22"><code sourcefile="src/CHECKIN.md" sourcestartlinenumber="22">Checkinoptions</code>: The check-in options to use.</p>
+<li><p><code>Checkinoptions</code>: The check-in options to use.</p>
 </li>
 </ul>
-<h2 id="examples" sourcefile="src/CHECKIN.md" sourcestartlinenumber="24">Examples</h2>
-<pre><code class="lang-bash" sourcefile="src/CHECKIN.md" sourcestartlinenumber="25">checkin -filePath &quot;file1.sldprt&quot;
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash">checkin -filePath &quot;file1.sldprt&quot;
 </code></pre>
-<h2 id="remarks" sourcefile="src/CHECKIN.md" sourcestartlinenumber="29">Remarks</h2>
-<ul sourcefile="src/CHECKIN.md" sourcestartlinenumber="30">
-<li sourcefile="src/CHECKIN.md" sourcestartlinenumber="30">The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code sourcefile="src/CHECKIN.md" sourcestartlinenumber="30">%</code> for wildcard.</li>
-<li sourcefile="src/CHECKIN.md" sourcestartlinenumber="31">If combining <code sourcefile="src/CHECKIN.md" sourcestartlinenumber="31">Checkinoptions</code> parameters, the user needs to add <code sourcefile="src/CHECKIN.md" sourcestartlinenumber="31">+</code> between the values.</li>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
+<li>If combining <code>Checkinoptions</code> parameters, the user needs to add <code>+</code> between the values.</li>
 </ul>
-<h3 id="checkinoptions-parameter-values" sourcefile="src/CHECKIN.md" sourcestartlinenumber="33">Checkinoptions Parameter Values:</h3>
-<table sourcefile="src/CHECKIN.md" sourcestartlinenumber="35">
+<h3 id="checkinoptions-parameter-values">Checkinoptions Parameter Values:</h3>
+<table>
 <thead>
-<tr sourcefile="src/CHECKIN.md" sourcestartlinenumber="35">
-<th sourcefile="src/CHECKIN.md" sourcestartlinenumber="35">Member</th>
-<th sourcefile="src/CHECKIN.md" sourcestartlinenumber="35">Description</th>
+<tr>
+<th>Member</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/CHECKIN.md" sourcestartlinenumber="37">
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="37">EdmUnlock_FailOnRegenerationNeed</td>
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="37">Fail if the file needs to be regenerated in the CAD program. NOTE: Only files resaved in SOLIDWORKS 2009 or later can trigger this flag</td>
+<tr>
+<td>EdmUnlock_FailOnRegenerationNeed</td>
+<td>Fail if the file needs to be regenerated in the CAD program. NOTE: Only files resaved in SOLIDWORKS 2009 or later can trigger this flag</td>
 </tr>
-<tr sourcefile="src/CHECKIN.md" sourcestartlinenumber="38">
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="38">EdmUnlock_ForceUnlock</td>
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="38">Unlock the file even if it is not modified</td>
+<tr>
+<td>EdmUnlock_ForceUnlock</td>
+<td>Unlock the file even if it is not modified</td>
 </tr>
-<tr sourcefile="src/CHECKIN.md" sourcestartlinenumber="39">
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="39">EdmUnlock_IgnoreCorruptFile</td>
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="39">Ignore files with file formats unrecognized by SOLIDWORKS PDM Professional; without this flag, SOLIDWORKS PDM Professional returns E_EDM_INVALID_FILE if it encounters a corrupt file or a file containing a newer format than SOLIDWORKS PDM Professional can handle</td>
+<tr>
+<td>EdmUnlock_IgnoreCorruptFile</td>
+<td>Ignore files with file formats unrecognized by SOLIDWORKS PDM Professional; without this flag, SOLIDWORKS PDM Professional returns E_EDM_INVALID_FILE if it encounters a corrupt file or a file containing a newer format than SOLIDWORKS PDM Professional can handle</td>
 </tr>
-<tr sourcefile="src/CHECKIN.md" sourcestartlinenumber="40">
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="40">EdmUnlock_IgnoreReferences</td>
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="40">Silently unlock parent files without their references</td>
+<tr>
+<td>EdmUnlock_IgnoreReferences</td>
+<td>Silently unlock parent files without their references</td>
 </tr>
-<tr sourcefile="src/CHECKIN.md" sourcestartlinenumber="41">
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="41">EdmUnlock_IgnoreRefsNotLockedByCaller</td>
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="41">Ignore references not locked by caller</td>
+<tr>
+<td>EdmUnlock_IgnoreRefsNotLockedByCaller</td>
+<td>Ignore references not locked by caller</td>
 </tr>
-<tr sourcefile="src/CHECKIN.md" sourcestartlinenumber="42">
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="42">EdmUnlock_IgnoreRefsOutsideVault</td>
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="42">Ignore references to files outside the vault</td>
+<tr>
+<td>EdmUnlock_IgnoreRefsOutsideVault</td>
+<td>Ignore references to files outside the vault</td>
 </tr>
-<tr sourcefile="src/CHECKIN.md" sourcestartlinenumber="43">
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="43">EdmUnlock_KeepLocked</td>
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="43">Keep the file checked out after creating the new version in the archive</td>
+<tr>
+<td>EdmUnlock_KeepLocked</td>
+<td>Keep the file checked out after creating the new version in the archive</td>
 </tr>
-<tr sourcefile="src/CHECKIN.md" sourcestartlinenumber="44">
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="44">EdmUnlock_OverwriteLatestVersion</td>
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="44">Do not create a new version; overwrite the last version of the file with new changes</td>
+<tr>
+<td>EdmUnlock_OverwriteLatestVersion</td>
+<td>Do not create a new version; overwrite the last version of the file with new changes</td>
 </tr>
-<tr sourcefile="src/CHECKIN.md" sourcestartlinenumber="45">
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="45">EdmUnlock_RemoveLocalCopy</td>
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="45">Remove the local copy of the file from the hard disk after the file has been checked in</td>
+<tr>
+<td>EdmUnlock_RemoveLocalCopy</td>
+<td>Remove the local copy of the file from the hard disk after the file has been checked in</td>
 </tr>
-<tr sourcefile="src/CHECKIN.md" sourcestartlinenumber="46">
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="46">EdmUnlock_Simple</td>
-<td sourcefile="src/CHECKIN.md" sourcestartlinenumber="46">Check in the file using default behavior</td>
+<tr>
+<td>EdmUnlock_Simple</td>
+<td>Check in the file using default behavior</td>
 </tr>
 </tbody>
 </table>
-<h2 id="availability" sourcefile="src/CHECKIN.md" sourcestartlinenumber="48">Availability</h2>
-<p sourcefile="src/CHECKIN.md" sourcestartlinenumber="49">Available since PDMShell 2.0.0 or earlier.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

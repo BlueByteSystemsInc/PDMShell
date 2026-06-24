@@ -85,85 +85,85 @@
         </div>
 
         <article data-uid="">
-<h1 id="updatereferences-command" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="5">UPDATEREFERENCES Command</h1>
+<h1 id="updatereferences-command">UPDATEREFERENCES Command</h1>
 
-<h2 id="description" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="7">Updates file references inside the SOLIDWORKS PDM vault.</p>
-<p sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="9">The <code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="9">updatereferences</code> command modifies references stored <strong sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="9">inside files</strong>, without opening SOLIDWORKS, and allows you to:</p>
-<ul sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="11">
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="11">Update references for a <strong sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="11">single file</strong></li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="12">Update references for <strong sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="12">multiple files using a search</strong></li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="13">Resolve references by locating matching files inside a specified directory</li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="14">Control which references are updated using a <strong sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="14">scope</strong> parameter</li>
+<h2 id="description">Description</h2>
+<p>Updates file references inside the SOLIDWORKS PDM vault.</p>
+<p>The <code>updatereferences</code> command modifies references stored <strong>inside files</strong>, without opening SOLIDWORKS, and allows you to:</p>
+<ul>
+<li>Update references for a <strong>single file</strong></li>
+<li>Update references for <strong>multiple files using a search</strong></li>
+<li>Resolve references by locating matching files inside a specified directory</li>
+<li>Control which references are updated using a <strong>scope</strong> parameter</li>
 </ul>
-<p sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="16">This command is especially useful for fixing broken references, updating references after migrations, or correcting references that point outside the vault.</p>
-<h2 id="syntax" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="18">Syntax</h2>
-<pre><code class="lang-bash" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="19">updatereferences -filepath -search -directory -scope -recursive -csv
+<p>This command is especially useful for fixing broken references, updating references after migrations, or correcting references that point outside the vault.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-bash">updatereferences -filepath -search -directory -scope -recursive -csv
 </code></pre>
-<h2 id="parameters" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="23">Parameters</h2>
-<ul sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="24">
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="24"><p sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="24"><code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="24">filepath</code><br>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><p><code>filepath</code><br>
 Optional. Updates references for a single file.</p>
-<ul sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="26">
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="26">If a relative path is provided, it is resolved against the current directory.</li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="27">When specified, the <a href="SEARCH.html" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="27"><code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="27">search</code></a> parameter is ignored.</li>
+<ul>
+<li>If a relative path is provided, it is resolved against the current directory.</li>
+<li>When specified, the <a href="SEARCH.html"><code>search</code></a> parameter is ignored.</li>
 </ul>
 </li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="29"><p sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="29"><code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="29">search</code><br>
+<li><p><code>search</code><br>
 Optional. Search query used to find files whose references should be updated.</p>
-<ul sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="31">
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="31">The search is scoped to the current directory.</li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="32">Supports <code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="32">%</code> wildcards.</li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="33">Can be combined with <code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="33">recursive</code>.</li>
+<ul>
+<li>The search is scoped to the current directory.</li>
+<li>Supports <code>%</code> wildcards.</li>
+<li>Can be combined with <code>recursive</code>.</li>
 </ul>
 </li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="35"><p sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="35"><code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="35">directory</code><br>
+<li><p><code>directory</code><br>
 Optional. Defines where replacement references are searched.<br>
 Only files found under this directory will be used when resolving and updating references.</p>
 </li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="39"><p sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="39"><code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="39">scope</code><br>
+<li><p><code>scope</code><br>
 Optional. Controls which references are updated.<br>
 Valid values:</p>
-<ul sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="42">
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="42"><code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="42">UpdateOutsideVaultReferenceOnly</code> – Updates references that point outside the vault</li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="43"><code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="43">UpdateBrokenReferences</code> – Updates references that are missing or broken</li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="44"><code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="44">UpdateAllReferences</code> – Updates all references found in the file</li>
+<ul>
+<li><code>UpdateOutsideVaultReferenceOnly</code> – Updates references that point outside the vault</li>
+<li><code>UpdateBrokenReferences</code> – Updates references that are missing or broken</li>
+<li><code>UpdateAllReferences</code> – Updates all references found in the file</li>
 </ul>
 </li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="46"><p sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="46"><code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="46">recursive</code><br>
-Optional. When used with <a href="SEARCH.html" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="47"><code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="47">search</code></a>, includes subfolders of the current directory when locating files whose references should be updated.</p>
+<li><p><code>recursive</code><br>
+Optional. When used with <a href="SEARCH.html"><code>search</code></a>, includes subfolders of the current directory when locating files whose references should be updated.</p>
 </li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="49"><p sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="49"><code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="49">csv</code>
+<li><p><code>csv</code>
 Saves the update references operations in a csv file.</p>
 </li>
 </ul>
-<h2 id="behavior" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="52">Behavior</h2>
-<ul sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="53">
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="53">Operates directly on file reference data</li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="54">Does not open SOLIDWORKS</li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="55"><strong sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="55">Requires files to be checked out</strong></li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="56">Uses vault searches to locate replacement references</li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="57">Updates references by matching file names inside the specified directory scope</li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="58">Commits changes directly back into the file</li>
+<h2 id="behavior">Behavior</h2>
+<ul>
+<li>Operates directly on file reference data</li>
+<li>Does not open SOLIDWORKS</li>
+<li><strong>Requires files to be checked out</strong></li>
+<li>Uses vault searches to locate replacement references</li>
+<li>Updates references by matching file names inside the specified directory scope</li>
+<li>Commits changes directly back into the file</li>
 </ul>
-<h2 id="examples" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="60">Examples</h2>
-<h3 id="update-only-references-that-point-outside-the-vault" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="61">Update only references that point outside the vault</h3>
-<pre><code class="lang-bash" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="62">updatereferences -filepath speaker.sldasm -directory Libraries -scope UpdateOutsideVaultReferenceOnly
+<h2 id="examples">Examples</h2>
+<h3 id="update-only-references-that-point-outside-the-vault">Update only references that point outside the vault</h3>
+<pre><code class="lang-bash">updatereferences -filepath speaker.sldasm -directory Libraries -scope UpdateOutsideVaultReferenceOnly
 </code></pre>
-<h3 id="update-broken-references-for-all-assemblies-in-the-current-folder" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="66">Update broken references for all assemblies in the current folder</h3>
-<pre><code class="lang-bash" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="67">updatereferences -search %.sldasm -scope UpdateBrokenReferences
+<h3 id="update-broken-references-for-all-assemblies-in-the-current-folder">Update broken references for all assemblies in the current folder</h3>
+<pre><code class="lang-bash">updatereferences -search %.sldasm -scope UpdateBrokenReferences
 </code></pre>
-<h2 id="remarks" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="71">Remarks</h2>
-<ul sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="72">
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="72">Either <code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="72">filepath</code> or <a href="SEARCH.html" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="72"><code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="72">search</code></a> must be specified.</li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="73">If both are provided, <code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="73">filepath</code> takes precedence.</li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="74">The <a href="SEARCH.html" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="74"><code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="74">search</code></a> parameter only searches within the current directory unless <code sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="74">recursive</code> is specified.</li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="75">Reference resolution is based on matching file names within the directory scope.</li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="76">The first matching file found is used to update the reference.</li>
-<li sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="77">This command modifies files directly; use with care in controlled workflows.</li>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>Either <code>filepath</code> or <a href="SEARCH.html"><code>search</code></a> must be specified.</li>
+<li>If both are provided, <code>filepath</code> takes precedence.</li>
+<li>The <a href="SEARCH.html"><code>search</code></a> parameter only searches within the current directory unless <code>recursive</code> is specified.</li>
+<li>Reference resolution is based on matching file names within the directory scope.</li>
+<li>The first matching file found is used to update the reference.</li>
+<li>This command modifies files directly; use with care in controlled workflows.</li>
 </ul>
-<h2 id="availability" sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="79">Availability</h2>
-<p sourcefile="src/UPDATEREFERENCES.md" sourcestartlinenumber="80">Available since PDMShell 3.0.23.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 3.0.23.</p>
 
 </article>
 

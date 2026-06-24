@@ -85,54 +85,54 @@
         </div>
 
         <article data-uid="">
-<h1 id="whereused-command" sourcefile="src/WHEREUSED.md" sourcestartlinenumber="5">WHEREUSED Command</h1>
+<h1 id="whereused-command">WHEREUSED Command</h1>
 
-<h2 id="description" sourcefile="src/WHEREUSED.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/WHEREUSED.md" sourcestartlinenumber="7">The <code sourcefile="src/WHEREUSED.md" sourcestartlinenumber="7">whereused</code> command lists all parent files that reference a specified file.</p>
-<p sourcefile="src/WHEREUSED.md" sourcestartlinenumber="9">This command helps identify assemblies or drawings that use a particular part or subassembly.</p>
-<p sourcefile="src/WHEREUSED.md" sourcestartlinenumber="11">The output columns are:</p>
-<ul sourcefile="src/WHEREUSED.md" sourcestartlinenumber="13">
-<li sourcefile="src/WHEREUSED.md" sourcestartlinenumber="13">ChildID</li>
-<li sourcefile="src/WHEREUSED.md" sourcestartlinenumber="14">ChildName</li>
-<li sourcefile="src/WHEREUSED.md" sourcestartlinenumber="15">ParentName</li>
-<li sourcefile="src/WHEREUSED.md" sourcestartlinenumber="16">ParentID</li>
-<li sourcefile="src/WHEREUSED.md" sourcestartlinenumber="17">FolderPath</li>
+<h2 id="description">Description</h2>
+<p>The <code>whereused</code> command lists all parent files that reference a specified file.</p>
+<p>This command helps identify assemblies or drawings that use a particular part or subassembly.</p>
+<p>The output columns are:</p>
+<ul>
+<li>ChildID</li>
+<li>ChildName</li>
+<li>ParentName</li>
+<li>ParentID</li>
+<li>FolderPath</li>
 </ul>
-<hr sourcefile="src/WHEREUSED.md" sourcestartlinenumber="19">
-<h2 id="syntax" sourcefile="src/WHEREUSED.md" sourcestartlinenumber="21">Syntax</h2>
-<pre><code class="lang-bash" sourcefile="src/WHEREUSED.md" sourcestartlinenumber="22">whereused -filePath|-search -csv
+<hr>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-bash">whereused -filePath|-search -csv
 </code></pre>
-<hr sourcefile="src/WHEREUSED.md" sourcestartlinenumber="25">
-<h2 id="parameters" sourcefile="src/WHEREUSED.md" sourcestartlinenumber="27">Parameters</h2>
-<ul sourcefile="src/WHEREUSED.md" sourcestartlinenumber="28">
-<li sourcefile="src/WHEREUSED.md" sourcestartlinenumber="28"><p sourcefile="src/WHEREUSED.md" sourcestartlinenumber="28"><code sourcefile="src/WHEREUSED.md" sourcestartlinenumber="28">filePath</code><br>
+<hr>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><p><code>filePath</code><br>
 Full or relative path of the file to evaluate.</p>
 </li>
-<li sourcefile="src/WHEREUSED.md" sourcestartlinenumber="31"><p sourcefile="src/WHEREUSED.md" sourcestartlinenumber="31"><code sourcefile="src/WHEREUSED.md" sourcestartlinenumber="31">search</code><br>
-Optional filter applied to parent results. Supports SQL wildcard <code sourcefile="src/WHEREUSED.md" sourcestartlinenumber="32">%</code>.</p>
+<li><p><code>search</code><br>
+Optional filter applied to parent results. Supports SQL wildcard <code>%</code>.</p>
 </li>
-<li sourcefile="src/WHEREUSED.md" sourcestartlinenumber="34"><p sourcefile="src/WHEREUSED.md" sourcestartlinenumber="34"><code sourcefile="src/WHEREUSED.md" sourcestartlinenumber="34">csv</code> csv file name to put the results in CSV format.</p>
+<li><p><code>csv</code> csv file name to put the results in CSV format.</p>
 </li>
 </ul>
-<hr sourcefile="src/WHEREUSED.md" sourcestartlinenumber="36">
-<h2 id="examples" sourcefile="src/WHEREUSED.md" sourcestartlinenumber="38">Examples</h2>
-<h3 id="example-1-basic-where-used" sourcefile="src/WHEREUSED.md" sourcestartlinenumber="39">Example 1: Basic Where Used</h3>
-<pre><code class="lang-bash" sourcefile="src/WHEREUSED.md" sourcestartlinenumber="41">## Lists all parent files that reference `Bracket.SLDPRT`.
+<hr>
+<h2 id="examples">Examples</h2>
+<h3 id="example-1-basic-where-used">Example 1: Basic Where Used</h3>
+<pre><code class="lang-bash">## Lists all parent files that reference `Bracket.SLDPRT`.
 whereused -filePath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot;
 </code></pre>
-<hr sourcefile="src/WHEREUSED.md" sourcestartlinenumber="45">
-<h3 id="example-2-filter-parent-results" sourcefile="src/WHEREUSED.md" sourcestartlinenumber="47">Example 2: Filter Parent Results</h3>
-<pre><code class="lang-bash" sourcefile="src/WHEREUSED.md" sourcestartlinenumber="49">whereused -search &quot;%.SLDASM&quot;
+<hr>
+<h3 id="example-2-filter-parent-results">Example 2: Filter Parent Results</h3>
+<pre><code class="lang-bash">whereused -search &quot;%.SLDASM&quot;
 ## Finds the parents of all the assemblies in the current directory.
 </code></pre>
-<hr sourcefile="src/WHEREUSED.md" sourcestartlinenumber="53">
-<h3 id="example-3-export-to-csv" sourcefile="src/WHEREUSED.md" sourcestartlinenumber="55">Example 3: Export to CSV</h3>
-<pre><code class="lang-bash" sourcefile="src/WHEREUSED.md" sourcestartlinenumber="57">whereused -filePath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot; -csv parents.csv
+<hr>
+<h3 id="example-3-export-to-csv">Example 3: Export to CSV</h3>
+<pre><code class="lang-bash">whereused -filePath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot; -csv parents.csv
 ## Exports results to CSV with columns:
 ## ChildID,ChildName,ParentName,ParentID,FolderPath
 </code></pre>
-<h2 id="availability" sourcefile="src/WHEREUSED.md" sourcestartlinenumber="63">Availability</h2>
-<p sourcefile="src/WHEREUSED.md" sourcestartlinenumber="64">Available since PDMShell 2.0.0 or earlier.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

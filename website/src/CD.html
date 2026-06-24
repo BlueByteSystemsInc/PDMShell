@@ -85,40 +85,40 @@
         </div>
 
         <article data-uid="">
-<h1 id="cd-command" sourcefile="src/CD.md" sourcestartlinenumber="5">CD Command</h1>
+<h1 id="cd-command">CD Command</h1>
 
-<h2 id="description" sourcefile="src/CD.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/CD.md" sourcestartlinenumber="7">Changes the current PDM directory.</p>
-<h2 id="syntax" sourcefile="src/CD.md" sourcestartlinenumber="9">Syntax</h2>
-<pre><code class="lang-bash" sourcefile="src/CD.md" sourcestartlinenumber="10">cd [-directory|-id]
+<h2 id="description">Description</h2>
+<p>Changes the current PDM directory.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-bash">cd [-directory|-id]
 </code></pre>
-<h2 id="parameters" sourcefile="src/CD.md" sourcestartlinenumber="14">Parameters</h2>
-<ul sourcefile="src/CD.md" sourcestartlinenumber="15">
-<li sourcefile="src/CD.md" sourcestartlinenumber="15"><code sourcefile="src/CD.md" sourcestartlinenumber="15">directory</code> (or <code sourcefile="src/CD.md" sourcestartlinenumber="15">d</code>): The directory to switch to. The directory parameter can be a relative or absolute path in PDM.</li>
-<li sourcefile="src/CD.md" sourcestartlinenumber="16"><code sourcefile="src/CD.md" sourcestartlinenumber="16">id</code>: ID of the folder to navigate to.</li>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>directory</code> (or <code>d</code>): The directory to switch to. The directory parameter can be a relative or absolute path in PDM.</li>
+<li><code>id</code>: ID of the folder to navigate to.</li>
 </ul>
-<h2 id="examples" sourcefile="src/CD.md" sourcestartlinenumber="18">Examples</h2>
-<pre><code class="lang-bash" sourcefile="src/CD.md" sourcestartlinenumber="19">cd -directory 'C:\Vault\NewFolder' # Navigates its newFolder
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash">cd -directory 'C:\Vault\NewFolder' # Navigates its newFolder
 </code></pre>
-<h2 id="remarks" sourcefile="src/CD.md" sourcestartlinenumber="22">Remarks</h2>
-<ul sourcefile="src/CD.md" sourcestartlinenumber="23">
-<li sourcefile="src/CD.md" sourcestartlinenumber="23">Please be aware of the following special ways to change directory:</li>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>Please be aware of the following special ways to change directory:</li>
 </ul>
-<pre><code class="lang-bash" sourcefile="src/CD.md" sourcestartlinenumber="24">cd.. # Navigates to the parent folder
+<pre><code class="lang-bash">cd.. # Navigates to the parent folder
 cd\  # Navigates to the root of the vault
 </code></pre>
-<ul sourcefile="src/CD.md" sourcestartlinenumber="28">
-<li sourcefile="src/CD.md" sourcestartlinenumber="28">If the user just created a new folder and wants to <code sourcefile="src/CD.md" sourcestartlinenumber="28">cd</code> to it using autocomplete, they need to use the <a href="DIR.html" sourcefile="src/CD.md" sourcestartlinenumber="28"><code sourcefile="src/CD.md" sourcestartlinenumber="28">dir</code></a> command with the <code sourcefile="src/CD.md" sourcestartlinenumber="28">-refresh</code> parameter to force the session to load the current files and sub-folders in the active directory. Using <code sourcefile="src/CD.md" sourcestartlinenumber="28">-refresh</code> might affect the performance of the session if the current folder has too many files and sub-folders.</li>
-<li sourcefile="src/CD.md" sourcestartlinenumber="29"><code sourcefile="src/CD.md" sourcestartlinenumber="29">directory</code> is the default parameter. You do not need to specify it if it is the only parameter in your command.
+<ul>
+<li>If the user just created a new folder and wants to <code>cd</code> to it using autocomplete, they need to use the <a href="DIR.html"><code>dir</code></a> command with the <code>-refresh</code> parameter to force the session to load the current files and sub-folders in the active directory. Using <code>-refresh</code> might affect the performance of the session if the current folder has too many files and sub-folders.</li>
+<li><code>directory</code> is the default parameter. You do not need to specify it if it is the only parameter in your command.
 Example:</li>
 </ul>
-<pre><code class="lang-bash" sourcefile="src/CD.md" sourcestartlinenumber="31">cd api #navigates to the api folder
+<pre><code class="lang-bash">cd api #navigates to the api folder
 cd -id 755 #navigates to the folder with id 755
 </code></pre>
-<h2 id="tutorial" sourcefile="src/CD.md" sourcestartlinenumber="36">Tutorial</h2>
-<p sourcefile="src/CD.md" sourcestartlinenumber="37"><video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
-<h2 id="availability" sourcefile="src/CD.md" sourcestartlinenumber="39">Availability</h2>
-<p sourcefile="src/CD.md" sourcestartlinenumber="40">Available since PDMShell 2.0.0 or earlier.</p>
+<h2 id="tutorial">Tutorial</h2>
+<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0 or earlier.</p>
 
 </article>
 

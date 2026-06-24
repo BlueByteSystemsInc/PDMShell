@@ -85,42 +85,42 @@
         </div>
 
         <article data-uid="">
-<h1 id="run-pdmshell-scripts-from-dispatch" sourcefile="src/dispatch.md" sourcestartlinenumber="5">Run PDMShell Scripts from Dispatch</h1>
+<h1 id="run-pdmshell-scripts-from-dispatch">Run PDMShell Scripts from Dispatch</h1>
 
-<p sourcefile="src/dispatch.md" sourcestartlinenumber="7">When you want to run PDMShell scripts from Dispatch, you can use the <strong sourcefile="src/dispatch.md" sourcestartlinenumber="7">Shell Command</strong> action.</p>
-<div class="alert alert-success" sourcefile="src/dispatch.md" sourcestartlinenumber="9">
+<p>When you want to run PDMShell scripts from Dispatch, you can use the <strong>Shell Command</strong> action.</p>
+<div class="alert alert-success">
 <h5>DID YOU KNOW?</h5>
-<p sourcefile="src/dispatch.md" sourcestartlinenumber="10">The <a href="TASKSCRIPT.html" sourcefile="src/dispatch.md" sourcestartlinenumber="10">PDMShell add-in</a> can run PDMShell scripts from PDM right-click menus and event trigger points. It covers the same kind of automation you would normally build with Dispatch, and adds permissions, conditions, placeholders, command menu scripts, trigger points, headless execution, and the visual script editor.</p>
+<p>The <a href="TASKSCRIPT.html">PDMShell add-in</a> can run PDMShell scripts from PDM right-click menus and event trigger points. It covers the same kind of automation you would normally build with Dispatch, and adds permissions, conditions, placeholders, command menu scripts, trigger points, headless execution, and the visual script editor.</p>
 </div>
-<h2 id="shell-command-settings" sourcefile="src/dispatch.md" sourcestartlinenumber="14">Shell Command Settings</h2>
-<p sourcefile="src/dispatch.md" sourcestartlinenumber="16"><img src="../images/dispatchwindow.png" sourcefile="src/dispatch.md" sourcestartlinenumber="16" alt="dispatchwindow"></p>
-<ol sourcefile="src/dispatch.md" sourcestartlinenumber="18">
-<li sourcefile="src/dispatch.md" sourcestartlinenumber="18"><strong sourcefile="src/dispatch.md" sourcestartlinenumber="18">Verb</strong>: Leave this field empty.</li>
-<li sourcefile="src/dispatch.md" sourcestartlinenumber="19"><strong sourcefile="src/dispatch.md" sourcestartlinenumber="19">Filename</strong>: Specify the path to the PDMShell executable, which is <code sourcefile="src/dispatch.md" sourcestartlinenumber="19">pdmcli.exe</code>.</li>
+<h2 id="shell-command-settings">Shell Command Settings</h2>
+<p><img src="../images/dispatchwindow.png" alt="dispatchwindow"></p>
+<ol>
+<li><strong>Verb</strong>: Leave this field empty.</li>
+<li><strong>Filename</strong>: Specify the path to the PDMShell executable, which is <code>pdmcli.exe</code>.</li>
 </ol>
-<div class="NOTE" sourcefile="src/dispatch.md" sourcestartlinenumber="20">
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/dispatch.md" sourcestartlinenumber="21">Do not wrap the path in quotes (<code sourcefile="src/dispatch.md" sourcestartlinenumber="21">&quot;&quot;</code>), even if it contains spaces.</p>
+<p>Do not wrap the path in quotes (<code>&quot;&quot;</code>), even if it contains spaces.</p>
 </div>
-<ol start="3" sourcefile="src/dispatch.md" sourcestartlinenumber="23">
-<li sourcefile="src/dispatch.md" sourcestartlinenumber="23"><strong sourcefile="src/dispatch.md" sourcestartlinenumber="23">Parameters</strong>: For current PDMShell versions, use the following format:
-<pre><code class="lang-bash" sourcefile="src/dispatch.md" sourcestartlinenumber="24">runscript -source &quot;pathToScript&quot; -filePath &quot;%PathToSelectedFile%&quot;
+<ol start="3">
+<li><strong>Parameters</strong>: For current PDMShell versions, use the following format:
+<pre><code class="lang-bash">runscript -source &quot;pathToScript&quot; -filePath &quot;%PathToSelectedFile%&quot;
 </code></pre>
 </li>
 </ol>
-<ul sourcefile="src/dispatch.md" sourcestartlinenumber="28">
-<li sourcefile="src/dispatch.md" sourcestartlinenumber="28">The script path must be wrapped in quotes (<code sourcefile="src/dispatch.md" sourcestartlinenumber="28">&quot;&quot;</code>) if it contains spaces.</li>
-<li sourcefile="src/dispatch.md" sourcestartlinenumber="29">Use <code sourcefile="src/dispatch.md" sourcestartlinenumber="29">-filePath &quot;%PathToSelectedFile%&quot;</code> when the Dispatch action is running against the selected PDM file.</li>
-<li sourcefile="src/dispatch.md" sourcestartlinenumber="30">Inside the script, use PDMShell file placeholders such as <code sourcefile="src/dispatch.md" sourcestartlinenumber="30">$localPath</code>, <code sourcefile="src/dispatch.md" sourcestartlinenumber="30">$fileName</code>, <code sourcefile="src/dispatch.md" sourcestartlinenumber="30">$fileNameWithoutExtension</code>, <code sourcefile="src/dispatch.md" sourcestartlinenumber="30">$extension</code>, <code sourcefile="src/dispatch.md" sourcestartlinenumber="30">$folderPath</code>, and PDM variable placeholders.</li>
+<ul>
+<li>The script path must be wrapped in quotes (<code>&quot;&quot;</code>) if it contains spaces.</li>
+<li>Use <code>-filePath &quot;%PathToSelectedFile%&quot;</code> when the Dispatch action is running against the selected PDM file.</li>
+<li>Inside the script, use PDMShell file placeholders such as <code>$localPath</code>, <code>$fileName</code>, <code>$fileNameWithoutExtension</code>, <code>$extension</code>, <code>$folderPath</code>, and PDM variable placeholders.</li>
 </ul>
-<h2 id="example-dispatch-shell-execute-configuration" sourcefile="src/dispatch.md" sourcestartlinenumber="32">Example: Dispatch Shell Execute Configuration</h2>
-<pre><code class="lang-bash" sourcefile="src/dispatch.md" sourcestartlinenumber="34">Verb:
+<h2 id="example-dispatch-shell-execute-configuration">Example: Dispatch Shell Execute Configuration</h2>
+<pre><code class="lang-bash">Verb:
 Filename: C:\Program Files (x86)\BLUE BYTE SYSTEMS INC\PDMShell\PDMCLI.exe
 Parameters: runscript -source &quot;C:\Scripts\checkin-selected-file.pdmshell&quot; -filePath &quot;%PathToSelectedFile%&quot;
 </code></pre>
-<p sourcefile="src/dispatch.md" sourcestartlinenumber="40">Example script:</p>
-<p sourcefile="src/dispatch.md" sourcestartlinenumber="42">In the PDMShell script (<code sourcefile="src/dispatch.md" sourcestartlinenumber="42">checkin-selected-file.pdmshell</code>), reference the selected file with <code sourcefile="src/dispatch.md" sourcestartlinenumber="42">$localPath</code>:</p>
-<pre><code class="lang-bash" sourcefile="src/dispatch.md" sourcestartlinenumber="44"># Check out the selected file.
+<p>Example script:</p>
+<p>In the PDMShell script (<code>checkin-selected-file.pdmshell</code>), reference the selected file with <code>$localPath</code>:</p>
+<pre><code class="lang-bash"># Check out the selected file.
 checkout -filePath &quot;$localPath&quot;
 
 # Save changes.
@@ -129,18 +129,18 @@ checkin -filePath &quot;$localPath&quot; -comment &quot;Checked in from Dispatch
 # Required when running from Dispatch or another external automation host.
 quit
 </code></pre>
-<h2 id="passing-extra-dispatch-values" sourcefile="src/dispatch.md" sourcestartlinenumber="55">Passing Extra Dispatch Values</h2>
-<div class="WARNING" sourcefile="src/dispatch.md" sourcestartlinenumber="57">
+<h2 id="passing-extra-dispatch-values">Passing Extra Dispatch Values</h2>
+<div class="WARNING">
 <h5>Warning</h5>
-<p sourcefile="src/dispatch.md" sourcestartlinenumber="58">Positional Dispatch values such as <code sourcefile="src/dispatch.md" sourcestartlinenumber="58">$parameter1$</code> and <code sourcefile="src/dispatch.md" sourcestartlinenumber="58">$parameter2$</code> are legacy behavior and should not be used with PDMShell 4.0.6 or later. Starting with PDMShell 4.0.6, <a href="RUNSCRIPT.html" sourcefile="src/dispatch.md" sourcestartlinenumber="58"><code sourcefile="src/dispatch.md" sourcestartlinenumber="58">runscript</code></a> should receive context through <code sourcefile="src/dispatch.md" sourcestartlinenumber="58">-filePath</code>, <code sourcefile="src/dispatch.md" sourcestartlinenumber="58">-items</code>, or <code sourcefile="src/dispatch.md" sourcestartlinenumber="58">-search</code>, and scripts should use PDMShell placeholders such as <code sourcefile="src/dispatch.md" sourcestartlinenumber="58">$localPath</code> instead.</p>
+<p>Positional Dispatch values such as <code>$parameter1$</code> and <code>$parameter2$</code> are legacy behavior and should not be used with PDMShell 4.0.6 or later. Starting with PDMShell 4.0.6, <a href="RUNSCRIPT.html"><code>runscript</code></a> should receive context through <code>-filePath</code>, <code>-items</code>, or <code>-search</code>, and scripts should use PDMShell placeholders such as <code>$localPath</code> instead.</p>
 </div>
-<p sourcefile="src/dispatch.md" sourcestartlinenumber="60">Older scripts may use the positional argument format to pass Dispatch-only values such as <code sourcefile="src/dispatch.md" sourcestartlinenumber="60">%OldVersion%</code>:</p>
-<pre><code class="lang-bash" sourcefile="src/dispatch.md" sourcestartlinenumber="62">Verb:
+<p>Older scripts may use the positional argument format to pass Dispatch-only values such as <code>%OldVersion%</code>:</p>
+<pre><code class="lang-bash">Verb:
 Filename: C:\Program Files (x86)\BLUE BYTE SYSTEMS INC\PDMShell\PDMCLI.exe
 Parameters: runscript &quot;C:\Scripts\frogleap.pdmshell&quot; &quot;%PathToSelectedFile%&quot; &quot;%OldVersion%&quot;
 </code></pre>
-<p sourcefile="src/dispatch.md" sourcestartlinenumber="68">In this legacy format, the script used <code sourcefile="src/dispatch.md" sourcestartlinenumber="68">$parameter1$</code>, <code sourcefile="src/dispatch.md" sourcestartlinenumber="68">$parameter2$</code>, and so on:</p>
-<pre><code class="lang-bash" sourcefile="src/dispatch.md" sourcestartlinenumber="70"># Check the selected file out.
+<p>In this legacy format, the script used <code>$parameter1$</code>, <code>$parameter2$</code>, and so on:</p>
+<pre><code class="lang-bash"># Check the selected file out.
 checkout -filePath &quot;$parameter1$&quot;
 
 # Frog leap to the specified old version.
@@ -152,14 +152,14 @@ checkin -filePath &quot;$parameter1$&quot; -comment &quot;Prompted version $para
 # Required when running from Dispatch or another external automation host.
 quit
 </code></pre>
-<p sourcefile="src/dispatch.md" sourcestartlinenumber="84">For current PDMShell versions, use the <code sourcefile="src/dispatch.md" sourcestartlinenumber="84">-source</code> and <code sourcefile="src/dispatch.md" sourcestartlinenumber="84">-filePath</code> format shown above. If you need a Dispatch value that is not available as a PDMShell placeholder, write it to a PDM variable, pass a selected file with <code sourcefile="src/dispatch.md" sourcestartlinenumber="84">-filePath</code>, or move the automation to the PDMShell add-in where command context and conditions are available.</p>
-<h2 id="tutorial" sourcefile="src/dispatch.md" sourcestartlinenumber="86">Tutorial</h2>
-<p sourcefile="src/dispatch.md" sourcestartlinenumber="87"><video src="https://bluebyte.biz/wp-content/pdmshellvideos/dispatch.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
-<h2 id="tips-for-running-pdmshell-scripts-from-dispatch" sourcefile="src/dispatch.md" sourcestartlinenumber="89">Tips for Running PDMShell Scripts from Dispatch</h2>
-<ul sourcefile="src/dispatch.md" sourcestartlinenumber="90">
-<li sourcefile="src/dispatch.md" sourcestartlinenumber="90">Test Your Scripts: Always test your PDMShell scripts independently before integrating them with Dispatch.</li>
-<li sourcefile="src/dispatch.md" sourcestartlinenumber="91">Use Quotes for Paths: Wrap paths and parameters in quotes (<code sourcefile="src/dispatch.md" sourcestartlinenumber="91">&quot;&quot;</code>) if they contain spaces to avoid errors.</li>
-<li sourcefile="src/dispatch.md" sourcestartlinenumber="92">Use <a href="QUIT.html" sourcefile="src/dispatch.md" sourcestartlinenumber="92"><code sourcefile="src/dispatch.md" sourcestartlinenumber="92">quit</code></a> at the end of scripts launched from Dispatch so the external PDMShell process closes after the script runs.</li>
+<p>For current PDMShell versions, use the <code>-source</code> and <code>-filePath</code> format shown above. If you need a Dispatch value that is not available as a PDMShell placeholder, write it to a PDM variable, pass a selected file with <code>-filePath</code>, or move the automation to the PDMShell add-in where command context and conditions are available.</p>
+<h2 id="tutorial">Tutorial</h2>
+<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/dispatch.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="tips-for-running-pdmshell-scripts-from-dispatch">Tips for Running PDMShell Scripts from Dispatch</h2>
+<ul>
+<li>Test Your Scripts: Always test your PDMShell scripts independently before integrating them with Dispatch.</li>
+<li>Use Quotes for Paths: Wrap paths and parameters in quotes (<code>&quot;&quot;</code>) if they contain spaces to avoid errors.</li>
+<li>Use <a href="QUIT.html"><code>quit</code></a> at the end of scripts launched from Dispatch so the external PDMShell process closes after the script runs.</li>
 </ul>
 
 </article>
