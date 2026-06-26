@@ -4,7 +4,7 @@ title: Getting Started with PDMShell | SOLIDWORKS PDM Automation
 ---
 # Introduction to PDMShell
 
-**PDMShell** is a command-line and scripting tool for **SOLIDWORKS PDM Professional**. It helps administrators, engineers, and migration teams automate repetitive vault work without writing a full custom add-in for every task.
+PDMShell is a command-line and scripting tool for SOLIDWORKS PDM Professional. It helps administrators, engineers, and migration teams automate repetitive vault work without writing a full custom add-in for every task.
 
 You can use PDMShell for quick one-line commands, repeatable `.pdmshell` scripts, batch operations, workflow transition automation, Dispatch integration, and PDMShell add-in scripts that run directly inside the PDM client.
 
@@ -90,12 +90,12 @@ help -command cd
 
 Each command page in this documentation follows the same structure:
 
-1. **Description**: What the command does.
-2. **Syntax**: The command format and supported parameters.
-3. **Parameters**: What each parameter means.
-4. **Examples**: Common ways to use the command.
-5. **Remarks**: Notes, limits, and important behavior.
-6. **Availability**: The PDMShell version where the command first became available.
+1. Description: What the command does.
+2. Syntax: The command format and supported parameters.
+3. Parameters: What each parameter means.
+4. Examples: Common ways to use the command.
+5. Remarks: Notes, limits, and important behavior.
+6. Availability: The PDMShell version where the command first became available.
 
 ## Example Command Page
 
@@ -133,7 +133,7 @@ See [Dynamic Placeholders in PDMShell](EVAL.md).
 
 ## Case Sensitivity
 
-As of **PDMShell 3.0.1**, command names, parameter names, and values are case-sensitive.
+As of PDMShell 3.0.1, command names, parameter names, and values are case-sensitive.
 
 ## Escaping Quotes
 
@@ -153,4 +153,4 @@ If you need help building scripts or planning automation, contact Blue Byte Syst
 
 [Get Support](mailto:support@bluebytesystemsinc.zohodesk.com)
 
-Thank you for choosing **PDMShell**. We are excited to help you streamline your PDM workflows and unlock new levels of productivity.
+Thank you for choosing PDMShell. We are excited to help you streamline your PDM workflows and unlock new levels of productivity.

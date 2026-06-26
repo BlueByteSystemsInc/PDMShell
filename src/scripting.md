@@ -45,13 +45,13 @@ start .
 ```
 
 ### Script Annotations
-1. **`cd "\api\sandbox\fidget spinner"`**: Changes the current working directory to the specified path.
-2. **`mkdir "$name-export-$date"`**: Creates a new folder with a dynamic name based on the current date and the folder name.
-3. **[`export`](EXPORT.md)**: Exports all `.sldprt` files in the current directory to the newly created folder as `.stp` files, appending the current date to the file names.
-4. **`cd "$name-export-$date"`**: Changes the working directory to the newly created export folder.
-5. **[`addtovault`](ADDTOVAULT.md)**: Adds the exported files to the vault.
-6. **[`checkin`](CHECKIN.md)**: Checks in all files in the current folder to the vault.
-7. **`start .`**: Opens the current folder in File Explorer.
+1. `cd "\api\sandbox\fidget spinner"`: Changes the current working directory to the specified path.
+2. `mkdir "$name-export-$date"`: Creates a new folder with a dynamic name based on the current date and the folder name.
+3. [`export`](EXPORT.md): Exports all `.sldprt` files in the current directory to the newly created folder as `.stp` files, appending the current date to the file names.
+4. `cd "$name-export-$date"`: Changes the working directory to the newly created export folder.
+5. [`addtovault`](ADDTOVAULT.md): Adds the exported files to the vault.
+6. [`checkin`](CHECKIN.md): Checks in all files in the current folder to the vault.
+7. `start .`: Opens the current folder in File Explorer.
 
 ---
 
@@ -87,7 +87,7 @@ runscript -source "C:\Scripts\example.pdmshell"
 ---
 
 ## Workflow Integration
-For users with the **Premium Version** of PDMShell, `pdmcli.exe` can be hooked into workflow transitions. This allows scripts to be executed automatically as part of a workflow, enabling seamless automation of complex processes.
+For users with the Premium Version of PDMShell, `pdmcli.exe` can be hooked into workflow transitions. This allows scripts to be executed automatically as part of a workflow, enabling seamless automation of complex processes.
 
 ---
 

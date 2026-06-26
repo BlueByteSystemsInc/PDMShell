@@ -6,12 +6,12 @@ title: COPY Command | PDMShell | SOLIDWORKS PDM
 ## Description
 Performs a vault-to-vault copy operation in SOLIDWORKS PDM.
 
-The `copy` command creates **new files with new File IDs** inside the vault by copying:
+The `copy` command creates new files with new File IDs inside the vault by copying:
 - A single file
 - All files in a folder
 - Files found using a search scoped to a source folder
 
-This command does **not** add files from disk and does **not** modify the original files.
+This command does not add files from disk and does not modify the original files.
 
 ## Syntax
 ```bash
@@ -37,7 +37,7 @@ copy -source -directory -search -recursive -name -ignoreexisting
 
 - `name`  
   Required. Specifies the destination file name.  
-  [Alias expressions are evaluated **only for the destination name**](EVAL.md). Extension required.
+  [Alias expressions are evaluated only for the destination name](EVAL.md). Extension required.
 
 - `ignoreexisting`  
   Not implemented

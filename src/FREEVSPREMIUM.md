@@ -5,7 +5,7 @@ title: PDMShell Free vs Premium | SOLIDWORKS PDM
 
 # PDMShell Free vs Premium
 
-PDMShell comes in two editions: **Free** for light use and **Premium** for full automation in SOLIDWORKS PDM.
+PDMShell comes in two editions: Free for light use and Premium for full automation in SOLIDWORKS PDM.
 
 ---
 
@@ -13,8 +13,8 @@ PDMShell comes in two editions: **Free** for light use and **Premium** for full 
 
 | Edition | Description |
 |----------|--------------|
-| **Free** | Ideal for testing and small jobs. `search` returns up to **5 items**, and `runscript` runs scripts up to **5 lines**. |
-| **Premium** | Full access with **unlimited search results**, unlimited scripting, workflow automation, and the PDMShell add-in. |
+| **Free** | Ideal for testing and small jobs. `search` returns up to 5 items, and `runscript` runs scripts up to 5 lines. |
+| **Premium** | Full access with unlimited search results, unlimited scripting, workflow automation, and the PDMShell add-in. |
 
 ---
 
@@ -40,16 +40,16 @@ PDMShell comes in two editions: **Free** for light use and **Premium** for full 
 ## Free Edition
 
 Perfect for evaluation, quick lookups, and validation tasks.  
-**Limits:** [`search`](SEARCH.md) returns up to 5 items, and [`runscript`](RUNSCRIPT.md) runs scripts up to 5 lines.  
-**Note:** Resellers, VARs, and service partners may not use PDMShell to perform migration, cleanup, or automation work for customers without special licensing permission from Blue Byte Systems Inc.
+Limits: [`search`](SEARCH.md) returns up to 5 items, and [`runscript`](RUNSCRIPT.md) runs scripts up to 5 lines.  
+Note: Resellers, VARs, and service partners may not use PDMShell to perform migration, cleanup, or automation work for customers without special licensing permission from Blue Byte Systems Inc.
 
 > [!NOTE]
-> The [PDMShell add-in](TASKSCRIPT.md) is available only with **PDMShell Premium**. The Free edition can run supported command-line features within its limits, but it does not include the PDM add-in, right-click menu scripts, event trigger points, add-in permissions, or add-in conditions.
+> The [PDMShell add-in](TASKSCRIPT.md) is available only with PDMShell Premium. The Free edition can run supported command-line features within its limits, but it does not include the PDM add-in, right-click menu scripts, event trigger points, add-in permissions, or add-in conditions.
 
 > [!WARNING]
 > If you are a reseller, VAR, consultant, or service partner, you cannot use PDMShell to perform customer migrations, vault cleanup, batch automation, or paid customer services unless your license agreement explicitly allows it. Contact Blue Byte Systems Inc for special licensing permission.
 
-**Example:**
+Example:
 ```bash
 printfromsource -filePath "source.csv" -csv "output.csv"
 ```

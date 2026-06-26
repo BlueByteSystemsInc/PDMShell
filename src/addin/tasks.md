@@ -4,7 +4,7 @@ title: PDM Tasks | PDMShell add-in
 ---
 # PDM Tasks
 
-A **SOLIDWORKS PDM Task** can run a PDMShell script through the **PDMShell** task add-in. This lets administrators create task definitions similar to the built-in Convert task, but the task body is a `.pdmshell` script instead of a fixed conversion script.
+A SOLIDWORKS PDM Task can run a PDMShell script through the PDMShell task add-in. This lets administrators create task definitions similar to the built-in Convert task, but the task body is a `.pdmshell` script instead of a fixed conversion script.
 
 Use a PDMShell task when the automation should run through the PDM task system, appear in the Task List, use task host computers, run from a workflow transition, or process many selected files in the background.
 
@@ -22,7 +22,7 @@ PDMShell tasks can use the PDMShell command engine to automate vault operations 
 
 ## Create a task
 
-In the SOLIDWORKS PDM Administration tool, create a task under the **Tasks** node. On the **Add-in** page, select **PDMShell** as the add-in used by the task.
+In the SOLIDWORKS PDM Administration tool, create a task under the Tasks node. On the Add-in page, select PDMShell as the add-in used by the task.
 
 ![PDMShell task add-in selection](../../images/pdmshell-task-addin.png)
 
@@ -39,7 +39,7 @@ The standard PDM task pages still control the task shell:
 
 ## PDMShell Script page
 
-The **PDMShell Script** page is the main PDMShell-specific task page. Enter the script that should run when the task starts.
+The PDMShell Script page is the main PDMShell-specific task page. Enter the script that should run when the task starts.
 
 ![PDMShell task script page](../../images/pdmshell-task-script.png)
 
@@ -48,28 +48,28 @@ Use this page to:
 - Write or paste the `.pdmshell` script.
 - Open the script in the PDMShell code editor.
 - Select the file extensions the task should process, such as `sldprt;sldasm;slddrw`.
-- Enable folder processing with **Also run on folders**.
+- Enable folder processing with Also run on folders.
 - Test the task script with a selected folder or file.
 
-All computers selected in **Execution Method** must have PDMShell installed.
+All computers selected in Execution Method must have PDMShell installed.
 
 ## Command Menu page
 
-Use the **Command Menu** page when users should launch the task from File Explorer.
+Use the Command Menu page when users should launch the task from File Explorer.
 
 ![PDMShell task command menu page](../../images/pdmshell-task-command-menu.png)
 
-The command menu name is the label shown to users. Enable **Show Command in File Explorer** when the task should appear in the PDM right-click menu.
+The command menu name is the label shown to users. Enable Show Command in File Explorer when the task should appear in the PDM right-click menu.
 
 If the task should only run from workflow transitions, scheduled execution, or the Task List, leave the command hidden from File Explorer.
 
 ## PDMShell Permissions page
 
-The **PDMShell Permissions** page controls which users and groups are permitted to launch the PDMShell task, including from workflow transitions.
+The PDMShell Permissions page controls which users and groups are permitted to launch the PDMShell task, including from workflow transitions.
 
 ![PDMShell task permissions page](../../images/pdmshell-task-permissions.png)
 
-This page is separate from the standard PDM **Permissions** page. Use both permission pages together:
+This page is separate from the standard PDM Permissions page. Use both permission pages together:
 
 | Permission page | Purpose |
 | --- | --- |

@@ -4,7 +4,7 @@ title: Conditions | PDMShell add-in
 ---
 # Conditions
 
-The **Conditions** section controls whether a script should run for the current file, folder, or command context.
+The Conditions section controls whether a script should run for the current file, folder, or command context.
 
 Conditions use the same expression style as the PDMShell [until](../UNTIL.md) command.
 
@@ -28,7 +28,7 @@ $localPath exists
 
 ## Condition test message
 
-Enable **Always show condition test message** while building a script. This displays the condition expression and resolved values so you can confirm what PDM is passing into the script context.
+Enable Always show condition test message while building a script. This displays the condition expression and resolved values so you can confirm what PDM is passing into the script context.
 
 ## Related articles
 

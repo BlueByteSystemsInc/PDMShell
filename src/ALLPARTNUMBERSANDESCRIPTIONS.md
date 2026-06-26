@@ -5,9 +5,9 @@ description: "SQL query example to extract SOLIDWORKS PDM file metadata (folder 
 
 ## Retrieving File Metadata from SOLIDWORKS PDM
 
-The following SQL query extracts metadata from a SOLIDWORKS PDM vault database. It returns file information including folder path, workflow state, configuration, and variable values such as **Drawing No** and **Description**.
+The following SQL query extracts metadata from a SOLIDWORKS PDM vault database. It returns file information including folder path, workflow state, configuration, and variable values such as Drawing No and Description.
 
-This type of query is useful when building **reports, migrations, or integrations used with PDMShell automation**.
+This type of query is useful when building reports, migrations, or integrations used with PDMShell automation.
 
 >[!IMPORTANT]
 > Change `bluebyte` with your vault name to run the query below:

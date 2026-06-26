@@ -113,7 +113,7 @@ Specifies the source file or directory to be added to the vault.</li>
 <li><code>map</code>:</li>
 </ul>
 <p>Specifies a CSV file containing file mapping information.</p>
-<p>The CSV must contain <strong>two columns</strong> (First row is header):</p>
+<p>The CSV must contain two columns (First row is header):</p>
 <p>Column 1: Full source file path<br>
 Column 2: Destination folder path relative to the target vault directory</p>
 <p>Example CSV:</p>
@@ -141,7 +141,7 @@ addtovault -map &quot;C:\Users\hawkridge\Downloads\map\map.csv&quot; -batch 50 -
 <hr>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>Please make sure you don't have duplicates copies to the <strong>same</strong> target directory.</p>
+<p>Please make sure you don't have duplicates copies to the same target directory.</p>
 </div>
 <hr>
 <ul>
@@ -273,7 +273,7 @@ A csv file path containing a list of files and their properties. Use <a href="DO
 </code></pre>
 <hr>
 <h2 id="remarks">Remarks</h2>
-<p>• Files are left <strong>checked out</strong> after being added.
+<p>• Files are left checked out after being added.
 • Use <a href="CHECKIN.html"><code>checkin</code></a> command to check in files after adding.</p>
 <p>Example:</p>
 <pre><code class="lang-bash">checkin -search % -recursive

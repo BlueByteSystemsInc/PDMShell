@@ -12,10 +12,10 @@ start -process -swversion
 ```
 
 ## Parameters
-- **`filePath`**:  
+- `filePath`:  
   *(Optional)* File path or executable to start. This is the default parameter.
 
-- **`process`**:  
+- `process`:  
   *(Optional)* Specifies the program to start. Common values include:  
   - `admin`: Launches the PDM administration tool.  
   - `notepad`: Launches Notepad.  
@@ -23,7 +23,7 @@ start -process -swversion
   - `explorer`: Opens Windows Explorer.  
   - `.`: Opens the current folder in Windows Explorer.  
 
-- **`swversion`**:  
+- `swversion`:  
   *(Optional)* Specifies the version of SOLIDWORKS to launch. The year should be provided (e.g., `2023`).
 
 
@@ -34,22 +34,22 @@ start -process -swversion
    ```
 
 ## Remarks
-- **Launching SOLIDWORKS**:  
+- Launching SOLIDWORKS:  
   If the `-swversion` parameter is provided, the command attempts to locate and launch the specified version of SOLIDWORKS. If the version is not found, an error message will be displayed.
 
-- **Administration Tool**:  
+- Administration Tool:  
   The `admin` option launches the PDM administration tool. Ensure the tool is installed and accessible.
 
-- **Notepad**:  
+- Notepad:  
   The `notepad` option launches the default Notepad application from the system directory.
 
-- **API Help**:  
+- API Help:  
   The `apihelp` option opens the SOLIDWORKS API help file (`api_gb.chm`) from the PDM installation directory.
 
-- **Explorer**:  
+- Explorer:  
   The `explorer` option opens Windows Explorer. Using `.` opens the current folder.
 
-- **Error Handling**:  
+- Error Handling:  
   If the specified program or process cannot be found, an error message will be displayed.
 
 ## Availability

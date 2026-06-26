@@ -6,13 +6,13 @@ title: DOCMANPROPS Command | PDMShell | SOLIDWORKS PDM
 # DOCMANPROPS Command  
 
 ## Description
-The `docmanprops` command **exports and updates SOLIDWORKS file custom properties** without opening SOLIDWORKS.
+The `docmanprops` command exports and updates SOLIDWORKS file custom properties without opening SOLIDWORKS.
 
 This command supports two primary modes:
 
-- **Export Mode (Default)** â€” Reads properties from SOLIDWORKS files and writes them to a CSV file
-- **Update Mode** â€” Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)
-- **Refresh Mode** â€” Reads a CSV file and refreshes the content of the csv.
+- Export Mode (Default) â€” Reads properties from SOLIDWORKS files and writes them to a CSV file
+- Update Mode â€” Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)
+- Refresh Mode â€” Reads a CSV file and refreshes the content of the csv.
 
 
 > [!NOTE]
@@ -52,14 +52,14 @@ Example: `-csv "C:\temp\props.csv"`
 
 ## `update`
 
-When specified, the command runs in **Update Mode**.
+When specified, the command runs in Update Mode.
 
 Reads the CSV file and writes the properties back into the SOLIDWORKS files.
 
 ---
 ## `refresh`
 
-When specified, the command runs in **Refresh Mode**.
+When specified, the command runs in Refresh Mode.
 
 Reads the CSV file and refreshes the content of the properties in the csv file.
 

@@ -4,7 +4,7 @@ title: Permissions | PDMShell add-in
 ---
 # Permissions
 
-The **Permissions** section controls who can run a script.
+The Permissions section controls who can run a script.
 
 - If no users or groups are selected, the script is available to all users who can access the add-in command.
 - If users are selected, only those users are allowed to run the script.

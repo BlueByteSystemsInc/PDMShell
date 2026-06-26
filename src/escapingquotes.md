@@ -3,7 +3,7 @@ description: Learn how to properly escape quotes when calling PDMShell from cmd.
 title: Quote Escaping Rules for PDMShell | SOLIDWORKS PDM
 ---
 
-### When calling from **command line (cmd.exe or Dispatch):**
+### When calling from command line (cmd.exe or Dispatch):
 ---
 #### Example 1:
 ![escapequotescommandline](../images/escapequotecommandline.png)
@@ -35,7 +35,7 @@ will produce:
 
 
 
-### When calling from **PDMShell regular session:**
+### When calling from PDMShell regular session:
 ---
 To escape `"`, use this `\"`:
 ```bash

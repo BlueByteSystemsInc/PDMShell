@@ -87,7 +87,7 @@
         <article data-uid="">
 <h1 id="pdm-tasks">PDM Tasks</h1>
 
-<p>A <strong>SOLIDWORKS PDM Task</strong> can run a PDMShell script through the <strong>PDMShell</strong> task add-in. This lets administrators create task definitions similar to the built-in Convert task, but the task body is a <code>.pdmshell</code> script instead of a fixed conversion script.</p>
+<p>A SOLIDWORKS PDM Task can run a PDMShell script through the PDMShell task add-in. This lets administrators create task definitions similar to the built-in Convert task, but the task body is a <code>.pdmshell</code> script instead of a fixed conversion script.</p>
 <p>Use a PDMShell task when the automation should run through the PDM task system, appear in the Task List, use task host computers, run from a workflow transition, or process many selected files in the background.</p>
 <h2 id="what-pdmshell-tasks-can-do">What PDMShell tasks can do</h2>
 <p>PDMShell tasks can use the PDMShell command engine to automate vault operations from a PDM task definition.</p>
@@ -101,7 +101,7 @@
 <li>Test scripts against a selected file or folder before saving the task.</li>
 </ul>
 <h2 id="create-a-task">Create a task</h2>
-<p>In the SOLIDWORKS PDM Administration tool, create a task under the <strong>Tasks</strong> node. On the <strong>Add-in</strong> page, select <strong>PDMShell</strong> as the add-in used by the task.</p>
+<p>In the SOLIDWORKS PDM Administration tool, create a task under the Tasks node. On the Add-in page, select PDMShell as the add-in used by the task.</p>
 <p><img src="../../images/pdmshell-task-addin.png" alt="PDMShell task add-in selection"></p>
 <p>The standard PDM task pages still control the task shell:</p>
 <table>
@@ -139,26 +139,26 @@
 </tbody>
 </table>
 <h2 id="pdmshell-script-page">PDMShell Script page</h2>
-<p>The <strong>PDMShell Script</strong> page is the main PDMShell-specific task page. Enter the script that should run when the task starts.</p>
+<p>The PDMShell Script page is the main PDMShell-specific task page. Enter the script that should run when the task starts.</p>
 <p><img src="../../images/pdmshell-task-script.png" alt="PDMShell task script page"></p>
 <p>Use this page to:</p>
 <ul>
 <li>Write or paste the <code>.pdmshell</code> script.</li>
 <li>Open the script in the PDMShell code editor.</li>
 <li>Select the file extensions the task should process, such as <code>sldprt;sldasm;slddrw</code>.</li>
-<li>Enable folder processing with <strong>Also run on folders</strong>.</li>
+<li>Enable folder processing with Also run on folders.</li>
 <li>Test the task script with a selected folder or file.</li>
 </ul>
-<p>All computers selected in <strong>Execution Method</strong> must have PDMShell installed.</p>
+<p>All computers selected in Execution Method must have PDMShell installed.</p>
 <h2 id="command-menu-page">Command Menu page</h2>
-<p>Use the <strong>Command Menu</strong> page when users should launch the task from File Explorer.</p>
+<p>Use the Command Menu page when users should launch the task from File Explorer.</p>
 <p><img src="../../images/pdmshell-task-command-menu.png" alt="PDMShell task command menu page"></p>
-<p>The command menu name is the label shown to users. Enable <strong>Show Command in File Explorer</strong> when the task should appear in the PDM right-click menu.</p>
+<p>The command menu name is the label shown to users. Enable Show Command in File Explorer when the task should appear in the PDM right-click menu.</p>
 <p>If the task should only run from workflow transitions, scheduled execution, or the Task List, leave the command hidden from File Explorer.</p>
 <h2 id="pdmshell-permissions-page">PDMShell Permissions page</h2>
-<p>The <strong>PDMShell Permissions</strong> page controls which users and groups are permitted to launch the PDMShell task, including from workflow transitions.</p>
+<p>The PDMShell Permissions page controls which users and groups are permitted to launch the PDMShell task, including from workflow transitions.</p>
 <p><img src="../../images/pdmshell-task-permissions.png" alt="PDMShell task permissions page"></p>
-<p>This page is separate from the standard PDM <strong>Permissions</strong> page. Use both permission pages together:</p>
+<p>This page is separate from the standard PDM Permissions page. Use both permission pages together:</p>
 <table>
 <thead>
 <tr>

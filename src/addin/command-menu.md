@@ -4,7 +4,7 @@ title: On-demand add-in scripts | PDMShell add-in
 ---
 # On-demand add-in scripts
 
-Enable **Menu** when a script should appear as a right-click PDM command.
+Enable Menu when a script should appear as a right-click PDM command.
 
 Command menu scripts are on-demand add-in commands. They are not SOLIDWORKS PDM Tasks and they do not have to wait for a workflow transition or event trigger. Administrators configure the script once in the PDMShell add-in, then users launch it when needed from the PDM command menu against the selected file or folder. This is useful for repeatable operations such as file rename automation, metadata cleanup, export helpers, or any workflow where standard Dispatch actions are too limited for the required scripting logic.
 

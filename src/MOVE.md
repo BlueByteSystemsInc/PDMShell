@@ -34,7 +34,7 @@ move -source -directory -search -recursive
   Target directory where to move the file(s) to. Must exist in the vault.
 
 - `search`  
-  Search query. Use this to move all search results from the source folder. **This does not support moving folders from a search**
+  Search query. Use this to move all search results from the source folder. This does not support moving folders from a search
 
 - `recursive`  
   Affects the search parameter. Specify `-recursive` to make the search recursive.  

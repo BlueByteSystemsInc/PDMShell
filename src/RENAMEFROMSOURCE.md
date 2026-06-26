@@ -39,9 +39,9 @@ The source CSV file must have the following structure:
 | 124     | anotherfile.docx         | 457       |
 | 125     | examplefile_backup.pdf   | 458       |
 
-- **File ID**: The ID of the file to be renamed.  
-- **New File Name**: The desired new name for the file, including the extension.  
-- **Folder ID**: The ID of the folder containing the file.
+- File ID: The ID of the file to be renamed.  
+- New File Name: The desired new name for the file, including the extension.  
+- Folder ID: The ID of the folder containing the file.
 
 ## Remarks
 - The `filePath` parameter is mandatory and must point to a valid CSV file.

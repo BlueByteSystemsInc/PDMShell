@@ -5,7 +5,7 @@ title: BOM Command | PDMShell | SOLIDWORKS PDM
 # BOM Command
 ## Description
 The `BOMCommand` allows you to extract a Bill of Materials from a SOLIDWORKS file inside the PDM vault and export it to a CSV file.  
-This command supports configuration evaluation using **$configuration**, allows specifying **configNames**, and supports selecting a **layout** from all available BOM layouts.
+This command supports configuration evaluation using `$configuration`, allows specifying `configNames`, and supports selecting a `layout` from all available BOM layouts.
 
 ## Syntax
 ```bash

@@ -88,15 +88,15 @@
 <h1 id="setrevision-command">SETREVISION Command</h1>
 
 <h2 id="description">Description</h2>
-<p>The <code>SetRevisionCommand</code> allows you to set the <strong>PDM-managed revision</strong> of a file inside the vault.<br>
-This command updates the official <strong>PDM Revision</strong> (the value shown on the version tab), <em>not</em> the datacard one.</p>
+<p>The <code>SetRevisionCommand</code> allows you to set the PDM-managed revision of a file inside the vault.<br>
+This command updates the official PDM Revision (the value shown on the version tab), <em>not</em> the datacard one.</p>
 <p>You may set the revision using:</p>
 <ul>
 <li><strong>%nextrevision%</strong> â€” moves the revision forward</li>
 <li><strong>%previousrevision%</strong> â€” moves the revision backward</li>
 <li><strong>%initial%</strong> â€” resets to the first revision in the revision scheme</li>
 </ul>
-<p>You can also use <strong>PDM variables</strong> by enclosing them in brackets:<br>
+<p>You can also use PDM variables by enclosing them in brackets:<br>
 Example: <code>[Revision]</code><br>
 This evaluates the variable on the file and applies its value as the new revision.</p>
 <p>The command resolves all bracketed variables before applying the revision.</p>
@@ -132,7 +132,7 @@ Save results to a csv file</p>
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>This command affects <strong>only the PDM Revision</strong>, not custom properties or configuration-specific metadata.</li>
+<li>This command affects only the PDM Revision, not custom properties or configuration-specific metadata.</li>
 <li>When using <code>[VariableName]</code>, ensure the variable is present on the file card.</li>
 <li><code>%previousrevision%</code> will adjust the counter only if the revision scheme allows backward movement.</li>
 <li><code>%nextrevision%</code> respects all revision scheme rules defined in the PDM Administration tool.</li>

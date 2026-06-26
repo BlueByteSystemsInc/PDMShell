@@ -36,7 +36,7 @@ If not specified, the current working directory is used.
 
 Specifies a CSV file containing file mapping information.
 
-The CSV must contain **two columns** (First row is header):
+The CSV must contain two columns (First row is header):
 
 Column 1: Full source file path  
 Column 2: Destination folder path relative to the target vault directory  
@@ -76,7 +76,7 @@ Maximum number of rows to process from the map CSV file after applying the skip 
 ---
 
 >[!Important]
->Please make sure you don't have duplicates copies to the **same** target directory. 
+>Please make sure you don't have duplicates copies to the same target directory. 
 
 ---
 
@@ -254,7 +254,7 @@ addtovault -map "c:\export\map.csv" -ignoreexisting -csv "ret.csv" -batch 10 -pr
 ---
 
 ## Remarks
-• Files are left **checked out** after being added.
+• Files are left checked out after being added.
 • Use [`checkin`](CHECKIN.md) command to check in files after adding.
 
 Example:

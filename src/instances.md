@@ -7,8 +7,8 @@ title: Notes About Running PDMShell in Single Instance Mode | SOLIDWORKS PDM
 
 PDMShell can run in two modes:
 
-- **Multi Instance Mode** (default)
-- **Single Instance Mode** (one controller instance, all commands routed to it)
+- Multi Instance Mode (default)
+- Single Instance Mode (one controller instance, all commands routed to it)
 
 Single instance mode is useful when you want:
 
@@ -19,7 +19,7 @@ Single instance mode is useful when you want:
 
 ## Single Instance Mode Overview
 
-To enable **Single Instance Mode**, start PDMShell using:
+To enable Single Instance Mode, start PDMShell using:
 
 ```bash
 pdmcli.exe /single
@@ -36,9 +36,9 @@ pdmcli.exe -single
 
 ![singleinstance](../images/singleinstance.png)
 
-When PDMShell is running in **Single Instance Mode**, youâ€™ll see a **single-instance indicator** in the top-right corner of the window. It shows a **â€œ1â€ icon**, confirming that all commands will be routed to this instance from other **single** instances.
+When PDMShell is running in Single Instance Mode, youâ€™ll see a single-instance indicator in the top-right corner of the window. It shows a â€œ1â€ icon, confirming that all commands will be routed to this instance from other single instances.
 
-If PDMShell is **not** running in single instance mode, the indicator will display an **infinity symbol (âˆž)**, meaning **multiple PDMShell instances are allowed** and each command launches independently in its own PDMShell process.
+If PDMShell is not running in single instance mode, the indicator will display an infinity symbol (âˆž), meaning multiple PDMShell instances are allowed and each command launches independently in its own PDMShell process.
 
 With single instance, you can:
 
@@ -51,19 +51,19 @@ With single instance, you can:
 
 ![singlemodeuac](../images/singlemodeuac.png)
 
-PDMShellâ€™s **Single Instance Mode** relies on Windowsâ€™ global mutex system.  Because of this, **User Account Control (UAC)** and **process elevation** matter.
+PDMShellâ€™s Single Instance Mode relies on Windowsâ€™ global mutex system.  Because of this, User Account Control (UAC) and process elevation matter.
 
 To attach to the single instance, you must ensure that:
 
-- If the first instance is started as **Admin**, all following calls must also run **as Admin**
-- If the first instance is started **without elevation**, all following calls must also run **without elevation**
+- If the first instance is started as Admin, all following calls must also run as Admin
+- If the first instance is started without elevation, all following calls must also run without elevation
 
 > [!Warning]
 > Avoid running PDMShell as a Windows Administrator if you have custom add-ins installed.  Check-in and check-out commands can create instances of your add-in inside the host application's memory. If the add-in was registered under a different user or UAC level, PDM will throw a **â€œClass not registeredâ€** error.
 
 ## Executing Commands in Single Instance Mode
 
-Once PDMShell is running with `/single`, **all subsequent calls to `pdmcli.exe` must also include `/single`**, or PDMShell will launch a new instance instead of attaching.
+Once PDMShell is running with `/single`, all subsequent calls to `pdmcli.exe` must also include `/single`, or PDMShell will launch a new instance instead of attaching.
 
 Example:
 
@@ -110,7 +110,7 @@ pdmcli.exe "C:\Vault\Scripts\CreateECO.pdmshell" -edit
 
 ## Tips for Single Instance Mode
 
-- Always include `/single` in **every call**
+- Always include `/single` in every call
 - [Use proper quote escaping when calling from Dispatch](escapingquotes.md)
 - Use Single Instance mode for sequences of operations
 - Use Multi Instance mode for isolated one-shot commands

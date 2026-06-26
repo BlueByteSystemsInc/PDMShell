@@ -55,10 +55,10 @@ String functions can be used after placeholder evaluation. This is useful with `
 - The `configNames` parameter should be separated by commas. If omitted, PDMShell uses `@` for configuration-supported documents.
 - The [`search`](SEARCH.md) parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
 - The `stringformat` parameter allows you to format the value of the variable using predefined string formatting options. The following formats are supported:
-  - **UpperCase**: Converts the entire string to uppercase.
-  - **LowerCase**: Converts the entire string to lowercase.
-  - **CamelCase**: Converts the string to camel case, where the first word is lowercase, and subsequent words are capitalized (e.g., `exampleString`).
-  - **FirstLetterCase**: Capitalizes the first letter of the string and converts the rest to lowercase (e.g., `Example`).
+  - UpperCase: Converts the entire string to uppercase.
+  - LowerCase: Converts the entire string to lowercase.
+  - CamelCase: Converts the string to camel case, where the first word is lowercase, and subsequent words are capitalized (e.g., `exampleString`).
+  - FirstLetterCase: Capitalizes the first letter of the string and converts the rest to lowercase (e.g., `Example`).
 
 ## Tutorial
  <video src="https://bluebyte.biz/wp-content/pdmshellvideos/setvar.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>

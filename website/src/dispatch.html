@@ -87,7 +87,7 @@
         <article data-uid="">
 <h1 id="run-pdmshell-scripts-from-dispatch">Run PDMShell Scripts from Dispatch</h1>
 
-<p>When you want to run PDMShell scripts from Dispatch, you can use the <strong>Shell Command</strong> action.</p>
+<p>When you want to run PDMShell scripts from Dispatch, you can use the Shell Command action.</p>
 <div class="alert alert-success">
 <h5>DID YOU KNOW?</h5>
 <p>The <a href="TASKSCRIPT.html">PDMShell add-in</a> can run PDMShell scripts from PDM right-click menus and event trigger points. It covers the same kind of automation you would normally build with Dispatch, and adds permissions, conditions, placeholders, command menu scripts, trigger points, headless execution, and the visual script editor.</p>
@@ -95,15 +95,15 @@
 <h2 id="shell-command-settings">Shell Command Settings</h2>
 <p><img src="../images/dispatchwindow.png" alt="dispatchwindow"></p>
 <ol>
-<li><strong>Verb</strong>: Leave this field empty.</li>
-<li><strong>Filename</strong>: Specify the path to the PDMShell executable, which is <code>pdmcli.exe</code>.</li>
+<li>Verb: Leave this field empty.</li>
+<li>Filename: Specify the path to the PDMShell executable, which is <code>pdmcli.exe</code>.</li>
 </ol>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Do not wrap the path in quotes (<code>&quot;&quot;</code>), even if it contains spaces.</p>
 </div>
 <ol start="3">
-<li><strong>Parameters</strong>: For current PDMShell versions, use the following format:
+<li>Parameters: For current PDMShell versions, use the following format:
 <pre><code class="lang-bash">runscript -source &quot;pathToScript&quot; -filePath &quot;%PathToSelectedFile%&quot;
 </code></pre>
 </li>

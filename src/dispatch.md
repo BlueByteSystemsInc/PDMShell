@@ -4,7 +4,7 @@ title: Run PDMShell Scripts from Dispatch | SOLIDWORKS PDM
 ---
 # Run PDMShell Scripts from Dispatch
 
-When you want to run PDMShell scripts from Dispatch, you can use the **Shell Command** action.
+When you want to run PDMShell scripts from Dispatch, you can use the Shell Command action.
 
 > [!Did You Know?]
 > The [PDMShell add-in](TASKSCRIPT.md) can run PDMShell scripts from PDM right-click menus and event trigger points. It covers the same kind of automation you would normally build with Dispatch, and adds permissions, conditions, placeholders, command menu scripts, trigger points, headless execution, and the visual script editor.
@@ -15,12 +15,12 @@ When you want to run PDMShell scripts from Dispatch, you can use the **Shell Com
 
 ![dispatchwindow](../images/dispatchwindow.png)
 
-1. **Verb**: Leave this field empty.
-2. **Filename**: Specify the path to the PDMShell executable, which is `pdmcli.exe`.  
+1. Verb: Leave this field empty.
+2. Filename: Specify the path to the PDMShell executable, which is `pdmcli.exe`.  
  > [!NOTE]
  > Do not wrap the path in quotes (`""`), even if it contains spaces.
 
-3. **Parameters**: For current PDMShell versions, use the following format:
+3. Parameters: For current PDMShell versions, use the following format:
    ```bash
    runscript -source "pathToScript" -filePath "%PathToSelectedFile%"
    ```

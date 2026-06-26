@@ -14,10 +14,10 @@ SOLIDWORKS PDM workflow transitions can run external commands. You can use this 
 
 ![workflowtransition](../images/worktransition.png)
 
-1. **Action Type**: Set the action type to **Execute Command**.
-2. **Command**: Specify the full path to `pdmcli.exe`.
-3. **Arguments**: Use `runscript -source` and pass the selected file with `-filePath`.
-4. **Wait**: Enable **Wait until the started program terminates**.
+1. Action Type: Set the action type to Execute Command.
+2. Command: Specify the full path to `pdmcli.exe`.
+3. Arguments: Use `runscript -source` and pass the selected file with `-filePath`.
+4. Wait: Enable Wait until the started program terminates.
 
 Command:
 

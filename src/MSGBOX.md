@@ -14,13 +14,13 @@ msgbox -value message [-title title] [-icon icon]
 ```
 
 ## Parameters
-- **`value`**:  
+- `value`:  
   *(Required)* Message text to display in the message box.
 
-- **`title`**:  
+- `title`:  
   *(Optional)* Message box title. If omitted, PDMShell uses the current PDMShell version as the title.
 
-- **`icon`**:  
+- `icon`:  
   *(Optional)* Message box icon. Valid values are `None`, `Information`, `Warning`, `Error`, and `Question`. If omitted, PDMShell uses `Information`.
 
 ## Examples

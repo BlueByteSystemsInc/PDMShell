@@ -4,7 +4,7 @@ title: SEARCHFROMSOURCE Command | PDMShell | SOLIDWORKS PDM
 ---
 # SEARCHFROMSOURCE Command
 ## Description
-The `searchfromsource` command reads a **CSV source file** and uses the **first column** (ignoring the header) as input items to search for in the vault. 
+The `searchfromsource` command reads a CSV source file and uses the first column (ignoring the header) as input items to search for in the vault. 
 
 For every row in the source CSV, PDMShell performs a vault search and returns information such as:
 
@@ -26,10 +26,10 @@ searchfromsource -filePath -recursive -csv
 
 ## Parameters
 ### `filePath`
-Path to the **source CSV file** to read input values.
+Path to the source CSV file to read input values.
 
-- If the path is **absolute**, PDMShell uses it directly.
-- If the path is **relative**, PDMShell combines it with the current directory.
+- If the path is absolute, PDMShell uses it directly.
+- If the path is relative, PDMShell combines it with the current directory.
 
 > [!IMPORTANT]
 > The source file must exist in the vault (so it can be downloaded locally and read).
@@ -60,7 +60,7 @@ The command reads:
 
 - Comma-delimited CSV
 - First row is treated as a header and ignored
-- Only the **first column** is used
+- Only the first column is used
 
 Example:
 
@@ -70,7 +70,7 @@ asm_top.sldasm
 drawing1.slddrw  
 
 Notes:
-- **THE VALUES CAN BE A SEARCH QUERY. PLEASE SEE** [ADVANCED SEARCH ARTICLE FOR MORE INFORMATION](advancedsearch.md).
+- The values can be a search query. Please see [Advanced Search](advancedsearch.md) for more information.
 - Empty rows are ignored
 - Values are trimmed
 - Each value becomes the search input token
@@ -152,13 +152,13 @@ When `-csv` is used, PDMShell generates the following columns:
 ID,FileName,Path,ParentFolderID,ParentFolder,IsCheckedOut,WhereUsedIds
 
 ### Column Definitions
-- **ID**: PDM file ID returned by search  
-- **FileName**: The original value read from the source CSV first column  
-- **Path**: Full vault path returned by the search result  
-- **ParentFolderID**: Folder ID containing the file  
-- **ParentFolder**: Folder path (derived from the result path)  
-- **IsCheckedOut**: `True/False` based on PDM lock status  
-- **WhereUsedIds**: Comma-separated list of parent file IDs (from the reference tree)
+- ID: PDM file ID returned by search  
+- FileName: The original value read from the source CSV first column  
+- Path: Full vault path returned by the search result  
+- ParentFolderID: Folder ID containing the file  
+- ParentFolder: Folder path (derived from the result path)  
+- IsCheckedOut: `True/False` based on PDM lock status  
+- WhereUsedIds: Comma-separated list of parent file IDs (from the reference tree)
 
 ---
 

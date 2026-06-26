@@ -6,9 +6,9 @@ title: Dynamic Placeholders | PDMShell | SOLIDWORKS PDM
 
 ## Overview
 
-The **Dynamic Placeholders** feature in PDMShell allows you to substitute values dynamically using placeholders. This functionality is supported by several commands and enables the use of file or folder properties, system variables, and other contextual information to generate new values automatically.
+The Dynamic Placeholders feature in PDMShell allows you to substitute values dynamically using placeholders. This functionality is supported by several commands and enables the use of file or folder properties, system variables, and other contextual information to generate new values automatically.
 
-Dynamic Placeholders are not a standalone command but a **feature** used by specific commands to process the `value` parameter or other relevant inputs.
+Dynamic Placeholders are not a standalone command but a feature used by specific commands to process the `value` parameter or other relevant inputs.
 
 ---
 
@@ -16,22 +16,22 @@ Dynamic Placeholders are not a standalone command but a **feature** used by spec
 The following commands support the use of dynamic placeholders:
 
 ### Commands Using the Current Folder as the Backing Object (`directory` parameter):
-- **[`cd`](CD.md)**: Change the current directory.
-- **[`mkdir`](MKDIR.md)**: Create a new directory.
-- **[`export`](EXPORT.md)**: Export commands to a file.
-- **[`addtovault`](ADDTOVAULT.md)**: Add files to the vault with the directory as the backing object.
+- [`cd`](CD.md): Change the current directory.
+- [`mkdir`](MKDIR.md): Create a new directory.
+- [`export`](EXPORT.md): Export commands to a file.
+- [`addtovault`](ADDTOVAULT.md): Add files to the vault with the directory as the backing object.
 
 ### Commands Using Files or Folders as the Backing Object:
-- **[`rename`](RENAME.md)**: Uses the `value` parameter for renaming files or folders.
-- **[`renamefromsource`](RENAMEFROMSOURCE.md)**: The new file is evaluated if the `evaluatealiases` parameter is specified.
-- **[`setvar`](SETVAR.md)**: Uses the `value` parameter to set variables for files or folders.
-- **[`bom`](BOM.md)**: Uses the `name` parameter to set the exported bom csv name.
-- **[`export`](EXPORT.md)**: Uses the `name` parameter to set the exported files name pattern.
+- [`rename`](RENAME.md): Uses the `value` parameter for renaming files or folders.
+- [`renamefromsource`](RENAMEFROMSOURCE.md): The new file is evaluated if the `evaluatealiases` parameter is specified.
+- [`setvar`](SETVAR.md): Uses the `value` parameter to set variables for files or folders.
+- [`bom`](BOM.md): Uses the `name` parameter to set the exported bom csv name.
+- [`export`](EXPORT.md): Uses the `name` parameter to set the exported files name pattern.
 
 ---
 
 ## Placeholders for Dynamic Substitution
-The `value` parameter in supported commands can include placeholders that are dynamically replaced with actual values based on the context. The placeholders differ slightly depending on whether the backing object is a **file** or a **folder**.
+The `value` parameter in supported commands can include placeholders that are dynamically replaced with actual values based on the context. The placeholders differ slightly depending on whether the backing object is a file or a folder.
 
 ### Placeholders for Files
 - `$value`: Existing value of the variable. If the existing value is null or empty, this evaluates to an empty string.
@@ -129,7 +129,7 @@ When a full command value is wrapped in double quotes, escape quotes inside func
 
 ## Expression Evaluator
 
-The WPF toolbar includes an **Expression Evaluator** tool for testing placeholder expressions before you run a command, script, task, or rename rule. It is designed as a safe preview surface: you choose a file or folder context, type the same expression you would place in a command parameter, and PDMShell shows the evaluated output without renaming files, changing variables, checking files in, or writing anything back to the vault.
+The WPF toolbar includes an Expression Evaluator tool for testing placeholder expressions before you run a command, script, task, or rename rule. It is designed as a safe preview surface: you choose a file or folder context, type the same expression you would place in a command parameter, and PDMShell shows the evaluated output without renaming files, changing variables, checking files in, or writing anything back to the vault.
 
 Use the formula icon in the toolbar to open the evaluator. Browse to a PDM file or folder, choose a configuration when the expression depends on configuration-specific variables, and optionally choose a variable to populate `$value` with the current value of that variable. The expression box supports grouped autocomplete for file and folder placeholders, vault and user placeholders, date and time placeholders, string functions, common examples, and PDM variables. This makes it easier to test expressions such as `$fileNameWithoutExtension`, `[Description]`, `${before($fileNameWithoutExtension, "-")}`, `${replace($value, "DRAFT", "RELEASED")}`, or `${regex($fileNameWithoutExtension, "^([^-]+)-", 1)}` before using them in commands like `rename`, `setvar`, `bom`, or `export`.
 

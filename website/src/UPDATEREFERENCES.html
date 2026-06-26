@@ -89,12 +89,12 @@
 
 <h2 id="description">Description</h2>
 <p>Updates file references inside the SOLIDWORKS PDM vault.</p>
-<p>The <code>updatereferences</code> command modifies references stored <strong>inside files</strong>, without opening SOLIDWORKS, and allows you to:</p>
+<p>The <code>updatereferences</code> command modifies references stored inside files, without opening SOLIDWORKS, and allows you to:</p>
 <ul>
-<li>Update references for a <strong>single file</strong></li>
-<li>Update references for <strong>multiple files using a search</strong></li>
+<li>Update references for a single file</li>
+<li>Update references for multiple files using a search</li>
 <li>Resolve references by locating matching files inside a specified directory</li>
-<li>Control which references are updated using a <strong>scope</strong> parameter</li>
+<li>Control which references are updated using a <code>scope</code> parameter</li>
 </ul>
 <p>This command is especially useful for fixing broken references, updating references after migrations, or correcting references that point outside the vault.</p>
 <h2 id="syntax">Syntax</h2>
@@ -141,7 +141,7 @@ Saves the update references operations in a csv file.</p>
 <ul>
 <li>Operates directly on file reference data</li>
 <li>Does not open SOLIDWORKS</li>
-<li><strong>Requires files to be checked out</strong></li>
+<li>Requires files to be checked out</li>
 <li>Uses vault searches to locate replacement references</li>
 <li>Updates references by matching file names inside the specified directory scope</li>
 <li>Commits changes directly back into the file</li>

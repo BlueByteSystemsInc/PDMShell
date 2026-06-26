@@ -88,29 +88,29 @@
 <h1 id="dynamic-placeholders-in-pdmshell">Dynamic Placeholders in PDMShell</h1>
 
 <h2 id="overview">Overview</h2>
-<p>The <strong>Dynamic Placeholders</strong> feature in PDMShell allows you to substitute values dynamically using placeholders. This functionality is supported by several commands and enables the use of file or folder properties, system variables, and other contextual information to generate new values automatically.</p>
-<p>Dynamic Placeholders are not a standalone command but a <strong>feature</strong> used by specific commands to process the <code>value</code> parameter or other relevant inputs.</p>
+<p>The Dynamic Placeholders feature in PDMShell allows you to substitute values dynamically using placeholders. This functionality is supported by several commands and enables the use of file or folder properties, system variables, and other contextual information to generate new values automatically.</p>
+<p>Dynamic Placeholders are not a standalone command but a feature used by specific commands to process the <code>value</code> parameter or other relevant inputs.</p>
 <hr>
 <h2 id="commands-supporting-dynamic-placeholders">Commands Supporting Dynamic Placeholders</h2>
 <p>The following commands support the use of dynamic placeholders:</p>
 <h3 id="commands-using-the-current-folder-as-the-backing-object-directory-parameter">Commands Using the Current Folder as the Backing Object (<code>directory</code> parameter):</h3>
 <ul>
-<li><strong><a href="CD.html"><code>cd</code></a></strong>: Change the current directory.</li>
-<li><strong><a href="MKDIR.html"><code>mkdir</code></a></strong>: Create a new directory.</li>
-<li><strong><a href="export.html"><code>export</code></a></strong>: Export commands to a file.</li>
-<li><strong><a href="ADDTOVAULT.html"><code>addtovault</code></a></strong>: Add files to the vault with the directory as the backing object.</li>
+<li><a href="CD.html"><code>cd</code></a>: Change the current directory.</li>
+<li><a href="MKDIR.html"><code>mkdir</code></a>: Create a new directory.</li>
+<li><a href="export.html"><code>export</code></a>: Export commands to a file.</li>
+<li><a href="ADDTOVAULT.html"><code>addtovault</code></a>: Add files to the vault with the directory as the backing object.</li>
 </ul>
 <h3 id="commands-using-files-or-folders-as-the-backing-object">Commands Using Files or Folders as the Backing Object:</h3>
 <ul>
-<li><strong><a href="RENAME.html"><code>rename</code></a></strong>: Uses the <code>value</code> parameter for renaming files or folders.</li>
-<li><strong><a href="RENAMEFROMSOURCE.html"><code>renamefromsource</code></a></strong>: The new file is evaluated if the <code>evaluatealiases</code> parameter is specified.</li>
-<li><strong><a href="SETVAR.html"><code>setvar</code></a></strong>: Uses the <code>value</code> parameter to set variables for files or folders.</li>
-<li><strong><a href="BOM.html"><code>bom</code></a></strong>: Uses the <code>name</code> parameter to set the exported bom csv name.</li>
-<li><strong><a href="export.html"><code>export</code></a></strong>: Uses the <code>name</code> parameter to set the exported files name pattern.</li>
+<li><a href="RENAME.html"><code>rename</code></a>: Uses the <code>value</code> parameter for renaming files or folders.</li>
+<li><a href="RENAMEFROMSOURCE.html"><code>renamefromsource</code></a>: The new file is evaluated if the <code>evaluatealiases</code> parameter is specified.</li>
+<li><a href="SETVAR.html"><code>setvar</code></a>: Uses the <code>value</code> parameter to set variables for files or folders.</li>
+<li><a href="BOM.html"><code>bom</code></a>: Uses the <code>name</code> parameter to set the exported bom csv name.</li>
+<li><a href="export.html"><code>export</code></a>: Uses the <code>name</code> parameter to set the exported files name pattern.</li>
 </ul>
 <hr>
 <h2 id="placeholders-for-dynamic-substitution">Placeholders for Dynamic Substitution</h2>
-<p>The <code>value</code> parameter in supported commands can include placeholders that are dynamically replaced with actual values based on the context. The placeholders differ slightly depending on whether the backing object is a <strong>file</strong> or a <strong>folder</strong>.</p>
+<p>The <code>value</code> parameter in supported commands can include placeholders that are dynamically replaced with actual values based on the context. The placeholders differ slightly depending on whether the backing object is a file or a folder.</p>
 <h3 id="placeholders-for-files">Placeholders for Files</h3>
 <ul>
 <li><code>$value</code>: Existing value of the variable. If the existing value is null or empty, this evaluates to an empty string.</li>
@@ -225,7 +225,7 @@ ${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
 <p>Unknown or invalid function expressions are left unchanged.</p>
 <p>When a full command value is wrapped in double quotes, escape quotes inside function arguments with <code>\&quot;</code>.</p>
 <h2 id="expression-evaluator">Expression Evaluator</h2>
-<p>The WPF toolbar includes an <strong>Expression Evaluator</strong> tool for testing placeholder expressions before you run a command, script, task, or rename rule. It is designed as a safe preview surface: you choose a file or folder context, type the same expression you would place in a command parameter, and PDMShell shows the evaluated output without renaming files, changing variables, checking files in, or writing anything back to the vault.</p>
+<p>The WPF toolbar includes an Expression Evaluator tool for testing placeholder expressions before you run a command, script, task, or rename rule. It is designed as a safe preview surface: you choose a file or folder context, type the same expression you would place in a command parameter, and PDMShell shows the evaluated output without renaming files, changing variables, checking files in, or writing anything back to the vault.</p>
 <p>Use the formula icon in the toolbar to open the evaluator. Browse to a PDM file or folder, choose a configuration when the expression depends on configuration-specific variables, and optionally choose a variable to populate <code>$value</code> with the current value of that variable. The expression box supports grouped autocomplete for file and folder placeholders, vault and user placeholders, date and time placeholders, string functions, common examples, and PDM variables. This makes it easier to test expressions such as <code>$fileNameWithoutExtension</code>, <code>[Description]</code>, <code>${before($fileNameWithoutExtension, &quot;-&quot;)}</code>, <code>${replace($value, &quot;DRAFT&quot;, &quot;RELEASED&quot;)}</code>, or <code>${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}</code> before using them in commands like <code>rename</code>, <code>setvar</code>, <code>bom</code>, or <code>export</code>.</p>
 <p>The evaluator uses the same placeholder and string-function engine as command execution, so it is the recommended way to confirm what a dynamic value will become. If no file or folder is selected, PDMShell can still evaluate session-level placeholders such as date, time, GUID, vault, user, and global values, but file-specific placeholders and PDM variables need a selected PDM object to return meaningful results.</p>
 <hr>

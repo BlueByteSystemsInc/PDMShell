@@ -14,7 +14,7 @@ rename -filePath -value -search
 - `filePath`: The filerename.
 
 - `directory`: The directory to rename.
-- `value`: The new name for the file. **YOU MUST INCLUDE THE EXTENSION**
+- `value`: The new name for the file. You must include the extension.
 - `search`: The search operation to use.
 
 

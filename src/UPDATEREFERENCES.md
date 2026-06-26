@@ -6,12 +6,12 @@ title: UPDATEREFERENCES Command | PDMShell | SOLIDWORKS PDM
 ## Description
 Updates file references inside the SOLIDWORKS PDM vault.
 
-The `updatereferences` command modifies references stored **inside files**, without opening SOLIDWORKS, and allows you to:
+The `updatereferences` command modifies references stored inside files, without opening SOLIDWORKS, and allows you to:
 
-- Update references for a **single file**
-- Update references for **multiple files using a search**
+- Update references for a single file
+- Update references for multiple files using a search
 - Resolve references by locating matching files inside a specified directory
-- Control which references are updated using a **scope** parameter
+- Control which references are updated using a `scope` parameter
 
 This command is especially useful for fixing broken references, updating references after migrations, or correcting references that point outside the vault.
 
@@ -52,7 +52,7 @@ updatereferences -filepath -search -directory -scope -recursive -csv
 ## Behavior
 - Operates directly on file reference data
 - Does not open SOLIDWORKS
-- **Requires files to be checked out**
+- Requires files to be checked out
 - Uses vault searches to locate replacement references
 - Updates references by matching file names inside the specified directory scope
 - Commits changes directly back into the file

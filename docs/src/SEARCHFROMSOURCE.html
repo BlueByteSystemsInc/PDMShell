@@ -88,7 +88,7 @@
 <h1 id="searchfromsource-command">SEARCHFROMSOURCE Command</h1>
 
 <h2 id="description">Description</h2>
-<p>The <code>searchfromsource</code> command reads a <strong>CSV source file</strong> and uses the <strong>first column</strong> (ignoring the header) as input items to search for in the vault.</p>
+<p>The <code>searchfromsource</code> command reads a CSV source file and uses the first column (ignoring the header) as input items to search for in the vault.</p>
 <p>For every row in the source CSV, PDMShell performs a vault search and returns information such as:</p>
 <ul>
 <li>File ID</li>
@@ -105,10 +105,10 @@
 <hr>
 <h2 id="parameters">Parameters</h2>
 <h3 id="filepath"><code>filePath</code></h3>
-<p>Path to the <strong>source CSV file</strong> to read input values.</p>
+<p>Path to the source CSV file to read input values.</p>
 <ul>
-<li>If the path is <strong>absolute</strong>, PDMShell uses it directly.</li>
-<li>If the path is <strong>relative</strong>, PDMShell combines it with the current directory.</li>
+<li>If the path is absolute, PDMShell uses it directly.</li>
+<li>If the path is relative, PDMShell combines it with the current directory.</li>
 </ul>
 <div class="IMPORTANT">
 <h5>Important</h5>
@@ -136,7 +136,7 @@
 <ul>
 <li>Comma-delimited CSV</li>
 <li>First row is treated as a header and ignored</li>
-<li>Only the <strong>first column</strong> is used</li>
+<li>Only the first column is used</li>
 </ul>
 <p>Example:</p>
 <p>FileName<br>
@@ -145,7 +145,7 @@ asm_top.sldasm<br>
 drawing1.slddrw</p>
 <p>Notes:</p>
 <ul>
-<li><strong>THE VALUES CAN BE A SEARCH QUERY. PLEASE SEE</strong> <a href="advancedsearch.html">ADVANCED SEARCH ARTICLE FOR MORE INFORMATION</a>.</li>
+<li>The values can be a search query. Please see <a href="advancedsearch.html">Advanced Search</a> for more information.</li>
 <li>Empty rows are ignored</li>
 <li>Values are trimmed</li>
 <li>Each value becomes the search input token</li>
@@ -213,13 +213,13 @@ SpecSheet.docx
 <p>ID,FileName,Path,ParentFolderID,ParentFolder,IsCheckedOut,WhereUsedIds</p>
 <h3 id="column-definitions">Column Definitions</h3>
 <ul>
-<li><strong>ID</strong>: PDM file ID returned by search</li>
-<li><strong>FileName</strong>: The original value read from the source CSV first column</li>
-<li><strong>Path</strong>: Full vault path returned by the search result</li>
-<li><strong>ParentFolderID</strong>: Folder ID containing the file</li>
-<li><strong>ParentFolder</strong>: Folder path (derived from the result path)</li>
-<li><strong>IsCheckedOut</strong>: <code>True/False</code> based on PDM lock status</li>
-<li><strong>WhereUsedIds</strong>: Comma-separated list of parent file IDs (from the reference tree)</li>
+<li>ID: PDM file ID returned by search</li>
+<li>FileName: The original value read from the source CSV first column</li>
+<li>Path: Full vault path returned by the search result</li>
+<li>ParentFolderID: Folder ID containing the file</li>
+<li>ParentFolder: Folder path (derived from the result path)</li>
+<li>IsCheckedOut: <code>True/False</code> based on PDM lock status</li>
+<li>WhereUsedIds: Comma-separated list of parent file IDs (from the reference tree)</li>
 </ul>
 <hr>
 <h2 id="examples">Examples</h2>

@@ -5,7 +5,7 @@ title: PDMShell 4.0.0 Visual Code Editor | PDMShell | SOLIDWORKS PDM
 
 # PDMShell 4.0.0 Visual Code Editor
 
-PDMShell 4.0.0 introduces the **Visual Code Editor**, a workflow-style editor for building PDMShell scripts on a canvas.
+PDMShell 4.0.0 introduces the Visual Code Editor, a workflow-style editor for building PDMShell scripts on a canvas.
 
 Instead of writing every command by hand, you can add command nodes, connect them in order, edit parameters from a side panel, and run the resulting script directly from PDMShell. The command line is still available below the canvas, so advanced users can keep working with text while using the visual editor to organize and validate the workflow.
 
@@ -13,7 +13,7 @@ Instead of writing every command by hand, you can add command nodes, connect the
 
 ## Canvas Workflow
 
-The editor starts with a **Begin** node and an action button for adding the first command. Each command becomes a node on the canvas. Nodes are connected in execution order, making the script easier to understand at a glance.
+The editor starts with a Begin node and an action button for adding the first command. Each command becomes a node on the canvas. Nodes are connected in execution order, making the script easier to understand at a glance.
 
 ![Adding the first visual action](../images/visual-code-editor-add-new-action.png)
 
@@ -28,9 +28,9 @@ This is especially helpful for longer PDMShell scripts because you can see the p
 
 The canvas includes navigation controls for working with larger scripts:
 
-- **Zoom In** increases the canvas scale.
-- **Zoom Out** decreases the canvas scale.
-- **Zoom To Fit** fits the visible workflow into the canvas view.
+- Zoom In increases the canvas scale.
+- Zoom Out decreases the canvas scale.
+- Zoom To Fit fits the visible workflow into the canvas view.
 
 These controls are useful when a script grows beyond the visible area or when you want to review the full workflow before running it.
 
@@ -38,11 +38,11 @@ These controls are useful when a script grows beyond the visible area or when yo
 
 The command picker lets you search for commands by name, description, or category. Selecting a command inserts it into the canvas as a node.
 
-For example, searching for [`checkout`](CHECKOUT.md) shows related command choices such as **Check out** and **Undo checkout**. This makes discovery easier for users who do not remember the exact command syntax.
+For example, searching for [`checkout`](CHECKOUT.md) shows related command choices such as Check out and Undo checkout. This makes discovery easier for users who do not remember the exact command syntax.
 
 ## Parameter Panel
 
-When a command node is selected, the **Command Parameters** panel shows the editable parameters for that command.
+When a command node is selected, the Command Parameters panel shows the editable parameters for that command.
 
 ![Editing command parameters](../images/visual-code-editor-field-placeholder.png)
 
@@ -75,10 +75,10 @@ This reduces the trial-and-error normally involved in command-line scripting.
 
 The run menu gives multiple ways to execute the visual script:
 
-- **Run** runs the current workflow.
-- **Run (Browse to File(s))** runs the workflow against selected files.
-- **Run (Search Favorite)** runs the workflow using a saved PDM search favorite.
-- **Run (CSV of File Paths)** runs the workflow against a CSV file containing file paths.
+- Run runs the current workflow.
+- Run (Browse to File(s)) runs the workflow against selected files.
+- Run (Search Favorite) runs the workflow using a saved PDM search favorite.
+- Run (CSV of File Paths) runs the workflow against a CSV file containing file paths.
 
 These options make the same visual workflow reusable across a single file, a search result, or a batch list.
 

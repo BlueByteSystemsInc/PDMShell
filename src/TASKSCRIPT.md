@@ -4,7 +4,7 @@ title: PDMShell add-in | PDMShell | SOLIDWORKS PDM
 ---
 # PDMShell add-in
 
-The **PDMShell add-in** lets SOLIDWORKS PDM administrators run `.pdmshell` scripts directly from PDM menus and PDM event trigger points. It is designed for the same class of automation normally handled with Dispatch: user commands, event-driven rules, file and folder automation, condition checks, and administrator-controlled deployment.
+The PDMShell add-in lets SOLIDWORKS PDM administrators run `.pdmshell` scripts directly from PDM menus and PDM event trigger points. It is designed for the same class of automation normally handled with Dispatch: user commands, event-driven rules, file and folder automation, condition checks, and administrator-controlled deployment.
 
 Instead of building automation from a fixed list of Dispatch actions, the add-in runs PDMShell scripts. This gives administrators access to the PDMShell command engine, the visual script editor, dynamic placeholders, PDM variables, and headless execution through `pdmcli.exe`.
 

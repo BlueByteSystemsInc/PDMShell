@@ -6,7 +6,7 @@ title: PDMShell add-in installation and access | PDMShell
 
 Install the PDMShell add-in in the SOLIDWORKS PDM vault where the automation should run. The add-in is available with the premium version of PDMShell and can be deployed from your Blue Byte Systems Inc account or with PDMDeploy.
 
-After the add-in is loaded in the vault, open the **Script Editor** command from the PDMShell add-in menu.
+After the add-in is loaded in the vault, open the Script Editor command from the PDMShell add-in menu.
 
 ## Administrator access
 

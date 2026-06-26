@@ -8,7 +8,7 @@ title: FAQ | PDMShell | SOLIDWORKS PDM
 ---
 
 ## 1. What is PDMShell?
-PDMShell is a command-line environment for **SOLIDWORKS PDM Professional** that allows users to automate, query, and batch process vault data using simple shell commands.  
+PDMShell is a command-line environment for SOLIDWORKS PDM Professional that allows users to automate, query, and batch process vault data using simple shell commands.  
 It is designed for administrators, developers, and power users who want to extend PDM capabilities beyond the standard client.
 
 ---
@@ -17,22 +17,22 @@ It is designed for administrators, developers, and power users who want to exten
 
 | Feature | **Free License** | **Premium License** |
 |----------|------------------|---------------------|
-| `search` result limit | **5 items** | **Unlimited** |
-| `runscript` script length | **5 lines** | **Unlimited** |
+| `search` result limit | 5 items | Unlimited |
+| `runscript` script length | 5 lines | Unlimited |
 | Access to all `search` commands | Included, limited to 5 results | Included, unlimited |
 | Workflow and transition integration | Not available | Available |
 | Technical support & updates | Not available | Priority |
 | Commercial use | Not available | Allowed |
 
-The **Free License** is ideal for evaluation and lightweight tasks.  
-The **Premium License** unlocks full automation, workflow integration, unlimited search results, and unlimited scripting.
+The Free License is ideal for evaluation and lightweight tasks.  
+The Premium License unlocks full automation, workflow integration, unlimited search results, and unlimited scripting.
 
 ---
 
 ## 3. How do I install or update PDMShell?
 You can install or update PDMShell from:
 - The [official website](https://pdmshell.bluebyte.biz), or  
-- The **Microsoft Store**
+- The Microsoft Store
 
 For detailed setup steps, see the [Installation Guide](howtoinstall.md).  
 If you are updating from a previous version, uninstall the old one first to ensure all command definitions and descriptions are refreshed properly.
@@ -56,23 +56,23 @@ If you install via the Microsoft Store, Windows handles elevation automatically.
 ---
 
 ## 6. What are the system requirements for PDMShell?
-- **Operating System:** Windows 10 or 11  
-- **SOLIDWORKS PDM Professional:** 2014 or newer  
-- **SOLIDWORKS 3D:** 2017 or newer (for commands that interact with SOLIDWORKS)
+- Operating System: Windows 10 or 11  
+- SOLIDWORKS PDM Professional: 2014 or newer  
+- SOLIDWORKS 3D: 2017 or newer (for commands that interact with SOLIDWORKS)
 
 ---
 
 ## 7. How do I report a bug or request support?
 You can reach us via:
-- **Email:** [support@bluebyte.biz](mailto:support@bluebyte.biz)  
-- **Web Form:** [bluebyte.biz/contact](https://bluebyte.biz/contact)
+- Email: [support@bluebyte.biz](mailto:support@bluebyte.biz)  
+- Web Form: [bluebyte.biz/contact](https://bluebyte.biz/contact)
 
 Please include your PDMShell version, command name, and error message when reporting issues.
 
 ---
 
 ## 8. Which commands are available in the Free version?
-Search-related commands and basic file utilities are free to use. In the Free edition, [`search`](SEARCH.md) returns up to **5 items** and [`runscript`](RUNSCRIPT.md) runs scripts up to **5 lines**.
+Search-related commands and basic file utilities are free to use. In the Free edition, [`search`](SEARCH.md) returns up to 5 items and [`runscript`](RUNSCRIPT.md) runs scripts up to 5 lines.
 
 These commands are ideal for quick lookups, validation, and testing automation workflows before upgrading to Premium.
 

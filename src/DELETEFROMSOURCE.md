@@ -68,7 +68,7 @@ FileID,FolderID,Error
 
 
 ## Remarks
-- The source file **must be a CSV file with a header row**.
+- The source file must be a CSV file with a header row.
 
 ## Examples
 ```bash
