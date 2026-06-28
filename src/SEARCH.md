@@ -133,4 +133,4 @@ More examples and strategy details are available in [Search Result Shaping](sear
 Available since PDMShell 2.0.5.
 
 ## Last Updated
-Updated in PDMShell 4.0.12 to add result shaping with `SortBy`, `SortOrder`, `GroupBy`, `DuplicatedBy`, and `Strategy`.
+Updated in PDMShell 4.0.13 to add result shaping with `SortBy`, `SortOrder`, `GroupBy`, `DuplicatedBy`, and `Strategy`.

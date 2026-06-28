@@ -12,7 +12,7 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
-## 4.0.12 (06/27/2026)
+## 4.0.13 (06/27/2026)
 - Added visual editor UI support for IF statement nodes and branch layout. Runtime execution for IF statement branches is not enabled yet.
 - Added result shaping to advanced search queries with `SortBy`, `SortOrder`, `GroupBy`, `DuplicatedBy`, and `Strategy` so commands that use `-search` can sort, group, and keep or exclude selected results.
 - Improved advanced search documentation by splitting search tokens, variable search, result shaping, and search favorites into focused articles.
