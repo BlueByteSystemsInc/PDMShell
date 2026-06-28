@@ -175,7 +175,8 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
     background: var(--pdmshell-panel);
     border: 1px solid var(--pdmshell-border);
     border-radius: 8px;
-    margin-top: 18px;
+    margin: 18px auto 0;
+    max-width: 720px;
     overflow: hidden;
   }
 
