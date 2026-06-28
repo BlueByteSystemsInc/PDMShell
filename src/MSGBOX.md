@@ -70,4 +70,4 @@ msgbox -value "The export failed." -title "Export Error" -icon Error
 Available since PDMShell 4.0.8.
 
 ## Last Updated
-Updated in PDMShell 4.0.13 so `value` and `title` support session-level placeholders such as `$vaultName`, `$date`, `$time`, `$guid`, and `$tempFolder`.
+Updated in PDMShell 4.0.14 so `value` and `title` support session-level placeholders such as `$vaultName`, `$date`, `$time`, `$guid`, and `$tempFolder`.

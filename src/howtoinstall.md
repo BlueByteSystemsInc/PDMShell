@@ -7,7 +7,7 @@ title: How to Install/Update PDMShell
 PDMShell can be installed from the Blue Byte Systems server or from the Microsoft Store. The Blue Byte Systems server installer is recommended because it provides the latest PDMShell version.
 
 > [!NOTE]
-> The in-app updater is available in PDMShell 4.0.13 and newer.
+> The in-app updater is available in PDMShell 4.0.14 and newer.
 
 ---
 
@@ -53,7 +53,7 @@ The Microsoft Store does not automatically update PDMShell. If you installed PDM
 
 ## Update From Inside PDMShell
 
-PDMShell 4.0.13 and newer can show an Update available dialog when a newer version is detected. The dialog shows the release notes for the latest version.
+PDMShell 4.0.14 and newer can show an Update available dialog when a newer version is detected. The dialog shows the release notes for the latest version.
 
 <div align="center">
   <img src="../images/pdmshell-update-available.png" alt="PDMShell update available dialog" style="max-width:620px;width:100%;height:auto;">

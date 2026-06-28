@@ -12,8 +12,8 @@ Availability means the PDMShell version where the command first became available
 
 | Command | Last Updated | What Changed |
 | --- | --- | --- |
-| [search](SEARCH.md) | PDMShell 4.0.13 | Added result shaping with `SortBy`, `SortOrder`, `GroupBy`, `DuplicatedBy`, and `Strategy` for commands that use `-search`. |
-| [msgbox](MSGBOX.md) | PDMShell 4.0.13 | Added session-level placeholder evaluation for `value` and `title`, including `$vaultName`, `$date`, `$time`, `$guid`, and `$tempFolder`. |
+| [search](SEARCH.md) | PDMShell 4.0.14 | Added result shaping with `SortBy`, `SortOrder`, `GroupBy`, `DuplicatedBy`, and `Strategy` for commands that use `-search`. |
+| [msgbox](MSGBOX.md) | PDMShell 4.0.14 | Added session-level placeholder evaluation for `value` and `title`, including `$vaultName`, `$date`, `$time`, `$guid`, and `$tempFolder`. |
 
 ## Vault
 
