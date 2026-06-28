@@ -54,4 +54,4 @@ delete -search "%.sldprt"
  <video src="https://bluebyte.biz/wp-content/pdmshellvideos/delete.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video>
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

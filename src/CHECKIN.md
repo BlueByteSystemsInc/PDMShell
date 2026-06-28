@@ -46,4 +46,4 @@ checkin -filePath "file1.sldprt"
 | EdmUnlock_Simple                          | Check in the file using default behavior                                                                         |
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

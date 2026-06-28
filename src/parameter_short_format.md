@@ -51,7 +51,7 @@ PDMShell supports short formats for many of its parameters to make commands more
 | `includesubfolders`      | `includesubfolders` | Includes subfolders in the operation.                                          |
 | `includeproperties`      | `includeproperties` | Includes properties in the operation.                                          |
 | `toolboxflag`            | `toolboxflag`    | Toggles the toolbox flag.                                                       |
-| `evaluatealias`          | `evaluatealias`  | Evaluates aliases for dynamic placeholders.                                     |
+| `evaluatealias`          | `evaluatealias`  | Evaluates aliases for placeholders.                                             |
 | `stringformat`           | `stringformat`   | Specifies the string format.                                                    |
 | `taskName`               | `taskName`       | Specifies the name of the task.                                                 |
 | `suffix`                 | `suffix`         | Specifies a suffix to append.                                                   |

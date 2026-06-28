@@ -23,6 +23,28 @@ msgbox -value message [-title title] [-icon icon]
 - `icon`:  
   *(Optional)* Message box icon. Valid values are `None`, `Information`, `Warning`, `Error`, and `Question`. If omitted, PDMShell uses `Information`.
 
+## Visual Editor
+In the visual editor command builder, the `icon` parameter is shown as a single-select combo box with the supported icon values:
+
+- `None`
+- `Information`
+- `Warning`
+- `Error`
+- `Question`
+
+## Placeholders
+The `value` and `title` parameters support session placeholders. PDMShell evaluates placeholders before showing the message box, so you can display values from the current session in the message text.
+
+For example, after logging in to a vault, `$vaultName` resolves to the active vault name:
+
+```bash
+msgbox -value "vaultName = $vaultName" -icon "Information"
+```
+
+![MSGBOX command showing the evaluated vaultName placeholder](../images/msgbox-placeholders.png)
+
+Common session placeholders include `$vaultName`, `$date`, `$time`, `$guid`, and `$tempFolder`.
+
 ## Examples
 ```bash
 msgbox -value "Hello from PDMShell"
@@ -45,4 +67,7 @@ msgbox -value "The export failed." -title "Export Error" -icon Error
 - The script continues after the user closes the message box.
 
 ## Availability
-Unreleased after 4.0.7.
+Available since PDMShell 4.0.8.
+
+## Last Updated
+Updated in PDMShell 4.0.12 so `value` and `title` support session-level placeholders such as `$vaultName`, `$date`, `$time`, `$guid`, and `$tempFolder`.

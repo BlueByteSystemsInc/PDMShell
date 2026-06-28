@@ -29,4 +29,4 @@ getvarfromdb -f "file1.sldprt" -variableName "CustomVar"
 - This command will always return the latest value.
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

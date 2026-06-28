@@ -18,4 +18,4 @@ quit -silent
 - This command runs silently in scripts. Read more about [scripting](/src/scripting.html).
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

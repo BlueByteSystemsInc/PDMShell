@@ -53,4 +53,4 @@ start -process -swversion
   If the specified program or process cannot be found, an error message will be displayed.
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

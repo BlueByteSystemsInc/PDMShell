@@ -28,4 +28,4 @@ history -f "file1.sldprt"
 ![History Command](../images/history.png)
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

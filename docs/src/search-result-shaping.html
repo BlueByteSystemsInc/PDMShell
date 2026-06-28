@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Search Result Shaping | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Search Result Shaping | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Sort, group, and select PDMShell search results with SortBy, GroupBy, DuplicatedBy, and Strategy.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/search-result-shaping.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="search-result-shaping">Search Result Shaping</h1>
+
+<p>Result shaping is the part of PDMShell search that runs after SOLIDWORKS PDM returns matching files and folders.</p>
+<p>Use result shaping when you need to sort search results, find duplicate groups, keep only one item from each group, or exclude one item from each group.</p>
+<pre><code class="lang-text">PDM search
+  -&gt; raw matching results
+  -&gt; SortBy
+  -&gt; GroupBy or DuplicatedBy
+  -&gt; Strategy
+  -&gt; final results passed to the command
+</code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p><code>SortBy</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, and <code>Strategy</code> require PDMShell to collect all matching PDM search results before sorting, grouping, and applying the strategy. Be mindful when using these options with broad recursive searches that may return hundreds or thousands of results. Narrow the search first with <code>Name</code>, variables, folder scope, state, dates, or other filters.</p>
+</div>
+<h2 id="tokens">Tokens</h2>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DuplicatedBy</td>
+<td>Groups results by a field or variable. Only groups with more than one item are processed.</td>
+</tr>
+<tr>
+<td>GroupBy</td>
+<td>Alias for <code>DuplicatedBy</code></td>
+</tr>
+<tr>
+<td>SortBy</td>
+<td>Sorts all results before applying the strategy. If <code>GroupBy</code> is specified, each group is sorted separately.</td>
+</tr>
+<tr>
+<td>SortOrder</td>
+<td>Optional sort direction: <code>Asc</code>, <code>Ascending</code>, <code>Desc</code>, or <code>Descending</code></td>
+</tr>
+<tr>
+<td>SortDirection</td>
+<td>Alias for <code>SortOrder</code></td>
+</tr>
+<tr>
+<td>Strategy</td>
+<td>Selects which sorted results are processed</td>
+</tr>
+<tr>
+<td>DuplicatesStrategy</td>
+<td>Alias for <code>Strategy</code></td>
+</tr>
+</tbody>
+</table>
+<p>Without <code>GroupBy</code>, <code>SortBy</code> and <code>Strategy</code> are applied once to all matching results.</p>
+<p>With <code>GroupBy</code> or <code>DuplicatedBy</code>, PDMShell processes only duplicate groups. <code>SortBy</code> and <code>Strategy</code> are applied separately inside each group.</p>
+<h2 id="supported-fields">Supported Fields</h2>
+<p>Supported <code>DuplicatedBy</code>, <code>GroupBy</code>, and <code>SortBy</code> values include:</p>
+<ul>
+<li><code>Name</code></li>
+<li><code>FileDate</code></li>
+<li><code>Hash</code></li>
+<li><code>State</code></li>
+<li><code>Version</code></li>
+<li><code>CurrentVersion</code></li>
+<li><code>Revision</code></li>
+<li><code>FileSize</code></li>
+<li><code>ID</code></li>
+<li><code>Path</code></li>
+<li><code>FolderID</code></li>
+<li>PDM variables such as <code>@Revision</code> or <code>@PartNumber</code></li>
+</ul>
+<p>To use <code>Hash</code>, files must be locally cached.</p>
+<h2 id="default-sort-order">Default Sort Order</h2>
+<p>When <code>SortOrder</code> is not specified:</p>
+<ul>
+<li>Date, version, revision, and size fields sort descending by default.</li>
+<li>Name, path, state, and ID fields sort ascending by default.</li>
+</ul>
+<h2 id="strategies">Strategies</h2>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KeepFirst</td>
+<td>Keeps only the first item after sorting.</td>
+</tr>
+<tr>
+<td>ExcludeFirst</td>
+<td>Keeps every item except the first after sorting.</td>
+</tr>
+<tr>
+<td>KeepLast</td>
+<td>Keeps only the last item after sorting.</td>
+</tr>
+<tr>
+<td>ExcludeLast</td>
+<td>Keeps every item except the last after sorting.</td>
+</tr>
+<tr>
+<td>KeepNewest</td>
+<td>Keeps the newest item.</td>
+</tr>
+<tr>
+<td>ExcludeNewest</td>
+<td>Keeps every item except the newest.</td>
+</tr>
+<tr>
+<td>KeepOldest</td>
+<td>Keeps the oldest item.</td>
+</tr>
+<tr>
+<td>ExcludeOldest</td>
+<td>Keeps every item except the oldest.</td>
+</tr>
+<tr>
+<td>KeepHighestVersion</td>
+<td>Keeps the item with the highest PDM version.</td>
+</tr>
+<tr>
+<td>ExcludeHighestVersion</td>
+<td>Keeps every item except the one with the highest PDM version.</td>
+</tr>
+<tr>
+<td>KeepLowestVersion</td>
+<td>Keeps the item with the lowest PDM version.</td>
+</tr>
+<tr>
+<td>ExcludeLowestVersion</td>
+<td>Keeps every item except the one with the lowest PDM version.</td>
+</tr>
+<tr>
+<td>KeepLatestRevision</td>
+<td>Keeps the item with the latest revision value.</td>
+</tr>
+<tr>
+<td>ExcludeLatestRevision</td>
+<td>Keeps every item except the one with the latest revision value.</td>
+</tr>
+<tr>
+<td>KeepLargest</td>
+<td>Keeps the largest file.</td>
+</tr>
+<tr>
+<td>ExcludeLargest</td>
+<td>Keeps every item except the largest file.</td>
+</tr>
+<tr>
+<td>KeepSmallest</td>
+<td>Keeps the smallest file.</td>
+</tr>
+<tr>
+<td>ExcludeSmallest</td>
+<td>Keeps every item except the smallest file.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<p>List duplicate SOLIDWORKS files by name:</p>
+<pre><code class="lang-bash">search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns &quot;FileDate,Hash,Revision&quot;
+</code></pre>
+<p>List duplicate SOLIDWORKS files by revision:</p>
+<pre><code class="lang-bash">search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=@Revision&quot; -columns &quot;FileDate,Hash,Revision&quot;
+</code></pre>
+<p>List all PDFs except the oldest one after sorting the full result set by file date:</p>
+<pre><code class="lang-bash">search -search &quot;Name=%.pdf;SortBy=FileDate;Recursive=true;Strategy=ExcludeFirst&quot; -columns FileDate
+</code></pre>
+<p>List the newest PDF in each duplicate-name group:</p>
+<pre><code class="lang-bash">search -search &quot;Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=KeepFirst&quot;
+</code></pre>
+<p>Delete every PDF except the newest file in each duplicate-name group:</p>
+<pre><code class="lang-bash">delete -search &quot;Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=ExcludeFirst&quot;
+</code></pre>
+<h2 id="related-articles">Related Articles</h2>
+<ul>
+<li><a href="advancedsearch.html">Advanced search overview</a></li>
+<li><a href="search-tokens.html">Search tokens</a></li>
+<li><a href="search-variables.html">Variable search</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/search-result-shaping.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://bluebyte.biz'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

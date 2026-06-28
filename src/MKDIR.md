@@ -26,4 +26,4 @@ mkdir -directory "NewFolder"
 - `directory` is the default parameter. You do not need to specify it.
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

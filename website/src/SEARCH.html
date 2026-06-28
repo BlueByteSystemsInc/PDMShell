@@ -104,7 +104,7 @@
 </li>
 <li><p><code>columns</code>: Specifies the columns to include in the output seperated by a comma.</p>
 </li>
-<li><p><code>duplicatesstrategy</code>: Defines how duplicate results are resolved when DuplicatedBy is specified in the search query. You must <code>DuplicatedBy</code> token in the <code>search</code> parameter.</p>
+<li><p><code>duplicatesstrategy</code>: Defines how duplicate results are resolved when <code>DuplicatedBy</code> or <code>GroupBy</code> is specified in the search query. This parameter is supported for backward compatibility; you can also put <code>Strategy</code> or <code>DuplicatesStrategy</code> directly inside the <code>search</code> query.</p>
 </li>
 </ul>
 <div class="NOTE">
@@ -116,7 +116,7 @@ search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>We have introduced Advanced Search capabilities that can be used in the <code>-search</code> parameter. Please see more information <a href="advancedsearch.html">here</a>.</p>
+<p>Advanced search capabilities can be used in the <code>-search</code> parameter. See <a href="advancedsearch.html">Advanced Search</a>, <a href="search-tokens.html">Search Tokens</a>, <a href="search-variables.html">Variable Search</a>, <a href="search-result-shaping.html">Result Shaping</a>, and <a href="search-favorites.html">Search Favorites</a>.</p>
 </div>
 <h2 id="examples">Examples</h2>
 <h3 id="example-1-basic-search">Example 1: Basic Search</h3>
@@ -131,8 +131,43 @@ search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns
 <pre><code class="lang-bash">search -search -csv -columns &quot;Description,PartNumber&quot; # Prints all the files in the current directory with their descriptions and part numbers
 </code></pre>
 <p>Exports the search results to a CSV file with specified columns.</p>
-<h2 id="duplicate-strategy-options">Duplicate Strategy Options</h2>
-<p>The following strategies are supported for the <code>-duplicatesstrategy</code> parameter:</p>
+<h2 id="result-selection-and-duplicate-strategy-options">Result Selection and Duplicate Strategy Options</h2>
+<p>Result selection is handled by the shared search engine. This means the same query options can be used by any command that accepts <code>-search</code>, such as <code>search</code>, <code>delete</code>, <code>checkout</code>, <code>get</code>, <code>setvar</code>, and <code>transition</code>.</p>
+<p>Use these query tokens to sort and select search results. For the full reference, see <a href="search-result-shaping.html">Search Result Shaping</a>.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p><code>SortBy</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, and <code>Strategy</code> require PDMShell to collect all matching PDM search results before sorting, grouping, and applying the strategy. Be mindful when using these options with broad recursive searches that may return hundreds or thousands of files.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DuplicatedBy or GroupBy</td>
+<td>Optional. Groups results by a field or variable. When specified, only groups with more than one item are processed.</td>
+</tr>
+<tr>
+<td>SortBy</td>
+<td>Sorts the matching results before applying the strategy. If <code>GroupBy</code> is specified, each group is sorted separately.</td>
+</tr>
+<tr>
+<td>SortOrder or SortDirection</td>
+<td>Optional. Use <code>Asc</code>, <code>Ascending</code>, <code>Desc</code>, or <code>Descending</code>.</td>
+</tr>
+<tr>
+<td>Strategy or DuplicatesStrategy</td>
+<td>Selects which results in each sorted group are processed.</td>
+</tr>
+</tbody>
+</table>
+<p>Supported <code>DuplicatedBy</code>, <code>GroupBy</code>, and <code>SortBy</code> values include <code>Name</code>, <code>FileDate</code>, <code>Hash</code>, <code>State</code>, <code>Version</code>, <code>CurrentVersion</code>, <code>Revision</code>, <code>FileSize</code>, <code>ID</code>, <code>Path</code>, <code>FolderID</code>, and PDM variables such as <code>@Revision</code> or <code>@PartNumber</code>.</p>
+<p>Without <code>GroupBy</code>, <code>SortBy</code> and <code>Strategy</code> are applied once to all matching results. With <code>GroupBy</code>, they are applied separately inside each duplicate group.</p>
+<p>When <code>SortOrder</code> is not specified, date/version/revision/size fields sort descending by default, while name/path/state/ID fields sort ascending by default.</p>
+<p>The following strategies are supported for <code>Strategy</code>, <code>DuplicatesStrategy</code>, and the legacy <code>-duplicatesstrategy</code> parameter:</p>
 <table>
 <thead>
 <tr>
@@ -142,20 +177,36 @@ search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns
 </thead>
 <tbody>
 <tr>
+<td>KeepFirst</td>
+<td>Keeps the first file in the sorted result set or each sorted group.</td>
+</tr>
+<tr>
+<td>ExcludeFirst</td>
+<td>Excludes the first file and keeps the remaining results.</td>
+</tr>
+<tr>
+<td>KeepLast</td>
+<td>Keeps the last file in the sorted result set or each sorted group.</td>
+</tr>
+<tr>
+<td>ExcludeLast</td>
+<td>Excludes the last file and keeps the remaining results.</td>
+</tr>
+<tr>
 <td>KeepNewest</td>
-<td>Keeps the newest file in each duplicate group.</td>
+<td>Keeps the newest file.</td>
 </tr>
 <tr>
 <td>ExcludeNewest</td>
-<td>Excludes the newest file and keeps the remaining duplicates.</td>
+<td>Excludes the newest file and keeps the remaining results.</td>
 </tr>
 <tr>
 <td>KeepOldest</td>
-<td>Keeps the oldest file in each duplicate group.</td>
+<td>Keeps the oldest file.</td>
 </tr>
 <tr>
 <td>ExcludeOldest</td>
-<td>Excludes the oldest file and keeps the remaining duplicates.</td>
+<td>Excludes the oldest file and keeps the remaining results.</td>
 </tr>
 <tr>
 <td>KeepHighestVersion</td>
@@ -202,6 +253,16 @@ search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns
 <pre><code class="lang-bash">## Lists all duplicates in the current directory by name and prints their file date, hash and revision
 search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -duplicatesstrategy KeepNewest -columns &quot;FileDate,Hash,Revision&quot;
 </code></pre>
+<pre><code class="lang-bash">## Lists all PDFs except the oldest one after sorting the full result set by file date
+search -search &quot;Name=%.pdf;SortBy=FileDate;Recursive=true;Strategy=ExcludeFirst&quot; -columns FileDate
+</code></pre>
+<pre><code class="lang-bash">## Lists the newest PDF in each duplicate-name group
+search -search &quot;Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=KeepFirst&quot;
+</code></pre>
+<pre><code class="lang-bash">## Deletes all but the newest PDF in each duplicate-name group
+delete -search &quot;Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=ExcludeFirst&quot;
+</code></pre>
+<p>More examples and strategy details are available in <a href="search-result-shaping.html">Search Result Shaping</a>.</p>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>Ensure the current directory is set correctly before running the command.</li>
@@ -211,6 +272,8 @@ search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -duplica
 <p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/search.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
 <h2 id="availability">Availability</h2>
 <p>Available since PDMShell 2.0.5.</p>
+<h2 id="last-updated">Last Updated</h2>
+<p>Updated in PDMShell 4.0.12 to add result shaping with <code>SortBy</code>, <code>SortOrder</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, and <code>Strategy</code>.</p>
 
 </article>
 

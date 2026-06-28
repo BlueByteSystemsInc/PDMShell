@@ -1,8 +1,8 @@
 ---
-description: Placeholder and command context values available to PDMShell add-in scripts.
-title: Placeholders and command context | PDMShell add-in
+description: Add-in placeholders and command context values available to PDMShell scripts.
+title: Add-in Placeholders and Command Context | PDMShell Add-in
 ---
-# Placeholders and command context
+# Add-in Placeholders and Command Context
 
 The add-in evaluates placeholders for the current command context and the affected file or folder.
 

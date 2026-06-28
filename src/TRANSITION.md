@@ -192,4 +192,4 @@ To remove limit: https://bluebyte.biz/product/pdmshell
 - Backup vault before large operations.
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

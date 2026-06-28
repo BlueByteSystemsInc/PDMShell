@@ -35,4 +35,4 @@ printfromsource -filePath "source.csv" -csv "output.csv"
 | 3  | C:\Vault\ProjectC\Assembly1.SLDASM | 107 | FALSE | 5023 |
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

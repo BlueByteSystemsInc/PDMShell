@@ -61,4 +61,4 @@ whereused -filePath "C:\Vault\Parts\Bracket.SLDPRT" -csv parents.csv
 ```
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

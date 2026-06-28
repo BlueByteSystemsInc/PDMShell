@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Variable Search | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Variable Search | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Search SOLIDWORKS PDM variables with PDMShell advanced search.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/search-variables.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="variable-search">Variable Search</h1>
+
+<p>Conditions beginning with <code>@</code> search PDM variables.</p>
+<pre><code class="lang-bash">@VariableName Operator Value
+</code></pre>
+<p>Examples:</p>
+<pre><code class="lang-bash">@Description=Pump
+@Weight&gt;=10
+@Revision!=A
+@Material~Steel
+@ProjectCode!~TEST
+</code></pre>
+<p>You can combine variable conditions with file-name and PDM search tokens. All conditions must match.</p>
+<pre><code class="lang-bash">Name=%Pump%;@Description~Steel;StateName=Released;@Weight&gt;=5
+</code></pre>
+<h2 id="supported-operators">Supported Operators</h2>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>Equal</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>Not equal</td>
+</tr>
+<tr>
+<td>&lt;&gt;</td>
+<td>Not equal</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>Greater than</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>Less than</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>Greater than or equal</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Less than or equal</td>
+</tr>
+<tr>
+<td>~</td>
+<td>Contains</td>
+</tr>
+<tr>
+<td>!~</td>
+<td>Does not contain</td>
+</tr>
+</tbody>
+</table>
+<h2 id="operator-mapping">Operator Mapping</h2>
+<p>String variables use these operator mappings.</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>Equals</td>
+</tr>
+<tr>
+<td>!= or &lt;&gt;</td>
+<td>Different</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>Greater</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>Less</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>Greater or equal</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Less or equal</td>
+</tr>
+<tr>
+<td>~</td>
+<td>Contains</td>
+</tr>
+<tr>
+<td>!~</td>
+<td>Not contains</td>
+</tr>
+</tbody>
+</table>
+<p>Numeric and date variables use the corresponding numeric or date operator sets.</p>
+<p>Dates must use <code>yyyyMMdd</code>.</p>
+<pre><code class="lang-bash">@ApprovedDate&gt;=20260101
+</code></pre>
+<h2 id="operator-detection">Operator Detection</h2>
+<p>Operators are detected longest-first to avoid ambiguity.</p>
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Operator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>&gt;=</td>
+</tr>
+<tr>
+<td>2</td>
+<td>&lt;=</td>
+</tr>
+<tr>
+<td>3</td>
+<td>!=</td>
+</tr>
+<tr>
+<td>4</td>
+<td>&lt;&gt;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>!~</td>
+</tr>
+<tr>
+<td>6</td>
+<td>~</td>
+</tr>
+<tr>
+<td>7</td>
+<td>&gt;</td>
+</tr>
+<tr>
+<td>8</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>9</td>
+<td>=</td>
+</tr>
+</tbody>
+</table>
+<p>This prevents <code>&gt;=</code> from being parsed as <code>&gt;</code>.</p>
+<h2 id="invalid-input">Invalid Input</h2>
+<p>Invalid expressions are ignored silently. PDMShell continues applying valid conditions.</p>
+<p>Examples that may be ignored:</p>
+<pre><code class="lang-bash">@MissingVar=Test
+HistoryBefore=BADDATE
+UnknownKey=Value
+</code></pre>
+<h2 id="related-articles">Related Articles</h2>
+<ul>
+<li><a href="advancedsearch.html">Advanced search overview</a></li>
+<li><a href="search-tokens.html">Search tokens</a></li>
+<li><a href="search-result-shaping.html">Result shaping</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/search-variables.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

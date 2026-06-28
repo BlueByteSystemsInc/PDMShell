@@ -17,4 +17,4 @@ preview -filePath -search -Directory
 - `Directory`: Directory used as the search or preview context.
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

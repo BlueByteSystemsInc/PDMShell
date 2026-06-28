@@ -36,4 +36,4 @@ getvar -filePath "file1.sldprt" -variableName "CustomVar"
 - **This comand will return what's in the locale cache which may not be necessarily the latest version. For that, please use [`getvarfromdb`](GETVARFROMDB.md)**.
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

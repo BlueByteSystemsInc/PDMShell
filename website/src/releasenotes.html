@@ -93,10 +93,22 @@
 <p>To update PDMShell properly, <strong>download</strong> the latest version, <strong>uninstall</strong> PDMShell and
 then <strong>install</strong> the latest version. <strong>Do not update installed version.</strong></p>
 </div>
+<h2 id="4012-06272026">4.0.12 (06/27/2026)</h2>
+<ul>
+<li>Added visual editor UI support for IF statement nodes and branch layout. Runtime execution for IF statement branches is not enabled yet.</li>
+<li>Added result shaping to advanced search queries with <code>SortBy</code>, <code>SortOrder</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, and <code>Strategy</code> so commands that use <code>-search</code> can sort, group, and keep or exclude selected results.</li>
+<li>Improved advanced search documentation by splitting search tokens, variable search, result shaping, and search favorites into focused articles.</li>
+<li>Improved multi-session tab behavior so each session keeps its own vault connection, autocomplete metadata, visual editor metadata, and Connect to Vault action.</li>
+<li>Fixed tab switching issues that could replay output text or duplicate the welcome message.</li>
+<li>Improved visual editor autocomplete loading for large vaults by showing busy status and staged progress while vault metadata is loaded.</li>
+<li>Improved the update available dialog with dark release note styling, larger centered action buttons, an administrator privilege tooltip, elevated updater launch, and a Windows 11-style shield icon when running on Windows 11.</li>
+<li>Updated <a href="MSGBOX.html"><code>msgbox</code></a> so <code>value</code> and <code>title</code> support session-level placeholder evaluation such as <code>$vaultName</code>, <code>$date</code>, <code>$time</code>, <code>$guid</code>, and <code>$tempFolder</code>.</li>
+</ul>
 <h2 id="4011-06212026">4.0.11 (06/21/2026)</h2>
 <ul>
 <li>Added documentation for the WPF <strong>Expression Evaluator</strong>, including how to safely preview placeholder expressions against a selected PDM file or folder, use <code>$value</code>, choose configurations, and test string functions before running commands or scripts.</li>
 <li>Added an on-demand PDMShell add-in script demo to the <strong>Command menu scripts</strong> documentation, showing how users can launch a rename script from SOLIDWORKS PDM without creating a PDM Task.</li>
+<li>Updated the visual editor metadata for <a href="MSGBOX.html"><code>msgbox</code></a> so the <code>icon</code> parameter appears as a single-select combo box with the supported message box icons.</li>
 </ul>
 <h2 id="4010-07182026">4.0.10 (07/18/2026)</h2>
 <ul>

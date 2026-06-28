@@ -98,7 +98,7 @@
 </li>
 <li><p><code>variableName</code>: The variable to set.</p>
 </li>
-<li><p><code>value</code>: The value to assign to the variable. This parameter supports dynamic placeholders. When using <code>$value</code>, PDMShell substitutes the existing variable value; if the existing value is null or empty, <code>$value</code> evaluates to an empty string. Literal <code>\n</code> sequences are converted to <code>Environment.NewLine</code>.</p>
+<li><p><code>value</code>: The value to assign to the variable. This parameter supports placeholders. When using <code>$value</code>, PDMShell substitutes the existing variable value; if the existing value is null or empty, <code>$value</code> evaluates to an empty string. Literal <code>\n</code> sequences are converted to <code>Environment.NewLine</code>.</p>
 </li>
 <li><p><code>configNames</code>: The configuration names to set the variable for, separated by commas.</p>
 </li>
@@ -153,7 +153,7 @@ setvar -search &quot;Name=%.sldprt&quot; -variableName Description -value &quot;
 <li>Dynamic placeholder evaluation supports string functions such as <code>${left(...)}</code>, <code>${right(...)}</code>, <code>${len(...)}</code>, <code>${pos(...)}</code>, <code>${replace(...)}</code>, <code>${before(...)}</code>, and <code>${after(...)}</code>.</li>
 </ul>
 <h2 id="availability">Availability</h2>
-<p>Available since PDMShell 2.0.0 or earlier.</p>
+<p>Available since PDMShell 2.0.0.</p>
 
 </article>
 

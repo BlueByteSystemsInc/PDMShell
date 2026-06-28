@@ -205,4 +205,4 @@ If it does not exist, the command creates it and adds it to the vault.
 - The input file is interpreted as comma-delimited CSV only.
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

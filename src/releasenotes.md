@@ -12,9 +12,20 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
 then **install** the latest version. **Do not update installed version.**
 
+## 4.0.12 (06/27/2026)
+- Added visual editor UI support for IF statement nodes and branch layout. Runtime execution for IF statement branches is not enabled yet.
+- Added result shaping to advanced search queries with `SortBy`, `SortOrder`, `GroupBy`, `DuplicatedBy`, and `Strategy` so commands that use `-search` can sort, group, and keep or exclude selected results.
+- Improved advanced search documentation by splitting search tokens, variable search, result shaping, and search favorites into focused articles.
+- Improved multi-session tab behavior so each session keeps its own vault connection, autocomplete metadata, visual editor metadata, and Connect to Vault action.
+- Fixed tab switching issues that could replay output text or duplicate the welcome message.
+- Improved visual editor autocomplete loading for large vaults by showing busy status and staged progress while vault metadata is loaded.
+- Improved the update available dialog with dark release note styling, larger centered action buttons, an administrator privilege tooltip, elevated updater launch, and a Windows 11-style shield icon when running on Windows 11.
+- Updated [`msgbox`](MSGBOX.md) so `value` and `title` support session-level placeholder evaluation such as `$vaultName`, `$date`, `$time`, `$guid`, and `$tempFolder`.
+
 ## 4.0.11 (06/21/2026)
 - Added documentation for the WPF **Expression Evaluator**, including how to safely preview placeholder expressions against a selected PDM file or folder, use `$value`, choose configurations, and test string functions before running commands or scripts.
 - Added an on-demand PDMShell add-in script demo to the **Command menu scripts** documentation, showing how users can launch a rename script from SOLIDWORKS PDM without creating a PDM Task.
+- Updated the visual editor metadata for [`msgbox`](MSGBOX.md) so the `icon` parameter appears as a single-select combo box with the supported message box icons.
 
 ## 4.0.10 (07/18/2026)
 - Added logged-in PDM user profile placeholders: `$username.firstName`, `$username.lastName`, `$username.FullName`, and `$username.email`.

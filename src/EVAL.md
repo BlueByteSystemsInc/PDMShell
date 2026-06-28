@@ -1,19 +1,19 @@
 ---
-description: The Dynamic Placeholders feature in PDMShell allows you to substitute values dynamically using placeholders
-title: Dynamic Placeholders | PDMShell | SOLIDWORKS PDM
+description: Placeholders in PDMShell let you substitute file, folder, vault, user, date, variable, and global values in supported command parameters.
+title: Placeholders | PDMShell | SOLIDWORKS PDM
 ---
-# Dynamic Placeholders in PDMShell
+# Placeholders in PDMShell
 
 ## Overview
 
-The Dynamic Placeholders feature in PDMShell allows you to substitute values dynamically using placeholders. This functionality is supported by several commands and enables the use of file or folder properties, system variables, and other contextual information to generate new values automatically.
+Placeholders in PDMShell let you substitute values at runtime. Supported commands can use file or folder properties, system values, vault context, PDM variables, and other contextual information to generate values automatically.
 
-Dynamic Placeholders are not a standalone command but a feature used by specific commands to process the `value` parameter or other relevant inputs.
+Placeholders are not a standalone command. They are evaluated by supported commands when processing the `value` parameter or other relevant inputs.
 
 ---
 
-## Commands Supporting Dynamic Placeholders
-The following commands support the use of dynamic placeholders:
+## Commands Supporting Placeholders
+The following commands support placeholders:
 
 ### Commands Using the Current Folder as the Backing Object (`directory` parameter):
 - [`cd`](CD.md): Change the current directory.
@@ -30,8 +30,8 @@ The following commands support the use of dynamic placeholders:
 
 ---
 
-## Placeholders for Dynamic Substitution
-The `value` parameter in supported commands can include placeholders that are dynamically replaced with actual values based on the context. The placeholders differ slightly depending on whether the backing object is a file or a folder.
+## Placeholder Reference
+The `value` parameter in supported commands can include placeholders that are replaced with actual values based on the current context. The placeholders differ slightly depending on whether the backing object is a file or a folder.
 
 ### Placeholders for Files
 - `$value`: Existing value of the variable. If the existing value is null or empty, this evaluates to an empty string.
@@ -61,7 +61,7 @@ The `value` parameter in supported commands can include placeholders that are dy
 - `$username.lastName`: The logged-in PDM user's last name when available.
 - `$username.FullName`: The logged-in PDM user's full name when available.
 - `$username.email`: The logged-in PDM user's email address when available.
-- `$vaultname`: The name of the vault.
+- `$vaultName`: The name of the vault. `$vaultname` is also supported for compatibility.
 - `$yyyy`: The current year.
 - `$mm`: The current month (two digits).
 - `$hh`: The current hour (two digits).
@@ -90,7 +90,7 @@ Global variables are temporary and last only for the current PDMShell session or
 ---
 
 ## String Functions
-Dynamic placeholders also support a small set of string functions. Functions are evaluated after placeholders such as `$value`, `$name`, and `[Variable]` have been resolved, so they can be used to manipulate the evaluated text.
+Placeholders also support a small set of string functions. Functions are evaluated after placeholders such as `$value`, `$name`, and `[Variable]` have been resolved, so they can be used to manipulate the evaluated text.
 
 String functions use the `${...}` syntax:
 
@@ -129,7 +129,7 @@ When a full command value is wrapped in double quotes, escape quotes inside func
 
 ## Expression Evaluator
 
-The WPF toolbar includes an Expression Evaluator tool for testing placeholder expressions before you run a command, script, task, or rename rule. It is designed as a safe preview surface: you choose a file or folder context, type the same expression you would place in a command parameter, and PDMShell shows the evaluated output without renaming files, changing variables, checking files in, or writing anything back to the vault.
+The PDMShell toolbar includes an Expression Evaluator tool for testing placeholder expressions before you run a command, script, task, or rename rule. It is designed as a safe preview surface: you choose a file or folder context, type the same expression you would place in a command parameter, and PDMShell shows the evaluated output without renaming files, changing variables, checking files in, or writing anything back to the vault.
 
 Use the formula icon in the toolbar to open the evaluator. Browse to a PDM file or folder, choose a configuration when the expression depends on configuration-specific variables, and optionally choose a variable to populate `$value` with the current value of that variable. The expression box supports grouped autocomplete for file and folder placeholders, vault and user placeholders, date and time placeholders, string functions, common examples, and PDM variables. This makes it easier to test expressions such as `$fileNameWithoutExtension`, `[Description]`, `${before($fileNameWithoutExtension, "-")}`, `${replace($value, "DRAFT", "RELEASED")}`, or `${regex($fileNameWithoutExtension, "^([^-]+)-", 1)}` before using them in commands like `rename`, `setvar`, `bom`, or `export`.
 
@@ -137,13 +137,13 @@ The evaluator uses the same placeholder and string-function engine as command ex
 
 ---
 
-## Using Variables in Dynamic Placeholders
-In addition to placeholders, you can include other variables by enclosing them in square brackets (e.g., `[VariableName]`). These variables are dynamically resolved based on the context of the file or folder.
+## Using Variables in Placeholders
+In addition to named placeholders, you can include PDM variables by enclosing them in square brackets (e.g., `[VariableName]`). These variables are resolved based on the context of the file or folder.
 
 ---
 
 ## Example Usage
-Hereâ€™s an example of how to use dynamic placeholders in a command:
+Here is an example of how to use placeholders in a command:
 
 ### Renaming a File
 ```bash

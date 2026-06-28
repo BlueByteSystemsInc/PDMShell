@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Notes About Using Advanced Search In PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>Advanced Search Overview | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Notes About Using Advanced Search In PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="Advanced Search Overview | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Learn how to run PDMShell advanced search">
+      <meta name="description" content="Learn how PDMShell advanced search works and how to build reliable search queries.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,17 +85,59 @@
         </div>
 
         <article data-uid="">
+<h1 id="advanced-search-overview">Advanced Search Overview</h1>
 
-
-<div class="alert alert-info">
-<h5>TLDR;</h5>
-<p>If you use search favorites, use the following search query: <code>-search &quot;Favorite=MY SEARCH FAVORITE NAME&quot;</code> to retrieve the favorite search results and configure your search criteria from the search tool.</p>
+<p>PDMShell advanced search extends SOLIDWORKS PDM search so the same <code>-search</code> query can be used by commands such as <a href="SEARCH.html"><code>search</code></a>, <a href="DELETE.html"><code>delete</code></a>, <a href="CHECKOUT.html"><code>checkout</code></a>, <a href="GET.html"><code>get</code></a>, <a href="SETVAR.html"><code>setvar</code></a>, and <a href="TRANSITION.html"><code>transition</code></a>.</p>
+<p>Use this page for the search mental model. Use the focused articles for details:</p>
+<ul>
+<li><a href="search-tokens.html">Search tokens</a></li>
+<li><a href="search-variables.html">Variable search</a></li>
+<li><a href="search-result-shaping.html">Result shaping</a></li>
+<li><a href="search-favorites.html">Search favorites</a></li>
+</ul>
+<h2 id="how-search-is-processed">How Search Is Processed</h2>
+<p>PDMShell search has two stages:</p>
+<ol>
+<li>SOLIDWORKS PDM returns the raw matching files and folders.</li>
+<li>PDMShell optionally shapes those results by sorting, grouping, and applying a result-selection strategy.</li>
+</ol>
+<p>Simple filter-only searches can be served as PDM returns results. Result-shaping searches must first collect the full matching result set.</p>
+<pre><code class="lang-text">PDM search
+  -&gt; raw matching results
+  -&gt; optional SortBy
+  -&gt; optional GroupBy or DuplicatedBy
+  -&gt; optional Strategy
+  -&gt; final results passed to the command
+</code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p><code>SortBy</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, and <code>Strategy</code> are result-shaping operations. PDMShell must first collect all matching PDM search results, then sort, group, and apply the strategy. Be careful using these options with broad recursive searches that may return hundreds or thousands of files. Narrow the search with <code>Name</code>, variables, folder scope, state, date, or other filters before applying result selection.</p>
 </div>
-<h1 id="pdmshell-advanced-search-guide">PDMShell Advanced Search Guide</h1>
-<p>PDMShell provides a complete search engine based on PDM's own search. This feature is extremely useful with commands that have a <code>-search</code> parameter.</p>
-<p>This guide explains how the <code>-search</code> parameter works, how to use tokens, variables, operators, and how PDMShell parses and applies search rules.</p>
-<h1 id="wildcards-in-pdmshell-sql-style-pattern-matching">Wildcards in PDMShell (SQL-Style Pattern Matching)</h1>
-<p>PDMShell supports the same wildcard patterns used in SOLIDWORKS PDM and standard SQL-like matching rules. These allow you to control how filenames are matched inside any <code>-search</code> query.</p>
+<h2 id="simple-searches">Simple Searches</h2>
+<p>If no operators are present, the entire input is treated as a <code>Name</code> filter.</p>
+<pre><code class="lang-bash">pump.sldprt
+assembly_1001
+%.sldasm
+</code></pre>
+<p>These are equivalent to:</p>
+<pre><code class="lang-bash">Name=pump.sldprt
+Name=assembly_1001
+Name=%.sldasm
+</code></pre>
+<h2 id="advanced-syntax">Advanced Syntax</h2>
+<p>Multiple conditions are separated with semicolons.</p>
+<pre><code class="lang-bash">Name=%Pump%;Recursive=true;VersionsBefore=20200101
+</code></pre>
+<p>Escaping rules:</p>
+<pre><code class="lang-bash">\; inserts a semicolon
+\= inserts an equals sign
+\\ inserts a literal backslash
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-bash">Name=Valve\=A;Label=Released\;Approved
+</code></pre>
+<h2 id="wildcards">Wildcards</h2>
+<p>PDMShell supports the same SQL-style wildcard patterns used by SOLIDWORKS PDM.</p>
 <table>
 <thead>
 <tr>
@@ -108,453 +150,44 @@
 <tbody>
 <tr>
 <td><code>%</code></td>
-<td>Matches <strong>zero or more characters</strong></td>
+<td>Matches zero or more characters</td>
 <td><code>%.sldprt</code></td>
 <td>Returns all part files</td>
 </tr>
 <tr>
 <td><code>_</code></td>
-<td>Matches <strong>exactly one character</strong></td>
+<td>Matches exactly one character</td>
 <td><code>pump_.sldprt</code></td>
-<td>Matches <code>pump1.sldprt</code>, <code>pumpA.sldprt</code>, <strong>not</strong> <code>pump10.sldprt</code></td>
+<td>Matches <code>pump1.sldprt</code> and <code>pumpA.sldprt</code>, but not <code>pump10.sldprt</code></td>
 </tr>
 </tbody>
 </table>
-<h2 id="1-overview">1. Overview</h2>
-<p>The <code>-search</code> parameter accepts simple text queries or advanced multi-condition expressions that filter files and folders using PDM system tokens and variable values.</p>
-<h2 id="2-simple-searches">2. Simple Searches</h2>
-<p>If no operators are present, the entire input is treated as a Name filter.</p>
-<p>Examples:</p>
-<pre><code class="lang-bash">pump.sldprt     # Searches for files explicitly named pump.sldprt
-assembly_1001   # Searches for any file whose name contains 'assembly_1001'
-%.sldasm        # Searches for all SOLIDWORKS assembly files in the current folder
-
-</code></pre>
-<p>Equivalent to:</p>
-<pre><code class="lang-bash">Name=pump.sldprt
-Name=passembly_1001
-Name=%.sldasm  
-</code></pre>
-<h2 id="3-advanced-syntax">3. Advanced Syntax</h2>
-<p>Multiple conditions are separated using semicolons.</p>
-<p>Example:</p>
-<pre><code class="lang-bash">Name=%Pump%;Recursive=true;VersionsBefore=20200101   # Finds files with 'Pump' in the name, searches subfolders, and only returns versions created before Jan 1st 2020
-</code></pre>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Dates must follow the <code>yyyMMdd</code> format.</p>
-</div>
-<p>Escaping rules:</p>
-<pre><code class="lang-bash">\; inserts a semicolon  
-\= inserts an equals sign  
-\\ inserts a literal backslash
-</code></pre>
-<p>Example:</p>
-<pre><code class="lang-bash">Name=Valve\=A;Label=Released\;Approved   # Searches for files literally named &quot;Valve=A&quot; and having a label containing the text &quot;Released;Approved&quot;
-</code></pre>
-<h2 id="4-built-in-search-tokens">4. Built-in Search Tokens</h2>
-<p>These tokens map directly to EdmSearchToken values and control how PDMShell filters PDM objects.</p>
-<h3 id="table-supported-search-tokens">Table: Supported Search Tokens</h3>
-<table>
-<thead>
-<tr>
-<th>Token</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Name</td>
-<td>File or folder name filter</td>
-</tr>
-<tr>
-<td>AllVersions</td>
-<td>Search all versions</td>
-</tr>
-<tr>
-<td>ContentText</td>
-<td>Full-text content search string</td>
-</tr>
-<tr>
-<td>ContentTextExact</td>
-<td>Exact match of content</td>
-</tr>
-<tr>
-<td>ContentTextInBody</td>
-<td>Search inside file body</td>
-</tr>
-<tr>
-<td>ContentTextInProperties</td>
-<td>Search in custom properties</td>
-</tr>
-<tr>
-<td>ContentTextOr</td>
-<td>Match any word</td>
-</tr>
-<tr>
-<td>FindFiles</td>
-<td>Include files in results</td>
-</tr>
-<tr>
-<td>FindFolders</td>
-<td>Include folders in results</td>
-</tr>
-<tr>
-<td>FindItems</td>
-<td>Include items in results</td>
-</tr>
-<tr>
-<td>FolderID</td>
-<td>Starting folder ID</td>
-</tr>
-<tr>
-<td>HistoryAfter</td>
-<td>Search history after date</td>
-</tr>
-<tr>
-<td>HistoryBefore</td>
-<td>Search history before date</td>
-</tr>
-<tr>
-<td>HistoryString</td>
-<td>History string search</td>
-</tr>
-<tr>
-<td>HistoryStringConfiguration</td>
-<td>Search configuration names</td>
-</tr>
-<tr>
-<td>HistoryStringFileName</td>
-<td>Search file names in history</td>
-</tr>
-<tr>
-<td>HistoryStringLabels</td>
-<td>Search labels in history</td>
-</tr>
-<tr>
-<td>HistoryStringRevisionComment</td>
-<td>Search revision comments</td>
-</tr>
-<tr>
-<td>HistoryStringStateComment</td>
-<td>Search state change comments</td>
-</tr>
-<tr>
-<td>HistoryStringVariableValues</td>
-<td>Search variable changes</td>
-</tr>
-<tr>
-<td>HistoryStringVersionComment</td>
-<td>Search version comments</td>
-</tr>
-<tr>
-<td>Label</td>
-<td>Search label text</td>
-</tr>
-<tr>
-<td>LabelAfter</td>
-<td>Labels after date</td>
-</tr>
-<tr>
-<td>LabelBefore</td>
-<td>Labels before date</td>
-</tr>
-<tr>
-<td>LabelByUser</td>
-<td>Labels created by user</td>
-</tr>
-<tr>
-<td>LabelComment</td>
-<td>Search label comment</td>
-</tr>
-<tr>
-<td>Locked</td>
-<td>Return checked-out files</td>
-</tr>
-<tr>
-<td>LockedBy</td>
-<td>Return files locked by user</td>
-</tr>
-<tr>
-<td>Recursive</td>
-<td>Include subfolders</td>
-</tr>
-<tr>
-<td>StateAfter</td>
-<td>State changes after date</td>
-</tr>
-<tr>
-<td>StateBefore</td>
-<td>State changes before date</td>
-</tr>
-<tr>
-<td>StateByUser</td>
-<td>User who changed state</td>
-</tr>
-<tr>
-<td>StateHistoric</td>
-<td>Search historic states</td>
-</tr>
-<tr>
-<td>StateID</td>
-<td>Workflow state ID</td>
-</tr>
-<tr>
-<td>StateName</td>
-<td>Workflow state name</td>
-</tr>
-<tr>
-<td>Unlocked</td>
-<td>Return checked-in files</td>
-</tr>
-<tr>
-<td>VersionComment</td>
-<td>Search version comment</td>
-</tr>
-<tr>
-<td>VersionsAfter</td>
-<td>Versions after date</td>
-</tr>
-<tr>
-<td>VersionsBefore</td>
-<td>Versions before date</td>
-</tr>
-<tr>
-<td>VersionsByUser</td>
-<td>Versions created by user</td>
-</tr>
-<tr>
-<td>WorkflowName</td>
-<td>Search by workflow name</td>
-</tr>
-<tr>
-<td><strong>DuplicatedBy</strong></td>
-<td><strong>Finds duplicates either by name, variables, hash and filedate</strong></td>
-</tr>
-<tr>
-<td><strong>Edit</strong></td>
-<td><strong>Performs a checkout and a check-in on the search results. Only use with <code>export</code> and <code>runswmacro</code> commands.</strong></td>
-</tr>
-<tr>
-<td><strong>Favorite</strong></td>
-<td><strong>Use search favorite.</strong></td>
-</tr>
-</tbody>
-</table>
-<h4 id="edit">Edit</h4>
-<p>Use the <code>edit</code> token to check out and check-in the search results with the <a href="export.html"><code>export</code></a> and <a href="runswmacro.html"><code>runswmacro</code></a>'s <code>-search</code> parameter. If specify <code>Edit=Force</code>, the check-in process will be forced.</p>
-<pre><code class="lang-bash"># run rebuild macro on all parts in the current directory and force a check out and checkout using SOLIDWORKS 2023
-runswmacro -search &quot;Name=%.sldprt;Edit=Force&quot; -filePath rebuild.swp -timeout 500 -version 2023
-</code></pre>
-<h4 id="duplicates">Duplicates</h4>
-<p>You can use <code>DuplicatedBy</code> to list the items either filename, variable, ash or last date the file was modified. To use the hash, files must be locally cached.</p>
-<pre><code class="lang-bash"># finds all solidworks duplicate solidworks files by name and list their file date, hash and revision variable
-search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns &quot;FileDate,Hash,Revision&quot;
-</code></pre>
-<pre><code class="lang-bash"># finds all solidworks duplicate solidworks files by revision and list their file date, hash and revision variable
-search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=@Revision&quot; -columns &quot;FileDate,Hash,Revision&quot;
-</code></pre>
-<h2 id="5-default-behavior">5. Default Behavior</h2>
-<p><code>FolderID</code> defaults to the active directory.<br>
-<code>Recursive</code> defaults to the global flag.<br>
-<code>FindFolders</code> defaults to the includefolders flag.<br>
-<code>FindFiles</code> is always true.</p>
-<h2 id="6-variable-search">6. Variable Search</h2>
-<p>Conditions beginning with @ use PDM variables.</p>
-<p>Format:</p>
-<pre><code class="lang-bash">@VariableName Operator Value
-</code></pre>
-<p>Examples:</p>
-<pre><code class="lang-bash">@Description=Pump      # Variable 'Description' must equal &quot;Pump&quot;
-@Weight&gt;=10            # Numeric variable 'Weight' must be greater than or equal to 10
-@Revision!=A           # Variable 'Revision' must NOT be &quot;A&quot;
-@Material~Steel        # Variable 'Material' must contain the text &quot;Steel&quot;
-@ProjectCode!~TEST     # Variable 'ProjectCode' must NOT contain the text &quot;TEST&quot;
-</code></pre>
-<p>You can chain mutiple variables. The chain of variables uses the AND operator:</p>
-<pre><code class="lang-bash">@Description=Pump.sldprt;@Weight&gt;=10      # Part files named pump that have weight above 10
-</code></pre>
-<h2 id="7-supported-variable-operators">7. Supported Variable Operators</h2>
-<p>PDMShell supports all major comparison operators for variables.</p>
-<h3 id="table-supported-operators">Table: Supported Operators</h3>
-<table>
-<thead>
-<tr>
-<th>Symbol</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>=</td>
-<td>Equal</td>
-</tr>
-<tr>
-<td>!=</td>
-<td>Not equal</td>
-</tr>
-<tr>
-<td>&lt;&gt;</td>
-<td>Not equal</td>
-</tr>
-<tr>
-<td>&gt;</td>
-<td>Greater than</td>
-</tr>
-<tr>
-<td>&lt;</td>
-<td>Less than</td>
-</tr>
-<tr>
-<td>&gt;=</td>
-<td>Greater or equal</td>
-</tr>
-<tr>
-<td>&lt;=</td>
-<td>Less or equal</td>
-</tr>
-<tr>
-<td>~</td>
-<td>Contains</td>
-</tr>
-<tr>
-<td>!~</td>
-<td>Does not contain</td>
-</tr>
-</tbody>
-</table>
-<h2 id="8-variable-operator-to-enum-mapping">8. Variable Operator-to-Enum Mapping</h2>
-<h3 id="table-string-variable-operator-mapping">Table: String Variable Operator Mapping</h3>
-<table>
-<thead>
-<tr>
-<th>Symbol</th>
-<th>Enum</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>=</td>
-<td>Equals</td>
-</tr>
-<tr>
-<td>!= / &lt;&gt;</td>
-<td>Different</td>
-</tr>
-<tr>
-<td>&gt;</td>
-<td>Greater</td>
-</tr>
-<tr>
-<td>&lt;</td>
-<td>Less</td>
-</tr>
-<tr>
-<td>&gt;=</td>
-<td>Greater or equal</td>
-</tr>
-<tr>
-<td>&lt;=</td>
-<td>Less or equal</td>
-</tr>
-<tr>
-<td>~</td>
-<td>Contains</td>
-</tr>
-<tr>
-<td>!~</td>
-<td>Not contains</td>
-</tr>
-</tbody>
-</table>
-<h3 id="numeric-and-date-types-use-the-corresponding-numericdate-enum-sets">Numeric and date types use the corresponding numeric/date enum sets.</h3>
-<p>Dates must be in the format: yyyyMMdd</p>
-<h2 id="9-operator-detection">9. Operator Detection</h2>
-<p>Operators are detected longest-first to avoid ambiguity.</p>
-<h3 id="table-operator-detection-order">Table: Operator Detection Order</h3>
-<table>
-<thead>
-<tr>
-<th>Order</th>
-<th>Operator</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>&gt;=</td>
-</tr>
-<tr>
-<td>2</td>
-<td>&lt;=</td>
-</tr>
-<tr>
-<td>3</td>
-<td>!=</td>
-</tr>
-<tr>
-<td>4</td>
-<td>&lt;&gt;</td>
-</tr>
-<tr>
-<td>5</td>
-<td>!~</td>
-</tr>
-<tr>
-<td>6</td>
-<td>~</td>
-</tr>
-<tr>
-<td>7</td>
-<td>&gt;</td>
-</tr>
-<tr>
-<td>8</td>
-<td>&lt;</td>
-</tr>
-<tr>
-<td>9</td>
-<td>=</td>
-</tr>
-</tbody>
-</table>
-<p>This ensures &gt;= is not incorrectly parsed as &gt;.</p>
-<h2 id="10-combining-tokens-and-variables">10. Combining Tokens and Variables</h2>
-<p>Tokens and variable conditions can be mixed:</p>
-<pre><code class="lang-bash">Name=%Pump%;@Description~Steel;StateName=Released;@Weight&gt;=5   # Files with names containing 'Pump', description containing 'Steel', state equal to Released, and weight &gt;= 5
-</code></pre>
-<p>All conditions must match.</p>
-<h2 id="11-invalid-input-handling">11. Invalid Input Handling</h2>
-<p>Invalid expressions are ignored silently. PDMShell continues applying valid conditions.</p>
-<p>Examples ignored:</p>
-<pre><code class="lang-bash">@MissingVar=Test  
-HistoryBefore=BADDATE  
-UnknownKey=Value  
-</code></pre>
-<h2 id="12-examples">12. Examples</h2>
+<h2 id="common-examples">Common Examples</h2>
 <p>Search by name:</p>
 <pre><code class="lang-bash">Name=%Valve%
-# Finds all files whose name contains 'Valve'
 </code></pre>
-<p>Search by folder:</p>
-<pre><code class="lang-bash">Name=%Valve%;FolderID=102          
-# Same search, but restricted to folder with ID 102
+<p>Search recursively:</p>
+<pre><code class="lang-bash">Name=%.pdf;Recursive=true
 </code></pre>
-<p>Variable contains:</p>
-<pre><code class="lang-bash">@Description~Pump                
-# Matches files where Description contains the text 'Pump'
+<p>Combine file name, workflow state, and a PDM variable:</p>
+<pre><code class="lang-bash">Name=%Pump%;StateName=Released;@Revision!=A
 </code></pre>
-<p>Token and variable together:</p>
-<pre><code class="lang-bash">StateName=Approved;@Revision!=A  
-# Files in state 'Approved' AND Revision variable not equal to 'A'
+<p>Sort all PDFs by file date and exclude the first sorted result:</p>
+<pre><code class="lang-bash">search -search &quot;Name=%.pdf;SortBy=FileDate;Recursive=true;Strategy=ExcludeFirst&quot; -columns FileDate
 </code></pre>
-<p>More complex:</p>
-<pre><code class="lang-bash">Name=%Pump%;@Material~Steel;@Weight&gt;=15;Recursive=true;VersionsBefore=20200101
-# Files with 'Pump' in the name, Material containing 'Steel', Weight &gt;= 15,
-# include subfolders, and versions created before Jan 1st 2020
+<p>Keep the newest PDF in each duplicate-name group:</p>
+<pre><code class="lang-bash">search -search &quot;Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=KeepFirst&quot;
 </code></pre>
-<h2 id="13-technical-support">13. Technical support</h2>
-<p>Please reach out to us if you have a premium license or considering getting one from our contact <a href="https://bluebyte.biz/contact">page</a> on our main website.</p>
+<h2 id="related-articles">Related Articles</h2>
+<ul>
+<li><a href="SEARCH.html">Search command reference</a></li>
+<li><a href="search-tokens.html">Search tokens</a></li>
+<li><a href="search-variables.html">Variable search</a></li>
+<li><a href="search-result-shaping.html">Result shaping</a></li>
+<li><a href="search-favorites.html">Search favorites</a></li>
+</ul>
+<h2 id="technical-support">Technical Support</h2>
+<p>Please reach out to us if you have a premium license or are considering getting one from our contact <a href="https://bluebyte.biz/contact">page</a> on our main website.</p>
 
 </article>
 

@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Dynamic Placeholders | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>Placeholders | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Dynamic Placeholders | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="Placeholders | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="The Dynamic Placeholders feature in PDMShell allows you to substitute values dynamically using placeholders">
+      <meta name="description" content="Placeholders in PDMShell let you substitute file, folder, vault, user, date, variable, and global values in supported command parameters.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,14 +85,14 @@
         </div>
 
         <article data-uid="">
-<h1 id="dynamic-placeholders-in-pdmshell">Dynamic Placeholders in PDMShell</h1>
+<h1 id="placeholders-in-pdmshell">Placeholders in PDMShell</h1>
 
 <h2 id="overview">Overview</h2>
-<p>The Dynamic Placeholders feature in PDMShell allows you to substitute values dynamically using placeholders. This functionality is supported by several commands and enables the use of file or folder properties, system variables, and other contextual information to generate new values automatically.</p>
-<p>Dynamic Placeholders are not a standalone command but a feature used by specific commands to process the <code>value</code> parameter or other relevant inputs.</p>
+<p>Placeholders in PDMShell let you substitute values at runtime. Supported commands can use file or folder properties, system values, vault context, PDM variables, and other contextual information to generate values automatically.</p>
+<p>Placeholders are not a standalone command. They are evaluated by supported commands when processing the <code>value</code> parameter or other relevant inputs.</p>
 <hr>
-<h2 id="commands-supporting-dynamic-placeholders">Commands Supporting Dynamic Placeholders</h2>
-<p>The following commands support the use of dynamic placeholders:</p>
+<h2 id="commands-supporting-placeholders">Commands Supporting Placeholders</h2>
+<p>The following commands support placeholders:</p>
 <h3 id="commands-using-the-current-folder-as-the-backing-object-directory-parameter">Commands Using the Current Folder as the Backing Object (<code>directory</code> parameter):</h3>
 <ul>
 <li><a href="CD.html"><code>cd</code></a>: Change the current directory.</li>
@@ -109,8 +109,8 @@
 <li><a href="export.html"><code>export</code></a>: Uses the <code>name</code> parameter to set the exported files name pattern.</li>
 </ul>
 <hr>
-<h2 id="placeholders-for-dynamic-substitution">Placeholders for Dynamic Substitution</h2>
-<p>The <code>value</code> parameter in supported commands can include placeholders that are dynamically replaced with actual values based on the context. The placeholders differ slightly depending on whether the backing object is a file or a folder.</p>
+<h2 id="placeholder-reference">Placeholder Reference</h2>
+<p>The <code>value</code> parameter in supported commands can include placeholders that are replaced with actual values based on the current context. The placeholders differ slightly depending on whether the backing object is a file or a folder.</p>
 <h3 id="placeholders-for-files">Placeholders for Files</h3>
 <ul>
 <li><code>$value</code>: Existing value of the variable. If the existing value is null or empty, this evaluates to an empty string.</li>
@@ -142,7 +142,7 @@
 <li><code>$username.lastName</code>: The logged-in PDM user's last name when available.</li>
 <li><code>$username.FullName</code>: The logged-in PDM user's full name when available.</li>
 <li><code>$username.email</code>: The logged-in PDM user's email address when available.</li>
-<li><code>$vaultname</code>: The name of the vault.</li>
+<li><code>$vaultName</code>: The name of the vault. <code>$vaultname</code> is also supported for compatibility.</li>
 <li><code>$yyyy</code>: The current year.</li>
 <li><code>$mm</code>: The current month (two digits).</li>
 <li><code>$hh</code>: The current hour (two digits).</li>
@@ -164,7 +164,7 @@ setvar -variableName Description -filePath &quot;$localPath&quot; -value &quot;$
 <p>Global variables are temporary and last only for the current PDMShell session or script run. See <a href="GLOBALVARIABLES.html">Global Variables</a>.</p>
 <hr>
 <h2 id="string-functions">String Functions</h2>
-<p>Dynamic placeholders also support a small set of string functions. Functions are evaluated after placeholders such as <code>$value</code>, <code>$name</code>, and <code>[Variable]</code> have been resolved, so they can be used to manipulate the evaluated text.</p>
+<p>Placeholders also support a small set of string functions. Functions are evaluated after placeholders such as <code>$value</code>, <code>$name</code>, and <code>[Variable]</code> have been resolved, so they can be used to manipulate the evaluated text.</p>
 <p>String functions use the <code>${...}</code> syntax:</p>
 <pre><code class="lang-bash">${left($value, 5)}
 ${replace($fileNameWithoutExtension, &quot; &quot;, &quot;_&quot;)}
@@ -225,15 +225,15 @@ ${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
 <p>Unknown or invalid function expressions are left unchanged.</p>
 <p>When a full command value is wrapped in double quotes, escape quotes inside function arguments with <code>\&quot;</code>.</p>
 <h2 id="expression-evaluator">Expression Evaluator</h2>
-<p>The WPF toolbar includes an Expression Evaluator tool for testing placeholder expressions before you run a command, script, task, or rename rule. It is designed as a safe preview surface: you choose a file or folder context, type the same expression you would place in a command parameter, and PDMShell shows the evaluated output without renaming files, changing variables, checking files in, or writing anything back to the vault.</p>
+<p>The PDMShell toolbar includes an Expression Evaluator tool for testing placeholder expressions before you run a command, script, task, or rename rule. It is designed as a safe preview surface: you choose a file or folder context, type the same expression you would place in a command parameter, and PDMShell shows the evaluated output without renaming files, changing variables, checking files in, or writing anything back to the vault.</p>
 <p>Use the formula icon in the toolbar to open the evaluator. Browse to a PDM file or folder, choose a configuration when the expression depends on configuration-specific variables, and optionally choose a variable to populate <code>$value</code> with the current value of that variable. The expression box supports grouped autocomplete for file and folder placeholders, vault and user placeholders, date and time placeholders, string functions, common examples, and PDM variables. This makes it easier to test expressions such as <code>$fileNameWithoutExtension</code>, <code>[Description]</code>, <code>${before($fileNameWithoutExtension, &quot;-&quot;)}</code>, <code>${replace($value, &quot;DRAFT&quot;, &quot;RELEASED&quot;)}</code>, or <code>${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}</code> before using them in commands like <code>rename</code>, <code>setvar</code>, <code>bom</code>, or <code>export</code>.</p>
 <p>The evaluator uses the same placeholder and string-function engine as command execution, so it is the recommended way to confirm what a dynamic value will become. If no file or folder is selected, PDMShell can still evaluate session-level placeholders such as date, time, GUID, vault, user, and global values, but file-specific placeholders and PDM variables need a selected PDM object to return meaningful results.</p>
 <hr>
-<h2 id="using-variables-in-dynamic-placeholders">Using Variables in Dynamic Placeholders</h2>
-<p>In addition to placeholders, you can include other variables by enclosing them in square brackets (e.g., <code>[VariableName]</code>). These variables are dynamically resolved based on the context of the file or folder.</p>
+<h2 id="using-variables-in-placeholders">Using Variables in Placeholders</h2>
+<p>In addition to named placeholders, you can include PDM variables by enclosing them in square brackets (e.g., <code>[VariableName]</code>). These variables are resolved based on the context of the file or folder.</p>
 <hr>
 <h2 id="example-usage">Example Usage</h2>
-<p>Hereâ€™s an example of how to use dynamic placeholders in a command:</p>
+<p>Here is an example of how to use placeholders in a command:</p>
 <h3 id="renaming-a-file">Renaming a File</h3>
 <pre><code class="lang-bash">rename -filePath 1.sldprt -value &quot;$fileNameWithoutExtension_$yyyy$mm$dd$extension&quot;
 </code></pre>

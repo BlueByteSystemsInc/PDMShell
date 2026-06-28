@@ -23,4 +23,4 @@ cls
 - You can alternatively set the Line Limit Count from the settings to remind the session to clear every count of lines.
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

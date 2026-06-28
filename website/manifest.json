@@ -877,6 +877,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/msgbox-placeholders.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/msgbox-placeholders.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/parameter.png",
       "output": {
         "resource": {
@@ -981,6 +991,46 @@
       "output": {
         "resource": {
           "relative_path": "images/pdmshell-task-script.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-update-available.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-update-available.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-updater-admin.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-updater-admin.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-updater-not-admin.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-updater-not-admin.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-updater-uac.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-updater-uac.png"
         }
       },
       "version": ""
@@ -2341,6 +2391,46 @@
       "output": {
         ".html": {
           "relative_path": "src/scriptsfromtransition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/search-favorites.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/search-favorites.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/search-result-shaping.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/search-result-shaping.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/search-tokens.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/search-tokens.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/search-variables.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/search-variables.html"
         }
       },
       "version": ""

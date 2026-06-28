@@ -23,4 +23,4 @@ dump -filePath "$release_script_$yyyy_$mm_$dd_$guid.txt"
 - If you start PDMShell as a Windows administrator with the `-winlog` or `/winlog` parameter, PDMShell will create logs in the Windows event viewer.
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

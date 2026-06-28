@@ -279,4 +279,4 @@ checkin -search % -recursive
 > It is recommended to perform large add operations in stages and verify results using the exported CSV report.
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

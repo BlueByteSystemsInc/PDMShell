@@ -55,4 +55,4 @@ rename -filePath "ABC-123.sldprt" -value "${before($fileNameWithoutExtension, \"
 ```
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

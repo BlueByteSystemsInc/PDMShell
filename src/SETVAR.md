@@ -15,7 +15,7 @@ setvar (-filePath path | -search query) -variableName variable_name [-value valu
 
 - `variableName`: The variable to set.
 
-- `value`: The value to assign to the variable. This parameter supports dynamic placeholders. When using `$value`, PDMShell substitutes the existing variable value; if the existing value is null or empty, `$value` evaluates to an empty string. Literal `\n` sequences are converted to `Environment.NewLine`.
+- `value`: The value to assign to the variable. This parameter supports placeholders. When using `$value`, PDMShell substitutes the existing variable value; if the existing value is null or empty, `$value` evaluates to an empty string. Literal `\n` sequences are converted to `Environment.NewLine`.
 
 - `configNames`: The configuration names to set the variable for, separated by commas.
 
@@ -70,4 +70,4 @@ String functions can be used after placeholder evaluation. This is useful with `
 - Dynamic placeholder evaluation supports string functions such as `${left(...)}`, `${right(...)}`, `${len(...)}`, `${pos(...)}`, `${replace(...)}`, `${before(...)}`, and `${after(...)}`.
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

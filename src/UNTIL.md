@@ -94,7 +94,7 @@ $folderPath\ready.pdf exists and $folderPath\ready.dxf exists
 ```
 
 ## Placeholders
-The `until` command supports dynamic placeholders in conditions. The most commonly used placeholders are:
+The `until` command supports placeholders in conditions. The most commonly used placeholders are:
 
 | Placeholder | Meaning |
 | --- | --- |

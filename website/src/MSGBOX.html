@@ -105,6 +105,22 @@
 <em>(Optional)</em> Message box icon. Valid values are <code>None</code>, <code>Information</code>, <code>Warning</code>, <code>Error</code>, and <code>Question</code>. If omitted, PDMShell uses <code>Information</code>.</p>
 </li>
 </ul>
+<h2 id="visual-editor">Visual Editor</h2>
+<p>In the visual editor command builder, the <code>icon</code> parameter is shown as a single-select combo box with the supported icon values:</p>
+<ul>
+<li><code>None</code></li>
+<li><code>Information</code></li>
+<li><code>Warning</code></li>
+<li><code>Error</code></li>
+<li><code>Question</code></li>
+</ul>
+<h2 id="placeholders">Placeholders</h2>
+<p>The <code>value</code> and <code>title</code> parameters support session placeholders. PDMShell evaluates placeholders before showing the message box, so you can display values from the current session in the message text.</p>
+<p>For example, after logging in to a vault, <code>$vaultName</code> resolves to the active vault name:</p>
+<pre><code class="lang-bash">msgbox -value &quot;vaultName = $vaultName&quot; -icon &quot;Information&quot;
+</code></pre>
+<p><img src="../images/msgbox-placeholders.png" alt="MSGBOX command showing the evaluated vaultName placeholder"></p>
+<p>Common session placeholders include <code>$vaultName</code>, <code>$date</code>, <code>$time</code>, <code>$guid</code>, and <code>$tempFolder</code>.</p>
 <h2 id="examples">Examples</h2>
 <pre><code class="lang-bash">msgbox -value &quot;Hello from PDMShell&quot;
 </code></pre>
@@ -122,7 +138,9 @@
 <li>The script continues after the user closes the message box.</li>
 </ul>
 <h2 id="availability">Availability</h2>
-<p>Unreleased after 4.0.7.</p>
+<p>Available since PDMShell 4.0.8.</p>
+<h2 id="last-updated">Last Updated</h2>
+<p>Updated in PDMShell 4.0.12 so <code>value</code> and <code>title</code> support session-level placeholders such as <code>$vaultName</code>, <code>$date</code>, <code>$time</code>, <code>$guid</code>, and <code>$tempFolder</code>.</p>
 
 </article>
 

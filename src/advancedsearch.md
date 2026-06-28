@@ -1,296 +1,129 @@
 ---
-description: Learn how to run PDMShell advanced search
-title: Notes About Using Advanced Search In PDMShell | SOLIDWORKS PDM
+description: Learn how PDMShell advanced search works and how to build reliable search queries.
+title: Advanced Search Overview | PDMShell | SOLIDWORKS PDM
 ---
 
->[!TLDR;]
-> If you use search favorites, use the following search query: `-search "Favorite=MY SEARCH FAVORITE NAME"` to retrieve the favorite search results and configure your search criteria from the search tool.
+# Advanced Search Overview
 
-# PDMShell Advanced Search Guide
+PDMShell advanced search extends SOLIDWORKS PDM search so the same `-search` query can be used by commands such as [`search`](SEARCH.md), [`delete`](DELETE.md), [`checkout`](CHECKOUT.md), [`get`](GET.md), [`setvar`](SETVAR.md), and [`transition`](TRANSITION.md).
 
-PDMShell provides a complete search engine based on PDM's own search. This feature is extremely useful with commands that have a `-search` parameter. 
+Use this page for the search mental model. Use the focused articles for details:
 
-This guide explains how the `-search` parameter works, how to use tokens, variables, operators, and how PDMShell parses and applies search rules.
+- [Search tokens](search-tokens.md)
+- [Variable search](search-variables.md)
+- [Result shaping](search-result-shaping.md)
+- [Search favorites](search-favorites.md)
 
-# Wildcards in PDMShell (SQL-Style Pattern Matching)
+## How Search Is Processed
 
-PDMShell supports the same wildcard patterns used in SOLIDWORKS PDM and standard SQL-like matching rules. These allow you to control how filenames are matched inside any `-search` query.
+PDMShell search has two stages:
 
-| Wildcard | Meaning | Example | Result |
-|----------|---------|---------|--------|
-| `%` | Matches **zero or more characters** | `%.sldprt` | Returns all part files |
-| `_` | Matches **exactly one character** | `pump_.sldprt` | Matches `pump1.sldprt`, `pumpA.sldprt`, **not** `pump10.sldprt` |
+1. SOLIDWORKS PDM returns the raw matching files and folders.
+2. PDMShell optionally shapes those results by sorting, grouping, and applying a result-selection strategy.
 
+Simple filter-only searches can be served as PDM returns results. Result-shaping searches must first collect the full matching result set.
 
-## 1. Overview
+```text
+PDM search
+  -> raw matching results
+  -> optional SortBy
+  -> optional GroupBy or DuplicatedBy
+  -> optional Strategy
+  -> final results passed to the command
+```
 
-The `-search` parameter accepts simple text queries or advanced multi-condition expressions that filter files and folders using PDM system tokens and variable values.
+>[!Important]
+> `SortBy`, `GroupBy`, `DuplicatedBy`, and `Strategy` are result-shaping operations. PDMShell must first collect all matching PDM search results, then sort, group, and apply the strategy. Be careful using these options with broad recursive searches that may return hundreds or thousands of files. Narrow the search with `Name`, variables, folder scope, state, date, or other filters before applying result selection.
 
-## 2. Simple Searches
+## Simple Searches
 
-If no operators are present, the entire input is treated as a Name filter.
+If no operators are present, the entire input is treated as a `Name` filter.
 
-Examples:  
 ```bash
-pump.sldprt     # Searches for files explicitly named pump.sldprt
-assembly_1001   # Searches for any file whose name contains 'assembly_1001'
-%.sldasm        # Searches for all SOLIDWORKS assembly files in the current folder
-
+pump.sldprt
+assembly_1001
+%.sldasm
 ```
-Equivalent to: 
 
-```bash 
+These are equivalent to:
+
+```bash
 Name=pump.sldprt
-Name=passembly_1001
-Name=%.sldasm  
+Name=assembly_1001
+Name=%.sldasm
 ```
 
+## Advanced Syntax
 
+Multiple conditions are separated with semicolons.
 
-## 3. Advanced Syntax
+```bash
+Name=%Pump%;Recursive=true;VersionsBefore=20200101
+```
 
-Multiple conditions are separated using semicolons.
+Escaping rules:
+
+```bash
+\; inserts a semicolon
+\= inserts an equals sign
+\\ inserts a literal backslash
+```
 
 Example:
 
 ```bash
-Name=%Pump%;Recursive=true;VersionsBefore=20200101   # Finds files with 'Pump' in the name, searches subfolders, and only returns versions created before Jan 1st 2020
-```
->[!Note]
-> Dates must follow the `yyyMMdd` format.
-
-Escaping rules:  
-```bash 
-\; inserts a semicolon  
-\= inserts an equals sign  
-\\ inserts a literal backslash
+Name=Valve\=A;Label=Released\;Approved
 ```
 
-Example:  
+## Wildcards
 
-```bash
-Name=Valve\=A;Label=Released\;Approved   # Searches for files literally named "Valve=A" and having a label containing the text "Released;Approved"
-```
+PDMShell supports the same SQL-style wildcard patterns used by SOLIDWORKS PDM.
 
-## 4. Built-in Search Tokens
+| Wildcard | Meaning | Example | Result |
+|----------|---------|---------|--------|
+| `%` | Matches zero or more characters | `%.sldprt` | Returns all part files |
+| `_` | Matches exactly one character | `pump_.sldprt` | Matches `pump1.sldprt` and `pumpA.sldprt`, but not `pump10.sldprt` |
 
-These tokens map directly to EdmSearchToken values and control how PDMShell filters PDM objects.
-
-### Table: Supported Search Tokens
-
-| Token | Description |
-|-------|-------------|
-| Name | File or folder name filter |
-| AllVersions | Search all versions |
-| ContentText | Full-text content search string |
-| ContentTextExact | Exact match of content |
-| ContentTextInBody | Search inside file body |
-| ContentTextInProperties | Search in custom properties |
-| ContentTextOr | Match any word |
-| FindFiles | Include files in results |
-| FindFolders | Include folders in results |
-| FindItems | Include items in results |
-| FolderID | Starting folder ID |
-| HistoryAfter | Search history after date |
-| HistoryBefore | Search history before date |
-| HistoryString | History string search |
-| HistoryStringConfiguration | Search configuration names |
-| HistoryStringFileName | Search file names in history |
-| HistoryStringLabels | Search labels in history |
-| HistoryStringRevisionComment | Search revision comments |
-| HistoryStringStateComment | Search state change comments |
-| HistoryStringVariableValues | Search variable changes |
-| HistoryStringVersionComment | Search version comments |
-| Label | Search label text |
-| LabelAfter | Labels after date |
-| LabelBefore | Labels before date |
-| LabelByUser | Labels created by user |
-| LabelComment | Search label comment |
-| Locked | Return checked-out files |
-| LockedBy | Return files locked by user |
-| Recursive | Include subfolders |
-| StateAfter | State changes after date |
-| StateBefore | State changes before date |
-| StateByUser | User who changed state |
-| StateHistoric | Search historic states |
-| StateID | Workflow state ID |
-| StateName | Workflow state name |
-| Unlocked | Return checked-in files |
-| VersionComment | Search version comment |
-| VersionsAfter | Versions after date |
-| VersionsBefore | Versions before date |
-| VersionsByUser | Versions created by user |
-| WorkflowName | Search by workflow name |
-| **DuplicatedBy** | **Finds duplicates either by name, variables, hash and filedate** |
-| **Edit** | **Performs a checkout and a check-in on the search results. Only use with `export` and `runswmacro` commands.** |
-| **Favorite** | **Use search favorite.** |
-#### Edit
-
-Use the `edit` token to check out and check-in the search results with the [`export`](EXPORT.md) and [`runswmacro`](runswmacro.md)'s `-search` parameter. If specify `Edit=Force`, the check-in process will be forced.
-
-```bash
-# run rebuild macro on all parts in the current directory and force a check out and checkout using SOLIDWORKS 2023
-runswmacro -search "Name=%.sldprt;Edit=Force" -filePath rebuild.swp -timeout 500 -version 2023
-```
-
-#### Duplicates
-
-You can use `DuplicatedBy` to list the items either filename, variable, ash or last date the file was modified. To use the hash, files must be locally cached. 
-
-
-```bash
-# finds all solidworks duplicate solidworks files by name and list their file date, hash and revision variable
-search -search "Name=%.sld%;Recursive=true;DuplicatedBy=Name" -columns "FileDate,Hash,Revision"
-```
-
-
-```bash
-# finds all solidworks duplicate solidworks files by revision and list their file date, hash and revision variable
-search -search "Name=%.sld%;Recursive=true;DuplicatedBy=@Revision" -columns "FileDate,Hash,Revision"
-```
-
-## 5. Default Behavior
-
-`FolderID` defaults to the active directory.  
-`Recursive` defaults to the global flag.  
-`FindFolders` defaults to the includefolders flag.  
-`FindFiles` is always true.
-
-## 6. Variable Search
-
-Conditions beginning with @ use PDM variables.
-
-Format: 
-```bash  
-@VariableName Operator Value
-```
-
-Examples:  
-```bash
-@Description=Pump      # Variable 'Description' must equal "Pump"
-@Weight>=10            # Numeric variable 'Weight' must be greater than or equal to 10
-@Revision!=A           # Variable 'Revision' must NOT be "A"
-@Material~Steel        # Variable 'Material' must contain the text "Steel"
-@ProjectCode!~TEST     # Variable 'ProjectCode' must NOT contain the text "TEST"
-```
-
-You can chain mutiple variables. The chain of variables uses the AND operator:
-
-```bash
-@Description=Pump.sldprt;@Weight>=10      # Part files named pump that have weight above 10
-```
-
-
-## 7. Supported Variable Operators
-
-PDMShell supports all major comparison operators for variables.
-
-### Table: Supported Operators
-
-| Symbol | Meaning |
-|--------|---------|
-| = | Equal |
-| != | Not equal |
-| <> | Not equal |
-| > | Greater than |
-| < | Less than |
-| >= | Greater or equal |
-| <= | Less or equal |
-| ~ | Contains |
-| !~ | Does not contain |
-
-## 8. Variable Operator-to-Enum Mapping
-
-### Table: String Variable Operator Mapping
-
-| Symbol | Enum |
-|--------|------|
-| = | Equals |
-| != / <> | Different |
-| > | Greater |
-| < | Less  |
-| >= | Greater or equal |
-| <= | Less or equal |
-| ~ | Contains |
-| !~ | Not contains |
-
-### Numeric and date types use the corresponding numeric/date enum sets.
-
-Dates must be in the format: yyyyMMdd
-
-## 9. Operator Detection
-
-Operators are detected longest-first to avoid ambiguity.
-
-### Table: Operator Detection Order
-
-| Order | Operator |
-|-------|----------|
-| 1 | >= |
-| 2 | <= |
-| 3 | != |
-| 4 | <> |
-| 5 | !~ |
-| 6 | ~ |
-| 7 | > |
-| 8 | < |
-| 9 | = |
-
-This ensures >= is not incorrectly parsed as >.
-
-## 10. Combining Tokens and Variables
-
-Tokens and variable conditions can be mixed:
-
-```bash
-Name=%Pump%;@Description~Steel;StateName=Released;@Weight>=5   # Files with names containing 'Pump', description containing 'Steel', state equal to Released, and weight >= 5
-```
-
-All conditions must match.
-
-## 11. Invalid Input Handling
-
-Invalid expressions are ignored silently. PDMShell continues applying valid conditions.
-
-Examples ignored:
-```bash 
-@MissingVar=Test  
-HistoryBefore=BADDATE  
-UnknownKey=Value  
-```
-
-## 12. Examples
+## Common Examples
 
 Search by name:
+
 ```bash
 Name=%Valve%
-# Finds all files whose name contains 'Valve'
 ```
 
-Search by folder:
+Search recursively:
+
 ```bash
-Name=%Valve%;FolderID=102          
-# Same search, but restricted to folder with ID 102
+Name=%.pdf;Recursive=true
 ```
 
-Variable contains:
+Combine file name, workflow state, and a PDM variable:
+
 ```bash
-@Description~Pump                
-# Matches files where Description contains the text 'Pump'
+Name=%Pump%;StateName=Released;@Revision!=A
 ```
 
-Token and variable together:
+Sort all PDFs by file date and exclude the first sorted result:
+
 ```bash
-StateName=Approved;@Revision!=A  
-# Files in state 'Approved' AND Revision variable not equal to 'A'
+search -search "Name=%.pdf;SortBy=FileDate;Recursive=true;Strategy=ExcludeFirst" -columns FileDate
 ```
 
-More complex:
+Keep the newest PDF in each duplicate-name group:
+
 ```bash
-Name=%Pump%;@Material~Steel;@Weight>=15;Recursive=true;VersionsBefore=20200101
-# Files with 'Pump' in the name, Material containing 'Steel', Weight >= 15,
-# include subfolders, and versions created before Jan 1st 2020
+search -search "Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=KeepFirst"
 ```
-## 13. Technical support
 
-Please reach out to us if you have a premium license or considering getting one from our contact [page](https://bluebyte.biz/contact) on our main website.
+## Related Articles
+
+- [Search command reference](SEARCH.md)
+- [Search tokens](search-tokens.md)
+- [Variable search](search-variables.md)
+- [Result shaping](search-result-shaping.md)
+- [Search favorites](search-favorites.md)
+
+## Technical Support
+
+Please reach out to us if you have a premium license or are considering getting one from our contact [page](https://bluebyte.biz/contact) on our main website.

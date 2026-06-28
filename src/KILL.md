@@ -24,4 +24,4 @@ kill sldworks.exe
 - PDMShell adds a note called `ADMIN` in the top-right area of its window when it is open as admin.
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

@@ -15,4 +15,4 @@ addaddin -Directory
 - `Directory`: Directory that contains the add-in files.
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

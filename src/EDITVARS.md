@@ -22,4 +22,4 @@ editvars
 ![Variable Editor Manager](../images/editvars.png)
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

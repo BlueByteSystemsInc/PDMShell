@@ -17,4 +17,4 @@ rebuild -filePath -search -swversion
 - `swversion`: SOLIDWORKS version year to use.
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

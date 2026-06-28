@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Search Tokens | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Search Tokens | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Reference for PDMShell advanced search tokens.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/search-tokens.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="search-tokens">Search Tokens</h1>
+
+<p>Search tokens are key-value fields used inside the <code>-search</code> query. They map to SOLIDWORKS PDM search options or PDMShell result-shaping options.</p>
+<pre><code class="lang-bash">search -search &quot;Name=%.pdf;Recursive=true;StateName=Released&quot;
+</code></pre>
+<h2 id="pdm-search-tokens">PDM Search Tokens</h2>
+<p>These tokens control which raw results PDM returns.</p>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>File or folder name filter</td>
+</tr>
+<tr>
+<td>AllVersions</td>
+<td>Search all versions</td>
+</tr>
+<tr>
+<td>ContentText</td>
+<td>Full-text content search string</td>
+</tr>
+<tr>
+<td>ContentTextExact</td>
+<td>Exact match of content</td>
+</tr>
+<tr>
+<td>ContentTextInBody</td>
+<td>Search inside file body</td>
+</tr>
+<tr>
+<td>ContentTextInProperties</td>
+<td>Search in custom properties</td>
+</tr>
+<tr>
+<td>ContentTextOr</td>
+<td>Match any word</td>
+</tr>
+<tr>
+<td>FindFiles</td>
+<td>Include files in results</td>
+</tr>
+<tr>
+<td>FindFolders</td>
+<td>Include folders in results</td>
+</tr>
+<tr>
+<td>FindItems</td>
+<td>Include items in results</td>
+</tr>
+<tr>
+<td>FolderID</td>
+<td>Starting folder ID</td>
+</tr>
+<tr>
+<td>HistoryAfter</td>
+<td>Search history after date</td>
+</tr>
+<tr>
+<td>HistoryBefore</td>
+<td>Search history before date</td>
+</tr>
+<tr>
+<td>HistoryString</td>
+<td>History string search</td>
+</tr>
+<tr>
+<td>HistoryStringConfiguration</td>
+<td>Search configuration names</td>
+</tr>
+<tr>
+<td>HistoryStringFileName</td>
+<td>Search file names in history</td>
+</tr>
+<tr>
+<td>HistoryStringLabels</td>
+<td>Search labels in history</td>
+</tr>
+<tr>
+<td>HistoryStringRevisionComment</td>
+<td>Search revision comments</td>
+</tr>
+<tr>
+<td>HistoryStringStateComment</td>
+<td>Search state change comments</td>
+</tr>
+<tr>
+<td>HistoryStringVariableValues</td>
+<td>Search variable changes</td>
+</tr>
+<tr>
+<td>HistoryStringVersionComment</td>
+<td>Search version comments</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>Search label text</td>
+</tr>
+<tr>
+<td>LabelAfter</td>
+<td>Labels after date</td>
+</tr>
+<tr>
+<td>LabelBefore</td>
+<td>Labels before date</td>
+</tr>
+<tr>
+<td>LabelByUser</td>
+<td>Labels created by user</td>
+</tr>
+<tr>
+<td>LabelComment</td>
+<td>Search label comment</td>
+</tr>
+<tr>
+<td>Locked</td>
+<td>Return checked-out files</td>
+</tr>
+<tr>
+<td>LockedBy</td>
+<td>Return files locked by user</td>
+</tr>
+<tr>
+<td>Recursive</td>
+<td>Include subfolders</td>
+</tr>
+<tr>
+<td>StateAfter</td>
+<td>State changes after date</td>
+</tr>
+<tr>
+<td>StateBefore</td>
+<td>State changes before date</td>
+</tr>
+<tr>
+<td>StateByUser</td>
+<td>User who changed state</td>
+</tr>
+<tr>
+<td>StateHistoric</td>
+<td>Search historic states</td>
+</tr>
+<tr>
+<td>StateID</td>
+<td>Workflow state ID</td>
+</tr>
+<tr>
+<td>StateName</td>
+<td>Workflow state name</td>
+</tr>
+<tr>
+<td>Unlocked</td>
+<td>Return checked-in files</td>
+</tr>
+<tr>
+<td>VersionComment</td>
+<td>Search version comment</td>
+</tr>
+<tr>
+<td>VersionsAfter</td>
+<td>Versions after date</td>
+</tr>
+<tr>
+<td>VersionsBefore</td>
+<td>Versions before date</td>
+</tr>
+<tr>
+<td>VersionsByUser</td>
+<td>Versions created by user</td>
+</tr>
+<tr>
+<td>WorkflowName</td>
+<td>Search by workflow name</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pdmshell-search-tokens">PDMShell Search Tokens</h2>
+<p>These tokens are handled by PDMShell after the raw PDM results are collected.</p>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Favorite</td>
+<td>Uses a PDM search favorite</td>
+</tr>
+<tr>
+<td>DuplicatedBy</td>
+<td>Groups duplicate results by a field or PDM variable</td>
+</tr>
+<tr>
+<td>GroupBy</td>
+<td>Alias for <code>DuplicatedBy</code></td>
+</tr>
+<tr>
+<td>SortBy</td>
+<td>Sorts all results, or each group when <code>GroupBy</code> is used</td>
+</tr>
+<tr>
+<td>SortOrder</td>
+<td>Optional sort direction: <code>Asc</code>, <code>Ascending</code>, <code>Desc</code>, or <code>Descending</code></td>
+</tr>
+<tr>
+<td>SortDirection</td>
+<td>Alias for <code>SortOrder</code></td>
+</tr>
+<tr>
+<td>Strategy</td>
+<td>Selects which sorted results are processed</td>
+</tr>
+<tr>
+<td>DuplicatesStrategy</td>
+<td>Alias for <code>Strategy</code></td>
+</tr>
+<tr>
+<td>Edit</td>
+<td>Performs checkout and check-in on matching results for supported commands</td>
+</tr>
+</tbody>
+</table>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p><code>SortBy</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, and <code>Strategy</code> require PDMShell to collect the full matching result set before it can return the final results. Use narrow filters when searching large folders or recursive folder trees.</p>
+</div>
+<h2 id="default-behavior">Default Behavior</h2>
+<p><code>FolderID</code> defaults to the active directory.</p>
+<p><code>Recursive</code> defaults to the command's recursive flag.</p>
+<p><code>FindFolders</code> defaults to the command's include-folders flag.</p>
+<p><code>FindFiles</code> is always enabled for file searches.</p>
+<h2 id="dates">Dates</h2>
+<p>Date tokens use <code>yyyyMMdd</code>.</p>
+<pre><code class="lang-bash">Name=%.sldprt;VersionsBefore=20200101
+</code></pre>
+<h2 id="related-articles">Related Articles</h2>
+<ul>
+<li><a href="advancedsearch.html">Advanced search overview</a></li>
+<li><a href="search-variables.html">Variable search</a></li>
+<li><a href="search-result-shaping.html">Result shaping</a></li>
+<li><a href="search-favorites.html">Search favorites</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/search-tokens.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span><a href='https://pdmshell.com'>Blue Byte Systems Inc</a>. Made with Maple syrup 🍁 and Couscous 🍲.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

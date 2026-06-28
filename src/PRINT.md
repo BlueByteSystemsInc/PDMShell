@@ -47,4 +47,4 @@ Return Engineering [193] From New State [158] To In Design [9]
 ```
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

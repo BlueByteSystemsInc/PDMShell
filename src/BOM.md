@@ -40,4 +40,4 @@ bom -filePath -name -directory -search -recursive -configNames -layout
   PDMShell validates layout names against PDM before exporting.
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

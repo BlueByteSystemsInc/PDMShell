@@ -45,7 +45,7 @@
     href: addin/tasks.md
   - name: Event trigger points
     href: addin/trigger-points.md
-  - name: Placeholders and command context
+  - name: Add-in Placeholders and Command Context
     href: addin/placeholders.md
   - name: Runtime execution
     href: addin/runtime-execution.md
@@ -72,10 +72,20 @@
 - name: Advanced Topics
   expanded: true
   items:
-  - name: Dynamic Placeholders
+  - name: Placeholders
     href: EVAL.md
-  - name: Advanced Search
-    href: advancedsearch.md
+  - name: Search
+    items:
+    - name: Advanced Search Overview
+      href: advancedsearch.md
+    - name: Search Tokens
+      href: search-tokens.md
+    - name: Variable Search
+      href: search-variables.md
+    - name: Result Shaping
+      href: search-result-shaping.md
+    - name: Search Favorites
+      href: search-favorites.md
   - name: SQL Examples
     items:
     - name: Find All Part Numbers And Descriptions

@@ -17,4 +17,4 @@ users
 ```
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

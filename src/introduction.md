@@ -121,7 +121,7 @@ Notes:
 - If you just created a folder and want autocomplete to see it, use `dir -refresh`.
 - `directory` is the default parameter, so `cd "\Projects"` is valid.
 
-## Dynamic Placeholders
+## Placeholders
 
 PDMShell scripts can use placeholders for file names, folder paths, variables, dates, and other runtime values.
 
@@ -129,7 +129,7 @@ PDMShell scripts can use placeholders for file names, folder paths, variables, d
 rename -filePath "$localPath" -value "$fileNameWithoutExtension-$yyyy$extension"
 ```
 
-See [Dynamic Placeholders in PDMShell](EVAL.md).
+See [Placeholders in PDMShell](EVAL.md).
 
 ## Case Sensitivity
 

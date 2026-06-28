@@ -44,4 +44,4 @@ mkvar -name "NewVariable" -varType "Text" -mkvarflags "ReadOnly" -mkvarattribute
 | VerFreeLatest | Only the latest version is affected by the variable update  |
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

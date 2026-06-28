@@ -284,12 +284,12 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
         <p>Build, validate, and reuse PDMShell workflows on a visual canvas.</p>
       </a>
       <a class="pdmshell-card" href="EVAL.md">
-        <h3>Dynamic Placeholders</h3>
+        <h3>Placeholders</h3>
         <p>Use file, folder, variable, date, global, and string function placeholders in scripts.</p>
       </a>
       <a class="pdmshell-card" href="advancedsearch.md">
         <h3>Advanced Search</h3>
-        <p>Find PDM files with search tokens, variables, favorites, recursive filters, and CSV output.</p>
+        <p>Find PDM files with tokens, variables, favorites, result shaping, and recursive filters.</p>
       </a>
     </div>
   </section>

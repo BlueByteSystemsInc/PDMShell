@@ -31,4 +31,4 @@ export -filePath"Designs/part1.sldprt" -name "part1_export" -directory "Exports"
 ```
 
 ## Availability
-Available since PDMShell 2.0.0 or earlier.
+Available since PDMShell 2.0.0.

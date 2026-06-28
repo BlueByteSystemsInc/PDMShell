@@ -88,6 +88,29 @@
 <h1 id="command-reference">Command Reference</h1>
 
 <p>Use this page to browse PDMShell commands by category. Availability is listed at the bottom of each command page and summarized here for quick scanning.</p>
+<p>Availability means the PDMShell version where the command first became available. Last updated means the most recent PDMShell version where the command behavior, parameters, or important command documentation changed.</p>
+<h2 id="recently-updated-commands">Recently Updated Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Last Updated</th>
+<th>What Changed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="SEARCH.html">search</a></td>
+<td>PDMShell 4.0.12</td>
+<td>Added result shaping with <code>SortBy</code>, <code>SortOrder</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, and <code>Strategy</code> for commands that use <code>-search</code>.</td>
+</tr>
+<tr>
+<td><a href="MSGBOX.html">msgbox</a></td>
+<td>PDMShell 4.0.12</td>
+<td>Added session-level placeholder evaluation for <code>value</code> and <code>title</code>, including <code>$vaultName</code>, <code>$date</code>, <code>$time</code>, <code>$guid</code>, and <code>$tempFolder</code>.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="vault">Vault</h2>
 <table>
 <thead>
@@ -101,47 +124,47 @@
 <tr>
 <td><a href="LOGIN.html">login</a></td>
 <td>Log in to PDM</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="CD.html">cd</a></td>
 <td>Change directory</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="DIR.html">dir</a></td>
 <td>List directory contents</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="MKDIR.html">mkdir</a></td>
 <td>Create a new PDM directory</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="CLEARCACHE.html">clearcache</a></td>
 <td>Clear cache</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="HISTORY.html">history</a></td>
 <td>View complete file history</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="INBOX.html">inbox</a></td>
 <td>Open PDM Inbox</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="ADDTOVAULT.html">addtovault</a></td>
 <td>Add files to vault</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="USERS.html">users</a></td>
 <td>List users</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 </tbody>
 </table>
@@ -158,22 +181,22 @@
 <tr>
 <td><a href="GET.html">get</a></td>
 <td>Get latest or selected version</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="CHECKOUT.html">checkout</a></td>
 <td>Check out</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="CHECKIN.html">checkin</a></td>
 <td>Check in</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="UNDOCHECKOUT.html">undocheckout</a></td>
 <td>Undo checkout</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="COPY.html">copy</a></td>
@@ -208,12 +231,12 @@
 <tr>
 <td><a href="RENAME.html">rename</a></td>
 <td>Rename files</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="DELETE.html">delete</a></td>
 <td>Delete files or folders</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="DESTORY.html">destory</a></td>
@@ -238,7 +261,7 @@
 <tr>
 <td><a href="TRANSITION.html">transition</a></td>
 <td>Change workflow state</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 </tbody>
 </table>
@@ -255,17 +278,17 @@
 <tr>
 <td><a href="GETVAR.html">getvar</a></td>
 <td>Get variable value</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="GETVARFROMDB.html">getvarfromdb</a></td>
 <td>Get variable value from database</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="SETVAR.html">setvar</a></td>
 <td>Set variable value</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="GLOBALVARIABLES.html">globalvariables</a></td>
@@ -275,17 +298,17 @@
 <tr>
 <td><a href="INFOVAR.html">infovar</a></td>
 <td>Get variable information</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="MKVAR.html">mkvar</a></td>
 <td>Create a new PDM variable</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="EDITVARS.html">editvars</a></td>
 <td>Launch Variable Editor</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 </tbody>
 </table>
@@ -312,7 +335,7 @@
 <tr>
 <td><a href="PRINTFROMSOURCE.html">printfromsource</a></td>
 <td>Print information from CSV</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="RENAMEFROMSOURCE.html">renamefromsource</a></td>
@@ -322,7 +345,7 @@
 <tr>
 <td><a href="SEARCHFROMSOURCE.html">searchfromsource</a></td>
 <td>Search from CSV</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="SETREVISIONFROMSOURCE.html">setrevisionfromsource</a></td>
@@ -389,7 +412,7 @@
 <tr>
 <td><a href="REBUILD.html">rebuild</a></td>
 <td>Rebuild SOLIDWORKS files</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="TOOLBOX.html">toolbox</a></td>
@@ -399,12 +422,12 @@
 <tr>
 <td><a href="ADDADDIN.html">addaddin</a></td>
 <td>Add add-in</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="KILL.html">kill</a></td>
 <td>Stop process</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 </tbody>
 </table>
@@ -421,7 +444,7 @@
 <tr>
 <td><a href="VERSION.html">version</a></td>
 <td>Show version information</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="SETREVISION.html">setrevision</a></td>
@@ -436,7 +459,7 @@
 <tr>
 <td><a href="FROGLEAP.html">frogleap</a></td>
 <td>Frog leap file version</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 </tbody>
 </table>
@@ -475,37 +498,37 @@
 <tr>
 <td><a href="HELP.html">help</a></td>
 <td>List all commands</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="CLS.html">cls</a></td>
 <td>Clear screen</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="DUMP.html">dump</a></td>
 <td>Save session output to a file</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="export.html">export</a></td>
 <td>Export files</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="BOM.html">bom</a></td>
 <td>Export bill of materials</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="PREVIEW.html">preview</a></td>
 <td>Preview files</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="PRINT.html">print</a></td>
 <td>Print file information</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="SEARCH.html">search</a></td>
@@ -515,17 +538,17 @@
 <tr>
 <td><a href="MSGBOX.html">msgbox</a></td>
 <td>Show message box</td>
-<td>Unreleased after 4.0.7.</td>
+<td>Available since PDMShell 4.0.8.</td>
 </tr>
 <tr>
 <td><a href="START.html">start</a></td>
 <td>Start a process</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="QUIT.html">quit</a></td>
 <td>Quit PDMShell</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="REBOOT.html">reboot</a></td>
@@ -535,7 +558,7 @@
 <tr>
 <td><a href="WHEREUSED.html">whereused</a></td>
 <td>Find parents</td>
-<td>Available since PDMShell 2.0.0 or earlier.</td>
+<td>Available since PDMShell 2.0.0.</td>
 </tr>
 <tr>
 <td><a href="WHEREUSEDTREE.html">whereusedtree</a></td>
