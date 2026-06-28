@@ -93,7 +93,7 @@
 <p>To update PDMShell properly, <strong>download</strong> the latest version, <strong>uninstall</strong> PDMShell and
 then <strong>install</strong> the latest version. <strong>Do not update installed version.</strong></p>
 </div>
-<h2 id="4014-06272026">4.0.14 (06/27/2026)</h2>
+<h2 id="4014-2026-06-27">4.0.14 (2026-06-27)</h2>
 <ul>
 <li>Added visual editor UI support for IF statement nodes and branch layout. Runtime execution for IF statement branches is not enabled yet.</li>
 <li>Added result shaping to advanced search queries with <code>SortBy</code>, <code>SortOrder</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, and <code>Strategy</code> so commands that use <code>-search</code> can sort, group, and keep or exclude selected results.</li>
@@ -105,29 +105,29 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 <li>Fixed PDMShell Updater stability when the installer is canceled and when the updater is launched from PDMShell before uninstalling the existing version.</li>
 <li>Updated <a href="MSGBOX.html"><code>msgbox</code></a> so <code>value</code> and <code>title</code> support session-level placeholder evaluation such as <code>$vaultName</code>, <code>$date</code>, <code>$time</code>, <code>$guid</code>, and <code>$tempFolder</code>.</li>
 </ul>
-<h2 id="4011-06212026">4.0.11 (06/21/2026)</h2>
+<h2 id="4011-2026-06-21">4.0.11 (2026-06-21)</h2>
 <ul>
 <li>Added documentation for the WPF <strong>Expression Evaluator</strong>, including how to safely preview placeholder expressions against a selected PDM file or folder, use <code>$value</code>, choose configurations, and test string functions before running commands or scripts.</li>
 <li>Added an on-demand PDMShell add-in script demo to the <strong>Command menu scripts</strong> documentation, showing how users can launch a rename script from SOLIDWORKS PDM without creating a PDM Task.</li>
 <li>Updated the visual editor metadata for <a href="MSGBOX.html"><code>msgbox</code></a> so the <code>icon</code> parameter appears as a single-select combo box with the supported message box icons.</li>
 </ul>
-<h2 id="4010-07182026">4.0.10 (07/18/2026)</h2>
+<h2 id="4010-2026-07-18">4.0.10 (2026-07-18)</h2>
 <ul>
 <li>Added logged-in PDM user profile placeholders: <code>$username.firstName</code>, <code>$username.lastName</code>, <code>$username.FullName</code>, and <code>$username.email</code>.</li>
 <li>Added a dark themed WPF <strong>Expression Evaluator</strong> dialog for testing placeholder expressions against a selected PDM file or folder before running a command.</li>
 </ul>
-<h2 id="409-07182026">4.0.9 (07/18/2026)</h2>
+<h2 id="409-2026-07-18">4.0.9 (2026-07-18)</h2>
 <ul>
 <li>Added the <a href="PASTEASSHARED.html"><code>pasteasshared</code></a> command to share one file or search results into another vault folder.</li>
 </ul>
-<h2 id="408-07182026">4.0.8 (07/18/2026)</h2>
+<h2 id="408-2026-07-18">4.0.8 (2026-07-18)</h2>
 <ul>
 <li>Added <code>${regex(value, pattern)}</code> and <code>${regex(value, pattern, group)}</code> dynamic placeholder string functions.</li>
 <li>Added the <strong>Rename Before Dash</strong> script template to the PDMShell Script Library.</li>
 <li>Fixed Script Library downloads so templates without a SOLIDWORKS macro no longer create or report an empty <code>Macro.swb</code> file.</li>
 <li>Updated the AI Assistant toolbar button to open the hosted PDMShell Assistant website.</li>
 </ul>
-<h2 id="407-07172026">4.0.7 (07/17/2026)</h2>
+<h2 id="407-2026-07-17">4.0.7 (2026-07-17)</h2>
 <ul>
 <li><strong>Added the PDMShell add-in for SOLIDWORKS PDM (Downloadable for Premium Users).</strong></li>
 <li>Added the Script Editor for configuring PDMShell scripts from inside PDM.</li>
@@ -144,7 +144,7 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 <li>Added session global variables with <code>setglobal</code>, <code>getglobal</code>, <code>clearglobal</code>, and <code>${global.Name}</code> evaluation.</li>
 <li>Updated the installer package for this release.</li>
 </ul>
-<h2 id="406-06122026">4.0.6 (06/12/2026)</h2>
+<h2 id="406-2026-06-12">4.0.6 (2026-06-12)</h2>
 <ul>
 <li>Enhanced script execution for command-line and automation scenarios.</li>
 <li>Added <code>runscript -items</code> for integrations that pass file and folder ID pairs.</li>
@@ -152,11 +152,11 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 <li>Added command-line <code>.pdmshell</code> detection so <code>pdmcli.exe &quot;script.pdmshell&quot;</code> runs the script and forwards supported parameters such as <code>-items</code>.</li>
 <li>Added the <strong>Error Mode</strong> setting. <code>Default</code> mode reports missing-file delete operations as warnings, while <code>Aggressive</code> mode keeps the previous hard-error behavior.</li>
 </ul>
-<h2 id="405-06102026">4.0.5 (06/10/2026)</h2>
+<h2 id="405-2026-06-10">4.0.5 (2026-06-10)</h2>
 <ul>
 <li>Enhanced script processing logic.</li>
 </ul>
-<h2 id="404-06102026">4.0.4 (06/10/2026)</h2>
+<h2 id="404-2026-06-10">4.0.4 (2026-06-10)</h2>
 <ul>
 <li>Added and documented the <a href="WAIT.html">wait</a> command.</li>
 <li>Added condition expression support for file/folder/process existence, variable and placeholder comparisons, grouped <code>and</code> / <code>or</code> logic, and arithmetic comparisons.</li>
@@ -167,12 +167,12 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 <li>Improved <a href="SETVAR.html"><code>setvar</code></a> evaluation so <code>$value</code> falls back to an empty string when null or empty, and literal <code>\n</code> writes a real newline.</li>
 <li>Updated <a href="PASTEASREFERENCE.html"><code>pasteasreference</code></a> behavior so <code>source</code> is the source file, <a href="SEARCH.html"><code>search</code></a> finds files to paste references to, and <code>filePath</code> is the reference to append.</li>
 </ul>
-<h2 id="403-06042026">4.0.3 (06/04/2026)</h2>
+<h2 id="403-2026-06-04">4.0.3 (2026-06-04)</h2>
 <ul>
 <li>Rebuild release.</li>
 <li>Fixed automatic login behavior when selecting or using vault view names.</li>
 </ul>
-<h2 id="401-06032026">4.0.1 (06/03/2026)</h2>
+<h2 id="401-2026-06-03">4.0.1 (2026-06-03)</h2>
 <ul>
 <li>Bumped PDMShell project versions to <code>4.0.1</code>.</li>
 <li>Updated <a href="HELP.html"><code>help</code></a> output to organize commands by category.</li>
@@ -183,7 +183,7 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 <li>Added Visual Code Editor canvas navigation controls such as zoom in, zoom out, and zoom to fit.</li>
 <li>Added the Check In All Files script to the script library.</li>
 </ul>
-<h2 id="400-06012026">4.0.0 (06/01/2026)</h2>
+<h2 id="400-2026-06-01">4.0.0 (2026-06-01)</h2>
 <ul>
 <li>Added <a href="visual-code-editor-4.html">Visual Code Editor</a> for building PDMShell scripts as a workflow-style canvas.</li>
 <li>Added <code>Favorite=SEARCH FAVORITE</code> token to the advanced search.</li>
