@@ -8,6 +8,9 @@ The PDMShell add-in lets SOLIDWORKS PDM administrators run `.pdmshell` scripts d
 
 Instead of building automation from a fixed list of Dispatch actions, the add-in runs PDMShell scripts. This gives administrators access to the PDMShell command engine, the visual script editor, placeholders, PDM variables, and headless execution through `pdmcli.exe`.
 
+> [!TIP]
+> Need help building scripts or automation workflows? Blue Byte Systems offers [Enterprise Support Services](https://bluebyte.biz/product/enterprise-support-services/) for customers who want help designing, developing, or troubleshooting PDMShell automation.
+
 >[!Note]
 > The PDMShell add-in is included with the premium version. You can download it from your Blue Byte Systems Inc [account](https://bluebyte.biz/account) or deploy it with [PDMDeploy](https://docs.bluebyte.biz/src/cdpdm.html).
 

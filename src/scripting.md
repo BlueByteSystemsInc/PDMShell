@@ -7,6 +7,9 @@ title: Scripting | PDMShell | SOLIDWORKS PDM
 ## Overview
 PDMShell supports scripting to automate tasks and streamline workflows. Scripts use the `.pdmshell` file extension and are plain text files, making them easy to create and edit using any text editor, such as Notepad.
 
+> [!TIP]
+> Need help building scripts or automation workflows? Blue Byte Systems offers [Enterprise Support Services](https://bluebyte.biz/product/enterprise-support-services/) for customers who want help designing, developing, or troubleshooting PDMShell automation.
+
 ---
 
 ## Creating a Script
