@@ -9,13 +9,19 @@ keywords: PDMShell changelog, PDMShell release notes, SOLIDWORKS PDM automation,
 Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in updates, script library templates, bug fixes, and upgrade notes.
 
 >[!Important]
-> To update PDMShell properly, **download** the latest version, **uninstall** PDMShell and 
-then **install** the latest version. **Do not update installed version.**
+> To update PDMShell properly, download the latest version, uninstall PDMShell and 
+then install the latest version. Do not update installed version.
+
+## 4.0.15 (2026-06-29)
+- Added the [Offline Activation](offline-activation.md) workflow in PDMShell settings for air-gapped or restricted computers.
+- Improved the Settings window with a separate `Offline Activation` section under license management.
+- Improved the Settings window license layout and made the license actions easier to scan and use.
+- Improved the bottom action buttons in the update and settings dialogs for clearer alignment, sizing, and visual consistency.
 
 ## 4.0.14 (2026-06-27)
-- Added visual editor UI support for IF statement nodes and branch layout. Runtime execution for IF statement branches is not enabled yet.
-- Added result shaping to advanced search queries with `SortBy`, `SortOrder`, `GroupBy`, `DuplicatedBy`, and `Strategy` so commands that use `-search` can sort, group, and keep or exclude selected results.
-- Improved advanced search documentation by splitting search tokens, variable search, result shaping, and search favorites into focused articles.
+- Added [Visual Code Editor](visual-code-editor-4.md) UI support for IF statement nodes and branch layout. Runtime execution for IF statement branches is not enabled yet.
+- Added [result shaping](search-result-shaping.md) to advanced search queries with `SortBy`, `SortOrder`, `GroupBy`, `DuplicatedBy`, and `Strategy` so commands that use `-search` can sort, group, and keep or exclude selected results.
+- Improved [advanced search](advancedsearch.md) documentation by splitting [search tokens](search-tokens.md), [variable search](search-variables.md), [result shaping](search-result-shaping.md), and [search favorites](search-favorites.md) into focused articles.
 - Improved multi-session tab behavior so each session keeps its own vault connection, autocomplete metadata, visual editor metadata, and Connect to Vault action.
 - Fixed tab switching issues that could replay output text or duplicate the welcome message.
 - Improved visual editor autocomplete loading for large vaults by showing busy status and staged progress while vault metadata is loaded.
@@ -24,45 +30,45 @@ then **install** the latest version. **Do not update installed version.**
 - Updated [`msgbox`](MSGBOX.md) so `value` and `title` support session-level placeholder evaluation such as `$vaultName`, `$date`, `$time`, `$guid`, and `$tempFolder`.
 
 ## 4.0.11 (2026-06-21)
-- Added documentation for the WPF **Expression Evaluator**, including how to safely preview placeholder expressions against a selected PDM file or folder, use `$value`, choose configurations, and test string functions before running commands or scripts.
-- Added an on-demand PDMShell add-in script demo to the **Command menu scripts** documentation, showing how users can launch a rename script from SOLIDWORKS PDM without creating a PDM Task.
+- Added documentation for the [Expression Evaluator](EVAL.md), including how to safely preview placeholder expressions against a selected PDM file or folder, use `$value`, choose configurations, and test string functions before running commands or scripts.
+- Added an on-demand [PDMShell add-in](TASKSCRIPT.md) script demo to the [Command menu scripts](addin/command-menu.md) documentation, showing how users can launch a rename script from SOLIDWORKS PDM without creating a PDM Task.
 - Updated the visual editor metadata for [`msgbox`](MSGBOX.md) so the `icon` parameter appears as a single-select combo box with the supported message box icons.
 
 ## 4.0.10 (2026-07-18)
 - Added logged-in PDM user profile placeholders: `$username.firstName`, `$username.lastName`, `$username.FullName`, and `$username.email`.
-- Added a dark themed WPF **Expression Evaluator** dialog for testing placeholder expressions against a selected PDM file or folder before running a command.
+- Added a dark themed [Expression Evaluator](EVAL.md) for testing placeholder expressions against a selected PDM file or folder before running a command.
 
 ## 4.0.9 (2026-07-18)
 - Added the [`pasteasshared`](PASTEASSHARED.md) command to share one file or search results into another vault folder.
 
 ## 4.0.8 (2026-07-18)
-- Added `${regex(value, pattern)}` and `${regex(value, pattern, group)}` dynamic placeholder string functions.
-- Added the **Rename Before Dash** script template to the PDMShell Script Library.
+- Added `${regex(value, pattern)}` and `${regex(value, pattern, group)}` [placeholder](EVAL.md) string functions.
+- Added the [Rename Before Dash](scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md) script template to the PDMShell Script Library.
 - Fixed Script Library downloads so templates without a SOLIDWORKS macro no longer create or report an empty `Macro.swb` file.
 - Updated the AI Assistant toolbar button to open the hosted PDMShell Assistant website.
 
 ## 4.0.7 (2026-07-17)
-- **Added the PDMShell add-in for SOLIDWORKS PDM (Downloadable for Premium Users).**
-- Added the Script Editor for configuring PDMShell scripts from inside PDM.
-- Added script permissions for permitted users and groups.
-- Added script conditions that control whether a script should run for the selected file, folder, or command context.
-- Added right-click command menu support so configured scripts can appear as PDM menu commands.
-- Added PDM event trigger points so scripts can run on supported PDM command hooks.
-- Added condition test messages to help administrators validate scripts before production use.
+- Added the [PDMShell add-in](TASKSCRIPT.md) for SOLIDWORKS PDM (downloadable for Premium users).
+- Added the [Script Editor](addin/script-editor.md) for configuring PDMShell scripts from inside PDM.
+- Added [script permissions](addin/permissions.md) for permitted users and groups.
+- Added [script conditions](addin/conditions.md) that control whether a script should run for the selected file, folder, or command context.
+- Added [right-click command menu](addin/command-menu.md) support so configured scripts can appear as PDM menu commands.
+- Added [PDM event trigger points](addin/trigger-points.md) so scripts can run on supported PDM command hooks.
+- Added [condition](addin/conditions.md) test messages to help administrators validate scripts before production use.
 - Added `pdmcli.exe -edit "script.pdmshell"` support to open a script in the visual editor without executing it.
-- Added headless mode support for add-in automation. Use `pdmcli.exe -headless` or enable **Headless** in PDMShell settings to start a lighter execution shell for automation runs.
+- Added headless mode support for [add-in automation](addin/runtime-execution.md). Use `pdmcli.exe -headless` or enable Headless in PDMShell settings to start a lighter execution shell for automation runs.
 - Protected unsaved visual editor work by hydrating the editor from [`runscript`](RUNSCRIPT.md) only when the current editor is empty or clean.
 - Added a default check-in comment value of `Checked by PDMShell` in the visual command builder.
 - Changed [`wait`](WAIT.md) to a fixed-duration pause and moved condition polling to the new [until](UNTIL.md) command.
-- Added session global variables with `setglobal`, `getglobal`, `clearglobal`, and `${global.Name}` evaluation.
-- Updated the installer package for this release.
+- Added [session global variables](GLOBALVARIABLES.md) with `setglobal`, `getglobal`, `clearglobal`, and `${global.Name}` evaluation.
+- Updated the [installer](howtoinstall.md) package for this release.
 
 ## 4.0.6 (2026-06-12)
-- Enhanced script execution for command-line and automation scenarios.
+- Enhanced [script execution](scripting.md) for command-line and automation scenarios.
 - Added `runscript -items` for integrations that pass file and folder ID pairs.
 - Updated [`runscript`](RUNSCRIPT.md) so `items`, `filePath`, and [`search`](SEARCH.md) use the same placeholder and PDM variable evaluation path as visual Run command execution.
 - Added command-line `.pdmshell` detection so `pdmcli.exe "script.pdmshell"` runs the script and forwards supported parameters such as `-items`.
-- Added the **Error Mode** setting. `Default` mode reports missing-file delete operations as warnings, while `Aggressive` mode keeps the previous hard-error behavior.
+- Added the Error Mode setting to [script execution](scripting.md). `Default` mode reports missing-file delete operations as warnings, while `Aggressive` mode keeps the previous hard-error behavior.
 
 ## 4.0.5 (2026-06-10)
 - Enhanced script processing logic.
@@ -70,9 +76,9 @@ then **install** the latest version. **Do not update installed version.**
 ## 4.0.4 (2026-06-10)
 - Added and documented the [wait](WAIT.md) command.
 - Added condition expression support for file/folder/process existence, variable and placeholder comparisons, grouped `and` / `or` logic, and arithmetic comparisons.
-- Simplified the Visual Code Editor wait conditions dialog to use a variable/placeholder field, operator dropdown, and conditional value field.
+- Simplified the [Visual Code Editor](visual-code-editor-4.md) wait conditions dialog to use a variable/placeholder field, operator dropdown, and conditional value field.
 - Expanded wait-condition placeholder autocomplete and runtime placeholder evaluation.
-- Fixed visual script editor command node icon rendering.
+- Fixed [Visual Code Editor](visual-code-editor-4.md) command node icon rendering.
 - Fixed visual script loading for root directory `cd -directory "\"` usage.
 - Improved [`setvar`](SETVAR.md) evaluation so `$value` falls back to an empty string when null or empty, and literal `\n` writes a real newline.
 - Updated [`pasteasreference`](PASTEASREFERENCE.md) behavior so `source` is the source file, [`search`](SEARCH.md) finds files to paste references to, and `filePath` is the reference to append.
@@ -87,13 +93,13 @@ then **install** the latest version. **Do not update installed version.**
 - Improved [`help`](HELP.md) responsiveness by reducing repeated UI updates and command metadata lookups.
 - Standardized command descriptions in PDMShell and aligned command documentation wording.
 - Added and documented the [whereusedtree](WHEREUSEDTREE.md) command for recursive where-used trees.
-- Improved Visual Code Editor script saving, loading, canvas state restoration, and unsaved-change handling.
-- Added Visual Code Editor canvas navigation controls such as zoom in, zoom out, and zoom to fit.
-- Added the Check In All Files script to the script library.
+- Improved [Visual Code Editor](visual-code-editor-4.md) script saving, loading, canvas state restoration, and unsaved-change handling.
+- Added [Visual Code Editor](visual-code-editor-4.md) canvas navigation controls such as zoom in, zoom out, and zoom to fit.
+- Added the [Check In All Files](scripts/CHECKINALLFILES/CHECKINALLFILES.md) script to the script library.
 
 ## 4.0.0 (2026-06-01)
 - Added [Visual Code Editor](visual-code-editor-4.md) for building PDMShell scripts as a workflow-style canvas.
-- Added `Favorite=SEARCH FAVORITE` token to the advanced search.
+- Added `Favorite=SEARCH FAVORITE` token to [advanced search](advancedsearch.md).
 - Added [runtemplate](RUNTEMPLATE.md) command to run SOLIDWORKS PDM templates from PDMShell.
 - Added [pasteasreference](PASTEASREFERENCE.md) command to replace custom references from a file or search result.
 ## 3.0.71
@@ -124,8 +130,8 @@ then **install** the latest version. **Do not update installed version.**
 - `dir`: Fixed search bug causing dir listing to be incomplete. 
 
 ## 3.0.56 (2026-03-22)
-- Enhanced [`runscript`](RUNSCRIPT.md) and fixed minor bugs in the PDMShell add-in. 
-- Added a new PDMShell add-in demo
+- Enhanced [`runscript`](RUNSCRIPT.md) and fixed minor bugs in the [PDMShell add-in](TASKSCRIPT.md). 
+- Added a new [PDMShell add-in](TASKSCRIPT.md) demo
 ## 3.0.55 (2026-03-20)
 - Added a quick access button to PDMShell AI assistant
 ## 3.0.54 (2026-03-20)
@@ -147,7 +153,7 @@ then **install** the latest version. **Do not update installed version.**
 
 ## 3.0.48 (2026-03-15)
 - Minor change to [`addtovault`](ADDTOVAULT.md): existing files found during add will be added to results file from parameter `csv`.
-- Added the PDMShell add-in to run scripts from PDM. 
+- Added the [PDMShell add-in](TASKSCRIPT.md) to run scripts from PDM. 
 
 ## 3.0.47 (2026-03-07)
 - Added `edit` token to search. This will force a check out and check-in when using a PDM `-search` during any command. 
@@ -212,7 +218,7 @@ Ghost builds
 - Minor changes and updates to the docs.
 
 ## 3.0.28 (2026-02-11)
-- Added `DuplicatedBy` token to advanced search and `DuplicateStrategy` parameter to the search command.
+- Added `DuplicatedBy` token to [advanced search](advancedsearch.md) and `DuplicateStrategy` parameter to the [`search`](SEARCH.md) command.
 - Added [Move](MOVE.md) and [MoveFromSource](MOVEFROMSOURCE.md) commands.
 ## 3.0.27 (2026-02-09)
 - Added [Pack And Go](PACKANDGO.md)
@@ -220,7 +226,7 @@ Ghost builds
 
 ## 3.0.26 (2026-01-05)
 - Happy New Year 2026!
-- [get command](GET.md): `Directory` parameter is now **optional**. If not specified, the file is cached in its folder. If specified with an empty value, the file is cached at the root of the vault.
+- [get command](GET.md): `Directory` parameter is now optional. If not specified, the file is cached in its folder. If specified with an empty value, the file is cached at the root of the vault.
 - Update tooltip for the `source` parameter in the [clear cache command](CLEARCACHE.md)
 
 
@@ -256,7 +262,7 @@ Ghost builds
 
 ## 3.0.17 (2025-12-08)
 - Fixed single instance issue related to Windows enviornment variables
-- Added note for `solidworks` and `pdm`parameters in the [Version](VERSION.md) command: **RESERVED FOR FUTURE. NOT IMPLEMENTED**   
+- Added note for `solidworks` and `pdm`parameters in the [Version](VERSION.md) command: RESERVED FOR FUTURE. NOT IMPLEMENTED   
 
 ## 3.0.16 (2025-12-07)
 - [Export: Added timeout parameter launching SOLIDWORKS](EXPORT.md).
@@ -294,7 +300,7 @@ Ghost builds
  - Fixed some minor bugs in BOM command
 
 ## 3.0.7 (2025-11-29)
- - [BOM: Added a new command](BOM.md). Please see notes [here](howtoinstall.md#common-update-issues) about new commands in the **Common Update Issues** section.
+ - [BOM: Added a new command](BOM.md). Please see notes [here](howtoinstall.md#common-update-issues) about new commands in the Common Update Issues section.
  - [Added `$configuration` placeholder](EVAL.md)
  - Added release notes page
  - Fixed some minor typos for the delete and destroy commands

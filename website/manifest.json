@@ -957,6 +957,46 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/pdmshell-license-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-license-settings.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-offline-activation-email-response.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-offline-activation-email-response.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-offline-activation-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-offline-activation-settings.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-open-settings-button.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-open-settings-button.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell-task-addin.png",
       "output": {
         "resource": {
@@ -2261,6 +2301,26 @@
       "output": {
         ".html": {
           "relative_path": "src/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/license-activation.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/license-activation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/offline-activation.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/offline-activation.html"
         }
       },
       "version": ""

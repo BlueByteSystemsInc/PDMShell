@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Getting Started with PDMShell | SOLIDWORKS PDM Automation | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>License Activation | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Getting Started with PDMShell | SOLIDWORKS PDM Automation | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="License Activation | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Learn what PDMShell is, how it helps automate SOLIDWORKS PDM Professional, and where to start with commands, scripts, the add-in, and visual workflows.">
+      <meta name="description" content="Activate, deactivate, or remove a PDMShell license from the Settings window.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/introduction.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/license-activation.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,143 +85,55 @@
         </div>
 
         <article data-uid="">
-<h1 id="introduction-to-pdmshell">Introduction to PDMShell</h1>
+<h1 id="license-activation">License Activation</h1>
 
-<p>PDMShell is a command-line and scripting tool for SOLIDWORKS PDM Professional. It helps administrators, engineers, and migration teams automate repetitive vault work without writing a full custom add-in for every task.</p>
-<p>You can use PDMShell for quick one-line commands, repeatable <code>.pdmshell</code> scripts, batch operations, workflow transition automation, Dispatch integration, and PDMShell add-in scripts that run directly inside the PDM client.</p>
-<h2 id="install-and-activate">Install And Activate</h2>
-<p>Start with <a href="howtoinstall.html">Install or Update</a>, then activate PDMShell from <a href="license-activation.html">License Activation</a>. If the computer is air-gapped or cannot reach the license server, use <a href="offline-activation.html">Offline Activation</a>.</p>
-<h2 id="what-you-can-do-with-pdmshell">What You Can Do with PDMShell</h2>
-<p>PDMShell is useful when you need to automate file, folder, metadata, and workflow operations in PDM.</p>
-<ul>
-<li>Navigate vault folders and inspect files.</li>
-<li>Check files in or out.</li>
-<li>Rename, move, copy, delete, recover, and export files.</li>
-<li>Read and update PDM variables.</li>
-<li>Search for files and export results to CSV.</li>
-<li>Run SOLIDWORKS macros and PDM tasks.</li>
-<li>Automate revision, version, reference, BOM, and Document Manager workflows.</li>
-<li>Build scripts that users can run from the PDMShell add-in, Dispatch, workflow transitions, or scheduled jobs.</li>
-</ul>
-<h2 id="ways-to-use-pdmshell">Ways to Use PDMShell</h2>
-<h3 id="interactive-command-shell">Interactive Command Shell</h3>
-<p>Use the PDMShell window when you want to type commands directly and see the result immediately.</p>
-<pre><code class="lang-bash">login -auto -vaultName MyVault
-cd &quot;\Projects&quot;
-dir
-</code></pre>
-<h3 id="script-files">Script Files</h3>
-<p>Save repeatable work in <code>.pdmshell</code> files and run them with <code>pdmcli.exe</code> or the <a href="RUNSCRIPT.html"><code>runscript</code></a> command.</p>
-<pre><code class="lang-bash">runscript -source &quot;C:\Scripts\UpdateVariables.pdmshell&quot;
-</code></pre>
-<p>PDMShell can read normal <code>.pdmshell</code> script files as plain text, which makes them easy to store in a PDM vault, review, version, and reuse.</p>
-<p>When you save a script from the PDMShell toolbar or visual editor, PDMShell may convert the saved file to an encrypted script format for security. This helps protect scripts that are intended to be distributed or run by users without exposing the editable source text.</p>
-<h3 id="visual-code-editor">Visual Code Editor</h3>
-<p>The visual editor helps you build PDMShell workflows with command nodes, connections, and command parameters. It is useful when a script needs to be easier to understand, document, or hand off to another administrator.</p>
-<p>See <a href="visual-code-editor-4.html">Visual Code Editor</a>.</p>
-<h3 id="pdmshell-add-in">PDMShell Add-in</h3>
-<p>The <a href="TASKSCRIPT.html">PDMShell add-in</a> lets administrators run approved scripts from PDM right-click menus and event trigger points. It can replace many Dispatch-style automations and adds permissions, conditions, command menu scripts, placeholders, headless execution, and visual editor support.</p>
-<h2 id="first-commands-to-learn">First Commands to Learn</h2>
-<p>Start with these commands before moving into larger scripts:</p>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="LOGIN.html"><code>login</code></a></td>
-<td>Logs into a PDM vault.</td>
-</tr>
-<tr>
-<td><a href="CD.html"><code>cd</code></a></td>
-<td>Changes the current PDM folder.</td>
-</tr>
-<tr>
-<td><a href="DIR.html"><code>dir</code></a></td>
-<td>Lists files and folders.</td>
-</tr>
-<tr>
-<td><a href="SEARCH.html"><code>search</code></a></td>
-<td>Finds files and folders.</td>
-</tr>
-<tr>
-<td><a href="GETVAR.html"><code>getvar</code></a></td>
-<td>Reads PDM variable values.</td>
-</tr>
-<tr>
-<td><a href="SETVAR.html"><code>setvar</code></a></td>
-<td>Updates PDM variable values.</td>
-</tr>
-<tr>
-<td><a href="RUNSCRIPT.html"><code>runscript</code></a></td>
-<td>Runs a saved <code>.pdmshell</code> script.</td>
-</tr>
-<tr>
-<td><a href="HELP.html"><code>help</code></a></td>
-<td>Lists commands or opens command help.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="using-the-help-system">Using the Help System</h2>
-<p>PDMShell includes a help system for learning commands while you work.</p>
-<p>To view all available commands:</p>
-<pre><code class="lang-bash">help
-</code></pre>
-<p>To get help for a specific command:</p>
-<pre><code class="lang-bash">help -command cd
-</code></pre>
-<h2 id="command-page-structure">Command Page Structure</h2>
-<p>Each command page in this documentation follows the same structure:</p>
+<p>Use the License page in PDMShell settings to activate, deactivate, or remove the license stored on this computer.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Regular activation requires an internet connection. If the computer is air-gapped or cannot reach the license server, use <a href="offline-activation.html">Offline Activation</a>.</p>
+</div>
+<h2 id="open-license-settings">Open License Settings</h2>
 <ol>
-<li>Description: What the command does.</li>
-<li>Syntax: The command format and supported parameters.</li>
-<li>Parameters: What each parameter means.</li>
-<li>Examples: Common ways to use the command.</li>
-<li>Remarks: Notes, limits, and important behavior.</li>
-<li>Availability: The PDMShell version where the command first became available.</li>
+<li>Open PDMShell.</li>
+<li>Select <code>Settings</code> on the toolbar or press <code>Ctrl + O</code>.</li>
+<li>Select <code>License</code>.</li>
 </ol>
-<h2 id="example-command-page">Example Command Page</h2>
-<p>Here is a small example using the <a href="CD.html"><code>cd</code></a> command.</p>
-<pre><code class="lang-bash">cd [-directory|-id]
-</code></pre>
-<p>Examples:</p>
-<pre><code class="lang-bash">cd -directory &quot;C:\Vault\NewFolder&quot;
-cd -id 755
-cd..
-cd\
-</code></pre>
-<p>Notes:</p>
+<div align="center">
+  <img src="/images/pdmshell-open-settings-button.png" alt="PDMShell Settings toolbar button" style="max-width:420px;width:100%;height:auto;">
+</div>
+<h2 id="activate-a-license">Activate A License</h2>
+<ol>
+<li>Enter your PDMShell license key.</li>
+<li>Select <code>Activate</code>.</li>
+<li>Wait for PDMShell to verify the license.</li>
+</ol>
+<p>When activation succeeds, the status changes to <code>Activated</code> and the expiration date is shown on the License page.</p>
+<div align="center">
+  <img src="/images/pdmshell-license-settings.png" alt="PDMShell License settings page" style="max-width:760px;width:100%;height:auto;">
+</div>
+<h2 id="deactivate-a-license">Deactivate A License</h2>
+<p>Use deactivation before moving a license to another computer.</p>
+<ol>
+<li>Open <code>Settings</code>.</li>
+<li>Select <code>License</code>.</li>
+<li>Select <code>Deactivate</code>.</li>
+</ol>
+<p>PDMShell contacts the license server and releases the license from the current computer.</p>
+<h2 id="delete-a-license-from-this-computer">Delete A License From This Computer</h2>
+<p>Use <code>Delete From Machine</code> only when you need to remove the saved license information from the current Windows user profile.</p>
+<p>This does not contact the license server. If you plan to move the license to another computer, deactivate the license first.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
 <ul>
-<li>Use <code>cd..</code> to move to the parent folder.</li>
-<li>Use <code>cd\</code> to move to the root of the vault.</li>
-<li>If you just created a folder and want autocomplete to see it, use <code>dir -refresh</code>.</li>
-<li><code>directory</code> is the default parameter, so <code>cd &quot;\Projects&quot;</code> is valid.</li>
+<li>Make sure the computer has internet access.</li>
+<li>Confirm that the license key was entered correctly.</li>
+<li>If the license is already active on another computer, deactivate it from that computer first.</li>
+<li>If activation still fails, contact Blue Byte Systems support and include the message shown on the License page.</li>
 </ul>
-<h2 id="placeholders">Placeholders</h2>
-<p>PDMShell scripts can use placeholders for file names, folder paths, variables, dates, and other runtime values.</p>
-<pre><code class="lang-bash">rename -filePath &quot;$localPath&quot; -value &quot;$fileNameWithoutExtension-$yyyy$extension&quot;
-</code></pre>
-<p>See <a href="EVAL.html">Placeholders in PDMShell</a>.</p>
-<h2 id="case-sensitivity">Case Sensitivity</h2>
-<p>As of PDMShell 3.0.1, command names, parameter names, and values are case-sensitive.</p>
-<h2 id="escaping-quotes">Escaping Quotes</h2>
-<p>Escaping quotes depends on where the command starts, such as Command Prompt, Dispatch, a workflow transition, or an existing PDMShell session.</p>
-<p>See <a href="escapingquotes.html">Escaping Characters</a>.</p>
-<h2 id="quick-tutorial">Quick Tutorial</h2>
-<p>This short tutorial shows basic folder navigation with the <a href="CD.html"><code>cd</code></a> command.</p>
-<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 8px;"></video></p>
-<h2 id="getting-support">Getting Support</h2>
-<p>If you need help building scripts or planning automation, contact Blue Byte Systems support:</p>
-<p><a href="mailto:support@bluebytesystemsinc.zohodesk.com">Get Support</a></p>
-<p>Thank you for choosing PDMShell. We are excited to help you streamline your PDM workflows and unlock new levels of productivity.</p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/introduction.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/license-activation.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

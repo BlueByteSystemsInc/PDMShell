@@ -8,6 +8,10 @@ PDMShell is a command-line and scripting tool for SOLIDWORKS PDM Professional. I
 
 You can use PDMShell for quick one-line commands, repeatable `.pdmshell` scripts, batch operations, workflow transition automation, Dispatch integration, and PDMShell add-in scripts that run directly inside the PDM client.
 
+## Install And Activate
+
+Start with [Install or Update](howtoinstall.md), then activate PDMShell from [License Activation](license-activation.md). If the computer is air-gapped or cannot reach the license server, use [Offline Activation](offline-activation.md).
+
 ## What You Can Do with PDMShell
 
 PDMShell is useful when you need to automate file, folder, metadata, and workflow operations in PDM.

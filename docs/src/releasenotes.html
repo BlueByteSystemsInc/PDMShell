@@ -90,14 +90,21 @@
 <p>Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in updates, script library templates, bug fixes, and upgrade notes.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>To update PDMShell properly, <strong>download</strong> the latest version, <strong>uninstall</strong> PDMShell and
-then <strong>install</strong> the latest version. <strong>Do not update installed version.</strong></p>
+<p>To update PDMShell properly, download the latest version, uninstall PDMShell and
+then install the latest version. Do not update installed version.</p>
 </div>
+<h2 id="4015-2026-06-29">4.0.15 (2026-06-29)</h2>
+<ul>
+<li>Added the <a href="offline-activation.html">Offline Activation</a> workflow in PDMShell settings for air-gapped or restricted computers.</li>
+<li>Improved the Settings window with a separate <code>Offline Activation</code> section under license management.</li>
+<li>Improved the Settings window license layout and made the license actions easier to scan and use.</li>
+<li>Improved the bottom action buttons in the update and settings dialogs for clearer alignment, sizing, and visual consistency.</li>
+</ul>
 <h2 id="4014-2026-06-27">4.0.14 (2026-06-27)</h2>
 <ul>
-<li>Added visual editor UI support for IF statement nodes and branch layout. Runtime execution for IF statement branches is not enabled yet.</li>
-<li>Added result shaping to advanced search queries with <code>SortBy</code>, <code>SortOrder</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, and <code>Strategy</code> so commands that use <code>-search</code> can sort, group, and keep or exclude selected results.</li>
-<li>Improved advanced search documentation by splitting search tokens, variable search, result shaping, and search favorites into focused articles.</li>
+<li>Added <a href="visual-code-editor-4.html">Visual Code Editor</a> UI support for IF statement nodes and branch layout. Runtime execution for IF statement branches is not enabled yet.</li>
+<li>Added <a href="search-result-shaping.html">result shaping</a> to advanced search queries with <code>SortBy</code>, <code>SortOrder</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, and <code>Strategy</code> so commands that use <code>-search</code> can sort, group, and keep or exclude selected results.</li>
+<li>Improved <a href="advancedsearch.html">advanced search</a> documentation by splitting <a href="search-tokens.html">search tokens</a>, <a href="search-variables.html">variable search</a>, <a href="search-result-shaping.html">result shaping</a>, and <a href="search-favorites.html">search favorites</a> into focused articles.</li>
 <li>Improved multi-session tab behavior so each session keeps its own vault connection, autocomplete metadata, visual editor metadata, and Connect to Vault action.</li>
 <li>Fixed tab switching issues that could replay output text or duplicate the welcome message.</li>
 <li>Improved visual editor autocomplete loading for large vaults by showing busy status and staged progress while vault metadata is loaded.</li>
@@ -107,14 +114,14 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 </ul>
 <h2 id="4011-2026-06-21">4.0.11 (2026-06-21)</h2>
 <ul>
-<li>Added documentation for the WPF <strong>Expression Evaluator</strong>, including how to safely preview placeholder expressions against a selected PDM file or folder, use <code>$value</code>, choose configurations, and test string functions before running commands or scripts.</li>
-<li>Added an on-demand PDMShell add-in script demo to the <strong>Command menu scripts</strong> documentation, showing how users can launch a rename script from SOLIDWORKS PDM without creating a PDM Task.</li>
+<li>Added documentation for the <a href="EVAL.html">Expression Evaluator</a>, including how to safely preview placeholder expressions against a selected PDM file or folder, use <code>$value</code>, choose configurations, and test string functions before running commands or scripts.</li>
+<li>Added an on-demand <a href="TASKSCRIPT.html">PDMShell add-in</a> script demo to the <a href="addin/command-menu.html">Command menu scripts</a> documentation, showing how users can launch a rename script from SOLIDWORKS PDM without creating a PDM Task.</li>
 <li>Updated the visual editor metadata for <a href="MSGBOX.html"><code>msgbox</code></a> so the <code>icon</code> parameter appears as a single-select combo box with the supported message box icons.</li>
 </ul>
 <h2 id="4010-2026-07-18">4.0.10 (2026-07-18)</h2>
 <ul>
 <li>Added logged-in PDM user profile placeholders: <code>$username.firstName</code>, <code>$username.lastName</code>, <code>$username.FullName</code>, and <code>$username.email</code>.</li>
-<li>Added a dark themed WPF <strong>Expression Evaluator</strong> dialog for testing placeholder expressions against a selected PDM file or folder before running a command.</li>
+<li>Added a dark themed <a href="EVAL.html">Expression Evaluator</a> for testing placeholder expressions against a selected PDM file or folder before running a command.</li>
 </ul>
 <h2 id="409-2026-07-18">4.0.9 (2026-07-18)</h2>
 <ul>
@@ -122,35 +129,35 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 </ul>
 <h2 id="408-2026-07-18">4.0.8 (2026-07-18)</h2>
 <ul>
-<li>Added <code>${regex(value, pattern)}</code> and <code>${regex(value, pattern, group)}</code> dynamic placeholder string functions.</li>
-<li>Added the <strong>Rename Before Dash</strong> script template to the PDMShell Script Library.</li>
+<li>Added <code>${regex(value, pattern)}</code> and <code>${regex(value, pattern, group)}</code> <a href="EVAL.html">placeholder</a> string functions.</li>
+<li>Added the <a href="scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.html">Rename Before Dash</a> script template to the PDMShell Script Library.</li>
 <li>Fixed Script Library downloads so templates without a SOLIDWORKS macro no longer create or report an empty <code>Macro.swb</code> file.</li>
 <li>Updated the AI Assistant toolbar button to open the hosted PDMShell Assistant website.</li>
 </ul>
 <h2 id="407-2026-07-17">4.0.7 (2026-07-17)</h2>
 <ul>
-<li><strong>Added the PDMShell add-in for SOLIDWORKS PDM (Downloadable for Premium Users).</strong></li>
-<li>Added the Script Editor for configuring PDMShell scripts from inside PDM.</li>
-<li>Added script permissions for permitted users and groups.</li>
-<li>Added script conditions that control whether a script should run for the selected file, folder, or command context.</li>
-<li>Added right-click command menu support so configured scripts can appear as PDM menu commands.</li>
-<li>Added PDM event trigger points so scripts can run on supported PDM command hooks.</li>
-<li>Added condition test messages to help administrators validate scripts before production use.</li>
+<li>Added the <a href="TASKSCRIPT.html">PDMShell add-in</a> for SOLIDWORKS PDM (downloadable for Premium users).</li>
+<li>Added the <a href="addin/script-editor.html">Script Editor</a> for configuring PDMShell scripts from inside PDM.</li>
+<li>Added <a href="addin/permissions.html">script permissions</a> for permitted users and groups.</li>
+<li>Added <a href="addin/conditions.html">script conditions</a> that control whether a script should run for the selected file, folder, or command context.</li>
+<li>Added <a href="addin/command-menu.html">right-click command menu</a> support so configured scripts can appear as PDM menu commands.</li>
+<li>Added <a href="addin/trigger-points.html">PDM event trigger points</a> so scripts can run on supported PDM command hooks.</li>
+<li>Added <a href="addin/conditions.html">condition</a> test messages to help administrators validate scripts before production use.</li>
 <li>Added <code>pdmcli.exe -edit &quot;script.pdmshell&quot;</code> support to open a script in the visual editor without executing it.</li>
-<li>Added headless mode support for add-in automation. Use <code>pdmcli.exe -headless</code> or enable <strong>Headless</strong> in PDMShell settings to start a lighter execution shell for automation runs.</li>
+<li>Added headless mode support for <a href="addin/runtime-execution.html">add-in automation</a>. Use <code>pdmcli.exe -headless</code> or enable Headless in PDMShell settings to start a lighter execution shell for automation runs.</li>
 <li>Protected unsaved visual editor work by hydrating the editor from <a href="RUNSCRIPT.html"><code>runscript</code></a> only when the current editor is empty or clean.</li>
 <li>Added a default check-in comment value of <code>Checked by PDMShell</code> in the visual command builder.</li>
 <li>Changed <a href="WAIT.html"><code>wait</code></a> to a fixed-duration pause and moved condition polling to the new <a href="UNTIL.html">until</a> command.</li>
-<li>Added session global variables with <code>setglobal</code>, <code>getglobal</code>, <code>clearglobal</code>, and <code>${global.Name}</code> evaluation.</li>
-<li>Updated the installer package for this release.</li>
+<li>Added <a href="GLOBALVARIABLES.html">session global variables</a> with <code>setglobal</code>, <code>getglobal</code>, <code>clearglobal</code>, and <code>${global.Name}</code> evaluation.</li>
+<li>Updated the <a href="howtoinstall.html">installer</a> package for this release.</li>
 </ul>
 <h2 id="406-2026-06-12">4.0.6 (2026-06-12)</h2>
 <ul>
-<li>Enhanced script execution for command-line and automation scenarios.</li>
+<li>Enhanced <a href="scripting.html">script execution</a> for command-line and automation scenarios.</li>
 <li>Added <code>runscript -items</code> for integrations that pass file and folder ID pairs.</li>
 <li>Updated <a href="RUNSCRIPT.html"><code>runscript</code></a> so <code>items</code>, <code>filePath</code>, and <a href="SEARCH.html"><code>search</code></a> use the same placeholder and PDM variable evaluation path as visual Run command execution.</li>
 <li>Added command-line <code>.pdmshell</code> detection so <code>pdmcli.exe &quot;script.pdmshell&quot;</code> runs the script and forwards supported parameters such as <code>-items</code>.</li>
-<li>Added the <strong>Error Mode</strong> setting. <code>Default</code> mode reports missing-file delete operations as warnings, while <code>Aggressive</code> mode keeps the previous hard-error behavior.</li>
+<li>Added the Error Mode setting to <a href="scripting.html">script execution</a>. <code>Default</code> mode reports missing-file delete operations as warnings, while <code>Aggressive</code> mode keeps the previous hard-error behavior.</li>
 </ul>
 <h2 id="405-2026-06-10">4.0.5 (2026-06-10)</h2>
 <ul>
@@ -160,9 +167,9 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 <ul>
 <li>Added and documented the <a href="WAIT.html">wait</a> command.</li>
 <li>Added condition expression support for file/folder/process existence, variable and placeholder comparisons, grouped <code>and</code> / <code>or</code> logic, and arithmetic comparisons.</li>
-<li>Simplified the Visual Code Editor wait conditions dialog to use a variable/placeholder field, operator dropdown, and conditional value field.</li>
+<li>Simplified the <a href="visual-code-editor-4.html">Visual Code Editor</a> wait conditions dialog to use a variable/placeholder field, operator dropdown, and conditional value field.</li>
 <li>Expanded wait-condition placeholder autocomplete and runtime placeholder evaluation.</li>
-<li>Fixed visual script editor command node icon rendering.</li>
+<li>Fixed <a href="visual-code-editor-4.html">Visual Code Editor</a> command node icon rendering.</li>
 <li>Fixed visual script loading for root directory <code>cd -directory &quot;\&quot;</code> usage.</li>
 <li>Improved <a href="SETVAR.html"><code>setvar</code></a> evaluation so <code>$value</code> falls back to an empty string when null or empty, and literal <code>\n</code> writes a real newline.</li>
 <li>Updated <a href="PASTEASREFERENCE.html"><code>pasteasreference</code></a> behavior so <code>source</code> is the source file, <a href="SEARCH.html"><code>search</code></a> finds files to paste references to, and <code>filePath</code> is the reference to append.</li>
@@ -179,14 +186,14 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 <li>Improved <a href="HELP.html"><code>help</code></a> responsiveness by reducing repeated UI updates and command metadata lookups.</li>
 <li>Standardized command descriptions in PDMShell and aligned command documentation wording.</li>
 <li>Added and documented the <a href="WHEREUSEDTREE.html">whereusedtree</a> command for recursive where-used trees.</li>
-<li>Improved Visual Code Editor script saving, loading, canvas state restoration, and unsaved-change handling.</li>
-<li>Added Visual Code Editor canvas navigation controls such as zoom in, zoom out, and zoom to fit.</li>
-<li>Added the Check In All Files script to the script library.</li>
+<li>Improved <a href="visual-code-editor-4.html">Visual Code Editor</a> script saving, loading, canvas state restoration, and unsaved-change handling.</li>
+<li>Added <a href="visual-code-editor-4.html">Visual Code Editor</a> canvas navigation controls such as zoom in, zoom out, and zoom to fit.</li>
+<li>Added the <a href="scripts/CHECKINALLFILES/CHECKINALLFILES.html">Check In All Files</a> script to the script library.</li>
 </ul>
 <h2 id="400-2026-06-01">4.0.0 (2026-06-01)</h2>
 <ul>
 <li>Added <a href="visual-code-editor-4.html">Visual Code Editor</a> for building PDMShell scripts as a workflow-style canvas.</li>
-<li>Added <code>Favorite=SEARCH FAVORITE</code> token to the advanced search.</li>
+<li>Added <code>Favorite=SEARCH FAVORITE</code> token to <a href="advancedsearch.html">advanced search</a>.</li>
 <li>Added <a href="RUNTEMPLATE.html">runtemplate</a> command to run SOLIDWORKS PDM templates from PDMShell.</li>
 <li>Added <a href="PASTEASREFERENCE.html">pasteasreference</a> command to replace custom references from a file or search result.</li>
 </ul>
@@ -226,8 +233,8 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 </ul>
 <h2 id="3056-2026-03-22">3.0.56 (2026-03-22)</h2>
 <ul>
-<li>Enhanced <a href="RUNSCRIPT.html"><code>runscript</code></a> and fixed minor bugs in the PDMShell add-in.</li>
-<li>Added a new PDMShell add-in demo</li>
+<li>Enhanced <a href="RUNSCRIPT.html"><code>runscript</code></a> and fixed minor bugs in the <a href="TASKSCRIPT.html">PDMShell add-in</a>.</li>
+<li>Added a new <a href="TASKSCRIPT.html">PDMShell add-in</a> demo</li>
 </ul>
 <h2 id="3055-2026-03-20">3.0.55 (2026-03-20)</h2>
 <ul>
@@ -261,7 +268,7 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 <h2 id="3048-2026-03-15">3.0.48 (2026-03-15)</h2>
 <ul>
 <li>Minor change to <a href="ADDTOVAULT.html"><code>addtovault</code></a>: existing files found during add will be added to results file from parameter <code>csv</code>.</li>
-<li>Added the PDMShell add-in to run scripts from PDM.</li>
+<li>Added the <a href="TASKSCRIPT.html">PDMShell add-in</a> to run scripts from PDM.</li>
 </ul>
 <h2 id="3047-2026-03-07">3.0.47 (2026-03-07)</h2>
 <ul>
@@ -337,7 +344,7 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 </ul>
 <h2 id="3028-2026-02-11">3.0.28 (2026-02-11)</h2>
 <ul>
-<li>Added <code>DuplicatedBy</code> token to advanced search and <code>DuplicateStrategy</code> parameter to the search command.</li>
+<li>Added <code>DuplicatedBy</code> token to <a href="advancedsearch.html">advanced search</a> and <code>DuplicateStrategy</code> parameter to the <a href="SEARCH.html"><code>search</code></a> command.</li>
 <li>Added <a href="MOVE.html">Move</a> and <a href="MOVEFROMSOURCE.html">MoveFromSource</a> commands.</li>
 </ul>
 <h2 id="3027-2026-02-09">3.0.27 (2026-02-09)</h2>
@@ -348,7 +355,7 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 <h2 id="3026-2026-01-05">3.0.26 (2026-01-05)</h2>
 <ul>
 <li>Happy New Year 2026!</li>
-<li><a href="GET.html">get command</a>: <code>Directory</code> parameter is now <strong>optional</strong>. If not specified, the file is cached in its folder. If specified with an empty value, the file is cached at the root of the vault.</li>
+<li><a href="GET.html">get command</a>: <code>Directory</code> parameter is now optional. If not specified, the file is cached in its folder. If specified with an empty value, the file is cached at the root of the vault.</li>
 <li>Update tooltip for the <code>source</code> parameter in the <a href="CLEARCACHE.html">clear cache command</a></li>
 </ul>
 <h2 id="3025-2025-12-23">3.0.25 (2025-12-23)</h2>
@@ -392,7 +399,7 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 <h2 id="3017-2025-12-08">3.0.17 (2025-12-08)</h2>
 <ul>
 <li>Fixed single instance issue related to Windows enviornment variables</li>
-<li>Added note for <code>solidworks</code> and <code>pdm</code>parameters in the <a href="VERSION.html">Version</a> command: <strong>RESERVED FOR FUTURE. NOT IMPLEMENTED</strong></li>
+<li>Added note for <code>solidworks</code> and <code>pdm</code>parameters in the <a href="VERSION.html">Version</a> command: RESERVED FOR FUTURE. NOT IMPLEMENTED</li>
 </ul>
 <h2 id="3016-2025-12-07">3.0.16 (2025-12-07)</h2>
 <ul>
@@ -441,7 +448,7 @@ then <strong>install</strong> the latest version. <strong>Do not update installe
 </ul>
 <h2 id="307-2025-11-29">3.0.7 (2025-11-29)</h2>
 <ul>
-<li><a href="BOM.html">BOM: Added a new command</a>. Please see notes <a href="howtoinstall.html#common-update-issues">here</a> about new commands in the <strong>Common Update Issues</strong> section.</li>
+<li><a href="BOM.html">BOM: Added a new command</a>. Please see notes <a href="howtoinstall.html#common-update-issues">here</a> about new commands in the Common Update Issues section.</li>
 <li><a href="EVAL.html">Added <code>$configuration</code> placeholder</a></li>
 <li>Added release notes page</li>
 <li>Fixed some minor typos for the delete and destroy commands</li>

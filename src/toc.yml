@@ -7,6 +7,10 @@
     href: introduction.md
   - name: Install or Update
     href: howtoinstall.md
+  - name: License Activation
+    href: license-activation.md
+  - name: Offline Activation
+    href: offline-activation.md
   - name: Free vs Premium
     href: FREEVSPREMIUM.md
   - name: FAQ
