@@ -1,8 +1,8 @@
 ---
 description: Displays a list of files and subdirectories in a directory.
-title: DIR Command | PDMShell | SOLIDWORKS PDM
+title: dir Command | PDMShell | SOLIDWORKS PDM
 ---
-# DIR Command
+# dir
 ## Description
 Displays a list of files and subdirectories in a directory.
 

@@ -1,8 +1,8 @@
 ---
 description: Copies files inside the SOLIDWORKS PDM vault from a source file or folder to a target directory.
-title: COPY Command | PDMShell | SOLIDWORKS PDM
+title: copy Command | PDMShell | SOLIDWORKS PDM
 ---
-# COPY Command
+# copy
 ## Description
 Performs a vault-to-vault copy operation in SOLIDWORKS PDM.
 

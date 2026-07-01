@@ -1,8 +1,8 @@
 ---
 description: Lists all the users in the active vault.
-title: USERS Command | PDMShell | SOLIDWORKS PDM
+title: users Command | PDMShell | SOLIDWORKS PDM
 ---
-# USERS Command
+# users
 ## Description
 Lists all the users in the active vault.
 

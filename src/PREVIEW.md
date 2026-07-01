@@ -1,8 +1,8 @@
 ---
 description: Opens a preview for a file or files found by search.
-title: PREVIEW Command | PDMShell | SOLIDWORKS PDM
+title: preview Command | PDMShell | SOLIDWORKS PDM
 ---
-# PREVIEW Command
+# preview
 ## Description
 Opens a preview for a file or files found by search.
 

@@ -1,8 +1,8 @@
 ---
 description: Sets variable values for files listed in a CSV source.
-title: SETVARSFROMSOURCE Command | PDMShell | SOLIDWORKS PDM
+title: setvarsfromsource Command | PDMShell | SOLIDWORKS PDM
 ---
-# SETVARSFROMSOURCE Command
+# setvarsfromsource
 ## Description
 Sets variables for multiple files using a CSV file as the source.
 

@@ -1,8 +1,8 @@
 ---
 description: Lists commands and opens command documentation.
-title: HELP Command | PDMShell | SOLIDWORKS PDM
+title: help Command | PDMShell | SOLIDWORKS PDM
 ---
-# HELP Command
+# help
 ## Description
 The `help` command lists available commands grouped by category. It can also open the documentation page for a specific command.
 

@@ -1,10 +1,10 @@
 ---
 description: Exports one file or multiple files found by search to the specified formats.
-title: EXPORT Command | PDMShell | SOLIDWORKS PDM
+title: export Command | PDMShell | SOLIDWORKS PDM
 ---
-# EXPORT Command
+# export
 ## Description
-The `ExportCommand` allows you to export SOLIDWORKS files from the PDM vault to various formats using SOLIDWORKS. This command supports exporting a single file or multiple files found via search, with options for specifying file extensions, export location, and more.
+The `export` command allows you to export SOLIDWORKS files from the PDM vault to various formats using SOLIDWORKS. This command supports exporting a single file or multiple files found via search, with options for specifying file extensions, export location, and more.
 
 
 ## Syntax

@@ -1,10 +1,10 @@
 ---
 description: Sets the revision for one file or for files found by search.
-title: SETREVISION Command | PDMShell | SOLIDWORKS PDM
+title: setrevision Command | PDMShell | SOLIDWORKS PDM
 ---
-# SETREVISION Command
+# setrevision
 ## Description
-The `SetRevisionCommand` allows you to set the PDM-managed revision of a file inside the vault.  
+The `setrevision` command allows you to set the PDM-managed revision of a file inside the vault.  
 This command updates the official PDM Revision (the value shown on the version tab), *not* the datacard one.
 
 You may set the revision using:

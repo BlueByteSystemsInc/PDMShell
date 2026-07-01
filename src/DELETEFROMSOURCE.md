@@ -1,8 +1,8 @@
 ---
 description: Deletes files listed in a CSV source.
-title: DELETEFROMSOURCE Command | PDMShell | SOLIDWORKS PDM
+title: deletefromsource Command | PDMShell | SOLIDWORKS PDM
 ---
-# DELETEFROMSOURCE Command
+# deletefromsource
 ## Description
 The `deletefromsource` command deletes files listed in a CSV file. It can also optionally destroy the files and export the operation results to a CSV file for auditing and reporting purposes.
 

@@ -1,8 +1,8 @@
 ---
 description: Moves files listed in a CSV source to a target vault folder.
-title: MOVEFROMSOURCE Command | PDMShell | SOLIDWORKS PDM
+title: movefromsource Command | PDMShell | SOLIDWORKS PDM
 ---
-# MOVEFROMSOURCE Command
+# movefromsource
 ## Description
 The `movefromsource` command moves file(s) in the vault using a CSV file as input.
 

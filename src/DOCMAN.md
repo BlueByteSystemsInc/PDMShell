@@ -1,8 +1,8 @@
 ---
 description: Renames SOLIDWORKS files and updates their properties and references.
-title: DOCMAN Command | PDMShell | SOLIDWORKS PDM
+title: docman Command | PDMShell | SOLIDWORKS PDM
 ---
-# DOCMAN Command
+# docman
 ## Description
 Exports SOLIDWORKS Document Manager data for files in a directory or search result.
 

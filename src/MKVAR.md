@@ -1,8 +1,8 @@
 ---
 description: Creates a new PDM variable.
-title: MKVAR Command | PDMShell | SOLIDWORKS PDM
+title: mkvar Command | PDMShell | SOLIDWORKS PDM
 ---
-# MKVAR Command
+# mkvar
 ## Description
 Creates a new variable.
 

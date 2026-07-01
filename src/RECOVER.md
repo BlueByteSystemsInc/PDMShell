@@ -1,8 +1,8 @@
 ---
 description: Recovers deleted files from a folder or CSV source.
-title: RECOVER Command | PDMShell | SOLIDWORKS PDM
+title: recover Command | PDMShell | SOLIDWORKS PDM
 ---
-# RECOVER Command
+# recover
 ## Description
 The `recover` command recovers deleted files from a folder or CSV source. It supports optional parameters for search queries and recursive operations.
 
@@ -25,9 +25,9 @@ recover -directory -search -recursive -source
 ## Examples
 ```bash
 recover -source "source.csv"
-# Recovers files from the specified source.
+# recover
 recover -directory ""
-# Recovers files from the current directory.
+# recover
 ```
 
 ## Remarks

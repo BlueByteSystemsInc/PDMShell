@@ -1,8 +1,8 @@
 ---
 description: Runs a SOLIDWORKS PDM template by template menu name.
-title: RUNTEMPLATE Command | PDMShell | SOLIDWORKS PDM
+title: runtemplate Command | PDMShell | SOLIDWORKS PDM
 ---
-# RUNTEMPLATE Command
+# runtemplate
 ## Description
 Runs a SOLIDWORKS PDM template from PDMShell by using the template menu name.
 
@@ -10,30 +10,34 @@ The `runtemplate` command is useful when you want to start a configured PDM temp
 
 ## Syntax
 ```bash
-runtemplate -name template_menu_name [-directory vault_folder]
+runtemplate -name template_menu_name [-directory vault_folder] [-silent]
 ```
 
 Short format:
 
 ```bash
-runtemplate -name template_menu_name [-d vault_folder]
+runtemplate -name template_menu_name [-d vault_folder] [-silent]
 ```
 
 ## Parameters
 - `name` Required. Template menu name to run. This is the same name shown for the template command in SOLIDWORKS PDM.
 - `directory` Optional. Vault folder where the template should run. If omitted, the current PDMShell folder is used.
 - `d` Optional short name for `directory`.
+- `silent` Optional. Automatically confirms the template creation dialog when possible.
 
 ## Examples
 ```bash
-# Run a template in the current folder
+# runtemplate
 runtemplate -name "New Project"
 
-# Run a template in a specific vault folder
+# runtemplate
 runtemplate -name "New Project" -directory "Projects"
 
-# Same command using the short directory parameter
+# runtemplate
 runtemplate -name "New Project" -d "Projects"
+
+# runtemplate
+runtemplate -name "Create ECO" -d "Engineering Change Orders" -silent
 ```
 
 ## Remarks
@@ -41,6 +45,10 @@ runtemplate -name "New Project" -d "Projects"
 - The command uses the current vault session.
 - If `directory` is relative, it is resolved from the current PDMShell folder.
 - The template must be installed and available in the selected vault.
+- Use `silent` only when the template can be created without entering additional information.
 
 ## Availability
 Available since PDMShell 4.0.0.
+
+## Last Updated
+Updated in PDMShell 4.0.16 to improve `silent` confirmation for template creation dialogs.

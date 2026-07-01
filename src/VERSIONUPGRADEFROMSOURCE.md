@@ -1,8 +1,8 @@
 ---
 description: Upgrades file versions from a CSV source and optionally moves revision values after a PDM upgrade.
-title: UPGRADEVERSIONFROMSOURCE Command | PDMShell | SOLIDWORKS PDM
+title: versionupgradefromsource Command | PDMShell | SOLIDWORKS PDM
 ---
-# UPGRADEVERSIONFROMSOURCE Command
+# versionupgradefromsource
 ## Description
 Checks and upgrades SOLIDWORKS PDM file versions from a CSV source.
 

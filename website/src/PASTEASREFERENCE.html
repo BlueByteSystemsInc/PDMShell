@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>PASTEASREFERENCE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>pasteasreference Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="PASTEASREFERENCE Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="pasteasreference Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Appends one custom reference file to a source file or to files found by search.">
       <link rel="icon" href="../favicon.ico">
@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="">
-<h1 id="pasteasreference-command">PASTEASREFERENCE Command</h1>
+<h1 id="pasteasreference">pasteasreference</h1>
 
 <h2 id="description">Description</h2>
 <p>Appends one custom reference file to a source file or to files found by search in SOLIDWORKS PDM.</p>
@@ -116,13 +116,13 @@
 <li>Skips duplicates.</li>
 </ul>
 <h2 id="examples">Examples</h2>
-<pre><code class="lang-bash"># Append Part.sldprt as a custom reference to one assembly
+<pre><code class="lang-bash"># pasteasreference
 pasteasreference -filePath &quot;Part.sldprt&quot; -source &quot;Assembly.sldasm&quot;
 
-# Append Part.sldprt as a custom reference to all matching assemblies in the current folder
+# pasteasreference
 pasteasreference -filePath &quot;Part.sldprt&quot; -search &quot;Name=%.sldasm&quot;
 
-# Append Part.sldprt as a custom reference to matching assemblies in the current folder and subfolders
+# pasteasreference
 pasteasreference -filePath &quot;Part.sldprt&quot; -search &quot;Name=%.sldasm&quot; -recursive
 </code></pre>
 <h2 id="remarks">Remarks</h2>

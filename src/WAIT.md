@@ -1,8 +1,8 @@
 ---
 description: Waits for a specific number of seconds before continuing the script.
-title: WAIT Command | PDMShell | SOLIDWORKS PDM
+title: wait Command | PDMShell | SOLIDWORKS PDM
 ---
-# WAIT Command
+# wait
 ## Description
 Waits for the specified number of seconds, then continues to the next command.
 

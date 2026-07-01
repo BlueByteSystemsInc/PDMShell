@@ -1,9 +1,9 @@
 ---
 description: Reads SOLIDWORKS custom and configuration properties using Document Manager and exports them to CSV.
-title: DOCMANPROPS Command | PDMShell | SOLIDWORKS PDM
+title: docmanprops Command | PDMShell | SOLIDWORKS PDM
 ---
 
-# DOCMANPROPS Command  
+# docmanprops
 
 ## Description
 The `docmanprops` command exports and updates SOLIDWORKS file custom properties without opening SOLIDWORKS.

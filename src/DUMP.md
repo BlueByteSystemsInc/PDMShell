@@ -1,8 +1,8 @@
 ---
 description: Writes the current session output to a log file.
-title: DELETEFROMSOURCE Command | PDMShell | SOLIDWORKS PDM
+title: dump Command | PDMShell | SOLIDWORKS PDM
 ---
-# DUMP Command
+# dump
 ## Description
 Dumps all session text into a log file and check it back into the vault.
 

@@ -1,8 +1,8 @@
 ---
 description: Shows a Windows message box from a PDMShell command or script.
-title: MSGBOX Command | PDMShell | SOLIDWORKS PDM
+title: msgbox Command | PDMShell | SOLIDWORKS PDM
 ---
-# MSGBOX Command
+# msgbox
 ## Description
 The `msgbox` command shows a Windows message box with the specified text.
 
@@ -41,7 +41,7 @@ For example, after logging in to a vault, `$vaultName` resolves to the active va
 msgbox -value "vaultName = $vaultName" -icon "Information"
 ```
 
-![MSGBOX command showing the evaluated vaultName placeholder](../images/msgbox-placeholders.png)
+![msgbox command showing the evaluated vaultName placeholder](../images/msgbox-placeholders.png)
 
 Common session placeholders include `$vaultName`, `$date`, `$time`, `$guid`, and `$tempFolder`.
 

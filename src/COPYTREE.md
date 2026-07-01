@@ -1,8 +1,8 @@
 ---
 description: Copies a file tree in the SOLIDWORKS PDM vault.
-title: COPYTREE Command | PDMShell | SOLIDWORKS PDM
+title: copytree Command | PDMShell | SOLIDWORKS PDM
 ---
-# COPYTREE Command
+# copytree
 ## Description
 The `copytree` command copies a file tree in the SOLIDWORKS PDM vault, with options to apply prefixes, suffixes, and other filters. This only works with assembly files.
 

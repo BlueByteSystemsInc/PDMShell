@@ -1,8 +1,8 @@
 ---
 description: Shares one SOLIDWORKS PDM file or files found by search into another vault folder.
-title: PASTEASSHARED Command | PDMShell | SOLIDWORKS PDM
+title: pasteasshared Command | PDMShell | SOLIDWORKS PDM
 ---
-# PASTEASSHARED Command
+# pasteasshared
 ## Description
 Shares one SOLIDWORKS PDM file, or files found by search, into another vault folder.
 
@@ -34,13 +34,13 @@ pasteasshared (-filePath file_path | -search search_query) -directory target_vau
 
 ## Examples
 ```bash
-# Share one part into another vault folder
+# pasteasshared
 pasteasshared -filePath "Part.sldprt" -directory "Shared Parts"
 
-# Share all matching parts from the current folder into another vault folder
+# pasteasshared
 pasteasshared -search "Name=%.sldprt" -directory "Shared Parts"
 
-# Share all matching parts from the current folder and subfolders
+# pasteasshared
 pasteasshared -search "Name=%.sldprt" -directory "Shared Parts" -recursive
 ```
 

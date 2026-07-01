@@ -1,8 +1,8 @@
 ---
 description: Promotes an older file version to become the latest version.
-title: FROGLEAP Command | PDMShell | SOLIDWORKS PDM
+title: frogleap Command | PDMShell | SOLIDWORKS PDM
 ---
-# FROGLEAP Command
+# frogleap
 ## Description
 The `frogleap` command promotes an older file version to become the latest version.
 

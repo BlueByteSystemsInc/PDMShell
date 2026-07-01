@@ -1,8 +1,8 @@
 ---
 description: Builds a recursive where-used tree for one file or files found by search.
-title: WHEREUSEDTREE Command | PDMShell | SOLIDWORKS PDM
+title: whereusedtree Command | PDMShell | SOLIDWORKS PDM
 ---
-# WHEREUSEDTREE Command
+# whereusedtree
 ## Description
 The `whereusedtree` command builds a recursive where-used tree for one file or for each file found by a search in the current directory.
 

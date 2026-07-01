@@ -1,8 +1,8 @@
 ---
 description: Lists the direct parent files that reference a file.
-title: WHEREUSED Command | PDMShell | SOLIDWORKS PDM
+title: whereused Command | PDMShell | SOLIDWORKS PDM
 ---
-# WHEREUSED Command
+# whereused
 ## Description
 The `whereused` command lists all parent files that reference a specified file.
 

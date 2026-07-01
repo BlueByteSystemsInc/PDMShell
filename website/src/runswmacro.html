@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>RUNSWMACRO Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>runswmacro Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="RUNSWMACRO Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="runswmacro Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Runs a SOLIDWORKS macro on files found by search.">
       <link rel="icon" href="../favicon.ico">
@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="">
-<h1 id="runswmacro-command">RUNSWMACRO Command</h1>
+<h1 id="runswmacro">runswmacro</h1>
 
 <h2 id="description">Description</h2>
 <p>The <code>runswmacro</code> command allows you to execute a SOLIDWORKS macro on a specific file or on multiple files found via search in the PDM vault. This is useful for automating repetitive tasks or applying custom logic to many files.</p>
@@ -362,7 +362,7 @@ public class MyMacro : IPDMShellSOLIDWORKSMacro
 <p>Use the <code>callback.AppendMessage()</code> method to provide progress updates and status messages during macro execution. These messages will be displayed in the PDMShell output.</p>
 </div>
 <h3 id="running-the-macro">Running the Macro</h3>
-<pre><code class="lang-bash"># Run the DLL macro on all parts in the current directory
+<pre><code class="lang-bash"># runswmacro
 runswmacro -filePath &quot;Macros/MyMacro.dll&quot; -search &quot;%.sldprt&quot; -timeout 12000
 </code></pre>
 <div class="NOTE">
@@ -370,14 +370,14 @@ runswmacro -filePath &quot;Macros/MyMacro.dll&quot; -search &quot;%.sldprt&quot;
 <p>The DLL must be built against .NET Framework 4.7.2 or higher</p>
 </div>
 <h2 id="examples">Examples</h2>
-<pre><code class="lang-bash"># run batch export macro on all part in the current directory
+<pre><code class="lang-bash"># runswmacro
  runswmacro -filePath &quot;Macros/BatchExport.swp&quot; -search &quot;%.sldprt&quot; 
 </code></pre>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>You can use the token <code>edit</code> in the search to force a check out and a check in of the search results. The check out uses the default checkout settings specified in the reference dialog of your PDM user settings (ie: this might check out the file itself and its references too). The check in will only check in the document itself (<strong>not the references</strong>).</p>
 </div>
-<pre><code class="lang-bash"># run batch export macro on all part in the current directory (does a checkout and check in of the parts)
+<pre><code class="lang-bash"># runswmacro
  runswmacro -filePath &quot;Macros/BatchExport.swp&quot; -search &quot;Name=%.sldprt;Edit&quot; 
 </code></pre>
 <h2 id="availability">Availability</h2>

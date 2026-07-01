@@ -1,8 +1,8 @@
 ---
 description: Runs SOLIDWORKS Pack and Go for one assembly or for multiple assemblies from a folder search or CSV source.
-title: PACKG Command | PDMShell | SOLIDWORKS PDM
+title: packandgo Command | PDMShell | SOLIDWORKS PDM
 ---
-# PACKG Command
+# packandgo
 ## Description
 The `packg` command performs a SOLIDWORKS Pack and Go operation on:
 

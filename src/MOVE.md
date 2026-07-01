@@ -1,8 +1,8 @@
 ---
 description: Moves files or folders from one vault location to another.
-title: MOVE Command | PDMShell | SOLIDWORKS PDM
+title: move Command | PDMShell | SOLIDWORKS PDM
 ---
-# MOVE Command
+# move
 ## Description
 The `move` command moves file(s) from one folder in the vault to another.
 

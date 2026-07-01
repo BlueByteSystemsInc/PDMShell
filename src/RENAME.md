@@ -1,8 +1,8 @@
 ---
 description: Renames one file or multiple files found by search.
-title: RENAME Command | PDMShell | SOLIDWORKS PDM
+title: rename Command | PDMShell | SOLIDWORKS PDM
 ---
-# RENAME Command
+# rename
 ## Description
 Renames a specified file.
 

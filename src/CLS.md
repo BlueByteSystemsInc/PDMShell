@@ -1,8 +1,8 @@
 ---
 description: Clears the current session.
-title: CLS Command | PDMShell | SOLIDWORKS PDM
+title: cls Command | PDMShell | SOLIDWORKS PDM
 ---
-# CLS Command
+# cls
 ## Description
 Clears the current session.
 

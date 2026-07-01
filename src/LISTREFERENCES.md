@@ -1,8 +1,8 @@
 ---
 description: Lists file references inside the SOLIDWORKS PDM vault using the Raw Reference Manager.
-title: LISTREFERENCES Command | PDMShell | SOLIDWORKS PDM
+title: listreferences Command | PDMShell | SOLIDWORKS PDM
 ---
-# LISTREFERENCES Command
+# listreferences
 ## Description
 Lists file references inside the SOLIDWORKS PDM vault.
 
@@ -40,11 +40,11 @@ ReferenceFileID
 
 ## Examples
 ```bash
-# List references for a single assembly
+# listreferences
 listreferences -filepath speaker.sldasm
-# List references for all assemblies in the current folder
+# listreferences
 listreferences -search %.sldasm
-# List references recursively and export results to CSV
+# listreferences
 listreferences -search %.sldasm -recursive true -csv references.csv
 ```
 ## Remarks

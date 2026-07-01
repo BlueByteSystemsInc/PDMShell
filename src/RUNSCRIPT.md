@@ -3,7 +3,7 @@ title: RunScript command
 description: Run a PDMShell script from another script, the visual editor, or pdmcli.exe.
 ---
 
-# RunScript command
+# runscript
 
 `runscript` loads and runs a `.pdmshell` script file.
 

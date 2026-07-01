@@ -12,6 +12,9 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.16 (2026-06-30)
+- Improved [`runtemplate`](RUNTEMPLATE.md) `-silent` confirmation so template dialogs can be confirmed with `Create` or `OK` buttons.
+
 ## 4.0.15 (2026-06-29)
 - Added the [Offline Activation](offline-activation.md) workflow in PDMShell settings for air-gapped or restricted computers.
 - Improved the Settings window with a separate `Offline Activation` section under license management.

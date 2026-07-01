@@ -1,8 +1,8 @@
 ---
 description: Checks in one file or multiple files found by search.
-title: CHECKIN Command | PDMShell | SOLIDWORKS PDM
+title: checkin Command | PDMShell | SOLIDWORKS PDM
 ---
-# CHECKIN Command
+# checkin
 ## Description
 Performs a check-in operation on a specified file or many files.
 

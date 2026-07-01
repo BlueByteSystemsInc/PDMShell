@@ -1,8 +1,8 @@
 ---
 description: Stops a running process by name.
-title: KILL Command | PDMShell | SOLIDWORKS PDM
+title: kill Command | PDMShell | SOLIDWORKS PDM
 ---
-# KILL Command
+# kill
 ## Description
 Kills a process.
 
@@ -16,7 +16,7 @@ kill -process
 ## Examples
 ```bash
 kill sldworks.exe
-# terminates all open SOLIDWORKS sessions.
+# kill
 ```
 ## Remarks
 - This command uses `taskkill` from the command line.

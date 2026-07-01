@@ -1,8 +1,8 @@
 ---
 description: Sets the value of a variable for a specified checked out file or many checked out files.
-title: SETVAR Command | PDMShell | SOLIDWORKS PDM
+title: setvar Command | PDMShell | SOLIDWORKS PDM
 ---
-# SETVAR Command
+# setvar
 ## Description
 Sets the value of a variable for a specified checked out file or many checked out files.
 

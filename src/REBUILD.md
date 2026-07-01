@@ -1,8 +1,8 @@
 ---
 description: Rebuilds SOLIDWORKS files from a file path or search result.
-title: REBUILD Command | PDMShell | SOLIDWORKS PDM
+title: rebuild Command | PDMShell | SOLIDWORKS PDM
 ---
-# REBUILD Command
+# rebuild
 ## Description
 Rebuilds SOLIDWORKS files from a file path or search result.
 

@@ -1,8 +1,8 @@
 ---
 description: Creates virtual documents from a CSV source.
-title: CREATEVIRTUALFROMSOURCE Command | PDMShell | SOLIDWORKS PDM
+title: createvirtualfromsource Command | PDMShell | SOLIDWORKS PDM
 ---
-# CREATEVIRTUALFROMSOURCE Command
+# createvirtualfromsource
 ## Description
 Creates virtual documents from a CSV source.
 

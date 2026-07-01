@@ -1,8 +1,8 @@
 ---
 description: Sets or clears the SOLIDWORKS Toolbox flag on one or more files.
-title: TOOLBOX Command | PDMShell | SOLIDWORKS PDM
+title: toolbox Command | PDMShell | SOLIDWORKS PDM
 ---
-# TOOLBOX Command
+# toolbox
 ## Description
 Updates or filters files using the Toolbox flag.
 

@@ -1,10 +1,10 @@
 ---
 description: Sets the revision of SOLIDWORKS PDM files from a CSV source containing file IDs and revision values.
-title: SETRECISIONFROMSOURCE Command | PDMShell | SOLIDWORKS PDM
+title: setrevisionfromsource Command | PDMShell | SOLIDWORKS PDM
 ---
-# SETRECISIONFROMSOURCE Command
+# setrevisionfromsource
 ## Description
-The `SetRecisionFromSourceCommand` allows you to batch-update the **PDM-managed revision** for multiple files by reading values from a CSV input source.
+The `setrevisionfromsource` command allows you to batch-update the **PDM-managed revision** for multiple files by reading values from a CSV input source.
 
 The **source CSV** must contain at minimum:
 
@@ -12,7 +12,7 @@ The **source CSV** must contain at minimum:
 - **Value** ? the revision value to apply  
 
 This command applies the revision exactly as supplied in the CSV just like in the [set revision command](SETREVISION.md).  
-It does  **evaluate** `%nextrevision%`, `%previousrevision%`,`%initial%`, or bracketed variables—only literal revision values.
+It does  **evaluate** `%nextrevision%`, `%previousrevision%`,`%initial%`, or bracketed variablesï¿½only literal revision values.
 
 You may optionally output a **results CSV** that includes success/failure information for each processed row.
 
@@ -24,8 +24,8 @@ setrevisionfromsource -source -csv
 - `source`  
   Path to the CSV file that contains the input dataset.  
   Required columns:  
-  - `ID` — the file’s PDM ID inside the vault.  
-  - `Revision` — the revision string supported by the revision scheme  
+  - `ID` ï¿½ the fileï¿½s PDM ID inside the vault.  
+  - `Revision` ï¿½ the revision string supported by the revision scheme  
 
 ![setrevisionfromsource](/images/setrevisionfromsource.png)
 

@@ -1,8 +1,8 @@
 ---
 description: Lists installed SOLIDWORKS and PDMShell version information.
-title: VERSION Command | PDMShell | SOLIDWORKS PDM
+title: version Command | PDMShell | SOLIDWORKS PDM
 ---
-# VERSION Command
+# version
 ## Description
 Displays version information for PDMShell, installed SOLIDWORKS, or the PDM client.
 
@@ -23,7 +23,7 @@ SOLIDWORKS - List versions of installed SOLIDWORKS
 ## Examples
 ```bash
 version -solidworks
-# lists all the installed solidworks versions
+# version
 ```
 
 ## Availability

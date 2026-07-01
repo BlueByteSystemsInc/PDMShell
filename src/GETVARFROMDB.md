@@ -1,8 +1,8 @@
 ---
 description: Gets the value of a variable for a specified file or folder directly from the database.
-title: GETVARFROMDB Command | PDMShell | SOLIDWORKS PDM
+title: getvarfromdb Command | PDMShell | SOLIDWORKS PDM
 ---
-# GETVARFROMDB Command
+# getvarfromdb
 ## Description
 Gets the value of a variable for a specified file or folder directly from the database.
 

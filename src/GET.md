@@ -1,8 +1,8 @@
 ---
 description: Gets a file version from the vault into the local cache.
-title: Get Command | PDMShell | SOLIDWORKS PDM
+title: get Command | PDMShell | SOLIDWORKS PDM
 ---
-# GET Command
+# get
 ## Description
 Retrieves a specified version of a file or files (via search).
 

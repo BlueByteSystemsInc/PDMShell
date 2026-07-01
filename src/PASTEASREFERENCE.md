@@ -1,8 +1,8 @@
 ---
 description: Appends one custom reference file to a source file or to files found by search.
-title: PASTEASREFERENCE Command | PDMShell | SOLIDWORKS PDM
+title: pasteasreference Command | PDMShell | SOLIDWORKS PDM
 ---
-# PASTEASREFERENCE Command
+# pasteasreference
 ## Description
 Appends one custom reference file to a source file or to files found by search in SOLIDWORKS PDM.
 
@@ -35,13 +35,13 @@ pasteasreference -filePath reference_file (-source source_file | -search search_
 
 ## Examples
 ```bash
-# Append Part.sldprt as a custom reference to one assembly
+# pasteasreference
 pasteasreference -filePath "Part.sldprt" -source "Assembly.sldasm"
 
-# Append Part.sldprt as a custom reference to all matching assemblies in the current folder
+# pasteasreference
 pasteasreference -filePath "Part.sldprt" -search "Name=%.sldasm"
 
-# Append Part.sldprt as a custom reference to matching assemblies in the current folder and subfolders
+# pasteasreference
 pasteasreference -filePath "Part.sldprt" -search "Name=%.sldasm" -recursive
 ```
 

@@ -1,8 +1,8 @@
 ---
 description: Prints the history of a file.
-title: HISTORY Command | PDMShell | SOLIDWORKS PDM
+title: history Command | PDMShell | SOLIDWORKS PDM
 ---
-# HISTORY Command
+# history
 ## Description
 Prints the history of a file.
 
@@ -18,14 +18,14 @@ history [-search|-filePath]
 ## Examples
 ```bash
 history -f "file1.sldprt"
-# lists the history of file1
+# history
 ```
 ## Remarks
 - The search parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
 
 
 ## PREVIEW:
-![History Command](../images/history.png)
+![history command](../images/history.png)
 
 ## Availability
 Available since PDMShell 2.0.0.

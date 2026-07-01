@@ -1,8 +1,8 @@
 ---
-title: TRANSITION Command | PDMShell | SOLIDWORKS PDM
+title: transition Command | PDMShell | SOLIDWORKS PDM
 description: Changes the workflow state for one file, files found by search, or files listed in a CSV source.
 ---
-# TRANSITION Command
+# transition
 ## Description
 The `transition` command changes SOLIDWORKS PDM files from one workflow state to another using a specified transition.
 
@@ -14,11 +14,11 @@ This command supports three modes:
 
 ## Syntax
 ```bash
-# single file
+# transition
 transition -transitionidorname <id-or-name> -filePath <path>
-# search and transition all results
+# transition
 transition -transitionidorname <id-or-name> -search <pattern> [-recursive]
-# transition all files in the csv via the specified transition
+# transition
 transition -source <csv> -password <password> [-batch <size>] [-comment <text>]
 ```
 
@@ -92,7 +92,7 @@ Searches for files matching a pattern in the current directory.
 
 Example:
 ```bash
-# find all parts in the current directory
+# transition
 -search %.sldprt
 ```
 ---
@@ -109,7 +109,7 @@ Specifies a single file to transition.
 
 Example:
 ```bash
-# part is found the current directory
+# transition
 -filePath part.sldprt
 ```
 ---

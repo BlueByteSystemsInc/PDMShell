@@ -1,8 +1,8 @@
 ---
 description: Runs a PDM task on one file or files found by search.
-title: RUNTASK Command | PDMShell | SOLIDWORKS PDM
+title: runtask Command | PDMShell | SOLIDWORKS PDM
 ---
-# RUNTASK Command
+# runtask
 ## Description
 The `runtask` command allows you to execute a PDM task on a specific file or via search in the PDM vault. 
 
@@ -22,7 +22,7 @@ The command requires the following parameters:
 
 ## Examples
 ```bash
-# run PrintPDF task on an assembly
+# runtask
  taskrun -TaskName "PrintPDF" -filePath "Assembly.sldasm"  
  ```
 

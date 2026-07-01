@@ -1,8 +1,8 @@
 ---
 description: Displays information about the specified file.
-title: PRINT Command | PDMShell | SOLIDWORKS PDM
+title: print Command | PDMShell | SOLIDWORKS PDM
 ---
-# PRINT Command
+# print
 ## Description
 Displays information about the specified file.
 

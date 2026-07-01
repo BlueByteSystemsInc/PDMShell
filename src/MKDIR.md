@@ -1,8 +1,8 @@
 ---
 description: Creates a new vault folder.
-title: MKDIR Command | PDMShell | SOLIDWORKS PDM
+title: mkdir Command | PDMShell | SOLIDWORKS PDM
 ---
-# MKDIR Command
+# mkdir
 ## Description
 Creates a new folder.
 
@@ -19,7 +19,7 @@ mkdir -directory
 ## Examples
 ```bash
 mkdir -directory "NewFolder"
-# Creates a new folder called NewFolder
+# mkdir
 ```
 ## Remarks
 - To get the new folder to show up in the auto-complete, please use the command `cd -refresh`.

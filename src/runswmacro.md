@@ -1,8 +1,8 @@
 ---
 description: Runs a SOLIDWORKS macro on files found by search.
-title: RUNSWMACRO Command | PDMShell | SOLIDWORKS PDM
+title: runswmacro Command | PDMShell | SOLIDWORKS PDM
 ---
-# RUNSWMACRO Command
+# runswmacro
 ## Description
 The `runswmacro` command allows you to execute a SOLIDWORKS macro on a specific file or on multiple files found via search in the PDM vault. This is useful for automating repetitive tasks or applying custom logic to many files.
 
@@ -288,7 +288,7 @@ public class MyMacro : IPDMShellSOLIDWORKSMacro
 
 ### Running the Macro
 ```bash
-# Run the DLL macro on all parts in the current directory
+# runswmacro
 runswmacro -filePath "Macros/MyMacro.dll" -search "%.sldprt" -timeout 12000
 ```
 
@@ -297,7 +297,7 @@ runswmacro -filePath "Macros/MyMacro.dll" -search "%.sldprt" -timeout 12000
 
 ## Examples
 ```bash
-# run batch export macro on all part in the current directory
+# runswmacro
  runswmacro -filePath "Macros/BatchExport.swp" -search "%.sldprt" 
  ```
 
@@ -305,7 +305,7 @@ runswmacro -filePath "Macros/MyMacro.dll" -search "%.sldprt" -timeout 12000
 > You can use the token `edit` in the search to force a check out and a check in of the search results. The check out uses the default checkout settings specified in the reference dialog of your PDM user settings (ie: this might check out the file itself and its references too). The check in will only check in the document itself (**not the references**).
 
 ```bash
-# run batch export macro on all part in the current directory (does a checkout and check in of the parts)
+# runswmacro
  runswmacro -filePath "Macros/BatchExport.swp" -search "Name=%.sldprt;Edit" 
  ```
 

@@ -1,8 +1,8 @@
 ---
 description: Gets the value of a variable for a specified file or folder.
-title: GETVAR Command | PDMShell | SOLIDWORKS PDM
+title: getvar Command | PDMShell | SOLIDWORKS PDM
 ---
-# GETVAR Command
+# getvar
 ## Description
 Gets the value of a variable for a specified file or folder.
 

@@ -1,8 +1,8 @@
-﻿---
+---
 description: Store and reuse session global variables in PDMShell scripts.
 title: Global Variables | PDMShell | SOLIDWORKS PDM
 ---
-# Global Variables
+# globalvariables
 
 Global variables store temporary values for the current PDMShell session or script run. They are not SOLIDWORKS PDM datacard variables and they are not written to the vault.
 

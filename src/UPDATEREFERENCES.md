@@ -1,8 +1,8 @@
 ---
 description: Updates file references inside the SOLIDWORKS PDM vault using the Raw Reference Manager.
-title: UPDATEREFERENCES Command | PDMShell | SOLIDWORKS PDM
+title: updatereferences Command | PDMShell | SOLIDWORKS PDM
 ---
-# UPDATEREFERENCES Command
+# updatereferences
 ## Description
 Updates file references inside the SOLIDWORKS PDM vault.
 

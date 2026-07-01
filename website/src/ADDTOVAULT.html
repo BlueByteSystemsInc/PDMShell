@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>ADDTOVAULT Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>addtovault Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="ADDTOVAULT Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="addtovault Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Adds one or more files from disk to the SOLIDWORKS PDM vault.">
       <link rel="icon" href="../favicon.ico">
@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="">
-<h1 id="addtovault-command">ADDTOVAULT Command</h1>
+<h1 id="addtovault">addtovault</h1>
 
 <h2 id="description">Description</h2>
 <p>The <code>addtovault</code> command adds one or more files from disk to the SOLIDWORKS PDM vault. It supports single files, folders, and CSV mapping files. Additional options allow batch processing, filtering, ignoring existing files, updating references, and exporting results.</p>
@@ -211,7 +211,7 @@ Prevents duplicate additions and overwriting.</p>
 <p>Adds a label to the migrated files. This is a great option to mark the added files immediately.</p>
 <pre><code class="lang-bash">#Add files from a map (skip first 10 and only process 3) and add a label migration name and value 
 addtovault -map &quot;C:\export\map.csv&quot; -skip 10 -count 3 -label &quot;Migration;Migration&quot;
-# finds the added files (parts)
+# addtovault
 search -search &quot;Name=%.sldprt;Label=Migration;Recursive=true&quot;
 </code></pre>
 <h2 id="label"><img src="/images/label.png" alt="label"></h2>

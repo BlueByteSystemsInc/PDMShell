@@ -1,8 +1,8 @@
 ---
 description: Adds one or more files from disk to the SOLIDWORKS PDM vault.
-title: ADDTOVAULT Command | PDMShell | SOLIDWORKS PDM
+title: addtovault Command | PDMShell | SOLIDWORKS PDM
 ---
-# ADDTOVAULT Command
+# addtovault
 ## Description
 The `addtovault` command adds one or more files from disk to the SOLIDWORKS PDM vault. It supports single files, folders, and CSV mapping files. Additional options allow batch processing, filtering, ignoring existing files, updating references, and exporting results.
 
@@ -168,7 +168,7 @@ Adds a label to the migrated files. This is a great option to mark the added fil
 ```bash
 #Add files from a map (skip first 10 and only process 3) and add a label migration name and value 
 addtovault -map "C:\export\map.csv" -skip 10 -count 3 -label "Migration;Migration"
-# finds the added files (parts)
+# addtovault
 search -search "Name=%.sldprt;Label=Migration;Recursive=true"
 ```
 ![label](/images/label.png)

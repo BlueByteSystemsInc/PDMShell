@@ -1,8 +1,8 @@
 ---
 description: Waits until file, folder, process, variable, placeholder, or expression conditions become true.
-title: UNTIL Command | PDMShell | SOLIDWORKS PDM
+title: until Command | PDMShell | SOLIDWORKS PDM
 ---
-# UNTIL Command
+# until
 ## Description
 Waits until the supplied condition expression evaluates to true, or until the timeout is reached.
 

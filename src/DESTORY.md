@@ -1,8 +1,8 @@
 ---
 description: Permanently destroys deleted files in a folder.
-title: Destroy Command | PDMShell | SOLIDWORKS PDM
+title: destory Command | PDMShell | SOLIDWORKS PDM
 ---
-# DESTROY Command
+# destory
 ## Description
 The `destroy` command permanently deletes files that have already been marked as deleted in a specified directory. This command supports recursive deletion and filtering by date.
 
@@ -19,7 +19,7 @@ destroy -directory -recursive -date
 ## Examples
 ```bash
 destroy -directory "C:\Projects\Project"
-# destroys all deleted files in project folder
+# destory
 ```
 
 ## Remarks

@@ -1,10 +1,10 @@
 ---
 description: Exports a bill of materials for a file or files found by search.
-title: BOM Command | PDMShell | SOLIDWORKS PDM
+title: bom Command | PDMShell | SOLIDWORKS PDM
 ---
-# BOM Command
+# bom
 ## Description
-The `BOMCommand` allows you to extract a Bill of Materials from a SOLIDWORKS file inside the PDM vault and export it to a CSV file.  
+The `bom` command allows you to extract a bill of materials from a SOLIDWORKS file inside the PDM vault and export it to a CSV file.  
 This command supports configuration evaluation using `$configuration`, allows specifying `configNames`, and supports selecting a `layout` from all available BOM layouts.
 
 ## Syntax
@@ -25,7 +25,7 @@ bom -filePath -name -directory -search -recursive -configNames -layout
 
 
 - `search`  
-  Search query used to find files in the current directory and run the BOM command on each result.
+  Search query used to find files in the current directory and run the `bom` command on each result.
 
 - `recursive`  
   When used with [`search`](SEARCH.md), includes files in subfolders.

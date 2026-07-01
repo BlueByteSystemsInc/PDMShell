@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>PASTEASSHARED Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>pasteasshared Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="PASTEASSHARED Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="pasteasshared Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Shares one SOLIDWORKS PDM file or files found by search into another vault folder.">
       <link rel="icon" href="../favicon.ico">
@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="">
-<h1 id="pasteasshared-command">PASTEASSHARED Command</h1>
+<h1 id="pasteasshared">pasteasshared</h1>
 
 <h2 id="description">Description</h2>
 <p>Shares one SOLIDWORKS PDM file, or files found by search, into another vault folder.</p>
@@ -115,13 +115,13 @@
 <li>Skips duplicate search results before attempting to share.</li>
 </ul>
 <h2 id="examples">Examples</h2>
-<pre><code class="lang-bash"># Share one part into another vault folder
+<pre><code class="lang-bash"># pasteasshared
 pasteasshared -filePath &quot;Part.sldprt&quot; -directory &quot;Shared Parts&quot;
 
-# Share all matching parts from the current folder into another vault folder
+# pasteasshared
 pasteasshared -search &quot;Name=%.sldprt&quot; -directory &quot;Shared Parts&quot;
 
-# Share all matching parts from the current folder and subfolders
+# pasteasshared
 pasteasshared -search &quot;Name=%.sldprt&quot; -directory &quot;Shared Parts&quot; -recursive
 </code></pre>
 <h2 id="remarks">Remarks</h2>

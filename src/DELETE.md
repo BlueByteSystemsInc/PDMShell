@@ -1,8 +1,8 @@
 ---
 description: Deletes one file, one folder, or multiple files found by search.
-title: DELETE Command | PDMShell | SOLIDWORKS PDM
+title: delete Command | PDMShell | SOLIDWORKS PDM
 ---
-# DELETE Command
+# delete
 ## Description
 The `delete` command deletes one file, one folder, or multiple files found by search. It supports target selection by file path, directory path, search query, or ID.
 
@@ -43,7 +43,7 @@ delete [-filePath|-id] -directory -search -recursive -list -csv -destroy
 Delete files matching a search query:
 ```bash
 delete -search "%.sldprt"
-# delete all parts in the current directory
+# delete
 ```
 ## Remarks
 - The delete command requires at least one of the following parameters: `filePath`, [`dir`](DIR.md), [`search`](SEARCH.md), or `id`.

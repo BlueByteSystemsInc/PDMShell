@@ -1,8 +1,8 @@
 ---
 description: Starts a program, tool, or supported application.
-title: START Command | PDMShell | SOLIDWORKS PDM
+title: start Command | PDMShell | SOLIDWORKS PDM
 ---
-# START Command
+# start
 ## Description
 The `start` command launches programs, tools, or supported applications. It supports launching SOLIDWORKS, the PDM administration tool, Notepad, Windows Explorer, and other custom programs. It can also open the SOLIDWORKS API help file or the current folder in Explorer.
 
@@ -29,7 +29,7 @@ start -process -swversion
 
 ## Examples
    ```bash
-# Launch the PDM administration tool.  
+# start
    start admin
    ```
 

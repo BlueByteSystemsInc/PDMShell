@@ -1,8 +1,8 @@
 ---
 description: Restarts the PDMShell session.
-title: REBOOT Command | PDMShell | SOLIDWORKS PDM
+title: reboot Command | PDMShell | SOLIDWORKS PDM
 ---
-# REBOOT Command
+# reboot
 ## Description
 The `reboot` command restarts the PDMShell session.
 

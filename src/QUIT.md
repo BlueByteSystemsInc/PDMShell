@@ -1,8 +1,8 @@
 ---
 description: Exits PDMShell.
-title: QUIT Command | PDMShell | SOLIDWORKS PDM
+title: quit Command | PDMShell | SOLIDWORKS PDM
 ---
-# QUIT Command
+# quit
 ## Description
 Quits the application.
 

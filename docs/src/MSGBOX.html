@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>MSGBOX Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>msgbox Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="MSGBOX Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="msgbox Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Shows a Windows message box from a PDMShell command or script.">
       <link rel="icon" href="../favicon.ico">
@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="">
-<h1 id="msgbox-command">MSGBOX Command</h1>
+<h1 id="msgbox">msgbox</h1>
 
 <h2 id="description">Description</h2>
 <p>The <code>msgbox</code> command shows a Windows message box with the specified text.</p>
@@ -119,7 +119,7 @@
 <p>For example, after logging in to a vault, <code>$vaultName</code> resolves to the active vault name:</p>
 <pre><code class="lang-bash">msgbox -value &quot;vaultName = $vaultName&quot; -icon &quot;Information&quot;
 </code></pre>
-<p><img src="../images/msgbox-placeholders.png" alt="MSGBOX command showing the evaluated vaultName placeholder"></p>
+<p><img src="../images/msgbox-placeholders.png" alt="msgbox command showing the evaluated vaultName placeholder"></p>
 <p>Common session placeholders include <code>$vaultName</code>, <code>$date</code>, <code>$time</code>, <code>$guid</code>, and <code>$tempFolder</code>.</p>
 <h2 id="examples">Examples</h2>
 <pre><code class="lang-bash">msgbox -value &quot;Hello from PDMShell&quot;

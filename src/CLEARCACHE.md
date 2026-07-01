@@ -1,8 +1,8 @@
 ---
 description: Clears the local cache of a folder or many files.
-title: CLEARCACHE Command | PDMShell | SOLIDWORKS PDM
+title: clearcache Command | PDMShell | SOLIDWORKS PDM
 ---
-# CLEARCACHE Command
+# clearcache
 ## Description
 Clears the local cache of a folder or many files.
 
@@ -20,13 +20,13 @@ clearcache -directory -search -toolboxflag -source
 ## Examples
 ```bash
 clearcache -search "*.sldprt"
-# Clears the cache of all `.sldprt` files in the current directory.
+# clearcache
 
 clearcache -directory project -toolboxflag
-# Clears the directory called project whiling ignore toolbox files.
+# clearcache
 
 clearcache -source "source.csv"
-# Clears the cache for the specified source.
+# clearcache
 ```
 
 ## Availability

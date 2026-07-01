@@ -1,8 +1,8 @@
 ---
 description: Searches the vault for files listed in a CSV source and reports whether they exist.
-title: SEARCHFROMSOURCE Command | PDMShell | SOLIDWORKS PDM
+title: searchfromsource Command | PDMShell | SOLIDWORKS PDM
 ---
-# SEARCHFROMSOURCE Command
+# searchfromsource
 ## Description
 The `searchfromsource` command reads a CSV source file and uses the first column (ignoring the header) as input items to search for in the vault. 
 

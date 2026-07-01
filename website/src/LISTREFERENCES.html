@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>LISTREFERENCES Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>listreferences Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="LISTREFERENCES Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="listreferences Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
       <meta name="description" content="Lists file references inside the SOLIDWORKS PDM vault using the Raw Reference Manager.">
       <link rel="icon" href="../favicon.ico">
@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="">
-<h1 id="listreferences-command">LISTREFERENCES Command</h1>
+<h1 id="listreferences">listreferences</h1>
 
 <h2 id="description">Description</h2>
 <p>Lists file references inside the SOLIDWORKS PDM vault.</p>
@@ -117,11 +117,11 @@ ReferenceID
 ReferenceFileID
 </code></pre>
 <h2 id="examples">Examples</h2>
-<pre><code class="lang-bash"># List references for a single assembly
+<pre><code class="lang-bash"># listreferences
 listreferences -filepath speaker.sldasm
-# List references for all assemblies in the current folder
+# listreferences
 listreferences -search %.sldasm
-# List references recursively and export results to CSV
+# listreferences
 listreferences -search %.sldasm -recursive true -csv references.csv
 </code></pre>
 <h2 id="remarks">Remarks</h2>

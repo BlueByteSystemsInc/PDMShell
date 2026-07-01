@@ -1,8 +1,8 @@
 ---
 description: Undoes a checkout operation.
-title: UNDOCHECKOUT Command | PDMShell | SOLIDWORKS PDM
+title: undocheckout Command | PDMShell | SOLIDWORKS PDM
 ---
-# UNDOCHECKOUT Command
+# undocheckout
 ## Description
 Undoes a checkout operation.
 

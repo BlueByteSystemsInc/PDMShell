@@ -1,8 +1,8 @@
 ---
 description: Checks out one file or multiple files found by search.
-title: CHECKOUT Command | PDMShell | SOLIDWORKS PDM
+title: checkout Command | PDMShell | SOLIDWORKS PDM
 ---
-# CHECKOUT Command
+# checkout
 ## Description
 Performs a check out operation on a specified file or many files.
 
