@@ -18,6 +18,8 @@
   --pdmshell-code-bg: #f5f5f5;
   --pdmshell-note-bg: #eff6fc;
   --pdmshell-note-border: #8bb8e8;
+  --pdmshell-summary-bg: #e7f1ff;
+  --pdmshell-summary-border: #0f6cbd;
   --pdmshell-warning-bg: #fff4ce;
   --pdmshell-warning-border: #f3c243;
   --pdmshell-danger-bg: #fde7e9;
@@ -43,6 +45,8 @@
   --pdmshell-code-bg: #252525;
   --pdmshell-note-bg: #082338;
   --pdmshell-note-border: #2d7d9a;
+  --pdmshell-summary-bg: #0f2438;
+  --pdmshell-summary-border: #60cdff;
   --pdmshell-warning-bg: #332b00;
   --pdmshell-warning-border: #c19c00;
   --pdmshell-danger-bg: #3b0509;
@@ -305,6 +309,23 @@ article pre code {
   border-color: var(--pdmshell-note-border);
   background: var(--pdmshell-note-bg);
   color: var(--pdmshell-text);
+}
+
+.alert-summary {
+  position: relative;
+  border-color: var(--pdmshell-summary-border) !important;
+  background-color: var(--pdmshell-summary-bg) !important;
+  color: var(--pdmshell-text) !important;
+}
+
+.alert-summary h5 {
+  color: var(--pdmshell-summary-border);
+}
+
+.alert-summary::before {
+  display: inline-block;
+  margin-right: 8px;
+  content: "\2728";
 }
 
 .alert-warning {

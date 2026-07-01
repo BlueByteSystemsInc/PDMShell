@@ -15,21 +15,53 @@
     href: FREEVSPREMIUM.md
   - name: FAQ
     href: faq.md
-- name: Visual Code Editor
-  href: visual-code-editor-4.md
-- name: Scripting
+- name: Build Scripts
   expanded: true
   items:
   - name: Scripting overview
     href: scripting.md
   - name: Run a PDMShell script
     href: RUNSCRIPT.md
+  - name: Visual Code Editor
+    href: visual-code-editor-4.md
+    items:
+    - name: Build Visual Workflows
+      href: visual-editor-build-workflows.md
+    - name: Edit Command Settings
+      href: visual-editor-command-settings.md
+    - name: Run Visual Workflows
+      href: visual-editor-run-options.md
+    - name: Save And Open Visual Scripts
+      href: visual-editor-save-open.md
+    - name: IF Statements and Conditions
+      href: if-statements.md
+  - name: Placeholders
+    href: EVAL.md
+  - name: Expression Evaluator
+    href: expression-evaluator.md
+  - name: Conditions
+    href: conditions.md
+  - name: Global Variables
+    href: GLOBALVARIABLES.md
   - name: Short format for parameters
     href: parameter_short_format.md
   - name: Escaping characters
     href: escapingquotes.md
   - name: Single instance vs multi instance
     href: instances.md
+- name: Search And Selection
+  expanded: true
+  items:
+  - name: Advanced Search Overview
+    href: advancedsearch.md
+  - name: Search Tokens
+    href: search-tokens.md
+  - name: Variable Search
+    href: search-variables.md
+  - name: Result Shaping
+    href: search-result-shaping.md
+  - name: Search Favorites
+    href: search-favorites.md
 - name: PDMShell Add-in
   expanded: true
   items:
@@ -62,9 +94,13 @@
     href: dispatch.md
   - name: Workflow transitions
     href: scriptsfromtransition.md
-- name: Script Templates
+- name: Examples And Templates
   expanded: true
   items:
+  - name: SQL Examples
+    items:
+    - name: Find All Part Numbers And Descriptions
+      href: ALLPARTNUMBERSANDESCRIPTIONS.md
   - name: Rebuild SOLIDWORKS Document
     href: scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md
   - name: Change Sheet Format
@@ -73,27 +109,6 @@
     href: scripts/CHECKINALLFILES/CHECKINALLFILES.md
   - name: Rename Before Dash
     href: scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md
-- name: Advanced Topics
-  expanded: true
-  items:
-  - name: Placeholders
-    href: EVAL.md
-  - name: Search
-    items:
-    - name: Advanced Search Overview
-      href: advancedsearch.md
-    - name: Search Tokens
-      href: search-tokens.md
-    - name: Variable Search
-      href: search-variables.md
-    - name: Result Shaping
-      href: search-result-shaping.md
-    - name: Search Favorites
-      href: search-favorites.md
-  - name: SQL Examples
-    items:
-    - name: Find All Part Numbers And Descriptions
-      href: ALLPARTNUMBERSANDESCRIPTIONS.md
 - name: Command Reference
   href: COMMANDS.md
   expanded: true

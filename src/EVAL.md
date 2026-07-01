@@ -129,11 +129,7 @@ When a full command value is wrapped in double quotes, escape quotes inside func
 
 ## Expression Evaluator
 
-The PDMShell toolbar includes an Expression Evaluator tool for testing placeholder expressions before you run a command, script, task, or rename rule. It is designed as a safe preview surface: you choose a file or folder context, type the same expression you would place in a command parameter, and PDMShell shows the evaluated output without renaming files, changing variables, checking files in, or writing anything back to the vault.
-
-Use the formula icon in the toolbar to open the evaluator. Browse to a PDM file or folder, choose a configuration when the expression depends on configuration-specific variables, and optionally choose a variable to populate `$value` with the current value of that variable. The expression box supports grouped autocomplete for file and folder placeholders, vault and user placeholders, date and time placeholders, string functions, common examples, and PDM variables. This makes it easier to test expressions such as `$fileNameWithoutExtension`, `[Description]`, `${before($fileNameWithoutExtension, "-")}`, `${replace($value, "DRAFT", "RELEASED")}`, or `${regex($fileNameWithoutExtension, "^([^-]+)-", 1)}` before using them in commands like `rename`, `setvar`, `bom`, or `export`.
-
-The evaluator uses the same placeholder and string-function engine as command execution, so it is the recommended way to confirm what a dynamic value will become. If no file or folder is selected, PDMShell can still evaluate session-level placeholders such as date, time, GUID, vault, user, and global values, but file-specific placeholders and PDM variables need a selected PDM object to return meaningful results.
+Use the [Expression Evaluator](expression-evaluator.md) to preview placeholders, PDM variables, and string functions before running a command or script.
 
 ---
 

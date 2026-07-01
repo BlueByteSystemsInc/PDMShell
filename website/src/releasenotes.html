@@ -93,6 +93,10 @@
 <p>To update PDMShell properly, download the latest version, uninstall PDMShell and
 then install the latest version. Do not update installed version.</p>
 </div>
+<h2 id="4017-2026-06-30">4.0.17 (2026-06-30)</h2>
+<ul>
+<li>🎉 Added support for <a href="if-statements.html">IF statements and conditions</a> in the Visual Code Editor, including <code>Conditions Met</code> and <code>Else</code> branches during script execution.</li>
+</ul>
 <h2 id="4016-2026-06-30">4.0.16 (2026-06-30)</h2>
 <ul>
 <li>Improved <a href="RUNTEMPLATE.html"><code>runtemplate</code></a> <code>-silent</code> confirmation so template dialogs can be confirmed with <code>Create</code> or <code>OK</code> buttons.</li>
@@ -118,14 +122,14 @@ then install the latest version. Do not update installed version.</p>
 </ul>
 <h2 id="4011-2026-06-21">4.0.11 (2026-06-21)</h2>
 <ul>
-<li>Added documentation for the <a href="EVAL.html">Expression Evaluator</a>, including how to safely preview placeholder expressions against a selected PDM file or folder, use <code>$value</code>, choose configurations, and test string functions before running commands or scripts.</li>
+<li>Added documentation for the <a href="expression-evaluator.html">Expression Evaluator</a>, including how to safely preview placeholder expressions against a selected PDM file or folder, use <code>$value</code>, choose configurations, and test string functions before running commands or scripts.</li>
 <li>Added an on-demand <a href="TASKSCRIPT.html">PDMShell add-in</a> script demo to the <a href="addin/command-menu.html">Command menu scripts</a> documentation, showing how users can launch a rename script from SOLIDWORKS PDM without creating a PDM Task.</li>
 <li>Updated the visual editor metadata for <a href="MSGBOX.html"><code>msgbox</code></a> so the <code>icon</code> parameter appears as a single-select combo box with the supported message box icons.</li>
 </ul>
 <h2 id="4010-2026-07-18">4.0.10 (2026-07-18)</h2>
 <ul>
 <li>Added logged-in PDM user profile placeholders: <code>$username.firstName</code>, <code>$username.lastName</code>, <code>$username.FullName</code>, and <code>$username.email</code>.</li>
-<li>Added a dark themed <a href="EVAL.html">Expression Evaluator</a> for testing placeholder expressions against a selected PDM file or folder before running a command.</li>
+<li>Added a dark themed <a href="expression-evaluator.html">Expression Evaluator</a> for testing placeholder expressions against a selected PDM file or folder before running a command.</li>
 </ul>
 <h2 id="409-2026-07-18">4.0.9 (2026-07-18)</h2>
 <ul>
@@ -170,7 +174,7 @@ then install the latest version. Do not update installed version.</p>
 <h2 id="404-2026-06-10">4.0.4 (2026-06-10)</h2>
 <ul>
 <li>Added and documented the <a href="WAIT.html">wait</a> command.</li>
-<li>Added condition expression support for file/folder/process existence, variable and placeholder comparisons, grouped <code>and</code> / <code>or</code> logic, and arithmetic comparisons.</li>
+<li>Added <a href="conditions.html">condition expression</a> support for file/folder/process existence, variable and placeholder comparisons, grouped <code>and</code> / <code>or</code> logic, and arithmetic comparisons.</li>
 <li>Simplified the <a href="visual-code-editor-4.html">Visual Code Editor</a> wait conditions dialog to use a variable/placeholder field, operator dropdown, and conditional value field.</li>
 <li>Expanded wait-condition placeholder autocomplete and runtime placeholder evaluation.</li>
 <li>Fixed <a href="visual-code-editor-4.html">Visual Code Editor</a> command node icon rendering.</li>
@@ -190,13 +194,13 @@ then install the latest version. Do not update installed version.</p>
 <li>Improved <a href="HELP.html"><code>help</code></a> responsiveness by reducing repeated UI updates and command metadata lookups.</li>
 <li>Standardized command descriptions in PDMShell and aligned command documentation wording.</li>
 <li>Added and documented the <a href="WHEREUSEDTREE.html">whereusedtree</a> command for recursive where-used trees.</li>
-<li>Improved <a href="visual-code-editor-4.html">Visual Code Editor</a> script saving, loading, canvas state restoration, and unsaved-change handling.</li>
-<li>Added <a href="visual-code-editor-4.html">Visual Code Editor</a> canvas navigation controls such as zoom in, zoom out, and zoom to fit.</li>
+<li>Improved <a href="visual-code-editor-4.html">Visual Code Editor</a> script saving, loading, visual workflow restoration, and unsaved-change handling.</li>
+<li>Added <a href="visual-code-editor-4.html">Visual Code Editor</a> navigation controls such as zoom in, zoom out, and zoom to fit.</li>
 <li>Added the <a href="scripts/CHECKINALLFILES/CHECKINALLFILES.html">Check In All Files</a> script to the script library.</li>
 </ul>
 <h2 id="400-2026-06-01">4.0.0 (2026-06-01)</h2>
 <ul>
-<li>Added <a href="visual-code-editor-4.html">Visual Code Editor</a> for building PDMShell scripts as a workflow-style canvas.</li>
+<li>Added <a href="visual-code-editor-4.html">Visual Code Editor</a> for building PDMShell scripts as visual workflows.</li>
 <li>Added <code>Favorite=SEARCH FAVORITE</code> token to <a href="advancedsearch.html">advanced search</a>.</li>
 <li>Added <a href="RUNTEMPLATE.html">runtemplate</a> command to run SOLIDWORKS PDM templates from PDMShell.</li>
 <li>Added <a href="PASTEASREFERENCE.html">pasteasreference</a> command to replace custom references from a file or search result.</li>

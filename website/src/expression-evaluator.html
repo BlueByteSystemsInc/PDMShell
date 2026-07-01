@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Expression Evaluator | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Expression Evaluator | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      
+      <meta name="description" content="Use the PDMShell Expression Evaluator to preview placeholders, PDM variables, and string functions before running commands or scripts.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/expression-evaluator.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+            PDMShell
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="expression-evaluator">Expression Evaluator</h1>
+
+<p>The Expression Evaluator lets you test dynamic values before you run a command, script, task, or rename rule.</p>
+<p>Use it when you want to confirm what a placeholder, PDM variable, or string function will become at runtime.</p>
+<h2 id="what-it-helps-with">What It Helps With</h2>
+<p>The evaluator is useful for previewing:</p>
+<ul>
+<li>File and folder placeholders such as <code>$fileName</code>, <code>$filePath</code>, and <code>$folderPath</code>.</li>
+<li>Vault and user placeholders such as <code>$vaultName</code>, <code>$username</code>, and <code>$username.email</code>.</li>
+<li>Date and time placeholders such as <code>$date</code>, <code>$time</code>, <code>$yyyy</code>, and <code>$timestamp</code>.</li>
+<li>PDM variables such as <code>[Description]</code> or <code>$(Description.@)</code>.</li>
+<li>String functions such as <code>${before(...)}</code>, <code>${replace(...)}</code>, and <code>${regex(...)}</code>.</li>
+<li>Expressions that will later be used in commands like <a href="RENAME.html"><code>rename</code></a>, <a href="SETVAR.html"><code>setvar</code></a>, <a href="BOM.html"><code>bom</code></a>, <a href="export.html"><code>export</code></a>, <a href="MSGBOX.html"><code>msgbox</code></a>, or <a href="UNTIL.html"><code>until</code></a>.</li>
+</ul>
+<h2 id="why-use-it">Why Use It</h2>
+<p>The evaluator previews the result without changing files, setting variables, checking files in, renaming anything, or writing back to the vault.</p>
+<p>This makes it a safe place to test expressions before using them in production automation.</p>
+<h2 id="how-to-use-it">How To Use It</h2>
+<ol>
+<li>Open the Expression Evaluator from the PDMShell toolbar.</li>
+<li>Choose a PDM file or folder when the expression depends on file or folder context.</li>
+<li>Choose a configuration when the expression depends on configuration-specific variables.</li>
+<li>Choose a variable when you want <code>$value</code> to use the current value of that variable.</li>
+<li>Type or choose the expression to test.</li>
+<li>Review the evaluated result.</li>
+</ol>
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-text">$fileNameWithoutExtension
+[Description]
+${before($fileNameWithoutExtension, &quot;-&quot;)}
+${replace($value, &quot;DRAFT&quot;, &quot;RELEASED&quot;)}
+${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
+</code></pre>
+<h2 id="file-context">File Context</h2>
+<p>Some expressions need a selected PDM file or folder to return a meaningful result.</p>
+<p>Examples:</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Needs file or folder context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$fileName</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>$filePath</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>$folderPath</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>[Description]</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>$vaultName</code></td>
+<td>No, if logged in</td>
+</tr>
+<tr>
+<td><code>$date</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>$guid</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>$tempFolder</code></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-articles">Related Articles</h2>
+<ul>
+<li><a href="EVAL.html">Placeholders</a></li>
+<li><a href="conditions.html">Conditions</a></li>
+<li><a href="if-statements.html">IF Statements and Conditions</a></li>
+<li><a href="MSGBOX.html"><code>msgbox</code></a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/expression-evaluator.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <style>footer:has(.pdmshell-footer){margin-top:0!important;padding-top:0!important;border-top:0!important;box-shadow:none!important}.search-results:empty{display:none!important;margin:0!important;padding:0!important}main.container-xxl{margin-bottom:0!important}.pdmshell-footer{--footer-bg:#fafafa;--footer-panel:#ffffff;--footer-bottom:#f3f3f3;--footer-text:#4b5563;--footer-muted:#6b7280;--footer-heading:#6b7280;--footer-link:#2563eb;--footer-link-hover:#1d4ed8;--footer-border:#d6d6d6;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);background:var(--footer-bg);color:var(--footer-text);border-top:1px solid var(--footer-border);font-size:15px;margin-top:0}html[data-bs-theme='dark'] .pdmshell-footer{--footer-bg:#1f1f1f;--footer-panel:#202020;--footer-bottom:#050505;--footer-text:#f5f5f5;--footer-muted:#d0d0d0;--footer-heading:#fff;--footer-link:#fff;--footer-link-hover:#9cdcfe;--footer-border:#333}.pdmshell-footer-main{display:grid;grid-template-columns:minmax(220px,1fr) minmax(260px,1.1fr) minmax(260px,1.1fr) minmax(260px,1.2fr);gap:34px;max-width:1440px;margin:0 auto;padding:42px 40px 44px}.pdmshell-footer-logo-image{display:block;width:min(320px,100%);height:auto;margin:0 0 28px}.pdmshell-footer-column h2{margin:0 0 10px;color:var(--footer-heading);font-size:14px;font-weight:600;line-height:1.3;letter-spacing:.04em;text-transform:uppercase}.pdmshell-footer-column h2:not(:first-child){margin-top:24px}.pdmshell-footer-column p{margin:0 0 7px;color:var(--footer-text);line-height:1.45}.pdmshell-footer a{color:var(--footer-link);text-decoration:none}.pdmshell-footer a:hover,.pdmshell-footer a:focus{color:var(--footer-link-hover);text-decoration:underline}.pdmshell-footer-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin-top:10px;padding:10px 18px;border:1px solid var(--footer-border);border-radius:3px;background:#2563eb;color:#fff!important;font-weight:700;text-decoration:none!important}.pdmshell-footer-button:hover,.pdmshell-footer-button:focus{background:#1d4ed8}.pdmshell-footer-bottom{display:grid;justify-items:center;gap:10px;padding:34px 24px 28px;background:var(--footer-bottom);color:var(--footer-text);border-top:0;text-align:center}.pdmshell-footer-partner-logo{display:block;width:86px;height:auto;margin:0 0 8px}.pdmshell-footer-bottom nav{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 22px}.pdmshell-footer-bottom p{margin:0;color:var(--footer-muted)}@media(max-width:1199.98px){.pdmshell-footer-main{grid-template-columns:1fr;gap:26px;padding:34px 24px 38px}.pdmshell-footer-column h2{font-size:14px}.pdmshell-footer-logo-image{width:min(280px,100%)}}</style><div class='pdmshell-footer'><div class='pdmshell-footer-main'><section class='pdmshell-footer-column'><img class='pdmshell-footer-logo-image' src='https://docs.bluebyte.biz/images/large_logo.png' alt='Blue Byte Systems Inc.'><p>170-422 Richards St</p><p>Vancouver</p><p>BC V6B 2Z4, Canada</p><p>Business Hours: 9 AM PST - 5 PM PST</p><p>Phone: (778)-200-2012</p></section><section class='pdmshell-footer-column'><h2>PRODUCTS</h2><p><a href='https://pdmpublisher.com'>PDMPublisher (SOLIDWORKS 3D)</a></p><p><a href='https://pdmpublisher.com'>PDMPublisher (SOLIDWORKS Professional Only)</a></p><p><a href='https://pdmshell.com'>PDMShell (SOLIDWORKS Professional Only)</a></p><h2>HELP CENTER</h2><p><a href='https://pdmshell.com/src/index.html'>PDMShell documentation</a></p><p><a href='https://docs.bluebyte.biz'>Blue Byte product documentation</a></p></section><section class='pdmshell-footer-column'><h2>TECHNICAL SUPPORT</h2><p><a href='mailto:support@bluebytesystemsinc.zohodesk.com'>support@bluebytesystemsinc.zohodesk.com</a></p><p>PDMPublisher and PDMShell only.</p><h2>RESOURCES</h2><p><a href='https://pdmshell.com/src/howtoinstall.html'>Install or update</a></p><p><a href='https://pdmshell.com/src/COMMANDS.html'>Command reference</a></p><p><a href='https://pdmshell.com/src/releasenotes.html'>Release notes</a></p></section><section class='pdmshell-footer-column pdmshell-footer-newsletter'><h2>NEWSLETTER</h2><p>Get PDMShell release notes, product updates, and automation resources.</p><a class='pdmshell-footer-button' href='https://bluebyte.biz'>Visit Blue Byte Systems</a></section></div><div class='pdmshell-footer-bottom'><img class='pdmshell-footer-partner-logo' src='https://docs.bluebyte.biz/images/solution_partner_logo.png' alt='SOLIDWORKS Solution Partner'><nav aria-label='Company links'><a href='https://www.youtube.com/c/bluebyte'>YouTube</a><a href='https://www.linkedin.com/company/blue-byte-systems-inc'>LinkedIn</a><a href='https://github.com/BlueByteSystemsInc'>GitHub</a></nav><nav aria-label='Legal links'><a href='https://bluebyte.biz/terms-of-service'>Terms Of Service</a><a href='https://bluebyte.biz/terms-of-purchase'>Terms Of Purchase</a><a href='https://bluebyte.biz/privacy-policy'>Privacy Policy</a></nav><p>bluebytesystems.com, bluebyte.biz, pdmpublisher.com and pdmshell.com are domains of BLUE BYTE SYSTEMS INC.</p></div></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

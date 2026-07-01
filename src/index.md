@@ -282,11 +282,19 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
       </a>
       <a class="pdmshell-card" href="visual-code-editor-4.md">
         <h3>Visual Code Editor</h3>
-        <p>Build, validate, and reuse PDMShell workflows on a visual canvas.</p>
+        <p>Build, validate, and reuse PDMShell workflows visually.</p>
       </a>
       <a class="pdmshell-card" href="EVAL.md">
         <h3>Placeholders</h3>
         <p>Use file, folder, variable, date, global, and string function placeholders in scripts.</p>
+      </a>
+      <a class="pdmshell-card" href="expression-evaluator.md">
+        <h3>Expression Evaluator</h3>
+        <p>Test placeholders, PDM variables, and string functions before running automation.</p>
+      </a>
+      <a class="pdmshell-card" href="conditions.md">
+        <h3>Conditions</h3>
+        <p>Use the same condition syntax in IF statements, waiting, and add-in rules.</p>
       </a>
       <a class="pdmshell-card" href="advancedsearch.md">
         <h3>Advanced Search</h3>

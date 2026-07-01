@@ -133,7 +133,7 @@ PDMShell scripts can use placeholders for file names, folder paths, variables, d
 rename -filePath "$localPath" -value "$fileNameWithoutExtension-$yyyy$extension"
 ```
 
-See [Placeholders in PDMShell](EVAL.md).
+See [Placeholders in PDMShell](EVAL.md), [Expression Evaluator](expression-evaluator.md), and [Conditions](conditions.md).
 
 ## Case Sensitivity
 

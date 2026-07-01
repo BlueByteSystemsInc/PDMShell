@@ -38,6 +38,8 @@ until -search "Name=%.sldprt;Locked=true" -conditions "$(Description.@) contains
 ```
 
 ## Condition Format
+The `until` command uses the shared PDMShell condition syntax. See [Conditions](conditions.md) for the full condition reference.
+
 The visual editor builds conditions as three fields:
 
 | Field | Meaning | Example |

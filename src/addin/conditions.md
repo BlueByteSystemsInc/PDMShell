@@ -6,7 +6,7 @@ title: Conditions | PDMShell add-in
 
 The Conditions section controls whether a script should run for the current file, folder, or command context.
 
-Conditions use the same expression style as the PDMShell [until](../UNTIL.md) command.
+Conditions use the shared PDMShell condition syntax. See [Conditions](../conditions.md) for the full reference.
 
 ## Supported condition features
 
@@ -33,4 +33,5 @@ Enable Always show condition test message while building a script. This displays
 ## Related articles
 
 - [Placeholders and command context](placeholders.md)
+- [Conditions](../conditions.md)
 - [Testing and troubleshooting](troubleshooting.md)

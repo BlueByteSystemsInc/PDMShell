@@ -1,68 +1,147 @@
 ---
-description: Terms of Usage of PDMShell.
+description: End User License Agreement for PDMShell.
 title: EULA | PDMShell | SOLIDWORKS PDM
 ---
 # End User License Agreement
 
+Updated: June 30, 2026
+
+> [!Summary]
+> PDMShell is licensed for internal business use on licensed computers. SOLIDWORKS resellers, SOLIDWORKS partners, consultants, migration companies, automation providers, and other service providers need the appropriate Blue Byte Systems service provider or enterprise license before using PDMShell for customer work. You are responsible for testing scripts and automation before using them in production. Some features require license activation, and offline activation is available for restricted or air-gapped computers. This summary is provided for convenience only; the terms below control.
+
 ## 1. Introduction
 
-This End User License Agreement (**"EULA"**) is a legal agreement between you (**"Licensee"**) and **Blue Byte Systems Inc. ("Licensor")**, governing your use of the **PDMShell** software product and any associated documentation (collectively, the **"Software"**). By installing, copying, automating (including automatic or unattended use), or otherwise using the Software, you agree to be bound by the terms of this EULA. If you do not agree, do not install, copy, automate, or otherwise use the Software.
+This End User License Agreement ("EULA") is a legal agreement between you ("Licensee") and Blue Byte Systems Inc. ("Blue Byte Systems") governing your use of PDMShell, including the software, command-line tools, visual tools, updater, examples, scripts, documentation, and related materials (collectively, the "Software").
 
-## 2. License Grant
+By installing, copying, activating, updating, automating, or otherwise using the Software, you agree to be bound by this EULA. If you do not agree to this EULA, do not install, copy, activate, update, automate, or otherwise use the Software.
 
-Licensor grants Licensee a non-exclusive, non-transferable, non-sublicensable, limited right to use the Software on a single computer or device for Licensee’s own internal business purposes.
+## 2. Definitions
 
-**Special Licensing Requirement:**  
-Data migration companies, SOLIDWORKS resellers, or third-party providers utilizing or incorporating PDMShell into their commercial services or products **must** purchase a special licensing model from Blue Byte Systems Inc. Use without acquiring such licensing is strictly prohibited.
+"Licensee" means the person, company, organization, or legal entity that installs, activates, or uses the Software.
 
-## 3. Restrictions
+"Internal business use" means use of the Software for Licensee's own SOLIDWORKS PDM environment, files, vaults, workflows, administration, migration, reporting, scripting, or automation.
+
+"Service provider use" means use of the Software to provide paid or commercial services to a third party, including consulting, migration, implementation, automation development, support, managed services, training, or resale.
+
+## 3. License Grant
+
+Blue Byte Systems grants Licensee a limited, non-exclusive, non-transferable, non-sublicensable license to install and use the Software for Licensee's internal business use, subject to this EULA and the license purchased or otherwise provided by Blue Byte Systems.
+
+Unless a different license model is provided in writing by Blue Byte Systems, each license is limited to the licensed computer, machine, virtual machine, or environment for which it is activated.
+
+## 4. Service Provider Licensing
+
+Data migration companies, SOLIDWORKS resellers, consultants, automation providers, managed service providers, and other third-party service providers must obtain the appropriate service provider, commercial, or enterprise license from Blue Byte Systems before using PDMShell to deliver services to customers or third parties.
+
+Using PDMShell as part of a paid service, customer migration, implementation project, automation package, resale offering, or third-party deliverable without the appropriate license is not permitted.
+
+## 5. Restrictions
 
 Licensee agrees not to, and shall not permit others to:
 
-- Resell, distribute, or sublicense the Software to any third party.
-- Modify, adapt, translate, or create derivative works of the Software.
-- Reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code of the Software.
-- Rent, lease, lend, or otherwise transfer the Software to any third party.
-- Use the Software for any illegal purpose or in violation of applicable law.
+- Resell, distribute, sublicense, lend, lease, rent, or transfer the Software to any third party.
+- Modify, adapt, translate, or create derivative works of the Software, except for scripts or configuration files created by Licensee for permitted use.
+- Reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code of the Software, except where such restriction is prohibited by applicable law.
+- Remove, alter, or obscure copyright notices, license notices, product identification, or proprietary markings.
+- Circumvent, disable, tamper with, or bypass license activation, license validation, usage restrictions, or security controls.
+- Use the Software for an illegal purpose or in violation of applicable law.
+- Use the Software in a way that infringes the rights of Blue Byte Systems or any third party.
 
+## 6. License Activation and Validation
 
-To improve our software and validate licenses, the Software may collect certain metadata about the machine it is installed on, including but not limited to the IP address, SOLIDWORKS version, and operating system version. This information is used solely for the purposes of enhancing the Software and ensuring compliance with licensing terms. By using the Software, you consent to this data collection.
+The Software may require license activation before use. Activation may use information such as license key, machine name, machine identifier, product version, operating system version, SOLIDWORKS or SOLIDWORKS PDM version, IP address, activation status, and related license metadata.
 
-## 5. Intellectual Property
+Blue Byte Systems uses this information to activate licenses, validate license compliance, prevent unauthorized use, support customers, troubleshoot activation issues, and improve the Software.
 
-The Software and all related intellectual property rights, including copyrights, patents, trademarks, and trade secrets, are owned by Licensor or its licensors. This EULA does not grant Licensee any ownership rights in the Software.
+Licensee may not share license keys outside the licensed organization or use a license key on more machines, users, or environments than permitted by the purchased license.
 
-## 6. Termination
+## 7. Offline Activation
 
-This EULA shall automatically terminate upon Licensee’s breach of any of its terms. Licensor may also terminate this EULA at any time upon written notice to Licensee. Upon termination, Licensee shall cease all use of the Software and delete all copies of the Software from its systems.
+For restricted or air-gapped computers, PDMShell may provide an offline activation workflow. Offline activation may generate encrypted request files that Licensee sends to Blue Byte Systems and encrypted response files that Licensee imports into PDMShell.
 
-## 7. Disclaimer of Warranty
+Licensee is responsible for protecting offline activation request and response files, sending them only through trusted channels, and importing response files only from Blue Byte Systems.
 
-THE SOFTWARE IS PROVIDED **"AS IS"** WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. LICENSOR DOES NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE OR THAT IT WILL MEET LICENSEE’S REQUIREMENTS.
+## 8. Updates
 
-## 8. Limitation of Liability
+Blue Byte Systems may provide updates, installers, patches, or replacement versions of the Software. Updates may add, remove, or change features, commands, licensing behavior, documentation, user interface behavior, or compatibility requirements.
 
-IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY DAMAGES WHATSOEVER, INCLUDING WITHOUT LIMITATION, DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+The PDMShell updater may uninstall an existing local version, download a newer installer from Blue Byte Systems servers, and start the installer. Some update operations may require administrator privileges.
 
-## 9. Changes to Terms
+Continued use of the Software after installing or using an update means Licensee accepts the EULA that applies to that version.
 
-Licensor reserves the right, in its sole discretion, to modify or update this EULA at any time **without prior notice**. Continued use of the Software constitutes acceptance of the modified or updated terms.
+## 9. Automation and Customer Responsibility
 
-## 10. Governing Law
+PDMShell allows users to run commands, scripts, and automated workflows that may view, create, modify, move, rename, delete, check in, check out, transition, revise, update, or otherwise affect files, folders, metadata, variables, versions, revisions, workflow states, and other SOLIDWORKS PDM vault data.
 
-This EULA shall be governed by and construed in accordance with the laws of British Columbia, Canada, without regard to its conflict of law provisions.
+Licensee is responsible for reviewing, testing, validating, and approving scripts, commands, templates, conditions, placeholders, and automated workflows before using them in a production environment.
 
-## 11. Entire Agreement
+Licensee is responsible for maintaining backups, verifying vault permissions, confirming business rules, and ensuring that automation is appropriate for the target vault, files, folders, users, workflows, and environment.
 
-This EULA constitutes the entire agreement between the parties with respect to the subject matter hereof and supersedes all prior or contemporaneous communications, representations, and agreements, whether oral or written.
+Blue Byte Systems is not responsible for data loss, incorrect vault changes, workflow changes, metadata changes, business interruption, failed automation, unintended command results, or other consequences caused by scripts, commands, configuration, user input, unattended execution, vault configuration, permissions, or third-party systems.
 
-## 12. Severability
+## 10. Data Collection and Privacy
 
-If any provision of this EULA is held to be invalid or unenforceable, such provision shall be struck, and the remaining provisions shall remain in full force and effect.
+The Software may collect and transmit limited technical and license-related metadata for activation, validation, support, troubleshooting, product improvement, and compliance purposes. This may include license key, activation status, machine name, machine identifier, product version, operating system version, SOLIDWORKS or SOLIDWORKS PDM version, IP address, error details, and related diagnostic information.
 
-## 13. Contact Information
+Blue Byte Systems does not use this information to intentionally collect the contents of Licensee's PDM files. Licensee should not send confidential files, passwords, private keys, or sensitive vault data to Blue Byte Systems unless specifically requested for support and approved by Licensee.
 
-For any questions regarding this EULA, please contact:
+Questions about legal, licensing, or privacy matters may be sent to info@bluebyte.biz.
 
-**Blue Byte Systems Inc.**  
-Email: [amen@bluebyte.biz](mailto:amen@bluebyte.biz)
+## 11. Third-Party Products and Services
+
+PDMShell works with SOLIDWORKS PDM and may depend on third-party software, APIs, operating system components, network services, security settings, vault configuration, and customer infrastructure.
+
+Blue Byte Systems is not responsible for failures, delays, incompatibilities, data issues, or service interruptions caused by SOLIDWORKS PDM, SOLIDWORKS, Dassault Systemes products, Windows, antivirus software, firewalls, network configuration, vault configuration, permissions, servers, databases, or other third-party products or services.
+
+SOLIDWORKS, SOLIDWORKS PDM, and related names and marks are trademarks or registered trademarks of their respective owners. PDMShell is a Blue Byte Systems product and is not affiliated with or endorsed by Dassault Systemes unless expressly stated in writing.
+
+## 12. Intellectual Property
+
+The Software and all related intellectual property rights, including copyrights, trademarks, trade secrets, and other proprietary rights, are owned by Blue Byte Systems or its licensors.
+
+This EULA does not transfer ownership of the Software to Licensee. Licensee receives only the limited rights expressly granted in this EULA.
+
+## 13. Termination
+
+This EULA automatically terminates if Licensee breaches any term of this EULA. Blue Byte Systems may also terminate this EULA upon written notice if Licensee violates licensing terms, fails to pay applicable fees, circumvents license controls, or uses the Software outside the permitted license scope.
+
+Upon termination, Licensee must stop using the Software and delete or uninstall all copies of the Software from its systems, except where retention is required by law.
+
+## 14. Disclaimer of Warranty
+
+The Software is provided "as is" and "as available" without warranty of any kind, express, implied, or statutory, including warranties of merchantability, fitness for a particular purpose, title, non-infringement, accuracy, availability, or error-free operation.
+
+Blue Byte Systems does not warrant that the Software will meet Licensee's requirements, operate without interruption, be compatible with every environment, prevent user error, prevent data loss, or produce any particular business result.
+
+## 15. Limitation of Liability
+
+To the maximum extent permitted by applicable law, Blue Byte Systems shall not be liable for indirect, incidental, special, consequential, exemplary, punitive, or similar damages, including lost profits, lost revenue, lost data, business interruption, loss of goodwill, replacement costs, or costs of recovering or restoring data, arising out of or related to the Software or this EULA.
+
+To the maximum extent permitted by applicable law, Blue Byte Systems' total cumulative liability arising out of or related to the Software or this EULA shall not exceed the amount paid by Licensee to Blue Byte Systems for the Software during the twelve months before the event giving rise to the claim.
+
+Some jurisdictions do not allow certain limitations of liability. In those jurisdictions, the limitations apply only to the maximum extent permitted by law.
+
+## 16. Governing Law
+
+This EULA is governed by and construed in accordance with the laws of British Columbia, Canada, without regard to conflict of law principles.
+
+## 17. Changes to Terms
+
+Blue Byte Systems may update this EULA from time to time. The updated EULA applies when Licensee installs, updates, activates, or continues using a version of the Software that references or includes the updated EULA.
+
+## 18. Entire Agreement
+
+This EULA constitutes the entire agreement between Licensee and Blue Byte Systems regarding the Software and supersedes all prior or contemporaneous communications, representations, and agreements regarding the Software, whether oral or written.
+
+Any separate written agreement signed by Blue Byte Systems and Licensee that expressly overrides this EULA will control only to the extent of the conflict.
+
+## 19. Severability
+
+If any provision of this EULA is held to be invalid, illegal, or unenforceable, that provision shall be enforced to the maximum extent permitted by law, and the remaining provisions shall remain in full force and effect.
+
+## 20. Contact Information
+
+For questions about this EULA, licensing, or legal matters, contact:
+
+Blue Byte Systems Inc.  
+Email: [info@bluebyte.biz](mailto:info@bluebyte.biz)

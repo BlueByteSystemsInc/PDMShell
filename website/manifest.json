@@ -1327,6 +1327,36 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/visual-if-condition-editor.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/visual-if-condition-editor.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/visual-if-parameters.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/visual-if-parameters.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/visual-if-workflow.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/visual-if-workflow.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/worktransition.png",
       "output": {
         "resource": {
@@ -2207,6 +2237,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/conditions.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/conditions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/createcompletepathsfromfilename.md",
       "output": {
         ".html": {
@@ -2257,6 +2297,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/expression-evaluator.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/expression-evaluator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/faq.md",
       "output": {
         ".html": {
@@ -2271,6 +2321,16 @@
       "output": {
         ".html": {
           "relative_path": "src/howtoinstall.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/if-statements.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/if-statements.html"
         }
       },
       "version": ""
@@ -2524,6 +2584,46 @@
       "output": {
         ".html": {
           "relative_path": "src/visual-code-editor-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/visual-editor-build-workflows.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/visual-editor-build-workflows.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/visual-editor-command-settings.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/visual-editor-command-settings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/visual-editor-run-options.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/visual-editor-run-options.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/visual-editor-save-open.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/visual-editor-save-open.html"
         }
       },
       "version": ""

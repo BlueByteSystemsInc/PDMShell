@@ -12,6 +12,9 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.17 (2026-06-30)
+- 🎉 Added support for [IF statements and conditions](if-statements.md) in the Visual Code Editor, including `Conditions Met` and `Else` branches during script execution.
+
 ## 4.0.16 (2026-06-30)
 - Improved [`runtemplate`](RUNTEMPLATE.md) `-silent` confirmation so template dialogs can be confirmed with `Create` or `OK` buttons.
 
@@ -33,13 +36,13 @@ then install the latest version. Do not update installed version.
 - Updated [`msgbox`](MSGBOX.md) so `value` and `title` support session-level placeholder evaluation such as `$vaultName`, `$date`, `$time`, `$guid`, and `$tempFolder`.
 
 ## 4.0.11 (2026-06-21)
-- Added documentation for the [Expression Evaluator](EVAL.md), including how to safely preview placeholder expressions against a selected PDM file or folder, use `$value`, choose configurations, and test string functions before running commands or scripts.
+- Added documentation for the [Expression Evaluator](expression-evaluator.md), including how to safely preview placeholder expressions against a selected PDM file or folder, use `$value`, choose configurations, and test string functions before running commands or scripts.
 - Added an on-demand [PDMShell add-in](TASKSCRIPT.md) script demo to the [Command menu scripts](addin/command-menu.md) documentation, showing how users can launch a rename script from SOLIDWORKS PDM without creating a PDM Task.
 - Updated the visual editor metadata for [`msgbox`](MSGBOX.md) so the `icon` parameter appears as a single-select combo box with the supported message box icons.
 
 ## 4.0.10 (2026-07-18)
 - Added logged-in PDM user profile placeholders: `$username.firstName`, `$username.lastName`, `$username.FullName`, and `$username.email`.
-- Added a dark themed [Expression Evaluator](EVAL.md) for testing placeholder expressions against a selected PDM file or folder before running a command.
+- Added a dark themed [Expression Evaluator](expression-evaluator.md) for testing placeholder expressions against a selected PDM file or folder before running a command.
 
 ## 4.0.9 (2026-07-18)
 - Added the [`pasteasshared`](PASTEASSHARED.md) command to share one file or search results into another vault folder.
@@ -78,7 +81,7 @@ then install the latest version. Do not update installed version.
 
 ## 4.0.4 (2026-06-10)
 - Added and documented the [wait](WAIT.md) command.
-- Added condition expression support for file/folder/process existence, variable and placeholder comparisons, grouped `and` / `or` logic, and arithmetic comparisons.
+- Added [condition expression](conditions.md) support for file/folder/process existence, variable and placeholder comparisons, grouped `and` / `or` logic, and arithmetic comparisons.
 - Simplified the [Visual Code Editor](visual-code-editor-4.md) wait conditions dialog to use a variable/placeholder field, operator dropdown, and conditional value field.
 - Expanded wait-condition placeholder autocomplete and runtime placeholder evaluation.
 - Fixed [Visual Code Editor](visual-code-editor-4.md) command node icon rendering.
@@ -96,12 +99,12 @@ then install the latest version. Do not update installed version.
 - Improved [`help`](HELP.md) responsiveness by reducing repeated UI updates and command metadata lookups.
 - Standardized command descriptions in PDMShell and aligned command documentation wording.
 - Added and documented the [whereusedtree](WHEREUSEDTREE.md) command for recursive where-used trees.
-- Improved [Visual Code Editor](visual-code-editor-4.md) script saving, loading, canvas state restoration, and unsaved-change handling.
-- Added [Visual Code Editor](visual-code-editor-4.md) canvas navigation controls such as zoom in, zoom out, and zoom to fit.
+- Improved [Visual Code Editor](visual-code-editor-4.md) script saving, loading, visual workflow restoration, and unsaved-change handling.
+- Added [Visual Code Editor](visual-code-editor-4.md) navigation controls such as zoom in, zoom out, and zoom to fit.
 - Added the [Check In All Files](scripts/CHECKINALLFILES/CHECKINALLFILES.md) script to the script library.
 
 ## 4.0.0 (2026-06-01)
-- Added [Visual Code Editor](visual-code-editor-4.md) for building PDMShell scripts as a workflow-style canvas.
+- Added [Visual Code Editor](visual-code-editor-4.md) for building PDMShell scripts as visual workflows.
 - Added `Favorite=SEARCH FAVORITE` token to [advanced search](advancedsearch.md).
 - Added [runtemplate](RUNTEMPLATE.md) command to run SOLIDWORKS PDM templates from PDMShell.
 - Added [pasteasreference](PASTEASREFERENCE.md) command to replace custom references from a file or search result.

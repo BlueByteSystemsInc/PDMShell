@@ -3,7 +3,8 @@
                   "markdownEngineProperties":  {
                                                    "alerts":  {
                                                                   "Did You Know?":  "alert alert-success",
-                                                                  "TLDR;":  "alert alert-info"
+                                                                  "TLDR;":  "alert alert-info",
+                                                                  "Summary":  "alert alert-summary"
                                                               }
                                                },
                   "content":  [
