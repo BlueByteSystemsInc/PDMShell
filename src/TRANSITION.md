@@ -222,4 +222,4 @@ To remove limit: https://bluebyte.biz/product/pdmshell
 ## Availability
 Available since PDMShell 2.0.0.
 
-Updated in PDMShell 4.0.20 with `mode` for direct file and search transitions.
+Updated in PDMShell 4.0.21 with `mode` for direct file and search transitions.

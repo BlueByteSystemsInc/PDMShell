@@ -87,7 +87,7 @@ Availability means the PDMShell version where the command first became available
 | [runtemplate](RUNTEMPLATE.md) | Run a PDM template | Available since PDMShell 4.0.0. |
 | [wait](WAIT.md) | Wait for seconds | Available since PDMShell 4.0.4. |
 | [until](UNTIL.md) | Wait until conditions | Available since PDMShell 4.0.7. |
-| [rebuild](REBUILD.md) | Rebuild SOLIDWORKS files | Available since PDMShell 2.0.0. |
+| [rebuild](REBUILD.md) | Ghost rebuild SOLIDWORKS files | Available since PDMShell 2.0.0. |
 | [toolbox](TOOLBOX.md) | Process Toolbox flag | Available since PDMShell 2.0.17. |
 | [addaddin](ADDADDIN.md) | Add add-in | Available since PDMShell 2.0.0. |
 | [kill](KILL.md) | Stop process | Available since PDMShell 2.0.0. |
