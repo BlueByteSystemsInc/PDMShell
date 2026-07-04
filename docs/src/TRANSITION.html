@@ -97,9 +97,9 @@
 </ul>
 <h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash"># transition
-transition -transitionidorname &lt;id-or-name&gt; -filePath &lt;path&gt;
+transition -transitionidorname &lt;id-or-name&gt; -filePath &lt;path&gt; [-mode simple|references]
 # transition
-transition -transitionidorname &lt;id-or-name&gt; -search &lt;pattern&gt; [-recursive]
+transition -transitionidorname &lt;id-or-name&gt; -search &lt;pattern&gt; [-recursive] [-mode simple|references]
 # transition
 transition -source &lt;csv&gt; -password &lt;password&gt; [-batch &lt;size&gt;] [-comment &lt;text&gt;]
 </code></pre>
@@ -150,6 +150,18 @@ Example:</p>
 <pre><code class="lang-bash">-comment &quot;Released by migration script&quot;
 </code></pre>
 <hr>
+<h2 id="mode"><code>mode</code></h2>
+<p>Optional. Controls whether direct file and search transitions use simple mode or reference mode.</p>
+<p>Allowed values:</p>
+<ul>
+<li><code>simple</code>: transitions only the selected file. This is the default.</li>
+<li><code>references</code>: transitions the selected file and references according to SOLIDWORKS PDM transition behavior.</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-bash">-mode references
+</code></pre>
+<p>This parameter applies to <code>filePath</code> and <code>search</code> mode. CSV source mode uses the PDM batch transition reference settings described below.</p>
+<hr>
 <h2 id="search"><a href="SEARCH.html"><code>search</code></a></h2>
 <p>Searches for files matching a pattern in the current directory.</p>
 <p>Example:</p>
@@ -198,10 +210,16 @@ Example:</p>
 <p>Example:</p>
 <pre><code class="lang-bash">transition -search %.sldasm -transitionidorname 12 -recursive
 </code></pre>
+<p>Transition search results with references:</p>
+<pre><code class="lang-bash">transition -search %.sldasm -transitionidorname 12 -recursive -mode references
+</code></pre>
 <h2 id="single-file-mode">Single File Mode</h2>
 <p>Transitions one file.</p>
 <p>Example:</p>
 <pre><code class="lang-bash">transition -filePath part.sldprt -transitionidorname 12
+</code></pre>
+<p>Transition one file with references:</p>
+<pre><code class="lang-bash">transition -filePath part.sldprt -transitionidorname 12 -mode references
 </code></pre>
 <h2 id="validation">Validation</h2>
 <p>The command automatically:</p>
@@ -223,6 +241,7 @@ Example:</p>
 </ul>
 <h2 id="availability">Availability</h2>
 <p>Available since PDMShell 2.0.0.</p>
+<p>Updated in PDMShell 4.0.20 with <code>mode</code> for direct file and search transitions.</p>
 
 </article>
 

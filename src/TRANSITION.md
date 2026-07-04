@@ -15,9 +15,9 @@ This command supports three modes:
 ## Syntax
 ```bash
 # transition
-transition -transitionidorname <id-or-name> -filePath <path>
+transition -transitionidorname <id-or-name> -filePath <path> [-mode simple|references]
 # transition
-transition -transitionidorname <id-or-name> -search <pattern> [-recursive]
+transition -transitionidorname <id-or-name> -search <pattern> [-recursive] [-mode simple|references]
 # transition
 transition -source <csv> -password <password> [-batch <size>] [-comment <text>]
 ```
@@ -84,6 +84,24 @@ Example:
 ```bash
 -comment "Released by migration script"
 ```
+---
+
+## `mode`
+
+Optional. Controls whether direct file and search transitions use simple mode or reference mode.
+
+Allowed values:
+
+- `simple`: transitions only the selected file. This is the default.
+- `references`: transitions the selected file and references according to SOLIDWORKS PDM transition behavior.
+
+Example:
+```bash
+-mode references
+```
+
+This parameter applies to `filePath` and `search` mode. CSV source mode uses the PDM batch transition reference settings described below.
+
 ---
 
 ## [`search`](SEARCH.md)
@@ -160,6 +178,11 @@ Example:
 ```bash
 transition -search %.sldasm -transitionidorname 12 -recursive
 ```
+
+Transition search results with references:
+```bash
+transition -search %.sldasm -transitionidorname 12 -recursive -mode references
+```
  
 
 ## Single File Mode
@@ -168,6 +191,11 @@ Transitions one file.
 Example:
 ```bash
 transition -filePath part.sldprt -transitionidorname 12
+```
+
+Transition one file with references:
+```bash
+transition -filePath part.sldprt -transitionidorname 12 -mode references
 ```
  
 
@@ -193,3 +221,5 @@ To remove limit: https://bluebyte.biz/product/pdmshell
 
 ## Availability
 Available since PDMShell 2.0.0.
+
+Updated in PDMShell 4.0.20 with `mode` for direct file and search transitions.
