@@ -12,8 +12,9 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
-## 4.0.19
-- No changes yet.
+## 4.0.19 (2026-07-04)
+- Added [PDMShell add-in license management](addin/license-manager.md) from `Manage PDMShell Licenses` in the SOLIDWORKS PDM Administration Tool.
+- Added guidance for [license pool and machine licenses](addin/license-modes.md) so administrators can choose how the add-in consumes PDMShell licenses.
 
 ## 4.0.18 (2026-07-06)
 - Added revision-aware [placeholder evaluation](EVAL.md) functions including `${revision()}`, `${nextRevision()}`, `${revisionComponentValue(...)}`, `${nextRevisionComponentValue(...)}`, revision component counters, revision scheme checks, and revision value validation.

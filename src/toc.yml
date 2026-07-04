@@ -69,6 +69,10 @@
     href: TASKSCRIPT.md
   - name: Installation and access
     href: addin/installation.md
+  - name: Manage add-in licenses
+    href: addin/license-manager.md
+  - name: License pool and machine licenses
+    href: addin/license-modes.md
   - name: Script Editor
     href: addin/script-editor.md
   - name: Permissions

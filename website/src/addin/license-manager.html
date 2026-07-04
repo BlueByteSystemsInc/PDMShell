@@ -2,21 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>PDMShell add-in | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>Manage PDMShell add-in licenses | PDMShell | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="PDMShell add-in | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="Manage PDMShell add-in licenses | PDMShell | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Overview of the PDMShell add-in for SOLIDWORKS PDM.">
-      <link rel="icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../public/docfx.min.css">
-      <link rel="stylesheet" href="../public/main.css">
-      <meta name="docfx:navrel" content="../toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
+      <meta name="description" content="Manage PDMShell add-in license keys from the SOLIDWORKS PDM Administration Tool.">
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
       
-      <meta name="docfx:rel" content="../">
+      <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/TASKSCRIPT.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/addin/license-manager.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -30,7 +30,7 @@
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
 
-      <script type="module" src="./../public/docfx.min.js"></script>
+      <script type="module" src="./../../public/docfx.min.js"></script>
 
       <script>
         const theme = localStorage.getItem('theme') || 'auto'
@@ -43,8 +43,8 @@
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/fav.png" alt="PDMShell">
             PDMShell
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,151 +85,102 @@
         </div>
 
         <article data-uid="">
-<h1 id="pdmshell-add-in">PDMShell add-in</h1>
+<h1 id="manage-pdmshell-add-in-licenses">Manage PDMShell add-in licenses</h1>
 
-<p>The PDMShell add-in lets SOLIDWORKS PDM administrators run <code>.pdmshell</code> scripts directly from PDM menus and PDM event trigger points. It is designed for the same class of automation normally handled with Dispatch: user commands, event-driven rules, file and folder automation, condition checks, and administrator-controlled deployment.</p>
-<p>Instead of building automation from a fixed list of Dispatch actions, the add-in runs PDMShell scripts. This gives administrators access to the PDMShell command engine, the visual script editor, placeholders, PDM variables, and headless execution through <code>pdmcli.exe</code>.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>Need help building scripts or automation workflows? Blue Byte Systems offers <a href="https://bluebyte.biz/product/enterprise-support-services/">Enterprise Support Services</a> for customers who want help designing, developing, or troubleshooting PDMShell automation.</p>
-</div>
-<div class="NOTE">
-<h5>Note</h5>
-<p>The PDMShell add-in is included with the premium version. You can download it from your Blue Byte Systems Inc <a href="https://bluebyte.biz/account">account</a> or deploy it with <a href="https://docs.bluebyte.biz/src/cdpdm.html">PDMDeploy</a>.</p>
-</div>
-<p><img src="../images/pdmshell-addin-script-editor.png" alt="PDMShell add-in script editor"></p>
-<h2 id="what-you-can-automate">What you can automate</h2>
+<p>PDMShell add-in licenses can be managed from the SOLIDWORKS PDM Administration Tool. Use this page when the add-in is installed in a vault and you need to choose how the vault consumes PDMShell licenses.</p>
+<p>Open the Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select <code>Manage PDMShell Licenses</code>.</p>
+<p align="center">
+  <img src="../../images/pdmshell-addin-license-menu.png" alt="Manage PDMShell Licenses command in the SOLIDWORKS PDM Administration Tool add-in menu" style="max-width:420px;width:100%;height:auto;">
+</p>
+<p>The <code>PDMShell Licenses</code> window opens for the selected vault. Use this window to add license keys, activate pooled keys, choose the license mode, and review active pool borrows.</p>
+<p align="center">
+  <img src="../../images/pdmshell-addin-license-manager.png" alt="PDMShell Licenses window in the SOLIDWORKS PDM Administration Tool" style="max-width:980px;width:100%;height:auto;">
+</p>
+<h2 id="license-mode">License mode</h2>
+<p>The top of the window controls how the vault uses PDMShell licenses.</p>
 <ul>
-<li>Add right-click commands such as <code>PDMShell\Rename Files</code>.</li>
-<li>Create SOLIDWORKS PDM Tasks that run PDMShell scripts, similar to the built-in Convert task.</li>
-<li>Run scripts before or after checkout, check-in, undo checkout, state change, add, delete, move, copy, rename, get, label, card button, and folder commands.</li>
-<li>Restrict scripts to selected PDM users or groups.</li>
-<li>Validate conditions before a script runs.</li>
-<li>Pass selected files and folders to PDMShell with <code>runscript -items</code>.</li>
-<li>Test condition values with a message before enabling production automation.</li>
+<li><code>Use license pool</code> lets the vault borrow from activated license keys stored in the vault.</li>
+<li><code>Use this machine's license</code> uses the local PDMShell license already installed on the current workstation.</li>
 </ul>
-<h2 id="documentation">Documentation</h2>
+<p>For help choosing a mode, see <a href="license-modes.html">License pool and machine licenses</a>.</p>
+<h2 id="add-license-keys">Add license keys</h2>
+<p>Paste one or more PDMShell license keys in the <code>License key</code> box. You can separate keys with new lines, commas, or semicolons.</p>
+<p>Select <code>Add</code> to add the keys to the vault license list.</p>
+<h2 id="license-list">License list</h2>
+<p>The license list shows the keys available to the vault.</p>
 <table>
 <thead>
 <tr>
-<th>Article</th>
-<th>Use it for</th>
+<th>Column</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="addin/installation.html">Installation and access</a></td>
-<td>Loading the add-in and opening the Script Editor</td>
+<td>Enabled</td>
+<td>Controls whether the key can be used by the add-in.</td>
 </tr>
 <tr>
-<td><a href="addin/license-manager.html">Manage add-in licenses</a></td>
-<td>Managing PDMShell add-in license keys from the PDM Administration Tool</td>
+<td>License</td>
+<td>Shows the stored license key.</td>
 </tr>
 <tr>
-<td><a href="addin/license-modes.html">License pool and machine licenses</a></td>
-<td>Choosing between pooled vault licenses and a local machine license</td>
+<td>Status</td>
+<td>Shows whether the key is activated and ready to use.</td>
 </tr>
 <tr>
-<td><a href="addin/script-editor.html">Script Editor</a></td>
-<td>Creating, cloning, saving, and editing script entries</td>
+<td>Activated node</td>
+<td>Shows the node or machine that activated the license.</td>
 </tr>
 <tr>
-<td><a href="addin/permissions.html">Permissions</a></td>
-<td>Limiting scripts to users and groups</td>
+<td>Expires</td>
+<td>Shows the license expiration date.</td>
 </tr>
 <tr>
-<td><a href="addin/conditions.html">Conditions</a></td>
-<td>Building wait-style condition expressions</td>
-</tr>
-<tr>
-<td><a href="addin/command-menu.html">Command menu scripts</a></td>
-<td>Adding right-click PDM menu commands</td>
-</tr>
-<tr>
-<td><a href="addin/tasks.html">PDM Tasks</a></td>
-<td>Creating SOLIDWORKS PDM Tasks that run PDMShell scripts</td>
-</tr>
-<tr>
-<td><a href="addin/trigger-points.html">Event trigger points</a></td>
-<td>Running scripts from PDM command hooks</td>
-</tr>
-<tr>
-<td><a href="addin/placeholders.html">Placeholders and command context</a></td>
-<td>Using file, folder, command, and variable placeholders</td>
-</tr>
-<tr>
-<td><a href="addin/runtime-execution.html">Runtime execution</a></td>
-<td>Understanding <code>pdmcli.exe</code>, headless mode, and <code>-items</code></td>
-</tr>
-<tr>
-<td><a href="addin/troubleshooting.html">Testing and troubleshooting</a></td>
-<td>Validating scripts and diagnosing common issues</td>
+<td>Action</td>
+<td>Lets an administrator activate a license key when activation is required.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="dispatch-comparison">Dispatch comparison</h2>
-<p>Dispatch action scripts typically combine triggers, conditions, variables, and actions. The PDMShell add-in uses a similar administrator workflow, but the action body is a PDMShell script.</p>
+<h2 id="active-borrows">Active borrows</h2>
+<p>The <code>Active borrows</code> list shows pool seats currently borrowed from the vault. It includes the vault, machine, user, and borrowed time in UTC.</p>
+<p>Use this area to understand who is currently consuming pool seats.</p>
+<h2 id="window-controls">Window controls</h2>
+<p>Use the buttons at the bottom of the window to finish or discard changes.</p>
 <table>
 <thead>
 <tr>
-<th>Dispatch idea</th>
-<th>PDMShell add-in equivalent</th>
+<th>Button</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Action script</td>
-<td>A configured PDMShell script</td>
+<td>Delete</td>
+<td>Removes the selected license key from the vault license list.</td>
 </tr>
 <tr>
-<td>Administrative action</td>
-<td>Script configured in the Script Editor</td>
+<td>Cancel</td>
+<td>Closes the window without saving pending changes.</td>
 </tr>
 <tr>
-<td>Menu command activation</td>
-<td>Menu trigger with command menu text</td>
-</tr>
-<tr>
-<td>PDM task</td>
-<td>PDMShell task add-in running a <code>.pdmshell</code> script</td>
-</tr>
-<tr>
-<td>PDM event activation</td>
-<td>Trigger points such as checkout, check-in, state change, add, delete, move, copy, rename, and folder events</td>
-</tr>
-<tr>
-<td>Conditions</td>
-<td>PDMShell wait-style condition expression</td>
-</tr>
-<tr>
-<td>Variables</td>
-<td>PDMShell placeholders and PDM variable placeholders</td>
-</tr>
-<tr>
-<td>Shell execute action</td>
-<td><code>pdmcli.exe</code> running the configured <code>.pdmshell</code> script</td>
-</tr>
-<tr>
-<td>Debugging a script</td>
-<td>Condition test message, visual script editor, and standalone <code>pdmcli.exe -edit</code></td>
+<td>OK</td>
+<td>Saves the selected license mode, enabled license keys, added keys, removed keys, and other pending license changes.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="recommended-rollout">Recommended rollout</h2>
-<ol>
-<li>Build and test the <code>.pdmshell</code> script outside the add-in.</li>
-<li>Add the script in the Script Editor.</li>
-<li>Enable the condition test message while validating conditions.</li>
-<li>Configure permissions for a small administrator group first.</li>
-<li>Enable a command menu or trigger point.</li>
-<li>Test against a small set of files.</li>
-<li>Expand permissions after the automation behaves as expected.</li>
-</ol>
+<p>Use the <code>Activate</code> button in the license list when a license key is present but not activated.</p>
+<h2 id="related-articles">Related articles</h2>
+<ul>
+<li><a href="license-modes.html">License pool and machine licenses</a></li>
+<li><a href="installation.html">Installation and access</a></li>
+<li><a href="runtime-execution.html">Runtime execution</a></li>
+</ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/TASKSCRIPT.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/addin/license-manager.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

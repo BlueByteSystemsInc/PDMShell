@@ -927,6 +927,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/pdmshell-addin-license-manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-addin-license-manager.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-addin-license-menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-addin-license-menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell-addin-script-editor.png",
       "output": {
         "resource": {
@@ -2151,6 +2171,26 @@
       "output": {
         ".html": {
           "relative_path": "src/addin/installation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/addin/license-manager.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/addin/license-manager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/addin/license-modes.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/addin/license-modes.html"
         }
       },
       "version": ""

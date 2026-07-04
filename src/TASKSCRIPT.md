@@ -31,6 +31,8 @@ Instead of building automation from a fixed list of Dispatch actions, the add-in
 | Article | Use it for |
 | --- | --- |
 | [Installation and access](addin/installation.md) | Loading the add-in and opening the Script Editor |
+| [Manage add-in licenses](addin/license-manager.md) | Managing PDMShell add-in license keys from the PDM Administration Tool |
+| [License pool and machine licenses](addin/license-modes.md) | Choosing between pooled vault licenses and a local machine license |
 | [Script Editor](addin/script-editor.md) | Creating, cloning, saving, and editing script entries |
 | [Permissions](addin/permissions.md) | Limiting scripts to users and groups |
 | [Conditions](addin/conditions.md) | Building wait-style condition expressions |
