@@ -12,6 +12,9 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.19
+- No changes yet.
+
 ## 4.0.18 (2026-07-06)
 - Added revision-aware [placeholder evaluation](EVAL.md) functions including `${revision()}`, `${nextRevision()}`, `${revisionComponentValue(...)}`, `${nextRevisionComponentValue(...)}`, revision component counters, revision scheme checks, and revision value validation.
 - Added optional file path support to revision evaluation functions so scripts can inspect the revision of another PDM file, such as a related PDF derived from the current file name.
