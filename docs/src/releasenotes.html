@@ -93,6 +93,19 @@
 <p>To update PDMShell properly, download the latest version, uninstall PDMShell and
 then install the latest version. Do not update installed version.</p>
 </div>
+<h2 id="4018-2026-07-03">4.0.18 (2026-07-03)</h2>
+<ul>
+<li>Added revision-aware <a href="EVAL.html">placeholder evaluation</a> functions including <code>${revision()}</code>, <code>${nextRevision()}</code>, <code>${revisionComponentValue(...)}</code>, <code>${nextRevisionComponentValue(...)}</code>, revision component counters, revision scheme checks, and revision value validation.</li>
+<li>Added optional file path support to revision evaluation functions so scripts can inspect the revision of another PDM file, such as a related PDF derived from the current file name.</li>
+<li>Updated script evaluation so revision functions without an explicit file path are treated as file-sensitive and evaluate per selected file during script execution.</li>
+<li>Improved revision function formatting so next revision values use the active PDM revision component format, including padded numeric formats and alpha formats.</li>
+<li>Updated the <a href="expression-evaluator.html">Expression Evaluator</a> documentation with revision function examples and file-context guidance.</li>
+<li>Added <a href="UNTIL.html"><code>until</code></a> <code>onTimeout</code> behavior so scripts stop by default after a timeout while still allowing final cleanup commands, or continue when <code>onTimeout continue</code> is used.</li>
+<li>Moved the <a href="visual-code-editor-4.html">Visual Code Editor</a> generated script toggle beside the zoom controls so script preview is available where users manage the visual view.</li>
+<li>Improved the Visual Code Editor generated script drawer by replacing the old tabs with a cleaner generated script header and a <code>Checks</code> status action.</li>
+<li>Improved Visual Code Editor checks so the validation list is only shown when issues exist.</li>
+<li>Updated the generated script preview to use a code font while keeping the command picker and visual command boxes in the normal interface font.</li>
+</ul>
 <h2 id="4017-2026-06-30">4.0.17 (2026-06-30)</h2>
 <ul>
 <li>🎉 Added support for <a href="if-statements.html">IF statements and conditions</a> in the Visual Code Editor, including <code>Conditions Met</code> and <code>Else</code> branches during script execution.</li>

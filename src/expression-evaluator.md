@@ -18,6 +18,7 @@ The evaluator is useful for previewing:
 - Date and time placeholders such as `$date`, `$time`, `$yyyy`, and `$timestamp`.
 - PDM variables such as `[Description]` or `$(Description.@)`.
 - String functions such as `${before(...)}`, `${replace(...)}`, and `${regex(...)}`.
+- Revision functions such as `${revision()}`, `${nextRevision()}`, and `${revisionComponentValue("ComponentName")}`.
 - Expressions that will later be used in commands like [`rename`](RENAME.md), [`setvar`](SETVAR.md), [`bom`](BOM.md), [`export`](export.md), [`msgbox`](MSGBOX.md), or [`until`](UNTIL.md).
 
 ## Why Use It
@@ -43,6 +44,9 @@ $fileNameWithoutExtension
 ${before($fileNameWithoutExtension, "-")}
 ${replace($value, "DRAFT", "RELEASED")}
 ${regex($fileNameWithoutExtension, "^([^-]+)-", 1)}
+${revision()}
+${nextRevision()}
+${revision("$folderPath\\$fileNameWithoutExtension.pdf")}
 ```
 
 ## File Context
@@ -57,6 +61,10 @@ Examples:
 | `$filePath` | Yes |
 | `$folderPath` | Yes |
 | `[Description]` | Yes |
+| `${revision()}` | Yes |
+| `${nextRevision()}` | Yes |
+| `${revisionComponentValue("ComponentName")}` | Yes |
+| `${revision("C:\Vault\File.pdf")}` | No, if the path is complete and the vault is logged in |
 | `$vaultName` | No, if logged in |
 | `$date` | No |
 | `$guid` | No |

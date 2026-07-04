@@ -88,26 +88,25 @@
 <h1 id="setrevisionfromsource">setrevisionfromsource</h1>
 
 <h2 id="description">Description</h2>
-<p>The <code>setrevisionfromsource</code> command allows you to batch-update the <strong>PDM-managed revision</strong> for multiple files by reading values from a CSV input source.</p>
-<p>The <strong>source CSV</strong> must contain at minimum:</p>
+<p>The <code>setrevisionfromsource</code> command allows you to batch-update the PDM-managed revision for multiple files by reading values from a CSV input source.</p>
+<p>The source CSV must contain at minimum:</p>
 <ul>
-<li><strong>Id</strong> ? the PDM file ID</li>
-<li><strong>Value</strong> ? the revision value to apply</li>
+<li><code>ID</code> - the PDM file ID.</li>
+<li><code>Revision</code> - the revision value to apply.</li>
 </ul>
-<p>This command applies the revision exactly as supplied in the CSV just like in the <a href="SETREVISION.html">set revision command</a>.<br>
-It does  <strong>evaluate</strong> <code>%nextrevision%</code>, <code>%previousrevision%</code>,<code>%initial%</code>, or bracketed variables�only literal revision values.</p>
-<p>You may optionally output a <strong>results CSV</strong> that includes success/failure information for each processed row.</p>
+<p>This command applies the revision exactly as supplied in the CSV, similar to the <a href="SETREVISION.html">setrevision command</a>.
+It does not evaluate <code>%nextrevision%</code>, <code>%previousrevision%</code>, <code>%initial%</code>, or bracketed variables. Use literal revision values only.</p>
+<p>You may optionally output a results CSV that includes success or failure information for each processed row.</p>
 <h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">setrevisionfromsource -source -csv
 </code></pre>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>source</code><br>
-Path to the CSV file that contains the input dataset.<br>
-Required columns:
+<li><p><code>source</code><br>
+Path to the CSV file that contains the input dataset. Required columns:</p>
 <ul>
-<li><code>ID</code> � the file�s PDM ID inside the vault.</li>
-<li><code>Revision</code> � the revision string supported by the revision scheme</li>
+<li><code>ID</code> - the file's PDM ID inside the vault.</li>
+<li><code>Revision</code> - the revision string supported by the revision scheme.</li>
 </ul>
 </li>
 </ul>
@@ -117,27 +116,24 @@ Required columns:
 <p>You can generate IDs and variables into a CSV by using the <a href="SEARCH.html">search command</a>.</p>
 </div>
 <ul>
-<li><code>csv</code> <em>(optional)</em><br>
-Path to an output CSV file where results will be written.<br>
-The results file contains:
+<li><p><code>csv</code><br>
+Optional. Path to an output CSV file where results will be written. The results file contains:</p>
 <ul>
 <li>File ID</li>
 <li>Operation status</li>
-<li>Error message (if any)</li>
+<li>Error message, if any</li>
 </ul>
 </li>
 </ul>
 <h2 id="examples">Examples</h2>
-<pre><code class="lang-bash">
-setrevisionfromsource -source source.csv -csv results.csv
-
+<pre><code class="lang-bash">setrevisionfromsource -source source.csv -csv results.csv
 </code></pre>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>This command updates the <strong>PDM Revision</strong> shown on the Version tab, not datacard variables.</li>
+<li>This command updates the PDM revision shown on the Version tab, not data card variables.</li>
 <li>All revisions must already exist in the active revision scheme.</li>
-<li>If a file ID does not exist or cannot be updated, the error will be logged and processing continues for the remaining records.</li>
-<li>Output CSV is optional; if omitted, results are printed to console only.</li>
+<li>If a file ID does not exist or cannot be updated, the error is logged and processing continues for the remaining records.</li>
+<li>Output CSV is optional. If omitted, results are printed to the console only.</li>
 </ul>
 <h2 id="availability">Availability</h2>
 <p>Available since PDMShell 3.0.12.</p>

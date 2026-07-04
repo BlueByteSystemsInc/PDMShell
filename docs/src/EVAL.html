@@ -224,6 +224,122 @@ ${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
 <p>For example, if <code>$value</code> is <code>ABC 123 DRAFT</code>, the expression above evaluates to <code>ABC_123_DR</code>.</p>
 <p>Unknown or invalid function expressions are left unchanged.</p>
 <p>When a full command value is wrapped in double quotes, escape quotes inside function arguments with <code>\&quot;</code>.</p>
+<h2 id="revision-functions">Revision Functions</h2>
+<p>Revision functions use the same <code>${...}</code> syntax as string functions. Without a path argument, they require a selected PDM file because the result depends on the file's active workflow state and revision scheme.</p>
+<p>Most revision functions also accept an optional file path. Use this when the expression needs to inspect a different PDM file, such as a released PDF that is related to the current SOLIDWORKS file.</p>
+<p>Use the display value functions for normal scripts. Counter functions expose the internal numeric position of a revision component and are intended for advanced cases.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>${revision()}</code></td>
+<td>Returns the current full PDM revision display value for the selected file.</td>
+</tr>
+<tr>
+<td><code>${revision(&quot;filePath&quot;)}</code></td>
+<td>Returns the current full PDM revision display value for another PDM file.</td>
+</tr>
+<tr>
+<td><code>${nextRevision()}</code></td>
+<td>Returns the next full PDM revision display value based on the selected file's active revision scheme.</td>
+</tr>
+<tr>
+<td><code>${nextRevision(&quot;filePath&quot;)}</code></td>
+<td>Returns the next full PDM revision display value for another PDM file.</td>
+</tr>
+<tr>
+<td><code>${revisionComponentValue(&quot;ComponentName&quot;)}</code></td>
+<td>Returns the current displayed value for a specific revision component.</td>
+</tr>
+<tr>
+<td><code>${revisionComponentValue(&quot;ComponentName&quot;, &quot;filePath&quot;)}</code></td>
+<td>Returns the current displayed value for a component on another PDM file.</td>
+</tr>
+<tr>
+<td><code>${nextRevisionComponentValue(&quot;ComponentName&quot;)}</code></td>
+<td>Returns the next displayed value for a specific revision component.</td>
+</tr>
+<tr>
+<td><code>${nextRevisionComponentValue(&quot;ComponentName&quot;, &quot;filePath&quot;)}</code></td>
+<td>Returns the next displayed component value for another PDM file.</td>
+</tr>
+<tr>
+<td><code>${revisionComponentCounter(&quot;ComponentName&quot;)}</code></td>
+<td>Returns the current internal numeric counter for a specific revision component.</td>
+</tr>
+<tr>
+<td><code>${revisionComponentCounter(&quot;ComponentName&quot;, &quot;filePath&quot;)}</code></td>
+<td>Returns the current internal numeric counter for a component on another PDM file.</td>
+</tr>
+<tr>
+<td><code>${nextRevisionComponentCounter(&quot;ComponentName&quot;)}</code></td>
+<td>Returns the next internal numeric counter for a specific revision component.</td>
+</tr>
+<tr>
+<td><code>${nextRevisionComponentCounter(&quot;ComponentName&quot;, &quot;filePath&quot;)}</code></td>
+<td>Returns the next internal numeric component counter for another PDM file.</td>
+</tr>
+<tr>
+<td><code>${revisionNumberName()}</code></td>
+<td>Returns the name of the active revision number scheme for the selected file.</td>
+</tr>
+<tr>
+<td><code>${revisionNumberName(&quot;filePath&quot;)}</code></td>
+<td>Returns the active revision number scheme name for another PDM file.</td>
+</tr>
+<tr>
+<td><code>${revisionNumberId()}</code></td>
+<td>Returns the internal ID of the active revision number scheme for the selected file.</td>
+</tr>
+<tr>
+<td><code>${revisionNumberId(&quot;filePath&quot;)}</code></td>
+<td>Returns the internal active revision number scheme ID for another PDM file.</td>
+</tr>
+<tr>
+<td><code>${revisionComponents()}</code></td>
+<td>Returns a comma-separated list of active revision component names for the selected file.</td>
+</tr>
+<tr>
+<td><code>${revisionComponents(&quot;filePath&quot;)}</code></td>
+<td>Returns a comma-separated list of active revision component names for another PDM file.</td>
+</tr>
+<tr>
+<td><code>${hasRevisionScheme()}</code></td>
+<td>Returns <code>true</code> when the selected file's current workflow state has a revision scheme configured.</td>
+</tr>
+<tr>
+<td><code>${hasRevisionScheme(&quot;filePath&quot;)}</code></td>
+<td>Returns <code>true</code> when another PDM file's current workflow state has a revision scheme configured.</td>
+</tr>
+<tr>
+<td><code>${canIncrementRevision()}</code></td>
+<td>Returns <code>true</code> when PDM reports that the selected file can increment revision in the current state.</td>
+</tr>
+<tr>
+<td><code>${canIncrementRevision(&quot;filePath&quot;)}</code></td>
+<td>Returns <code>true</code> when PDM reports that another PDM file can increment revision in the current state.</td>
+</tr>
+<tr>
+<td><code>${isRevisionValueValid(&quot;A&quot;)}</code></td>
+<td>Returns <code>true</code> when the supplied value matches the active revision scheme component structure.</td>
+</tr>
+<tr>
+<td><code>${isRevisionValueValid(&quot;A&quot;, &quot;filePath&quot;)}</code></td>
+<td>Returns <code>true</code> when the supplied value matches another PDM file's active revision scheme component structure.</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<pre><code class="lang-bash">msgbox -value &quot;Current revision: ${revision()}&quot;
+msgbox -value &quot;Next revision: ${nextRevision()}&quot;
+setvar -variableName NextRevision -filePath &quot;$localPath&quot; -value &quot;${nextRevision()}&quot;
+msgbox -value &quot;Related PDF revision: ${revision(\&quot;$folderPath\\$fileNameWithoutExtension.pdf\&quot;)}&quot;
+</code></pre>
 <h2 id="expression-evaluator">Expression Evaluator</h2>
 <p>Use the <a href="expression-evaluator.html">Expression Evaluator</a> to preview placeholders, PDM variables, and string functions before running a command or script.</p>
 <hr>

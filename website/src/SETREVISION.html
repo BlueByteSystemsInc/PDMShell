@@ -88,17 +88,18 @@
 <h1 id="setrevision">setrevision</h1>
 
 <h2 id="description">Description</h2>
-<p>The <code>setrevision</code> command allows you to set the PDM-managed revision of a file inside the vault.<br>
-This command updates the official PDM Revision (the value shown on the version tab), <em>not</em> the datacard one.</p>
+<p>The <code>setrevision</code> command allows you to set the PDM-managed revision of a file inside the vault.
+This command updates the official PDM revision, which is the value shown on the Version tab, not a data card variable.</p>
 <p>You may set the revision using:</p>
 <ul>
-<li><strong>%nextrevision%</strong> â€” moves the revision forward</li>
-<li><strong>%previousrevision%</strong> â€” moves the revision backward</li>
-<li><strong>%initial%</strong> â€” resets to the first revision in the revision scheme</li>
+<li><code>%nextrevision%</code> - moves the revision forward.</li>
+<li><code>%previousrevision%</code> - moves the revision backward.</li>
+<li><code>%initial%</code> - resets to the first revision in the revision scheme.</li>
 </ul>
-<p>You can also use PDM variables by enclosing them in brackets:<br>
-Example: <code>[Revision]</code><br>
-This evaluates the variable on the file and applies its value as the new revision.</p>
+<p>You can also use PDM variables by enclosing them in brackets:</p>
+<pre><code class="lang-text">[Revision]
+</code></pre>
+<p>This evaluates the variable on the file and applies its value as the new revision.</p>
 <p>The command resolves all bracketed variables before applying the revision.</p>
 <h2 id="syntax">Syntax</h2>
 <pre><code class="lang-bash">setrevision -filePath|-search -recursive -value -csv
@@ -106,35 +107,33 @@ This evaluates the variable on the file and applies its value as the new revisio
 <h2 id="parameters">Parameters</h2>
 <ul>
 <li><p><code>filePath</code><br>
-Path to the file whose revision you want to update.<br>
-Only a single file is affected by this command.</p>
+Path to the file whose revision you want to update. Only a single file is affected by this command.</p>
 </li>
 <li><p><code>search</code><br>
-Search query in the current folder</p>
+Search query in the current folder.</p>
 </li>
 <li><p><code>recursive</code><br>
 When used with <a href="SEARCH.html"><code>search</code></a>, includes files in subfolders.</p>
 </li>
 <li><p><code>value</code><br>
-The revision value to apply.<br>
-This can be:</p>
+The revision value to apply. This can be:</p>
 <ul>
-<li><code>%nextrevision%</code> â†’ increments the PDM revision counter</li>
-<li><code>%previousrevision%</code> â†’ decrements the PDM revision counter</li>
-<li><code>%initial%</code> â†’ resets revision to the schemeâ€™s first value</li>
-<li><code>[VariableName]</code> â†’ evaluates the PDM variable and uses its value</li>
-<li>A literal revision string supported by the vaultâ€™s revision scheme</li>
+<li><code>%nextrevision%</code> - increments the PDM revision counter.</li>
+<li><code>%previousrevision%</code> - decrements the PDM revision counter.</li>
+<li><code>%initial%</code> - resets revision to the scheme's first value.</li>
+<li><code>[VariableName]</code> - evaluates the PDM variable and uses its value.</li>
+<li>A literal revision string supported by the vault's revision scheme.</li>
 </ul>
 </li>
-<li><p><code>csv</code> (only valid with <a href="SEARCH.html"><code>search</code></a>)
-Save results to a csv file</p>
+<li><p><code>csv</code><br>
+When used with <a href="SEARCH.html"><code>search</code></a>, saves results to a CSV file.</p>
 </li>
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>This command affects only the PDM Revision, not custom properties or configuration-specific metadata.</li>
-<li>When using <code>[VariableName]</code>, ensure the variable is present on the file card.</li>
-<li><code>%previousrevision%</code> will adjust the counter only if the revision scheme allows backward movement.</li>
+<li>This command affects only the PDM revision, not custom properties or configuration-specific metadata.</li>
+<li>When using <code>[VariableName]</code>, make sure the variable is present on the file card.</li>
+<li><code>%previousrevision%</code> adjusts the counter only if the revision scheme allows backward movement.</li>
 <li><code>%nextrevision%</code> respects all revision scheme rules defined in the PDM Administration tool.</li>
 </ul>
 <h2 id="availability">Availability</h2>

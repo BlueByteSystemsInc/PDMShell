@@ -97,6 +97,7 @@
 <li>Date and time placeholders such as <code>$date</code>, <code>$time</code>, <code>$yyyy</code>, and <code>$timestamp</code>.</li>
 <li>PDM variables such as <code>[Description]</code> or <code>$(Description.@)</code>.</li>
 <li>String functions such as <code>${before(...)}</code>, <code>${replace(...)}</code>, and <code>${regex(...)}</code>.</li>
+<li>Revision functions such as <code>${revision()}</code>, <code>${nextRevision()}</code>, and <code>${revisionComponentValue(&quot;ComponentName&quot;)}</code>.</li>
 <li>Expressions that will later be used in commands like <a href="RENAME.html"><code>rename</code></a>, <a href="SETVAR.html"><code>setvar</code></a>, <a href="BOM.html"><code>bom</code></a>, <a href="export.html"><code>export</code></a>, <a href="MSGBOX.html"><code>msgbox</code></a>, or <a href="UNTIL.html"><code>until</code></a>.</li>
 </ul>
 <h2 id="why-use-it">Why Use It</h2>
@@ -117,6 +118,9 @@
 ${before($fileNameWithoutExtension, &quot;-&quot;)}
 ${replace($value, &quot;DRAFT&quot;, &quot;RELEASED&quot;)}
 ${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
+${revision()}
+${nextRevision()}
+${revision(&quot;$folderPath\\$fileNameWithoutExtension.pdf&quot;)}
 </code></pre>
 <h2 id="file-context">File Context</h2>
 <p>Some expressions need a selected PDM file or folder to return a meaningful result.</p>
@@ -144,6 +148,22 @@ ${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
 <tr>
 <td><code>[Description]</code></td>
 <td>Yes</td>
+</tr>
+<tr>
+<td><code>${revision()}</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>${nextRevision()}</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>${revisionComponentValue(&quot;ComponentName&quot;)}</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>${revision(&quot;C:\Vault\File.pdf&quot;)}</code></td>
+<td>No, if the path is complete and the vault is logged in</td>
 </tr>
 <tr>
 <td><code>$vaultName</code></td>

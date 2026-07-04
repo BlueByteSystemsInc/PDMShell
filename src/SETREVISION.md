@@ -3,56 +3,64 @@ description: Sets the revision for one file or for files found by search.
 title: setrevision Command | PDMShell | SOLIDWORKS PDM
 ---
 # setrevision
+
 ## Description
-The `setrevision` command allows you to set the PDM-managed revision of a file inside the vault.  
-This command updates the official PDM Revision (the value shown on the version tab), *not* the datacard one.
+
+The `setrevision` command allows you to set the PDM-managed revision of a file inside the vault.
+This command updates the official PDM revision, which is the value shown on the Version tab, not a data card variable.
 
 You may set the revision using:
-- **%nextrevision%** â€” moves the revision forward  
-- **%previousrevision%** â€” moves the revision backward  
-- **%initial%** â€” resets to the first revision in the revision scheme  
 
-You can also use PDM variables by enclosing them in brackets:  
-Example: `[Revision]`  
+- `%nextrevision%` - moves the revision forward.
+- `%previousrevision%` - moves the revision backward.
+- `%initial%` - resets to the first revision in the revision scheme.
+
+You can also use PDM variables by enclosing them in brackets:
+
+```text
+[Revision]
+```
+
 This evaluates the variable on the file and applies its value as the new revision.
 
 The command resolves all bracketed variables before applying the revision.
 
 ## Syntax
+
 ```bash
 setrevision -filePath|-search -recursive -value -csv
 ```
+
 ## Parameters
+
 - `filePath`  
-  Path to the file whose revision you want to update.  
-  Only a single file is affected by this command.
+  Path to the file whose revision you want to update. Only a single file is affected by this command.
 
 - `search`  
-  Search query in the current folder
+  Search query in the current folder.
 
 - `recursive`  
   When used with [`search`](SEARCH.md), includes files in subfolders.
 
 - `value`  
-  The revision value to apply.  
-  This can be:
-  
-  - `%nextrevision%` â†’ increments the PDM revision counter  
-  - `%previousrevision%` â†’ decrements the PDM revision counter  
-  - `%initial%` â†’ resets revision to the schemeâ€™s first value  
-  - `[VariableName]` â†’ evaluates the PDM variable and uses its value  
-  - A literal revision string supported by the vaultâ€™s revision scheme  
+  The revision value to apply. This can be:
 
-- `csv` (only valid with [`search`](SEARCH.md))
-  Save results to a csv file
+  - `%nextrevision%` - increments the PDM revision counter.
+  - `%previousrevision%` - decrements the PDM revision counter.
+  - `%initial%` - resets revision to the scheme's first value.
+  - `[VariableName]` - evaluates the PDM variable and uses its value.
+  - A literal revision string supported by the vault's revision scheme.
 
+- `csv`  
+  When used with [`search`](SEARCH.md), saves results to a CSV file.
 
 ## Notes
 
-- This command affects only the PDM Revision, not custom properties or configuration-specific metadata.  
-- When using `[VariableName]`, ensure the variable is present on the file card.  
-- `%previousrevision%` will adjust the counter only if the revision scheme allows backward movement.  
+- This command affects only the PDM revision, not custom properties or configuration-specific metadata.
+- When using `[VariableName]`, make sure the variable is present on the file card.
+- `%previousrevision%` adjusts the counter only if the revision scheme allows backward movement.
 - `%nextrevision%` respects all revision scheme rules defined in the PDM Administration tool.
 
 ## Availability
+
 Available since PDMShell 3.0.11.

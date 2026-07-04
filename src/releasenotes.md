@@ -12,6 +12,18 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.18 (2026-07-03)
+- Added revision-aware [placeholder evaluation](EVAL.md) functions including `${revision()}`, `${nextRevision()}`, `${revisionComponentValue(...)}`, `${nextRevisionComponentValue(...)}`, revision component counters, revision scheme checks, and revision value validation.
+- Added optional file path support to revision evaluation functions so scripts can inspect the revision of another PDM file, such as a related PDF derived from the current file name.
+- Updated script evaluation so revision functions without an explicit file path are treated as file-sensitive and evaluate per selected file during script execution.
+- Improved revision function formatting so next revision values use the active PDM revision component format, including padded numeric formats and alpha formats.
+- Updated the [Expression Evaluator](expression-evaluator.md) documentation with revision function examples and file-context guidance.
+- Added [`until`](UNTIL.md) `onTimeout` behavior so scripts stop by default after a timeout while still allowing final cleanup commands, or continue when `onTimeout continue` is used.
+- Moved the [Visual Code Editor](visual-code-editor-4.md) generated script toggle beside the zoom controls so script preview is available where users manage the visual view.
+- Improved the Visual Code Editor generated script drawer by replacing the old tabs with a cleaner generated script header and a `Checks` status action.
+- Improved Visual Code Editor checks so the validation list is only shown when issues exist.
+- Updated the generated script preview to use a code font while keeping the command picker and visual command boxes in the normal interface font.
+
 ## 4.0.17 (2026-06-30)
 - 🎉 Added support for [IF statements and conditions](if-statements.md) in the Visual Code Editor, including `Conditions Met` and `Else` branches during script execution.
 

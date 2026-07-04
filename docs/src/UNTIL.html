@@ -91,12 +91,13 @@
 <p>Waits until the supplied condition expression evaluates to true, or until the timeout is reached.</p>
 <p>Use <code>until</code> after commands such as <a href="RUNTASK.html"><code>runtask</code></a>, <a href="RUNTEMPLATE.html"><code>runtemplate</code></a>, <a href="export.html"><code>export</code></a>, or any automation step that creates files asynchronously. This prevents the next command from running before the expected files, variables, or process state are ready.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">until -conditions condition_expression [-timeout seconds] [-match all|any|one] [-filePath path | -search query]
+<pre><code class="lang-bash">until -conditions condition_expression [-timeout seconds] [-onTimeout stop|continue] [-match all|any|one] [-filePath path | -search query]
 </code></pre>
 <h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>conditions</code>: The condition expression to evaluate. Supports <code>and</code>, <code>or</code>, nested groups, file/folder/process exists checks, comparisons, PDM variables, placeholders, and simple arithmetic comparisons.</li>
 <li><code>timeout</code>: Maximum number of seconds to wait before the command fails. If omitted, PDMShell uses the command default.</li>
+<li><code>onTimeout</code>: Optional timeout behavior. Use <code>stop</code> to stop the script after timeout, or <code>continue</code> to log the timeout and keep running. The default is <code>stop</code>.</li>
 <li><code>match</code>: When <a href="SEARCH.html"><code>search</code></a> returns multiple files, controls how many files must satisfy the conditions. Use <code>any</code> when one matching file is enough, <code>all</code> when every matching file must pass, or <code>one</code> when exactly one matching file must pass.</li>
 <li><code>filePath</code>: Optional file context used to evaluate PDM variables and file placeholders.</li>
 <li><code>search</code>: Optional search query. When supplied, PDMShell evaluates the condition against the files returned by the search.</li>
@@ -115,6 +116,8 @@ until -conditions &quot;$(Description.@) contains A&quot; -filePath &quot;C:\Vau
 until -conditions &quot;1 + 3 greater than 3&quot; -timeout 5
 
 until -search &quot;Name=%.sldprt;Locked=true&quot; -conditions &quot;$(Description.@) contains ECO&quot; -match any -timeout 120
+
+until -conditions &quot;$folderPath\$fileNameWithoutExtension.pdf exists&quot; -timeout 500 -onTimeout continue
 </code></pre>
 <h2 id="condition-format">Condition Format</h2>
 <p>The <code>until</code> command uses the shared PDMShell condition syntax. See <a href="conditions.html">Conditions</a> for the full condition reference.</p>
@@ -404,11 +407,14 @@ process exists &quot;notepad&quot;
 <ul>
 <li>Use <code>filePath</code> when you need placeholders or PDM variables to be evaluated against one specific file.</li>
 <li>Use <a href="SEARCH.html"><code>search</code></a> and <code>match</code> when the same condition should be evaluated across multiple matching files.</li>
+<li>By default, a timeout stops the script and skips later workflow commands. Final cleanup commands such as <code>dump</code> and <code>quit</code> can still run.</li>
+<li>Use <code>onTimeout continue</code> only when later script commands are safe to run even if the condition was not satisfied.</li>
 <li><code>exists</code> does not need a value in the visual editor.</li>
 <li>For generated PDF/DXF workflows, use placeholders such as <code>$folderPath</code>, <code>$fileNameWithoutExtension</code>, and <code>$extension</code> to avoid hard-coded output paths.</li>
 </ul>
 <h2 id="availability">Availability</h2>
 <p>Available since PDMShell 4.0.7.</p>
+<p>Updated in PDMShell 4.0.18 with <code>onTimeout</code>.</p>
 
 </article>
 

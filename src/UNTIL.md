@@ -10,12 +10,13 @@ Use `until` after commands such as [`runtask`](RUNTASK.md), [`runtemplate`](RUNT
 
 ## Syntax
 ```bash
-until -conditions condition_expression [-timeout seconds] [-match all|any|one] [-filePath path | -search query]
+until -conditions condition_expression [-timeout seconds] [-onTimeout stop|continue] [-match all|any|one] [-filePath path | -search query]
 ```
 
 ## Parameters
 - `conditions`: The condition expression to evaluate. Supports `and`, `or`, nested groups, file/folder/process exists checks, comparisons, PDM variables, placeholders, and simple arithmetic comparisons.
 - `timeout`: Maximum number of seconds to wait before the command fails. If omitted, PDMShell uses the command default.
+- `onTimeout`: Optional timeout behavior. Use `stop` to stop the script after timeout, or `continue` to log the timeout and keep running. The default is `stop`.
 - `match`: When [`search`](SEARCH.md) returns multiple files, controls how many files must satisfy the conditions. Use `any` when one matching file is enough, `all` when every matching file must pass, or `one` when exactly one matching file must pass.
 - `filePath`: Optional file context used to evaluate PDM variables and file placeholders.
 - `search`: Optional search query. When supplied, PDMShell evaluates the condition against the files returned by the search.
@@ -35,6 +36,8 @@ until -conditions "$(Description.@) contains A" -filePath "C:\Vault\Parts\1001.s
 until -conditions "1 + 3 greater than 3" -timeout 5
 
 until -search "Name=%.sldprt;Locked=true" -conditions "$(Description.@) contains ECO" -match any -timeout 120
+
+until -conditions "$folderPath\$fileNameWithoutExtension.pdf exists" -timeout 500 -onTimeout continue
 ```
 
 ## Condition Format
@@ -177,8 +180,12 @@ Arithmetic is evaluated only for simple numeric expressions containing numbers, 
 ## Remarks
 - Use `filePath` when you need placeholders or PDM variables to be evaluated against one specific file.
 - Use [`search`](SEARCH.md) and `match` when the same condition should be evaluated across multiple matching files.
+- By default, a timeout stops the script and skips later workflow commands. Final cleanup commands such as `dump` and `quit` can still run.
+- Use `onTimeout continue` only when later script commands are safe to run even if the condition was not satisfied.
 - `exists` does not need a value in the visual editor.
 - For generated PDF/DXF workflows, use placeholders such as `$folderPath`, `$fileNameWithoutExtension`, and `$extension` to avoid hard-coded output paths.
 
 ## Availability
 Available since PDMShell 4.0.7.
+
+Updated in PDMShell 4.0.18 with `onTimeout`.

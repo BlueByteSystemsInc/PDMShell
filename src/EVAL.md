@@ -127,6 +127,50 @@ Unknown or invalid function expressions are left unchanged.
 
 When a full command value is wrapped in double quotes, escape quotes inside function arguments with `\"`.
 
+## Revision Functions
+
+Revision functions use the same `${...}` syntax as string functions. Without a path argument, they require a selected PDM file because the result depends on the file's active workflow state and revision scheme.
+
+Most revision functions also accept an optional file path. Use this when the expression needs to inspect a different PDM file, such as a released PDF that is related to the current SOLIDWORKS file.
+
+Use the display value functions for normal scripts. Counter functions expose the internal numeric position of a revision component and are intended for advanced cases.
+
+| Function | Description |
+| --- | --- |
+| `${revision()}` | Returns the current full PDM revision display value for the selected file. |
+| `${revision("filePath")}` | Returns the current full PDM revision display value for another PDM file. |
+| `${nextRevision()}` | Returns the next full PDM revision display value based on the selected file's active revision scheme. |
+| `${nextRevision("filePath")}` | Returns the next full PDM revision display value for another PDM file. |
+| `${revisionComponentValue("ComponentName")}` | Returns the current displayed value for a specific revision component. |
+| `${revisionComponentValue("ComponentName", "filePath")}` | Returns the current displayed value for a component on another PDM file. |
+| `${nextRevisionComponentValue("ComponentName")}` | Returns the next displayed value for a specific revision component. |
+| `${nextRevisionComponentValue("ComponentName", "filePath")}` | Returns the next displayed component value for another PDM file. |
+| `${revisionComponentCounter("ComponentName")}` | Returns the current internal numeric counter for a specific revision component. |
+| `${revisionComponentCounter("ComponentName", "filePath")}` | Returns the current internal numeric counter for a component on another PDM file. |
+| `${nextRevisionComponentCounter("ComponentName")}` | Returns the next internal numeric counter for a specific revision component. |
+| `${nextRevisionComponentCounter("ComponentName", "filePath")}` | Returns the next internal numeric component counter for another PDM file. |
+| `${revisionNumberName()}` | Returns the name of the active revision number scheme for the selected file. |
+| `${revisionNumberName("filePath")}` | Returns the active revision number scheme name for another PDM file. |
+| `${revisionNumberId()}` | Returns the internal ID of the active revision number scheme for the selected file. |
+| `${revisionNumberId("filePath")}` | Returns the internal active revision number scheme ID for another PDM file. |
+| `${revisionComponents()}` | Returns a comma-separated list of active revision component names for the selected file. |
+| `${revisionComponents("filePath")}` | Returns a comma-separated list of active revision component names for another PDM file. |
+| `${hasRevisionScheme()}` | Returns `true` when the selected file's current workflow state has a revision scheme configured. |
+| `${hasRevisionScheme("filePath")}` | Returns `true` when another PDM file's current workflow state has a revision scheme configured. |
+| `${canIncrementRevision()}` | Returns `true` when PDM reports that the selected file can increment revision in the current state. |
+| `${canIncrementRevision("filePath")}` | Returns `true` when PDM reports that another PDM file can increment revision in the current state. |
+| `${isRevisionValueValid("A")}` | Returns `true` when the supplied value matches the active revision scheme component structure. |
+| `${isRevisionValueValid("A", "filePath")}` | Returns `true` when the supplied value matches another PDM file's active revision scheme component structure. |
+
+Examples:
+
+```bash
+msgbox -value "Current revision: ${revision()}"
+msgbox -value "Next revision: ${nextRevision()}"
+setvar -variableName NextRevision -filePath "$localPath" -value "${nextRevision()}"
+msgbox -value "Related PDF revision: ${revision(\"$folderPath\\$fileNameWithoutExtension.pdf\")}"
+```
+
 ## Expression Evaluator
 
 Use the [Expression Evaluator](expression-evaluator.md) to preview placeholders, PDM variables, and string functions before running a command or script.
