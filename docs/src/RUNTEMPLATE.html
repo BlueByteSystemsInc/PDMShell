@@ -91,12 +91,36 @@
 <p>Runs a SOLIDWORKS PDM template from PDMShell by using the template menu name.</p>
 <p>The <code>runtemplate</code> command is useful when you want to start a configured PDM template from a script or command line workflow. The command runs the template in the current vault folder unless a different vault folder is provided.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">runtemplate -name template_menu_name [-directory vault_folder] [-silent]
-</code></pre>
-<p>Short format:</p>
-<pre><code class="lang-bash">runtemplate -name template_menu_name [-d vault_folder] [-silent]
+<pre><code class="lang-text">runtemplate -name template_menu_name [-directory vault_folder] [-silent]
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-name</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-directory</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-silent</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>name</code> Required. Template menu name to run. This is the same name shown for the template command in SOLIDWORKS PDM.</li>
 <li><code>directory</code> Optional. Vault folder where the template should run. If omitted, the current PDMShell folder is used.</li>

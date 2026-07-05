@@ -1,4 +1,4 @@
----
+﻿---
 description: Waits for a specific number of seconds before continuing the script.
 title: wait Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -9,11 +9,19 @@ Waits for the specified number of seconds, then continues to the next command.
 Use `wait` when a script needs a fixed pause between commands.
 
 ## Syntax
-```bash
+
+```text
 wait -timeout seconds
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-timeout` | Yes | Required. Number of seconds to wait. The value must be greater than zero. |
+
+### Parameter Details
+
 - `timeout`: Required. Number of seconds to wait. The value must be greater than zero.
 
 ## Examples

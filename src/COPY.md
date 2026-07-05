@@ -1,4 +1,4 @@
----
+﻿---
 description: Copies files inside the SOLIDWORKS PDM vault from a source file or folder to a target directory.
 title: copy Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -14,11 +14,24 @@ The `copy` command creates new files with new File IDs inside the vault by copyi
 This command does not add files from disk and does not modify the original files.
 
 ## Syntax
-```bash
+
+```text
 copy -source -directory -search -recursive -name -ignoreexisting
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-source` | Yes | See parameter details below. |
+| `-directory` | Yes | See parameter details below. |
+| `-search` | Yes | See parameter details below. |
+| `-recursive` | Yes | See parameter details below. |
+| `-name` | Yes | See parameter details below. |
+| `-ignoreexisting` | Yes | See parameter details below. |
+
+### Parameter Details
+
 - `source`  
   The source file or folder inside the vault.  
   - If a file path is provided (ends with an extension), only that file is copied.

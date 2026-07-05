@@ -1,4 +1,4 @@
----
+﻿---
 description: Runs a SOLIDWORKS macro on files found by search.
 title: runswmacro Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -8,11 +8,27 @@ The `runswmacro` command allows you to execute a SOLIDWORKS macro on a specific 
 
 
 ## Syntax
-```bash
+
+```text
 runswmacro -filePath -search -recursive -list -skip -count -timeout
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Yes | Path to the SOLIDWORKS macro file (`.swp` or `.dll`). This is required and the file needs to cached in PDM. |
+| `-search` | Yes | Search query to find files to run the macro on. |
+| `-recursive` | Yes | If set, search will include subfolders. |
+| `-list` | Yes | csv file path of filepaths without a column header. |
+| `-skip` | Yes | Skips the specified number of items. Only valid with `list`. |
+| `-count` | Yes | Only processes the specified number of items. Only valid with `list`. |
+| `-timeout` | Yes | Macro timeout in seconds (for both the macro to execute and for SOLIDWORKS to start too) |
+| `-version` | No | SOLIDWORKS year version. Example 2023. Default is latest. |
+| `-csv` | No | CSV file path used to report macro execution errors and success. |
+
+### Parameter Details
+
 The command requires the following parameters:
 
 - `filePath`: Path to the SOLIDWORKS macro file (`.swp` or `.dll`). This is required and the file needs to cached in PDM.
@@ -26,6 +42,7 @@ The command requires the following parameters:
 
 
 - `csv`: CSV file path used to report macro execution errors and success.
+
 ## What version of SOLIDWORKS will PDMShell use?
 PDMShell will use the latest SOLIDWORKS version installed on your system by checking the Windows Registry at:
 ```

@@ -90,9 +90,46 @@
 <h2 id="description">Description</h2>
 <p>Gets the value of a variable for a specified file or folder.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">getvar -filePath -variableName -configNames -clear -version
+<pre><code class="lang-text">getvar -filePath -variableName -configNames -clear -version
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-filePath</code></td>
+<td>Yes</td>
+<td>The file or folder to get the variable from.</td>
+</tr>
+<tr>
+<td><code>-variableName</code></td>
+<td>Yes</td>
+<td>The variable name to retrieve.</td>
+</tr>
+<tr>
+<td><code>-configNames</code></td>
+<td>Yes</td>
+<td>The configuration names to retrieve the variable from, separated by commas.</td>
+</tr>
+<tr>
+<td><code>-clear</code></td>
+<td>Yes</td>
+<td>Clears the variable value.</td>
+</tr>
+<tr>
+<td><code>-version</code></td>
+<td>Yes</td>
+<td>The version of the file to retrieve the variable from.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><p><code>filePath</code> :<br>
 The file or folder to get the variable from.</p>

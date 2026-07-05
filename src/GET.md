@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a file version from the vault into the local cache.
 title: get Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,24 @@ title: get Command | PDMShell | SOLIDWORKS PDM
 Retrieves a specified version of a file or files (via search).
 
 ## Syntax
-```bash
+
+```text
 get -search -recursive -filePath -version -directory -getoptions
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-search` | Yes | The search operation to use. |
+| `-recursive` | Yes | When used with [`search`](SEARCH.md), includes files in subfolders. |
+| `-filePath` | Yes | The file(s) to retrieve. This is the default parameter. |
+| `-version` | No | Optional. The version of the file to retrieve |
+| `-directory` | No | Optional. Folder where to deposit the file. Can be outside vault. Do not end with \\. If not specified, file is cached in its folder. |
+| `-getoptions` | No | Optional. . Allows you to cache references as well: |
+
+### Parameter Details
+
 - `search`: The search operation to use.
 
 - `filePath`: The file(s) to retrieve. This is the default parameter.
@@ -32,7 +46,6 @@ get -search -recursive -filePath -version -directory -getoptions
 | RefsVerLatest            | Retrieves the latest versions of referenced files that the user has permission to see, instead of the attached (as-built) versions used when the file was checked in. |
 | RefsOverwriteLocked      | Retrieves referenced files even if they are checked out and overwrites local changes; **warning:** any previous modifications to checked-out files will be lost. |
 | ForPreview               | Retrieves only referenced files required for SOLIDWORKS PDM preview when retrieving the referencing file. |
-
 
 ## Examples
 ```bash

@@ -1,4 +1,4 @@
----
+﻿---
 description: Moves files or folders from one vault location to another.
 title: move Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -19,12 +19,22 @@ When a file is moved:
 ---
 
 ## Syntax
-```bash
+
+```text
 move -source -directory -search -recursive
 ```
----
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-source` | Yes | See parameter details below. |
+| `-directory` | Yes | See parameter details below. |
+| `-search` | Yes | See parameter details below. |
+| `-recursive` | Yes | See parameter details below. |
+
+### Parameter Details
+
 - `source`  
   The complete file path of the file to move.  
   You can also specify a folder path. This will move the actual folder.

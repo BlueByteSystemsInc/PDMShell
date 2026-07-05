@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets the revision for one file or for files found by search.
 title: setrevision Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -27,11 +27,21 @@ The command resolves all bracketed variables before applying the revision.
 
 ## Syntax
 
-```bash
+```text
 setrevision -filePath|-search -recursive -value -csv
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Mode-dependent | See parameter details below. |
+| `-search` | Mode-dependent | See parameter details below. |
+| `-recursive` | Mode-dependent | See parameter details below. |
+| `-value` | Mode-dependent | See parameter details below. |
+| `-csv` | Mode-dependent | See parameter details below. |
+
+### Parameter Details
 
 - `filePath`  
   Path to the file whose revision you want to update. Only a single file is affected by this command.

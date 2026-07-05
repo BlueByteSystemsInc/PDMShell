@@ -90,9 +90,51 @@
 <h2 id="description">Description</h2>
 <p>Exports SOLIDWORKS Document Manager data for files in a directory or search result.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">docman -directory -csv -search -recursive -extensions
+<pre><code class="lang-text">docman -directory -csv -search -recursive -extensions
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-directory</code></td>
+<td>Yes</td>
+<td>Directory containing files to process.</td>
+</tr>
+<tr>
+<td><code>-csv</code></td>
+<td>Yes</td>
+<td>CSV file path used for output.</td>
+</tr>
+<tr>
+<td><code>-search</code></td>
+<td>Yes</td>
+<td>Search query used to find matching files.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>Yes</td>
+<td>When used with <a href="SEARCH.html"><code>search</code></a>, includes files in subfolders.</td>
+</tr>
+<tr>
+<td><code>-extensions</code></td>
+<td>Yes</td>
+<td>File extensions to include.</td>
+</tr>
+<tr>
+<td><code>-updaterefs</code></td>
+<td>No</td>
+<td>Reserved parameter for reference update behavior.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>directory</code>: Directory containing files to process.</li>
 <li><code>csv</code>: CSV file path used for output.</li>

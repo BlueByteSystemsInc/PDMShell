@@ -1,4 +1,4 @@
----
+﻿---
 description: Runs a SOLIDWORKS PDM template by template menu name.
 title: runtemplate Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -9,17 +9,21 @@ Runs a SOLIDWORKS PDM template from PDMShell by using the template menu name.
 The `runtemplate` command is useful when you want to start a configured PDM template from a script or command line workflow. The command runs the template in the current vault folder unless a different vault folder is provided.
 
 ## Syntax
-```bash
+
+```text
 runtemplate -name template_menu_name [-directory vault_folder] [-silent]
 ```
 
-Short format:
-
-```bash
-runtemplate -name template_menu_name [-d vault_folder] [-silent]
-```
-
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-name` | Yes | See parameter details below. |
+| `-directory` | No | See parameter details below. |
+| `-silent` | No | See parameter details below. |
+
+### Parameter Details
+
 - `name` Required. Template menu name to run. This is the same name shown for the template command in SOLIDWORKS PDM.
 - `directory` Optional. Vault folder where the template should run. If omitted, the current PDMShell folder is used.
 - `d` Optional short name for `directory`.

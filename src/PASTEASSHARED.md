@@ -1,4 +1,4 @@
----
+﻿---
 description: Shares one SOLIDWORKS PDM file or files found by search into another vault folder.
 title: pasteasshared Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -11,11 +11,22 @@ The `pasteasshared` command uses `filePath` or [`search`](SEARCH.md) to select t
 This command uses the SOLIDWORKS PDM shared-file behavior. It does not create a copy of the file; it shares the same PDM file into another folder.
 
 ## Syntax
-```bash
+
+```text
 pasteasshared (-filePath file_path | -search search_query) -directory target_vault_folder [-recursive]
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Mode-dependent | See parameter details below. |
+| `-search` | Mode-dependent | See parameter details below. |
+| `-directory` | Mode-dependent | See parameter details below. |
+| `-recursive` | No | See parameter details below. |
+
+### Parameter Details
+
 - `filePath` Optional. Single source file to share. Use either `filePath` or [`search`](SEARCH.md).
 - `search` Optional. Search query used to find files to share. Use either `filePath` or `search`.
 - `directory` Required. Destination vault folder where the shared file entries are created.

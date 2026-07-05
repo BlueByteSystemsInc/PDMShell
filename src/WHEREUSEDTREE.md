@@ -1,4 +1,4 @@
----
+﻿---
 description: Builds a recursive where-used tree for one file or files found by search.
 title: whereusedtree Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -13,13 +13,22 @@ The command prints a tree in the session output and can optionally export the re
 ---
 
 ## Syntax
-```bash
+
+```text
 whereusedtree (-filePath <path> | -search <query>) [-depth <number>] [-csv <file.csv>]
 ```
 
----
-
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Mode-dependent | See parameter details below. |
+| `-search` | Mode-dependent | See parameter details below. |
+| `-depth` | No | See parameter details below. |
+| `-csv` | No | See parameter details below. |
+
+### Parameter Details
+
 - `filePath`
   Full or relative path of the file to evaluate. Use either `-filePath` or `-search`, not both.
 

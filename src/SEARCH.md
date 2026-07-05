@@ -1,4 +1,4 @@
----
+﻿---
 description: Searches for files and folders in the current vault directory.
 title: search Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,11 +7,25 @@ title: search Command | PDMShell | SOLIDWORKS PDM
 The `search` command allows users to search for files and folders in the current directory. It supports recursive searches, filtering, and output customization.
 
 ## Syntax
-```bash
+
+```text
 search -search -recursive -includesubfolders -csv -columns -duplicatesstrategy
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-search` | Yes | Search keyword. This supports SQL wildcard %. |
+| `-recursive` | Yes | Searches through all subdirectories recursively. |
+| `-includesubfolders` | Yes | Includes subfolders in the search results. |
+| `-csv` | Yes | Outputs the search results in CSV format. |
+| `-columns` | Yes | Specifies the columns to include in the output seperated by a comma. |
+| `-duplicatesstrategy` | Yes | Defines how duplicate results are resolved when `DuplicatedBy` or `GroupBy` is specified in the search query. This parameter is supported for backward compatibility; you can also put `Strategy` or `DuplicatesStrategy`... |
+| `-lists` | No | search -search "Name=%.sld%;Recursive=true;DuplicatedBy=Name" -columns "FileDate,Hash,Revision" |
+
+### Parameter Details
+
 - `search`: Search keyword. This supports SQL wildcard %.
 
 - `recursive`: Searches through all subdirectories recursively.
@@ -28,13 +42,12 @@ search -search -recursive -includesubfolders -csv -columns -duplicatesstrategy
 > **Special columns**: You can use `FileDate`, [`version`](VERSION.md), `State` and `Hash` to list information that is not captured in the datacard. This is useful when searching for duplicates. The hash requires that the file be locally cached. Example:
 
 ```bash 
-## lists all duplicates in the current directory by name and prints their file date, hash and revision
+### lists all duplicates in the current directory by name and prints their file date, hash and revision
 search -search "Name=%.sld%;Recursive=true;DuplicatedBy=Name" -columns "FileDate,Hash,Revision"
 ```
 
 >[!NOTE]
 > Advanced search capabilities can be used in the `-search` parameter. See [Advanced Search](advancedsearch.md), [Search Tokens](search-tokens.md), [Variable Search](search-variables.md), [Result Shaping](search-result-shaping.md), and [Search Favorites](search-favorites.md).
-
 
 ## Examples
 ### Example 1: Basic Search

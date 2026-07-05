@@ -91,9 +91,26 @@
 <p>Waits for the specified number of seconds, then continues to the next command.</p>
 <p>Use <code>wait</code> when a script needs a fixed pause between commands.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">wait -timeout seconds
+<pre><code class="lang-text">wait -timeout seconds
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-timeout</code></td>
+<td>Yes</td>
+<td>Required. Number of seconds to wait. The value must be greater than zero.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>timeout</code>: Required. Number of seconds to wait. The value must be greater than zero.</li>
 </ul>

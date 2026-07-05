@@ -1,4 +1,4 @@
----
+﻿---
 description: Lists commands and opens command documentation.
 title: help Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,20 @@ title: help Command | PDMShell | SOLIDWORKS PDM
 The `help` command lists available commands grouped by category. It can also open the documentation page for a specific command.
 
 ## Syntax
-```bash
+
+```text
 help [-command|-c]
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-command` | No | Optional command name to open documentation for. |
+| `-c` | No | See parameter details below. |
+
+### Parameter Details
+
 - `command`: Optional command name to open documentation for.
 
 ## Examples

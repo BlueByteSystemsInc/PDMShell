@@ -90,9 +90,41 @@
 <h2 id="description">Description</h2>
 <p>Performs a check-in operation on a specified file or many files.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">checkin -search -recursive -filePath -comment -Checkinoptions
+<pre><code class="lang-text">checkin -search -recursive -filePath -comment -Checkinoptions
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-search</code></td>
+<td>Yes</td>
+<td>The search operation to use.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>Yes</td>
+<td>When used with <a href="SEARCH.html"><code>search</code></a>, includes files in subfolders.</td>
+</tr>
+<tr>
+<td><code>-filePath</code></td>
+<td>Yes</td>
+<td>The file(s) to be checked in. This is the default parameter.</td>
+</tr>
+<tr>
+<td><code>-comment</code></td>
+<td>Yes</td>
+<td>The comment to add to the check-in. In the visual command builder, the default value is <code>Checked by PDMShell</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><p><code>search</code>: The search operation to use.</p>
 </li>

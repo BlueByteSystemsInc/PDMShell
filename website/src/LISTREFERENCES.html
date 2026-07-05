@@ -98,16 +98,48 @@
 </ul>
 <p>This command is especially useful for auditing references, troubleshooting missing files, validating migrations, or identifying broken or external references.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">listreferences -filepath -search -recursive -csv
+<pre><code class="lang-text">listreferences -filepath -search -recursive -csv
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-filepath</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-search</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-csv</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>filepath</code> Optional. Lists references for a single file. If a relative path is provided, it is resolved against the current directory. When specified, the search parameter is ignored.</li>
 <li><a href="SEARCH.html"><code>search</code></a> Optional. Search query used to find files whose references should be listed. The search is scoped to the current directory. Supports % wildcards. Can be combined with recursive.</li>
 <li><code>recursive</code> Optional. When used with search, includes subfolders of the current directory when locating files whose references should be listed.</li>
 <li><code>csv</code> Optional. Saves the reference listing results to a CSV file.</li>
 </ul>
-<h2 id="csv-output">CSV OUTPUT</h2>
+<h3 id="csv-output">CSV OUTPUT</h3>
 <p>The exported CSV contains the following columns:</p>
 <pre><code class="lang-bash">FileID
 FolderID

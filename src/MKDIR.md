@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a new vault folder.
 title: mkdir Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,19 @@ title: mkdir Command | PDMShell | SOLIDWORKS PDM
 Creates a new folder.
 
 ## Syntax
-```bash
+
+```text
 mkdir -directory
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-directory` | Yes | The folder to create. Supports placeholders. |
+
+### Parameter Details
+
 - `directory`: The folder to create. Supports placeholders.
 
 >[!NOTE]

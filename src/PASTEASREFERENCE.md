@@ -1,4 +1,4 @@
----
+﻿---
 description: Appends one custom reference file to a source file or to files found by search.
 title: pasteasreference Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -11,11 +11,22 @@ The `pasteasreference` command uses `filePath` as the reference file to append. 
 This command is useful when a workflow creates or finds a supporting file and then needs to append it as a custom reference to one or more target files.
 
 ## Syntax
-```bash
+
+```text
 pasteasreference -filePath reference_file (-source source_file | -search search_query) [-recursive]
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Mode-dependent | See parameter details below. |
+| `-source` | Mode-dependent | See parameter details below. |
+| `-search` | Mode-dependent | See parameter details below. |
+| `-recursive` | No | See parameter details below. |
+
+### Parameter Details
+
 - `filePath` Required. Reference file to append.
 - `source` Optional. Single file that will receive the appended reference. Use either `source` or [`search`](SEARCH.md).
 - [`search`](SEARCH.md) Optional. Search query used to find files that will receive the appended reference. Use either `source` or [`search`](SEARCH.md).

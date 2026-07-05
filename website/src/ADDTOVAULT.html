@@ -95,17 +95,98 @@
 </div>
 <hr>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">addtovault [-source &lt;path&gt; | -map &lt;csvPath&gt;]  [-skip] [-count] | [-directory &lt;Vault or outside directory&gt;] [-search &lt;pattern&gt;] [-recursive] [-batch &lt;size&gt;] [-ignoreexisting] [-updaterefs] [-csv &lt;outputPath&gt;] [-propertymap] [-clear] [-label]
+<pre><code class="lang-text">addtovault [-source &lt;path&gt; | -map &lt;csvPath&gt;]  [-skip] [-count] | [-directory &lt;Vault or outside directory&gt;] [-search &lt;pattern&gt;] [-recursive] [-batch &lt;size&gt;] [-ignoreexisting] [-updaterefs] [-csv &lt;outputPath&gt;] [-propertymap] [-clear] [-label]
 </code></pre>
-<hr>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-source</code></td>
+<td>No</td>
+<td>Specifies the source file or directory to be added to the vault.</td>
+</tr>
+<tr>
+<td><code>-map</code></td>
+<td>No</td>
+<td>Specifies a CSV file containing file mapping information.</td>
+</tr>
+<tr>
+<td><code>-skip</code></td>
+<td>No</td>
+<td>Optional.</td>
+</tr>
+<tr>
+<td><code>-count</code></td>
+<td>No</td>
+<td>Optional.</td>
+</tr>
+<tr>
+<td><code>-directory</code></td>
+<td>No</td>
+<td>Specifies the destination folder in the PDM vault.</td>
+</tr>
+<tr>
+<td><code>-search</code></td>
+<td>No</td>
+<td>Optional.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>Optional.</td>
+</tr>
+<tr>
+<td><code>-batch</code></td>
+<td>No</td>
+<td>Optional.</td>
+</tr>
+<tr>
+<td><code>-ignoreexisting</code></td>
+<td>No</td>
+<td>Optional.</td>
+</tr>
+<tr>
+<td><code>-updaterefs</code></td>
+<td>No</td>
+<td>Optional.</td>
+</tr>
+<tr>
+<td><code>-csv</code></td>
+<td>No</td>
+<td>Optional.</td>
+</tr>
+<tr>
+<td><code>-propertymap</code></td>
+<td>No</td>
+<td>A csv file path containing a list of files and their properties. Use <a href="DOCMANPROPS.html">DocManProps</a> to generate a list and edit in excel.</td>
+</tr>
+<tr>
+<td><code>-clear</code></td>
+<td>No</td>
+<td>Optional.</td>
+</tr>
+<tr>
+<td><code>-label</code></td>
+<td>No</td>
+<td>Optional.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>source</code>:
 Specifies the source file or directory to be added to the vault.</li>
 </ul>
 <p>Supports:</p>
-<p>• Single file<br>
-• Folder</p>
+<p>â€¢ Single file<br>
+â€¢ Folder</p>
 <p>If a folder is specified, files can be filtered using <code>-search</code> and <code>-recursive</code>.</p>
 <p>If not specified, the current working directory is used.</p>
 <hr>
@@ -159,9 +240,9 @@ addtovault -map &quot;C:\Users\hawkridge\Downloads\map\map.csv&quot; -batch 50 -
 <p>(Optional)</p>
 <p>File Explorer search pattern used to filter files when <code>-source</code> is a folder.</p>
 <p>Supports:</p>
-<p>• Wildcards (<code>*</code>)<br>
-• Multiple extensions<br>
-• Separators: <code>,</code> <code>;</code> <code>|</code></p>
+<p>â€¢ Wildcards (<code>*</code>)<br>
+â€¢ Multiple extensions<br>
+â€¢ Separators: <code>,</code> <code>;</code> <code>|</code></p>
 <p>Examples:</p>
 <pre><code class="lang-bash">-search &quot;*.sldprt&quot;  
 -search &quot;*.sldprt;*.sldasm&quot;  
@@ -273,17 +354,17 @@ A csv file path containing a list of files and their properties. Use <a href="DO
 </code></pre>
 <hr>
 <h2 id="remarks">Remarks</h2>
-<p>• Files are left checked out after being added.
-• Use <a href="CHECKIN.html"><code>checkin</code></a> command to check in files after adding.</p>
+<p>â€¢ Files are left checked out after being added.
+â€¢ Use <a href="CHECKIN.html"><code>checkin</code></a> command to check in files after adding.</p>
 <p>Example:</p>
 <pre><code class="lang-bash">checkin -search % -recursive
 </code></pre>
 <hr>
-<p>• Batch processing is strongly recommended for large migrations.</p>
-<p>• The <code>ignoreexisting</code> parameter prevents duplicate files from being added.</p>
-<p>• The <code>updaterefs</code> parameter should be used when adding SOLIDWORKS assemblies.</p>
-<p>• Ensure you have sufficient vault permissions before running this command.</p>
-<p>• The <code>map</code> parameter overrides <code>source</code> if both are specified.</p>
+<p>â€¢ Batch processing is strongly recommended for large migrations.</p>
+<p>â€¢ The <code>ignoreexisting</code> parameter prevents duplicate files from being added.</p>
+<p>â€¢ The <code>updaterefs</code> parameter should be used when adding SOLIDWORKS assemblies.</p>
+<p>â€¢ Ensure you have sufficient vault permissions before running this command.</p>
+<p>â€¢ The <code>map</code> parameter overrides <code>source</code> if both are specified.</p>
 <hr>
 <div class="NOTE">
 <h5>Note</h5>

@@ -93,10 +93,41 @@
 <p>The command prints a tree in the session output and can optionally export the results to CSV.</p>
 <hr>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">whereusedtree (-filePath &lt;path&gt; | -search &lt;query&gt;) [-depth &lt;number&gt;] [-csv &lt;file.csv&gt;]
+<pre><code class="lang-text">whereusedtree (-filePath &lt;path&gt; | -search &lt;query&gt;) [-depth &lt;number&gt;] [-csv &lt;file.csv&gt;]
 </code></pre>
-<hr>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-filePath</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-search</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-depth</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-csv</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><p><code>filePath</code>
 Full or relative path of the file to evaluate. Use either <code>-filePath</code> or <code>-search</code>, not both.</p>

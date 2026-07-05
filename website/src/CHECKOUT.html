@@ -90,9 +90,41 @@
 <h2 id="description">Description</h2>
 <p>Performs a check out operation on a specified file or many files.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">checkout -search -recursive -filePath -checkoutOptions
+<pre><code class="lang-text">checkout -search -recursive -filePath -checkoutOptions
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-search</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>Yes</td>
+<td>Recursively check out all files in the current directory. Use in combination with search</td>
+</tr>
+<tr>
+<td><code>-filePath</code></td>
+<td>Yes</td>
+<td>The file(s) to be checked out. This is the default parameter</td>
+</tr>
+<tr>
+<td><code>-checkoutOptions</code></td>
+<td>No</td>
+<td>Optional. Use this to check a file and its references at once:</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <p><code>-search</code>: Search keyword</p>
 <p>-<code>filePath</code>: The file(s) to be checked out. This is the default parameter</p>
 <p>-<code>recursive</code>: Recursively check out all files in the current directory. Use in combination with search</p>

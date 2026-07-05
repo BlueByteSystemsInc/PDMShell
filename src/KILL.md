@@ -1,4 +1,4 @@
----
+﻿---
 description: Stops a running process by name.
 title: kill Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,20 @@ title: kill Command | PDMShell | SOLIDWORKS PDM
 Kills a process.
 
 ## Syntax
-```bash
-kill -process 
+
+```text
+kill -process
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-process` | Yes | See parameter details below. |
+| `-programName` | No | The process to terminate (with extension). |
+
+### Parameter Details
+
 - `programName`: The process to terminate (with extension).
 
 ## Examples

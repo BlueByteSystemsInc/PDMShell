@@ -90,7 +90,7 @@
 <p><code>runscript</code> loads and runs a <code>.pdmshell</code> script file.</p>
 <p>Use it when you want to keep shared automation in one script and call it from another command, from the visual editor, or directly from <code>pdmcli.exe</code>.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-pdmshell">runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
+<pre><code class="lang-text">runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
 runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -filePath &quot;C:\Vault\Parts\1001.sldprt&quot;
 runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -search &quot;Name=%.sldprt&quot; -recursive
 runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -items &quot;123,45;678,90&quot;
@@ -106,32 +106,33 @@ runscript -source &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -items &quot;1
 </thead>
 <tbody>
 <tr>
-<td><code>source</code></td>
-<td>Yes</td>
-<td>Path to the <code>.pdmshell</code> script file to run.</td>
+<td><code>-source</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
 </tr>
 <tr>
-<td><code>filePath</code></td>
-<td>No</td>
-<td>Runs the script with one file as the current file context.</td>
+<td><code>-filePath</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
 </tr>
 <tr>
-<td><code>search</code></td>
-<td>No</td>
-<td>Runs the script for files or folders returned by a PDM search.</td>
+<td><code>-search</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
 </tr>
 <tr>
-<td><code>recursive</code></td>
-<td>No</td>
-<td>Includes child folders when used with <code>search</code>.</td>
+<td><code>-recursive</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
 </tr>
 <tr>
-<td><code>items</code></td>
-<td>No</td>
-<td>Semicolon-separated file or folder ID pairs supplied by command-line integrations.</td>
+<td><code>-items</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
 </tr>
 </tbody>
 </table>
+<h3 id="parameter-details">Parameter Details</h3>
 <p>Only one targeting mode is normally needed: <code>filePath</code>, <a href="SEARCH.html"><code>search</code></a>, or <code>items</code>.</p>
 <h2 id="items-format">Items format</h2>
 <p>Use <code>items</code> when an external command already knows the PDM IDs to process.</p>

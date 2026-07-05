@@ -90,9 +90,41 @@
 <h2 id="description">Description</h2>
 <p>Updates or filters files using the Toolbox flag.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">toolbox -filePath -search -recursive -toolboxflag
+<pre><code class="lang-text">toolbox -filePath -search -recursive -toolboxflag
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-filePath</code></td>
+<td>Yes</td>
+<td>File to process.</td>
+</tr>
+<tr>
+<td><code>-search</code></td>
+<td>Yes</td>
+<td>Search query used to find files to process.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>Yes</td>
+<td>When used with <a href="SEARCH.html"><code>search</code></a>, includes files in subfolders.</td>
+</tr>
+<tr>
+<td><code>-toolboxflag</code></td>
+<td>Yes</td>
+<td>Toolbox flag value to apply or filter by.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>filePath</code>: File to process.</li>
 <li><code>search</code>: Search query used to find files to process.</li>

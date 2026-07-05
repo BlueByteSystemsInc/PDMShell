@@ -1,4 +1,4 @@
----
+﻿---
 description: Exits PDMShell.
 title: quit Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,19 @@ title: quit Command | PDMShell | SOLIDWORKS PDM
 Quits the application.
 
 ## Syntax
-```bash
+
+```text
 quit -silent
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-silent` | No | Optional. suppresses the close dialog box. |
+
+### Parameter Details
+
 - `silent`:
 (Optional) suppresses the close dialog box.
 

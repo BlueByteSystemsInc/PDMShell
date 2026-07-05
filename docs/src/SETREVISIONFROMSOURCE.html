@@ -98,9 +98,31 @@
 It does not evaluate <code>%nextrevision%</code>, <code>%previousrevision%</code>, <code>%initial%</code>, or bracketed variables. Use literal revision values only.</p>
 <p>You may optionally output a results CSV that includes success or failure information for each processed row.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">setrevisionfromsource -source -csv
+<pre><code class="lang-text">setrevisionfromsource -source -csv
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-source</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-csv</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><p><code>source</code><br>
 Path to the CSV file that contains the input dataset. Required columns:</p>

@@ -90,9 +90,41 @@
 <h2 id="description">Description</h2>
 <p>Checks and upgrades SOLIDWORKS PDM file versions from a CSV source.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">versionupgradefromsource -source -csv -bumprevision -referencescheck
+<pre><code class="lang-text">versionupgradefromsource -source -csv -bumprevision -referencescheck
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-source</code></td>
+<td>Yes</td>
+<td>CSV source file containing files to process.</td>
+</tr>
+<tr>
+<td><code>-csv</code></td>
+<td>Yes</td>
+<td>CSV file path used to write command results.</td>
+</tr>
+<tr>
+<td><code>-bumprevision</code></td>
+<td>Yes</td>
+<td>Bumps the file revision during the version upgrade operation.</td>
+</tr>
+<tr>
+<td><code>-referencescheck</code></td>
+<td>Yes</td>
+<td>Checks references before running the version upgrade operation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>source</code>: CSV source file containing files to process.</li>
 <li><code>csv</code>: CSV file path used to write command results.</li>

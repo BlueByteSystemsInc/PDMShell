@@ -90,9 +90,36 @@
 <h2 id="description">Description</h2>
 <p>Opens the PDM inbox or sends a message as the logged-in user.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">inbox -filePath -name -value
+<pre><code class="lang-text">inbox -filePath -name -value
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-filePath</code></td>
+<td>Yes</td>
+<td>Associated file</td>
+</tr>
+<tr>
+<td><code>-name</code></td>
+<td>Yes</td>
+<td>Name of the user to send the message to.</td>
+</tr>
+<tr>
+<td><code>-value</code></td>
+<td>Yes</td>
+<td>Message: supports evaluation against the <code>filePath</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <p>-<code>name</code>: Name of the user to send the message to.
 -<code>value</code>: Message: supports evaluation against the <code>filePath</code>.
 -<code>filePath</code>: Associated file</p>

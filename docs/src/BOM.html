@@ -91,9 +91,56 @@
 <p>The <code>bom</code> command allows you to extract a bill of materials from a SOLIDWORKS file inside the PDM vault and export it to a CSV file.<br>
 This command supports configuration evaluation using <code>$configuration</code>, allows specifying <code>configNames</code>, and supports selecting a <code>layout</code> from all available BOM layouts.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">bom -filePath -name -directory -search -recursive -configNames -layout
+<pre><code class="lang-text">bom -filePath -name -directory -search -recursive -configNames -layout
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-filePath</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-name</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-directory</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-search</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-configNames</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-layout</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><p><code>filePath</code><br>
 Path to the SOLIDWORKS file whose BOM you want to export.</p>

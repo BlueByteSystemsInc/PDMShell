@@ -1,4 +1,4 @@
----
+﻿---
 description: Moves files listed in a CSV source to a target vault folder.
 title: movefromsource Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -20,12 +20,19 @@ When a file is moved:
 ---
 
 ## Syntax
-```bash
+
+```text
 movefromsource -source
 ```
----
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-source` | Yes | See parameter details below. |
+
+### Parameter Details
+
 - `source`  
   Path to a CSV file containing file IDs and target directories.  
   The CSV must contain at least two columns:

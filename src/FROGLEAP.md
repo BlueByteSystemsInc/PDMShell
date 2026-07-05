@@ -1,4 +1,4 @@
----
+﻿---
 description: Promotes an older file version to become the latest version.
 title: frogleap Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,21 @@ title: frogleap Command | PDMShell | SOLIDWORKS PDM
 The `frogleap` command promotes an older file version to become the latest version.
 
 ## Syntax
-```bash
+
+```text
 frogleap -search -filePath -oldVersion
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-search` | Yes | The search operation to use. |
+| `-filePath` | Yes | The file(s) to be frog leaped. This is the default parameter. |
+| `-oldVersion` | Yes | The old version to leap. This is an integer. |
+
+### Parameter Details
+
 - `search`: The search operation to use.
 - `filePath`: The file(s) to be frog leaped. This is the default parameter.
 - `oldVersion`: The old version to leap. This is an integer.

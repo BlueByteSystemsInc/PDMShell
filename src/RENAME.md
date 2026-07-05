@@ -1,4 +1,4 @@
----
+﻿---
 description: Renames one file or multiple files found by search.
 title: rename Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,17 +7,27 @@ title: rename Command | PDMShell | SOLIDWORKS PDM
 Renames a specified file.
 
 ## Syntax
-```bash
+
+```text
 rename -filePath -value -search
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Yes | The filerename. |
+| `-value` | Yes | The new name for the file. You must include the extension. |
+| `-search` | Yes | The search operation to use. |
+| `-directory` | No | The directory to rename. |
+
+### Parameter Details
+
 - `filePath`: The filerename.
 
 - `directory`: The directory to rename.
 - `value`: The new name for the file. You must include the extension.
 - `search`: The search operation to use.
-
-
 
 ## Examples
 ```bash

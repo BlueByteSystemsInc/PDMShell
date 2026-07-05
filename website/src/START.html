@@ -90,9 +90,56 @@
 <h2 id="description">Description</h2>
 <p>The <code>start</code> command launches programs, tools, or supported applications. It supports launching SOLIDWORKS, the PDM administration tool, Notepad, Windows Explorer, and other custom programs. It can also open the SOLIDWORKS API help file or the current folder in Explorer.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">start -process -swversion
+<pre><code class="lang-text">start -process -swversion
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-process</code></td>
+<td>No</td>
+<td><em>(Optional)</em> Specifies the program to start. Common values include:</td>
+</tr>
+<tr>
+<td><code>-swversion</code></td>
+<td>No</td>
+<td><em>(Optional)</em> Specifies the version of SOLIDWORKS to launch. The year should be provided (e.g., <code>2023</code>).</td>
+</tr>
+<tr>
+<td><code>-filePath</code></td>
+<td>No</td>
+<td><em>(Optional)</em> File path or executable to start. This is the default parameter.</td>
+</tr>
+<tr>
+<td><code>-admin</code></td>
+<td>No</td>
+<td>Launches the PDM administration tool.</td>
+</tr>
+<tr>
+<td><code>-notepad</code></td>
+<td>No</td>
+<td>Launches Notepad.</td>
+</tr>
+<tr>
+<td><code>-apihelp</code></td>
+<td>No</td>
+<td>Opens the SOLIDWORKS API help file.</td>
+</tr>
+<tr>
+<td><code>-explorer</code></td>
+<td>No</td>
+<td>Opens Windows Explorer. - <code>.</code>: Opens the current folder in Windows Explorer.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><p><code>filePath</code>:<br>
 <em>(Optional)</em> File path or executable to start. This is the default parameter.</p>

@@ -96,21 +96,75 @@
 <li>Single file transition</li>
 </ul>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash"># transition
-transition -transitionidorname &lt;id-or-name&gt; -filePath &lt;path&gt; [-mode simple|references]
-# transition
+<pre><code class="lang-text">transition -transitionidorname &lt;id-or-name&gt; -filePath &lt;path&gt; [-mode simple|references]
 transition -transitionidorname &lt;id-or-name&gt; -search &lt;pattern&gt; [-recursive] [-mode simple|references]
-# transition
 transition -source &lt;csv&gt; -password &lt;password&gt; [-batch &lt;size&gt;] [-comment &lt;text&gt;]
 </code></pre>
 <h2 id="parameters">Parameters</h2>
-<h2 id="transitionidorname"><code>transitionidorname</code></h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-transitionidorname</code></td>
+<td>Mode-dependent</td>
+<td>Specifies the workflow transition ID or name. Required for search and filepath modes.</td>
+</tr>
+<tr>
+<td><code>-filePath</code></td>
+<td>Mode-dependent</td>
+<td>Specifies a single file to transition.</td>
+</tr>
+<tr>
+<td><code>-mode</code></td>
+<td>No</td>
+<td>Optional. Controls whether direct file and search transitions use simple mode or reference mode.</td>
+</tr>
+<tr>
+<td><code>-search</code></td>
+<td>Mode-dependent</td>
+<td>Searches for files matching a pattern in the current directory.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>Includes subfolders when used with search.</td>
+</tr>
+<tr>
+<td><code>-source</code></td>
+<td>Mode-dependent</td>
+<td>Specifies a CSV file containing files to transition in batch.</td>
+</tr>
+<tr>
+<td><code>-password</code></td>
+<td>Yes</td>
+<td>Specifies the PDM user password required to execute the transition. Only used with <code>source</code> parameter. Example:</td>
+</tr>
+<tr>
+<td><code>-batch</code></td>
+<td>No</td>
+<td>Specifies how many files to process per batch.</td>
+</tr>
+<tr>
+<td><code>-comment</code></td>
+<td>No</td>
+<td>Specifies the transition comment.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
+<h3 id="transitionidorname"><code>transitionidorname</code></h3>
 <p>Specifies the workflow transition ID or name.
 Required for search and filepath modes.</p>
 <p>Example:</p>
 <pre><code class="lang-bash">-transitionidorname 12
 </code></pre>
-<h2 id="source"><code>source</code></h2>
+<h3 id="source"><code>source</code></h3>
 <p>Specifies a CSV file containing files to transition in batch.</p>
 <p>The CSV may be:</p>
 <ul>
@@ -123,7 +177,7 @@ Required for search and filepath modes.</p>
 <h5>Important</h5>
 <p>The file must be locally cached.</p>
 </div>
-<h2 id="password"><code>password</code></h2>
+<h3 id="password"><code>password</code></h3>
 <p>Specifies the PDM user password required to execute the transition.
 Only used with <code>source</code> parameter.
 Example:</p>
@@ -133,7 +187,7 @@ Example:</p>
 <h5>Important</h5>
 <p>Your password remains visible in your session output. Do not start PDMShell with winlog parameter.</p>
 </div>
-<h2 id="batch"><code>batch</code></h2>
+<h3 id="batch"><code>batch</code></h3>
 <p>Specifies how many files to process per batch.</p>
 <p>Default:
 1000
@@ -142,7 +196,7 @@ Example:</p>
 </code></pre>
 <p>Recommended values:
 500</p>
-<h2 id="comment"><code>comment</code></h2>
+<h3 id="comment"><code>comment</code></h3>
 <p>Specifies the transition comment.</p>
 <p>Default:</p>
 <p>Transitioned by PDMShell</p>
@@ -150,7 +204,7 @@ Example:</p>
 <pre><code class="lang-bash">-comment &quot;Released by migration script&quot;
 </code></pre>
 <hr>
-<h2 id="mode"><code>mode</code></h2>
+<h3 id="mode"><code>mode</code></h3>
 <p>Optional. Controls whether direct file and search transitions use simple mode or reference mode.</p>
 <p>Allowed values:</p>
 <ul>
@@ -162,17 +216,17 @@ Example:</p>
 </code></pre>
 <p>This parameter applies to <code>filePath</code> and <code>search</code> mode. CSV source mode uses the PDM batch transition reference settings described below.</p>
 <hr>
-<h2 id="search"><a href="SEARCH.html"><code>search</code></a></h2>
+<h3 id="search"><a href="SEARCH.html"><code>search</code></a></h3>
 <p>Searches for files matching a pattern in the current directory.</p>
 <p>Example:</p>
 <pre><code class="lang-bash"># transition
 -search %.sldprt
 </code></pre>
 <hr>
-<h2 id="recursive"><code>recursive</code></h2>
+<h3 id="recursive"><code>recursive</code></h3>
 <p>Includes subfolders when used with search.</p>
 <hr>
-<h2 id="filepath"><code>filePath</code></h2>
+<h3 id="filepath"><code>filePath</code></h3>
 <p>Specifies a single file to transition.</p>
 <p>Example:</p>
 <pre><code class="lang-bash"># transition
@@ -204,7 +258,7 @@ Example:</p>
 <hr>
 <h2 id="important-considerations-for-batch-mode">Important Considerations For Batch Mode</h2>
 <p><img src="/images/ReferenceDialogSettings.png" alt="ReferenceDialogSettings"></p>
-<p>PDMShell batch transitions are affected by the logged-in user’s Reference Dialog settings. If “Select child references during state change” and “Select references that are defined as drawing nodes during state change” are enabled, PDM will also transition referenced files, not just the source files from the CSV. If you want PDMShell batch mode to transition only the source files, these options must be disabled for the logged-in user.</p>
+<p>PDMShell batch transitions are affected by the logged-in userâ€™s Reference Dialog settings. If â€œSelect child references during state changeâ€ and â€œSelect references that are defined as drawing nodes during state changeâ€ are enabled, PDM will also transition referenced files, not just the source files from the CSV. If you want PDMShell batch mode to transition only the source files, these options must be disabled for the logged-in user.</p>
 <h2 id="search-mode">Search Mode</h2>
 <p>Transitions files found using search.</p>
 <p>Example:</p>

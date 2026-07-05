@@ -1,4 +1,4 @@
----
+﻿---
 description: Opens a preview for a file or files found by search.
 title: preview Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,11 +7,20 @@ title: preview Command | PDMShell | SOLIDWORKS PDM
 Opens a preview for a file or files found by search.
 
 ## Syntax
-```bash
+
+```text
 preview -filePath -search -Directory
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Yes | File to preview. |
+| `-search` | Yes | Search query used to find files to preview. - `Directory`: Directory used as the search or preview context. |
+
+### Parameter Details
+
 - `filePath`: File to preview.
 - `search`: Search query used to find files to preview.
 - `Directory`: Directory used as the search or preview context.

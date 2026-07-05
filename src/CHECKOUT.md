@@ -1,4 +1,4 @@
----
+﻿---
 description: Checks out one file or multiple files found by search.
 title: checkout Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,22 @@ title: checkout Command | PDMShell | SOLIDWORKS PDM
 Performs a check out operation on a specified file or many files.
 
 ## Syntax
-```bash
+
+```text
 checkout -search -recursive -filePath -checkoutOptions
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-search` | Yes | See parameter details below. |
+| `-recursive` | Yes | Recursively check out all files in the current directory. Use in combination with search |
+| `-filePath` | Yes | The file(s) to be checked out. This is the default parameter |
+| `-checkoutOptions` | No | Optional. Use this to check a file and its references at once: |
+
+### Parameter Details
+
 `-search`: Search keyword
 
 -`filePath`: The file(s) to be checked out. This is the default parameter
@@ -40,7 +52,6 @@ checkout -search -recursive -filePath -checkoutOptions
 
 
 You combine values by using `+`. Please make sure to wrap the parameter value in "". Example: `"SkipExisting + LockReferencedFilesToo"`
-
 
 ## Examples
 ```bash

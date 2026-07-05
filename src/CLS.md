@@ -1,4 +1,4 @@
----
+﻿---
 description: Clears the current session.
 title: cls Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,11 +7,19 @@ title: cls Command | PDMShell | SOLIDWORKS PDM
 Clears the current session.
 
 ## Syntax
-```bash
+
+```text
 cls
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| None | No | This command has no parameters. |
+
+### Parameter Details
+
 Command has no parameters.
 
 ## Examples

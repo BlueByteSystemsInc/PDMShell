@@ -1,4 +1,4 @@
----
+﻿---
 description: Lists all the users in the active vault.
 title: users Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,17 @@ title: users Command | PDMShell | SOLIDWORKS PDM
 Lists all the users in the active vault.
 
 ## Syntax
-``bash
+
+```text
 users
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| None | No | This command has no parameters. |
+
 ## Examples
 ```bash
 users

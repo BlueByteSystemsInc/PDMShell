@@ -1,4 +1,4 @@
----
+﻿---
 description: Restarts the PDMShell session.
 title: reboot Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,19 @@ title: reboot Command | PDMShell | SOLIDWORKS PDM
 The `reboot` command restarts the PDMShell session.
 
 ## Syntax
-```bash
+
+```text
 reboot -pdmaddins
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-pdmaddins` | Yes | Targets SOLIDWORKS PDM add-ins during the reboot operation. |
+
+### Parameter Details
+
 - `pdmaddins`: Targets SOLIDWORKS PDM add-ins during the reboot operation.
 
 ## Examples

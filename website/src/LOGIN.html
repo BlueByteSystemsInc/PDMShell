@@ -90,9 +90,51 @@
 <h2 id="description">Description</h2>
 <p>Authenticates a user to a specified vault.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">login [-auto|-win -username -password|-external -username -password ] -vaultname 
+<pre><code class="lang-text">login [-auto|-win -username -password|-external -username -password ] -vaultname
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-auto</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-win</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-username</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-password</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-external</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-vaultname</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <p><code>auto</code>: Automatic authentication with current user. Displays login dialog box if not logged in.</p>
 <p><code>win</code>: Automatic Windows authentication with current user. Does not display login dialog box.</p>
 <p><code>external</code>: Toggle ensures that a license is consumed.</p>

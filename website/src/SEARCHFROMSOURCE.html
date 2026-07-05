@@ -100,10 +100,36 @@
 <p>Optionally, the command can write the results to a CSV file and add/update that CSV in the vault.</p>
 <hr>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">searchfromsource -filePath -recursive -csv
+<pre><code class="lang-text">searchfromsource -filePath -recursive -csv
 </code></pre>
-<hr>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-filePath</code></td>
+<td>Yes</td>
+<td>Path to the source CSV file to read input values.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>Yes</td>
+<td>If specified, the search will recursively search through all subfolders.</td>
+</tr>
+<tr>
+<td><code>-csv</code></td>
+<td>No</td>
+<td>Optional output CSV file name/path.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <h3 id="filepath"><code>filePath</code></h3>
 <p>Path to the source CSV file to read input values.</p>
 <ul>
@@ -131,7 +157,7 @@
 <li>If the CSV file does not exist, PDMShell will create it and add it to the vault.</li>
 </ul>
 <hr>
-<h2 id="input-csv-format">Input CSV Format</h2>
+<h3 id="input-csv-format">Input CSV Format</h3>
 <p>The command reads:</p>
 <ul>
 <li>Comma-delimited CSV</li>

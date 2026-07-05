@@ -11,7 +11,7 @@ Use it when you want to keep shared automation in one script and call it from an
 
 ## Syntax
 
-```pdmshell
+```text
 runscript -source "C:\Vault\Scripts\CreateECO.pdmshell"
 runscript -source "C:\Vault\Scripts\CreateECO.pdmshell" -filePath "C:\Vault\Parts\1001.sldprt"
 runscript -source "C:\Vault\Scripts\CreateECO.pdmshell" -search "Name=%.sldprt" -recursive
@@ -22,11 +22,13 @@ runscript -source "C:\Vault\Scripts\CreateECO.pdmshell" -items "123,45;678,90"
 
 | Parameter | Required | Description |
 | --- | --- | --- |
-| `source` | Yes | Path to the `.pdmshell` script file to run. |
-| `filePath` | No | Runs the script with one file as the current file context. |
-| `search` | No | Runs the script for files or folders returned by a PDM search. |
-| `recursive` | No | Includes child folders when used with `search`. |
-| `items` | No | Semicolon-separated file or folder ID pairs supplied by command-line integrations. |
+| `-source` | Mode-dependent | See parameter details below. |
+| `-filePath` | Mode-dependent | See parameter details below. |
+| `-search` | Mode-dependent | See parameter details below. |
+| `-recursive` | Mode-dependent | See parameter details below. |
+| `-items` | Mode-dependent | See parameter details below. |
+
+### Parameter Details
 
 Only one targeting mode is normally needed: `filePath`, [`search`](SEARCH.md), or `items`.
 

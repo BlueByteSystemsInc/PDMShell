@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets the value of a variable for a specified checked out file or many checked out files.
 title: setvar Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,26 @@ title: setvar Command | PDMShell | SOLIDWORKS PDM
 Sets the value of a variable for a specified checked out file or many checked out files.
 
 ## Syntax
-```bash
+
+```text
 setvar (-filePath path | -search query) -variableName variable_name [-value value | -clear] [-configNames configuration_names] [-recursive] [-stringformat format]
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Mode-dependent | The file or folder to set the variable for. |
+| `-search` | Mode-dependent | The search operation to use. |
+| `-variableName` | Mode-dependent | The variable to set. |
+| `-value` | No | The value to assign to the variable. This parameter supports placeholders. When using `$value`, PDMShell substitutes the existing variable value; if the existing value is null or empty, `$value` evaluates to an empty... |
+| `-clear` | No | Clears the variable value. |
+| `-configNames` | No | The configuration names to set the variable for, separated by commas. |
+| `-recursive` | No | When used with [`search`](SEARCH.md), includes files in subfolders. |
+| `-stringformat` | No | string format. See remarks section. |
+
+### Parameter Details
+
 - `filePath`: The file or folder to set the variable for.
 
 - `variableName`: The variable to set.
@@ -25,7 +41,7 @@ setvar (-filePath path | -search query) -variableName variable_name [-value valu
 
 
 - `recursive`: When used with [`search`](SEARCH.md), includes files in subfolders.
-- `stringformat`: string format. See remarks section. 
+- `stringformat`: string format. See remarks section.
 
 ## Examples
 ```bash

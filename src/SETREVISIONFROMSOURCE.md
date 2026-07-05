@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets the revision of SOLIDWORKS PDM files from a CSV source containing file IDs and revision values.
 title: setrevisionfromsource Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -20,11 +20,18 @@ You may optionally output a results CSV that includes success or failure informa
 
 ## Syntax
 
-```bash
+```text
 setrevisionfromsource -source -csv
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-source` | Yes | See parameter details below. |
+| `-csv` | Yes | See parameter details below. |
+
+### Parameter Details
 
 - `source`  
   Path to the CSV file that contains the input dataset. Required columns:

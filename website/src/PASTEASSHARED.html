@@ -92,9 +92,41 @@
 <p>The <code>pasteasshared</code> command uses <code>filePath</code> or <a href="SEARCH.html"><code>search</code></a> to select the source file or files. The <code>directory</code> parameter is the destination vault folder where the shared file entries are created.</p>
 <p>This command uses the SOLIDWORKS PDM shared-file behavior. It does not create a copy of the file; it shares the same PDM file into another folder.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">pasteasshared (-filePath file_path | -search search_query) -directory target_vault_folder [-recursive]
+<pre><code class="lang-text">pasteasshared (-filePath file_path | -search search_query) -directory target_vault_folder [-recursive]
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-filePath</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-search</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-directory</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>filePath</code> Optional. Single source file to share. Use either <code>filePath</code> or <a href="SEARCH.html"><code>search</code></a>.</li>
 <li><code>search</code> Optional. Search query used to find files to share. Use either <code>filePath</code> or <code>search</code>.</li>

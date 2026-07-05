@@ -1,4 +1,4 @@
----
+﻿---
 description: Exports a bill of materials for a file or files found by search.
 title: bom Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -8,10 +8,25 @@ The `bom` command allows you to extract a bill of materials from a SOLIDWORKS fi
 This command supports configuration evaluation using `$configuration`, allows specifying `configNames`, and supports selecting a `layout` from all available BOM layouts.
 
 ## Syntax
-```bash
+
+```text
 bom -filePath -name -directory -search -recursive -configNames -layout
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Yes | See parameter details below. |
+| `-name` | Yes | See parameter details below. |
+| `-directory` | Yes | See parameter details below. |
+| `-search` | Yes | See parameter details below. |
+| `-recursive` | Yes | See parameter details below. |
+| `-configNames` | Yes | See parameter details below. |
+| `-layout` | Yes | See parameter details below. |
+
+### Parameter Details
+
 - `filePath`  
   Path to the SOLIDWORKS file whose BOM you want to export.
 

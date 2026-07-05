@@ -90,9 +90,31 @@
 <h2 id="description">Description</h2>
 <p>Displays version information for PDMShell, installed SOLIDWORKS, or the PDM client.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">version -solidworks -pdm
+<pre><code class="lang-text">version -solidworks -pdm
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-solidworks</code></td>
+<td>Yes</td>
+<td>Displays the versions of installed SOLIDWORKS. <strong>RESERVED FOR FUTURE. NOT IMPLEMENTED</strong></td>
+</tr>
+<tr>
+<td><code>-pdm</code></td>
+<td>Yes</td>
+<td>Displays the version of the installed PDM client. <strong>RESERVED FOR FUTURE. NOT IMPLEMENTED</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><p>No parameters: Displays the version of PDMShell.</p>
 </li>
@@ -101,7 +123,6 @@
 <li><p><code>pdm</code>: Displays the version of the installed PDM client. <strong>RESERVED FOR FUTURE. NOT IMPLEMENTED</strong></p>
 </li>
 </ul>
-<h2 id="parameters-1">Parameters</h2>
 <p>SOLIDWORKS - List versions of installed SOLIDWORKS</p>
 <h2 id="examples">Examples</h2>
 <pre><code class="lang-bash">version -solidworks

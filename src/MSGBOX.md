@@ -1,4 +1,4 @@
----
+﻿---
 description: Shows a Windows message box from a PDMShell command or script.
 title: msgbox Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -9,11 +9,21 @@ The `msgbox` command shows a Windows message box with the specified text.
 Use `msgbox` in scripts when you need to display a simple notification or checkpoint message to the user.
 
 ## Syntax
-```bash
+
+```text
 msgbox -value message [-title title] [-icon icon]
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-value` | Yes | *(Required)* Message text to display in the message box. |
+| `-title` | No | *(Optional)* Message box title. If omitted, PDMShell uses the current PDMShell version as the title. |
+| `-icon` | No | *(Optional)* Message box icon. Valid values are `None`, `Information`, `Warning`, `Error`, and `Question`. If omitted, PDMShell uses `Information`. |
+
+### Parameter Details
+
 - `value`:  
   *(Required)* Message text to display in the message box.
 
@@ -23,7 +33,7 @@ msgbox -value message [-title title] [-icon icon]
 - `icon`:  
   *(Optional)* Message box icon. Valid values are `None`, `Information`, `Warning`, `Error`, and `Question`. If omitted, PDMShell uses `Information`.
 
-## Visual Editor
+### Visual Editor
 In the visual editor command builder, the `icon` parameter is shown as a single-select combo box with the supported icon values:
 
 - `None`
@@ -32,7 +42,7 @@ In the visual editor command builder, the `icon` parameter is shown as a single-
 - `Error`
 - `Question`
 
-## Placeholders
+### Placeholders
 The `value` and `title` parameters support session placeholders. PDMShell evaluates placeholders before showing the message box, so you can display values from the current session in the message text.
 
 For example, after logging in to a vault, `$vaultName` resolves to the active vault name:

@@ -90,9 +90,46 @@
 <h2 id="description">Description</h2>
 <p>Displays a list of files and subdirectories in a directory.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">dir -sort -columns -csv -refresh
+<pre><code class="lang-text">dir -sort -columns -csv -refresh
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-sort</code></td>
+<td>Yes</td>
+<td>The column name to sort the list of files and folders with.</td>
+</tr>
+<tr>
+<td><code>-columns</code></td>
+<td>Yes</td>
+<td>The columns to display, separated by commas. These are PDM variables drawn from the @ tab.</td>
+</tr>
+<tr>
+<td><code>-csv</code></td>
+<td>Yes</td>
+<td>Export the directory listing to a CSV file. Must include the csv extension</td>
+</tr>
+<tr>
+<td><code>-refresh</code></td>
+<td>Yes</td>
+<td>Refreshes the session to load the current files and sub-folders in the active directory in the autocomplete list.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>Lists all files and all folders in the current directory recursively.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <p>-<code>sort</code>: The column name to sort the list of files and folders with.</p>
 <p>-<code>columns</code>: The columns to display, separated by commas. These are PDM variables drawn from the @ tab.</p>
 <p>-<code>csv</code>: Export the directory listing to a CSV file. Must include the csv extension</p>

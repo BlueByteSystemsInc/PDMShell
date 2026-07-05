@@ -1,4 +1,4 @@
----
+﻿---
 description: Renames files listed in a CSV source.
 title: renamefromsource Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -9,11 +9,21 @@ The `renamefromsource` command renames files listed in a CSV source. The CSV fil
 ---
 
 ## Syntax
-```bash
-renamefromsource -filePath -evaluatealias -csv 
+
+```text
+renamefromsource -filePath -evaluatealias -csv
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Yes | (Required) The source file path. This must be a CSV file with three columns: |
+| `-evaluatealias` | Yes | Toggle. This allows placeholders to be used in the new file name. |
+| `-csv` | Yes | Specifies the path to an additional CSV file for batch renaming. |
+
+### Parameter Details
+
 - `filePath`: (Required) The source file path. This must be a CSV file with three columns:
 
 1. File ID: The ID of the file to be renamed.

@@ -91,9 +91,61 @@
 <p>Waits until the supplied condition expression evaluates to true, or until the timeout is reached.</p>
 <p>Use <code>until</code> after commands such as <a href="RUNTASK.html"><code>runtask</code></a>, <a href="RUNTEMPLATE.html"><code>runtemplate</code></a>, <a href="export.html"><code>export</code></a>, or any automation step that creates files asynchronously. This prevents the next command from running before the expected files, variables, or process state are ready.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">until -conditions condition_expression [-timeout seconds] [-onTimeout stop|continue] [-match all|any|one] [-filePath path | -search query]
+<pre><code class="lang-text">until -conditions condition_expression [-timeout seconds] [-onTimeout stop|continue] [-match all|any|one] [-filePath path | -search query]
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-conditions</code></td>
+<td>Mode-dependent</td>
+<td>The condition expression to evaluate. Supports <code>and</code>, <code>or</code>, nested groups, file/folder/process exists checks, comparisons, PDM variables, placeholders, and simple arithmetic comparisons.</td>
+</tr>
+<tr>
+<td><code>-timeout</code></td>
+<td>No</td>
+<td>Maximum number of seconds to wait before the command fails. If omitted, PDMShell uses the command default.</td>
+</tr>
+<tr>
+<td><code>-onTimeout</code></td>
+<td>No</td>
+<td>Optional timeout behavior. Use <code>stop</code> to stop the script after timeout, or <code>continue</code> to log the timeout and keep running. The default is <code>stop</code>.</td>
+</tr>
+<tr>
+<td><code>-match</code></td>
+<td>No</td>
+<td>When <a href="SEARCH.html"><code>search</code></a> returns multiple files, controls how many files must satisfy the conditions. Use <code>any</code> when one matching file is enough, <code>all</code> when every matching file must pass, or <code>one</code> when exactly one m...</td>
+</tr>
+<tr>
+<td><code>-filePath</code></td>
+<td>No</td>
+<td>Optional file context used to evaluate PDM variables and file placeholders.</td>
+</tr>
+<tr>
+<td><code>-search</code></td>
+<td>No</td>
+<td>Optional search query. When supplied, PDMShell evaluates the condition against the files returned by the search.</td>
+</tr>
+<tr>
+<td><code>-directory</code></td>
+<td>No</td>
+<td>Optional vault folder used as the search scope. Only valid with <a href="SEARCH.html"><code>search</code></a>.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>Includes subfolders when used with <a href="SEARCH.html"><code>search</code></a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>conditions</code>: The condition expression to evaluate. Supports <code>and</code>, <code>or</code>, nested groups, file/folder/process exists checks, comparisons, PDM variables, placeholders, and simple arithmetic comparisons.</li>
 <li><code>timeout</code>: Maximum number of seconds to wait before the command fails. If omitted, PDMShell uses the command default.</li>

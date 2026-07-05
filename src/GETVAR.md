@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets the value of a variable for a specified file or folder.
 title: getvar Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,23 @@ title: getvar Command | PDMShell | SOLIDWORKS PDM
 Gets the value of a variable for a specified file or folder.
 
 ## Syntax
-```bash
+
+```text
 getvar -filePath -variableName -configNames -clear -version
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Yes | The file or folder to get the variable from. |
+| `-variableName` | Yes | The variable name to retrieve. |
+| `-configNames` | Yes | The configuration names to retrieve the variable from, separated by commas. |
+| `-clear` | Yes | Clears the variable value. |
+| `-version` | Yes | The version of the file to retrieve the variable from. |
+
+### Parameter Details
+
 - `filePath` :  
   The file or folder to get the variable from.
 

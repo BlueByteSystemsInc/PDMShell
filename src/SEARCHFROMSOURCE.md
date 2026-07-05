@@ -1,4 +1,4 @@
----
+﻿---
 description: Searches the vault for files listed in a CSV source and reports whether they exist.
 title: searchfromsource Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -19,12 +19,21 @@ Optionally, the command can write the results to a CSV file and add/update that 
 ---
 
 ## Syntax
-```bash
+
+```text
 searchfromsource -filePath -recursive -csv
 ```
----
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Yes | Path to the source CSV file to read input values. |
+| `-recursive` | Yes | If specified, the search will recursively search through all subfolders. |
+| `-csv` | No | Optional output CSV file name/path. |
+
+### Parameter Details
+
 ### `filePath`
 Path to the source CSV file to read input values.
 
@@ -55,7 +64,7 @@ Supported behaviors:
 
 ---
 
-## Input CSV Format
+### Input CSV Format
 The command reads:
 
 - Comma-delimited CSV
@@ -143,8 +152,6 @@ How it behaves:
 
 
 ---
-
-
 
 ## Output CSV Format
 When `-csv` is used, PDMShell generates the following columns:

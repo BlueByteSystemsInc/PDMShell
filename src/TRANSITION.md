@@ -1,4 +1,4 @@
----
+﻿---
 title: transition Command | PDMShell | SOLIDWORKS PDM
 description: Changes the workflow state for one file, files found by search, or files listed in a CSV source.
 ---
@@ -13,17 +13,30 @@ This command supports three modes:
 - Single file transition
 
 ## Syntax
-```bash
-# transition
+
+```text
 transition -transitionidorname <id-or-name> -filePath <path> [-mode simple|references]
-# transition
 transition -transitionidorname <id-or-name> -search <pattern> [-recursive] [-mode simple|references]
-# transition
 transition -source <csv> -password <password> [-batch <size>] [-comment <text>]
 ```
 
 ## Parameters
-## `transitionidorname`
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-transitionidorname` | Mode-dependent | Specifies the workflow transition ID or name. Required for search and filepath modes. |
+| `-filePath` | Mode-dependent | Specifies a single file to transition. |
+| `-mode` | No | Optional. Controls whether direct file and search transitions use simple mode or reference mode. |
+| `-search` | Mode-dependent | Searches for files matching a pattern in the current directory. |
+| `-recursive` | No | Includes subfolders when used with search. |
+| `-source` | Mode-dependent | Specifies a CSV file containing files to transition in batch. |
+| `-password` | Yes | Specifies the PDM user password required to execute the transition. Only used with `source` parameter. Example: |
+| `-batch` | No | Specifies how many files to process per batch. |
+| `-comment` | No | Specifies the transition comment. |
+
+### Parameter Details
+
+### `transitionidorname`
 Specifies the workflow transition ID or name.
 Required for search and filepath modes.
 
@@ -31,7 +44,7 @@ Example:
 ```bash
 -transitionidorname 12
 ```
-## `source`
+### `source`
 
 Specifies a CSV file containing files to transition in batch.
 
@@ -46,7 +59,7 @@ Example:
 >[!IMPORTANT]
 >The file must be locally cached.
 
-## `password`
+### `password`
 
 Specifies the PDM user password required to execute the transition.
 Only used with `source` parameter.
@@ -59,7 +72,7 @@ Example:
 >Your password remains visible in your session output. Do not start PDMShell with winlog parameter.
 
 
-## `batch`
+### `batch`
 
 Specifies how many files to process per batch.
 
@@ -72,7 +85,7 @@ Example:
 Recommended values:
 500
 
-## `comment`
+### `comment`
 
 Specifies the transition comment.
 
@@ -86,7 +99,7 @@ Example:
 ```
 ---
 
-## `mode`
+### `mode`
 
 Optional. Controls whether direct file and search transitions use simple mode or reference mode.
 
@@ -104,7 +117,7 @@ This parameter applies to `filePath` and `search` mode. CSV source mode uses the
 
 ---
 
-## [`search`](SEARCH.md)
+### [`search`](SEARCH.md)
 
 Searches for files matching a pattern in the current directory.
 
@@ -115,13 +128,13 @@ Example:
 ```
 ---
 
-## `recursive`
+### `recursive`
 
 Includes subfolders when used with search.
 
 ---
 
-## `filePath`
+### `filePath`
 
 Specifies a single file to transition.
 
@@ -167,7 +180,7 @@ transition -source transitions.csv -password mypass -batch 2000
 ## Important Considerations For Batch Mode
 ![ReferenceDialogSettings](/images/ReferenceDialogSettings.png)
 
-PDMShell batch transitions are affected by the logged-in user’s Reference Dialog settings. If “Select child references during state change” and “Select references that are defined as drawing nodes during state change” are enabled, PDM will also transition referenced files, not just the source files from the CSV. If you want PDMShell batch mode to transition only the source files, these options must be disabled for the logged-in user.
+PDMShell batch transitions are affected by the logged-in userâ€™s Reference Dialog settings. If â€œSelect child references during state changeâ€ and â€œSelect references that are defined as drawing nodes during state changeâ€ are enabled, PDM will also transition referenced files, not just the source files from the CSV. If you want PDMShell batch mode to transition only the source files, these options must be disabled for the logged-in user.
 
 
 

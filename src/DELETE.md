@@ -1,4 +1,4 @@
----
+﻿---
 description: Deletes one file, one folder, or multiple files found by search.
 title: delete Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,26 @@ title: delete Command | PDMShell | SOLIDWORKS PDM
 The `delete` command deletes one file, one folder, or multiple files found by search. It supports target selection by file path, directory path, search query, or ID.
 
 ## Syntax
-```bash
+
+```text
 delete [-filePath|-id] -directory -search -recursive -list -csv -destroy
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | No | Optional. Specifies the file path of the file to be deleted. |
+| `-id` | No | Optional. Specifies the ID of the file to be deleted. |
+| `-directory` | No | Optional. Specifies the directory to be deleted. If used with the -recursive parameter, all files and subdirectories within the directory will also be deleted. |
+| `-search` | No | Optional. A search query to filter files or directories to be deleted. |
+| `-recursive` | No | Optional. Deletes all files and subdirectories within the specified directory. This parameter is only applicable when deleting directories. |
+| `-list` | No | Optional. Lists all the deleted files. Specifying `recursive` with this parameter will do a drill down search and fetch all deleted files. |
+| `-csv` | Mode-dependent | Exports a list of deleted files to a csv. This only works if `list is specified`. |
+| `-destroy` | Mode-dependent | If specified, the deleted file will be also destroyed. `-destroy` only affects results from the [`search`](SEARCH.md) parameter. |
+
+### Parameter Details
+
 - `filePath`:
 (Optional) Specifies the file path of the file to be deleted.
 
@@ -37,7 +53,7 @@ delete [-filePath|-id] -directory -search -recursive -list -csv -destroy
 > Use the exported csv from -csv with the [recover](RECOVER.md) command.
 
 >[!NOTE]
->  `-destroy` only affects results from the [`search`](SEARCH.md) parameter. 
+>  `-destroy` only affects results from the [`search`](SEARCH.md) parameter.
 
 ## Examples
 Delete files matching a search query:

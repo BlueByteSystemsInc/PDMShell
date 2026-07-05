@@ -91,9 +91,9 @@
 <p>The <code>docmanprops</code> command exports and updates SOLIDWORKS file custom properties without opening SOLIDWORKS.</p>
 <p>This command supports two primary modes:</p>
 <ul>
-<li>Export Mode (Default) â€” Reads properties from SOLIDWORKS files and writes them to a CSV file</li>
-<li>Update Mode â€” Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)</li>
-<li>Refresh Mode â€” Reads a CSV file and refreshes the content of the csv.</li>
+<li>Export Mode (Default) Ã¢â‚¬â€ Reads properties from SOLIDWORKS files and writes them to a CSV file</li>
+<li>Update Mode Ã¢â‚¬â€ Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)</li>
+<li>Refresh Mode Ã¢â‚¬â€ Reads a CSV file and refreshes the content of the csv.</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
@@ -101,17 +101,63 @@
 </div>
 <hr>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-update] [-refresh] [-extension]
+<pre><code class="lang-text">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-update] [-refresh] [-extension]
 </code></pre>
-<hr>
 <h2 id="parameters">Parameters</h2>
-<h2 id="directory"><code>directory</code></h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-directory</code></td>
+<td>Yes</td>
+<td>Specifies the folder containing SOLIDWORKS files.</td>
+</tr>
+<tr>
+<td><code>-csv</code></td>
+<td>Yes</td>
+<td>Specifies the CSV file path.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>When specified, searches subfolders.</td>
+</tr>
+<tr>
+<td><code>-configNames</code></td>
+<td>No</td>
+<td>Specifies which configurations to include.</td>
+</tr>
+<tr>
+<td><code>-update</code></td>
+<td>No</td>
+<td>When specified, the command runs in Update Mode.</td>
+</tr>
+<tr>
+<td><code>-refresh</code></td>
+<td>No</td>
+<td>When specified, the command runs in Refresh Mode.</td>
+</tr>
+<tr>
+<td><code>-extension</code></td>
+<td>No</td>
+<td>Specifies which file extension filters to include when exporting or updating properties.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
+<h3 id="directory"><code>directory</code></h3>
 <p>Specifies the folder containing SOLIDWORKS files.</p>
 <p>Example:</p>
 <pre><code class="lang-bash">`-directory &quot;C:\Vault\Projects&quot;`
 </code></pre>
 <hr>
-<h2 id="csv"><code>csv</code></h2>
+<h3 id="csv"><code>csv</code></h3>
 <p>Specifies the CSV file path.</p>
 <p>Used for:</p>
 <ul>
@@ -120,22 +166,22 @@
 </ul>
 <p>Example: <code>-csv &quot;C:\temp\props.csv&quot;</code></p>
 <hr>
-<h2 id="update"><code>update</code></h2>
+<h3 id="update"><code>update</code></h3>
 <p>When specified, the command runs in Update Mode.</p>
 <p>Reads the CSV file and writes the properties back into the SOLIDWORKS files.</p>
 <hr>
-<h2 id="refresh"><code>refresh</code></h2>
+<h3 id="refresh"><code>refresh</code></h3>
 <p>When specified, the command runs in Refresh Mode.</p>
 <p>Reads the CSV file and refreshes the content of the properties in the csv file.</p>
 <hr>
-<h2 id="recursive"><code>recursive</code></h2>
+<h3 id="recursive"><code>recursive</code></h3>
 <h2 id="when-specified-searches-subfolders">When specified, searches subfolders.</h2>
-<h2 id="confignames"><code>configNames</code></h2>
+<h3 id="confignames"><code>configNames</code></h3>
 <p>Specifies which configurations to include.</p>
 <p>Default: All configurations</p>
 <p>Example: <code>-configNames &quot;Default,Config1&quot;</code> Use space for custom property.</p>
 <hr>
-<h2 id="extension"><code>extension</code></h2>
+<h3 id="extension"><code>extension</code></h3>
 <p>Specifies which file extension filters to include when exporting or updating properties.</p>
 <p>Default: <code>*</code> (all files)</p>
 <p>Supports wildcards and multiple values separated by commas.</p>
@@ -216,8 +262,8 @@ Exception
 <h2 id="success-and-error-tracking">Success And Error Tracking</h2>
 <p>The CSV is updated during update:</p>
 <p>Success column:</p>
-<p>True â€” Property updated successfully<br>
-False â€” Property update failed</p>
+<p>True Ã¢â‚¬â€ Property updated successfully<br>
+False Ã¢â‚¬â€ Property update failed</p>
 <p>Exception column:</p>
 <p>Contains error message</p>
 <p>Example:</p>

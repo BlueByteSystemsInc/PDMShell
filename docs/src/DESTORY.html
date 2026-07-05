@@ -90,9 +90,36 @@
 <h2 id="description">Description</h2>
 <p>The <code>destroy</code> command permanently deletes files that have already been marked as deleted in a specified directory. This command supports recursive deletion and filtering by date.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">destroy -directory -recursive -date 
+<pre><code class="lang-text">destroy -directory -recursive -date
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-directory</code></td>
+<td>Yes</td>
+<td>The directory to destroy.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>Yes</td>
+<td>Enables recursive search (for files).</td>
+</tr>
+<tr>
+<td><code>-date</code></td>
+<td>No</td>
+<td>Optional. Specifies a date filter. Only files deleted on or before the specified date will be destroyed. The date format should be YYYY-MM-DD.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>directory</code>: The directory to destroy.</li>
 <li><code>recursive</code>: Enables recursive search (for files).</li>

@@ -1,4 +1,4 @@
----
+﻿---
 description: Recovers deleted files from a folder or CSV source.
 title: recover Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,11 +7,22 @@ title: recover Command | PDMShell | SOLIDWORKS PDM
 The `recover` command recovers deleted files from a folder or CSV source. It supports optional parameters for search queries and recursive operations.
 
 ## Syntax
-```bash
-recover -directory -search -recursive -source 
+
+```text
+recover -directory -search -recursive -source
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-directory` | No | Specifies the directory to recover files from. This parameter is optional. |
+| `-search` | No | A search query to filter the files to recover. This parameter is optional. Supports % and * as wildcards. |
+| `-recursive` | No | Enables recursive recovery of files within subdirectories. This parameter is optional. |
+| `-source` | No | Specifies the source to recover files from. This parameter is optional. |
+
+### Parameter Details
+
 - `directory`: Specifies the directory to recover files from. This parameter is optional.
 - `search`: A search query to filter the files to recover. This parameter is optional. Supports % and * as wildcards.
 - `recursive`: Enables recursive recovery of files within subdirectories. This parameter is optional.
@@ -20,7 +31,7 @@ recover -directory -search -recursive -source
 >[!NOTE]
 > - To generate a source csv file, use the command `delete -list -csv deletedfiles.csv` to generate a list of all deleted files in the current directory.
 > - You can include `recursive` to get all files from the subdirectories.
-> - To generate a source csv file for a particular directory, use `directory` in combination with `list` and `csv`. 
+> - To generate a source csv file for a particular directory, use `directory` in combination with `list` and `csv`.
 
 ## Examples
 ```bash

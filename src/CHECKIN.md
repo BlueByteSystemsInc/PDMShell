@@ -1,4 +1,4 @@
----
+﻿---
 description: Checks in one file or multiple files found by search.
 title: checkin Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,22 @@ title: checkin Command | PDMShell | SOLIDWORKS PDM
 Performs a check-in operation on a specified file or many files.
 
 ## Syntax
-```bash
+
+```text
 checkin -search -recursive -filePath -comment -Checkinoptions
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-search` | Yes | The search operation to use. |
+| `-recursive` | Yes | When used with [`search`](SEARCH.md), includes files in subfolders. |
+| `-filePath` | Yes | The file(s) to be checked in. This is the default parameter. |
+| `-comment` | Yes | The comment to add to the check-in. In the visual command builder, the default value is `Checked by PDMShell`. |
+
+### Parameter Details
+
 - `search`: The search operation to use.
 
 

@@ -92,9 +92,41 @@
 <p>The <code>pasteasreference</code> command uses <code>filePath</code> as the reference file to append. Use <code>source</code> to append that reference to one file, or use <a href="SEARCH.html"><code>search</code></a> to append that reference to multiple matching files.</p>
 <p>This command is useful when a workflow creates or finds a supporting file and then needs to append it as a custom reference to one or more target files.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">pasteasreference -filePath reference_file (-source source_file | -search search_query) [-recursive]
+<pre><code class="lang-text">pasteasreference -filePath reference_file (-source source_file | -search search_query) [-recursive]
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-filePath</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-source</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-search</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>filePath</code> Required. Reference file to append.</li>
 <li><code>source</code> Optional. Single file that will receive the appended reference. Use either <code>source</code> or <a href="SEARCH.html"><code>search</code></a>.</li>

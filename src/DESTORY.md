@@ -1,4 +1,4 @@
----
+﻿---
 description: Permanently destroys deleted files in a folder.
 title: destory Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,11 +7,21 @@ title: destory Command | PDMShell | SOLIDWORKS PDM
 The `destroy` command permanently deletes files that have already been marked as deleted in a specified directory. This command supports recursive deletion and filtering by date.
 
 ## Syntax
-```bash
-destroy -directory -recursive -date 
+
+```text
+destroy -directory -recursive -date
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-directory` | Yes | The directory to destroy. |
+| `-recursive` | Yes | Enables recursive search (for files). |
+| `-date` | No | Optional. Specifies a date filter. Only files deleted on or before the specified date will be destroyed. The date format should be YYYY-MM-DD. |
+
+### Parameter Details
+
 - `directory`: The directory to destroy.
 - `recursive`: Enables recursive search (for files).
 - `date`: (Optional) Specifies a date filter. Only files deleted on or before the specified date will be destroyed. The date format should be YYYY-MM-DD.

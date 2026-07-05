@@ -1,4 +1,4 @@
----
+﻿---
 description: Displays information about the specified file.
 title: print Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,20 @@ title: print Command | PDMShell | SOLIDWORKS PDM
 Displays information about the specified file.
 
 ## Syntax
-```bash
+
+```text
 print [-filePath|-id]
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | No | The file to print. |
+| `-id` | No | PDM internal ID of the file to print. |
+
+### Parameter Details
+
 - `filePath`: The file to print.
 - `id`: PDM internal ID of the file to print.
 

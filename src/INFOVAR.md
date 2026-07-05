@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets information about a variable.
 title: infovar Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,11 +7,19 @@ title: infovar Command | PDMShell | SOLIDWORKS PDM
 Gets information about a variable.
 
 ## Syntax
-```bash
+
+```text
 infovar -variableName
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-variableName` | Yes | The variable name to retrieve information for. |
+
+### Parameter Details
+
 - `variableName`: The variable name to retrieve information for.
 
 ## Examples

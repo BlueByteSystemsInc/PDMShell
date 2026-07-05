@@ -1,4 +1,4 @@
----
+﻿---
 description: Opens the PDM inbox and sends a message as the logged-in user.
 title: inbox Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,21 @@ title: inbox Command | PDMShell | SOLIDWORKS PDM
 Opens the PDM inbox or sends a message as the logged-in user.
 
 ## Syntax
-```bash
+
+```text
 inbox -filePath -name -value
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Yes | Associated file |
+| `-name` | Yes | Name of the user to send the message to. |
+| `-value` | Yes | Message: supports evaluation against the `filePath`. |
+
+### Parameter Details
+
 -`name`: Name of the user to send the message to. 
 -`value`: Message: supports evaluation against the `filePath`.
 -`filePath`: Associated file

@@ -1,4 +1,4 @@
----
+﻿---
 description: Undoes a checkout operation.
 title: undocheckout Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,21 @@ title: undocheckout Command | PDMShell | SOLIDWORKS PDM
 Undoes a checkout operation.
 
 ## Syntax
-```bash
+
+```text
 undocheckout [-filePath | -search]
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | No | The file to undo the checkout for. |
+| `-search` | No | The search operation to use. |
+| `-recursive` | No | When used with [`search`](SEARCH.md), includes files in subfolders. |
+
+### Parameter Details
+
 - `filePath`: The file to undo the checkout for.
 
 - `search`: The search operation to use.
@@ -18,6 +29,7 @@ undocheckout [-filePath | -search]
 
 
 - `recursive`: When used with [`search`](SEARCH.md), includes files in subfolders.
+
 ## Examples
 ```bash
 undocheckout -f "file1.sldprt"

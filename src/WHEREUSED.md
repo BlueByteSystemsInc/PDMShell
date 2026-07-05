@@ -1,4 +1,4 @@
----
+﻿---
 description: Lists the direct parent files that reference a file.
 title: whereused Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -19,12 +19,21 @@ The output columns are:
 ---
 
 ## Syntax
-```bash
+
+```text
 whereused -filePath|-search -csv
 ```
----
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Mode-dependent | See parameter details below. |
+| `-search` | Mode-dependent | See parameter details below. |
+| `-csv` | Mode-dependent | See parameter details below. |
+
+### Parameter Details
+
 - `filePath`  
   Full or relative path of the file to evaluate.
 

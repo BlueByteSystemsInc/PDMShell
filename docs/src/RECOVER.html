@@ -90,9 +90,41 @@
 <h2 id="description">Description</h2>
 <p>The <code>recover</code> command recovers deleted files from a folder or CSV source. It supports optional parameters for search queries and recursive operations.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">recover -directory -search -recursive -source 
+<pre><code class="lang-text">recover -directory -search -recursive -source
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-directory</code></td>
+<td>No</td>
+<td>Specifies the directory to recover files from. This parameter is optional.</td>
+</tr>
+<tr>
+<td><code>-search</code></td>
+<td>No</td>
+<td>A search query to filter the files to recover. This parameter is optional. Supports % and * as wildcards.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>Enables recursive recovery of files within subdirectories. This parameter is optional.</td>
+</tr>
+<tr>
+<td><code>-source</code></td>
+<td>No</td>
+<td>Specifies the source to recover files from. This parameter is optional.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>directory</code>: Specifies the directory to recover files from. This parameter is optional.</li>
 <li><code>search</code>: A search query to filter the files to recover. This parameter is optional. Supports % and * as wildcards.</li>

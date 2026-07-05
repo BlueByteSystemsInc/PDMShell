@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a new PDM variable.
 title: mkvar Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,22 @@ title: mkvar Command | PDMShell | SOLIDWORKS PDM
 Creates a new variable.
 
 ## Syntax
-```bash
-mkvar -name -varType -mkvarflags -mkvarattributes 
+
+```text
+mkvar -name -varType -mkvarflags -mkvarattributes
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-name` | Yes | The name of the variable to create. |
+| `-varType` | Yes | The type of the variable. |
+| `-mkvarflags` | Yes | The flags for the variable. |
+| `-mkvarattributes` | Yes | The attributes for the variable. Seperated by `#` |
+
+### Parameter Details
+
 - `name`: The name of the variable to create.
 
 - `varType`: The type of the variable.

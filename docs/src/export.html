@@ -90,9 +90,61 @@
 <h2 id="description">Description</h2>
 <p>The <code>export</code> command allows you to export SOLIDWORKS files from the PDM vault to various formats using SOLIDWORKS. This command supports exporting a single file or multiple files found via search, with options for specifying file extensions, export location, and more.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">export [-search|-filePath] -name -directory -extensions -recursive -version
+<pre><code class="lang-text">export [-search|-filePath] -name -directory -extensions -recursive -version
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-search</code></td>
+<td>No</td>
+<td>Search query to find files for export.</td>
+</tr>
+<tr>
+<td><code>-filePath</code></td>
+<td>No</td>
+<td>Path to the file to export (relative or absolute).</td>
+</tr>
+<tr>
+<td><code>-name</code></td>
+<td>Mode-dependent</td>
+<td>The base name for the exported file(s). This supports evaluation. More <a href="/src/EVAL.html">information here</a>.</td>
+</tr>
+<tr>
+<td><code>-directory</code></td>
+<td>Mode-dependent</td>
+<td>The target folder for exported files.</td>
+</tr>
+<tr>
+<td><code>-extensions</code></td>
+<td>Mode-dependent</td>
+<td>Comma-separated list of file extensions to export to (e.g., <code>pdf,dxf</code>).</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>Mode-dependent</td>
+<td>If set, search will include subfolders.</td>
+</tr>
+<tr>
+<td><code>-version</code></td>
+<td>Mode-dependent</td>
+<td>SOLIDWORKS year version. Example 2023. Default is latest.</td>
+</tr>
+<tr>
+<td><code>-timeout</code></td>
+<td>No</td>
+<td>timeout in seconds (for starting SOLIDWORKS only)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <p>The export command requires several parameters:</p>
 <ul>
 <li><code>filePath</code>: Path to the file to export (relative or absolute).</li>

@@ -19,13 +19,20 @@ clearglobal -name Project
 
 ## Syntax
 
-```pdmshell
+```text
 setglobal -name variableName -value value
 getglobal [-name variableName]
 clearglobal -name variableName
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-name` | Mode-dependent | Global variable name. Names must start with a letter or underscore and can contain letters, numbers, and underscores. |
+| `-value` | Mode-dependent | Value to store for the global variable. |
+
+### Parameter Details
 
 - `name`: Global variable name. Names must start with a letter or underscore and can contain letters, numbers, and underscores.
 - `value`: Value to store for the global variable.

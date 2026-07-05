@@ -98,9 +98,51 @@
 </ul>
 <p>This command is especially useful for fixing broken references, updating references after migrations, or correcting references that point outside the vault.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">updatereferences -filepath -search -directory -scope -recursive -csv
+<pre><code class="lang-text">updatereferences -filepath -search -directory -scope -recursive -csv
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-filepath</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-search</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-directory</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-scope</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+<tr>
+<td><code>-csv</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><p><code>filepath</code><br>
 Optional. Updates references for a single file.</p>
@@ -125,9 +167,9 @@ Only files found under this directory will be used when resolving and updating r
 Optional. Controls which references are updated.<br>
 Valid values:</p>
 <ul>
-<li><code>UpdateOutsideVaultReferenceOnly</code> – Updates references that point outside the vault</li>
-<li><code>UpdateBrokenReferences</code> – Updates references that are missing or broken</li>
-<li><code>UpdateAllReferences</code> – Updates all references found in the file</li>
+<li><code>UpdateOutsideVaultReferenceOnly</code> â€“ Updates references that point outside the vault</li>
+<li><code>UpdateBrokenReferences</code> â€“ Updates references that are missing or broken</li>
+<li><code>UpdateAllReferences</code> â€“ Updates all references found in the file</li>
 </ul>
 </li>
 <li><p><code>recursive</code><br>
@@ -137,7 +179,7 @@ Optional. When used with <a href="SEARCH.html"><code>search</code></a>, includes
 Saves the update references operations in a csv file.</p>
 </li>
 </ul>
-<h2 id="behavior">Behavior</h2>
+<h3 id="behavior">Behavior</h3>
 <ul>
 <li>Operates directly on file reference data</li>
 <li>Does not open SOLIDWORKS</li>

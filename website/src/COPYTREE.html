@@ -90,9 +90,61 @@
 <h2 id="description">Description</h2>
 <p>The <code>copytree</code> command copies a file tree in the SOLIDWORKS PDM vault, with options to apply prefixes, suffixes, and other filters. This only works with assembly files.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">copytree [-search|-filePath] -suffix -prefix -recursive -includedrawings -latest -directory
+<pre><code class="lang-text">copytree [-search|-filePath] -suffix -prefix -recursive -includedrawings -latest -directory
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-search</code></td>
+<td>No</td>
+<td>A search query to filter files to be copied.</td>
+</tr>
+<tr>
+<td><code>-filePath</code></td>
+<td>No</td>
+<td>The source file or directory to copy.</td>
+</tr>
+<tr>
+<td><code>-suffix</code></td>
+<td>Mode-dependent</td>
+<td>Adds a suffix to the copied files.</td>
+</tr>
+<tr>
+<td><code>-prefix</code></td>
+<td>Mode-dependent</td>
+<td>Adds a prefix to the copied files.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>Mode-dependent</td>
+<td>Copies files recursively from subdirectories.</td>
+</tr>
+<tr>
+<td><code>-includedrawings</code></td>
+<td>Mode-dependent</td>
+<td>Includes associated drawing files in the copy operation.</td>
+</tr>
+<tr>
+<td><code>-latest</code></td>
+<td>Mode-dependent</td>
+<td>Ensures the latest version of the files is copied.</td>
+</tr>
+<tr>
+<td><code>-directory</code></td>
+<td>Mode-dependent</td>
+<td>Specifies the target directory where the files will be copied.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>filePath</code>: The source file or directory to copy.</li>
 <li><code>directory</code>: Specifies the target directory where the files will be copied.</li>

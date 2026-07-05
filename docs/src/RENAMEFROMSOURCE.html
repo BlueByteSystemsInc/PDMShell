@@ -91,9 +91,36 @@
 <p>The <code>renamefromsource</code> command renames files listed in a CSV source. The CSV file provides the information needed to map file IDs to their new names and folder IDs. This command supports alias evaluation for dynamic renaming.</p>
 <hr>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">renamefromsource -filePath -evaluatealias -csv 
+<pre><code class="lang-text">renamefromsource -filePath -evaluatealias -csv
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-filePath</code></td>
+<td>Yes</td>
+<td>(Required) The source file path. This must be a CSV file with three columns:</td>
+</tr>
+<tr>
+<td><code>-evaluatealias</code></td>
+<td>Yes</td>
+<td>Toggle. This allows placeholders to be used in the new file name.</td>
+</tr>
+<tr>
+<td><code>-csv</code></td>
+<td>Yes</td>
+<td>Specifies the path to an additional CSV file for batch renaming.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>filePath</code>: (Required) The source file path. This must be a CSV file with three columns:</li>
 </ul>

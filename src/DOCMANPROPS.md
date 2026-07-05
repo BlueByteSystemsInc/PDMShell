@@ -1,4 +1,4 @@
----
+﻿---
 description: Reads SOLIDWORKS custom and configuration properties using Document Manager and exports them to CSV.
 title: docmanprops Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -10,9 +10,9 @@ The `docmanprops` command exports and updates SOLIDWORKS file custom properties 
 
 This command supports two primary modes:
 
-- Export Mode (Default) â€” Reads properties from SOLIDWORKS files and writes them to a CSV file
-- Update Mode â€” Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)
-- Refresh Mode â€” Reads a CSV file and refreshes the content of the csv.
+- Export Mode (Default) Ã¢â‚¬â€ Reads properties from SOLIDWORKS files and writes them to a CSV file
+- Update Mode Ã¢â‚¬â€ Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)
+- Refresh Mode Ã¢â‚¬â€ Reads a CSV file and refreshes the content of the csv.
 
 
 > [!NOTE]
@@ -21,13 +21,26 @@ This command supports two primary modes:
 ---
 
 ## Syntax
-```bash
+
+```text
 docmanprops -directory <path> -csv <csvPath> [-recursive] [-configNames] [-update] [-refresh] [-extension]
 ```
----
 
 ## Parameters
-## `directory`
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-directory` | Yes | Specifies the folder containing SOLIDWORKS files. |
+| `-csv` | Yes | Specifies the CSV file path. |
+| `-recursive` | No | When specified, searches subfolders. |
+| `-configNames` | No | Specifies which configurations to include. |
+| `-update` | No | When specified, the command runs in Update Mode. |
+| `-refresh` | No | When specified, the command runs in Refresh Mode. |
+| `-extension` | No | Specifies which file extension filters to include when exporting or updating properties. |
+
+### Parameter Details
+
+### `directory`
 
 Specifies the folder containing SOLIDWORKS files.
 
@@ -37,7 +50,7 @@ Example:
 ```
 ---
 
-## `csv`
+### `csv`
 
 Specifies the CSV file path.
 
@@ -50,14 +63,14 @@ Example: `-csv "C:\temp\props.csv"`
 
 ---
 
-## `update`
+### `update`
 
 When specified, the command runs in Update Mode.
 
 Reads the CSV file and writes the properties back into the SOLIDWORKS files.
 
 ---
-## `refresh`
+### `refresh`
 
 When specified, the command runs in Refresh Mode.
 
@@ -65,12 +78,12 @@ Reads the CSV file and refreshes the content of the properties in the csv file.
 
 
 ---
-## `recursive`
+### `recursive`
 
 When specified, searches subfolders.
 ---
 
-## `configNames`
+### `configNames`
 
 Specifies which configurations to include.
 
@@ -80,7 +93,7 @@ Example: `-configNames "Default,Config1"` Use space for custom property.
 
 ---
 
-## `extension`
+### `extension`
 
 Specifies which file extension filters to include when exporting or updating properties.
 
@@ -191,8 +204,8 @@ The CSV is updated during update:
 
 Success column:
 
-True â€” Property updated successfully  
-False â€” Property update failed  
+True Ã¢â‚¬â€ Property updated successfully  
+False Ã¢â‚¬â€ Property update failed  
 
 Exception column:
 

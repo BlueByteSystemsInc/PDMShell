@@ -91,9 +91,31 @@
 <p>The <code>printfromsource</code> command prints file information for paths listed in a CSV source. The CSV file must contain a header and a list of complete file paths in the first column.</p>
 <hr>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">printfromsource -filePath -csv 
+<pre><code class="lang-text">printfromsource -filePath -csv
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-filePath</code></td>
+<td>Yes</td>
+<td>(Required) The source file path. This must be a CSV file with one column: - file Path: Complete file path.</td>
+</tr>
+<tr>
+<td><code>-csv</code></td>
+<td>Yes</td>
+<td>Specifies the output csv. This will contains information about files from the source parameter.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>filePath</code>: (Required) The source file path. This must be a CSV file with one column:</li>
 <li>file Path: Complete file path.</li>

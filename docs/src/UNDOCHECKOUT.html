@@ -90,9 +90,36 @@
 <h2 id="description">Description</h2>
 <p>Undoes a checkout operation.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">undocheckout [-filePath | -search]
+<pre><code class="lang-text">undocheckout [-filePath | -search]
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-filePath</code></td>
+<td>No</td>
+<td>The file to undo the checkout for.</td>
+</tr>
+<tr>
+<td><code>-search</code></td>
+<td>No</td>
+<td>The search operation to use.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>When used with <a href="SEARCH.html"><code>search</code></a>, includes files in subfolders.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><p><code>filePath</code>: The file to undo the checkout for.</p>
 </li>

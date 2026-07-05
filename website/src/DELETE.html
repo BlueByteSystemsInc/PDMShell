@@ -90,9 +90,61 @@
 <h2 id="description">Description</h2>
 <p>The <code>delete</code> command deletes one file, one folder, or multiple files found by search. It supports target selection by file path, directory path, search query, or ID.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">delete [-filePath|-id] -directory -search -recursive -list -csv -destroy
+<pre><code class="lang-text">delete [-filePath|-id] -directory -search -recursive -list -csv -destroy
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-filePath</code></td>
+<td>No</td>
+<td>Optional. Specifies the file path of the file to be deleted.</td>
+</tr>
+<tr>
+<td><code>-id</code></td>
+<td>No</td>
+<td>Optional. Specifies the ID of the file to be deleted.</td>
+</tr>
+<tr>
+<td><code>-directory</code></td>
+<td>No</td>
+<td>Optional. Specifies the directory to be deleted. If used with the -recursive parameter, all files and subdirectories within the directory will also be deleted.</td>
+</tr>
+<tr>
+<td><code>-search</code></td>
+<td>No</td>
+<td>Optional. A search query to filter files or directories to be deleted.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>Optional. Deletes all files and subdirectories within the specified directory. This parameter is only applicable when deleting directories.</td>
+</tr>
+<tr>
+<td><code>-list</code></td>
+<td>No</td>
+<td>Optional. Lists all the deleted files. Specifying <code>recursive</code> with this parameter will do a drill down search and fetch all deleted files.</td>
+</tr>
+<tr>
+<td><code>-csv</code></td>
+<td>Mode-dependent</td>
+<td>Exports a list of deleted files to a csv. This only works if <code>list is specified</code>.</td>
+</tr>
+<tr>
+<td><code>-destroy</code></td>
+<td>Mode-dependent</td>
+<td>If specified, the deleted file will be also destroyed. <code>-destroy</code> only affects results from the <a href="SEARCH.html"><code>search</code></a> parameter.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><p><code>filePath</code>:
 (Optional) Specifies the file path of the file to be deleted.</p>

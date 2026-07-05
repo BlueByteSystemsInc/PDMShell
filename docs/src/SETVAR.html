@@ -90,9 +90,61 @@
 <h2 id="description">Description</h2>
 <p>Sets the value of a variable for a specified checked out file or many checked out files.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">setvar (-filePath path | -search query) -variableName variable_name [-value value | -clear] [-configNames configuration_names] [-recursive] [-stringformat format]
+<pre><code class="lang-text">setvar (-filePath path | -search query) -variableName variable_name [-value value | -clear] [-configNames configuration_names] [-recursive] [-stringformat format]
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-filePath</code></td>
+<td>Mode-dependent</td>
+<td>The file or folder to set the variable for.</td>
+</tr>
+<tr>
+<td><code>-search</code></td>
+<td>Mode-dependent</td>
+<td>The search operation to use.</td>
+</tr>
+<tr>
+<td><code>-variableName</code></td>
+<td>Mode-dependent</td>
+<td>The variable to set.</td>
+</tr>
+<tr>
+<td><code>-value</code></td>
+<td>No</td>
+<td>The value to assign to the variable. This parameter supports placeholders. When using <code>$value</code>, PDMShell substitutes the existing variable value; if the existing value is null or empty, <code>$value</code> evaluates to an empty...</td>
+</tr>
+<tr>
+<td><code>-clear</code></td>
+<td>No</td>
+<td>Clears the variable value.</td>
+</tr>
+<tr>
+<td><code>-configNames</code></td>
+<td>No</td>
+<td>The configuration names to set the variable for, separated by commas.</td>
+</tr>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>When used with <a href="SEARCH.html"><code>search</code></a>, includes files in subfolders.</td>
+</tr>
+<tr>
+<td><code>-stringformat</code></td>
+<td>No</td>
+<td>string format. See remarks section.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><p><code>filePath</code>: The file or folder to set the variable for.</p>
 </li>

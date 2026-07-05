@@ -1,4 +1,4 @@
----
+﻿---
 description: Lists file references inside the SOLIDWORKS PDM vault using the Raw Reference Manager.
 title: listreferences Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -16,17 +16,28 @@ The `listreferences` command reads references stored inside files, without openi
 This command is especially useful for auditing references, troubleshooting missing files, validating migrations, or identifying broken or external references.
 
 ## Syntax
-```bash
+
+```text
 listreferences -filepath -search -recursive -csv
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filepath` | Yes | See parameter details below. |
+| `-search` | Yes | See parameter details below. |
+| `-recursive` | Yes | See parameter details below. |
+| `-csv` | Yes | See parameter details below. |
+
+### Parameter Details
+
 - `filepath` Optional. Lists references for a single file. If a relative path is provided, it is resolved against the current directory. When specified, the search parameter is ignored.
 - [`search`](SEARCH.md) Optional. Search query used to find files whose references should be listed. The search is scoped to the current directory. Supports % wildcards. Can be combined with recursive.
 - `recursive` Optional. When used with search, includes subfolders of the current directory when locating files whose references should be listed.
 - `csv` Optional. Saves the reference listing results to a CSV file.
 
-## CSV OUTPUT
+### CSV OUTPUT
 
 The exported CSV contains the following columns:
 ```bash

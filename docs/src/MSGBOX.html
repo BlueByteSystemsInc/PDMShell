@@ -91,9 +91,36 @@
 <p>The <code>msgbox</code> command shows a Windows message box with the specified text.</p>
 <p>Use <code>msgbox</code> in scripts when you need to display a simple notification or checkpoint message to the user.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">msgbox -value message [-title title] [-icon icon]
+<pre><code class="lang-text">msgbox -value message [-title title] [-icon icon]
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-value</code></td>
+<td>Yes</td>
+<td><em>(Required)</em> Message text to display in the message box.</td>
+</tr>
+<tr>
+<td><code>-title</code></td>
+<td>No</td>
+<td><em>(Optional)</em> Message box title. If omitted, PDMShell uses the current PDMShell version as the title.</td>
+</tr>
+<tr>
+<td><code>-icon</code></td>
+<td>No</td>
+<td><em>(Optional)</em> Message box icon. Valid values are <code>None</code>, <code>Information</code>, <code>Warning</code>, <code>Error</code>, and <code>Question</code>. If omitted, PDMShell uses <code>Information</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><p><code>value</code>:<br>
 <em>(Required)</em> Message text to display in the message box.</p>
@@ -105,7 +132,7 @@
 <em>(Optional)</em> Message box icon. Valid values are <code>None</code>, <code>Information</code>, <code>Warning</code>, <code>Error</code>, and <code>Question</code>. If omitted, PDMShell uses <code>Information</code>.</p>
 </li>
 </ul>
-<h2 id="visual-editor">Visual Editor</h2>
+<h3 id="visual-editor">Visual Editor</h3>
 <p>In the visual editor command builder, the <code>icon</code> parameter is shown as a single-select combo box with the supported icon values:</p>
 <ul>
 <li><code>None</code></li>
@@ -114,7 +141,7 @@
 <li><code>Error</code></li>
 <li><code>Question</code></li>
 </ul>
-<h2 id="placeholders">Placeholders</h2>
+<h3 id="placeholders">Placeholders</h3>
 <p>The <code>value</code> and <code>title</code> parameters support session placeholders. PDMShell evaluates placeholders before showing the message box, so you can display values from the current session in the message text.</p>
 <p>For example, after logging in to a vault, <code>$vaultName</code> resolves to the active vault name:</p>
 <pre><code class="lang-bash">msgbox -value &quot;vaultName = $vaultName&quot; -icon &quot;Information&quot;

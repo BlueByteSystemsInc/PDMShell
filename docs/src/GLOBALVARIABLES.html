@@ -96,11 +96,33 @@ getglobal
 clearglobal -name Project
 </code></pre>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-pdmshell">setglobal -name variableName -value value
+<pre><code class="lang-text">setglobal -name variableName -value value
 getglobal [-name variableName]
 clearglobal -name variableName
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-name</code></td>
+<td>Mode-dependent</td>
+<td>Global variable name. Names must start with a letter or underscore and can contain letters, numbers, and underscores.</td>
+</tr>
+<tr>
+<td><code>-value</code></td>
+<td>Mode-dependent</td>
+<td>Value to store for the global variable.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><code>name</code>: Global variable name. Names must start with a letter or underscore and can contain letters, numbers, and underscores.</li>
 <li><code>value</code>: Value to store for the global variable.</li>

@@ -1,4 +1,4 @@
----
+﻿---
 description: Waits until file, folder, process, variable, placeholder, or expression conditions become true.
 title: until Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -9,11 +9,26 @@ Waits until the supplied condition expression evaluates to true, or until the ti
 Use `until` after commands such as [`runtask`](RUNTASK.md), [`runtemplate`](RUNTEMPLATE.md), [`export`](export.md), or any automation step that creates files asynchronously. This prevents the next command from running before the expected files, variables, or process state are ready.
 
 ## Syntax
-```bash
+
+```text
 until -conditions condition_expression [-timeout seconds] [-onTimeout stop|continue] [-match all|any|one] [-filePath path | -search query]
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-conditions` | Mode-dependent | The condition expression to evaluate. Supports `and`, `or`, nested groups, file/folder/process exists checks, comparisons, PDM variables, placeholders, and simple arithmetic comparisons. |
+| `-timeout` | No | Maximum number of seconds to wait before the command fails. If omitted, PDMShell uses the command default. |
+| `-onTimeout` | No | Optional timeout behavior. Use `stop` to stop the script after timeout, or `continue` to log the timeout and keep running. The default is `stop`. |
+| `-match` | No | When [`search`](SEARCH.md) returns multiple files, controls how many files must satisfy the conditions. Use `any` when one matching file is enough, `all` when every matching file must pass, or `one` when exactly one m... |
+| `-filePath` | No | Optional file context used to evaluate PDM variables and file placeholders. |
+| `-search` | No | Optional search query. When supplied, PDMShell evaluates the condition against the files returned by the search. |
+| `-directory` | No | Optional vault folder used as the search scope. Only valid with [`search`](SEARCH.md). |
+| `-recursive` | No | Includes subfolders when used with [`search`](SEARCH.md). |
+
+### Parameter Details
+
 - `conditions`: The condition expression to evaluate. Supports `and`, `or`, nested groups, file/folder/process exists checks, comparisons, PDM variables, placeholders, and simple arithmetic comparisons.
 - `timeout`: Maximum number of seconds to wait before the command fails. If omitted, PDMShell uses the command default.
 - `onTimeout`: Optional timeout behavior. Use `stop` to stop the script after timeout, or `continue` to log the timeout and keep running. The default is `stop`.

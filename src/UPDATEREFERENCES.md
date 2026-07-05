@@ -1,4 +1,4 @@
----
+﻿---
 description: Updates file references inside the SOLIDWORKS PDM vault using the Raw Reference Manager.
 title: updatereferences Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -16,11 +16,24 @@ The `updatereferences` command modifies references stored inside files, without 
 This command is especially useful for fixing broken references, updating references after migrations, or correcting references that point outside the vault.
 
 ## Syntax
-```bash
+
+```text
 updatereferences -filepath -search -directory -scope -recursive -csv
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filepath` | Yes | See parameter details below. |
+| `-search` | Yes | See parameter details below. |
+| `-directory` | Yes | See parameter details below. |
+| `-scope` | Yes | See parameter details below. |
+| `-recursive` | Yes | See parameter details below. |
+| `-csv` | Yes | See parameter details below. |
+
+### Parameter Details
+
 - `filepath`  
   Optional. Updates references for a single file.  
   - If a relative path is provided, it is resolved against the current directory.
@@ -39,9 +52,9 @@ updatereferences -filepath -search -directory -scope -recursive -csv
 - `scope`  
   Optional. Controls which references are updated.  
   Valid values:
-  - `UpdateOutsideVaultReferenceOnly` – Updates references that point outside the vault
-  - `UpdateBrokenReferences` – Updates references that are missing or broken
-  - `UpdateAllReferences` – Updates all references found in the file
+  - `UpdateOutsideVaultReferenceOnly` â€“ Updates references that point outside the vault
+  - `UpdateBrokenReferences` â€“ Updates references that are missing or broken
+  - `UpdateAllReferences` â€“ Updates all references found in the file
 
 - `recursive`  
   Optional. When used with [`search`](SEARCH.md), includes subfolders of the current directory when locating files whose references should be updated.
@@ -49,7 +62,7 @@ updatereferences -filepath -search -directory -scope -recursive -csv
 - `csv`
   Saves the update references operations in a csv file.
 
-## Behavior
+### Behavior
 - Operates directly on file reference data
 - Does not open SOLIDWORKS
 - Requires files to be checked out

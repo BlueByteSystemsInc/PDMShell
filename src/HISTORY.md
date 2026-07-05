@@ -1,4 +1,4 @@
----
+﻿---
 description: Prints the history of a file.
 title: history Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,20 @@ title: history Command | PDMShell | SOLIDWORKS PDM
 Prints the history of a file.
 
 ## Syntax
-```bash
-history [-search|-filePath] 
+
+```text
+history [-search|-filePath]
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-search` | No | The search operation to use. |
+| `-filePath` | No | The file to get the history for. |
+
+### Parameter Details
+
 - `search`:  The search operation to use.
 
 - `filePath`: The file to get the history for.

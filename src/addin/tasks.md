@@ -90,16 +90,6 @@ The PDMShell task follows the same task setup pattern users may already know fro
 
 The difference is that PDMShell task logic is written as a PDMShell script. This makes it useful for custom automation such as metadata cleanup, batch variable updates, file exports, migration helpers, reference maintenance, task chaining, and scripted PDM administration.
 
-## Video demo
-
-This demo shows a PDMShell task being configured in the PDM task properties dialog.
-
-<div class="ratio ratio-16x9">
-  <iframe src="https://www.loom.com/embed/8dd02ac8f0fa43a48541b04bc3ef114f" title="Create a PDMShell task in SOLIDWORKS PDM" allowfullscreen></iframe>
-</div>
-
-[Watch on Loom](https://www.loom.com/share/8dd02ac8f0fa43a48541b04bc3ef114f)
-
 ## Related articles
 
 - [Runtime execution](runtime-execution.md)

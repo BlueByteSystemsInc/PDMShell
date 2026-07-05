@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets variable values for files listed in a CSV source.
 title: setvarsfromsource Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,14 +7,24 @@ title: setvarsfromsource Command | PDMShell | SOLIDWORKS PDM
 Sets variables for multiple files using a CSV file as the source.
 
 ## Syntax
-```bash
+
+```text
 setvarsfromsource -source -evaluatealias
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-source` | Yes | See parameter details below. |
+| `-evaluatealias` | Yes | See parameter details below. |
+| `-filePath` | No | The CSV file containing the file IDs and variable values. |
+
+### Parameter Details
+
 - `filePath`: The CSV file containing the file IDs and variable values.
 
-## CSV File Format
+### CSV File Format
 The CSV file should have the following format:
 
 ```
@@ -22,6 +32,7 @@ FileID,Variable1,Variable2,...
 XXXX,Value1,Value2,... 
 XXXX,Value1,Value2,...
 ```
+
 ## Examples
 ```bash
 setvarsfromsource -source variables.csv # the source file must be exist in the current directory

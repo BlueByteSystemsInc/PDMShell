@@ -1,4 +1,4 @@
----
+﻿---
 description: Writes the current session output to a log file.
 title: dump Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -7,10 +7,19 @@ title: dump Command | PDMShell | SOLIDWORKS PDM
 Dumps all session text into a log file and check it back into the vault.
 
 ## Syntax
-```bash
+
+```text
 dump filePath
 ```
+
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | No | The log file to dump session details into. |
+
+### Parameter Details
+
 - `filePath`: The log file to dump session details into.
 
 ## Examples

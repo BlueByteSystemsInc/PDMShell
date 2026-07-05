@@ -1,4 +1,4 @@
----
+﻿---
 description: Prints file information for paths listed in a CSV source.
 title: printfromsource Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -9,11 +9,20 @@ The `printfromsource` command prints file information for paths listed in a CSV 
 ---
 
 ## Syntax
-```bash
-printfromsource -filePath -csv 
+
+```text
+printfromsource -filePath -csv
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Yes | (Required) The source file path. This must be a CSV file with one column: - file Path: Complete file path. |
+| `-csv` | Yes | Specifies the output csv. This will contains information about files from the source parameter. |
+
+### Parameter Details
+
 - `filePath`: (Required) The source file path. This must be a CSV file with one column:
  - file Path: Complete file path.
 - `csv`: Specifies the output csv. This will contains information about files from the source parameter.

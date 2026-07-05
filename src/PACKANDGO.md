@@ -1,4 +1,4 @@
----
+﻿---
 description: Runs SOLIDWORKS Pack and Go for one assembly or for multiple assemblies from a folder search or CSV source.
 title: packandgo Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -15,12 +15,26 @@ This command launches SOLIDWORKS, executes Pack and Go for each assembly, and sa
 By default, only `.sldasm` files are processed.
 
 ## Syntax
-```bash
+
+```text
 packg -source -directory [-search] [-includedrawings] [-recursive] [-prefix] [-suffix] [-timeout]
 ```
 
-
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-source` | Yes | See parameter details below. |
+| `-directory` | Yes | See parameter details below. |
+| `-search` | No | See parameter details below. |
+| `-includedrawings` | No | See parameter details below. |
+| `-recursive` | No | See parameter details below. |
+| `-prefix` | No | See parameter details below. |
+| `-suffix` | No | See parameter details below. |
+| `-timeout` | No | See parameter details below. |
+
+### Parameter Details
+
 - `source`  
   Single assembly file, directory of assemblies, or CSV file containing assembly paths.
 

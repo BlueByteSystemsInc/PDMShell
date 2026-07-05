@@ -90,9 +90,41 @@
 <h2 id="description">Description</h2>
 <p>Creates a new variable.</p>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-bash">mkvar -name -varType -mkvarflags -mkvarattributes 
+<pre><code class="lang-text">mkvar -name -varType -mkvarflags -mkvarattributes
 </code></pre>
 <h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-name</code></td>
+<td>Yes</td>
+<td>The name of the variable to create.</td>
+</tr>
+<tr>
+<td><code>-varType</code></td>
+<td>Yes</td>
+<td>The type of the variable.</td>
+</tr>
+<tr>
+<td><code>-mkvarflags</code></td>
+<td>Yes</td>
+<td>The flags for the variable.</td>
+</tr>
+<tr>
+<td><code>-mkvarattributes</code></td>
+<td>Yes</td>
+<td>The attributes for the variable. Seperated by <code>#</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-details">Parameter Details</h3>
 <ul>
 <li><p><code>name</code>: The name of the variable to create.</p>
 </li>

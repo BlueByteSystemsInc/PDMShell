@@ -1,4 +1,4 @@
----
+﻿---
 description: Deletes files listed in a CSV source.
 title: deletefromsource Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -9,11 +9,22 @@ The `deletefromsource` command deletes files listed in a CSV file. It can also o
 
 
 ## Syntax
-```bash
-    deletefromsource -filePath -destroy -csv -batch
+
+```text
+deletefromsource -filePath -destroy -csv -batch
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-filePath` | Yes | Yes \| Path to the source CSV file containing File IDs and Folder IDs. This can be outside the vault. |
+| `-destroy` | Yes | No \| If specified, files will be permanently destroyed after deletion. |
+| `-csv` | Yes | No \| Path to export the results CSV file. |
+| `-batch` | Yes | No \| Destory batch size for large folders. |
+
+### Parameter Details
+
 | Parameter | Type | Required | Description |
 |---|---|---|---|
 | `filePath` | string | Yes | Path to the source CSV file containing File IDs and Folder IDs. This can be outside the vault. |
@@ -22,20 +33,20 @@ The `deletefromsource` command deletes files listed in a CSV file. It can also o
 | `batch` | int | No | Destory batch size for large folders. |
 
 
-## IMPORTANT NOTES ABOUT `-destroy`:
+### IMPORTANT NOTES ABOUT `-destroy`:
 The `deletefromsource` command first attempts to delete and destroy (if `-destroy` used) files normally using the provided input (IDs from the CSV).
 
 After that initial pass, it performs a second step using the Name column. This is specifically for files that were already deleted but not destroyed.
 Since these files no longer exist in the vault in a normal state, they cannot be deleted again and their IDs do not exist anymore. Instead, PDMShell uses the file name to locate these previously deleted items and destroy them directly.
 
 This approach allows you to:
-- Handle active files (delete â†’ destroy)
+- Handle active files (delete Ã¢â€ â€™ destroy)
 - Handle already deleted files (destroy only) if there a value in the name column. See structure of the CSV file.
 
 >[!Important]
 >For previously deleted files, you only need to provide the file name in the Name column.
 
-## Source CSV Format
+### Source CSV Format
 The source CSV file must contain a header row with the following columns:
 
 ```bash
@@ -51,7 +62,7 @@ FileID,FolderID,Name
 | FileID | The document ID of the file |
 | FolderID | The folder ID containing the file |
 
-## Results CSV Format
+### Results CSV Format
 If `-csv` is specified, PDMShell will generate a results file containing:
 
 ```bash
@@ -59,13 +70,12 @@ FileID,FolderID,Error
 12345,678,"DELETE error: File Not Found"
 ```
 
-## Results CSV Columns
+### Results CSV Columns
 | Column | Description |
 |---|---|
 | FileID | File ID |
 | FolderID | Folder ID |
 | Error | Error message |
-
 
 ## Remarks
 - The source file must be a CSV file with a header row.

@@ -1,4 +1,4 @@
----
+﻿---
 description: Upgrades file versions and optionally moves revision values after a PDM upgrade.
 title: versionupgrade Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -9,7 +9,7 @@ The `versionupgrade` command provides tools for **bumping PDM revisions**, **val
 >[!Note]
 > A SOLIDWORKS file upgrade increments the file version and thus the revision. Use `-bumprevision` reset to the revision back to the previous value prior to the file upgrade.
 
-This command uses PDM’s internal engine to:
+This command uses PDMâ€™s internal engine to:
 
 - Increment revision numbers in bulk  
 - Detect incorrect, missing, or version-mismatched references  
@@ -30,12 +30,23 @@ Each result row represents a reference that is out of date, missing, or mismatch
 ---
 
 ## Syntax
-```bash
+
+```text
 versionupgrade -search <query> [-recursive] [-bumprevision] [-referencescheck] [-csv <fileName>]
 ```
----
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-search` | Yes | See parameter details below. |
+| `-recursive` | No | See parameter details below. |
+| `-bumprevision` | No | See parameter details below. |
+| `-referencescheck` | No | See parameter details below. |
+| `-csv` | No | See parameter details below. |
+
+### Parameter Details
+
 - `search`  
 Search query used to locate files for the version upgrade operation.  
 If omitted, no files will be processed.
@@ -53,7 +64,7 @@ If omitted, no files will be processed.
   **Modify revision numbers (EdmSysRight_ModifyRevisionNumbers)**.
 
 - `referencescheck`  
-  Runs PDM’s **Reference Check**.
+  Runs PDMâ€™s **Reference Check**.
   This detects:
 
   - Missing references  
@@ -81,15 +92,15 @@ ParentFileID,RefFileID,ParentPath,RefPath,RefVersion,RefLatestVersion,RefFolderI
 
 ---
 
-## Workflow Overview
+### Workflow Overview
 ### 1. Search for files  
 The command executes a PDM search using the supplied query and optional recursion.
 
 ### 2. Perform requested operations  
 Depending on parameters:
 
-- `-bumprevision` → increments the PDM revision counters  
-- `-referencescheck` → checks all references for correctness  
+- `-bumprevision` â†’ increments the PDM revision counters  
+- `-referencescheck` â†’ checks all references for correctness  
 
 ### 3. CSV Export (optional)  
 If both [`search`](SEARCH.md) and `referencescheck` are supplied, and `csv` is specified:
@@ -105,7 +116,7 @@ If both [`search`](SEARCH.md) and `referencescheck` are supplied, and `csv` is s
 - CSV exporting is only active when **both**  
   [`search`](SEARCH.md) **and** `referencescheck` are supplied.
 - The reference check output may include many entries depending on assembly depth.
-- This command does **not** modify file content — it only updates revision metadata or reference validation results.
+- This command does **not** modify file content â€” it only updates revision metadata or reference validation results.
 - Bulk operations respect PDM permissions and may fail if the user lacks rights.
 
 ---

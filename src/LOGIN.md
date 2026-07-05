@@ -1,4 +1,4 @@
----
+﻿---
 description: Authenticates a user to a specified vault.
 title: login Command | PDMShell | SOLIDWORKS PDM
 ---
@@ -8,11 +8,24 @@ Authenticates a user to a specified vault.
 
 
 ## Syntax
-```bash
-login [-auto|-win -username -password|-external -username -password ] -vaultname 
+
+```text
+login [-auto|-win -username -password|-external -username -password ] -vaultname
 ```
 
 ## Parameters
+
+| Parameter | Required | Description |
+| --- | --- | --- |
+| `-auto` | No | See parameter details below. |
+| `-win` | No | See parameter details below. |
+| `-username` | No | See parameter details below. |
+| `-password` | No | See parameter details below. |
+| `-external` | No | See parameter details below. |
+| `-vaultname` | Mode-dependent | See parameter details below. |
+
+### Parameter Details
+
 `auto`: Automatic authentication with current user. Displays login dialog box if not logged in.
 
 `win`: Automatic Windows authentication with current user. Does not display login dialog box.
