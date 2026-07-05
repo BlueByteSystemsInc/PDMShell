@@ -2,21 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>PDMShell add-in installation and access | PDMShell | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>License Pool | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="PDMShell add-in installation and access | PDMShell | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="License Pool | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Install and open the PDMShell add-in for SOLIDWORKS PDM.">
-      <link rel="icon" href="../../favicon.ico">
-      <link rel="stylesheet" href="../../public/docfx.min.css">
-      <link rel="stylesheet" href="../../public/main.css">
-      <meta name="docfx:navrel" content="../../toc.html">
-      <meta name="docfx:tocrel" content="../toc.html">
+      <meta name="description" content="Use a vault-managed PDMShell license pool for add-in automation in SOLIDWORKS PDM.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
       
-      <meta name="docfx:rel" content="../../">
+      <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/addin/installation.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/license-pool.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -30,7 +30,7 @@
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
 
-      <script type="module" src="./../../public/docfx.min.js"></script>
+      <script type="module" src="./../public/docfx.min.js"></script>
 
       <script>
         const theme = localStorage.getItem('theme') || 'auto'
@@ -43,8 +43,8 @@
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../images/fav.png" alt="PDMShell">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
             PDMShell
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,33 +85,45 @@
         </div>
 
         <article data-uid="">
-<h1 id="installation-and-access">Installation and access</h1>
+<h1 id="license-pool">License Pool</h1>
 
-<p>Install the PDMShell add-in in the SOLIDWORKS PDM vault where the automation should run. The add-in is available with the premium version of PDMShell and can be deployed from your Blue Byte Systems Inc account or with PDMDeploy.</p>
-<p>After the add-in is loaded in the vault, open the Script Editor command from the PDMShell add-in menu.</p>
-<h2 id="get-the-add-in-installer">Get the add-in installer</h2>
-<p>After your order is complete, download the PDMShell add-in from your Blue Byte Systems Inc <a href="https://bluebyte.biz/account">account page</a> or from the order confirmation email.</p>
-<p>If you cannot find the add-in installer after ordering, contact Blue Byte Systems technical support.</p>
-<h2 id="administrator-access">Administrator access</h2>
-<p>Only administrators should configure add-in scripts. A script can run PDMShell commands against vault files and folders, so test every script before making it available to general users.</p>
-<h2 id="license-management">License management</h2>
-<p>After the add-in is loaded, open the Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select <code>Manage PDMShell Licenses</code>.</p>
-<h2 id="updating-scripts">Updating scripts</h2>
-<p>The add-in reads script configuration from its settings when it initializes. If you change command menu items or event trigger points, reload the add-in in PDM so the command list and event hooks are registered again.</p>
-<h2 id="related-articles">Related articles</h2>
+<p>Use a license pool when a SOLIDWORKS PDM vault should manage PDMShell add-in access centrally.</p>
+<p>In pool mode, administrators add PDMShell license keys to the vault from <code>Manage PDMShell Licenses</code>. The vault can then borrow from enabled, activated licenses when users run PDMShell add-in automation.</p>
+<h2 id="when-to-use-a-license-pool">When To Use A License Pool</h2>
+<p>Use <code>Use license pool</code> when:</p>
 <ul>
-<li><a href="script-editor.html">Script Editor</a></li>
-<li><a href="license-manager.html">Manage PDMShell add-in licenses</a></li>
-<li><a href="../license-pool.html">License Pool</a></li>
-<li><a href="../machine-license.html">Machine License</a></li>
-<li><a href="command-menu.html">Command menu scripts</a></li>
-<li><a href="trigger-points.html">Event trigger points</a></li>
+<li>Multiple PDM users need access to PDMShell add-in commands.</li>
+<li>A shared vault should control who can use add-in automation.</li>
+<li>You want license access managed from the Administration Tool instead of each workstation.</li>
+<li>You want to review active borrows by vault, machine, user, and borrowed time.</li>
+</ul>
+<h2 id="how-pool-borrowing-works">How Pool Borrowing Works</h2>
+<p>When a user runs PDMShell automation from the add-in, the vault checks the enabled, activated licenses in the pool. If a seat is available, the add-in borrows a license for that user and machine.</p>
+<p>The <code>Active borrows</code> table in <code>Manage PDMShell Licenses</code> shows the current pool usage.</p>
+<h2 id="manage-pool-keys">Manage Pool Keys</h2>
+<p>Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select <code>Manage PDMShell Licenses</code>.</p>
+<p>From the license manager, administrators can:</p>
+<ul>
+<li>Add one or more PDMShell license keys.</li>
+<li>Enable or disable keys.</li>
+<li>Activate keys when activation is required.</li>
+<li>Delete keys from the vault license list.</li>
+<li>Review active pool borrows.</li>
+</ul>
+<h2 id="when-not-to-use-a-pool">When Not To Use A Pool</h2>
+<p>A pool may not be necessary when only one administrator runs PDMShell automation from a workstation that already has an activated local license. In that case, use a <a href="machine-license.html">Machine License</a>.</p>
+<h2 id="related-articles">Related Articles</h2>
+<ul>
+<li><a href="machine-license.html">Machine License</a></li>
+<li><a href="addin/license-manager.html">Manage PDMShell add-in licenses</a></li>
+<li><a href="license-activation.html">License Activation</a></li>
+<li><a href="offline-activation.html">Offline Activation</a></li>
 </ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/addin/installation.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/license-pool.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

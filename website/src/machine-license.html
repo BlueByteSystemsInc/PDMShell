@@ -2,21 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>PDMShell add-in license modes | PDMShell | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>Machine License | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="PDMShell add-in license modes | PDMShell | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="Machine License | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Choose between PDMShell add-in license pool mode and machine license mode.">
-      <link rel="icon" href="../../favicon.ico">
-      <link rel="stylesheet" href="../../public/docfx.min.css">
-      <link rel="stylesheet" href="../../public/main.css">
-      <meta name="docfx:navrel" content="../../toc.html">
-      <meta name="docfx:tocrel" content="../toc.html">
+      <meta name="description" content="Use the local PDMShell machine license for add-in automation on a workstation.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
       
-      <meta name="docfx:rel" content="../../">
+      <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/addin/license-modes.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/machine-license.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -30,7 +30,7 @@
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
 
-      <script type="module" src="./../../public/docfx.min.js"></script>
+      <script type="module" src="./../public/docfx.min.js"></script>
 
       <script>
         const theme = localStorage.getItem('theme') || 'auto'
@@ -43,8 +43,8 @@
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../images/fav.png" alt="PDMShell">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/fav.png" alt="PDMShell">
             PDMShell
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,54 +85,36 @@
         </div>
 
         <article data-uid="">
-<h1 id="license-pool-and-machine-licenses">License pool and machine licenses</h1>
+<h1 id="machine-license">Machine License</h1>
 
-<p>The PDMShell add-in can use either a vault license pool or the local PDMShell license installed on a workstation.</p>
-<p>Use the focused licensing articles for the full explanation:</p>
+<p>Use a machine license when the PDMShell add-in should use the local PDMShell license already installed on a workstation.</p>
+<p>Machine license mode is selected from <code>Manage PDMShell Licenses</code> with <code>Use this machine's license</code>.</p>
+<h2 id="when-to-use-a-machine-license">When To Use A Machine License</h2>
+<p>Use <code>Use this machine's license</code> when:</p>
 <ul>
-<li><a href="../license-pool.html">License Pool</a></li>
-<li><a href="../machine-license.html">Machine License</a></li>
+<li>One administrator runs PDMShell add-in automation from a licensed workstation.</li>
+<li>Each workstation already has its own activated PDMShell license.</li>
+<li>You do not want the vault to manage pooled license keys.</li>
+<li>You do not need to review active pool borrows from the vault.</li>
 </ul>
-<h2 id="which-mode-should-i-use">Which mode should I use?</h2>
-<table>
-<thead>
-<tr>
-<th>Scenario</th>
-<th>Recommended mode</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Many PDM users need add-in scripts</td>
-<td>License pool</td>
-</tr>
-<tr>
-<td>A shared vault should control add-in license access</td>
-<td>License pool</td>
-</tr>
-<tr>
-<td>One administrator runs scripts from a licensed workstation</td>
-<td>Machine license</td>
-</tr>
-<tr>
-<td>You already activate PDMShell on each workstation</td>
-<td>Machine license</td>
-</tr>
-</tbody>
-</table>
-<h2 id="related-articles">Related articles</h2>
+<h2 id="how-activation-works">How Activation Works</h2>
+<p>Machine license mode uses the license stored on the current computer. Activate or deactivate that license from PDMShell settings on the workstation.</p>
+<p>If the workstation has internet access, use <a href="license-activation.html">License Activation</a>. If the workstation is air-gapped or cannot reach the license server, use <a href="offline-activation.html">Offline Activation</a>.</p>
+<h2 id="difference-from-license-pool">Difference From License Pool</h2>
+<p>Machine license mode does not borrow from vault-managed license keys. The add-in checks the local workstation license instead.</p>
+<p>For shared vault access across multiple users or machines, use a <a href="license-pool.html">License Pool</a>.</p>
+<h2 id="related-articles">Related Articles</h2>
 <ul>
-<li><a href="license-manager.html">Manage PDMShell add-in licenses</a></li>
-<li><a href="../license-pool.html">License Pool</a></li>
-<li><a href="../machine-license.html">Machine License</a></li>
-<li><a href="../license-activation.html">License Activation</a></li>
-<li><a href="../offline-activation.html">Offline Activation</a></li>
+<li><a href="license-pool.html">License Pool</a></li>
+<li><a href="addin/license-manager.html">Manage PDMShell add-in licenses</a></li>
+<li><a href="license-activation.html">License Activation</a></li>
+<li><a href="offline-activation.html">Offline Activation</a></li>
 </ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/addin/license-modes.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BlueByteSystemsInc/PDMShell/blob/master/src/machine-license.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

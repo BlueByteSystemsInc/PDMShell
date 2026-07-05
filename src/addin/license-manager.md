@@ -25,7 +25,7 @@ The top of the window controls how the vault uses PDMShell licenses.
 - `Use license pool` lets the vault borrow from activated license keys stored in the vault.
 - `Use this machine's license` uses the local PDMShell license already installed on the current workstation.
 
-For help choosing a mode, see [License pool and machine licenses](license-modes.md).
+For help choosing a mode, see [License Pool](../license-pool.md) and [Machine License](../machine-license.md).
 
 ## Add license keys
 
@@ -66,6 +66,7 @@ Use the `Activate` button in the license list when a license key is present but 
 
 ## Related articles
 
-- [License pool and machine licenses](license-modes.md)
+- [License Pool](../license-pool.md)
+- [Machine License](../machine-license.md)
 - [Installation and access](installation.md)
 - [Runtime execution](runtime-execution.md)

@@ -15,10 +15,11 @@ then install the latest version. Do not update installed version.
 ## 4.0.21 (2026-07-04)
 - Added [`transition`](TRANSITION.md) `mode` for direct file and search transitions so administrators can choose `simple` or `references`.
 - Updated the [`rebuild`](REBUILD.md) documentation to clarify that the command is reserved and not implemented yet.
+- Split add-in licensing guidance into a dedicated [Licensing](licensing.md) section with [License Pool](license-pool.md) and [Machine License](machine-license.md) articles.
 
 ## 4.0.19 (2026-07-04)
 - Added [PDMShell add-in license management](addin/license-manager.md) from `Manage PDMShell Licenses` in the SOLIDWORKS PDM Administration Tool.
-- Added guidance for [license pool and machine licenses](addin/license-modes.md) so administrators can choose how the add-in consumes PDMShell licenses.
+- Added guidance for [License Pool](license-pool.md) and [Machine License](machine-license.md) so administrators can choose how the add-in consumes PDMShell licenses.
 
 ## 4.0.18 (2026-07-06)
 - Added revision-aware [placeholder evaluation](EVAL.md) functions including `${revision()}`, `${nextRevision()}`, `${revisionComponentValue(...)}`, `${nextRevisionComponentValue(...)}`, revision component counters, revision scheme checks, and revision value validation.

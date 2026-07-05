@@ -319,6 +319,7 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
     <p>Start with the basics, then move into scripts, add-in automation, and the visual editor as your workflows grow.</p>
     <div class="pdmshell-cta-row">
       <a class="pdmshell-button pdmshell-button-primary" href="howtoinstall.md">Install or update PDMShell</a>
+      <a class="pdmshell-button pdmshell-button-secondary" href="licensing.md">Choose licensing</a>
       <a class="pdmshell-button pdmshell-button-secondary" href="license-activation.md">Activate a license</a>
       <a class="pdmshell-button pdmshell-button-secondary" href="offline-activation.md">Offline activation</a>
       <a class="pdmshell-button pdmshell-button-secondary" href="FREEVSPREMIUM.md">Compare Free and Premium</a>

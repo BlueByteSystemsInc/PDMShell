@@ -2417,6 +2417,36 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/license-pool.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/license-pool.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/licensing.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/licensing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/machine-license.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/machine-license.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/offline-activation.md",
       "output": {
         ".html": {

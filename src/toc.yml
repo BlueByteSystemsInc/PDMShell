@@ -7,14 +7,25 @@
     href: introduction.md
   - name: Install or Update
     href: howtoinstall.md
-  - name: License Activation
-    href: license-activation.md
-  - name: Offline Activation
-    href: offline-activation.md
   - name: Free vs Premium
     href: FREEVSPREMIUM.md
   - name: FAQ
     href: faq.md
+- name: Licensing
+  expanded: true
+  items:
+  - name: Overview
+    href: licensing.md
+  - name: License Activation
+    href: license-activation.md
+  - name: Offline Activation
+    href: offline-activation.md
+  - name: License Pool
+    href: license-pool.md
+  - name: Machine License
+    href: machine-license.md
+  - name: Manage add-in licenses
+    href: addin/license-manager.md
 - name: Build Scripts
   expanded: true
   items:
@@ -69,10 +80,6 @@
     href: TASKSCRIPT.md
   - name: Installation and access
     href: addin/installation.md
-  - name: Manage add-in licenses
-    href: addin/license-manager.md
-  - name: License pool and machine licenses
-    href: addin/license-modes.md
   - name: Script Editor
     href: addin/script-editor.md
   - name: Permissions

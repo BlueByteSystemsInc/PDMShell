@@ -30,6 +30,7 @@ The add-in reads script configuration from its settings when it initializes. If 
 
 - [Script Editor](script-editor.md)
 - [Manage PDMShell add-in licenses](license-manager.md)
-- [License pool and machine licenses](license-modes.md)
+- [License Pool](../license-pool.md)
+- [Machine License](../machine-license.md)
 - [Command menu scripts](command-menu.md)
 - [Event trigger points](trigger-points.md)

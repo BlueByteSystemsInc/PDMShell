@@ -10,7 +10,7 @@ You can use PDMShell for quick one-line commands, repeatable `.pdmshell` scripts
 
 ## Install And Activate
 
-Start with [Install or Update](howtoinstall.md), then activate PDMShell from [License Activation](license-activation.md). If the computer is air-gapped or cannot reach the license server, use [Offline Activation](offline-activation.md).
+Start with [Install or Update](howtoinstall.md), then choose the right workflow from [Licensing](licensing.md). Most computers use [License Activation](license-activation.md). Air-gapped or restricted computers use [Offline Activation](offline-activation.md). If you use the PDMShell add-in, choose between a [License Pool](license-pool.md) and a [Machine License](machine-license.md).
 
 ## What You Can Do with PDMShell
 
