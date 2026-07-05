@@ -12,6 +12,9 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.23 (2026-07-05)
+- Fixed placeholder evaluation when an alias is followed by a file extension separator, so commands such as [`dump`](DUMP.md) can now resolve paths like `c:\Temp\membrane-$guid.txt`.
+
 ## 4.0.22 (2026-07-04)
 - Improved [placeholder evaluation](EVAL.md) so the Expression Evaluator, generated script preview, command alias evaluation, and conditions resolve the same common file, folder, vault, user, date, and environment placeholders.
 
