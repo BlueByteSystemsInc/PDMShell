@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="FAQ | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Frequently Asked Questions (FAQ) about PDMShell.">
+      <meta name="description" content="Frequently asked questions about PDMShell licensing, installation, automation, the PDMShell add-in, and support.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,100 +85,64 @@
         </div>
 
         <article data-uid="">
-<h1 id="frequently-asked-questions-faq-for-pdmshell">Frequently Asked Questions (FAQ) for PDMShell</h1>
+<h1 id="faq">FAQ</h1>
 
-<hr>
-<h2 id="1-what-is-pdmshell">1. What is PDMShell?</h2>
-<p>PDMShell is a command-line environment for SOLIDWORKS PDM Professional that allows users to automate, query, and batch process vault data using simple shell commands.<br>
-It is designed for administrators, developers, and power users who want to extend PDM capabilities beyond the standard client.</p>
-<hr>
-<h2 id="2-what-is-the-difference-between-the-free-and-premium-versions">2. What is the difference between the Free and Premium versions?</h2>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th><strong>Free License</strong></th>
-<th><strong>Premium License</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>search</code> result limit</td>
-<td>5 items</td>
-<td>Unlimited</td>
-</tr>
-<tr>
-<td><code>runscript</code> script length</td>
-<td>5 lines</td>
-<td>Unlimited</td>
-</tr>
-<tr>
-<td>Access to all <code>search</code> commands</td>
-<td>Included, limited to 5 results</td>
-<td>Included, unlimited</td>
-</tr>
-<tr>
-<td>Workflow and transition integration</td>
-<td>Not available</td>
-<td>Available</td>
-</tr>
-<tr>
-<td>Technical support &amp; updates</td>
-<td>Not available</td>
-<td>Priority</td>
-</tr>
-<tr>
-<td>Commercial use</td>
-<td>Not available</td>
-<td>Allowed</td>
-</tr>
-</tbody>
-</table>
-<p>The Free License is ideal for evaluation and lightweight tasks.<br>
-The Premium License unlocks full automation, workflow integration, unlimited search results, and unlimited scripting.</p>
-<hr>
-<h2 id="3-how-do-i-install-or-update-pdmshell">3. How do I install or update PDMShell?</h2>
-<p>You can install or update PDMShell from:</p>
+<h2 id="what-is-pdmshell">What Is PDMShell?</h2>
+<p>PDMShell is a command-line and scripting tool for SOLIDWORKS PDM Professional. It helps administrators, engineers, and migration teams automate vault work such as searching, variable updates, file operations, workflow transitions, script execution, and add-in automation.</p>
+<p>Start with <a href="introduction.html">Introduction</a> if you are new to PDMShell.</p>
+<h2 id="what-is-the-difference-between-free-and-premium">What Is The Difference Between Free And Premium?</h2>
+<p>The Free edition is intended for evaluation, quick validation, and small command-line jobs. The Premium edition is intended for production automation.</p>
+<p>Main differences:</p>
 <ul>
-<li>The <a href="https://pdmshell.bluebyte.biz">official website</a>, or</li>
-<li>The Microsoft Store</li>
+<li>Free <code>search</code> results are limited to 5 items.</li>
+<li>Free <code>runscript</code> execution is limited to 5 script lines.</li>
+<li>Premium removes those limits.</li>
+<li>Premium includes the PDMShell add-in.</li>
+<li>Premium supports production automation, workflow integration, and larger batch workflows.</li>
 </ul>
-<p>For detailed setup steps, see the <a href="howtoinstall.html">Installation Guide</a>.<br>
-If you are updating from a previous version, uninstall the old one first to ensure all command definitions and descriptions are refreshed properly.</p>
-<hr>
-<h2 id="4-why-are-some-commands-marked-as-na-or-missing-descriptions-after-an-update">4. Why are some commands marked as N/A or missing descriptions after an update?</h2>
-<p>This usually happens when PDMShell is updated over an existing installation without removing old files.</p>
-<h3 id="solution">Solution:</h3>
+<p>See <a href="FREEVSPREMIUM.html">PDMShell Free vs Premium</a> for the full comparison and pricing.</p>
+<h2 id="what-is-the-difference-between-a-single-license-and-a-license-pool">What Is The Difference Between A Single License And A License Pool?</h2>
+<p>A single license is activated on one workstation and is best for one administrator or one machine.</p>
+<p>A license pool is managed from a SOLIDWORKS PDM vault and is best when multiple users need access to PDMShell add-in automation. Users borrow available seats from the pool when they run add-in automation.</p>
+<p>See <a href="machine-license.html">Machine License</a> and <a href="license-pool.html">License Pool</a>.</p>
+<h2 id="how-do-i-activate-pdmshell">How Do I Activate PDMShell?</h2>
+<p>If the computer has internet access, use <a href="license-activation.html">License Activation</a>.</p>
+<p>If the computer is air-gapped or cannot reach the license server, use <a href="offline-activation.html">Offline Activation</a>.</p>
+<h2 id="how-do-i-install-or-update-pdmshell">How Do I Install Or Update PDMShell?</h2>
+<p>Use <a href="howtoinstall.html">Install or Update</a>. For updates, uninstall the existing version first, then install the latest version.</p>
+<p>Do not install a new version over the installed version unless the installation article specifically says that workflow is supported.</p>
+<h2 id="where-do-i-download-the-pdmshell-add-in">Where Do I Download The PDMShell Add-in?</h2>
+<p>The PDMShell add-in is available with Premium. After your order is complete, download it from your Blue Byte Systems Inc <a href="https://bluebyte.biz/account">account page</a>, from the order confirmation email, or ask technical support after the order is made.</p>
+<p>See <a href="addin/installation.html">PDMShell add-in installation and access</a>.</p>
+<h2 id="how-do-i-manage-add-in-licenses">How Do I Manage Add-in Licenses?</h2>
+<p>Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select <code>Manage PDMShell Licenses</code>.</p>
+<p>From there, administrators can choose license pool mode or machine license mode, add license keys, activate pool keys, enable or disable keys, and review active borrows.</p>
+<p>See <a href="addin/license-manager.html">Manage PDMShell add-in licenses</a>.</p>
+<h2 id="can-i-use-pdmshell-for-customer-projects">Can I Use PDMShell For Customer Projects?</h2>
+<p>Resellers, VARs, consultants, and service partners may not use PDMShell to perform customer migrations, vault cleanup, batch automation, or paid customer services unless their license agreement explicitly allows it.</p>
+<p>Contact Blue Byte Systems Inc for special licensing permission or service-provider licensing.</p>
+<h2 id="what-are-the-system-requirements">What Are The System Requirements?</h2>
+<p>PDMShell requires Windows and SOLIDWORKS PDM Professional.</p>
+<p>SOLIDWORKS is required only for commands and scripts that open or automate SOLIDWORKS documents, such as macro-based workflows.</p>
+<h2 id="why-are-commands-missing-or-showing-old-descriptions-after-an-update">Why Are Commands Missing Or Showing Old Descriptions After An Update?</h2>
+<p>This usually means the installed files were not refreshed correctly.</p>
+<p>Use the clean update workflow:</p>
 <ol>
-<li>Uninstall the current version of PDMShell.</li>
-<li>Download the latest version from the <a href="https://pdmshell.bluebyte.biz">official website</a>.</li>
-<li>Reinstall it cleanly to refresh command data and documentation.</li>
+<li>Uninstall the current PDMShell version.</li>
+<li>Download the latest installer.</li>
+<li>Install the latest version.</li>
 </ol>
-<hr>
-<h2 id="5-do-i-need-administrative-privileges-to-install-pdmshell">5. Do I need administrative privileges to install PDMShell?</h2>
-<p>Yes. Administrative privileges are required when installing PDMShell from the website installer (MSI).<br>
-If you install via the Microsoft Store, Windows handles elevation automatically.</p>
-<hr>
-<h2 id="6-what-are-the-system-requirements-for-pdmshell">6. What are the system requirements for PDMShell?</h2>
+<p>See <a href="howtoinstall.html">Install or Update</a>.</p>
+<h2 id="how-do-i-get-help">How Do I Get Help?</h2>
+<p>For technical support, contact <code>support@bluebytesystemsinc.zohodesk.com</code>.</p>
+<p>When reporting an issue, include:</p>
 <ul>
-<li>Operating System: Windows 10 or 11</li>
-<li>SOLIDWORKS PDM Professional: 2014 or newer</li>
-<li>SOLIDWORKS 3D: 2017 or newer (for commands that interact with SOLIDWORKS)</li>
+<li>PDMShell version.</li>
+<li>Command or script being run.</li>
+<li>Error message.</li>
+<li>Whether the issue happens in the command window, visual editor, or PDMShell add-in.</li>
 </ul>
-<hr>
-<h2 id="7-how-do-i-report-a-bug-or-request-support">7. How do I report a bug or request support?</h2>
-<p>You can reach us via:</p>
-<ul>
-<li>Email: <a href="mailto:support@bluebyte.biz">support@bluebyte.biz</a></li>
-<li>Web Form: <a href="https://bluebyte.biz/contact">bluebyte.biz/contact</a></li>
-</ul>
-<p>Please include your PDMShell version, command name, and error message when reporting issues.</p>
-<hr>
-<h2 id="8-which-commands-are-available-in-the-free-version">8. Which commands are available in the Free version?</h2>
-<p>Search-related commands and basic file utilities are free to use. In the Free edition, <a href="SEARCH.html"><code>search</code></a> returns up to 5 items and <a href="RUNSCRIPT.html"><code>runscript</code></a> runs scripts up to 5 lines.</p>
-<p>These commands are ideal for quick lookups, validation, and testing automation workflows before upgrading to Premium.</p>
-<hr>
-<p>For additional questions, contact us anytime at <a href="mailto:support@bluebyte.biz">support@bluebyte.biz</a>.</p>
+<p>For teams that want help planning, developing, or deploying automation, Blue Byte Systems offers <a href="https://bluebyte.biz/product/enterprise-support-services/">Enterprise Support Services</a>.</p>
 
 </article>
 

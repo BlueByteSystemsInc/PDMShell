@@ -5,7 +5,7 @@ title: PDMShell Free vs Premium | SOLIDWORKS PDM
 
 # PDMShell Free vs Premium
 
-PDMShell comes in two editions: Free for light use and Premium for full automation in SOLIDWORKS PDM.
+PDMShell is available as a Free edition for evaluation and lightweight work, and a Premium edition for production automation in SOLIDWORKS PDM.
 
 ---
 
@@ -13,8 +13,8 @@ PDMShell comes in two editions: Free for light use and Premium for full automati
 
 | Edition | Description |
 |----------|--------------|
-| **Free** | Ideal for testing and small jobs. `search` returns up to 5 items, and `runscript` runs scripts up to 5 lines. |
-| **Premium** | Full access with unlimited search results, unlimited scripting, workflow automation, and the PDMShell add-in. |
+| Free | Best for evaluation, quick validation, and small command-line jobs. |
+| Premium | Best for production automation, unlimited scripting, workflow integration, and PDMShell add-in deployment. |
 
 ---
 
@@ -24,24 +24,29 @@ PDMShell comes in two editions: Free for light use and Premium for full automati
 |----------|------|----------|
 | `search` result limit | 5 items | Unlimited |
 | `runscript` script length | 5 lines | Unlimited |
-| All `search` commands | Yes, limited to 5 results | Yes, unlimited |
-| `printfromsource`, `getvar` | Yes | Yes, unlimited |
-| Workflow & transitions | No | Yes |
+| Command-line use | Yes, with Free limits | Yes, without Free limits |
+| Source and CSV workflows | Limited by Free limits | Yes |
+| Workflow transitions | No | Yes |
 | PDMShell add-in | No | Yes |
 | Automation scripting | Yes, limited to 5 script lines | Yes, unlimited |
-| Alias & renaming | Yes | Yes |
-| Priority support | No | Full |
+| Visual workflow building | Yes, limited by execution limits | Yes |
+| Priority support | No | Yes |
 | Commercial use | Yes, non-resellers only | Yes |
 | Reseller use | No | Yes |
-| Cost | Free | Paid |
+| Cost | Free | Single license or license pool |
 
 ---
 
 ## Free Edition
 
-Perfect for evaluation, quick lookups, and validation tasks.  
-Limits: [`search`](SEARCH.md) returns up to 5 items, and [`runscript`](RUNSCRIPT.md) runs scripts up to 5 lines.  
-Note: Resellers, VARs, and service partners may not use PDMShell to perform migration, cleanup, or automation work for customers without special licensing permission from Blue Byte Systems Inc.
+Use the Free edition when you want to evaluate PDMShell, test command syntax, or run small command-line tasks.
+
+Free edition limits:
+
+- [`search`](SEARCH.md) returns up to 5 items.
+- [`runscript`](RUNSCRIPT.md) runs scripts up to 5 lines.
+- The PDMShell add-in is not included.
+- Production automation, large batch work, and customer service work require Premium or a separate licensing agreement.
 
 > [!NOTE]
 > The [PDMShell add-in](TASKSCRIPT.md) is available only with PDMShell Premium. The Free edition can run supported command-line features within its limits, but it does not include the PDM add-in, right-click menu scripts, event trigger points, add-in permissions, or add-in conditions.
@@ -49,12 +54,44 @@ Note: Resellers, VARs, and service partners may not use PDMShell to perform migr
 > [!WARNING]
 > If you are a reseller, VAR, consultant, or service partner, you cannot use PDMShell to perform customer migrations, vault cleanup, batch automation, or paid customer services unless your license agreement explicitly allows it. Contact Blue Byte Systems Inc for special licensing permission.
 
-Example:
-```bash
-printfromsource -filePath "source.csv" -csv "output.csv"
-```
+## Premium Edition
+
+Use Premium when PDMShell is part of a production automation workflow.
+
+Premium includes:
+
+- Unlimited search results.
+- Unlimited script execution.
+- Workflow and transition automation.
+- PDMShell add-in access.
+- Right-click menu scripts and event trigger points.
+- License options for single workstations or shared vault access.
+
+## Premium Licensing Options
+
+Premium can be licensed as a single machine license or as a license pool.
+
+| Option | Best for | How it works |
+| --- | --- | --- |
+| Single license | One workstation or one administrator | The license is activated on a computer and used by PDMShell on that machine. |
+| License pool | Teams using the PDMShell add-in from a shared PDM vault | License keys are managed from the vault, and users borrow available seats when running add-in automation. |
+
+Use a [Machine License](machine-license.md) when PDMShell is mainly used from one licensed workstation. Use a [License Pool](license-pool.md) when multiple users need shared access through the PDMShell add-in.
+
+## Premium Pricing
+
+Current listed Premium pricing:
+
+| Package | Price |
+| --- | --- |
+| 1 license | $999 |
+| 4-license pool | $2,999 |
+| 8-license pool | $3,999 |
+| Additional pool licenses for existing pool customers | +$400 per additional license |
+
+> [!TIP]
+> If your team wants help planning, developing, or deploying PDMShell automation, Blue Byte Systems offers [Enterprise Support Services](https://bluebyte.biz/product/enterprise-support-services/).
 
 ## Buy Premium
 
-To buy a Premium PDMShell license, visit:
-http://bluebyte.biz/product/pdmshell
+To buy a Premium PDMShell license, visit [PDMShell Premium](https://bluebyte.biz/product/pdmshell).

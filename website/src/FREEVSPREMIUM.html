@@ -87,7 +87,7 @@
         <article data-uid="">
 <h1 id="pdmshell-free-vs-premium">PDMShell Free vs Premium</h1>
 
-<p>PDMShell comes in two editions: Free for light use and Premium for full automation in SOLIDWORKS PDM.</p>
+<p>PDMShell is available as a Free edition for evaluation and lightweight work, and a Premium edition for production automation in SOLIDWORKS PDM.</p>
 <hr>
 <h2 id="overview">Overview</h2>
 <table>
@@ -99,12 +99,12 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Free</strong></td>
-<td>Ideal for testing and small jobs. <code>search</code> returns up to 5 items, and <code>runscript</code> runs scripts up to 5 lines.</td>
+<td>Free</td>
+<td>Best for evaluation, quick validation, and small command-line jobs.</td>
 </tr>
 <tr>
-<td><strong>Premium</strong></td>
-<td>Full access with unlimited search results, unlimited scripting, workflow automation, and the PDMShell add-in.</td>
+<td>Premium</td>
+<td>Best for production automation, unlimited scripting, workflow integration, and PDMShell add-in deployment.</td>
 </tr>
 </tbody>
 </table>
@@ -130,17 +130,17 @@
 <td>Unlimited</td>
 </tr>
 <tr>
-<td>All <code>search</code> commands</td>
-<td>Yes, limited to 5 results</td>
-<td>Yes, unlimited</td>
+<td>Command-line use</td>
+<td>Yes, with Free limits</td>
+<td>Yes, without Free limits</td>
 </tr>
 <tr>
-<td><code>printfromsource</code>, <code>getvar</code></td>
+<td>Source and CSV workflows</td>
+<td>Limited by Free limits</td>
 <td>Yes</td>
-<td>Yes, unlimited</td>
 </tr>
 <tr>
-<td>Workflow &amp; transitions</td>
+<td>Workflow transitions</td>
 <td>No</td>
 <td>Yes</td>
 </tr>
@@ -155,14 +155,14 @@
 <td>Yes, unlimited</td>
 </tr>
 <tr>
-<td>Alias &amp; renaming</td>
-<td>Yes</td>
+<td>Visual workflow building</td>
+<td>Yes, limited by execution limits</td>
 <td>Yes</td>
 </tr>
 <tr>
 <td>Priority support</td>
 <td>No</td>
-<td>Full</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td>Commercial use</td>
@@ -177,15 +177,20 @@
 <tr>
 <td>Cost</td>
 <td>Free</td>
-<td>Paid</td>
+<td>Single license or license pool</td>
 </tr>
 </tbody>
 </table>
 <hr>
 <h2 id="free-edition">Free Edition</h2>
-<p>Perfect for evaluation, quick lookups, and validation tasks.<br>
-Limits: <a href="SEARCH.html"><code>search</code></a> returns up to 5 items, and <a href="RUNSCRIPT.html"><code>runscript</code></a> runs scripts up to 5 lines.<br>
-Note: Resellers, VARs, and service partners may not use PDMShell to perform migration, cleanup, or automation work for customers without special licensing permission from Blue Byte Systems Inc.</p>
+<p>Use the Free edition when you want to evaluate PDMShell, test command syntax, or run small command-line tasks.</p>
+<p>Free edition limits:</p>
+<ul>
+<li><a href="SEARCH.html"><code>search</code></a> returns up to 5 items.</li>
+<li><a href="RUNSCRIPT.html"><code>runscript</code></a> runs scripts up to 5 lines.</li>
+<li>The PDMShell add-in is not included.</li>
+<li>Production automation, large batch work, and customer service work require Premium or a separate licensing agreement.</li>
+</ul>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The <a href="TASKSCRIPT.html">PDMShell add-in</a> is available only with PDMShell Premium. The Free edition can run supported command-line features within its limits, but it does not include the PDM add-in, right-click menu scripts, event trigger points, add-in permissions, or add-in conditions.</p>
@@ -194,12 +199,75 @@ Note: Resellers, VARs, and service partners may not use PDMShell to perform migr
 <h5>Warning</h5>
 <p>If you are a reseller, VAR, consultant, or service partner, you cannot use PDMShell to perform customer migrations, vault cleanup, batch automation, or paid customer services unless your license agreement explicitly allows it. Contact Blue Byte Systems Inc for special licensing permission.</p>
 </div>
-<p>Example:</p>
-<pre><code class="lang-bash">printfromsource -filePath &quot;source.csv&quot; -csv &quot;output.csv&quot;
-</code></pre>
+<h2 id="premium-edition">Premium Edition</h2>
+<p>Use Premium when PDMShell is part of a production automation workflow.</p>
+<p>Premium includes:</p>
+<ul>
+<li>Unlimited search results.</li>
+<li>Unlimited script execution.</li>
+<li>Workflow and transition automation.</li>
+<li>PDMShell add-in access.</li>
+<li>Right-click menu scripts and event trigger points.</li>
+<li>License options for single workstations or shared vault access.</li>
+</ul>
+<h2 id="premium-licensing-options">Premium Licensing Options</h2>
+<p>Premium can be licensed as a single machine license or as a license pool.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Best for</th>
+<th>How it works</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single license</td>
+<td>One workstation or one administrator</td>
+<td>The license is activated on a computer and used by PDMShell on that machine.</td>
+</tr>
+<tr>
+<td>License pool</td>
+<td>Teams using the PDMShell add-in from a shared PDM vault</td>
+<td>License keys are managed from the vault, and users borrow available seats when running add-in automation.</td>
+</tr>
+</tbody>
+</table>
+<p>Use a <a href="machine-license.html">Machine License</a> when PDMShell is mainly used from one licensed workstation. Use a <a href="license-pool.html">License Pool</a> when multiple users need shared access through the PDMShell add-in.</p>
+<h2 id="premium-pricing">Premium Pricing</h2>
+<p>Current listed Premium pricing:</p>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 license</td>
+<td>$999</td>
+</tr>
+<tr>
+<td>4-license pool</td>
+<td>$2,999</td>
+</tr>
+<tr>
+<td>8-license pool</td>
+<td>$3,999</td>
+</tr>
+<tr>
+<td>Additional pool licenses for existing pool customers</td>
+<td>+$400 per additional license</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If your team wants help planning, developing, or deploying PDMShell automation, Blue Byte Systems offers <a href="https://bluebyte.biz/product/enterprise-support-services/">Enterprise Support Services</a>.</p>
+</div>
 <h2 id="buy-premium">Buy Premium</h2>
-<p>To buy a Premium PDMShell license, visit:
-<a href="http://bluebyte.biz/product/pdmshell">http://bluebyte.biz/product/pdmshell</a></p>
+<p>To buy a Premium PDMShell license, visit <a href="https://bluebyte.biz/product/pdmshell">PDMShell Premium</a>.</p>
 
 </article>
 

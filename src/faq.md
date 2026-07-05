@@ -1,81 +1,96 @@
 ---
-description: Frequently Asked Questions (FAQ) about PDMShell.
+description: Frequently asked questions about PDMShell licensing, installation, automation, the PDMShell add-in, and support.
 title: FAQ | PDMShell | SOLIDWORKS PDM
 ---
+# FAQ
 
-# Frequently Asked Questions (FAQ) for PDMShell
+## What Is PDMShell?
 
----
+PDMShell is a command-line and scripting tool for SOLIDWORKS PDM Professional. It helps administrators, engineers, and migration teams automate vault work such as searching, variable updates, file operations, workflow transitions, script execution, and add-in automation.
 
-## 1. What is PDMShell?
-PDMShell is a command-line environment for SOLIDWORKS PDM Professional that allows users to automate, query, and batch process vault data using simple shell commands.  
-It is designed for administrators, developers, and power users who want to extend PDM capabilities beyond the standard client.
+Start with [Introduction](introduction.md) if you are new to PDMShell.
 
----
+## What Is The Difference Between Free And Premium?
 
-## 2. What is the difference between the Free and Premium versions?
+The Free edition is intended for evaluation, quick validation, and small command-line jobs. The Premium edition is intended for production automation.
 
-| Feature | **Free License** | **Premium License** |
-|----------|------------------|---------------------|
-| `search` result limit | 5 items | Unlimited |
-| `runscript` script length | 5 lines | Unlimited |
-| Access to all `search` commands | Included, limited to 5 results | Included, unlimited |
-| Workflow and transition integration | Not available | Available |
-| Technical support & updates | Not available | Priority |
-| Commercial use | Not available | Allowed |
+Main differences:
 
-The Free License is ideal for evaluation and lightweight tasks.  
-The Premium License unlocks full automation, workflow integration, unlimited search results, and unlimited scripting.
+- Free `search` results are limited to 5 items.
+- Free `runscript` execution is limited to 5 script lines.
+- Premium removes those limits.
+- Premium includes the PDMShell add-in.
+- Premium supports production automation, workflow integration, and larger batch workflows.
 
----
+See [PDMShell Free vs Premium](FREEVSPREMIUM.md) for the full comparison and pricing.
 
-## 3. How do I install or update PDMShell?
-You can install or update PDMShell from:
-- The [official website](https://pdmshell.bluebyte.biz), or  
-- The Microsoft Store
+## What Is The Difference Between A Single License And A License Pool?
 
-For detailed setup steps, see the [Installation Guide](howtoinstall.md).  
-If you are updating from a previous version, uninstall the old one first to ensure all command definitions and descriptions are refreshed properly.
+A single license is activated on one workstation and is best for one administrator or one machine.
 
----
+A license pool is managed from a SOLIDWORKS PDM vault and is best when multiple users need access to PDMShell add-in automation. Users borrow available seats from the pool when they run add-in automation.
 
-## 4. Why are some commands marked as N/A or missing descriptions after an update?
-This usually happens when PDMShell is updated over an existing installation without removing old files.
+See [Machine License](machine-license.md) and [License Pool](license-pool.md).
 
-### Solution:
-1. Uninstall the current version of PDMShell.  
-2. Download the latest version from the [official website](https://pdmshell.bluebyte.biz).  
-3. Reinstall it cleanly to refresh command data and documentation.
+## How Do I Activate PDMShell?
 
----
+If the computer has internet access, use [License Activation](license-activation.md).
 
-## 5. Do I need administrative privileges to install PDMShell?
-Yes. Administrative privileges are required when installing PDMShell from the website installer (MSI).  
-If you install via the Microsoft Store, Windows handles elevation automatically.
+If the computer is air-gapped or cannot reach the license server, use [Offline Activation](offline-activation.md).
 
----
+## How Do I Install Or Update PDMShell?
 
-## 6. What are the system requirements for PDMShell?
-- Operating System: Windows 10 or 11  
-- SOLIDWORKS PDM Professional: 2014 or newer  
-- SOLIDWORKS 3D: 2017 or newer (for commands that interact with SOLIDWORKS)
+Use [Install or Update](howtoinstall.md). For updates, uninstall the existing version first, then install the latest version.
 
----
+Do not install a new version over the installed version unless the installation article specifically says that workflow is supported.
 
-## 7. How do I report a bug or request support?
-You can reach us via:
-- Email: [support@bluebyte.biz](mailto:support@bluebyte.biz)  
-- Web Form: [bluebyte.biz/contact](https://bluebyte.biz/contact)
+## Where Do I Download The PDMShell Add-in?
 
-Please include your PDMShell version, command name, and error message when reporting issues.
+The PDMShell add-in is available with Premium. After your order is complete, download it from your Blue Byte Systems Inc [account page](https://bluebyte.biz/account), from the order confirmation email, or ask technical support after the order is made.
 
----
+See [PDMShell add-in installation and access](addin/installation.md).
 
-## 8. Which commands are available in the Free version?
-Search-related commands and basic file utilities are free to use. In the Free edition, [`search`](SEARCH.md) returns up to 5 items and [`runscript`](RUNSCRIPT.md) runs scripts up to 5 lines.
+## How Do I Manage Add-in Licenses?
 
-These commands are ideal for quick lookups, validation, and testing automation workflows before upgrading to Premium.
+Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select `Manage PDMShell Licenses`.
 
----
+From there, administrators can choose license pool mode or machine license mode, add license keys, activate pool keys, enable or disable keys, and review active borrows.
 
-For additional questions, contact us anytime at [support@bluebyte.biz](mailto:support@bluebyte.biz).
+See [Manage PDMShell add-in licenses](addin/license-manager.md).
+
+## Can I Use PDMShell For Customer Projects?
+
+Resellers, VARs, consultants, and service partners may not use PDMShell to perform customer migrations, vault cleanup, batch automation, or paid customer services unless their license agreement explicitly allows it.
+
+Contact Blue Byte Systems Inc for special licensing permission or service-provider licensing.
+
+## What Are The System Requirements?
+
+PDMShell requires Windows and SOLIDWORKS PDM Professional.
+
+SOLIDWORKS is required only for commands and scripts that open or automate SOLIDWORKS documents, such as macro-based workflows.
+
+## Why Are Commands Missing Or Showing Old Descriptions After An Update?
+
+This usually means the installed files were not refreshed correctly.
+
+Use the clean update workflow:
+
+1. Uninstall the current PDMShell version.
+2. Download the latest installer.
+3. Install the latest version.
+
+See [Install or Update](howtoinstall.md).
+
+## How Do I Get Help?
+
+For technical support, contact `support@bluebytesystemsinc.zohodesk.com`.
+
+When reporting an issue, include:
+
+- PDMShell version.
+- Command or script being run.
+- Error message.
+- Whether the issue happens in the command window, visual editor, or PDMShell add-in.
+
+For teams that want help planning, developing, or deploying automation, Blue Byte Systems offers [Enterprise Support Services](https://bluebyte.biz/product/enterprise-support-services/).

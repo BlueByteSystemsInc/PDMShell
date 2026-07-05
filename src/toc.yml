@@ -9,8 +9,6 @@
     href: howtoinstall.md
   - name: Free vs Premium
     href: FREEVSPREMIUM.md
-  - name: FAQ
-    href: faq.md
 - name: Licensing
   expanded: true
   items:
@@ -282,7 +280,12 @@
       href: WHEREUSED.md
     - name: Find recursive parents
       href: WHEREUSEDTREE.md
-- name: Release Notes
-  href: releasenotes.md
-- name: EULA
-  href: eula.md
+- name: Support
+  expanded: true
+  items:
+  - name: FAQ
+    href: faq.md
+  - name: Release Notes
+    href: releasenotes.md
+  - name: EULA
+    href: eula.md

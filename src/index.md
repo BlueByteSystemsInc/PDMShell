@@ -255,7 +255,8 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
       </p>
       <div class="pdmshell-actions">
         <a class="pdmshell-button pdmshell-button-primary" href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell">Download PDMShell</a>
-        <a class="pdmshell-button pdmshell-button-secondary" href="introduction.md">Start with the basics</a>
+        <a class="pdmshell-button pdmshell-button-secondary" href="howtoinstall.md">Install or update</a>
+        <a class="pdmshell-button pdmshell-button-secondary" href="licensing.md">Choose licensing</a>
       </div>
     </div>
     <div class="pdmshell-hero-media">
@@ -265,20 +266,42 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
     </div>
   </section>
   <section class="pdmshell-section">
+    <h2>Start with the right path</h2>
+    <p>Use these articles to install PDMShell, choose the correct license model, and decide how your team will run automation.</p>
+    <div class="pdmshell-grid">
+      <a class="pdmshell-card" href="introduction.md">
+        <h3>Introduction</h3>
+        <p>Learn what PDMShell does and how it fits command-line, script, visual, and add-in workflows.</p>
+      </a>
+      <a class="pdmshell-card" href="howtoinstall.md">
+        <h3>Install or Update</h3>
+        <p>Download PDMShell, install the latest version, and avoid common update issues.</p>
+      </a>
+      <a class="pdmshell-card" href="licensing.md">
+        <h3>Licensing</h3>
+        <p>Choose online activation, offline activation, a machine license, or a vault license pool.</p>
+      </a>
+      <a class="pdmshell-card" href="FREEVSPREMIUM.md">
+        <h3>Free vs Premium</h3>
+        <p>Compare limits, Premium features, single licenses, pool licenses, and pricing.</p>
+      </a>
+      <a class="pdmshell-card" href="scripting.md">
+        <h3>Build Scripts</h3>
+        <p>Save repeatable <code>.pdmshell</code> scripts and run them from PDMShell, <code>pdmcli.exe</code>, or integrations.</p>
+      </a>
+      <a class="pdmshell-card" href="TASKSCRIPT.md">
+        <h3>PDMShell Add-In</h3>
+        <p>Run scripts from PDM right-click menus and trigger points with permissions and conditions.</p>
+      </a>
+    </div>
+  </section>
+  <section class="pdmshell-section">
     <h2>Choose the workflow that fits the job</h2>
     <p>PDMShell can be used as an interactive command shell, a script runner, an add-in automation layer, or a visual workflow editor.</p>
     <div class="pdmshell-grid">
       <a class="pdmshell-card" href="COMMANDS.md">
         <h3>Command Reference</h3>
         <p>Browse commands for vault navigation, file operations, variables, automation, search, and migration.</p>
-      </a>
-      <a class="pdmshell-card" href="scripting.md">
-        <h3>Scripts</h3>
-        <p>Save repeatable <code>.pdmshell</code> scripts and run them from PDMShell, <code>pdmcli.exe</code>, or integrations.</p>
-      </a>
-      <a class="pdmshell-card" href="TASKSCRIPT.md">
-        <h3>PDMShell Add-In</h3>
-        <p>Run scripts from PDM right-click menus and trigger points with permissions and conditions.</p>
       </a>
       <a class="pdmshell-card" href="visual-code-editor-4.md">
         <h3>Visual Code Editor</h3>
@@ -300,6 +323,10 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
         <h3>Advanced Search</h3>
         <p>Find PDM files with tokens, variables, favorites, result shaping, and recursive filters.</p>
       </a>
+      <a class="pdmshell-card" href="faq.md">
+        <h3>FAQ</h3>
+        <p>Find answers about licensing, installation, the add-in, reseller use, and support.</p>
+      </a>
     </div>
   </section>
   <section class="pdmshell-section pdmshell-band">
@@ -314,22 +341,14 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
       <li>Run automation from scripts, command menus, transitions, or scheduled jobs.</li>
     </ul>
   </section>
-  <section class="pdmshell-section">
-    <h2>Get started</h2>
-    <p>Start with the basics, then move into scripts, add-in automation, and the visual editor as your workflows grow.</p>
+  <section class="pdmshell-section pdmshell-band">
+    <h2>Need help planning automation?</h2>
+    <p>Blue Byte Systems can help design PDMShell scripts, add-in workflows, migration utilities, and vault automation for your SOLIDWORKS PDM environment.</p>
     <div class="pdmshell-cta-row">
-      <a class="pdmshell-button pdmshell-button-primary" href="howtoinstall.md">Install or update PDMShell</a>
-      <a class="pdmshell-button pdmshell-button-secondary" href="licensing.md">Choose licensing</a>
-      <a class="pdmshell-button pdmshell-button-secondary" href="license-activation.md">Activate a license</a>
-      <a class="pdmshell-button pdmshell-button-secondary" href="offline-activation.md">Offline activation</a>
-      <a class="pdmshell-button pdmshell-button-secondary" href="FREEVSPREMIUM.md">Compare Free and Premium</a>
+      <a class="pdmshell-button pdmshell-button-primary" href="https://bluebyte.biz/product/enterprise-support-services/">Enterprise Support Services</a>
+      <a class="pdmshell-button pdmshell-button-secondary" href="faq.md">Read the FAQ</a>
       <a class="pdmshell-button pdmshell-button-secondary" href="releasenotes.md">Read the changelog</a>
     </div>
-  </section>
-  <section class="pdmshell-section">
-    <h2>Need help planning automation?</h2>
-    <p>Blue Byte Systems can help design PDMShell scripts and add-in workflows for your SOLIDWORKS PDM environment.</p>
-    <p><a href="https://calendly.com/bluebyte">Schedule a call</a> or visit the <a href="https://bluebyte.biz/contact">contact page</a>.</p>
   </section>
   <section class="pdmshell-section">
     <h2>Legacy PDMShell overview</h2>
