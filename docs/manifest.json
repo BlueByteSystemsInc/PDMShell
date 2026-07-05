@@ -967,6 +967,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/pdmshell-expression-evaluator-dialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-expression-evaluator-dialog.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-expression-evaluator-toolbar.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-expression-evaluator-toolbar.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell-home-visual-editor.png",
       "output": {
         "resource": {

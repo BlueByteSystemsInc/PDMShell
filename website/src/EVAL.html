@@ -115,14 +115,21 @@
 <ul>
 <li><code>$value</code>: Existing value of the variable. If the existing value is null or empty, this evaluates to an empty string.</li>
 <li><code>$name</code>: The file name with extension.</li>
+<li><code>$fileName</code> / <code>$filename</code>: The file name with extension.</li>
 <li><code>$fileNameWithoutExtension</code>: The file name without extension.</li>
+<li><code>$nameWithoutExtension</code> / <code>$namewithoutextension</code>: The file name without extension.</li>
 <li><code>$extension</code>: The file extension.</li>
 <li><code>$id</code>: The file ID.</li>
 <li><code>$revision</code>: The current revision of the file (PDM revision, not the PDM variable).</li>
 <li><code>$version</code>: The current version of the file.</li>
 <li><code>$filePath</code>: The full local path of the file.</li>
+<li><code>$localPath</code>: The full local path of the file.</li>
+<li><code>$completefilename</code>: Legacy full local path of the file.</li>
 <li><code>$folderPath</code>: The full local path of the folder containing the file.</li>
+<li><code>$directory</code>: The full local path of the folder containing the file.</li>
+<li><code>$completefoldername</code>: Legacy full local path of the folder containing the file.</li>
 <li><code>$folderName</code>: The name of the folder containing the file.</li>
+<li><code>$folderID</code>: The folder ID.</li>
 <li><code>$configuration</code>: configuration name. Only valid for BOM command.</li>
 <li><code>[Variable]</code>: @ Variable value.</li>
 </ul>
@@ -132,26 +139,44 @@
 <li><code>$folderName</code>: The name of the parent folder.</li>
 <li><code>$folderID</code>: The folder ID.</li>
 <li><code>$folderPath</code>: The full local path of the folder.</li>
+<li><code>$directory</code>: The full local path of the folder.</li>
+<li><code>$filePath</code>: The full local path of the folder when the current context is a folder.</li>
+<li><code>$localPath</code>: The full local path of the folder.</li>
+<li><code>$completefoldername</code>: Legacy full local path of the folder.</li>
 <li><code>[Variable]</code>:  Variable value.</li>
 </ul>
 <h3 id="common-placeholders-applicable-to-both-files-and-folders">Common Placeholders (Applicable to Both Files and Folders)</h3>
 <ul>
-<li><code>$localPath</code>: Local path</li>
 <li><code>$username</code>: The name of the logged-in PDM user.</li>
 <li><code>$username.firstName</code>: The logged-in PDM user's first name when available.</li>
 <li><code>$username.lastName</code>: The logged-in PDM user's last name when available.</li>
 <li><code>$username.FullName</code>: The logged-in PDM user's full name when available.</li>
 <li><code>$username.email</code>: The logged-in PDM user's email address when available.</li>
 <li><code>$vaultName</code>: The name of the vault. <code>$vaultname</code> is also supported for compatibility.</li>
-<li><code>$yyyy</code>: The current year.</li>
-<li><code>$mm</code>: The current month (two digits).</li>
-<li><code>$hh</code>: The current hour (two digits).</li>
+<li><code>$vaultRootFolder</code>: The local root folder of the logged-in vault. <code>$vaultrootfolder</code> is also supported for compatibility.</li>
+<li><code>$GUID</code> / <code>$guid</code>: Unique identifier for the evaluation context.</li>
+<li><code>$taskName</code>: Task name when a task context is available.</li>
+<li><code>$tempFolder</code> / <code>$TempFolder</code>: User's local temporary folder.</li>
+<li><code>$machineName</code> / <code>$computerName</code>: Windows machine name.</li>
+<li><code>$windowsUser</code>: Windows user name.</li>
+<li><code>$userDomain</code> / <code>$domain</code>: Windows user domain.</li>
+<li><code>$yyyy</code> / <code>$year</code>: The current four-digit year.</li>
+<li><code>$yy</code>: The current two-digit year.</li>
+<li><code>$MM</code> / <code>$mm</code>: The current month (two digits).</li>
+<li><code>$M</code>: The current month.</li>
+<li><code>$dd</code>: The current day of month (two digits).</li>
+<li><code>$d</code>: The current day of month.</li>
+<li><code>$month</code>: Full month name.</li>
+<li><code>$mon</code>: Short month name.</li>
+<li><code>$day</code>: Full day name.</li>
+<li><code>$dayShort</code>: Short day name.</li>
+<li><code>$HH</code> / <code>$hh</code>: The current hour (24-hour clock).</li>
 <li><code>$mi</code>: The current minute (two digits).</li>
 <li><code>$ss</code>: The current second (two digits).</li>
+<li><code>$tt</code>: AM/PM designator.</li>
+<li><code>$timestamp</code>: Timestamp in <code>yyyyMMdd_HHmmss</code> format.</li>
 <li><code>$date</code>: The current date.</li>
 <li><code>$time</code>: The current time in the current locale.</li>
-<li><code>$guid</code>: Unique identifier.</li>
-<li><code>$tempFolder</code>: User's local temp folder under App Data</li>
 </ul>
 <p>Literal <code>\n</code> sequences in evaluated values are converted to <code>Environment.NewLine</code>.</p>
 <hr>

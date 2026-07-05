@@ -136,7 +136,7 @@ Date and time placeholders:
 | --- | --- |
 | `$yyyy` / `$year` | Four-digit year. |
 | `$yy` | Two-digit year. |
-| `$MM` | Two-digit month number. |
+| `$MM` / `$mm` | Two-digit month number. |
 | `$M` | Month number. |
 | `$dd` | Two-digit day of month. |
 | `$d` | Day of month. |
@@ -144,9 +144,8 @@ Date and time placeholders:
 | `$mon` | Short month name. |
 | `$day` | Full day name. |
 | `$dayShort` | Short day name. |
-| `$HH` | 24-hour hour. |
-| `$hh` | 12-hour hour. |
-| `$mi` / `$mm` | Minutes. |
+| `$HH` / `$hh` | 24-hour hour. |
+| `$mi` | Minutes. |
 | `$ss` | Seconds. |
 | `$tt` | AM/PM designator. |
 | `$timestamp` | Timestamp in `yyyyMMdd_HHmmss` format. |

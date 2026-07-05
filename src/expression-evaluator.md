@@ -14,7 +14,7 @@ Use it when you want to confirm what a placeholder, PDM variable, or string func
 The evaluator is useful for previewing:
 
 - File and folder placeholders such as `$fileName`, `$filePath`, and `$folderPath`.
-- Vault and user placeholders such as `$vaultName`, `$username`, and `$username.email`.
+- Vault and user placeholders such as `$vaultName`, `$vaultRootFolder`, `$username`, and `$username.email`.
 - Date and time placeholders such as `$date`, `$time`, `$yyyy`, and `$timestamp`.
 - PDM variables such as `[Description]` or `$(Description.@)`.
 - String functions such as `${before(...)}`, `${replace(...)}`, and `${regex(...)}`.
@@ -35,6 +35,16 @@ This makes it a safe place to test expressions before using them in production a
 4. Choose a variable when you want `$value` to use the current value of that variable.
 5. Type or choose the expression to test.
 6. Review the evaluated result.
+
+<div align="center">
+  <img src="/images/pdmshell-expression-evaluator-toolbar.png" alt="Expression Evaluator toolbar button in PDMShell" style="max-width:360px;width:100%;height:auto;">
+</div>
+
+The evaluator window shows the selected file or folder context, the optional variable and configuration inputs, the expression being tested, and the evaluated result.
+
+<div align="center">
+  <img src="/images/pdmshell-expression-evaluator-dialog.png" alt="PDMShell Expression Evaluator dialog showing a folder placeholder result" style="max-width:820px;width:100%;height:auto;">
+</div>
 
 ## Examples
 
@@ -66,6 +76,7 @@ Examples:
 | `${revisionComponentValue("ComponentName")}` | Yes |
 | `${revision("C:\Vault\File.pdf")}` | No, if the path is complete and the vault is logged in |
 | `$vaultName` | No, if logged in |
+| `$vaultRootFolder` | No, if logged in |
 | `$date` | No |
 | `$guid` | No |
 | `$tempFolder` | No |

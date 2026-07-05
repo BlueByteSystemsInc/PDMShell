@@ -36,14 +36,21 @@ The `value` parameter in supported commands can include placeholders that are re
 ### Placeholders for Files
 - `$value`: Existing value of the variable. If the existing value is null or empty, this evaluates to an empty string.
 - `$name`: The file name with extension.
+- `$fileName` / `$filename`: The file name with extension.
 - `$fileNameWithoutExtension`: The file name without extension.
+- `$nameWithoutExtension` / `$namewithoutextension`: The file name without extension.
 - `$extension`: The file extension.
 - `$id`: The file ID.
 - `$revision`: The current revision of the file (PDM revision, not the PDM variable).
 - `$version`: The current version of the file.
 - `$filePath`: The full local path of the file.
+- `$localPath`: The full local path of the file.
+- `$completefilename`: Legacy full local path of the file.
 - `$folderPath`: The full local path of the folder containing the file.
+- `$directory`: The full local path of the folder containing the file.
+- `$completefoldername`: Legacy full local path of the folder containing the file.
 - `$folderName`: The name of the folder containing the file.
+- `$folderID`: The folder ID.
 - `$configuration`: configuration name. Only valid for BOM command.
 - `[Variable]`: @ Variable value.
 
@@ -52,25 +59,43 @@ The `value` parameter in supported commands can include placeholders that are re
 - `$folderName`: The name of the parent folder.
 - `$folderID`: The folder ID.
 - `$folderPath`: The full local path of the folder.
+- `$directory`: The full local path of the folder.
+- `$filePath`: The full local path of the folder when the current context is a folder.
+- `$localPath`: The full local path of the folder.
+- `$completefoldername`: Legacy full local path of the folder.
 - `[Variable]`:  Variable value.
 
 ### Common Placeholders (Applicable to Both Files and Folders)
-- `$localPath`: Local path
 - `$username`: The name of the logged-in PDM user.
 - `$username.firstName`: The logged-in PDM user's first name when available.
 - `$username.lastName`: The logged-in PDM user's last name when available.
 - `$username.FullName`: The logged-in PDM user's full name when available.
 - `$username.email`: The logged-in PDM user's email address when available.
 - `$vaultName`: The name of the vault. `$vaultname` is also supported for compatibility.
-- `$yyyy`: The current year.
-- `$mm`: The current month (two digits).
-- `$hh`: The current hour (two digits).
+- `$vaultRootFolder`: The local root folder of the logged-in vault. `$vaultrootfolder` is also supported for compatibility.
+- `$GUID` / `$guid`: Unique identifier for the evaluation context.
+- `$taskName`: Task name when a task context is available.
+- `$tempFolder` / `$TempFolder`: User's local temporary folder.
+- `$machineName` / `$computerName`: Windows machine name.
+- `$windowsUser`: Windows user name.
+- `$userDomain` / `$domain`: Windows user domain.
+- `$yyyy` / `$year`: The current four-digit year.
+- `$yy`: The current two-digit year.
+- `$MM` / `$mm`: The current month (two digits).
+- `$M`: The current month.
+- `$dd`: The current day of month (two digits).
+- `$d`: The current day of month.
+- `$month`: Full month name.
+- `$mon`: Short month name.
+- `$day`: Full day name.
+- `$dayShort`: Short day name.
+- `$HH` / `$hh`: The current hour (24-hour clock).
 - `$mi`: The current minute (two digits).
 - `$ss`: The current second (two digits).
+- `$tt`: AM/PM designator.
+- `$timestamp`: Timestamp in `yyyyMMdd_HHmmss` format.
 - `$date`: The current date.
 - `$time`: The current time in the current locale.
-- `$guid`: Unique identifier.
-- `$tempFolder`: User's local temp folder under App Data
 
 Literal `\n` sequences in evaluated values are converted to `Environment.NewLine`.
 

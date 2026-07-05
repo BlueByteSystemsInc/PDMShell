@@ -12,6 +12,9 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.22 (2026-07-04)
+- Improved [placeholder evaluation](EVAL.md) so the Expression Evaluator, generated script preview, command alias evaluation, and conditions resolve the same common file, folder, vault, user, date, and environment placeholders.
+
 ## 4.0.21 (2026-07-04)
 - Added [`transition`](TRANSITION.md) `mode` for direct file and search transitions so administrators can choose `simple` or `references`.
 - Updated the [`rebuild`](REBUILD.md) documentation to clarify that the command is reserved and not implemented yet.
