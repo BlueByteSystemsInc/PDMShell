@@ -14,7 +14,31 @@ Instead of building automation from a fixed list of Dispatch actions, the add-in
 >[!Note]
 > The PDMShell add-in is included with the premium version. You can download it from your Blue Byte Systems Inc [account](https://bluebyte.biz/account) or deploy it with [PDMDeploy](https://docs.bluebyte.biz/src/cdpdm.html).
 
-![PDMShell add-in script editor](../images/pdmshell-addin-script-editor.png)
+## Add-in workflow
+
+Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select `Edit Scripts`.
+
+<p>
+  <img src="../images/pdmshell-addin-admin-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Edit Scripts and Manage PDMShell Licenses commands" style="max-width:520px;width:100%;height:auto;">
+</p>
+
+The Script Editor is where administrators create script entries, enable them, assign permitted users and groups, define conditions, choose PDMShell launch arguments, and select trigger points.
+
+<p>
+  <img src="../images/pdmshell-addin-script-editor-overview.png" alt="PDMShell add-in Script Editor overview showing script name, enabled state, permissions, conditions, PDMShell arguments, and trigger points" style="max-width:980px;width:100%;height:auto;">
+</p>
+
+Each script can also expose a PDM command menu item and store the PDMShell code that runs against the selected file, folder, or event context.
+
+<p>
+  <img src="../images/pdmshell-addin-script-editor-code.png" alt="PDMShell add-in Script Editor showing command menu text, PDM command hooks, and PDMShell script code" style="max-width:980px;width:100%;height:auto;">
+</p>
+
+Use the Conditions editor to build the same condition expressions used by PDMShell scripts, then save the expression back to the add-in script.
+
+<p>
+  <img src="../images/pdmshell-addin-conditions-editor.png" alt="PDMShell add-in Conditions editor with condition rows and generated condition expression" style="max-width:920px;width:100%;height:auto;">
+</p>
 
 ## What you can automate
 

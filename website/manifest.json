@@ -927,6 +927,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/pdmshell-addin-admin-menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-addin-admin-menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-addin-conditions-editor.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-addin-conditions-editor.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell-addin-license-manager.png",
       "output": {
         "resource": {
@@ -941,6 +961,26 @@
       "output": {
         "resource": {
           "relative_path": "images/pdmshell-addin-license-menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-addin-script-editor-code.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-addin-script-editor-code.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-addin-script-editor-overview.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-addin-script-editor-overview.png"
         }
       },
       "version": ""

@@ -8,6 +8,12 @@ The Conditions section controls whether a script should run for the current file
 
 Conditions use the shared PDMShell condition syntax. See [Conditions](../conditions.md) for the full reference.
 
+Use the Conditions editor to add condition rows, combine them with `and` or `or`, group expressions, and review the generated condition expression before saving the add-in script.
+
+<p>
+  <img src="../../images/pdmshell-addin-conditions-editor.png" alt="PDMShell add-in Conditions editor with condition rows and generated condition expression" style="max-width:920px;width:100%;height:auto;">
+</p>
+
 ## Supported condition features
 
 - `and` and `or`
