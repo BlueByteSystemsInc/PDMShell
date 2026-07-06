@@ -93,6 +93,10 @@
 <p>To update PDMShell properly, download the latest version, uninstall PDMShell and
 then install the latest version. Do not update installed version.</p>
 </div>
+<h2 id="4024-2026-07-06">4.0.24 (2026-07-06)</h2>
+<ul>
+<li>Updated <a href="MOVE.html"><code>move</code></a> so <code>-search</code> is always scoped to the current PDMShell directory and moves matching files to <code>-directory</code>; <code>-source</code> is used only when moving a specific file or folder.</li>
+</ul>
 <h2 id="4023-2026-07-05">4.0.23 (2026-07-05)</h2>
 <ul>
 <li>Fixed placeholder evaluation when an alias is followed by a file extension separator, so commands such as <a href="DUMP.html"><code>dump</code></a> can now resolve paths like <code>c:\Temp\membrane-$guid.txt</code>.</li>

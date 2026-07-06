@@ -8,7 +8,7 @@ The `move` command moves file(s) from one folder in the vault to another.
 
 You can move:
 - A single file
-- All files inside a folder
+- A folder
 - Files returned from a search query
 
 When a file is moved:
@@ -21,30 +21,30 @@ When a file is moved:
 ## Syntax
 
 ```text
-move -source -directory -search -recursive
+move (-source file_or_folder | -search search_query) -directory target_vault_folder [-recursive]
 ```
 
 ## Parameters
 
 | Parameter | Required | Description |
 | --- | --- | --- |
-| `-source` | Yes | See parameter details below. |
+| `-source` | No | File or folder to move. Use either `-source` or `-search`. |
 | `-directory` | Yes | See parameter details below. |
-| `-search` | Yes | See parameter details below. |
-| `-recursive` | Yes | See parameter details below. |
+| `-search` | No | Search query scoped to the current PDMShell directory. Use either `-source` or `-search`. |
+| `-recursive` | No | Includes subfolders when used with `-search`. |
 
 ### Parameter Details
 
 - `source`  
   The complete file path of the file to move.  
   You can also specify a folder path. This will move the actual folder.
-  Temporary files starting with `~` are ignored.
+  This parameter is ignored when `-search` is specified.
 
 - `directory`  
   Target directory where to move the file(s) to. Must exist in the vault.
 
 - `search`  
-  Search query. Use this to move all search results from the source folder. This does not support moving folders from a search
+  Search query. PDMShell searches from the current directory, moves matching files to `-directory`, and does not use `-source` as a search scope. This does not support moving folders from search results.
 
 - `recursive`  
   Affects the search parameter. Specify `-recursive` to make the search recursive.  
@@ -60,17 +60,17 @@ move -source "C:\Vault\Parts\Bracket.SLDPRT" -directory "\Released"
 ```
 ---
 
-### Example 2: Move All Files in a Folder
+### Example 2: Move a Folder
 ```bash
 move -source "\Projects\OldProject" -directory "\Archive"
-## Moves all files inside the specified folder.
+## Moves the OldProject folder to Archive.
 ```
 ---
 
 ### Example 3: Move Search Results
 ```bash
-move -source "\Projects" -search "Name=%.sldprt%" -recursive -directory "\Archive"
-## Moves all part files found in the Projects folder (including subfolders) to the Archive folder.
+move -search "Name=%.sldprt%" -recursive -directory "\Archive"
+## Moves all part files found in the current directory, including subfolders, to the Archive folder.
 ```
 ---
 
@@ -79,6 +79,7 @@ move -source "\Projects" -search "Name=%.sldprt%" -recursive -directory "\Archiv
 - If the file is referenced by other files, referencing paths are updated automatically.
 - If the file has references, those reference paths are updated automatically.
 - Target directory must already exist in the vault.
+- Search mode always starts from the current PDMShell directory. Use [`cd`](CD.md) to change the search scope before running `move -search`.
 - Move operations preserve version history.
 
 ## Availability
