@@ -63,14 +63,15 @@ When the left side is not explicitly `file`, `folder`, or `process`, PDMShell tr
 
 ## PDM Variables
 
-Use `$(VariableName.ConfigurationName)` to read a PDM variable from the current file context.
+Use `$(VariableName)` or `$(VariableName.ConfigurationName)` to read a PDM variable from the current file or folder context.
 
 ```text
+"$(Description)" contains "ECO"
 "$(Description.@)" contains "ECO"
 "$(Revision.@)" equals "A"
 ```
 
-If the configuration is omitted, PDMShell uses `@`.
+When the configuration is omitted, PDMShell uses `@` for `.sldprt` and `.sldasm` files, and an empty configuration for drawings, other file types, and folders. Bracketed text is literal and is not evaluated as a PDM variable.
 
 ## Placeholders
 

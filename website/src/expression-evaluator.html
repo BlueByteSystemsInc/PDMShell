@@ -95,7 +95,7 @@
 <li>File and folder placeholders such as <code>$fileName</code>, <code>$filePath</code>, and <code>$folderPath</code>.</li>
 <li>Vault and user placeholders such as <code>$vaultName</code>, <code>$vaultRootFolder</code>, <code>$username</code>, and <code>$username.email</code>.</li>
 <li>Date and time placeholders such as <code>$date</code>, <code>$time</code>, <code>$yyyy</code>, and <code>$timestamp</code>.</li>
-<li>PDM variables such as <code>[Description]</code> or <code>$(Description.@)</code>.</li>
+<li>PDM variables such as <code>$(Description)</code> or <code>$(Description.@)</code>.</li>
 <li>String functions such as <code>${before(...)}</code>, <code>${replace(...)}</code>, and <code>${regex(...)}</code>.</li>
 <li>Revision functions such as <code>${revision()}</code>, <code>${nextRevision()}</code>, and <code>${revisionComponentValue(&quot;ComponentName&quot;)}</code>.</li>
 <li>Expressions that will later be used in commands like <a href="RENAME.html"><code>rename</code></a>, <a href="SETVAR.html"><code>setvar</code></a>, <a href="BOM.html"><code>bom</code></a>, <a href="export.html"><code>export</code></a>, <a href="MSGBOX.html"><code>msgbox</code></a>, or <a href="UNTIL.html"><code>until</code></a>.</li>
@@ -121,7 +121,7 @@
 </div>
 <h2 id="examples">Examples</h2>
 <pre><code class="lang-text">$fileNameWithoutExtension
-[Description]
+$(Description)
 ${before($fileNameWithoutExtension, &quot;-&quot;)}
 ${replace($value, &quot;DRAFT&quot;, &quot;RELEASED&quot;)}
 ${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
@@ -153,7 +153,7 @@ ${revision(&quot;$folderPath\\$fileNameWithoutExtension.pdf&quot;)}
 <td>Yes</td>
 </tr>
 <tr>
-<td><code>[Description]</code></td>
+<td><code>$(Description)</code></td>
 <td>Yes</td>
 </tr>
 <tr>

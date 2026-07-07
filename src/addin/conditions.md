@@ -22,7 +22,7 @@ Use the Conditions editor to add condition rows, combine them with `and` or `or`
 - text comparisons such as equals, contains, starts with, ends with, and regex matches
 - numeric comparisons
 - PDMShell placeholders such as `$fileName`, `$localPath`, and `$folderPath`
-- PDM variables such as `$(Description.@)` or `$(Revision.@)`
+- PDM variables such as `$(Description)`, `$(Description.@)`, or `$(Revision.@)`
 
 ## Examples
 

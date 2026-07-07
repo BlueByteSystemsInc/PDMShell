@@ -12,6 +12,11 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.26 (2026-07-07)
+- Breaking change: PDM variable evaluation now uses `$()` expressions such as `$(Revision)`, `$(Revision.@)`, and `$(PartNo.Default)`. Bracketed text is treated as literal text, so folder names like `[debugging]` are no longer interpreted as variables.
+- Updated alias, [`setvar`](SETVAR.md), [`runscript`](RUNSCRIPT.md), generated script preview, and condition evaluation documentation to use the new PDM variable expression syntax.
+- When the configuration is omitted, PDMShell uses `@` for `.sldprt` and `.sldasm` files, and an empty configuration for drawings, other file types, and folders.
+
 ## 4.0.25 (2026-07-06)
 - Fixed placeholder evaluation when an alias is followed by an underscore or other non-alphanumeric separator, so file-context expressions such as `$fileNameWithoutExtension_R_%.pdf` resolve correctly in [`runscript`](RUNSCRIPT.md), command alias evaluation, and generated script previews.
 
@@ -324,7 +329,7 @@ Ghost builds
 
 ## 3.0.11 (2025-12-02)
 - [SetRevision: Added a new command](SETREVISION.md).
- - Fixed evaluation bug: Bracketed variable `[Variable]` fail to evaluate in `name` and `value` parameters
+ - Fixed a legacy bracketed-variable evaluation bug in `name` and `value` parameters.
 
 ## 3.0.10 (2025-12-01)
 - Rebuild

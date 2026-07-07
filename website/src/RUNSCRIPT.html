@@ -288,11 +288,12 @@ pdmcli.exe &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot; -edit
 <td>Legacy complete folder path placeholder.</td>
 </tr>
 <tr>
-<td><code>$(Variable.Config)</code></td>
-<td>PDM variable value for the current file and configuration.</td>
+<td><code>$(Variable)</code>, <code>$(Variable.Config)</code></td>
+<td>PDM variable value for the current file or folder. Use the explicit configuration form when a specific configuration tab is required.</td>
 </tr>
 </tbody>
 </table>
+<p>When the configuration is omitted, PDMShell uses <code>@</code> for <code>.sldprt</code> and <code>.sldasm</code> files, and an empty configuration for drawings, other file types, and folders. Bracketed text is literal and is not evaluated as a PDM variable.</p>
 <h2 id="example">Example</h2>
 <p>The source script can use file placeholders and conditions. When the script is run for multiple items, these lines are evaluated for each target item.</p>
 <pre><code class="lang-pdmshell">RunTask -filePath &quot;$localPath&quot; -taskName &quot;Publish PDF &amp; DXF&quot;

@@ -15,15 +15,16 @@ You may set the revision using:
 - `%previousrevision%` - moves the revision backward.
 - `%initial%` - resets to the first revision in the revision scheme.
 
-You can also use PDM variables by enclosing them in brackets:
+You can also use PDM variable expressions:
 
 ```text
-[Revision]
+$(Revision)
+$(Revision.@)
 ```
 
 This evaluates the variable on the file and applies its value as the new revision.
 
-The command resolves all bracketed variables before applying the revision.
+Bracketed text is treated as literal text and is not evaluated.
 
 ## Syntax
 
@@ -58,7 +59,7 @@ setrevision -filePath|-search -recursive -value -csv
   - `%nextrevision%` - increments the PDM revision counter.
   - `%previousrevision%` - decrements the PDM revision counter.
   - `%initial%` - resets revision to the scheme's first value.
-  - `[VariableName]` - evaluates the PDM variable and uses its value.
+  - `$(VariableName)` or `$(VariableName.ConfigurationName)` - evaluates the PDM variable and uses its value.
   - A literal revision string supported by the vault's revision scheme.
 
 - `csv`  
@@ -67,7 +68,7 @@ setrevision -filePath|-search -recursive -value -csv
 ## Notes
 
 - This command affects only the PDM revision, not custom properties or configuration-specific metadata.
-- When using `[VariableName]`, make sure the variable is present on the file card.
+- When using `$(VariableName)`, make sure the variable is present on the file card. Without an explicit configuration, PDMShell uses `@` for `.sldprt` and `.sldasm` files, and an empty configuration for all other files.
 - `%previousrevision%` adjusts the counter only if the revision scheme allows backward movement.
 - `%nextrevision%` respects all revision scheme rules defined in the PDM Administration tool.
 

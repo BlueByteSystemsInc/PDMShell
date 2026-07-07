@@ -51,6 +51,8 @@ setvar -filePath file1.sldprt -variableName Description -value "$value\n$fileNam
 
 setvar -filePath file1.sldprt -variableName Description -value "${replace($value, \"DRAFT\", \"RELEASED\")}" # Replace text in the current value.
 
+setvar -filePath file1.sldprt -variableName Description -value "$(Description) - $fileNameWithoutExtension" # Read another PDM variable with the default configuration.
+
 setvar -filePath file1.sldprt -variableName Code -value "${left(${replace($value, \" \", \"_\")}, 12)}" # Nested string evaluation.
 
 setvar -search "Name=%.sldprt" -variableName Description -value "$value\nChecked by $username" -recursive
@@ -59,6 +61,8 @@ setvar -search "Name=%.sldprt" -variableName Description -value "$value\nChecked
 The `value` parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables.
 
 `$value` is the current value of the same variable before the command writes the new value. If the current value is null or empty, `$value` evaluates to an empty string instead of staying as literal `$value`.
+
+Use `$(VariableName)` or `$(VariableName.ConfigurationName)` to read another PDM variable while building the value. When the configuration is omitted, PDMShell uses `@` for `.sldprt` and `.sldasm` files, and an empty configuration for drawings, other file types, and folders. Bracketed text is literal and is not evaluated as a PDM variable.
 
 Use `\n` inside the value when you want PDMShell to write a real newline to the variable.
 
@@ -83,6 +87,7 @@ String functions can be used after placeholder evaluation. This is useful with `
 ## Changelog
 - As of version [3.0.9](releasenotes.md), we have added support for setting folder daracard variables
 - `$value` now evaluates to an empty string when the existing value is null or empty, and literal `\n` in evaluated values is converted to a newline.
+- PDM variable evaluation now uses `$(Variable)` and `$(Variable.Configuration)` expressions. Bracketed text is literal.
 - Dynamic placeholder evaluation supports string functions such as `${left(...)}`, `${right(...)}`, `${len(...)}`, `${pos(...)}`, `${replace(...)}`, `${before(...)}`, and `${after(...)}`.
 
 ## Availability

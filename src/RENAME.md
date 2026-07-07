@@ -47,7 +47,7 @@ The `value` parameter gets evaluated by PDMShell. PDMShell allows you to use pla
 - `$version` - The current version of the file.
 - `$extension` - The file extension.
 
-Additionally, you can use variables enclosed in square brackets (e.g., `[VariableName]`) to include values from other variables.
+Additionally, you can use PDM variable expressions such as `$(VariableName)` or `$(VariableName.ConfigurationName)` to include values from other variables. Bracketed text is treated as literal text and is not evaluated.
 
 String functions are also supported after placeholders are evaluated. For example, `${replace($fileNameWithoutExtension, " ", "_")}` replaces spaces in the file name before the rename value is written. Use `${before($fileNameWithoutExtension, "-")}` to keep only the part of the name before a separator.
 
@@ -59,6 +59,8 @@ String functions are also supported after placeholders are evaluated. For exampl
 If you use the value `"$filename_$date_$version$extension"`, it will be replaced with the file name, current date, and version, resulting in something like `"oldname_10-12-2023_3"`.
 
 ```bash
+rename -filePath "oldname.sldprt" -value "$fileNameWithoutExtension $(Revision)$extension"
+
 rename -filePath "Part 123 Draft.sldprt" -value "${left(${replace($fileNameWithoutExtension, \" \", \"_\")}, 12)}$extension"
 
 rename -filePath "ABC-123.sldprt" -value "${before($fileNameWithoutExtension, \"-\")}$extension"

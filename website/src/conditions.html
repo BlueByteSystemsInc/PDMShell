@@ -187,11 +187,12 @@ process exists &quot;notepad&quot;
 </code></pre>
 <p>When the left side is not explicitly <code>file</code>, <code>folder</code>, or <code>process</code>, PDMShell treats it as a file check unless the value looks like a folder path.</p>
 <h2 id="pdm-variables">PDM Variables</h2>
-<p>Use <code>$(VariableName.ConfigurationName)</code> to read a PDM variable from the current file context.</p>
-<pre><code class="lang-text">&quot;$(Description.@)&quot; contains &quot;ECO&quot;
+<p>Use <code>$(VariableName)</code> or <code>$(VariableName.ConfigurationName)</code> to read a PDM variable from the current file or folder context.</p>
+<pre><code class="lang-text">&quot;$(Description)&quot; contains &quot;ECO&quot;
+&quot;$(Description.@)&quot; contains &quot;ECO&quot;
 &quot;$(Revision.@)&quot; equals &quot;A&quot;
 </code></pre>
-<p>If the configuration is omitted, PDMShell uses <code>@</code>.</p>
+<p>When the configuration is omitted, PDMShell uses <code>@</code> for <code>.sldprt</code> and <code>.sldasm</code> files, and an empty configuration for drawings, other file types, and folders. Bracketed text is literal and is not evaluated as a PDM variable.</p>
 <h2 id="placeholders">Placeholders</h2>
 <p>Conditions can use <a href="EVAL.html">PDMShell placeholders</a>.</p>
 <p>Common examples:</p>

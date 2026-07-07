@@ -131,7 +131,8 @@
 <li><code>$folderName</code>: The name of the folder containing the file.</li>
 <li><code>$folderID</code>: The folder ID.</li>
 <li><code>$configuration</code>: configuration name. Only valid for BOM command.</li>
-<li><code>[Variable]</code>: @ Variable value.</li>
+<li><code>$(Variable)</code>: PDM variable value using the default configuration.</li>
+<li><code>$(Variable.Configuration)</code>: PDM variable value from an explicit configuration.</li>
 </ul>
 <h3 id="placeholders-for-folders">Placeholders for Folders</h3>
 <ul>
@@ -143,7 +144,8 @@
 <li><code>$filePath</code>: The full local path of the folder when the current context is a folder.</li>
 <li><code>$localPath</code>: The full local path of the folder.</li>
 <li><code>$completefoldername</code>: Legacy full local path of the folder.</li>
-<li><code>[Variable]</code>:  Variable value.</li>
+<li><code>$(Variable)</code>: PDM variable value using the default folder configuration.</li>
+<li><code>$(Variable.Configuration)</code>: PDM variable value from an explicit configuration.</li>
 </ul>
 <h3 id="common-placeholders-applicable-to-both-files-and-folders">Common Placeholders (Applicable to Both Files and Folders)</h3>
 <ul>
@@ -179,6 +181,8 @@
 <li><code>$time</code>: The current time in the current locale.</li>
 </ul>
 <p>Literal <code>\n</code> sequences in evaluated values are converted to <code>Environment.NewLine</code>.</p>
+<p>PDM variable expressions use <code>$(VariableName)</code> or <code>$(VariableName.ConfigurationName)</code>. Bracketed text is treated as literal text, so folder and file paths such as <code>[debugging]</code> are not interpreted as variables.</p>
+<p>When the configuration is omitted, PDMShell uses <code>@</code> for <code>.sldprt</code> and <code>.sldasm</code> files, and an empty configuration for drawings, other file types, and folders. Use the explicit configuration form when you need a specific tab, for example <code>$(Revision.@)</code> or <code>$(PartNo.Default)</code>.</p>
 <hr>
 <h2 id="global-variables">Global Variables</h2>
 <p>Session global variables use the <code>${global.Name}</code> syntax. They are set with <code>setglobal</code>, printed with <code>getglobal</code>, and cleared with <code>clearglobal</code>.</p>
@@ -189,7 +193,7 @@ setvar -variableName Description -filePath &quot;$localPath&quot; -value &quot;$
 <p>Global variables are temporary and last only for the current PDMShell session or script run. See <a href="GLOBALVARIABLES.html">Global Variables</a>.</p>
 <hr>
 <h2 id="string-functions">String Functions</h2>
-<p>Placeholders also support a small set of string functions. Functions are evaluated after placeholders such as <code>$value</code>, <code>$name</code>, and <code>[Variable]</code> have been resolved, so they can be used to manipulate the evaluated text.</p>
+<p>Placeholders also support a small set of string functions. Functions are evaluated after placeholders such as <code>$value</code>, <code>$name</code>, and <code>$(Variable)</code> have been resolved, so they can be used to manipulate the evaluated text.</p>
 <p>String functions use the <code>${...}</code> syntax:</p>
 <pre><code class="lang-bash">${left($value, 5)}
 ${replace($fileNameWithoutExtension, &quot; &quot;, &quot;_&quot;)}
@@ -368,8 +372,14 @@ msgbox -value &quot;Related PDF revision: ${revision(\&quot;$folderPath\\$fileNa
 <h2 id="expression-evaluator">Expression Evaluator</h2>
 <p>Use the <a href="expression-evaluator.html">Expression Evaluator</a> to preview placeholders, PDM variables, and string functions before running a command or script.</p>
 <hr>
-<h2 id="using-variables-in-placeholders">Using Variables in Placeholders</h2>
-<p>In addition to named placeholders, you can include PDM variables by enclosing them in square brackets (e.g., <code>[VariableName]</code>). These variables are resolved based on the context of the file or folder.</p>
+<h2 id="using-pdm-variables-in-placeholders">Using PDM Variables in Placeholders</h2>
+<p>In addition to named placeholders, you can include PDM variables with <code>$()</code> expressions.</p>
+<pre><code class="lang-text">$(Revision)
+$(Revision.@)
+$(Description)
+$(PartNo.Default)
+</code></pre>
+<p>Bracket syntax is not evaluated. Anything between <code>[</code> and <code>]</code> remains literal text.</p>
 <hr>
 <h2 id="example-usage">Example Usage</h2>
 <p>Here is an example of how to use placeholders in a command:</p>

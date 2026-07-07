@@ -14,7 +14,7 @@ The source CSV must contain at minimum:
 - `Revision` - the revision value to apply.
 
 This command applies the revision exactly as supplied in the CSV, similar to the [setrevision command](SETREVISION.md).
-It does not evaluate `%nextrevision%`, `%previousrevision%`, `%initial%`, or bracketed variables. Use literal revision values only.
+It does not evaluate `%nextrevision%`, `%previousrevision%`, `%initial%`, or PDM variable expressions. Use literal revision values only.
 
 You may optionally output a results CSV that includes success or failure information for each processed row.
 

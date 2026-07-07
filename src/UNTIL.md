@@ -171,14 +171,15 @@ Date and time placeholders:
 > Placeholder names are evaluated case-insensitively in until conditions.
 
 ## PDM Variables
-Use `$(VariableName.ConfigurationName)` to read a PDM variable from the file context.
+Use `$(VariableName)` or `$(VariableName.ConfigurationName)` to read a PDM variable from the file or folder context.
 
 ```bash
+"$(Description)" contains "ECO"
 "$(Description.@)" contains "ECO"
 "$(Revision.@)" equals "A"
 ```
 
-If the configuration is omitted, PDMShell uses `@`.
+When the configuration is omitted, PDMShell uses `@` for `.sldprt` and `.sldasm` files, and an empty configuration for drawings, other file types, and folders. Bracketed text is literal and is not evaluated as a PDM variable.
 
 ## Arithmetic Comparisons
 Numeric expressions can be used on either side of a comparison.

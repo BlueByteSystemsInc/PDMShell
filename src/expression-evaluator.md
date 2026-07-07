@@ -16,7 +16,7 @@ The evaluator is useful for previewing:
 - File and folder placeholders such as `$fileName`, `$filePath`, and `$folderPath`.
 - Vault and user placeholders such as `$vaultName`, `$vaultRootFolder`, `$username`, and `$username.email`.
 - Date and time placeholders such as `$date`, `$time`, `$yyyy`, and `$timestamp`.
-- PDM variables such as `[Description]` or `$(Description.@)`.
+- PDM variables such as `$(Description)` or `$(Description.@)`.
 - String functions such as `${before(...)}`, `${replace(...)}`, and `${regex(...)}`.
 - Revision functions such as `${revision()}`, `${nextRevision()}`, and `${revisionComponentValue("ComponentName")}`.
 - Expressions that will later be used in commands like [`rename`](RENAME.md), [`setvar`](SETVAR.md), [`bom`](BOM.md), [`export`](export.md), [`msgbox`](MSGBOX.md), or [`until`](UNTIL.md).
@@ -50,7 +50,7 @@ The evaluator window shows the selected file or folder context, the optional var
 
 ```text
 $fileNameWithoutExtension
-[Description]
+$(Description)
 ${before($fileNameWithoutExtension, "-")}
 ${replace($value, "DRAFT", "RELEASED")}
 ${regex($fileNameWithoutExtension, "^([^-]+)-", 1)}
@@ -70,7 +70,7 @@ Examples:
 | `$fileName` | Yes |
 | `$filePath` | Yes |
 | `$folderPath` | Yes |
-| `[Description]` | Yes |
+| `$(Description)` | Yes |
 | `${revision()}` | Yes |
 | `${nextRevision()}` | Yes |
 | `${revisionComponentValue("ComponentName")}` | Yes |

@@ -93,6 +93,12 @@
 <p>To update PDMShell properly, download the latest version, uninstall PDMShell and
 then install the latest version. Do not update installed version.</p>
 </div>
+<h2 id="4026-2026-07-07">4.0.26 (2026-07-07)</h2>
+<ul>
+<li>Breaking change: PDM variable evaluation now uses <code>$()</code> expressions such as <code>$(Revision)</code>, <code>$(Revision.@)</code>, and <code>$(PartNo.Default)</code>. Bracketed text is treated as literal text, so folder names like <code>[debugging]</code> are no longer interpreted as variables.</li>
+<li>Updated alias, <a href="SETVAR.html"><code>setvar</code></a>, <a href="RUNSCRIPT.html"><code>runscript</code></a>, generated script preview, and condition evaluation documentation to use the new PDM variable expression syntax.</li>
+<li>When the configuration is omitted, PDMShell uses <code>@</code> for <code>.sldprt</code> and <code>.sldasm</code> files, and an empty configuration for drawings, other file types, and folders.</li>
+</ul>
 <h2 id="4025-2026-07-06">4.0.25 (2026-07-06)</h2>
 <ul>
 <li>Fixed placeholder evaluation when an alias is followed by an underscore or other non-alphanumeric separator, so file-context expressions such as <code>$fileNameWithoutExtension_R_%.pdf</code> resolve correctly in <a href="RUNSCRIPT.html"><code>runscript</code></a>, command alias evaluation, and generated script previews.</li>
@@ -477,7 +483,7 @@ then install the latest version. Do not update installed version.</p>
 <h2 id="3011-2025-12-02">3.0.11 (2025-12-02)</h2>
 <ul>
 <li><a href="SETREVISION.html">SetRevision: Added a new command</a>.</li>
-<li>Fixed evaluation bug: Bracketed variable <code>[Variable]</code> fail to evaluate in <code>name</code> and <code>value</code> parameters</li>
+<li>Fixed a legacy bracketed-variable evaluation bug in <code>name</code> and <code>value</code> parameters.</li>
 </ul>
 <h2 id="3010-2025-12-01">3.0.10 (2025-12-01)</h2>
 <ul>
