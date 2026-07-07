@@ -12,6 +12,9 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.25 (2026-07-06)
+- Fixed placeholder evaluation when an alias is followed by an underscore or other non-alphanumeric separator, so file-context expressions such as `$fileNameWithoutExtension_R_%.pdf` resolve correctly in [`runscript`](RUNSCRIPT.md), command alias evaluation, and generated script previews.
+
 ## 4.0.24 (2026-07-06)
 - Updated [`move`](MOVE.md) so `-search` is always scoped to the current PDMShell directory and moves matching files to `-directory`; `-source` is used only when moving a specific file or folder.
 
