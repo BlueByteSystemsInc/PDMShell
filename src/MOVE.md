@@ -84,3 +84,11 @@ move -search "Name=%.sldprt%" -recursive -directory "\Archive"
 
 ## Availability
 Available since PDMShell 3.0.28.
+
+## Video
+
+<div class="ratio ratio-16x9">
+  <iframe src="https://www.youtube.com/embed/hn5dfAiYp9g" title="Move files with PDMShell" allowfullscreen></iframe>
+</div>
+
+[Watch on YouTube](https://www.youtube.com/watch?v=hn5dfAiYp9g&feature=youtu.be)
