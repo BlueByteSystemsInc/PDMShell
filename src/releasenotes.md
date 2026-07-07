@@ -78,14 +78,14 @@ then install the latest version. Do not update installed version.
 - Added an on-demand [PDMShell add-in](TASKSCRIPT.md) script demo to the [Command menu scripts](addin/command-menu.md) documentation, showing how users can launch a rename script from SOLIDWORKS PDM without creating a PDM Task.
 - Updated the visual editor metadata for [`msgbox`](MSGBOX.md) so the `icon` parameter appears as a single-select combo box with the supported message box icons.
 
-## 4.0.10 (2026-07-18)
+## 4.0.10 (2026-06-18)
 - Added logged-in PDM user profile placeholders: `$username.firstName`, `$username.lastName`, `$username.FullName`, and `$username.email`.
 - Added a dark themed [Expression Evaluator](expression-evaluator.md) for testing placeholder expressions against a selected PDM file or folder before running a command.
 
-## 4.0.9 (2026-07-18)
+## 4.0.9 (2026-06-18)
 - Added the [`pasteasshared`](PASTEASSHARED.md) command to share one file or search results into another vault folder.
 
-## 4.0.8 (2026-07-18)
+## 4.0.8 (2026-06-18)
 - Added `${regex(value, pattern)}` and `${regex(value, pattern, group)}` [placeholder](EVAL.md) string functions.
 - Added the [Rename Before Dash](scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md) script template to the PDMShell Script Library.
 - Fixed Script Library downloads so templates without a SOLIDWORKS macro no longer create or report an empty `Macro.swb` file.
