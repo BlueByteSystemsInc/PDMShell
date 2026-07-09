@@ -16,7 +16,7 @@ then install the latest version. Do not update installed version.
 - Improved revision placeholder evaluation so `${revision()}`, `$revision`, and revision component functions use the active PDM revision scheme formatting when resolving the current file revision.
 - Improved revision component parsing for formatted PDM revision schemes, including letter components, zero-padded numbers, hexadecimal numbers, and date/time format tokens.
 - Updated [Expression Evaluator](expression-evaluator.md) examples to show current revision values, current revision component values, and next revision component values against a selected PDM file.
-- Updated [`setvar`](SETVAR.md) documentation with an example that writes the next formatted revision value into a data card variable.
+- Updated [`setvar`](SETVAR.md) documentation with an example that writes the next formatted revision value into a data card variable, clarified command-box quote escaping, and documented `-stringformat None`.
 - Added a dedicated dark license node conflict dialog with resources for pooled add-in licenses and machine licenses.
 - Added a main-window license banner for free-version usage or licenses expiring within 30 days, including a direct `Order license` action.
 - Updated license conflict wording to use `node` because a license can be active on a vault node or a single machine.

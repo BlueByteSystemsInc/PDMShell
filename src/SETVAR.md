@@ -41,7 +41,7 @@ setvar (-filePath path | -search query) -variableName variable_name [-value valu
 
 
 - `recursive`: When used with [`search`](SEARCH.md), includes files in subfolders.
-- `stringformat`: string format. See remarks section.
+- `stringformat`: Optional string format. Use `None` or omit this parameter when the evaluated value should be written without changing casing. See remarks section.
 
 ## Examples
 ```bash
@@ -78,6 +78,26 @@ Incremented revision to U-017-W
 
 When the value is wrapped in double quotes, escape quotes inside function arguments with `\"`.
 
+### Escaping Quotes In The Command Box
+
+In the PDMShell command box, escape quotes inside function arguments when the whole `-value` argument is wrapped in double quotes. This is common when the value contains spaces.
+
+```bash
+setvar -filePath membrane.SLDDRW -variableName Comment -value "Incremented revision to ${nextRevisionComponentValue(\"Letters\")}-${nextRevisionComponentValue(\"Numeric\")}-W"
+```
+
+If the value does not need outer quotes, the function argument quotes do not need to be escaped.
+
+```bash
+setvar -filePath membrane.SLDDRW -variableName Comment -value ${nextRevisionComponentValue("Letters")}-${nextRevisionComponentValue("Numeric")}-W
+```
+
+In the [Expression Evaluator](expression-evaluator.md), type only the expression and do not escape the function argument quotes.
+
+```text
+${nextRevisionComponentValue("Letters")}-${nextRevisionComponentValue("Numeric")}-W
+```
+
 ## Evaluation
 The `value` parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables.
 
@@ -96,6 +116,7 @@ String functions can be used after placeholder evaluation. This is useful with `
 - The `configNames` parameter should be separated by commas. If omitted, PDMShell uses `@` for configuration-supported documents.
 - The [`search`](SEARCH.md) parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use `%` for wildcard.
 - The `stringformat` parameter allows you to format the value of the variable using predefined string formatting options. The following formats are supported:
+  - None: Leaves the evaluated value unchanged. This is the default when `-stringformat` is omitted.
   - UpperCase: Converts the entire string to uppercase.
   - LowerCase: Converts the entire string to lowercase.
   - CamelCase: Converts the string to camel case, where the first word is lowercase, and subsequent words are capitalized (e.g., `exampleString`).
@@ -110,6 +131,7 @@ String functions can be used after placeholder evaluation. This is useful with `
 - `$value` now evaluates to an empty string when the existing value is null or empty, and literal `\n` in evaluated values is converted to a newline.
 - PDM variable evaluation now uses `$(Variable)` and `$(Variable.Configuration)` expressions. Bracketed text is literal.
 - Dynamic placeholder evaluation supports string functions such as `${left(...)}`, `${right(...)}`, `${len(...)}`, `${pos(...)}`, `${replace(...)}`, `${before(...)}`, and `${after(...)}`.
+- `-stringformat None` leaves the evaluated value unchanged and is the default behavior when `-stringformat` is omitted.
 
 ## Availability
 Available since PDMShell 2.0.0.

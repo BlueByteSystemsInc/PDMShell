@@ -160,7 +160,7 @@
 </li>
 <li><p><code>recursive</code>: When used with <a href="SEARCH.html"><code>search</code></a>, includes files in subfolders.</p>
 </li>
-<li><p><code>stringformat</code>: string format. See remarks section.</p>
+<li><p><code>stringformat</code>: Optional string format. Use <code>None</code> or omit this parameter when the evaluated value should be written without changing casing. See remarks section.</p>
 </li>
 </ul>
 <h2 id="examples">Examples</h2>
@@ -187,6 +187,16 @@ setvar -search &quot;Name=%.sldprt&quot; -variableName Description -value &quot;
   <img src="/images/pdmshell-setvar-next-revision-comment.png" alt="setvar command writing a next revision value into the Comment variable" style="max-width:960px;width:100%;height:auto;">
 </div>
 <p>When the value is wrapped in double quotes, escape quotes inside function arguments with <code>\&quot;</code>.</p>
+<h3 id="escaping-quotes-in-the-command-box">Escaping Quotes In The Command Box</h3>
+<p>In the PDMShell command box, escape quotes inside function arguments when the whole <code>-value</code> argument is wrapped in double quotes. This is common when the value contains spaces.</p>
+<pre><code class="lang-bash">setvar -filePath membrane.SLDDRW -variableName Comment -value &quot;Incremented revision to ${nextRevisionComponentValue(\&quot;Letters\&quot;)}-${nextRevisionComponentValue(\&quot;Numeric\&quot;)}-W&quot;
+</code></pre>
+<p>If the value does not need outer quotes, the function argument quotes do not need to be escaped.</p>
+<pre><code class="lang-bash">setvar -filePath membrane.SLDDRW -variableName Comment -value ${nextRevisionComponentValue(&quot;Letters&quot;)}-${nextRevisionComponentValue(&quot;Numeric&quot;)}-W
+</code></pre>
+<p>In the <a href="expression-evaluator.html">Expression Evaluator</a>, type only the expression and do not escape the function argument quotes.</p>
+<pre><code class="lang-text">${nextRevisionComponentValue(&quot;Letters&quot;)}-${nextRevisionComponentValue(&quot;Numeric&quot;)}-W
+</code></pre>
 <h2 id="evaluation">Evaluation</h2>
 <p>The <code>value</code> parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables.</p>
 <p><code>$value</code> is the current value of the same variable before the command writes the new value. If the current value is null or empty, <code>$value</code> evaluates to an empty string instead of staying as literal <code>$value</code>.</p>
@@ -203,6 +213,7 @@ setvar -search &quot;Name=%.sldprt&quot; -variableName Description -value &quot;
 <li>The <a href="SEARCH.html"><code>search</code></a> parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
 <li>The <code>stringformat</code> parameter allows you to format the value of the variable using predefined string formatting options. The following formats are supported:
 <ul>
+<li>None: Leaves the evaluated value unchanged. This is the default when <code>-stringformat</code> is omitted.</li>
 <li>UpperCase: Converts the entire string to uppercase.</li>
 <li>LowerCase: Converts the entire string to lowercase.</li>
 <li>CamelCase: Converts the string to camel case, where the first word is lowercase, and subsequent words are capitalized (e.g., <code>exampleString</code>).</li>
@@ -218,6 +229,7 @@ setvar -search &quot;Name=%.sldprt&quot; -variableName Description -value &quot;
 <li><code>$value</code> now evaluates to an empty string when the existing value is null or empty, and literal <code>\n</code> in evaluated values is converted to a newline.</li>
 <li>PDM variable evaluation now uses <code>$(Variable)</code> and <code>$(Variable.Configuration)</code> expressions. Bracketed text is literal.</li>
 <li>Dynamic placeholder evaluation supports string functions such as <code>${left(...)}</code>, <code>${right(...)}</code>, <code>${len(...)}</code>, <code>${pos(...)}</code>, <code>${replace(...)}</code>, <code>${before(...)}</code>, and <code>${after(...)}</code>.</li>
+<li><code>-stringformat None</code> leaves the evaluated value unchanged and is the default behavior when <code>-stringformat</code> is omitted.</li>
 </ul>
 <h2 id="availability">Availability</h2>
 <p>Available since PDMShell 2.0.0.</p>
