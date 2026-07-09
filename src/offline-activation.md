@@ -27,7 +27,7 @@ Use offline activation when the computer running PDMShell cannot connect to the 
 3. Save the generated `.pdmshellreq` file.
 4. Email the `.pdmshellreq` file to `info@bluebyte.biz`.
 
-You can use any email subject or message body. The important part is attaching the generated `.pdmshellreq` file.
+Use a clear subject such as `PDMShell offline activation request`. If you do not receive an activation response, contact `info@bluebyte.biz` for help. This address only replies to activation issues.
 
 <div align="center">
   <img src="/images/pdmshell-offline-activation-settings.png" alt="PDMShell Offline Activation settings page" style="max-width:760px;width:100%;height:auto;">
@@ -41,6 +41,8 @@ Use this workflow when you need to release a license from an air-gapped computer
 2. Select `Generate deactivation request`.
 3. Save the generated `.pdmshellreq` file.
 4. Email the `.pdmshellreq` file to `info@bluebyte.biz`.
+
+Use a clear subject such as `PDMShell offline deactivation request`. If you do not receive a response, contact `info@bluebyte.biz` for help. This address only replies to activation issues.
 
 ## Receive The Response
 

@@ -9,7 +9,7 @@ PDMShell add-in licenses can be managed from the SOLIDWORKS PDM Administration T
 Open the Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select `Manage PDMShell Licenses`.
 
 <p align="center">
-  <img src="../../images/pdmshell-addin-license-menu.png" alt="Manage PDMShell Licenses command in the SOLIDWORKS PDM Administration Tool add-in menu" style="max-width:420px;width:100%;height:auto;">
+  <img src="../../images/pdmshell-addin-license-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Manage PDMShell Licenses and PDMShell Download Center commands" style="max-width:520px;width:100%;height:auto;">
 </p>
 
 The `PDMShell Licenses` window opens for the selected vault. Use this window to add license keys, activate pooled keys, generate offline activation files, choose the license mode, and review active pool borrows.
@@ -42,10 +42,12 @@ Use the `Offline activation` section when the vault cannot reach the Blue Byte S
 
 1. Select the license row that needs an offline activation or deactivation.
 2. Select `Generate activation request` or `Generate deactivation request`.
-3. Send the generated request file to Blue Byte Systems support.
+3. Email the generated request file to `info@bluebyte.biz` with a clear subject such as `PDMShell offline activation request`.
 4. When support returns the response file, select `Import response` on the same vault.
 
 Offline request and response files are tied to the selected license and the current vault node. Import the response on the vault where the request was generated.
+
+If you do not receive an activation response, contact `info@bluebyte.biz` for help. This address only replies to activation issues.
 
 ## License list
 
