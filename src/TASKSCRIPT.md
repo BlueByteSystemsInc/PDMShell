@@ -16,20 +16,25 @@ Instead of building automation from a fixed list of Dispatch actions, the add-in
 >
 > If the vault is in a restricted or air-gapped environment that only allows Microsoft-hosted links, use the add-in's `PDMShell Download Center...` menu command to open the Microsoft SharePoint folder that contains PDMShell `.cex` files.
 
-## Add-in workflow
+## Add-in menu commands
 
-Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select `Edit Scripts`.
+Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, and right-click it to open the add-in menu.
 
 <p>
-  <img src="../images/pdmshell-addin-admin-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Edit Scripts and Manage PDMShell Licenses commands" style="max-width:520px;width:100%;height:auto;">
+  <img src="../images/pdmshell-addin-admin-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Edit Scripts, Manage PDMShell Licenses, and PDMShell Download Center commands" style="max-width:520px;width:100%;height:auto;">
 </p>
 
-The Script Editor is where administrators create script entries, enable them, assign permitted users and groups, define conditions, choose PDMShell launch arguments, and select trigger points.
+The add-in menu includes:
 
-The same add-in menu also includes:
-
+- `Edit Scripts...` to open the Script Editor.
 - `Manage PDMShell Licenses...` for online and offline license management.
 - `PDMShell Download Center...` for restricted systems that need Microsoft-hosted `.cex` downloads.
+
+## Add-in workflow
+
+Select `Edit Scripts...` from the add-in menu to open the Script Editor.
+
+The Script Editor is where administrators create script entries, enable them, assign permitted users and groups, define conditions, choose PDMShell launch arguments, and select trigger points.
 
 <p>
   <img src="../images/pdmshell-addin-script-editor-overview.png" alt="PDMShell add-in Script Editor overview showing script name, enabled state, permissions, conditions, PDMShell arguments, and trigger points" style="max-width:980px;width:100%;height:auto;">
@@ -61,7 +66,7 @@ Use the Conditions editor to build the same condition expressions used by PDMShe
 
 | Article | Use it for |
 | --- | --- |
-| [Installation and access](addin/installation.md) | Loading the add-in, opening the Script Editor, and using the Microsoft-hosted Download Center |
+| [PDMShell add-in installation](addin/installation.md) | Loading the add-in, opening the Script Editor, and using the Microsoft-hosted Download Center |
 | [Manage add-in licenses](addin/license-manager.md) | Managing PDMShell add-in license keys from the PDM Administration Tool |
 | [License Pool](license-pool.md) | Managing pooled vault licenses for add-in automation |
 | [Machine License](machine-license.md) | Using the local workstation license for add-in automation |

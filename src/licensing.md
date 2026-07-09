@@ -25,6 +25,7 @@ Use this section to choose how PDMShell should be activated and how PDMShell add
 
 ## Related Articles
 
-- [Install or Update](howtoinstall.md)
+- [PDMShell standalone installation](howtoinstall.md)
+- [PDMShell add-in installation](addin/installation.md)
 - [Free vs Premium](FREEVSPREMIUM.md)
 - [PDMShell add-in](TASKSCRIPT.md)

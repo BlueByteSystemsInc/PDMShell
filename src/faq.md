@@ -40,7 +40,7 @@ If the computer is air-gapped or cannot reach the license server, use [Offline A
 
 ## How Do I Install Or Update PDMShell?
 
-Use [Install or Update](howtoinstall.md). For updates, uninstall the existing version first, then install the latest version.
+Use [PDMShell standalone installation](howtoinstall.md). For updates, uninstall the existing version first, then install the latest version.
 
 Do not install a new version over the installed version unless the installation article specifically says that workflow is supported.
 
@@ -48,7 +48,7 @@ Do not install a new version over the installed version unless the installation 
 
 The PDMShell add-in is available with Premium. After your order is complete, download it from your Blue Byte Systems Inc [account page](https://bluebyte.biz/account), from the order confirmation email, or ask technical support after the order is made.
 
-See [PDMShell add-in installation and access](addin/installation.md).
+See [PDMShell add-in installation](addin/installation.md).
 
 ## How Do I Manage Add-in Licenses?
 
@@ -80,7 +80,7 @@ Use the clean update workflow:
 2. Download the latest installer.
 3. Install the latest version.
 
-See [Install or Update](howtoinstall.md).
+See [PDMShell standalone installation](howtoinstall.md).
 
 ## How Do I Get Help?
 

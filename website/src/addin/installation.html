@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>PDMShell add-in installation and access | PDMShell | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>PDMShell add-in installation | PDMShell | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="PDMShell add-in installation and access | PDMShell | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="PDMShell add-in installation | PDMShell | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Install and open the PDMShell add-in for SOLIDWORKS PDM.">
+      <meta name="description" content="Install and open the PDMShell add-in for SOLIDWORKS PDM, including restricted environments that require Microsoft-hosted downloads.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -85,17 +85,63 @@
         </div>
 
         <article data-uid="">
-<h1 id="installation-and-access">Installation and access</h1>
+<h1 id="pdmshell-add-in-installation">PDMShell add-in installation</h1>
 
 <p>Install the PDMShell add-in in the SOLIDWORKS PDM vault where the automation should run. The add-in is available with the premium version of PDMShell and can be deployed from your Blue Byte Systems Inc account or with PDMDeploy.</p>
+<p>For the standalone PDMShell desktop application, see <a href="../howtoinstall.html">PDMShell standalone installation</a>.</p>
 <p>After the add-in is loaded in the vault, open the Script Editor command from the PDMShell add-in menu.</p>
-<h2 id="get-the-add-in-installer">Get the add-in installer</h2>
-<p>After your order is complete, download the PDMShell add-in from your Blue Byte Systems Inc <a href="https://bluebyte.biz/account">account page</a> or from the order confirmation email.</p>
+<h2 id="choose-an-installation-path">Choose an installation path</h2>
+<p>Choose the installation path that matches the vault environment.</p>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Recommended options</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard connected system</td>
+<td>Use PDMDeploy, or download the PDMShell <code>.cex</code> file from the PDMShell Download Center.</td>
+</tr>
+<tr>
+<td>Restricted or air-gapped system</td>
+<td>Use the Microsoft-hosted PDMShell Download Center, then use offline activation if the vault cannot reach the license service.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="standard-connected-systems">Standard connected systems</h2>
+<p>For a standard vault that can reach Blue Byte Systems services, install the PDMShell add-in with PDMDeploy or by downloading the add-in <code>.cex</code> file.</p>
+<h3 id="option-1-install-with-pdmdeploy">Option 1: Install with PDMDeploy</h3>
+<p>PDMDeploy can install standard Blue Byte Systems add-ins into a SOLIDWORKS PDM vault.</p>
+<div align="center">
+  <a href="https://docs.bluebyte.biz/pdmdeploy/PDMDeploy31.cex" style="display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:6px;background:#0078D4;color:#ffffff;text-decoration:none;font-weight:600;border:1px solid #106EBE;">Download PDMDeploy V31</a>
+</div>
+<p>Use this public activation code for standard Blue Byte Systems products:</p>
+<pre><code class="lang-text">E2A50448-9F15-42D9-B2F3-290409E81F94
+</code></pre>
+<p>If Blue Byte Systems developed a custom solution for you, use the private activation code from your welcome email instead.</p>
+<p>After downloading <code>PDMDeploy.cex</code>, unblock the file before installing it:</p>
+<ol>
+<li>Right-click <code>PDMDeploy.cex</code>.</li>
+<li>Select <code>Properties</code>.</li>
+<li>Check <code>Unblock</code>.</li>
+<li>Select <code>OK</code>.</li>
+</ol>
+<p>To install PDMDeploy after downloading it, follow the <a href="https://docs.bluebyte.biz/src/cdpdm.html">PDMDeploy installation article</a>.</p>
+<p>After PDMDeploy is installed, open the SOLIDWORKS PDM Administration tool and log in to the vault with a PDM user that has the <code>Edit Add-Ins</code> permission.</p>
+<h3 id="option-2-download-the-add-in-cex-file">Option 2: Download the add-in CEX file</h3>
+<p>After your order is complete, download the PDMShell add-in from your Blue Byte Systems Inc <a href="https://bluebyte.biz/account">account page</a>, from the order confirmation email, or from the PDMShell Download Center.</p>
+<p><a class="bbs-download-button" href="https://bluebytebiz-my.sharepoint.com/:f:/g/personal/amen_bluebyte_biz/IgC-eoPU0Z9XQpufSHG6IW0GAaCnMSVhuaZoUifopAZr6b0?e=0gMaF4">Open PDMShell Download Center</a></p>
 <p>If you cannot find the add-in installer after ordering, contact Blue Byte Systems technical support.</p>
+<p>For standard connected systems, use regular online activation from <a href="license-manager.html">Manage PDMShell add-in licenses</a>.</p>
 <h2 id="restricted-or-air-gapped-systems">Restricted or air-gapped systems</h2>
-<p>Some vault environments cannot reach Blue Byte Systems servers directly, or only allow Microsoft-hosted locations such as SharePoint and OneDrive. For these systems, use the PDMShell Download Center folder:</p>
+<p>Some vault environments cannot reach Blue Byte Systems servers directly, or only allow Microsoft-hosted locations such as SharePoint and OneDrive. For these systems, use the PDMShell Download Center folder to download the PDMShell <code>.cex</code> file:</p>
 <p><a class="bbs-download-button" href="https://bluebytebiz-my.sharepoint.com/:f:/g/personal/amen_bluebyte_biz/IgC-eoPU0Z9XQpufSHG6IW0GAaCnMSVhuaZoUifopAZr6b0?e=0gMaF4">Open PDMShell Download Center</a></p>
 <p>The folder contains PDMShell <code>.cex</code> files that can be downloaded through Microsoft-hosted infrastructure and installed manually in the SOLIDWORKS PDM Administration tool.</p>
+<p align="center">
+  <img src="../../images/pdmshell-download-center.png" alt="PDMShell Download Center folder in Microsoft OneDrive showing a PDMShell CEX file" style="max-width:860px;width:100%;height:auto;">
+</p>
 <p>After PDMShell TaskScript is installed, administrators can open the same folder from the PDM add-in menu:</p>
 <ol>
 <li>Open the SOLIDWORKS PDM Administration tool.</li>
@@ -104,6 +150,7 @@
 <li>Right-click <code>PDMShell</code>.</li>
 <li>Select <code>PDMShell Download Center...</code>.</li>
 </ol>
+<h2 id="manual-cex-installation">Manual CEX installation</h2>
 <p>To install a downloaded <code>.cex</code> file, open it with <code>File &gt; Open...</code> in the Administration tool, then drag the add-in from the CEX window onto the vault's <code>Add-ins</code> node.</p>
 <p>Use the SharePoint Download Center for installer files. Use <a href="../offline-activation.html">Offline Activation</a> or <a href="license-manager.html">Manage PDMShell add-in licenses</a> for license activation in restricted environments.</p>
 <h2 id="administrator-access">Administrator access</h2>

@@ -5,8 +5,12 @@
     href: index.md
   - name: Introduction
     href: introduction.md
-  - name: Install or Update
-    href: howtoinstall.md
+  - name: Installation
+    items:
+    - name: PDMShell standalone
+      href: howtoinstall.md
+    - name: PDMShell add-in
+      href: addin/installation.md
   - name: Free vs Premium
     href: FREEVSPREMIUM.md
 - name: Licensing
@@ -76,8 +80,6 @@
   items:
   - name: Overview
     href: TASKSCRIPT.md
-  - name: Installation and access
-    href: addin/installation.md
   - name: Script Editor
     href: addin/script-editor.md
   - name: Permissions

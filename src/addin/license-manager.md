@@ -83,5 +83,5 @@ Use the `Activate` button in the license list when a license key is present but 
 - [License Pool](../license-pool.md)
 - [Machine License](../machine-license.md)
 - [Offline Activation](../offline-activation.md)
-- [Installation and access](installation.md)
+- [PDMShell add-in installation](installation.md)
 - [Runtime execution](runtime-execution.md)

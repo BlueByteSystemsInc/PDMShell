@@ -1007,6 +1007,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/pdmshell-download-center.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-download-center.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell-expression-evaluator-dialog.png",
       "output": {
         "resource": {

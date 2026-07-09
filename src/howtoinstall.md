@@ -1,10 +1,12 @@
 ---
-description: PDMShell can be installed or updated from the Blue Byte Systems server or via the Microsoft Store.
-title: How to Install/Update PDMShell
+description: Install or update the standalone PDMShell desktop application from the Blue Byte Systems server or Microsoft Store.
+title: PDMShell standalone installation | PDMShell
 ---
-# How to Install/Update PDMShell
+# PDMShell standalone installation
 
-PDMShell can be installed from the Blue Byte Systems server or from the Microsoft Store. The Blue Byte Systems server installer is recommended because it provides the latest PDMShell version.
+PDMShell can be installed as a standalone desktop application from the Blue Byte Systems server or from the Microsoft Store. The Blue Byte Systems server installer is recommended because it provides the latest PDMShell version.
+
+For the SOLIDWORKS PDM add-in installer, see [PDMShell add-in installation](addin/installation.md).
 
 > [!NOTE]
 > The in-app updater is available in PDMShell 4.0.14 and newer.
