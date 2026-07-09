@@ -13,6 +13,8 @@ Instead of building automation from a fixed list of Dispatch actions, the add-in
 
 >[!Note]
 > The PDMShell add-in is included with the premium version. You can download it from your Blue Byte Systems Inc [account](https://bluebyte.biz/account) or deploy it with [PDMDeploy](https://docs.bluebyte.biz/src/cdpdm.html).
+>
+> If the vault is in a restricted or air-gapped environment that only allows Microsoft-hosted links, use the add-in's `PDMShell Download Center...` menu command to open the Microsoft SharePoint folder that contains PDMShell `.cex` files.
 
 ## Add-in workflow
 
@@ -23,6 +25,11 @@ Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins 
 </p>
 
 The Script Editor is where administrators create script entries, enable them, assign permitted users and groups, define conditions, choose PDMShell launch arguments, and select trigger points.
+
+The same add-in menu also includes:
+
+- `Manage PDMShell Licenses...` for online and offline license management.
+- `PDMShell Download Center...` for restricted systems that need Microsoft-hosted `.cex` downloads.
 
 <p>
   <img src="../images/pdmshell-addin-script-editor-overview.png" alt="PDMShell add-in Script Editor overview showing script name, enabled state, permissions, conditions, PDMShell arguments, and trigger points" style="max-width:980px;width:100%;height:auto;">
@@ -54,7 +61,7 @@ Use the Conditions editor to build the same condition expressions used by PDMShe
 
 | Article | Use it for |
 | --- | --- |
-| [Installation and access](addin/installation.md) | Loading the add-in and opening the Script Editor |
+| [Installation and access](addin/installation.md) | Loading the add-in, opening the Script Editor, and using the Microsoft-hosted Download Center |
 | [Manage add-in licenses](addin/license-manager.md) | Managing PDMShell add-in license keys from the PDM Administration Tool |
 | [License Pool](license-pool.md) | Managing pooled vault licenses for add-in automation |
 | [Machine License](machine-license.md) | Using the local workstation license for add-in automation |

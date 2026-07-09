@@ -13,6 +13,7 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 then install the latest version. Do not update installed version.
 
 ## 4.0.27 (2026-07-08)
+- Added a `PDMShell Download Center...` add-in menu command that opens a Microsoft SharePoint folder with PDMShell `.cex` files for restricted or air-gapped environments.
 - Improved revision placeholder evaluation so `${revision()}`, `$revision`, and revision component functions use the active PDM revision scheme formatting when resolving the current file revision.
 - Improved revision component parsing for formatted PDM revision schemes, including letter components, zero-padded numbers, hexadecimal numbers, and date/time format tokens.
 - Updated [Expression Evaluator](expression-evaluator.md) examples to show current revision values, current revision component values, and next revision component values against a selected PDM file.

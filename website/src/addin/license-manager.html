@@ -92,10 +92,14 @@
 <p align="center">
   <img src="../../images/pdmshell-addin-license-menu.png" alt="Manage PDMShell Licenses command in the SOLIDWORKS PDM Administration Tool add-in menu" style="max-width:420px;width:100%;height:auto;">
 </p>
-<p>The <code>PDMShell Licenses</code> window opens for the selected vault. Use this window to add license keys, activate pooled keys, choose the license mode, and review active pool borrows.</p>
+<p>The <code>PDMShell Licenses</code> window opens for the selected vault. Use this window to add license keys, activate pooled keys, generate offline activation files, choose the license mode, and review active pool borrows.</p>
 <p align="center">
   <img src="../../images/pdmshell-addin-license-manager.png" alt="PDMShell Licenses window in the SOLIDWORKS PDM Administration Tool" style="max-width:980px;width:100%;height:auto;">
 </p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Restricted or air-gapped vaults that only allow Microsoft-hosted downloads can use the add-in menu command <code>PDMShell Download Center...</code> to open the SharePoint folder that contains PDMShell <code>.cex</code> files. Use this license manager window for activation; use the Download Center for add-in installer files.</p>
+</div>
 <h2 id="license-mode">License mode</h2>
 <p>The top of the window controls how the vault uses PDMShell licenses.</p>
 <ul>
@@ -106,6 +110,15 @@
 <h2 id="add-license-keys">Add license keys</h2>
 <p>Paste one or more PDMShell license keys in the <code>License key</code> box. You can separate keys with new lines, commas, or semicolons.</p>
 <p>Select <code>Add</code> to add the keys to the vault license list.</p>
+<h2 id="offline-activation">Offline activation</h2>
+<p>Use the <code>Offline activation</code> section when the vault cannot reach the Blue Byte Systems license service directly.</p>
+<ol>
+<li>Select the license row that needs an offline activation or deactivation.</li>
+<li>Select <code>Generate activation request</code> or <code>Generate deactivation request</code>.</li>
+<li>Send the generated request file to Blue Byte Systems support.</li>
+<li>When support returns the response file, select <code>Import response</code> on the same vault.</li>
+</ol>
+<p>Offline request and response files are tied to the selected license and the current vault node. Import the response on the vault where the request was generated.</p>
 <h2 id="license-list">License list</h2>
 <p>The license list shows the keys available to the vault.</p>
 <table>
@@ -138,7 +151,7 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>Lets an administrator activate a license key when activation is required.</td>
+<td>Lets an administrator activate a license key online when activation is required.</td>
 </tr>
 </tbody>
 </table>
@@ -174,6 +187,7 @@
 <ul>
 <li><a href="../license-pool.html">License Pool</a></li>
 <li><a href="../machine-license.html">Machine License</a></li>
+<li><a href="../offline-activation.html">Offline Activation</a></li>
 <li><a href="installation.html">Installation and access</a></li>
 <li><a href="runtime-execution.html">Runtime execution</a></li>
 </ul>

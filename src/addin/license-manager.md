@@ -12,11 +12,14 @@ Open the Administration Tool, expand the vault, open the add-ins list, locate th
   <img src="../../images/pdmshell-addin-license-menu.png" alt="Manage PDMShell Licenses command in the SOLIDWORKS PDM Administration Tool add-in menu" style="max-width:420px;width:100%;height:auto;">
 </p>
 
-The `PDMShell Licenses` window opens for the selected vault. Use this window to add license keys, activate pooled keys, choose the license mode, and review active pool borrows.
+The `PDMShell Licenses` window opens for the selected vault. Use this window to add license keys, activate pooled keys, generate offline activation files, choose the license mode, and review active pool borrows.
 
 <p align="center">
   <img src="../../images/pdmshell-addin-license-manager.png" alt="PDMShell Licenses window in the SOLIDWORKS PDM Administration Tool" style="max-width:980px;width:100%;height:auto;">
 </p>
+
+> [!NOTE]
+> Restricted or air-gapped vaults that only allow Microsoft-hosted downloads can use the add-in menu command `PDMShell Download Center...` to open the SharePoint folder that contains PDMShell `.cex` files. Use this license manager window for activation; use the Download Center for add-in installer files.
 
 ## License mode
 
@@ -33,6 +36,17 @@ Paste one or more PDMShell license keys in the `License key` box. You can separa
 
 Select `Add` to add the keys to the vault license list.
 
+## Offline activation
+
+Use the `Offline activation` section when the vault cannot reach the Blue Byte Systems license service directly.
+
+1. Select the license row that needs an offline activation or deactivation.
+2. Select `Generate activation request` or `Generate deactivation request`.
+3. Send the generated request file to Blue Byte Systems support.
+4. When support returns the response file, select `Import response` on the same vault.
+
+Offline request and response files are tied to the selected license and the current vault node. Import the response on the vault where the request was generated.
+
 ## License list
 
 The license list shows the keys available to the vault.
@@ -44,7 +58,7 @@ The license list shows the keys available to the vault.
 | Status | Shows whether the key is activated and ready to use. |
 | Activated node | Shows the node or machine that activated the license. |
 | Expires | Shows the license expiration date. |
-| Action | Lets an administrator activate a license key when activation is required. |
+| Action | Lets an administrator activate a license key online when activation is required. |
 
 ## Active borrows
 
@@ -68,5 +82,6 @@ Use the `Activate` button in the license list when a license key is present but 
 
 - [License Pool](../license-pool.md)
 - [Machine License](../machine-license.md)
+- [Offline Activation](../offline-activation.md)
 - [Installation and access](installation.md)
 - [Runtime execution](runtime-execution.md)

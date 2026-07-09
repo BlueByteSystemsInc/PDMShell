@@ -96,6 +96,7 @@
 <div class="NOTE">
 <h5>Note</h5>
 <p>The PDMShell add-in is included with the premium version. You can download it from your Blue Byte Systems Inc <a href="https://bluebyte.biz/account">account</a> or deploy it with <a href="https://docs.bluebyte.biz/src/cdpdm.html">PDMDeploy</a>.</p>
+<p>If the vault is in a restricted or air-gapped environment that only allows Microsoft-hosted links, use the add-in's <code>PDMShell Download Center...</code> menu command to open the Microsoft SharePoint folder that contains PDMShell <code>.cex</code> files.</p>
 </div>
 <h2 id="add-in-workflow">Add-in workflow</h2>
 <p>Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select <code>Edit Scripts</code>.</p>
@@ -103,6 +104,11 @@
   <img src="../images/pdmshell-addin-admin-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Edit Scripts and Manage PDMShell Licenses commands" style="max-width:520px;width:100%;height:auto;">
 </p>
 <p>The Script Editor is where administrators create script entries, enable them, assign permitted users and groups, define conditions, choose PDMShell launch arguments, and select trigger points.</p>
+<p>The same add-in menu also includes:</p>
+<ul>
+<li><code>Manage PDMShell Licenses...</code> for online and offline license management.</li>
+<li><code>PDMShell Download Center...</code> for restricted systems that need Microsoft-hosted <code>.cex</code> downloads.</li>
+</ul>
 <p>
   <img src="../images/pdmshell-addin-script-editor-overview.png" alt="PDMShell add-in Script Editor overview showing script name, enabled state, permissions, conditions, PDMShell arguments, and trigger points" style="max-width:980px;width:100%;height:auto;">
 </p>
@@ -135,7 +141,7 @@
 <tbody>
 <tr>
 <td><a href="addin/installation.html">Installation and access</a></td>
-<td>Loading the add-in and opening the Script Editor</td>
+<td>Loading the add-in, opening the Script Editor, and using the Microsoft-hosted Download Center</td>
 </tr>
 <tr>
 <td><a href="addin/license-manager.html">Manage add-in licenses</a></td>
