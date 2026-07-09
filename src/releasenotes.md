@@ -12,6 +12,15 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.27 (2026-07-08)
+- Improved revision placeholder evaluation so `${revision()}`, `$revision`, and revision component functions use the active PDM revision scheme formatting when resolving the current file revision.
+- Improved revision component parsing for formatted PDM revision schemes, including letter components, zero-padded numbers, hexadecimal numbers, and date/time format tokens.
+- Updated [Expression Evaluator](expression-evaluator.md) examples to show current revision values, current revision component values, and next revision component values against a selected PDM file.
+- Updated [`setvar`](SETVAR.md) documentation with an example that writes the next formatted revision value into a data card variable.
+- Added a dedicated dark license node conflict dialog with resources for pooled add-in licenses and machine licenses.
+- Added a main-window license banner for free-version usage or licenses expiring within 30 days, including a direct `Order license` action.
+- Updated license conflict wording to use `node` because a license can be active on a vault node or a single machine.
+
 ## 4.0.26 (2026-07-07)
 - Breaking change: PDM variable evaluation now uses `$()` expressions such as `$(Revision)`, `$(Revision.@)`, and `$(PartNo.Default)`. Bracketed text is treated as literal text, so folder names like `[debugging]` are no longer interpreted as variables.
 - Updated alias, [`setvar`](SETVAR.md), [`runscript`](RUNSCRIPT.md), generated script preview, and condition evaluation documentation to use the new PDM variable expression syntax.

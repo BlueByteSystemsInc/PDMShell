@@ -23,6 +23,24 @@ Machine license mode uses the license stored on the current computer. Activate o
 
 If the workstation has internet access, use [License Activation](license-activation.md). If the workstation is air-gapped or cannot reach the license server, use [Offline Activation](offline-activation.md).
 
+## Activate The Local Machine License
+
+1. Open PDMShell on the workstation that will run the add-in automation.
+2. Select `Settings` on the toolbar or press `Ctrl + O`.
+3. Select `License`.
+4. Enter the PDMShell license key.
+5. Select `Activate`.
+
+<div align="center">
+  <img src="/images/pdmshell-open-settings-button.png" alt="PDMShell Settings toolbar button" style="max-width:420px;width:100%;height:auto;">
+</div>
+
+When activation succeeds, the License page shows the active license status and expiration date. The add-in can then use `Use this machine's license` for that workstation.
+
+<div align="center">
+  <img src="/images/pdmshell-license-settings.png" alt="PDMShell License settings page with an activated machine license" style="max-width:760px;width:100%;height:auto;">
+</div>
+
 ## Difference From License Pool
 
 Machine license mode does not borrow from vault-managed license keys. The add-in checks the local workstation license instead.

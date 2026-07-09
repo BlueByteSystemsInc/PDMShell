@@ -129,6 +129,30 @@ ${revision()}
 ${nextRevision()}
 ${revision(&quot;$folderPath\\$fileNameWithoutExtension.pdf&quot;)}
 </code></pre>
+<h2 id="revision-function-examples">Revision Function Examples</h2>
+<p>Revision functions evaluate against the selected PDM file unless the function includes an explicit file path argument. The examples below use a drawing whose PDM Version tab shows the current revision as <code>T-016-W</code>.</p>
+<div align="center">
+  <img src="/images/pdmshell-revision-current-pdm.png" alt="SOLIDWORKS PDM Version tab showing the current revision T-016-W" style="max-width:760px;width:100%;height:auto;">
+</div>
+<p>Use <code>${revision()}</code> when you need the current full revision display value. PDMShell formats the result using the active PDM revision scheme, so formatted components such as letters and zero-padded numbers are preserved.</p>
+<pre><code class="lang-text">${revision()}
+</code></pre>
+<div align="center">
+  <img src="/images/pdmshell-expression-evaluator-revision-current.png" alt="Expression Evaluator showing revision function returning T-016-W" style="max-width:760px;width:100%;height:auto;">
+</div>
+<p>Use component functions when you need to rebuild or inspect only part of the revision. In this example, the revision scheme has <code>Letters</code> and <code>Numeric</code> components. The current component values evaluate to <code>T</code> and <code>016</code>, producing <code>T-016-W</code>.</p>
+<pre><code class="lang-text">${revisionComponentValue(&quot;Letters&quot;)}-${revisionComponentValue(&quot;Numeric&quot;)}-W
+</code></pre>
+<div align="center">
+  <img src="/images/pdmshell-expression-evaluator-revision-components-current.png" alt="Expression Evaluator showing revision component values returning T-016-W" style="max-width:920px;width:100%;height:auto;">
+</div>
+<p>Use <code>nextRevisionComponentValue</code> when you need to preview the next formatted component values without changing the file. In the same scheme, the next values evaluate to <code>U</code> and <code>017</code>, producing <code>U-017-W</code>.</p>
+<pre><code class="lang-text">${nextRevisionComponentValue(&quot;Letters&quot;)}-${nextRevisionComponentValue(&quot;Numeric&quot;)}-W
+</code></pre>
+<div align="center">
+  <img src="/images/pdmshell-expression-evaluator-revision-components-next.png" alt="Expression Evaluator showing next revision component values returning U-017-W" style="max-width:920px;width:100%;height:auto;">
+</div>
+<p>Revision function names are case-insensitive, but the documentation uses lowercase names for consistency.</p>
 <h2 id="file-context">File Context</h2>
 <p>Some expressions need a selected PDM file or folder to return a meaningful result.</p>
 <p>Examples:</p>

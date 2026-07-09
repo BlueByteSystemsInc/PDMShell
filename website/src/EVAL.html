@@ -257,6 +257,7 @@ ${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
 <p>Revision functions use the same <code>${...}</code> syntax as string functions. Without a path argument, they require a selected PDM file because the result depends on the file's active workflow state and revision scheme.</p>
 <p>Most revision functions also accept an optional file path. Use this when the expression needs to inspect a different PDM file, such as a released PDF that is related to the current SOLIDWORKS file.</p>
 <p>Use the display value functions for normal scripts. Counter functions expose the internal numeric position of a revision component and are intended for advanced cases.</p>
+<p>Current and next revision display functions use the active PDM revision scheme format. For example, letter components, zero-padded numeric components such as <code>016</code>, hexadecimal components, and date/time components are formatted the same way PDM displays them.</p>
 <table>
 <thead>
 <tr>

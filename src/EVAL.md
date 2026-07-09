@@ -166,6 +166,8 @@ Most revision functions also accept an optional file path. Use this when the exp
 
 Use the display value functions for normal scripts. Counter functions expose the internal numeric position of a revision component and are intended for advanced cases.
 
+Current and next revision display functions use the active PDM revision scheme format. For example, letter components, zero-padded numeric components such as `016`, hexadecimal components, and date/time components are formatted the same way PDM displays them.
+
 | Function | Description |
 | --- | --- |
 | `${revision()}` | Returns the current full PDM revision display value for the selected file. |

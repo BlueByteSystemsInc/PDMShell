@@ -100,6 +100,21 @@
 <h2 id="how-activation-works">How Activation Works</h2>
 <p>Machine license mode uses the license stored on the current computer. Activate or deactivate that license from PDMShell settings on the workstation.</p>
 <p>If the workstation has internet access, use <a href="license-activation.html">License Activation</a>. If the workstation is air-gapped or cannot reach the license server, use <a href="offline-activation.html">Offline Activation</a>.</p>
+<h2 id="activate-the-local-machine-license">Activate The Local Machine License</h2>
+<ol>
+<li>Open PDMShell on the workstation that will run the add-in automation.</li>
+<li>Select <code>Settings</code> on the toolbar or press <code>Ctrl + O</code>.</li>
+<li>Select <code>License</code>.</li>
+<li>Enter the PDMShell license key.</li>
+<li>Select <code>Activate</code>.</li>
+</ol>
+<div align="center">
+  <img src="/images/pdmshell-open-settings-button.png" alt="PDMShell Settings toolbar button" style="max-width:420px;width:100%;height:auto;">
+</div>
+<p>When activation succeeds, the License page shows the active license status and expiration date. The add-in can then use <code>Use this machine's license</code> for that workstation.</p>
+<div align="center">
+  <img src="/images/pdmshell-license-settings.png" alt="PDMShell License settings page with an activated machine license" style="max-width:760px;width:100%;height:auto;">
+</div>
 <h2 id="difference-from-license-pool">Difference From License Pool</h2>
 <p>Machine license mode does not borrow from vault-managed license keys. The add-in checks the local workstation license instead.</p>
 <p>For shared vault access across multiple users or machines, use a <a href="license-pool.html">License Pool</a>.</p>

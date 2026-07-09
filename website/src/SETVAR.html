@@ -176,6 +176,17 @@ setvar -filePath file1.sldprt -variableName Code -value &quot;${left(${replace($
 
 setvar -search &quot;Name=%.sldprt&quot; -variableName Description -value &quot;$value\nChecked by $username&quot; -recursive
 </code></pre>
+<h3 id="set-a-variable-from-the-next-revision">Set A Variable From The Next Revision</h3>
+<p>You can use revision functions in <code>-value</code> to write the current or next PDM revision to a data card variable. This is useful for comments, release notes, or automation fields that need to preview the next formatted revision without changing the file revision.</p>
+<pre><code class="lang-bash">setvar -filePath membrane.SLDDRW -variableName Comment -value &quot;Incremented revision to ${nextRevisionComponentValue(\&quot;Letters\&quot;)}-${nextRevisionComponentValue(\&quot;Numeric\&quot;)}-W&quot;
+</code></pre>
+<p>For a file whose next formatted revision components are <code>U</code> and <code>017</code>, the command writes:</p>
+<pre><code class="lang-text">Incremented revision to U-017-W
+</code></pre>
+<div align="center">
+  <img src="/images/pdmshell-setvar-next-revision-comment.png" alt="setvar command writing a next revision value into the Comment variable" style="max-width:960px;width:100%;height:auto;">
+</div>
+<p>When the value is wrapped in double quotes, escape quotes inside function arguments with <code>\&quot;</code>.</p>
 <h2 id="evaluation">Evaluation</h2>
 <p>The <code>value</code> parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables.</p>
 <p><code>$value</code> is the current value of the same variable before the command writes the new value. If the current value is null or empty, <code>$value</code> evaluates to an empty string instead of staying as literal <code>$value</code>.</p>

@@ -59,6 +59,46 @@ ${nextRevision()}
 ${revision("$folderPath\\$fileNameWithoutExtension.pdf")}
 ```
 
+## Revision Function Examples
+
+Revision functions evaluate against the selected PDM file unless the function includes an explicit file path argument. The examples below use a drawing whose PDM Version tab shows the current revision as `T-016-W`.
+
+<div align="center">
+  <img src="/images/pdmshell-revision-current-pdm.png" alt="SOLIDWORKS PDM Version tab showing the current revision T-016-W" style="max-width:760px;width:100%;height:auto;">
+</div>
+
+Use `${revision()}` when you need the current full revision display value. PDMShell formats the result using the active PDM revision scheme, so formatted components such as letters and zero-padded numbers are preserved.
+
+```text
+${revision()}
+```
+
+<div align="center">
+  <img src="/images/pdmshell-expression-evaluator-revision-current.png" alt="Expression Evaluator showing revision function returning T-016-W" style="max-width:760px;width:100%;height:auto;">
+</div>
+
+Use component functions when you need to rebuild or inspect only part of the revision. In this example, the revision scheme has `Letters` and `Numeric` components. The current component values evaluate to `T` and `016`, producing `T-016-W`.
+
+```text
+${revisionComponentValue("Letters")}-${revisionComponentValue("Numeric")}-W
+```
+
+<div align="center">
+  <img src="/images/pdmshell-expression-evaluator-revision-components-current.png" alt="Expression Evaluator showing revision component values returning T-016-W" style="max-width:920px;width:100%;height:auto;">
+</div>
+
+Use `nextRevisionComponentValue` when you need to preview the next formatted component values without changing the file. In the same scheme, the next values evaluate to `U` and `017`, producing `U-017-W`.
+
+```text
+${nextRevisionComponentValue("Letters")}-${nextRevisionComponentValue("Numeric")}-W
+```
+
+<div align="center">
+  <img src="/images/pdmshell-expression-evaluator-revision-components-next.png" alt="Expression Evaluator showing next revision component values returning U-017-W" style="max-width:920px;width:100%;height:auto;">
+</div>
+
+Revision function names are case-insensitive, but the documentation uses lowercase names for consistency.
+
 ## File Context
 
 Some expressions need a selected PDM file or folder to return a meaningful result.

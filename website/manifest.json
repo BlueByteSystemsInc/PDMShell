@@ -1017,6 +1017,36 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/pdmshell-expression-evaluator-revision-components-current.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-expression-evaluator-revision-components-current.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-expression-evaluator-revision-components-next.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-expression-evaluator-revision-components-next.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-expression-evaluator-revision-current.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-expression-evaluator-revision-current.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell-expression-evaluator-toolbar.png",
       "output": {
         "resource": {
@@ -1071,6 +1101,26 @@
       "output": {
         "resource": {
           "relative_path": "images/pdmshell-open-settings-button.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-revision-current-pdm.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-revision-current-pdm.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-setvar-next-revision-comment.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-setvar-next-revision-comment.png"
         }
       },
       "version": ""
