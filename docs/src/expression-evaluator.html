@@ -89,46 +89,205 @@
 
 <p>The Expression Evaluator lets you test dynamic values before you run a command, script, task, or rename rule.</p>
 <p>Use it when you want to confirm what a placeholder, PDM variable, or string function will become at runtime.</p>
-<h2 id="what-it-helps-with">What It Helps With</h2>
-<p>The evaluator is useful for previewing:</p>
-<ul>
-<li>File and folder placeholders such as <code>$fileName</code>, <code>$filePath</code>, and <code>$folderPath</code>.</li>
-<li>Vault and user placeholders such as <code>$vaultName</code>, <code>$vaultRootFolder</code>, <code>$username</code>, and <code>$username.email</code>.</li>
-<li>Date and time placeholders such as <code>$date</code>, <code>$time</code>, <code>$yyyy</code>, and <code>$timestamp</code>.</li>
-<li>PDM variables such as <code>$(Description)</code> or <code>$(Description.@)</code>.</li>
-<li>String functions such as <code>${before(...)}</code>, <code>${replace(...)}</code>, and <code>${regex(...)}</code>.</li>
-<li>Revision functions such as <code>${revision()}</code>, <code>${nextRevision()}</code>, and <code>${revisionComponentValue(&quot;ComponentName&quot;)}</code>.</li>
-<li>Expressions that will later be used in commands like <a href="RENAME.html"><code>rename</code></a>, <a href="SETVAR.html"><code>setvar</code></a>, <a href="BOM.html"><code>bom</code></a>, <a href="export.html"><code>export</code></a>, <a href="MSGBOX.html"><code>msgbox</code></a>, or <a href="UNTIL.html"><code>until</code></a>.</li>
-</ul>
-<h2 id="why-use-it">Why Use It</h2>
-<p>The evaluator previews the result without changing files, setting variables, checking files in, renaming anything, or writing back to the vault.</p>
-<p>This makes it a safe place to test expressions before using them in production automation.</p>
-<h2 id="how-to-use-it">How To Use It</h2>
+<h2 id="how-evaluation-works">How Evaluation Works</h2>
+<p>The evaluator combines three things:</p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>What It Controls</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Context path</td>
+<td>The selected PDM file or folder used by placeholders and variables.</td>
+<td><code>$fileName</code>, <code>$folderPath</code>, <code>$id</code>, <code>$(Description)</code>, <code>${revision()}</code></td>
+</tr>
+<tr>
+<td><code>$value</code> source</td>
+<td>Where <code>$value</code> comes from.</td>
+<td>Sample text, or a selected PDM variable</td>
+</tr>
+<tr>
+<td>Expression</td>
+<td>The placeholder or function you want to test.</td>
+<td><code>${before(...)}</code>, <code>${regex(...)}</code>, <code>${add(...)}</code></td>
+</tr>
+</tbody>
+</table>
+<p>The evaluator does not write anything back to PDM. It is only a preview tool.</p>
+<h2 id="context-path">Context Path</h2>
+<p>Use the context path when the expression needs a selected PDM object.</p>
+<table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Use It For</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PDM file</td>
+<td>File name placeholders, file data card variables, revision functions, file ID/version/revision values.</td>
+<td><code>$fileNameWithoutExtension</code>, <code>$filePath</code>, <code>$extension</code>, <code>$id</code>, <code>$(Description.@)</code>, <code>${revision()}</code></td>
+</tr>
+<tr>
+<td>PDM folder</td>
+<td>Folder placeholders, folder data card variables, folder ID values.</td>
+<td><code>$folderPath</code>, <code>$folderName</code>, <code>$directory</code>, <code>$folderID</code>, <code>$id</code>, <code>$(Project)</code></td>
+</tr>
+<tr>
+<td>No file or folder</td>
+<td>Sample text, date/time placeholders, vault/user placeholders, and functions that do not need a file or folder.</td>
+<td><code>$date</code>, <code>$vaultName</code>, <code>${inc(&quot;032&quot;)}</code>, <code>${regex($value, &quot;...&quot;, 1)}</code></td>
+</tr>
+</tbody>
+</table>
+<p>Revision functions require a file context unless you pass a full file path into the function.</p>
+<h2 id="value-source"><code>$value</code> Source</h2>
+<p><code>$value</code> is the test input used by expressions such as <code>${replace($value, ...)}</code> or <code>${regex($value, ...)}</code>.</p>
+<p>Choose one source:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>What It Does</th>
+<th>When To Use It</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sample text</td>
+<td>Uses the text you type in the evaluator.</td>
+<td>Testing regex, arithmetic, and string functions against an example value.</td>
+</tr>
+<tr>
+<td>PDM variable</td>
+<td>Reads the current value of a selected data card variable from the selected file or folder.</td>
+<td>Testing the same expression a command like <a href="SETVAR.html"><code>setvar</code></a> will use.</td>
+</tr>
+</tbody>
+</table>
+<p>When <strong>PDM variable</strong> is selected, the configuration box applies to file variables. Folder variables do not use configurations.</p>
+<h2 id="basic-workflow">Basic Workflow</h2>
 <ol>
 <li>Open the Expression Evaluator from the PDMShell toolbar.</li>
-<li>Choose a PDM file or folder when the expression depends on file or folder context.</li>
-<li>Choose a configuration when the expression depends on configuration-specific variables.</li>
-<li>Choose a variable when you want <code>$value</code> to use the current value of that variable.</li>
-<li>Type or choose the expression to test.</li>
-<li>Review the evaluated result.</li>
+<li>Choose a context path when the expression needs a PDM file or folder.</li>
+<li>Choose the <code>$value</code> source: <strong>Sample text</strong> or <strong>PDM variable</strong>.</li>
+<li>Type the expression.</li>
+<li>Click <strong>Evaluate</strong>.</li>
+<li>Review the result before using the expression in a command or script.</li>
 </ol>
 <div align="center">
   <img src="/images/pdmshell-expression-evaluator-toolbar.png" alt="Expression Evaluator toolbar button in PDMShell" style="max-width:360px;width:100%;height:auto;">
 </div>
-<p>The evaluator window shows the selected file or folder context, the optional variable and configuration inputs, the expression being tested, and the evaluated result.</p>
+<p>The evaluator window shows the selected file or folder context, the selected <code>$value</code> source, the expression being tested, and the evaluated result.</p>
 <div align="center">
-  <img src="/images/pdmshell-expression-evaluator-dialog.png" alt="PDMShell Expression Evaluator dialog showing a folder placeholder result" style="max-width:820px;width:100%;height:auto;">
+  <img src="/images/pdmshell-expression-evaluator-dialog.png" alt="PDMShell Expression Evaluator dialog showing the sample text value source" style="max-width:900px;width:100%;height:auto;">
 </div>
-<h2 id="examples">Examples</h2>
+<h2 id="file-context-examples">File Context Examples</h2>
+<h3 id="preview-a-file-placeholder">Preview A File Placeholder</h3>
+<p>Choose a PDM file when you want to test file placeholders.</p>
 <pre><code class="lang-text">$fileNameWithoutExtension
-$(Description)
-${before($fileNameWithoutExtension, &quot;-&quot;)}
-${replace($value, &quot;DRAFT&quot;, &quot;RELEASED&quot;)}
-${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
-${revision()}
-${nextRevision()}
-${revision(&quot;$folderPath\\$fileNameWithoutExtension.pdf&quot;)}
 </code></pre>
+<p>For a selected file named <code>Bracket-001.SLDPRT</code>, this returns:</p>
+<pre><code class="lang-text">Bracket-001
+</code></pre>
+<h3 id="preview-a-file-data-card-variable">Preview A File Data Card Variable</h3>
+<p>Use <code>$()</code> expressions when you want to read a file data card variable.</p>
+<pre><code class="lang-text">$(Description)
+</code></pre>
+<p>Use a configuration name when the variable is configuration-specific:</p>
+<pre><code class="lang-text">$(Description.@)
+</code></pre>
+<h3 id="keep-text-before-a-separator">Keep Text Before A Separator</h3>
+<p>Use <code>${before(...)}</code> when a file name has a predictable separator and you want the left side.</p>
+<pre><code class="lang-text">${before($fileNameWithoutExtension, &quot;-&quot;)}
+</code></pre>
+<p>For <code>Bracket-001</code>, this returns:</p>
+<pre><code class="lang-text">Bracket
+</code></pre>
+<h2 id="folder-context-examples">Folder Context Examples</h2>
+<h3 id="preview-folder-path-or-name">Preview Folder Path Or Name</h3>
+<p>Choose a PDM folder when you want to test folder placeholders.</p>
+<pre><code class="lang-text">$folderPath
+</code></pre>
+<p>This returns the selected folder path.</p>
+<pre><code class="lang-text">$folderName
+</code></pre>
+<p>This returns the selected folder name.</p>
+<h3 id="preview-folder-id">Preview Folder ID</h3>
+<p><code>$id</code> resolves to the selected folder ID when the context path is a folder.</p>
+<pre><code class="lang-text">$id
+</code></pre>
+<h3 id="add-to-a-folder-id">Add To A Folder ID</h3>
+<p>Arithmetic functions can use numeric placeholders. For example, <code>${add($id, 5)}</code> adds <code>5</code> to the selected folder ID.</p>
+<pre><code class="lang-text">${add($id, 5)}
+</code></pre>
+<div align="center">
+  <img src="/images/pdmshell-expression-evaluator-add-id.png" alt="Expression Evaluator showing add function used with the selected folder ID" style="max-width:900px;width:100%;height:auto;">
+</div>
+<h3 id="preview-a-folder-data-card-variable">Preview A Folder Data Card Variable</h3>
+<p>Choose <strong>PDM variable</strong> as the <code>$value</code> source, select a folder data card variable, and evaluate <code>$value</code> directly:</p>
+<pre><code class="lang-text">$value
+</code></pre>
+<p>You can also transform the folder variable value:</p>
+<pre><code class="lang-text">${replace($value, &quot;DRAFT&quot;, &quot;RELEASED&quot;)}
+</code></pre>
+<h2 id="value-examples"><code>$value</code> Examples</h2>
+<h3 id="replace-text-in-the-current-value">Replace Text In The Current Value</h3>
+<p>Choose <strong>PDM variable</strong> as the <code>$value</code> source when you want <code>$value</code> to come from the selected variable. Then use <code>${replace(...)}</code> to test how a command such as <a href="SETVAR.html"><code>setvar</code></a> would transform it.</p>
+<pre><code class="lang-text">${replace($value, &quot;DRAFT&quot;, &quot;RELEASED&quot;)}
+</code></pre>
+<p>If <code>$value</code> is <code>FOR DRAFT REVIEW</code>, this returns:</p>
+<pre><code class="lang-text">FOR RELEASED REVIEW
+</code></pre>
+<h3 id="preserve-zero-padding">Preserve Zero Padding</h3>
+<p>Integer arithmetic preserves leading zero padding from the first argument.</p>
+<pre><code class="lang-text">${inc(&quot;032&quot;)}
+</code></pre>
+<p>This returns:</p>
+<pre><code class="lang-text">033
+</code></pre>
+<h2 id="regex-examples">Regex Examples</h2>
+<h3 id="extract-a-value-with-regex">Extract A Value With Regex</h3>
+<p>Use <code>${regex(...)}</code> when simple functions like <code>${before(...)}</code> and <code>${after(...)}</code> are not enough.</p>
+<pre><code class="lang-text">${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
+</code></pre>
+<p>This pattern means:</p>
+<ul>
+<li><code>^</code> starts at the beginning of the text.</li>
+<li><code>([^-]+)</code> captures one or more characters that are not <code>-</code>.</li>
+<li><code>-</code> requires the captured text to be followed by a dash.</li>
+<li><code>1</code> returns the first capture group.</li>
+</ul>
+<p>For <code>Bracket-001</code>, this returns:</p>
+<pre><code class="lang-text">Bracket
+</code></pre>
+<h3 id="increment-counters-inside-sample-text">Increment Counters Inside Sample Text</h3>
+<p>Choose <strong>Sample text</strong> as the <code>$value</code> source and type:</p>
+<pre><code class="lang-text">vA4-32(74)
+</code></pre>
+<p>Then evaluate:</p>
+<pre><code class="lang-text">${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 1)}-${inc(${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 2)})}(${inc(${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 3)})})
+</code></pre>
+<p>This expression:</p>
+<ul>
+<li>keeps the prefix before the dash with the first regex group;</li>
+<li>extracts <code>32</code> with the second regex group and increments it;</li>
+<li>extracts <code>74</code> with the third regex group and increments it;</li>
+<li>rebuilds the final value with the original punctuation.</li>
+</ul>
+<p>The result is:</p>
+<pre><code class="lang-text">vA4-33(75)
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Regex is powerful, but complex naming rules can become hard to read and maintain. If your team needs help designing, reviewing, or troubleshooting complex PDMShell expressions, Blue Byte Systems offers <a href="https://bluebyte.biz/product/enterprise-support-services/">Enterprise Support Services</a>.</p>
+</div>
 <h2 id="revision-function-examples">Revision Function Examples</h2>
 <p>Revision functions evaluate against the selected PDM file unless the function includes an explicit file path argument. The examples below use a drawing whose PDM Version tab shows the current revision as <code>T-016-W</code>.</p>
 <div align="center">
@@ -153,68 +312,71 @@ ${revision(&quot;$folderPath\\$fileNameWithoutExtension.pdf&quot;)}
   <img src="/images/pdmshell-expression-evaluator-revision-components-next.png" alt="Expression Evaluator showing next revision component values returning U-017-W" style="max-width:920px;width:100%;height:auto;">
 </div>
 <p>Revision function names are case-insensitive, but the documentation uses lowercase names for consistency.</p>
-<h2 id="file-context">File Context</h2>
-<p>Some expressions need a selected PDM file or folder to return a meaningful result.</p>
-<p>Examples:</p>
+<h2 id="context-reference">Context Reference</h2>
+<p>Use this table when you are not sure which context an expression needs.</p>
 <table>
 <thead>
 <tr>
-<th>Expression</th>
-<th>Needs file or folder context</th>
+<th>Expression Type</th>
+<th>Best Context</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>$fileName</code></td>
-<td>Yes</td>
+<td><code>$fileName</code>, <code>$filePath</code>, <code>$extension</code>, <code>$version</code></td>
+<td>PDM file</td>
+<td>These depend on a selected file.</td>
 </tr>
 <tr>
-<td><code>$filePath</code></td>
-<td>Yes</td>
+<td><code>$folderPath</code>, <code>$folderName</code>, <code>$directory</code>, <code>$folderID</code></td>
+<td>PDM folder</td>
+<td>These depend on a selected folder.</td>
 </tr>
 <tr>
-<td><code>$folderPath</code></td>
-<td>Yes</td>
+<td><code>$id</code></td>
+<td>PDM file or folder</td>
+<td>Returns the selected file ID for file context, or folder ID for folder context.</td>
 </tr>
 <tr>
 <td><code>$(Description)</code></td>
-<td>Yes</td>
+<td>PDM file or folder</td>
+<td>Reads the variable from the selected data card.</td>
 </tr>
 <tr>
-<td><code>${revision()}</code></td>
-<td>Yes</td>
+<td><code>$(Description.@)</code></td>
+<td>PDM file</td>
+<td>Use a configuration when reading a file variable that supports configurations.</td>
 </tr>
 <tr>
-<td><code>${nextRevision()}</code></td>
-<td>Yes</td>
+<td><code>$value</code> with <strong>Sample text</strong></td>
+<td>Any context or no context</td>
+<td>Uses the text typed in the evaluator.</td>
 </tr>
 <tr>
-<td><code>${revisionComponentValue(&quot;ComponentName&quot;)}</code></td>
-<td>Yes</td>
+<td><code>$value</code> with <strong>PDM variable</strong></td>
+<td>PDM file or folder</td>
+<td>Reads the selected data card variable from the selected context.</td>
+</tr>
+<tr>
+<td><code>${revision()}</code> and <code>${nextRevision()}</code></td>
+<td>PDM file</td>
+<td>Revision functions need file context because folders do not have file revisions.</td>
 </tr>
 <tr>
 <td><code>${revision(&quot;C:\Vault\File.pdf&quot;)}</code></td>
-<td>No, if the path is complete and the vault is logged in</td>
+<td>Any context if logged in</td>
+<td>The function resolves the supplied file path directly.</td>
 </tr>
 <tr>
-<td><code>$vaultName</code></td>
-<td>No, if logged in</td>
+<td><code>$vaultName</code>, <code>$vaultRootFolder</code></td>
+<td>Any context if logged in</td>
+<td>These come from the logged-in vault.</td>
 </tr>
 <tr>
-<td><code>$vaultRootFolder</code></td>
-<td>No, if logged in</td>
-</tr>
-<tr>
-<td><code>$date</code></td>
-<td>No</td>
-</tr>
-<tr>
-<td><code>$guid</code></td>
-<td>No</td>
-</tr>
-<tr>
-<td><code>$tempFolder</code></td>
-<td>No</td>
+<td><code>$date</code>, <code>$time</code>, <code>$guid</code>, <code>$tempFolder</code></td>
+<td>No context required</td>
+<td>These values do not depend on a selected file or folder.</td>
 </tr>
 </tbody>
 </table>

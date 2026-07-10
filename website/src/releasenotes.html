@@ -93,6 +93,12 @@
 <p>To update PDMShell properly, download the latest version, uninstall PDMShell and
 then install the latest version. Do not update installed version.</p>
 </div>
+<h2 id="4028-2026-07-10">4.0.28 (2026-07-10)</h2>
+<ul>
+<li>Added arithmetic expression functions <code>${inc(...)}</code>, <code>${dec(...)}</code>, <code>${add(...)}</code>, <code>${sub(...)}</code>, <code>${mul(...)}</code>, and <code>${div(...)}</code> for placeholder evaluation, including nested use with <code>${regex(...)}</code> to increment counters inside values such as <code>vA4-32(74)</code>.</li>
+<li>Added a <code>$value source</code> selector to the <a href="expression-evaluator.html">Expression Evaluator</a> so users can test expressions against sample text or a selected PDM variable without showing both inputs at once.</li>
+<li>Updated the <a href="expression-evaluator.html">Expression Evaluator</a> documentation and screenshot to show the simplified sample text and PDM variable workflow.</li>
+</ul>
 <h2 id="4027-2026-07-08">4.0.27 (2026-07-08)</h2>
 <ul>
 <li>Added a <code>PDMShell Download Center...</code> add-in menu command that opens a Microsoft SharePoint folder with PDMShell <code>.cex</code> files for restricted or air-gapped environments.</li>

@@ -199,6 +199,8 @@ setvar -variableName Description -filePath &quot;$localPath&quot; -value &quot;$
 ${replace($fileNameWithoutExtension, &quot; &quot;, &quot;_&quot;)}
 ${before($fileNameWithoutExtension, &quot;-&quot;)}
 ${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
+${add($id, 5)}
+${inc(${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 2)})}
 </code></pre>
 <p>Supported functions:</p>
 <table>
@@ -245,12 +247,51 @@ ${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
 <td><code>${regex(value, pattern, group)}</code></td>
 <td>Returns a capture group from the first regular expression match. <code>group</code> can be a group number or group name. If the group is not found, an empty string is returned.</td>
 </tr>
+<tr>
+<td><code>${inc(value)}</code></td>
+<td>Increments a number by <code>1</code>.</td>
+</tr>
+<tr>
+<td><code>${inc(value, amount)}</code></td>
+<td>Increments a number by <code>amount</code>.</td>
+</tr>
+<tr>
+<td><code>${dec(value)}</code></td>
+<td>Decrements a number by <code>1</code>.</td>
+</tr>
+<tr>
+<td><code>${add(left, right)}</code></td>
+<td>Adds two numbers.</td>
+</tr>
+<tr>
+<td><code>${sub(left, right)}</code></td>
+<td>Subtracts <code>right</code> from <code>left</code>.</td>
+</tr>
+<tr>
+<td><code>${mul(left, right)}</code></td>
+<td>Multiplies two numbers.</td>
+</tr>
+<tr>
+<td><code>${div(left, right)}</code></td>
+<td>Divides <code>left</code> by <code>right</code>. Division by zero is invalid and the expression is left unchanged.</td>
+</tr>
 </tbody>
 </table>
 <p>String functions can be nested when the nested function also uses <code>${...}</code>:</p>
 <pre><code class="lang-bash">${left(${replace($value, &quot; &quot;, &quot;_&quot;)}, 10)}
 </code></pre>
 <p>For example, if <code>$value</code> is <code>ABC 123 DRAFT</code>, the expression above evaluates to <code>ABC_123_DR</code>.</p>
+<p>Arithmetic functions use invariant number parsing. Integer results preserve leading zero padding from the first argument, so <code>${inc(&quot;032&quot;)}</code> evaluates to <code>033</code>. They can also use numeric placeholders, so <code>${add($id, 5)}</code> adds <code>5</code> to the selected file or folder ID.</p>
+<p>You can combine <code>regex</code> with arithmetic functions when a value contains counters inside a larger string. For example, if <code>$value</code> is <code>vA4-32(74)</code>, this expression increments both counters while preserving the prefix:</p>
+<pre><code class="lang-bash">${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 1)}-${inc(${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 2)})}(${inc(${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 3)})})
+</code></pre>
+<p>The result is:</p>
+<pre><code class="lang-text">vA4-33(75)
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Regex is useful for advanced naming and value parsing, but complex expressions should be tested carefully in the <a href="expression-evaluator.html">Expression Evaluator</a>. If your team needs help building or reviewing complex PDMShell expressions, Blue Byte Systems offers <a href="https://bluebyte.biz/product/enterprise-support-services/">Enterprise Support Services</a>.</p>
+</div>
 <p>Unknown or invalid function expressions are left unchanged.</p>
 <p>When a full command value is wrapped in double quotes, escape quotes inside function arguments with <code>\&quot;</code>.</p>
 <h2 id="revision-functions">Revision Functions</h2>

@@ -130,6 +130,8 @@ ${left($value, 5)}
 ${replace($fileNameWithoutExtension, " ", "_")}
 ${before($fileNameWithoutExtension, "-")}
 ${regex($fileNameWithoutExtension, "^([^-]+)-", 1)}
+${add($id, 5)}
+${inc(${regex($value, "^([^-]+)-(\d+)\((\d+)\)$", 2)})}
 ```
 
 Supported functions:
@@ -145,6 +147,13 @@ Supported functions:
 | `${after(value, search)}` | Returns the text after `search`. If `search` is not found, an empty string is returned. |
 | `${regex(value, pattern)}` | Returns the first regular expression match. If no match is found, an empty string is returned. |
 | `${regex(value, pattern, group)}` | Returns a capture group from the first regular expression match. `group` can be a group number or group name. If the group is not found, an empty string is returned. |
+| `${inc(value)}` | Increments a number by `1`. |
+| `${inc(value, amount)}` | Increments a number by `amount`. |
+| `${dec(value)}` | Decrements a number by `1`. |
+| `${add(left, right)}` | Adds two numbers. |
+| `${sub(left, right)}` | Subtracts `right` from `left`. |
+| `${mul(left, right)}` | Multiplies two numbers. |
+| `${div(left, right)}` | Divides `left` by `right`. Division by zero is invalid and the expression is left unchanged. |
 
 String functions can be nested when the nested function also uses `${...}`:
 
@@ -153,6 +162,23 @@ ${left(${replace($value, " ", "_")}, 10)}
 ```
 
 For example, if `$value` is `ABC 123 DRAFT`, the expression above evaluates to `ABC_123_DR`.
+
+Arithmetic functions use invariant number parsing. Integer results preserve leading zero padding from the first argument, so `${inc("032")}` evaluates to `033`. They can also use numeric placeholders, so `${add($id, 5)}` adds `5` to the selected file or folder ID.
+
+You can combine `regex` with arithmetic functions when a value contains counters inside a larger string. For example, if `$value` is `vA4-32(74)`, this expression increments both counters while preserving the prefix:
+
+```bash
+${regex($value, "^([^-]+)-(\d+)\((\d+)\)$", 1)}-${inc(${regex($value, "^([^-]+)-(\d+)\((\d+)\)$", 2)})}(${inc(${regex($value, "^([^-]+)-(\d+)\((\d+)\)$", 3)})})
+```
+
+The result is:
+
+```text
+vA4-33(75)
+```
+
+>[!Tip]
+> Regex is useful for advanced naming and value parsing, but complex expressions should be tested carefully in the [Expression Evaluator](expression-evaluator.md). If your team needs help building or reviewing complex PDMShell expressions, Blue Byte Systems offers [Enterprise Support Services](https://bluebyte.biz/product/enterprise-support-services/).
 
 Unknown or invalid function expressions are left unchanged.
 

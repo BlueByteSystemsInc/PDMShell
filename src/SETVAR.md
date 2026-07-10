@@ -107,7 +107,13 @@ Use `$(VariableName)` or `$(VariableName.ConfigurationName)` to read another PDM
 
 Use `\n` inside the value when you want PDMShell to write a real newline to the variable.
 
-String functions can be used after placeholder evaluation. This is useful with `$value` because `$value` is resolved first, then functions such as `${left(...)}`, `${right(...)}`, `${len(...)}`, `${pos(...)}`, `${replace(...)}`, `${before(...)}`, and `${after(...)}` run against the resolved text.
+String and arithmetic functions can be used after placeholder evaluation. This is useful with `$value` because `$value` is resolved first, then functions such as `${left(...)}`, `${right(...)}`, `${len(...)}`, `${pos(...)}`, `${replace(...)}`, `${before(...)}`, `${after(...)}`, `${regex(...)}`, `${inc(...)}`, `${dec(...)}`, `${add(...)}`, and `${sub(...)}` run against the resolved text.
+
+For example, if the existing variable value is `vA4-32(74)`, this value keeps the prefix and increments both counters:
+
+```bash
+setvar -filePath "Part.sldprt" -variableName Comment -value "${regex($value, \"^([^-]+)-(\\d+)\\((\\d+)\\)$\", 1)}-${inc(${regex($value, \"^([^-]+)-(\\d+)\\((\\d+)\\)$\", 2)})}(${inc(${regex($value, \"^([^-]+)-(\\d+)\\((\\d+)\\)$\", 3)})})"
+```
 
 >[!Note]
 > Please read more information about placeholder evaluation [here](EVAL.md).
@@ -130,7 +136,7 @@ String functions can be used after placeholder evaluation. This is useful with `
 - As of version [3.0.9](releasenotes.md), we have added support for setting folder daracard variables
 - `$value` now evaluates to an empty string when the existing value is null or empty, and literal `\n` in evaluated values is converted to a newline.
 - PDM variable evaluation now uses `$(Variable)` and `$(Variable.Configuration)` expressions. Bracketed text is literal.
-- Dynamic placeholder evaluation supports string functions such as `${left(...)}`, `${right(...)}`, `${len(...)}`, `${pos(...)}`, `${replace(...)}`, `${before(...)}`, and `${after(...)}`.
+- Dynamic placeholder evaluation supports string and arithmetic functions such as `${left(...)}`, `${right(...)}`, `${len(...)}`, `${pos(...)}`, `${replace(...)}`, `${before(...)}`, `${after(...)}`, `${regex(...)}`, `${inc(...)}`, `${dec(...)}`, `${add(...)}`, and `${sub(...)}`.
 - `-stringformat None` leaves the evaluated value unchanged and is the default behavior when `-stringformat` is omitted.
 
 ## Availability

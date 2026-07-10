@@ -1017,6 +1017,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/pdmshell-expression-evaluator-add-id.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-expression-evaluator-add-id.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell-expression-evaluator-dialog.png",
       "output": {
         "resource": {
