@@ -88,6 +88,30 @@
 <h1 id="licensing">Licensing</h1>
 
 <p>Use this section to choose how PDMShell should be activated and how PDMShell add-in access should be managed.</p>
+<h2 id="one-license-two-activation-workflows">One License, Two Activation Workflows</h2>
+<p>PDMShell Premium licensing is seat-based. Where you activate the license depends on how you want to use it.</p>
+<table>
+<thead>
+<tr>
+<th>Workflow</th>
+<th>Where The License Is Activated</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single machine</td>
+<td>Activate the license in the standalone PDMShell application installed on that workstation.</td>
+<td>One workstation or one administrator using PDMShell locally.</td>
+</tr>
+<tr>
+<td>Pooled add-in access</td>
+<td>Add and activate the license from the PDMShell add-in license manager in the SOLIDWORKS PDM Administration Tool.</td>
+<td>A shared PDM vault where multiple users need access to PDMShell add-in automation.</td>
+</tr>
+</tbody>
+</table>
+<p>Use the standalone installed application when the license belongs to one machine. Use the add-in license manager when the license should be pooled and borrowed by users from the vault.</p>
 <h2 id="choose-a-licensing-workflow">Choose A Licensing Workflow</h2>
 <table>
 <thead>
@@ -98,7 +122,7 @@
 </thead>
 <tbody>
 <tr>
-<td>Activate PDMShell on a computer with internet access</td>
+<td>Activate PDMShell on one workstation with internet access</td>
 <td><a href="license-activation.html">License Activation</a></td>
 </tr>
 <tr>
@@ -122,9 +146,9 @@
 <h2 id="common-flow">Common Flow</h2>
 <ol>
 <li>Install PDMShell.</li>
-<li>Activate the local workstation license with <a href="license-activation.html">License Activation</a> or <a href="offline-activation.html">Offline Activation</a>.</li>
-<li>If you use the PDMShell add-in, decide between <a href="license-pool.html">License Pool</a> and <a href="machine-license.html">Machine License</a>.</li>
-<li>Configure add-in licensing from <a href="addin/license-manager.html">Manage PDMShell add-in licenses</a>.</li>
+<li>If the license is for one workstation, activate it in the standalone PDMShell application with <a href="license-activation.html">License Activation</a> or <a href="offline-activation.html">Offline Activation</a>.</li>
+<li>If the license should be pooled for the PDM add-in, install the add-in and manage the keys from <a href="addin/license-manager.html">Manage PDMShell add-in licenses</a>.</li>
+<li>If you use the add-in, choose either <a href="license-pool.html">License Pool</a> or <a href="machine-license.html">Machine License</a> mode.</li>
 </ol>
 <h2 id="related-articles">Related Articles</h2>
 <ul>

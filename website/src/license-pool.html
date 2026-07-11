@@ -88,7 +88,8 @@
 <h1 id="license-pool">License Pool</h1>
 
 <p>Use a license pool when a SOLIDWORKS PDM vault should manage PDMShell add-in access centrally.</p>
-<p>In pool mode, administrators add PDMShell license keys to the vault from <code>Manage PDMShell Licenses</code>. The vault can then borrow from enabled, activated licenses when users run PDMShell add-in automation.</p>
+<p>In pool mode, administrators add and activate PDMShell license keys from the PDMShell add-in license manager in the SOLIDWORKS PDM Administration Tool. The vault can then borrow from enabled, activated licenses when users run PDMShell add-in automation.</p>
+<p>Do not activate pooled licenses in each user's standalone PDMShell application. Standalone activation is for a single machine. Pooled activation is managed from the PDM add-in.</p>
 <h2 id="when-to-use-a-license-pool">When To Use A License Pool</h2>
 <p>Use <code>Use license pool</code> when:</p>
 <ul>
@@ -106,7 +107,7 @@
 <ul>
 <li>Add one or more PDMShell license keys.</li>
 <li>Enable or disable keys.</li>
-<li>Activate keys when activation is required.</li>
+<li>Activate keys for pooled vault use.</li>
 <li>Delete keys from the vault license list.</li>
 <li>Review active pool borrows.</li>
 </ul>

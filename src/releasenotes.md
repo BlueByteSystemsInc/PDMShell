@@ -16,6 +16,7 @@ then install the latest version. Do not update installed version.
 - Added arithmetic expression functions `${inc(...)}`, `${dec(...)}`, `${add(...)}`, `${sub(...)}`, `${mul(...)}`, and `${div(...)}` for placeholder evaluation, including nested use with `${regex(...)}` to increment counters inside values such as `vA4-32(74)`.
 - Added a `$value source` selector to the [Expression Evaluator](expression-evaluator.md) so users can test expressions against sample text or a selected PDM variable without showing both inputs at once.
 - Updated the [Expression Evaluator](expression-evaluator.md) documentation and screenshot to show the simplified sample text and PDM variable workflow.
+- Clarified Premium licensing documentation so single-machine licenses are activated in the standalone installed PDMShell application, while pooled add-in licenses are activated from the PDMShell add-in license manager in the PDM Administration Tool.
 
 ## 4.0.27 (2026-07-08)
 - Added a `PDMShell Download Center...` add-in menu command that opens a Microsoft SharePoint folder with PDMShell `.cex` files for restricted or air-gapped environments.

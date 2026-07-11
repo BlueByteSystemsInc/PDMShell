@@ -4,7 +4,9 @@ title: License Activation
 ---
 # License Activation
 
-Use the License page in PDMShell settings to activate, deactivate, or remove the license stored on this computer.
+Use the License page in the standalone PDMShell application to activate, deactivate, or remove the license stored on this computer.
+
+This workflow activates a license for one machine. If you want a pooled license for PDMShell add-in users, manage and activate that license from [Manage PDMShell add-in licenses](addin/license-manager.md) instead.
 
 > [!NOTE]
 > Regular activation requires an internet connection. If the computer is air-gapped or cannot reach the license server, use [Offline Activation](offline-activation.md).

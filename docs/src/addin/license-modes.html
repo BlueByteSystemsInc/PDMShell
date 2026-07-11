@@ -87,7 +87,29 @@
         <article data-uid="">
 <h1 id="license-pool-and-machine-licenses">License pool and machine licenses</h1>
 
-<p>The PDMShell add-in can use either a vault license pool or the local PDMShell license installed on a workstation.</p>
+<p>The PDMShell add-in can use either a vault-managed license pool or the local PDMShell license activated in the standalone PDMShell application on a workstation.</p>
+<p>Think of the choice this way:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Where The License Is Activated</th>
+<th>What The Add-in Uses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>License pool</td>
+<td>PDMShell add-in license manager in the SOLIDWORKS PDM Administration Tool</td>
+<td>A pooled seat borrowed from the vault.</td>
+</tr>
+<tr>
+<td>Machine license</td>
+<td>Standalone PDMShell application on the workstation</td>
+<td>The local license already activated on that machine.</td>
+</tr>
+</tbody>
+</table>
 <p>Use the focused licensing articles for the full explanation:</p>
 <ul>
 <li><a href="../license-pool.html">License Pool</a></li>

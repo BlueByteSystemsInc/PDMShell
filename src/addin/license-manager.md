@@ -4,7 +4,7 @@ title: Manage PDMShell add-in licenses | PDMShell
 ---
 # Manage PDMShell add-in licenses
 
-PDMShell add-in licenses can be managed from the SOLIDWORKS PDM Administration Tool. Use this page when the add-in is installed in a vault and you need to choose how the vault consumes PDMShell licenses.
+PDMShell add-in licenses can be managed from the SOLIDWORKS PDM Administration Tool. Use this page when the add-in is installed in a vault and you want pooled add-in licensing, or when you need to choose whether the add-in uses pooled vault seats or the local machine license.
 
 Open the Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select `Manage PDMShell Licenses`.
 
@@ -12,7 +12,7 @@ Open the Administration Tool, expand the vault, open the add-ins list, locate th
   <img src="../../images/pdmshell-addin-license-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Manage PDMShell Licenses and PDMShell Download Center commands" style="max-width:520px;width:100%;height:auto;">
 </p>
 
-The `PDMShell Licenses` window opens for the selected vault. Use this window to add license keys, activate pooled keys, generate offline activation files, choose the license mode, and review active pool borrows.
+The `PDMShell Licenses` window opens for the selected vault. Use this window to add license keys, activate pooled keys for the vault, generate offline activation files, choose the license mode, and review active pool borrows.
 
 <p align="center">
   <img src="../../images/pdmshell-addin-license-manager.png" alt="PDMShell Licenses window in the SOLIDWORKS PDM Administration Tool" style="max-width:980px;width:100%;height:auto;">
@@ -26,7 +26,9 @@ The `PDMShell Licenses` window opens for the selected vault. Use this window to 
 The top of the window controls how the vault uses PDMShell licenses.
 
 - `Use license pool` lets the vault borrow from activated license keys stored in the vault.
-- `Use this machine's license` uses the local PDMShell license already installed on the current workstation.
+- `Use this machine's license` uses the local PDMShell license activated in the standalone PDMShell application on the current workstation.
+
+Use standalone PDMShell settings for a license that belongs to one machine. Use this add-in license manager for pooled licenses that should be shared from the vault.
 
 For help choosing a mode, see [License Pool](../license-pool.md) and [Machine License](../machine-license.md).
 

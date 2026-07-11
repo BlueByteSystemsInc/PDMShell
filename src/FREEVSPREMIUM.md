@@ -33,7 +33,7 @@ PDMShell is available as a Free edition for evaluation and lightweight work, and
 | Priority support | No | Yes |
 | Commercial use | Yes, non-resellers only | Yes |
 | Reseller use | No | Yes |
-| Cost | Free | Single license or license pool |
+| Cost | Free | Seat-based annual pricing |
 
 ---
 
@@ -69,25 +69,26 @@ Premium includes:
 
 ## Premium Licensing Options
 
-Premium can be licensed as a single machine license or as a license pool.
+Premium is seat-based. A seat can be activated for one standalone machine, or managed through the PDM add-in when you want pooled vault access.
 
-| Option | Best for | How it works |
-| --- | --- | --- |
-| Single license | One workstation or one administrator | The license is activated on a computer and used by PDMShell on that machine. |
-| License pool | Teams using the PDMShell add-in from a shared PDM vault | License keys are managed from the vault, and users borrow available seats when running add-in automation. |
+| Option | Activation location | Best for | How it works |
+| --- | --- | --- | --- |
+| Single machine | Standalone PDMShell application installed on the workstation | One workstation or one administrator | The license is activated on that computer and used by PDMShell on that machine. |
+| License pool | PDMShell add-in license manager in the SOLIDWORKS PDM Administration Tool | Teams using the PDMShell add-in from a shared PDM vault | License keys are managed from the vault, and users borrow available seats when running add-in automation. |
 
 Use a [Machine License](machine-license.md) when PDMShell is mainly used from one licensed workstation. Use a [License Pool](license-pool.md) when multiple users need shared access through the PDMShell add-in.
 
 ## Premium Pricing
 
-Current listed Premium pricing:
+Current listed Premium pricing is seat-based:
 
-| Package | Price |
+| Seats | Price per seat |
 | --- | --- |
-| 1 license | $999 |
-| 4-license pool | $2,999 |
-| 8-license pool | $3,999 |
-| Additional pool licenses for existing pool customers | +$400 per additional license |
+| 1-3 | US$999/year |
+| 4-7 | US$749/year |
+| 8+ | US$499/year |
+
+The total recurring price is calculated from the number of seats selected and the active price-per-seat tier. For current checkout pricing, visit [PDMShell Premium](https://bluebyte.biz/product/pdmshell).
 
 > [!TIP]
 > If your team wants help planning, developing, or deploying PDMShell automation, Blue Byte Systems offers [Enterprise Support Services](https://bluebyte.biz/product/enterprise-support-services/).
