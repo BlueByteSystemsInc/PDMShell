@@ -32,25 +32,7 @@ The add-in menu includes:
 
 ## Add-in workflow
 
-Select `Edit Scripts...` from the add-in menu to open the Script Editor.
-
-The Script Editor is where administrators create script entries, enable them, assign permitted users and groups, define conditions, configure command menu text, select PDM command hooks, and edit the PDMShell script code.
-
-<p>
-  <img src="../images/pdmshell-addin-script-editor-overview.png" alt="PDMShell add-in Script Editor showing enabled state, permissions, conditions, command menu text, PDM command hooks, and script code" style="max-width:980px;width:100%;height:auto;">
-</p>
-
-Each script can also expose a PDM command menu item and store the PDMShell code that runs against the selected file, folder, or event context.
-
-<p>
-  <img src="../images/pdmshell-addin-script-editor-code.png" alt="PDMShell add-in Script Editor showing command menu text, PDM command hooks, and PDMShell script code" style="max-width:980px;width:100%;height:auto;">
-</p>
-
-Use the Conditions editor to build the same condition expressions used by PDMShell scripts, then save the expression back to the add-in script.
-
-<p>
-  <img src="../images/pdmshell-addin-conditions-editor.png" alt="PDMShell add-in Conditions editor with condition rows and generated condition expression" style="max-width:920px;width:100%;height:auto;">
-</p>
+Use `Edit Scripts...` to open the [Script Editor](addin/script-editor.md). The Script Editor is where administrators create script entries, set permissions and conditions, add command menu text, select PDM command hooks, and edit the PDMShell script code.
 
 ## What you can automate
 
@@ -77,7 +59,6 @@ Use the Conditions editor to build the same condition expressions used by PDMShe
 | [PDM Tasks](addin/tasks.md) | Creating SOLIDWORKS PDM Tasks that run PDMShell scripts |
 | [Event trigger points](addin/trigger-points.md) | Running scripts from PDM command hooks |
 | [Placeholders and command context](addin/placeholders.md) | Using file, folder, command, and variable placeholders |
-| [Runtime execution](addin/runtime-execution.md) | Understanding `pdmcli.exe`, headless mode, and `-items` |
 | [Testing and troubleshooting](addin/troubleshooting.md) | Validating scripts and diagnosing common issues |
 
 ## Dispatch comparison
@@ -93,8 +74,8 @@ Dispatch action scripts typically combine triggers, conditions, variables, and a
 | PDM event activation | Trigger points such as checkout, check-in, state change, add, delete, move, copy, rename, and folder events |
 | Conditions | PDMShell wait-style condition expression |
 | Variables | PDMShell placeholders and PDM variable placeholders |
-| Shell execute action | `pdmcli.exe` running the configured `.pdmshell` script |
-| Debugging a script | Condition test message, visual script editor, and standalone `pdmcli.exe -edit` |
+| Shell execute action | The add-in runs the configured `.pdmshell` script |
+| Debugging a script | Condition test message, visual script editor, and standalone PDMShell testing |
 
 ## Recommended rollout
 

@@ -100,7 +100,7 @@ The difference is that PDMShell task logic is written as a PDMShell script. This
 
 ## Related articles
 
-- [Runtime execution](runtime-execution.md)
+- [Script Editor](script-editor.md)
 - [Command menu scripts](command-menu.md)
 - [Event trigger points](trigger-points.md)
 - [Run a PDM task](../RUNTASK.md)

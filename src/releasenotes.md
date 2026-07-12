@@ -19,6 +19,7 @@ then install the latest version. Do not update installed version.
 - Clarified Premium licensing documentation so single-machine licenses are activated in the standalone installed PDMShell application, while pooled add-in licenses are activated from the PDMShell add-in license manager in the PDM Administration Tool.
 - Documented the Script Editor prompt that appears when saved add-in changes affect PDM menu commands or command hooks and Windows Explorer needs to restart.
 - Updated the PDMShell add-in Script Editor documentation and screenshot to match the current editor layout without the removed `-minimized` and `-disableautologin` options.
+- Moved the add-in workflow screenshots and explanation into the Script Editor article and reduced runtime execution references in the main add-in documentation.
 
 ## 4.0.27 (2026-07-08)
 - Added a `PDMShell Download Center...` add-in menu command that opens a Microsoft SharePoint folder with PDMShell `.cex` files for restricted or air-gapped environments.

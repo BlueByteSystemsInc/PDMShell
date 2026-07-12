@@ -88,4 +88,3 @@ Use the `Activate` button in the license list when a license key is present but 
 - [Machine License](../machine-license.md)
 - [Offline Activation](../offline-activation.md)
 - [PDMShell add-in installation](installation.md)
-- [Runtime execution](runtime-execution.md)

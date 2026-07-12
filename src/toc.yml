@@ -94,8 +94,6 @@
     href: addin/trigger-points.md
   - name: Add-in Placeholders and Command Context
     href: addin/placeholders.md
-  - name: Runtime execution
-    href: addin/runtime-execution.md
   - name: Testing and troubleshooting
     href: addin/troubleshooting.md
 - name: Integrations

@@ -6,6 +6,28 @@ title: Script Editor | PDMShell add-in
 
 The Script Editor stores the scripts that the add-in can run from PDM. Each script entry has its own enabled state, permissions, conditions, command menu settings, trigger points, and script code.
 
+## Add-in workflow
+
+Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select `Edit Scripts...`.
+
+The Script Editor is where administrators create script entries, enable them, assign permitted users and groups, define conditions, configure command menu text, select PDM command hooks, and edit the PDMShell script code.
+
+<p>
+  <img src="../../images/pdmshell-addin-script-editor-overview.png" alt="PDMShell add-in Script Editor showing enabled state, permissions, conditions, command menu text, PDM command hooks, and script code" style="max-width:980px;width:100%;height:auto;">
+</p>
+
+Each script can expose a PDM command menu item and store the PDMShell code that runs against the selected file, folder, or event context.
+
+<p>
+  <img src="../../images/pdmshell-addin-script-editor-code.png" alt="PDMShell add-in Script Editor showing command menu text, PDM command hooks, and PDMShell script code" style="max-width:980px;width:100%;height:auto;">
+</p>
+
+Use the Conditions editor to build the same condition expressions used by PDMShell scripts, then save the expression back to the add-in script.
+
+<p>
+  <img src="../../images/pdmshell-addin-conditions-editor.png" alt="PDMShell add-in Conditions editor with condition rows and generated condition expression" style="max-width:920px;width:100%;height:auto;">
+</p>
+
 ## Add or delete scripts
 
 Use Add to create a new script entry. Use Delete to remove the selected entry.
@@ -46,18 +68,9 @@ Each script is organized into these sections:
 | Trigger Points | Command menu and PDM event trigger configuration |
 | Code | The `.pdmshell` script body |
 
-## Edit with PDMShell
-
-Use Edit with PDMShell to open the script in the PDMShell visual editor. The add-in saves the script to a temporary `.pdmshell` file and opens:
-
-```powershell
-pdmcli.exe -edit "C:\Path\To\TempScript.pdmshell"
-```
-
-When the PDMShell editor closes, the add-in reloads the script text from the temporary file.
-
 ## Related articles
 
 - [Permissions](permissions.md)
 - [Conditions](conditions.md)
-- [Runtime execution](runtime-execution.md)
+- [Command menu scripts](command-menu.md)
+- [Event trigger points](trigger-points.md)

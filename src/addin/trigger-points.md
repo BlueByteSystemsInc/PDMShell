@@ -32,5 +32,4 @@ PDM event data depends on the command type. Some events provide files, some prov
 ## Related articles
 
 - [Placeholders and command context](placeholders.md)
-- [Runtime execution](runtime-execution.md)
 - [Testing and troubleshooting](troubleshooting.md)

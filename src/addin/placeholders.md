@@ -50,4 +50,4 @@ When the configuration is omitted, PDMShell uses `@` for `.sldprt` and `.sldasm`
 ## Related articles
 
 - [Conditions](conditions.md)
-- [Runtime execution](runtime-execution.md)
+- [Script Editor](script-editor.md)

@@ -38,4 +38,4 @@ This demo shows how the PDMShell add-in can run a script on demand inside SOLIDW
 
 - [Permissions](permissions.md)
 - [Conditions](conditions.md)
-- [Runtime execution](runtime-execution.md)
+- [Script Editor](script-editor.md)

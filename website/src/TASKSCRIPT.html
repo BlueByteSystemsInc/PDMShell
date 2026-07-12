@@ -110,19 +110,7 @@
 <li><code>PDMShell Download Center...</code> for restricted systems that need Microsoft-hosted <code>.cex</code> downloads.</li>
 </ul>
 <h2 id="add-in-workflow">Add-in workflow</h2>
-<p>Select <code>Edit Scripts...</code> from the add-in menu to open the Script Editor.</p>
-<p>The Script Editor is where administrators create script entries, enable them, assign permitted users and groups, define conditions, configure command menu text, select PDM command hooks, and edit the PDMShell script code.</p>
-<p>
-  <img src="../images/pdmshell-addin-script-editor-overview.png" alt="PDMShell add-in Script Editor showing enabled state, permissions, conditions, command menu text, PDM command hooks, and script code" style="max-width:980px;width:100%;height:auto;">
-</p>
-<p>Each script can also expose a PDM command menu item and store the PDMShell code that runs against the selected file, folder, or event context.</p>
-<p>
-  <img src="../images/pdmshell-addin-script-editor-code.png" alt="PDMShell add-in Script Editor showing command menu text, PDM command hooks, and PDMShell script code" style="max-width:980px;width:100%;height:auto;">
-</p>
-<p>Use the Conditions editor to build the same condition expressions used by PDMShell scripts, then save the expression back to the add-in script.</p>
-<p>
-  <img src="../images/pdmshell-addin-conditions-editor.png" alt="PDMShell add-in Conditions editor with condition rows and generated condition expression" style="max-width:920px;width:100%;height:auto;">
-</p>
+<p>Use <code>Edit Scripts...</code> to open the <a href="addin/script-editor.html">Script Editor</a>. The Script Editor is where administrators create script entries, set permissions and conditions, add command menu text, select PDM command hooks, and edit the PDMShell script code.</p>
 <h2 id="what-you-can-automate">What you can automate</h2>
 <ul>
 <li>Add right-click commands such as <code>PDMShell\Rename Files</code>.</li>
@@ -187,10 +175,6 @@
 <td>Using file, folder, command, and variable placeholders</td>
 </tr>
 <tr>
-<td><a href="addin/runtime-execution.html">Runtime execution</a></td>
-<td>Understanding <code>pdmcli.exe</code>, headless mode, and <code>-items</code></td>
-</tr>
-<tr>
 <td><a href="addin/troubleshooting.html">Testing and troubleshooting</a></td>
 <td>Validating scripts and diagnosing common issues</td>
 </tr>
@@ -236,11 +220,11 @@
 </tr>
 <tr>
 <td>Shell execute action</td>
-<td><code>pdmcli.exe</code> running the configured <code>.pdmshell</code> script</td>
+<td>The add-in runs the configured <code>.pdmshell</code> script</td>
 </tr>
 <tr>
 <td>Debugging a script</td>
-<td>Condition test message, visual script editor, and standalone <code>pdmcli.exe -edit</code></td>
+<td>Condition test message, visual script editor, and standalone PDMShell testing</td>
 </tr>
 </tbody>
 </table>

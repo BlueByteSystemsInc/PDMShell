@@ -28,10 +28,14 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
 
   .pdmshell-hero {
     display: grid;
-    grid-template-columns: minmax(260px, .78fr) minmax(460px, 1.22fr);
-    gap: 24px;
-    align-items: center;
+    gap: 20px;
+    justify-items: center;
     margin: 8px 0 34px;
+    text-align: center;
+  }
+
+  .pdmshell-hero-copy {
+    max-width: 900px;
   }
 
   .pdmshell-kicker {
@@ -54,15 +58,17 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
     color: var(--pdmshell-muted);
     font-size: 17px;
     line-height: 1.56;
-    margin: 0;
-    max-width: 640px;
+    margin: 0 auto;
+    max-width: 820px;
   }
 
   .pdmshell-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 24px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 2px;
+    max-width: 620px;
+    width: 100%;
   }
 
   .pdmshell-button {
@@ -71,9 +77,12 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
     border-radius: 8px;
     display: inline-flex;
     font-weight: 700;
+    justify-content: center;
+    line-height: 1.2;
     min-height: 44px;
     padding: 10px 16px;
     text-decoration: none;
+    text-align: center;
   }
 
   .pdmshell-button-primary {
@@ -103,7 +112,9 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
     background: var(--pdmshell-panel);
     border: 1px solid var(--pdmshell-border);
     border-radius: 8px;
+    max-width: 920px;
     overflow: hidden;
+    width: 100%;
   }
 
   .pdmshell-hero-media img,
@@ -135,6 +146,10 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
     gap: 14px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     margin-top: 18px;
+  }
+
+  .pdmshell-workflow-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .pdmshell-card {
@@ -217,28 +232,31 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
   }
 
   @media (max-width: 992px) {
-    .pdmshell-hero {
-      grid-template-columns: 1fr;
+    .pdmshell-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .pdmshell-grid {
+    .pdmshell-workflow-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
   @media (max-width: 640px) {
-    .pdmshell-actions,
     .pdmshell-cta-row {
       align-items: stretch;
       flex-direction: column;
     }
 
+    .pdmshell-actions {
+      grid-template-columns: 1fr;
+    }
+
     .pdmshell-button {
-      justify-content: center;
       width: 100%;
     }
 
     .pdmshell-grid,
+    .pdmshell-workflow-grid,
     .pdmshell-checklist {
       grid-template-columns: 1fr;
     }
@@ -247,89 +265,61 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
 
 <div class="pdmshell-home">
   <section class="pdmshell-hero">
-    <div>
+    <div class="pdmshell-hero-copy">
       <div class="pdmshell-kicker">PDMShell for SOLIDWORKS PDM Professional</div>
-      <h1 class="pdmshell-title">Automate PDM work with commands, scripts, and add-in workflows.</h1>
+      <h1 class="pdmshell-title">Move past <s>Dispatch</s>. Automate PDM with PDMShell.</h1>
       <p class="pdmshell-lede">
-        PDMShell is a command-line and automation platform for SOLIDWORKS PDM Professional. Use it for one-off commands, repeatable <code>.pdmshell</code> scripts, visual workflows, and administrator-controlled add-in automation directly inside PDM.
+        Run scripts on demand, from PDM events, or as tasks inside SOLIDWORKS PDM Professional. Use PDMShell for one-off commands, repeatable <code>.pdmshell</code> scripts, visual workflows, and administrator-controlled add-in automation.
       </p>
-      <div class="pdmshell-actions">
-        <a class="pdmshell-button pdmshell-button-primary" href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell">Download PDMShell</a>
-          <a class="pdmshell-button pdmshell-button-secondary" href="howtoinstall.md">Install standalone</a>
-        <a class="pdmshell-button pdmshell-button-secondary" href="licensing.md">Choose licensing</a>
-      </div>
     </div>
     <div class="pdmshell-hero-media">
       <video autoplay muted loop playsinline poster="../images/pdmshell-home-visual-editor.png" aria-label="PDMShell visual editor showing a SOLIDWORKS PDM automation workflow and command-line output">
         <source src="../images/visual-editor.mp4" type="video/mp4">
       </video>
     </div>
+    <div class="pdmshell-actions">
+      <a class="pdmshell-button pdmshell-button-primary" href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell">Install MSI</a>
+      <a class="pdmshell-button pdmshell-button-secondary" href="addin/installation.md">Install PDM Add-in</a>
+      <a class="pdmshell-button pdmshell-button-secondary" href="licensing.md">Licensing</a>
+    </div>
   </section>
   <section class="pdmshell-section">
     <h2>Start with the right path</h2>
-    <p>Use these articles to install PDMShell, choose the correct license model, and decide how your team will run automation.</p>
+    <p>Install the pieces you need, then choose the licensing model that matches how your team will use PDMShell.</p>
     <div class="pdmshell-grid">
-      <a class="pdmshell-card" href="introduction.md">
-        <h3>Introduction</h3>
-        <p>Learn what PDMShell does and how it fits command-line, script, visual, and add-in workflows.</p>
+      <a class="pdmshell-card" href="howtoinstall.md">
+        <h3>Install PDMShell (MSI installer)</h3>
+        <p>Install the standalone desktop app for command-line work, script editing, and single-machine activation.</p>
       </a>
-        <a class="pdmshell-card" href="howtoinstall.md">
-          <h3>Standalone installation</h3>
-          <p>Download PDMShell, install the desktop app, update safely, and avoid common update issues.</p>
-        </a>
-        <a class="pdmshell-card" href="addin/installation.md">
-          <h3>Add-in installation</h3>
-          <p>Install the SOLIDWORKS PDM add-in, including Microsoft-hosted downloads for restricted environments.</p>
-        </a>
+      <a class="pdmshell-card" href="addin/installation.md">
+        <h3>Install PDM Add-in</h3>
+        <p>Install the SOLIDWORKS PDM add-in with PDMDeploy or the Microsoft-hosted Download Center.</p>
+      </a>
       <a class="pdmshell-card" href="licensing.md">
-        <h3>Licensing</h3>
-        <p>Choose online activation, offline activation, a machine license, or a vault license pool.</p>
-      </a>
-      <a class="pdmshell-card" href="FREEVSPREMIUM.md">
-        <h3>Free vs Premium</h3>
-        <p>Compare limits, Premium features, single licenses, pool licenses, and pricing.</p>
-      </a>
-      <a class="pdmshell-card" href="scripting.md">
-        <h3>Build Scripts</h3>
-        <p>Save repeatable <code>.pdmshell</code> scripts and run them from PDMShell, <code>pdmcli.exe</code>, or integrations.</p>
-      </a>
-      <a class="pdmshell-card" href="TASKSCRIPT.md">
-        <h3>PDMShell Add-In</h3>
-        <p>Run scripts from PDM right-click menus and trigger points with permissions and conditions.</p>
+        <h3>How licensing works</h3>
+        <p>Choose single-machine activation in the standalone app or pooled add-in licensing from the PDM Administration Tool.</p>
       </a>
     </div>
   </section>
   <section class="pdmshell-section">
     <h2>Choose the workflow that fits the job</h2>
-    <p>PDMShell can be used as an interactive command shell, a script runner, an add-in automation layer, or a visual workflow editor.</p>
-    <div class="pdmshell-grid">
+    <p>Pick the simplest workflow for the task: one command, a reusable script, a visual workflow, or controlled automation inside PDM.</p>
+    <div class="pdmshell-grid pdmshell-workflow-grid">
       <a class="pdmshell-card" href="COMMANDS.md">
-        <h3>Command Reference</h3>
-        <p>Browse commands for vault navigation, file operations, variables, automation, search, and migration.</p>
+        <h3>Run a command</h3>
+        <p>Use the command shell for quick vault navigation, file operations, search, variables, and cleanup work.</p>
+      </a>
+      <a class="pdmshell-card" href="scripting.md">
+        <h3>Build a script</h3>
+        <p>Save repeatable <code>.pdmshell</code> scripts for batch work, migrations, and administrator tasks.</p>
       </a>
       <a class="pdmshell-card" href="visual-code-editor-4.md">
-        <h3>Visual Code Editor</h3>
-        <p>Build, validate, and reuse PDMShell workflows visually.</p>
+        <h3>Build visually</h3>
+        <p>Create and validate workflows with the visual editor when a script benefits from a guided layout.</p>
       </a>
-      <a class="pdmshell-card" href="EVAL.md">
-        <h3>Placeholders</h3>
-        <p>Use file, folder, variable, date, global, and string function placeholders in scripts.</p>
-      </a>
-      <a class="pdmshell-card" href="expression-evaluator.md">
-        <h3>Expression Evaluator</h3>
-        <p>Test placeholders, PDM variables, and string functions before running automation.</p>
-      </a>
-      <a class="pdmshell-card" href="conditions.md">
-        <h3>Conditions</h3>
-        <p>Use the same condition syntax in IF statements, waiting, and add-in rules.</p>
-      </a>
-      <a class="pdmshell-card" href="advancedsearch.md">
-        <h3>Advanced Search</h3>
-        <p>Find PDM files with tokens, variables, favorites, result shaping, and recursive filters.</p>
-      </a>
-      <a class="pdmshell-card" href="faq.md">
-        <h3>FAQ</h3>
-        <p>Find answers about licensing, installation, the add-in, reseller use, and support.</p>
+      <a class="pdmshell-card" href="TASKSCRIPT.md">
+        <h3>Automate inside PDM</h3>
+        <p>Run approved scripts from PDM command menus, tasks, and trigger points with permissions and conditions.</p>
       </a>
     </div>
   </section>
@@ -355,10 +345,10 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
     </div>
   </section>
   <section class="pdmshell-section">
-    <h2>Legacy PDMShell overview</h2>
-    <p>Watch the December 2025 overview for a quick look at the command-line workflow that started the product. Some screens may look different from the current version.</p>
+    <h2>PDMShell add-in demo</h2>
+    <p>Watch how a PDMShell add-in script can run on demand from SOLIDWORKS PDM command menus without creating a PDM Task.</p>
     <div class="pdmshell-video-frame">
-      <iframe src="https://www.youtube.com/embed/UgNCkIuo-CM" title="Legacy PDMShell overview from December 2025" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/S7YZ04am8pI" title="Run PDMShell scripts on demand from SOLIDWORKS PDM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
   </section>
 </div>
