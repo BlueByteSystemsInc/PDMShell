@@ -97,6 +97,17 @@
 <li>Click OK to save the edited configuration.</li>
 <li>Click Cancel to discard changes made in the dialog.</li>
 </ul>
+<h2 id="menu-and-hook-changes-prompt">Menu and hook changes prompt</h2>
+<p>When you click OK, PDMShell checks whether the saved changes affect PDM menu command registration or PDM command hook registration.</p>
+<p>This prompt appears when changes include command menu changes, command menu name/text changes, or trigger point changes.</p>
+<p>
+  <img src="../../images/pdmshell-menu-hook-changes-dialog.png" alt="PDMShell menu and hook changes dialog asking whether to restart Windows Explorer" style="max-width:520px;width:100%;height:auto;">
+</p>
+<p>SOLIDWORKS PDM registers menu commands and command hooks when a user logs in to the vault and the add-in loads. If you changed menu commands or hooks, users must restart Windows Explorer or log out and back in to the vault before the changed commands and hooks appear.</p>
+<ul>
+<li>Click Yes to restart Windows Explorer for the current Windows session.</li>
+<li>Click No if you want to restart Windows Explorer later or log out and back in to the vault manually.</li>
+</ul>
 <h2 id="script-sections">Script sections</h2>
 <p>Each script is organized into these sections:</p>
 <table>

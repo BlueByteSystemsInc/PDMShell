@@ -32,7 +32,7 @@ This demo shows how the PDMShell add-in can run a script on demand inside SOLIDW
 
 - The command menu text is the user-facing label.
 - The script name is the administrator-facing identifier in the Script Editor.
-- If the menu command does not appear, reload the add-in after saving configuration changes.
+- If you change command menu text or enable or disable menu commands, click OK in the Script Editor and restart Windows Explorer when prompted. You can also log out and back in to the vault to reload the PDM menu commands.
 
 ## Related articles
 

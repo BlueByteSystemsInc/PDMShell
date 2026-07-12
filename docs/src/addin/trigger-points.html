@@ -125,6 +125,8 @@
 </table>
 <h2 id="pre-event-behavior">Pre-event behavior</h2>
 <p>For pre-event trigger points, a script failure can cancel the PDM command when the add-in receives the event early enough for PDM to cancel it.</p>
+<h2 id="saving-trigger-changes">Saving trigger changes</h2>
+<p>When you change trigger point selections and click OK in the Script Editor, PDMShell may prompt you to restart Windows Explorer. SOLIDWORKS PDM registers command hooks when the add-in loads, so Windows Explorer must restart, or the user must log out and back in to the vault, before changed hooks are active.</p>
 <h2 id="command-data">Command data</h2>
 <p>PDM event data depends on the command type. Some events provide files, some provide folders, and some provide command-specific values such as card button text or configuration context.</p>
 <h2 id="related-articles">Related articles</h2>

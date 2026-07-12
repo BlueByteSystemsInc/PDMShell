@@ -21,6 +21,7 @@ Test every add-in script with a small set of files before enabling it for produc
 | Symptom | What to check |
 | --- | --- |
 | Menu command does not appear | Confirm the script is enabled, Menu is enabled, command menu text is not empty, and the current user passes permissions. |
+| Menu command or trigger change does not appear after saving | If the Script Editor showed the menu and hook changes prompt, restart Windows Explorer or log out and back in to the vault so PDM reloads the add-in menus and command hooks. |
 | Script does not run from a trigger | Confirm the trigger point is selected and the add-in was reloaded after changing trigger configuration. |
 | Conditions do not match | Enable the condition test message and verify the resolved placeholder and variable values. |
 | PDMShell editor does not open | Confirm `pdmcli.exe` is installed and available in the expected PDMShell installation path. |

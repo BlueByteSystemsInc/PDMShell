@@ -34,10 +34,10 @@ The add-in menu includes:
 
 Select `Edit Scripts...` from the add-in menu to open the Script Editor.
 
-The Script Editor is where administrators create script entries, enable them, assign permitted users and groups, define conditions, choose PDMShell launch arguments, and select trigger points.
+The Script Editor is where administrators create script entries, enable them, assign permitted users and groups, define conditions, configure command menu text, select PDM command hooks, and edit the PDMShell script code.
 
 <p>
-  <img src="../images/pdmshell-addin-script-editor-overview.png" alt="PDMShell add-in Script Editor overview showing script name, enabled state, permissions, conditions, PDMShell arguments, and trigger points" style="max-width:980px;width:100%;height:auto;">
+  <img src="../images/pdmshell-addin-script-editor-overview.png" alt="PDMShell add-in Script Editor showing enabled state, permissions, conditions, command menu text, PDM command hooks, and script code" style="max-width:980px;width:100%;height:auto;">
 </p>
 
 Each script can also expose a PDM command menu item and store the PDMShell code that runs against the selected file, folder, or event context.
