@@ -13,10 +13,9 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 then install the latest version. Do not update installed version.
 
 ## 4.0.29 (2026-07-13)
-- Fixed culture-sensitive license expiry storage and parsing in `pdmcli.exe` and the PDMShell activation UI. PDMShell now writes license expiry values using an invariant round-trip date format and reads that format before falling back to legacy date parsing.
-- License validation and activation now fail with a clear message if the server response does not include an expiry date instead of throwing a generic error or storing an expired fallback date.
-- This prevents valid licenses from being treated as limited on machines using non-US regional settings, such as UK date formats, when an expiry date like July 20 is stored.
-- If a customer already has a borrowed add-in license expiry stored in an old culture-specific format, install the updated build and deactivate/reactivate the license so the expiry is written again in the safe format. Offline activation imports are normalized to the same safe format when the response expiry can be parsed.
+- Improved license activation and validation reliability on machines using non-US regional date settings.
+- Fixed an issue where a valid license could be treated as limited after activation on some Windows regional settings.
+- If a license still shows as limited after updating, deactivate and reactivate it to refresh the local license information.
 
 ## 4.0.28 (2026-07-10)
 - Added arithmetic expression functions `${inc(...)}`, `${dec(...)}`, `${add(...)}`, `${sub(...)}`, `${mul(...)}`, and `${div(...)}` for placeholder evaluation, including nested use with `${regex(...)}` to increment counters inside values such as `vA4-32(74)`.
