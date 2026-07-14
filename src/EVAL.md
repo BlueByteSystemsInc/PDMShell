@@ -52,8 +52,8 @@ The `value` parameter in supported commands can include placeholders that are re
 - `$folderName`: The name of the folder containing the file.
 - `$folderID`: The folder ID.
 - `$configuration`: configuration name. Only valid for BOM command.
-- `$(Variable)`: PDM variable value using the default configuration.
-- `$(Variable.Configuration)`: PDM variable value from an explicit configuration.
+- `$(Variable.@)`: PDM file variable value from the file `@` tab. The `.@` suffix is required when reading file variables from the `@` tab.
+- `$(Variable.Configuration)`: PDM file variable value from an explicit configuration tab.
 
 ### Placeholders for Folders
 - `$value`: Existing value of the variable. If the existing value is null or empty, this evaluates to an empty string.
@@ -103,7 +103,7 @@ Literal `\n` sequences in evaluated values are converted to `Environment.NewLine
 
 PDM variable expressions use `$(VariableName)` or `$(VariableName.ConfigurationName)`. Bracketed text is treated as literal text, so folder and file paths such as `[debugging]` are not interpreted as variables.
 
-When the configuration is omitted, PDMShell uses `@` for `.sldprt` and `.sldasm` files, and an empty configuration for drawings, other file types, and folders. Use the explicit configuration form when you need a specific tab, for example `$(Revision.@)` or `$(PartNo.Default)`.
+For file data card variables, include the configuration suffix. Use `.@` for the file `@` tab, for example `$(Description.@)` or `$(Revision.@)`. Use the explicit configuration name for a named tab, for example `$(PartNo.Default)`. Folder variables can use `$(VariableName)` because folders do not use file configurations.
 
 ---
 
@@ -121,7 +121,7 @@ Global variables are temporary and last only for the current PDMShell session or
 ---
 
 ## String Functions
-Placeholders also support a small set of string functions. Functions are evaluated after placeholders such as `$value`, `$name`, and `$(Variable)` have been resolved, so they can be used to manipulate the evaluated text.
+Placeholders also support a small set of string functions. Functions are evaluated after placeholders such as `$value`, `$name`, and PDM variable expressions like `$(Description.@)` have been resolved, so they can be used to manipulate the evaluated text.
 
 String functions use the `${...}` syntax:
 
@@ -240,11 +240,12 @@ Use the [Expression Evaluator](expression-evaluator.md) to preview placeholders,
 In addition to named placeholders, you can include PDM variables with `$()` expressions.
 
 ```text
-$(Revision)
 $(Revision.@)
-$(Description)
+$(Description.@)
 $(PartNo.Default)
 ```
+
+For file variables, include the configuration suffix. Use `.@` for the file `@` tab.
 
 Bracket syntax is not evaluated. Anything between `[` and `]` remains literal text.
 

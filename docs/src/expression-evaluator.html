@@ -103,7 +103,7 @@
 <tr>
 <td>Context path</td>
 <td>The selected PDM file or folder used by placeholders and variables.</td>
-<td><code>$fileName</code>, <code>$folderPath</code>, <code>$id</code>, <code>$(Description)</code>, <code>${revision()}</code></td>
+<td><code>$fileName</code>, <code>$folderPath</code>, <code>$id</code>, <code>$(Description.@)</code>, <code>${revision()}</code></td>
 </tr>
 <tr>
 <td><code>$value</code> source</td>
@@ -171,7 +171,7 @@
 </tr>
 </tbody>
 </table>
-<p>When <strong>PDM variable</strong> is selected, the configuration box applies to file variables. Folder variables do not use configurations.</p>
+<p>When <strong>PDM variable</strong> is selected, the configuration box applies to file variables. Use <code>@</code> for the file <code>@</code> tab. Folder variables do not use configurations.</p>
 <h2 id="basic-workflow">Basic Workflow</h2>
 <ol>
 <li>Open the Expression Evaluator from the PDMShell toolbar.</li>
@@ -197,11 +197,11 @@
 <pre><code class="lang-text">Bracket-001
 </code></pre>
 <h3 id="preview-a-file-data-card-variable">Preview A File Data Card Variable</h3>
-<p>Use <code>$()</code> expressions when you want to read a file data card variable.</p>
-<pre><code class="lang-text">$(Description)
-</code></pre>
-<p>Use a configuration name when the variable is configuration-specific:</p>
+<p>Use <code>$()</code> expressions when you want to read a file data card variable. File variables need a configuration suffix. Use <code>.@</code> for the file <code>@</code> tab:</p>
 <pre><code class="lang-text">$(Description.@)
+</code></pre>
+<p>Use the explicit configuration name for a named configuration tab:</p>
+<pre><code class="lang-text">$(PartNo.Default)
 </code></pre>
 <h3 id="keep-text-before-a-separator">Keep Text Before A Separator</h3>
 <p>Use <code>${before(...)}</code> when a file name has a predictable separator and you want the left side.</p>
@@ -339,14 +339,14 @@
 <td>Returns the selected file ID for file context, or folder ID for folder context.</td>
 </tr>
 <tr>
-<td><code>$(Description)</code></td>
-<td>PDM file or folder</td>
-<td>Reads the variable from the selected data card.</td>
-</tr>
-<tr>
 <td><code>$(Description.@)</code></td>
 <td>PDM file</td>
-<td>Use a configuration when reading a file variable that supports configurations.</td>
+<td>Reads the file variable from the <code>@</code> tab. The <code>.@</code> suffix is required for file variables on the <code>@</code> tab.</td>
+</tr>
+<tr>
+<td><code>$(Project)</code></td>
+<td>PDM folder</td>
+<td>Reads a folder variable. Folders do not use file configurations.</td>
 </tr>
 <tr>
 <td><code>$value</code> with <strong>Sample text</strong></td>

@@ -12,6 +12,10 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.30 (2026-07-14)
+- Improved the [Expression Evaluator](expression-evaluator.md) window so users can switch back to PDMShell while it remains open, minimize it, and access it from the Windows taskbar.
+- Clarified PDM variable expression documentation: when reading file data card variables from the file `@` tab, use the explicit `.@` suffix, for example `$(Description.@)`.
+
 ## 4.0.29 (2026-07-13)
 - Improved license activation and validation reliability on machines using non-US regional date settings.
 - Fixed an issue where a valid license could be treated as limited after activation on some Windows regional settings.
@@ -37,9 +41,9 @@ then install the latest version. Do not update installed version.
 - Updated license conflict wording to use `node` because a license can be active on a vault node or a single machine.
 
 ## 4.0.26 (2026-07-07)
-- Breaking change: PDM variable evaluation now uses `$()` expressions such as `$(Revision)`, `$(Revision.@)`, and `$(PartNo.Default)`. Bracketed text is treated as literal text, so folder names like `[debugging]` are no longer interpreted as variables.
+- Breaking change: PDM variable evaluation now uses `$()` expressions such as `$(Revision.@)` and `$(PartNo.Default)` for file variables, or `$(Project)` for folder variables. Bracketed text is treated as literal text, so folder names like `[debugging]` are no longer interpreted as variables.
 - Updated alias, [`setvar`](SETVAR.md), [`runscript`](RUNSCRIPT.md), generated script preview, and condition evaluation documentation to use the new PDM variable expression syntax.
-- When the configuration is omitted, PDMShell uses `@` for `.sldprt` and `.sldasm` files, and an empty configuration for drawings, other file types, and folders.
+- File variables should use an explicit configuration suffix, such as `$(Revision.@)` for the file `@` tab.
 
 ## 4.0.25 (2026-07-06)
 - Fixed placeholder evaluation when an alias is followed by an underscore or other non-alphanumeric separator, so file-context expressions such as `$fileNameWithoutExtension_R_%.pdf` resolve correctly in [`runscript`](RUNSCRIPT.md), command alias evaluation, and generated script previews.

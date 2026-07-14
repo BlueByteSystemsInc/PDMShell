@@ -51,7 +51,7 @@ setvar -filePath file1.sldprt -variableName Description -value "$value\n$fileNam
 
 setvar -filePath file1.sldprt -variableName Description -value "${replace($value, \"DRAFT\", \"RELEASED\")}" # Replace text in the current value.
 
-setvar -filePath file1.sldprt -variableName Description -value "$(Description) - $fileNameWithoutExtension" # Read another PDM variable with the default configuration.
+setvar -filePath file1.sldprt -variableName Description -value "$(Description.@) - $fileNameWithoutExtension" # Read another file variable from the @ tab.
 
 setvar -filePath file1.sldprt -variableName Code -value "${left(${replace($value, \" \", \"_\")}, 12)}" # Nested string evaluation.
 
@@ -103,7 +103,7 @@ The `value` parameter gets evaluated by PDMShell. This feature allows you to use
 
 `$value` is the current value of the same variable before the command writes the new value. If the current value is null or empty, `$value` evaluates to an empty string instead of staying as literal `$value`.
 
-Use `$(VariableName)` or `$(VariableName.ConfigurationName)` to read another PDM variable while building the value. When the configuration is omitted, PDMShell uses `@` for `.sldprt` and `.sldasm` files, and an empty configuration for drawings, other file types, and folders. Bracketed text is literal and is not evaluated as a PDM variable.
+Use `$(VariableName.ConfigurationName)` to read another PDM variable while building the value. For file data card variables, include the configuration suffix. Use `.@` for the file `@` tab, for example `$(Description.@)`, and use the explicit configuration name for a named tab, for example `$(PartNo.Default)`. Folder variables can use `$(VariableName)` because folders do not use file configurations. Bracketed text is literal and is not evaluated as a PDM variable.
 
 Use `\n` inside the value when you want PDMShell to write a real newline to the variable.
 
@@ -138,6 +138,7 @@ setvar -filePath "Part.sldprt" -variableName Comment -value "${regex($value, \"^
 - PDM variable evaluation now uses `$(Variable)` and `$(Variable.Configuration)` expressions. Bracketed text is literal.
 - Dynamic placeholder evaluation supports string and arithmetic functions such as `${left(...)}`, `${right(...)}`, `${len(...)}`, `${pos(...)}`, `${replace(...)}`, `${before(...)}`, `${after(...)}`, `${regex(...)}`, `${inc(...)}`, `${dec(...)}`, `${add(...)}`, and `${sub(...)}`.
 - `-stringformat None` leaves the evaluated value unchanged and is the default behavior when `-stringformat` is omitted.
+- For file variables, use the explicit file configuration suffix such as `$(Description.@)` when reading the file `@` tab.
 
 ## Availability
 Available since PDMShell 2.0.0.

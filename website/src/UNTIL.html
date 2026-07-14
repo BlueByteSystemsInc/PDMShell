@@ -208,7 +208,7 @@ until -conditions &quot;$folderPath\$fileNameWithoutExtension.pdf exists&quot; -
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>PDM variables use <code>$(</code> and <code>)</code>, for example <code>$(Description.@)</code>. When writing conditions manually, quote PDM variable tokens if they appear inside a larger expression so the parser does not treat the parentheses as condition grouping.</p>
+<p>PDM variables use <code>$(</code> and <code>)</code>, for example <code>$(Description.@)</code>. For file data card variables, use <code>.@</code> when reading the file <code>@</code> tab. When writing conditions manually, quote PDM variable tokens if they appear inside a larger expression so the parser does not treat the parentheses as condition grouping.</p>
 </div>
 <h2 id="supported-operators">Supported Operators</h2>
 <ul>
@@ -439,12 +439,11 @@ process exists &quot;notepad&quot;
 <p>Placeholder names are evaluated case-insensitively in until conditions.</p>
 </div>
 <h2 id="pdm-variables">PDM Variables</h2>
-<p>Use <code>$(VariableName)</code> or <code>$(VariableName.ConfigurationName)</code> to read a PDM variable from the file or folder context.</p>
-<pre><code class="lang-bash">&quot;$(Description)&quot; contains &quot;ECO&quot;
-&quot;$(Description.@)&quot; contains &quot;ECO&quot;
+<p>Use <code>$(VariableName.ConfigurationName)</code> to read a PDM variable from the file context. Use <code>.@</code> for the file <code>@</code> tab. Folder variables can use <code>$(VariableName)</code> because folders do not use file configurations.</p>
+<pre><code class="lang-bash">&quot;$(Description.@)&quot; contains &quot;ECO&quot;
 &quot;$(Revision.@)&quot; equals &quot;A&quot;
 </code></pre>
-<p>When the configuration is omitted, PDMShell uses <code>@</code> for <code>.sldprt</code> and <code>.sldasm</code> files, and an empty configuration for drawings, other file types, and folders. Bracketed text is literal and is not evaluated as a PDM variable.</p>
+<p>For file data card variables, the <code>.@</code> suffix is required when reading the file <code>@</code> tab, for example <code>$(Description.@)</code>. Bracketed text is literal and is not evaluated as a PDM variable.</p>
 <h2 id="arithmetic-comparisons">Arithmetic Comparisons</h2>
 <p>Numeric expressions can be used on either side of a comparison.</p>
 <pre><code class="lang-bash">1 + 3 greater than 3

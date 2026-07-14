@@ -22,7 +22,7 @@ Use the Conditions editor to add condition rows, combine them with `and` or `or`
 - text comparisons such as equals, contains, starts with, ends with, and regex matches
 - numeric comparisons
 - PDMShell placeholders such as `$fileName`, `$localPath`, and `$folderPath`
-- PDM variables such as `$(Description)`, `$(Description.@)`, or `$(Revision.@)`
+- PDM variables such as `$(Description.@)` or `$(Revision.@)` for file `@` tab values
 
 ## Examples
 
@@ -31,6 +31,8 @@ $localPath exists
 "$(Description.@)" contains "ECO"
 ($folderPath\ready.pdf exists or $folderPath\ready.dxf exists) and "$(State.@)" equals "Released"
 ```
+
+For file data card variables, use the explicit configuration suffix. Use `.@` for the file `@` tab, for example `$(Description.@)`.
 
 ## Condition test message
 

@@ -63,15 +63,14 @@ When the left side is not explicitly `file`, `folder`, or `process`, PDMShell tr
 
 ## PDM Variables
 
-Use `$(VariableName)` or `$(VariableName.ConfigurationName)` to read a PDM variable from the current file or folder context.
+Use `$(VariableName.ConfigurationName)` to read a PDM variable from the current file context. Use `.@` for the file `@` tab. Folder variables can use `$(VariableName)` because folders do not use file configurations.
 
 ```text
-"$(Description)" contains "ECO"
 "$(Description.@)" contains "ECO"
 "$(Revision.@)" equals "A"
 ```
 
-When the configuration is omitted, PDMShell uses `@` for `.sldprt` and `.sldasm` files, and an empty configuration for drawings, other file types, and folders. Bracketed text is literal and is not evaluated as a PDM variable.
+For file data card variables, the `.@` suffix is required when reading the file `@` tab, for example `$(Description.@)`. Bracketed text is literal and is not evaluated as a PDM variable.
 
 ## Placeholders
 

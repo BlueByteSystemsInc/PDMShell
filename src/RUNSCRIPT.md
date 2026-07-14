@@ -103,9 +103,10 @@ An item-specific line is a line that contains a file, folder, vault, date/time, 
 | `$timestamp`, `$date`, `$time` | Common date/time formats. |
 | `$completefilename` | Legacy complete file path placeholder. |
 | `$completefoldername` | Legacy complete folder path placeholder. |
-| `$(Variable)`, `$(Variable.Config)` | PDM variable value for the current file or folder. Use the explicit configuration form when a specific configuration tab is required. |
+| `$(Variable.@)`, `$(Variable.Config)` | PDM file variable value for the current file. Use `.@` for the file `@` tab. |
+| `$(Variable)` | PDM folder variable value for the current folder. |
 
-When the configuration is omitted, PDMShell uses `@` for `.sldprt` and `.sldasm` files, and an empty configuration for drawings, other file types, and folders. Bracketed text is literal and is not evaluated as a PDM variable.
+For file data card variables, include the configuration suffix. Use `.@` for the file `@` tab, for example `$(Description.@)`. Use the explicit configuration name for a named tab, for example `$(PartNo.Default)`. Bracketed text is literal and is not evaluated as a PDM variable.
 
 ## Example
 

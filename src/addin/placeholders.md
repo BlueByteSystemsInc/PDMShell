@@ -31,21 +31,21 @@ The add-in evaluates placeholders for the current command context and the affect
 | `$buttonText` | Card button text when provided by the PDM event |
 | `$cmdType`, `$commandType` | PDM command type that triggered the script |
 | `$cmdId`, `$commandId` | PDM command ID when available |
-| `$(Variable)`, `$(Variable.Configuration)` | PDM variable value for the current file or folder |
+| `$(Variable.@)`, `$(Variable.Configuration)` | PDM file variable value for the current file |
+| `$(Variable)` | PDM folder variable value for the current folder |
 
 Date and time placeholders such as `$yyyy`, `$MM`, `$dd`, `$timestamp`, `$date`, and `$time` are also supported.
 
 ## PDM variables
 
-Use `$(Variable)` or `$(Variable.Configuration)` to read PDM variable values.
+Use `$(Variable.Configuration)` to read PDM variable values from files. Use `.@` for the file `@` tab. Folder variables can use `$(Variable)` because folders do not use file configurations.
 
 ```pdmshell
-"$(Description)" contains "ECO"
 "$(Description.@)" contains "ECO"
 "$(Revision.@)" equals "A"
 ```
 
-When the configuration is omitted, PDMShell uses `@` for `.sldprt` and `.sldasm` files, and an empty configuration for drawings, other file types, and folders. Use the configuration name when a specific configuration value is needed. Bracketed text is literal and is not evaluated as a PDM variable.
+For file data card variables, the `.@` suffix is required when reading the file `@` tab, for example `$(Description.@)`. Use the configuration name when a specific configuration value is needed. Bracketed text is literal and is not evaluated as a PDM variable.
 
 ## Related articles
 

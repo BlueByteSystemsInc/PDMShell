@@ -170,7 +170,7 @@ setvar -filePath file1.sldprt -variableName Description -value &quot;$value\n$fi
 
 setvar -filePath file1.sldprt -variableName Description -value &quot;${replace($value, \&quot;DRAFT\&quot;, \&quot;RELEASED\&quot;)}&quot; # Replace text in the current value.
 
-setvar -filePath file1.sldprt -variableName Description -value &quot;$(Description) - $fileNameWithoutExtension&quot; # Read another PDM variable with the default configuration.
+setvar -filePath file1.sldprt -variableName Description -value &quot;$(Description.@) - $fileNameWithoutExtension&quot; # Read another file variable from the @ tab.
 
 setvar -filePath file1.sldprt -variableName Code -value &quot;${left(${replace($value, \&quot; \&quot;, \&quot;_\&quot;)}, 12)}&quot; # Nested string evaluation.
 
@@ -200,7 +200,7 @@ setvar -search &quot;Name=%.sldprt&quot; -variableName Description -value &quot;
 <h2 id="evaluation">Evaluation</h2>
 <p>The <code>value</code> parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables.</p>
 <p><code>$value</code> is the current value of the same variable before the command writes the new value. If the current value is null or empty, <code>$value</code> evaluates to an empty string instead of staying as literal <code>$value</code>.</p>
-<p>Use <code>$(VariableName)</code> or <code>$(VariableName.ConfigurationName)</code> to read another PDM variable while building the value. When the configuration is omitted, PDMShell uses <code>@</code> for <code>.sldprt</code> and <code>.sldasm</code> files, and an empty configuration for drawings, other file types, and folders. Bracketed text is literal and is not evaluated as a PDM variable.</p>
+<p>Use <code>$(VariableName.ConfigurationName)</code> to read another PDM variable while building the value. For file data card variables, include the configuration suffix. Use <code>.@</code> for the file <code>@</code> tab, for example <code>$(Description.@)</code>, and use the explicit configuration name for a named tab, for example <code>$(PartNo.Default)</code>. Folder variables can use <code>$(VariableName)</code> because folders do not use file configurations. Bracketed text is literal and is not evaluated as a PDM variable.</p>
 <p>Use <code>\n</code> inside the value when you want PDMShell to write a real newline to the variable.</p>
 <p>String and arithmetic functions can be used after placeholder evaluation. This is useful with <code>$value</code> because <code>$value</code> is resolved first, then functions such as <code>${left(...)}</code>, <code>${right(...)}</code>, <code>${len(...)}</code>, <code>${pos(...)}</code>, <code>${replace(...)}</code>, <code>${before(...)}</code>, <code>${after(...)}</code>, <code>${regex(...)}</code>, <code>${inc(...)}</code>, <code>${dec(...)}</code>, <code>${add(...)}</code>, and <code>${sub(...)}</code> run against the resolved text.</p>
 <p>For example, if the existing variable value is <code>vA4-32(74)</code>, this value keeps the prefix and increments both counters:</p>
@@ -233,6 +233,7 @@ setvar -search &quot;Name=%.sldprt&quot; -variableName Description -value &quot;
 <li>PDM variable evaluation now uses <code>$(Variable)</code> and <code>$(Variable.Configuration)</code> expressions. Bracketed text is literal.</li>
 <li>Dynamic placeholder evaluation supports string and arithmetic functions such as <code>${left(...)}</code>, <code>${right(...)}</code>, <code>${len(...)}</code>, <code>${pos(...)}</code>, <code>${replace(...)}</code>, <code>${before(...)}</code>, <code>${after(...)}</code>, <code>${regex(...)}</code>, <code>${inc(...)}</code>, <code>${dec(...)}</code>, <code>${add(...)}</code>, and <code>${sub(...)}</code>.</li>
 <li><code>-stringformat None</code> leaves the evaluated value unchanged and is the default behavior when <code>-stringformat</code> is omitted.</li>
+<li>For file variables, use the explicit file configuration suffix such as <code>$(Description.@)</code> when reading the file <code>@</code> tab.</li>
 </ul>
 <h2 id="availability">Availability</h2>
 <p>Available since PDMShell 2.0.0.</p>

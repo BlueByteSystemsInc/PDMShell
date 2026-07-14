@@ -15,7 +15,7 @@ The evaluator combines three things:
 
 | Input | What It Controls | Examples |
 | --- | --- | --- |
-| Context path | The selected PDM file or folder used by placeholders and variables. | `$fileName`, `$folderPath`, `$id`, `$(Description)`, `${revision()}` |
+| Context path | The selected PDM file or folder used by placeholders and variables. | `$fileName`, `$folderPath`, `$id`, `$(Description.@)`, `${revision()}` |
 | `$value` source | Where `$value` comes from. | Sample text, or a selected PDM variable |
 | Expression | The placeholder or function you want to test. | `${before(...)}`, `${regex(...)}`, `${add(...)}` |
 
@@ -44,7 +44,7 @@ Choose one source:
 | Sample text | Uses the text you type in the evaluator. | Testing regex, arithmetic, and string functions against an example value. |
 | PDM variable | Reads the current value of a selected data card variable from the selected file or folder. | Testing the same expression a command like [`setvar`](SETVAR.md) will use. |
 
-When **PDM variable** is selected, the configuration box applies to file variables. Folder variables do not use configurations.
+When **PDM variable** is selected, the configuration box applies to file variables. Use `@` for the file `@` tab. Folder variables do not use configurations.
 
 ## Basic Workflow
 
@@ -81,16 +81,16 @@ Bracket-001
 ```
 
 ### Preview A File Data Card Variable
-Use `$()` expressions when you want to read a file data card variable.
-
-```text
-$(Description)
-```
-
-Use a configuration name when the variable is configuration-specific:
+Use `$()` expressions when you want to read a file data card variable. File variables need a configuration suffix. Use `.@` for the file `@` tab:
 
 ```text
 $(Description.@)
+```
+
+Use the explicit configuration name for a named configuration tab:
+
+```text
+$(PartNo.Default)
 ```
 
 ### Keep Text Before A Separator
@@ -282,8 +282,8 @@ Use this table when you are not sure which context an expression needs.
 | `$fileName`, `$filePath`, `$extension`, `$version` | PDM file | These depend on a selected file. |
 | `$folderPath`, `$folderName`, `$directory`, `$folderID` | PDM folder | These depend on a selected folder. |
 | `$id` | PDM file or folder | Returns the selected file ID for file context, or folder ID for folder context. |
-| `$(Description)` | PDM file or folder | Reads the variable from the selected data card. |
-| `$(Description.@)` | PDM file | Use a configuration when reading a file variable that supports configurations. |
+| `$(Description.@)` | PDM file | Reads the file variable from the `@` tab. The `.@` suffix is required for file variables on the `@` tab. |
+| `$(Project)` | PDM folder | Reads a folder variable. Folders do not use file configurations. |
 | `$value` with **Sample text** | Any context or no context | Uses the text typed in the evaluator. |
 | `$value` with **PDM variable** | PDM file or folder | Reads the selected data card variable from the selected context. |
 | `${revision()}` and `${nextRevision()}` | PDM file | Revision functions need file context because folders do not have file revisions. |

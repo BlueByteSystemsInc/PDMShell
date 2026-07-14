@@ -76,7 +76,7 @@ $localPath exists
 ```
 
 >[!Note]
-> PDM variables use `$(` and `)`, for example `$(Description.@)`. When writing conditions manually, quote PDM variable tokens if they appear inside a larger expression so the parser does not treat the parentheses as condition grouping.
+> PDM variables use `$(` and `)`, for example `$(Description.@)`. For file data card variables, use `.@` when reading the file `@` tab. When writing conditions manually, quote PDM variable tokens if they appear inside a larger expression so the parser does not treat the parentheses as condition grouping.
 
 ## Supported Operators
 - `exists` or `exist`
@@ -171,15 +171,14 @@ Date and time placeholders:
 > Placeholder names are evaluated case-insensitively in until conditions.
 
 ## PDM Variables
-Use `$(VariableName)` or `$(VariableName.ConfigurationName)` to read a PDM variable from the file or folder context.
+Use `$(VariableName.ConfigurationName)` to read a PDM variable from the file context. Use `.@` for the file `@` tab. Folder variables can use `$(VariableName)` because folders do not use file configurations.
 
 ```bash
-"$(Description)" contains "ECO"
 "$(Description.@)" contains "ECO"
 "$(Revision.@)" equals "A"
 ```
 
-When the configuration is omitted, PDMShell uses `@` for `.sldprt` and `.sldasm` files, and an empty configuration for drawings, other file types, and folders. Bracketed text is literal and is not evaluated as a PDM variable.
+For file data card variables, the `.@` suffix is required when reading the file `@` tab, for example `$(Description.@)`. Bracketed text is literal and is not evaluated as a PDM variable.
 
 ## Arithmetic Comparisons
 Numeric expressions can be used on either side of a comparison.

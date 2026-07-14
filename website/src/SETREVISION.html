@@ -97,10 +97,9 @@ This command updates the official PDM revision, which is the value shown on the 
 <li><code>%initial%</code> - resets to the first revision in the revision scheme.</li>
 </ul>
 <p>You can also use PDM variable expressions:</p>
-<pre><code class="lang-text">$(Revision)
-$(Revision.@)
+<pre><code class="lang-text">$(Revision.@)
 </code></pre>
-<p>This evaluates the variable on the file and applies its value as the new revision.</p>
+<p>This evaluates the variable on the file and applies its value as the new revision. For file variables, include the configuration suffix. Use <code>.@</code> for the file <code>@</code> tab.</p>
 <p>Bracketed text is treated as literal text and is not evaluated.</p>
 <h2 id="syntax">Syntax</h2>
 <pre><code class="lang-text">setrevision -filePath|-search -recursive -value -csv
@@ -159,7 +158,7 @@ The revision value to apply. This can be:</p>
 <li><code>%nextrevision%</code> - increments the PDM revision counter.</li>
 <li><code>%previousrevision%</code> - decrements the PDM revision counter.</li>
 <li><code>%initial%</code> - resets revision to the scheme's first value.</li>
-<li><code>$(VariableName)</code> or <code>$(VariableName.ConfigurationName)</code> - evaluates the PDM variable and uses its value.</li>
+<li><code>$(VariableName.ConfigurationName)</code> - evaluates the PDM variable and uses its value.</li>
 <li>A literal revision string supported by the vault's revision scheme.</li>
 </ul>
 </li>
@@ -170,7 +169,7 @@ When used with <a href="SEARCH.html"><code>search</code></a>, saves results to a
 <h2 id="notes">Notes</h2>
 <ul>
 <li>This command affects only the PDM revision, not custom properties or configuration-specific metadata.</li>
-<li>When using <code>$(VariableName)</code>, make sure the variable is present on the file card. Without an explicit configuration, PDMShell uses <code>@</code> for <code>.sldprt</code> and <code>.sldasm</code> files, and an empty configuration for all other files.</li>
+<li>When using PDM variables from a file card, include the configuration suffix. Use <code>.@</code> for the file <code>@</code> tab, for example <code>$(Revision.@)</code>.</li>
 <li><code>%previousrevision%</code> adjusts the counter only if the revision scheme allows backward movement.</li>
 <li><code>%nextrevision%</code> respects all revision scheme rules defined in the PDM Administration tool.</li>
 </ul>

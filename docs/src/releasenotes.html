@@ -93,6 +93,11 @@
 <p>To update PDMShell properly, download the latest version, uninstall PDMShell and
 then install the latest version. Do not update installed version.</p>
 </div>
+<h2 id="4030-2026-07-14">4.0.30 (2026-07-14)</h2>
+<ul>
+<li>Improved the <a href="expression-evaluator.html">Expression Evaluator</a> window so users can switch back to PDMShell while it remains open, minimize it, and access it from the Windows taskbar.</li>
+<li>Clarified PDM variable expression documentation: when reading file data card variables from the file <code>@</code> tab, use the explicit <code>.@</code> suffix, for example <code>$(Description.@)</code>.</li>
+</ul>
 <h2 id="4029-2026-07-13">4.0.29 (2026-07-13)</h2>
 <ul>
 <li>Improved license activation and validation reliability on machines using non-US regional date settings.</li>
@@ -122,9 +127,9 @@ then install the latest version. Do not update installed version.</p>
 </ul>
 <h2 id="4026-2026-07-07">4.0.26 (2026-07-07)</h2>
 <ul>
-<li>Breaking change: PDM variable evaluation now uses <code>$()</code> expressions such as <code>$(Revision)</code>, <code>$(Revision.@)</code>, and <code>$(PartNo.Default)</code>. Bracketed text is treated as literal text, so folder names like <code>[debugging]</code> are no longer interpreted as variables.</li>
+<li>Breaking change: PDM variable evaluation now uses <code>$()</code> expressions such as <code>$(Revision.@)</code> and <code>$(PartNo.Default)</code> for file variables, or <code>$(Project)</code> for folder variables. Bracketed text is treated as literal text, so folder names like <code>[debugging]</code> are no longer interpreted as variables.</li>
 <li>Updated alias, <a href="SETVAR.html"><code>setvar</code></a>, <a href="RUNSCRIPT.html"><code>runscript</code></a>, generated script preview, and condition evaluation documentation to use the new PDM variable expression syntax.</li>
-<li>When the configuration is omitted, PDMShell uses <code>@</code> for <code>.sldprt</code> and <code>.sldasm</code> files, and an empty configuration for drawings, other file types, and folders.</li>
+<li>File variables should use an explicit configuration suffix, such as <code>$(Revision.@)</code> for the file <code>@</code> tab.</li>
 </ul>
 <h2 id="4025-2026-07-06">4.0.25 (2026-07-06)</h2>
 <ul>

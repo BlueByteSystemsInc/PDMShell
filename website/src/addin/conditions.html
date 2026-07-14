@@ -101,13 +101,14 @@
 <li>text comparisons such as equals, contains, starts with, ends with, and regex matches</li>
 <li>numeric comparisons</li>
 <li>PDMShell placeholders such as <code>$fileName</code>, <code>$localPath</code>, and <code>$folderPath</code></li>
-<li>PDM variables such as <code>$(Description)</code>, <code>$(Description.@)</code>, or <code>$(Revision.@)</code></li>
+<li>PDM variables such as <code>$(Description.@)</code> or <code>$(Revision.@)</code> for file <code>@</code> tab values</li>
 </ul>
 <h2 id="examples">Examples</h2>
 <pre><code class="lang-pdmshell">$localPath exists
 &quot;$(Description.@)&quot; contains &quot;ECO&quot;
 ($folderPath\ready.pdf exists or $folderPath\ready.dxf exists) and &quot;$(State.@)&quot; equals &quot;Released&quot;
 </code></pre>
+<p>For file data card variables, use the explicit configuration suffix. Use <code>.@</code> for the file <code>@</code> tab, for example <code>$(Description.@)</code>.</p>
 <h2 id="condition-test-message">Condition test message</h2>
 <p>Enable Always show condition test message while building a script. This displays the condition expression and resolved values so you can confirm what PDM is passing into the script context.</p>
 <h2 id="related-articles">Related articles</h2>
