@@ -132,6 +132,7 @@ ${before($fileNameWithoutExtension, "-")}
 ${regex($fileNameWithoutExtension, "^([^-]+)-", 1)}
 ${add($id, 5)}
 ${inc(${regex($value, "^([^-]+)-(\d+)\((\d+)\)$", 2)})}
+${serialNumber("SerialNumberName")}
 ```
 
 Supported functions:
@@ -154,6 +155,7 @@ Supported functions:
 | `${sub(left, right)}` | Subtracts `right` from `left`. |
 | `${mul(left, right)}` | Multiplies two numbers. |
 | `${div(left, right)}` | Divides `left` by `right`. Division by zero is invalid and the expression is left unchanged. |
+| `${serialNumber(name)}` | Allocates and returns the next value from the named SOLIDWORKS PDM serial number. |
 
 String functions can be nested when the nested function also uses `${...}`:
 
@@ -183,6 +185,17 @@ vA4-33(75)
 Unknown or invalid function expressions are left unchanged.
 
 When a full command value is wrapped in double quotes, escape quotes inside function arguments with `\"`.
+
+## Serial Number Function
+
+Use `${serialNumber("SerialNumberName")}` when a command or script needs the next value from a SOLIDWORKS PDM serial number.
+
+```bash
+setvar -filePath "$localPath" -variableName Number -value "${serialNumber(\"PartNumber\")}"
+```
+
+>[!Warning]
+> `${serialNumber("SerialNumberName")}` allocates a real PDM serial number every time the expression is evaluated. Avoid testing this repeatedly against a production serial number. If the expression is used in a command that processes multiple files, one serial number is allocated for each evaluated item.
 
 ## Revision Functions
 

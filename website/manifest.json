@@ -977,6 +977,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/pdmshell-addin-script-editor-import-export.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-addin-script-editor-import-export.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell-addin-script-editor-overview.png",
       "output": {
         "resource": {
@@ -1097,6 +1107,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/pdmshell-load-recent-scripts-menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-load-recent-scripts-menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell-menu-hook-changes-dialog.png",
       "output": {
         "resource": {
@@ -1147,6 +1167,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/pdmshell-run-recent-files-menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-run-recent-files-menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell-setvar-next-revision-comment.png",
       "output": {
         "resource": {
@@ -1191,6 +1221,16 @@
       "output": {
         "resource": {
           "relative_path": "images/pdmshell-task-script.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdmshell-toolbar-new-script-button.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-toolbar-new-script-button.png"
         }
       },
       "version": ""

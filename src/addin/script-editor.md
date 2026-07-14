@@ -13,7 +13,7 @@ Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins 
 The Script Editor is where administrators create script entries, enable them, assign permitted users and groups, define conditions, configure command menu text, select PDM command hooks, and edit the PDMShell script code.
 
 <p>
-  <img src="../../images/pdmshell-addin-script-editor-overview.png" alt="PDMShell add-in Script Editor showing enabled state, permissions, conditions, command menu text, PDM command hooks, and script code" style="max-width:980px;width:100%;height:auto;">
+  <img src="../../images/pdmshell-addin-script-editor-import-export.png" alt="PDMShell add-in Script Editor showing script list, Add, Delete, Import, Export, permissions, conditions, and trigger settings" style="max-width:980px;width:100%;height:auto;">
 </p>
 
 Each script can expose a PDM command menu item and store the PDMShell code that runs against the selected file, folder, or event context.
@@ -31,6 +31,8 @@ Use the Conditions editor to build the same condition expressions used by PDMShe
 ## Add or delete scripts
 
 Use Add to create a new script entry. Use Delete to remove the selected entry.
+
+Use Import to load script entries from a saved configuration file. Use Export to save the configured script entries so they can be backed up, reviewed, or moved to another vault.
 
 The editor does not create dummy scripts. A new script entry is empty until you enter the script name, configuration, and code.
 

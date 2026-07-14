@@ -12,14 +12,15 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
-## 4.0.30 (2026-07-14)
+## 4.0.31 (2026-07-14)
+- Added a new script toolbar button, recent file runs, and recent script loading in the [Visual Code Editor](visual-code-editor-4.md).
+- Added Import and Export actions to the PDMShell add-in [Script Editor](addin/script-editor.md) so script entries can be backed up or moved between vaults.
 - Improved the [Expression Evaluator](expression-evaluator.md) window so users can switch back to PDMShell while it remains open, minimize it, and access it from the Windows taskbar.
 - Clarified PDM variable expression documentation: when reading file data card variables from the file `@` tab, use the explicit `.@` suffix, for example `$(Description.@)`.
+- Added the `${serialNumber("SerialNumberName")}` expression function for allocating SOLIDWORKS PDM serial number values in scripts and command values.
 
 ## 4.0.29 (2026-07-13)
-- Improved license activation and validation reliability on machines using non-US regional date settings.
-- Fixed an issue where a valid license could be treated as limited after activation on some Windows regional settings.
-- If a license still shows as limited after updating, deactivate and reactivate it to refresh the local license information.
+- Improved license handling reliability.
 
 ## 4.0.28 (2026-07-10)
 - Added arithmetic expression functions `${inc(...)}`, `${dec(...)}`, `${add(...)}`, `${sub(...)}`, `${mul(...)}`, and `${div(...)}` for placeholder evaluation, including nested use with `${regex(...)}` to increment counters inside values such as `vA4-32(74)`.

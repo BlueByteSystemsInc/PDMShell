@@ -182,6 +182,16 @@ This returns:
 033
 ```
 
+### Preview A PDM Serial Number
+Use `${serialNumber("SerialNumberName")}` to allocate and return the next value from a SOLIDWORKS PDM serial number.
+
+```text
+${serialNumber("PartNumber")}
+```
+
+>[!Warning]
+> Evaluating `${serialNumber("SerialNumberName")}` consumes a real PDM serial number. Do not click **Evaluate** repeatedly against a production serial number unless you intentionally want to allocate multiple values.
+
 ## Regex Examples
 
 ### Extract A Value With Regex

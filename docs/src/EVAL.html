@@ -201,6 +201,7 @@ ${before($fileNameWithoutExtension, &quot;-&quot;)}
 ${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
 ${add($id, 5)}
 ${inc(${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 2)})}
+${serialNumber(&quot;SerialNumberName&quot;)}
 </code></pre>
 <p>Supported functions:</p>
 <table>
@@ -275,6 +276,10 @@ ${inc(${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 2)})}
 <td><code>${div(left, right)}</code></td>
 <td>Divides <code>left</code> by <code>right</code>. Division by zero is invalid and the expression is left unchanged.</td>
 </tr>
+<tr>
+<td><code>${serialNumber(name)}</code></td>
+<td>Allocates and returns the next value from the named SOLIDWORKS PDM serial number.</td>
+</tr>
 </tbody>
 </table>
 <p>String functions can be nested when the nested function also uses <code>${...}</code>:</p>
@@ -294,6 +299,14 @@ ${inc(${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 2)})}
 </div>
 <p>Unknown or invalid function expressions are left unchanged.</p>
 <p>When a full command value is wrapped in double quotes, escape quotes inside function arguments with <code>\&quot;</code>.</p>
+<h2 id="serial-number-function">Serial Number Function</h2>
+<p>Use <code>${serialNumber(&quot;SerialNumberName&quot;)}</code> when a command or script needs the next value from a SOLIDWORKS PDM serial number.</p>
+<pre><code class="lang-bash">setvar -filePath &quot;$localPath&quot; -variableName Number -value &quot;${serialNumber(\&quot;PartNumber\&quot;)}&quot;
+</code></pre>
+<div class="WARNING">
+<h5>Warning</h5>
+<p><code>${serialNumber(&quot;SerialNumberName&quot;)}</code> allocates a real PDM serial number every time the expression is evaluated. Avoid testing this repeatedly against a production serial number. If the expression is used in a command that processes multiple files, one serial number is allocated for each evaluated item.</p>
+</div>
 <h2 id="revision-functions">Revision Functions</h2>
 <p>Revision functions use the same <code>${...}</code> syntax as string functions. Without a path argument, they require a selected PDM file because the result depends on the file's active workflow state and revision scheme.</p>
 <p>Most revision functions also accept an optional file path. Use this when the expression needs to inspect a different PDM file, such as a released PDF that is related to the current SOLIDWORKS file.</p>

@@ -24,6 +24,10 @@ This is best for workflows that:
 
 Use a selected-file run option when the workflow should repeat file-specific actions for the files or folders you choose.
 
+PDMShell keeps the most recent selected file runs in the `Recent files` menu so you can rerun the same workflow against a recently used file path without browsing again.
+
+![PDMShell Recent files run menu](../images/pdmshell-run-recent-files-menu.png)
+
 This is useful when the workflow uses placeholders such as:
 
 - `$fileName`

@@ -36,7 +36,7 @@
                                          "_appTitle":  "Powershell like features for SOLIDWORKS PDM Professional",
                                          "_appDescription":  "PDMShell is a PowerShell-like command line interface for SOLIDWORKS PDM Professional. It provides a set of commands to interact with the PDM vault, allowing users to perform various operations such as file management, folder navigation, and more.",
                                          "_appUrl":  "https://pdmshell.bluebyte.biz",
-                                         "_appVersion":  "4.0.30",
+                                         "_appVersion":  "4.0.31",
                                          "_appLanguage":  "en-US",
                                          "_appLanguageName":  "English",
                                          "_appLanguageVersion":  "1.0.0",

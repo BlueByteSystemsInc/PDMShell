@@ -11,6 +11,12 @@ The Visual Code Editor helps you build PDMShell scripts as connected workflow st
 
 The command line is still available below the visual workspace, so experienced users can keep working with text while using the visual editor to organize longer automation workflows.
 
+## Toolbar
+
+Use the toolbar to run, stop, start a new script, load scripts, save scripts, and open expression tools. The new script button clears the current editor and starts a fresh visual script.
+
+![PDMShell toolbar with new script button](../images/pdmshell-toolbar-new-script-button.png)
+
 ## What You Can Do
 
 - Build a workflow one action at a time.

@@ -52,7 +52,7 @@ Use `Edit Scripts...` to open the [Script Editor](addin/script-editor.md). The S
 | [Manage add-in licenses](addin/license-manager.md) | Managing PDMShell add-in license keys from the PDM Administration Tool |
 | [License Pool](license-pool.md) | Managing pooled vault licenses for add-in automation |
 | [Machine License](machine-license.md) | Using the local workstation license for add-in automation |
-| [Script Editor](addin/script-editor.md) | Creating, cloning, saving, and editing script entries |
+| [Script Editor](addin/script-editor.md) | Creating, importing, exporting, saving, and editing script entries |
 | [Permissions](addin/permissions.md) | Limiting scripts to users and groups |
 | [Conditions](addin/conditions.md) | Building wait-style condition expressions |
 | [Command menu scripts](addin/command-menu.md) | Adding right-click PDM menu commands |

@@ -252,6 +252,14 @@
 <p>This returns:</p>
 <pre><code class="lang-text">033
 </code></pre>
+<h3 id="preview-a-pdm-serial-number">Preview A PDM Serial Number</h3>
+<p>Use <code>${serialNumber(&quot;SerialNumberName&quot;)}</code> to allocate and return the next value from a SOLIDWORKS PDM serial number.</p>
+<pre><code class="lang-text">${serialNumber(&quot;PartNumber&quot;)}
+</code></pre>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Evaluating <code>${serialNumber(&quot;SerialNumberName&quot;)}</code> consumes a real PDM serial number. Do not click <strong>Evaluate</strong> repeatedly against a production serial number unless you intentionally want to allocate multiple values.</p>
+</div>
 <h2 id="regex-examples">Regex Examples</h2>
 <h3 id="extract-a-value-with-regex">Extract A Value With Regex</h3>
 <p>Use <code>${regex(...)}</code> when simple functions like <code>${before(...)}</code> and <code>${after(...)}</code> are not enough.</p>

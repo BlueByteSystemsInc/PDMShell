@@ -187,6 +187,14 @@ setvar -search &quot;Name=%.sldprt&quot; -variableName Description -value &quot;
   <img src="/images/pdmshell-setvar-next-revision-comment.png" alt="setvar command writing a next revision value into the Comment variable" style="max-width:960px;width:100%;height:auto;">
 </div>
 <p>When the value is wrapped in double quotes, escape quotes inside function arguments with <code>\&quot;</code>.</p>
+<h3 id="set-a-variable-from-a-pdm-serial-number">Set A Variable From A PDM Serial Number</h3>
+<p>Use <code>${serialNumber(&quot;SerialNumberName&quot;)}</code> to allocate a SOLIDWORKS PDM serial number and write it to a variable.</p>
+<pre><code class="lang-bash">setvar -filePath file1.sldprt -variableName PartNo -value &quot;${serialNumber(\&quot;PartNumber\&quot;)}&quot;
+</code></pre>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>The serial number function allocates a real PDM serial number each time the value is evaluated.</p>
+</div>
 <h3 id="escaping-quotes-in-the-command-box">Escaping Quotes In The Command Box</h3>
 <p>In the PDMShell command box, escape quotes inside function arguments when the whole <code>-value</code> argument is wrapped in double quotes. This is common when the value contains spaces.</p>
 <pre><code class="lang-bash">setvar -filePath membrane.SLDDRW -variableName Comment -value &quot;Incremented revision to ${nextRevisionComponentValue(\&quot;Letters\&quot;)}-${nextRevisionComponentValue(\&quot;Numeric\&quot;)}-W&quot;

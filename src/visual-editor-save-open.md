@@ -32,6 +32,10 @@ This is helpful when creating a new workflow from an existing one.
 
 Older `.pdmshell` files that contain only script text can still be opened. Newer visual scripts may include additional stored workflow information so the visual layout can be restored.
 
+PDMShell keeps the last opened scripts in the `Recent scripts` menu. Use it to reopen a recently edited `.pdmshell` file without browsing back to its folder.
+
+![PDMShell Recent scripts load menu](../images/pdmshell-load-recent-scripts-menu.png)
+
 ## Unsaved Changes
 
 If a script has unsaved changes and you close PDMShell, the application prompts you before closing.

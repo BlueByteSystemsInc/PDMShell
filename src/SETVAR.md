@@ -78,6 +78,17 @@ Incremented revision to U-017-W
 
 When the value is wrapped in double quotes, escape quotes inside function arguments with `\"`.
 
+### Set A Variable From A PDM Serial Number
+
+Use `${serialNumber("SerialNumberName")}` to allocate a SOLIDWORKS PDM serial number and write it to a variable.
+
+```bash
+setvar -filePath file1.sldprt -variableName PartNo -value "${serialNumber(\"PartNumber\")}"
+```
+
+>[!Warning]
+> The serial number function allocates a real PDM serial number each time the value is evaluated.
+
 ### Escaping Quotes In The Command Box
 
 In the PDMShell command box, escape quotes inside function arguments when the whole `-value` argument is wrapped in double quotes. This is common when the value contains spaces.
