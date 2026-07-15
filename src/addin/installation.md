@@ -28,7 +28,7 @@ For a standard vault that can reach Blue Byte Systems services, install the PDMS
 PDMDeploy can install standard Blue Byte Systems add-ins into a SOLIDWORKS PDM vault.
 
 <div align="center">
-  <a href="https://docs.bluebyte.biz/pdmdeploy/PDMDeploy31.cex" style="display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:6px;background:#0078D4;color:#ffffff;text-decoration:none;font-weight:600;border:1px solid #106EBE;">Download PDMDeploy V31</a>
+  <a href="https://docs.bluebyte.biz/pdmdeploy/PDMDeploy.cex" style="display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:6px;background:#0078D4;color:#ffffff;text-decoration:none;font-weight:600;border:1px solid #106EBE;">Download PDMDeploy</a>
 </div>
 
 Use this public activation code for standard Blue Byte Systems products:
