@@ -12,6 +12,12 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.33 (2026-07-18)
+- Added a subtle animated PDMShell title-bar logo with hover feedback.
+- Added PDMShell actions to the main window system menu, including `Run`, `Stop`, `New`, `Open`, `Save`, `Save As`, and `Expression Evaluator`.
+- Added `Recent files` and `Recent scripts` submenus to the main window system menu for quick access to recently used run targets and scripts.
+- Added left-aligned native menu icons for PDMShell system-menu actions and recent entries.
+
 ## 4.0.31 (2026-07-14)
 - Added a new script toolbar button, recent file runs, and recent script loading in the [Visual Code Editor](visual-code-editor-4.md).
 - Added Import and Export actions to the PDMShell add-in [Script Editor](addin/script-editor.md) so script entries can be backed up or moved between vaults.
