@@ -100,15 +100,25 @@ then install the latest version. Do not update installed version.</p>
 <li>Added <code>Recent files</code> and <code>Recent scripts</code> submenus to the main window system menu for quick access to recently used run targets and scripts.</li>
 <li>Added left-aligned native menu icons for PDMShell system-menu actions and recent entries.</li>
 </ul>
+<h2 id="4032-2026-07-18">4.0.32 (2026-07-18)</h2>
+<ul>
+<li>Improved the main window title bar by grouping command buttons in a single rounded toolbar beside the PDMShell logo.</li>
+<li>Added hover labels to the title-bar command buttons so users can see each action without opening a menu.</li>
+<li>Improved title-bar spacing around the PDMShell logo, command toolbar, and status/license area.</li>
+<li>Updated <code>msgbox</code> so it still displays when <code>-value</code> or the evaluated message is empty.</li>
+</ul>
 <h2 id="4031-2026-07-14">4.0.31 (2026-07-14)</h2>
 <ul>
 <li>Added a new script toolbar button, recent file runs, and recent script loading in the <a href="visual-code-editor-4.html">Visual Code Editor</a>.</li>
 <li>Added Import and Export actions to the PDMShell add-in <a href="addin/script-editor.html">Script Editor</a> so script entries can be backed up or moved between vaults.</li>
+<li>Improved command parsing for expression values so spaces inside <code>${...}</code> functions are preserved, including nested expressions such as <code>${inc(${regex(...)})}</code>.</li>
+</ul>
+<h2 id="4030-2026-07-14">4.0.30 (2026-07-14)</h2>
+<ul>
 <li>Improved the <a href="expression-evaluator.html">Expression Evaluator</a> window so users can switch back to PDMShell while it remains open, minimize it, and access it from the Windows taskbar.</li>
 <li>Clarified PDM variable expression documentation: when reading file data card variables from the file <code>@</code> tab, use the explicit <code>.@</code> suffix, for example <code>$(Description.@)</code>.</li>
 <li>Added the <code>${serialNumber(&quot;SerialNumberName&quot;)}</code> expression function for allocating SOLIDWORKS PDM serial number values in scripts and command values.</li>
-<li>Improved command parsing for expression values so spaces inside <code>${...}</code> functions are preserved, including nested expressions such as <code>${inc(${regex(...)})}</code>.</li>
-<li>Refined the dark theme toolbar styling with rounded command and status groups.</li>
+<li>Improved visual editor script generation and loading for complex quoted expression values, including regex expressions.</li>
 </ul>
 <h2 id="4029-2026-07-13">4.0.29 (2026-07-13)</h2>
 <ul>
