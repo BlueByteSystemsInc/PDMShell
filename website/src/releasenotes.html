@@ -100,6 +100,8 @@ then install the latest version. Do not update installed version.</p>
 <li>Improved the <a href="expression-evaluator.html">Expression Evaluator</a> window so users can switch back to PDMShell while it remains open, minimize it, and access it from the Windows taskbar.</li>
 <li>Clarified PDM variable expression documentation: when reading file data card variables from the file <code>@</code> tab, use the explicit <code>.@</code> suffix, for example <code>$(Description.@)</code>.</li>
 <li>Added the <code>${serialNumber(&quot;SerialNumberName&quot;)}</code> expression function for allocating SOLIDWORKS PDM serial number values in scripts and command values.</li>
+<li>Improved command parsing for expression values so spaces inside <code>${...}</code> functions are preserved, including nested expressions such as <code>${inc(${regex(...)})}</code>.</li>
+<li>Refined the dark theme toolbar styling with rounded command and status groups.</li>
 </ul>
 <h2 id="4029-2026-07-13">4.0.29 (2026-07-13)</h2>
 <ul>

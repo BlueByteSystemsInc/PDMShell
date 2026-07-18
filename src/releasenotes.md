@@ -18,6 +18,8 @@ then install the latest version. Do not update installed version.
 - Improved the [Expression Evaluator](expression-evaluator.md) window so users can switch back to PDMShell while it remains open, minimize it, and access it from the Windows taskbar.
 - Clarified PDM variable expression documentation: when reading file data card variables from the file `@` tab, use the explicit `.@` suffix, for example `$(Description.@)`.
 - Added the `${serialNumber("SerialNumberName")}` expression function for allocating SOLIDWORKS PDM serial number values in scripts and command values.
+- Improved command parsing for expression values so spaces inside `${...}` functions are preserved, including nested expressions such as `${inc(${regex(...)})}`.
+- Refined the dark theme toolbar styling with rounded command and status groups.
 
 ## 4.0.29 (2026-07-13)
 - Improved license handling reliability.
