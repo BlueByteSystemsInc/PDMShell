@@ -278,7 +278,7 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
       </video>
     </div>
     <div class="pdmshell-actions">
-      <a class="pdmshell-button pdmshell-button-primary" href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell">Install MSI</a>
+      <a class="pdmshell-button pdmshell-button-primary" href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell">Install Program (MSI Installer)</a>
       <a class="pdmshell-button pdmshell-button-secondary" href="addin/installation.md">Install PDM Add-in</a>
       <a class="pdmshell-button pdmshell-button-secondary" href="licensing.md">Licensing</a>
     </div>
