@@ -54,7 +54,7 @@ After PDMDeploy is installed, open the SOLIDWORKS PDM Administration tool and lo
 
 After your order is complete, download the PDMShell add-in from your Blue Byte Systems Inc [account page](https://bluebyte.biz/account), from the order confirmation email, or from the PDMShell Download Center.
 
-<a class="bbs-download-button" href="https://bluebytebiz-my.sharepoint.com/:f:/g/personal/amen_bluebyte_biz/IgC-eoPU0Z9XQpufSHG6IW0GAUCFFHiVdPxCq_qlFf5fzm8?e=RJQVRk">Open PDMShell Download Center</a>
+<a class="bbs-download-button" href="https://bluebytebiz-my.sharepoint.com/:f:/g/personal/amen_bluebyte_biz/IgC-eoPU0Z9XQpufSHG6IW0GAUCFFHiVdPxCq_qlFf5fzm8?e=HSylmX">Open PDMShell Download Center</a>
 
 If you cannot find the add-in installer after ordering, contact Blue Byte Systems technical support.
 
@@ -64,7 +64,7 @@ For standard connected systems, use regular online activation from [Manage PDMSh
 
 Some vault environments cannot reach Blue Byte Systems servers directly, or only allow Microsoft-hosted locations such as SharePoint and OneDrive. For these systems, use the PDMShell Download Center folder to download the PDMShell `.cex` file:
 
-<a class="bbs-download-button" href="https://bluebytebiz-my.sharepoint.com/:f:/g/personal/amen_bluebyte_biz/IgC-eoPU0Z9XQpufSHG6IW0GAUCFFHiVdPxCq_qlFf5fzm8?e=RJQVRk">Open PDMShell Download Center</a>
+<a class="bbs-download-button" href="https://bluebytebiz-my.sharepoint.com/:f:/g/personal/amen_bluebyte_biz/IgC-eoPU0Z9XQpufSHG6IW0GAUCFFHiVdPxCq_qlFf5fzm8?e=HSylmX">Open PDMShell Download Center</a>
 
 The folder contains PDMShell `.cex` files that can be downloaded through Microsoft-hosted infrastructure and installed manually in the SOLIDWORKS PDM Administration tool.
 
