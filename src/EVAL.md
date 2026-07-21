@@ -132,6 +132,7 @@ ${before($fileNameWithoutExtension, "-")}
 ${regex($fileNameWithoutExtension, "^([^-]+)-", 1)}
 ${add($id, 5)}
 ${inc(${regex($value, "^([^-]+)-(\d+)\((\d+)\)$", 2)})}
+${lookup("C:\Vault\lookup.csv", $value)}
 ${serialNumber("SerialNumberName")}
 ```
 
@@ -155,6 +156,7 @@ Supported functions:
 | `${sub(left, right)}` | Subtracts `right` from `left`. |
 | `${mul(left, right)}` | Multiplies two numbers. |
 | `${div(left, right)}` | Divides `left` by `right`. Division by zero is invalid and the expression is left unchanged. |
+| `${lookup(csvPathOrPdmFileId, value)}` | Reads a CSV file, finds `value` in the first column, and returns the matching value from the second column. |
 | `${serialNumber(name)}` | Allocates and returns the next value from the named SOLIDWORKS PDM serial number. |
 
 String functions can be nested when the nested function also uses `${...}`:
@@ -185,6 +187,42 @@ vA4-33(75)
 Unknown or invalid function expressions are left unchanged.
 
 When a full command value is wrapped in double quotes, escape quotes inside function arguments with `\"`.
+
+## Lookup Function
+
+Use `${lookup(csvPathOrPdmFileId, value)}` when a script needs to translate one value into another from a two-column CSV file.
+
+The first column is the lookup key. The second column is the returned value.
+
+```csv
+Code,Description
+A100,Bracket
+B200,Cover
+```
+
+```bash
+setvar -filePath "$localPath" -variableName Description -value "${lookup(\"C:\Vault\lookup.csv\", $(Code.@))}"
+```
+
+If `$(Code.@)` evaluates to `A100`, the expression returns `Bracket`.
+
+You can also combine literal text with a lookup result. This example reads `Lookup.csv`, finds key `4` in the first column, and inserts the matching second-column value into a message box:
+
+```bash
+msgbox -value "speaker_frame-${lookup(\"C:\SOLIDWORKSPDM\Assemblageddon\Lookup.csv\", 4)}" -icon "Information"
+```
+
+<p>
+  <img src="/images/pdmshell-lookup-msgbox-example.png" alt="PDMShell visual editor showing a msgbox command using the lookup function to return 40 from a CSV file" style="max-width:980px;width:100%;height:auto;">
+</p>
+
+The CSV argument can be a local path, a path relative to the current vault folder, or the PDM file ID of a CSV file:
+
+```bash
+setvar -filePath "$localPath" -variableName Description -value "${lookup(12345, $(Code.@))}"
+```
+
+If the CSV file exists but the first-column value is not found, the function returns an empty string. If the CSV file path or PDM file ID cannot be resolved, the expression is left unchanged so the problem is visible in the output.
 
 ## Serial Number Function
 

@@ -201,6 +201,7 @@ ${before($fileNameWithoutExtension, &quot;-&quot;)}
 ${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
 ${add($id, 5)}
 ${inc(${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 2)})}
+${lookup(&quot;C:\Vault\lookup.csv&quot;, $value)}
 ${serialNumber(&quot;SerialNumberName&quot;)}
 </code></pre>
 <p>Supported functions:</p>
@@ -277,6 +278,10 @@ ${serialNumber(&quot;SerialNumberName&quot;)}
 <td>Divides <code>left</code> by <code>right</code>. Division by zero is invalid and the expression is left unchanged.</td>
 </tr>
 <tr>
+<td><code>${lookup(csvPathOrPdmFileId, value)}</code></td>
+<td>Reads a CSV file, finds <code>value</code> in the first column, and returns the matching value from the second column.</td>
+</tr>
+<tr>
 <td><code>${serialNumber(name)}</code></td>
 <td>Allocates and returns the next value from the named SOLIDWORKS PDM serial number.</td>
 </tr>
@@ -299,6 +304,26 @@ ${serialNumber(&quot;SerialNumberName&quot;)}
 </div>
 <p>Unknown or invalid function expressions are left unchanged.</p>
 <p>When a full command value is wrapped in double quotes, escape quotes inside function arguments with <code>\&quot;</code>.</p>
+<h2 id="lookup-function">Lookup Function</h2>
+<p>Use <code>${lookup(csvPathOrPdmFileId, value)}</code> when a script needs to translate one value into another from a two-column CSV file.</p>
+<p>The first column is the lookup key. The second column is the returned value.</p>
+<pre><code class="lang-csv">Code,Description
+A100,Bracket
+B200,Cover
+</code></pre>
+<pre><code class="lang-bash">setvar -filePath &quot;$localPath&quot; -variableName Description -value &quot;${lookup(\&quot;C:\Vault\lookup.csv\&quot;, $(Code.@))}&quot;
+</code></pre>
+<p>If <code>$(Code.@)</code> evaluates to <code>A100</code>, the expression returns <code>Bracket</code>.</p>
+<p>You can also combine literal text with a lookup result. This example reads <code>Lookup.csv</code>, finds key <code>4</code> in the first column, and inserts the matching second-column value into a message box:</p>
+<pre><code class="lang-bash">msgbox -value &quot;speaker_frame-${lookup(\&quot;C:\SOLIDWORKSPDM\Assemblageddon\Lookup.csv\&quot;, 4)}&quot; -icon &quot;Information&quot;
+</code></pre>
+<p>
+  <img src="/images/pdmshell-lookup-msgbox-example.png" alt="PDMShell visual editor showing a msgbox command using the lookup function to return 40 from a CSV file" style="max-width:980px;width:100%;height:auto;">
+</p>
+<p>The CSV argument can be a local path, a path relative to the current vault folder, or the PDM file ID of a CSV file:</p>
+<pre><code class="lang-bash">setvar -filePath &quot;$localPath&quot; -variableName Description -value &quot;${lookup(12345, $(Code.@))}&quot;
+</code></pre>
+<p>If the CSV file exists but the first-column value is not found, the function returns an empty string. If the CSV file path or PDM file ID cannot be resolved, the expression is left unchanged so the problem is visible in the output.</p>
 <h2 id="serial-number-function">Serial Number Function</h2>
 <p>Use <code>${serialNumber(&quot;SerialNumberName&quot;)}</code> when a command or script needs the next value from a SOLIDWORKS PDM serial number.</p>
 <pre><code class="lang-bash">setvar -filePath &quot;$localPath&quot; -variableName Number -value &quot;${serialNumber(\&quot;PartNumber\&quot;)}&quot;

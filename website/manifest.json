@@ -1117,6 +1117,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/pdmshell-lookup-msgbox-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdmshell-lookup-msgbox-example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/pdmshell-menu-hook-changes-dialog.png",
       "output": {
         "resource": {
