@@ -43,6 +43,10 @@ The `value` parameter in supported commands can include placeholders that are re
 - `$id`: The file ID.
 - `$revision`: The current revision of the file (PDM revision, not the PDM variable).
 - `$version`: The current version of the file.
+- `$state`: The current workflow state name of the file.
+- `$stateID`: The current workflow state ID of the file.
+- `$workflow`: The workflow name for the file's current state.
+- `$workflowID`: The workflow ID for the file's current state.
 - `$filePath`: The full local path of the file.
 - `$localPath`: The full local path of the file.
 - `$completefilename`: Legacy full local path of the file.
@@ -133,6 +137,8 @@ ${regex($fileNameWithoutExtension, "^([^-]+)-", 1)}
 ${add($id, 5)}
 ${inc(${regex($value, "^([^-]+)-(\d+)\((\d+)\)$", 2)})}
 ${lookup("C:\Vault\lookup.csv", $value)}
+$input("Title", "Message")
+${input("Title", "Message")}
 ${serialNumber("SerialNumberName")}
 ```
 
@@ -157,6 +163,8 @@ Supported functions:
 | `${mul(left, right)}` | Multiplies two numbers. |
 | `${div(left, right)}` | Divides `left` by `right`. Division by zero is invalid and the expression is left unchanged. |
 | `${lookup(csvPathOrPdmFileId, value)}` | Reads a CSV file, finds `value` in the first column, and returns the matching value from the second column. |
+| `$input(title, message)` | Prompts the user for a value when the command line is evaluated. |
+| `${input(title, message)}` | Same as `$input(title, message)`, using the standard function expression syntax. |
 | `${serialNumber(name)}` | Allocates and returns the next value from the named SOLIDWORKS PDM serial number. |
 
 String functions can be nested when the nested function also uses `${...}`:
@@ -187,6 +195,24 @@ vA4-33(75)
 Unknown or invalid function expressions are left unchanged.
 
 When a full command value is wrapped in double quotes, escape quotes inside function arguments with `\"`.
+
+## Input Function
+
+Use `$input("Title", "Message")` when a script needs a value from the user at runtime. PDMShell shows a prompt with a text box and an `OK` button. The typed text becomes the evaluated value.
+
+```bash
+setvar -filePath "$localPath" -variableName Description -value "$input(\"Description\", \"Enter the new description\")"
+```
+
+You can also use the standard `${...}` function form:
+
+```bash
+setvar -filePath "$localPath" -variableName Description -value "${input(\"Description\", \"Enter the new description\")}"
+```
+
+>[!Important]
+> `$input(...)` is evaluated every time the expression is processed. If you use it in a command that processes multiple files, PDMShell can prompt once per file.
+> Use `$input(...)` for interactive PDMShell sessions. Avoid it in unattended or headless automation because the script will wait for user input.
 
 ## Lookup Function
 

@@ -194,6 +194,8 @@
       href: MKVAR.md
     - name: Launch Variable Editor
       href: EDITVARS.md
+    - name: Open a data card
+      href: SHOWCARD.md
   - name: Source / CSV
     items:
     - name: Delete files from CSV

@@ -62,6 +62,7 @@ Availability means the PDMShell version where the command first became available
 | [infovar](INFOVAR.md) | Get variable information | Available since PDMShell 2.0.0. |
 | [mkvar](MKVAR.md) | Create a new PDM variable | Available since PDMShell 2.0.0. |
 | [editvars](EDITVARS.md) | Launch Variable Editor | Available since PDMShell 2.0.0. |
+| [showcard](SHOWCARD.md) | Open a file or folder data card | Available since PDMShell 4.0.34. |
 
 ## Source / CSV
 

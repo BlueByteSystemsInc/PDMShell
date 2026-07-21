@@ -2197,6 +2197,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/SHOWCARD.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/SHOWCARD.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/START.md",
       "output": {
         ".html": {

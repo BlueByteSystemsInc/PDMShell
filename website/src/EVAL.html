@@ -122,6 +122,10 @@
 <li><code>$id</code>: The file ID.</li>
 <li><code>$revision</code>: The current revision of the file (PDM revision, not the PDM variable).</li>
 <li><code>$version</code>: The current version of the file.</li>
+<li><code>$state</code>: The current workflow state name of the file.</li>
+<li><code>$stateID</code>: The current workflow state ID of the file.</li>
+<li><code>$workflow</code>: The workflow name for the file's current state.</li>
+<li><code>$workflowID</code>: The workflow ID for the file's current state.</li>
 <li><code>$filePath</code>: The full local path of the file.</li>
 <li><code>$localPath</code>: The full local path of the file.</li>
 <li><code>$completefilename</code>: Legacy full local path of the file.</li>
@@ -202,6 +206,8 @@ ${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
 ${add($id, 5)}
 ${inc(${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 2)})}
 ${lookup(&quot;C:\Vault\lookup.csv&quot;, $value)}
+$input(&quot;Title&quot;, &quot;Message&quot;)
+${input(&quot;Title&quot;, &quot;Message&quot;)}
 ${serialNumber(&quot;SerialNumberName&quot;)}
 </code></pre>
 <p>Supported functions:</p>
@@ -282,6 +288,14 @@ ${serialNumber(&quot;SerialNumberName&quot;)}
 <td>Reads a CSV file, finds <code>value</code> in the first column, and returns the matching value from the second column.</td>
 </tr>
 <tr>
+<td><code>$input(title, message)</code></td>
+<td>Prompts the user for a value when the command line is evaluated.</td>
+</tr>
+<tr>
+<td><code>${input(title, message)}</code></td>
+<td>Same as <code>$input(title, message)</code>, using the standard function expression syntax.</td>
+</tr>
+<tr>
 <td><code>${serialNumber(name)}</code></td>
 <td>Allocates and returns the next value from the named SOLIDWORKS PDM serial number.</td>
 </tr>
@@ -304,6 +318,18 @@ ${serialNumber(&quot;SerialNumberName&quot;)}
 </div>
 <p>Unknown or invalid function expressions are left unchanged.</p>
 <p>When a full command value is wrapped in double quotes, escape quotes inside function arguments with <code>\&quot;</code>.</p>
+<h2 id="input-function">Input Function</h2>
+<p>Use <code>$input(&quot;Title&quot;, &quot;Message&quot;)</code> when a script needs a value from the user at runtime. PDMShell shows a prompt with a text box and an <code>OK</code> button. The typed text becomes the evaluated value.</p>
+<pre><code class="lang-bash">setvar -filePath &quot;$localPath&quot; -variableName Description -value &quot;$input(\&quot;Description\&quot;, \&quot;Enter the new description\&quot;)&quot;
+</code></pre>
+<p>You can also use the standard <code>${...}</code> function form:</p>
+<pre><code class="lang-bash">setvar -filePath &quot;$localPath&quot; -variableName Description -value &quot;${input(\&quot;Description\&quot;, \&quot;Enter the new description\&quot;)}&quot;
+</code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p><code>$input(...)</code> is evaluated every time the expression is processed. If you use it in a command that processes multiple files, PDMShell can prompt once per file.
+Use <code>$input(...)</code> for interactive PDMShell sessions. Avoid it in unattended or headless automation because the script will wait for user input.</p>
+</div>
 <h2 id="lookup-function">Lookup Function</h2>
 <p>Use <code>${lookup(csvPathOrPdmFileId, value)}</code> when a script needs to translate one value into another from a two-column CSV file.</p>
 <p>The first column is the lookup key. The second column is the returned value.</p>

@@ -12,11 +12,14 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
-## 4.0.34 (2026-07-20)
+## 4.0.34 (2026-07-21)
 - Added a Help action to the Expression Evaluator that opens the [placeholder and function reference](EVAL.md).
 - Improved Expression Evaluator maximize behavior so the window respects the Windows taskbar.
 - Added the `${lookup(csvPathOrPdmFileId, value)}` expression function for returning a second-column CSV value from a first-column match.
 - Updated the [placeholder and function reference](EVAL.md) with a `${lookup(...)}` message-box example and screenshot.
+- Added file workflow placeholders: `$state`, `$stateID`, `$workflow`, and `$workflowID`.
+- Added `$input(title, message)` for prompting users for a value while a command or script is running.
+- Added the [`showcard`](SHOWCARD.md) command for opening a SOLIDWORKS PDM file or folder data card from PDMShell.
 
 ## 4.0.33 (2026-07-18)
 - Added a subtle animated PDMShell title-bar logo with hover feedback.
