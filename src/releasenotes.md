@@ -12,6 +12,13 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.35 (2026-07-21)
+- Improved the [`showcard`](SHOWCARD.md) command window so the PDM data card content resizes with the parent dialog.
+- Improved `showcard` output so card progress, status, modified, and saved messages are returned to the PDMShell command output.
+- Updated `$input(...)` to support an optional default value, for example `$input("Title", "Message", "Default value")`.
+- Updated `$input(...)` so closing the prompt warns that the return value will be cleared, with a `Do not show this again` option.
+- Added `$state`, `$stateID`, `$workflow`, and `$workflowID` to the Expression Evaluator autocomplete list.
+
 ## 4.0.34 (2026-07-21)
 - Added a Help action to the Expression Evaluator that opens the [placeholder and function reference](EVAL.md).
 - Improved Expression Evaluator maximize behavior so the window respects the Windows taskbar.

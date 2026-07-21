@@ -65,6 +65,8 @@ The evaluator window shows the selected file or folder context, the selected `$v
   <img src="/images/pdmshell-expression-evaluator-dialog.png" alt="PDMShell Expression Evaluator dialog showing the sample text value source" style="max-width:900px;width:100%;height:auto;">
 </div>
 
+The expression box includes autocomplete suggestions for common file, folder, workflow, vault, user, date, variable, and function expressions. File workflow suggestions include `$state`, `$stateID`, `$workflow`, and `$workflowID`.
+
 ## File Context Examples
 
 ### Preview A File Placeholder
@@ -290,6 +292,7 @@ Use this table when you are not sure which context an expression needs.
 | Expression Type | Best Context | Notes |
 | --- | --- | --- |
 | `$fileName`, `$filePath`, `$extension`, `$version` | PDM file | These depend on a selected file. |
+| `$state`, `$stateID`, `$workflow`, `$workflowID` | PDM file | These read workflow information from the selected file's current state. |
 | `$folderPath`, `$folderName`, `$directory`, `$folderID` | PDM folder | These depend on a selected folder. |
 | `$id` | PDM file or folder | Returns the selected file ID for file context, or folder ID for folder context. |
 | `$(Description.@)` | PDM file | Reads the file variable from the `@` tab. The `.@` suffix is required for file variables on the `@` tab. |

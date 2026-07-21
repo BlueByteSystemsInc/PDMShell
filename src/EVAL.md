@@ -138,7 +138,9 @@ ${add($id, 5)}
 ${inc(${regex($value, "^([^-]+)-(\d+)\((\d+)\)$", 2)})}
 ${lookup("C:\Vault\lookup.csv", $value)}
 $input("Title", "Message")
+$input("Title", "Message", "Default value")
 ${input("Title", "Message")}
+${input("Title", "Message", "Default value")}
 ${serialNumber("SerialNumberName")}
 ```
 
@@ -163,8 +165,8 @@ Supported functions:
 | `${mul(left, right)}` | Multiplies two numbers. |
 | `${div(left, right)}` | Divides `left` by `right`. Division by zero is invalid and the expression is left unchanged. |
 | `${lookup(csvPathOrPdmFileId, value)}` | Reads a CSV file, finds `value` in the first column, and returns the matching value from the second column. |
-| `$input(title, message)` | Prompts the user for a value when the command line is evaluated. |
-| `${input(title, message)}` | Same as `$input(title, message)`, using the standard function expression syntax. |
+| `$input(title, message[, defaultValue])` | Prompts the user for a value when the command line is evaluated. `defaultValue` is optional and pre-fills the text box. |
+| `${input(title, message[, defaultValue])}` | Same as `$input(title, message[, defaultValue])`, using the standard function expression syntax. |
 | `${serialNumber(name)}` | Allocates and returns the next value from the named SOLIDWORKS PDM serial number. |
 
 String functions can be nested when the nested function also uses `${...}`:
@@ -204,11 +206,19 @@ Use `$input("Title", "Message")` when a script needs a value from the user at ru
 setvar -filePath "$localPath" -variableName Description -value "$input(\"Description\", \"Enter the new description\")"
 ```
 
+Add a third argument when the prompt should start with a default value:
+
+```bash
+setvar -filePath "$localPath" -variableName Description -value "$input(\"Description\", \"Enter the new description\", \"Needs review\")"
+```
+
 You can also use the standard `${...}` function form:
 
 ```bash
 setvar -filePath "$localPath" -variableName Description -value "${input(\"Description\", \"Enter the new description\")}"
 ```
+
+If the user closes the input prompt without clicking `OK`, the function returns an empty string. PDMShell warns before clearing the return value; users can suppress that warning with `Do not show this again`.
 
 >[!Important]
 > `$input(...)` is evaluated every time the expression is processed. If you use it in a command that processes multiple files, PDMShell can prompt once per file.

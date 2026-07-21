@@ -188,6 +188,7 @@
 <div align="center">
   <img src="/images/pdmshell-expression-evaluator-dialog.png" alt="PDMShell Expression Evaluator dialog showing the sample text value source" style="max-width:900px;width:100%;height:auto;">
 </div>
+<p>The expression box includes autocomplete suggestions for common file, folder, workflow, vault, user, date, variable, and function expressions. File workflow suggestions include <code>$state</code>, <code>$stateID</code>, <code>$workflow</code>, and <code>$workflowID</code>.</p>
 <h2 id="file-context-examples">File Context Examples</h2>
 <h3 id="preview-a-file-placeholder">Preview A File Placeholder</h3>
 <p>Choose a PDM file when you want to test file placeholders.</p>
@@ -335,6 +336,11 @@
 <td><code>$fileName</code>, <code>$filePath</code>, <code>$extension</code>, <code>$version</code></td>
 <td>PDM file</td>
 <td>These depend on a selected file.</td>
+</tr>
+<tr>
+<td><code>$state</code>, <code>$stateID</code>, <code>$workflow</code>, <code>$workflowID</code></td>
+<td>PDM file</td>
+<td>These read workflow information from the selected file's current state.</td>
 </tr>
 <tr>
 <td><code>$folderPath</code>, <code>$folderName</code>, <code>$directory</code>, <code>$folderID</code></td>

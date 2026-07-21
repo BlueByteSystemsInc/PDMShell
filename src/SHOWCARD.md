@@ -64,9 +64,13 @@ showcard -id 1234
 ## Remarks
 
 - The command waits while the data card window is open.
+- The card content resizes when the PDMShell data card window is resized.
 - If the user edits the card, click Save in the PDMShell card window to write the card values.
+- PDMShell returns card progress, status, modified, and saved messages to the command output.
 - Closing the window without saving cancels unsaved card edits.
 - The user must have the required SOLIDWORKS PDM permissions to edit the selected file or folder card.
 
 ## Availability
 Available since PDMShell 4.0.34.
+
+Last updated in PDMShell 4.0.35.

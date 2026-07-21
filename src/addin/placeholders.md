@@ -13,6 +13,10 @@ The add-in evaluates placeholders for the current command context and the affect
 | `$fileNameWithoutExtension` | File name without extension |
 | `$extension` | File extension |
 | `$id` | Current file or folder ID |
+| `$state` | Current workflow state name for the current file |
+| `$stateID` | Current workflow state ID for the current file |
+| `$workflow` | Workflow name for the current file state |
+| `$workflowID` | Workflow ID for the current file state |
 | `$folderPath`, `$directory` | Current folder path |
 | `$folderName` | Current folder name |
 | `$folderID` | Folder ID |
@@ -35,6 +39,16 @@ The add-in evaluates placeholders for the current command context and the affect
 | `$(Variable)` | PDM folder variable value for the current folder |
 
 Date and time placeholders such as `$yyyy`, `$MM`, `$dd`, `$timestamp`, `$date`, and `$time` are also supported.
+
+## Workflow placeholders
+
+Use `$state`, `$stateID`, `$workflow`, and `$workflowID` when an add-in script needs the selected file's current workflow information.
+
+```pdmshell
+msgbox -value "$fileName is in $state"
+```
+
+Workflow placeholders require a file context. They evaluate to an empty value when there is no current file or when PDM cannot resolve the file state.
 
 ## PDM variables
 

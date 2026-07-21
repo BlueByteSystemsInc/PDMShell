@@ -117,6 +117,22 @@
 <td>Current file or folder ID</td>
 </tr>
 <tr>
+<td><code>$state</code></td>
+<td>Current workflow state name for the current file</td>
+</tr>
+<tr>
+<td><code>$stateID</code></td>
+<td>Current workflow state ID for the current file</td>
+</tr>
+<tr>
+<td><code>$workflow</code></td>
+<td>Workflow name for the current file state</td>
+</tr>
+<tr>
+<td><code>$workflowID</code></td>
+<td>Workflow ID for the current file state</td>
+</tr>
+<tr>
 <td><code>$folderPath</code>, <code>$directory</code></td>
 <td>Current folder path</td>
 </tr>
@@ -199,6 +215,11 @@
 </tbody>
 </table>
 <p>Date and time placeholders such as <code>$yyyy</code>, <code>$MM</code>, <code>$dd</code>, <code>$timestamp</code>, <code>$date</code>, and <code>$time</code> are also supported.</p>
+<h2 id="workflow-placeholders">Workflow placeholders</h2>
+<p>Use <code>$state</code>, <code>$stateID</code>, <code>$workflow</code>, and <code>$workflowID</code> when an add-in script needs the selected file's current workflow information.</p>
+<pre><code class="lang-pdmshell">msgbox -value &quot;$fileName is in $state&quot;
+</code></pre>
+<p>Workflow placeholders require a file context. They evaluate to an empty value when there is no current file or when PDM cannot resolve the file state.</p>
 <h2 id="pdm-variables">PDM variables</h2>
 <p>Use <code>$(Variable.Configuration)</code> to read PDM variable values from files. Use <code>.@</code> for the file <code>@</code> tab. Folder variables can use <code>$(Variable)</code> because folders do not use file configurations.</p>
 <pre><code class="lang-pdmshell">&quot;$(Description.@)&quot; contains &quot;ECO&quot;
