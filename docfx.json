@@ -21,6 +21,7 @@
                                    {
                                        "files":  [
                                                      "images/**",
+                                                     "agreement/**",
                                                      "src/scripts/**/*.{jpg,png,gif}"
                                                  ]
                                    }

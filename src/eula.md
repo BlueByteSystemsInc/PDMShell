@@ -7,7 +7,7 @@ title: EULA | PDMShell | SOLIDWORKS PDM
 Updated: June 30, 2026
 
 > [!Summary]
-> PDMShell is licensed for internal business use on licensed computers. SOLIDWORKS resellers, SOLIDWORKS partners, consultants, migration companies, automation providers, and other service providers need the appropriate Blue Byte Systems service provider or enterprise license before using PDMShell for customer work. You are responsible for testing scripts and automation before using them in production. Some features require license activation, and offline activation is available for restricted or air-gapped computers. This summary is provided for convenience only; the terms below control.
+> PDMShell is licensed for internal business use on licensed computers. SOLIDWORKS resellers, SOLIDWORKS partners, consultants, migration companies, automation providers, and other service providers need the appropriate Blue Byte Systems service provider or enterprise license before using PDMShell for customer work. Resellers and authorized partners should also review the [PDMShell Partner Reseller Agreement](../agreement/PDMShell%20Partner%20Reseller%20Agreement.pdf). You are responsible for testing scripts and automation before using them in production. Some features require license activation, and offline activation is available for restricted or air-gapped computers. This summary is provided for convenience only; the terms below control.
 
 ## 1. Introduction
 
@@ -34,6 +34,8 @@ Unless a different license model is provided in writing by Blue Byte Systems, ea
 Data migration companies, SOLIDWORKS resellers, consultants, automation providers, managed service providers, and other third-party service providers must obtain the appropriate service provider, commercial, or enterprise license from Blue Byte Systems before using PDMShell to deliver services to customers or third parties.
 
 Using PDMShell as part of a paid service, customer migration, implementation project, automation package, resale offering, or third-party deliverable without the appropriate license is not permitted.
+
+SOLIDWORKS resellers and authorized partners should review the [PDMShell Partner Reseller Agreement](../agreement/PDMShell%20Partner%20Reseller%20Agreement.pdf) for reseller-specific terms.
 
 ## 5. Restrictions
 

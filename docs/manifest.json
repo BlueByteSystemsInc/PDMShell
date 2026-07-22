@@ -27,6 +27,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "agreement/PDMShell Partner Reseller Agreement.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "agreement/PDMShell Partner Reseller Agreement.pdf"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/BadgeLogo.scale-100.png",
       "output": {
         "resource": {
