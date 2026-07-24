@@ -8,8 +8,8 @@ When a configured script runs, the add-in writes the script to a temporary `.pdm
 
 For selected files and folders, the add-in uses the `-items` path:
 
-```powershell
-pdmcli.exe -headless "C:\Temp\Script.pdmshell" -items "123,45;678,90"
+```text
+pdmcli.exe -skipautocomplete -headless "runscript -source \"C:\Temp\Script.pdmshell\" -items \"123,45;678,90\""
 ```
 
 Each item is passed as an ID pair:
@@ -22,6 +22,10 @@ Each item is passed as an ID pair:
 ## Headless mode
 
 Headless mode starts a lighter execution shell for add-in automation. Use it for unattended runs from command menus, trigger points, tasks, or other automated launches.
+
+For add-in script execution, PDMShell also skips autocomplete metadata loading in the launched `pdmcli.exe` process. This avoids spending startup time on editor suggestions that are only needed when a user is working in the interactive command editor or visual editor.
+
+Headless execution does not show the normal interactive startup license validation dialog. Commands still enforce PDMShell license limits at runtime using the stored machine license or the license borrowed from the add-in license pool.
 
 ## Script editing
 

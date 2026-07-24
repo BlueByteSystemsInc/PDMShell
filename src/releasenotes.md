@@ -12,6 +12,10 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.39 (2026-07-24)
+- Improved PDMShell add-in script startup performance by skipping autocomplete metadata loading during headless command-menu, trigger-point, and task execution.
+- Clarified add-in runtime documentation for headless execution, optimized autocomplete behavior, and license enforcement during background script runs.
+
 ## 4.0.38 (2026-07-24)
 - Improved [`until`](UNTIL.md) so PDM variable conditions are evaluated during the wait cycle instead of being resolved before the command starts.
 - Improved [`runscript`](RUNSCRIPT.md) and visual editor execution so quoted `until -conditions` expressions are preserved while file target parameters are still resolved for each run target.

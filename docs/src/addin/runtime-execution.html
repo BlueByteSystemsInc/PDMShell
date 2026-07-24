@@ -89,7 +89,7 @@
 
 <p>When a configured script runs, the add-in writes the script to a temporary <code>.pdmshell</code> file and launches PDMShell in automation mode.</p>
 <p>For selected files and folders, the add-in uses the <code>-items</code> path:</p>
-<pre><code class="lang-powershell">pdmcli.exe -headless &quot;C:\Temp\Script.pdmshell&quot; -items &quot;123,45;678,90&quot;
+<pre><code class="lang-text">pdmcli.exe -skipautocomplete -headless &quot;runscript -source \&quot;C:\Temp\Script.pdmshell\&quot; -items \&quot;123,45;678,90\&quot;&quot;
 </code></pre>
 <p>Each item is passed as an ID pair:</p>
 <table>
@@ -115,6 +115,8 @@
 </table>
 <h2 id="headless-mode">Headless mode</h2>
 <p>Headless mode starts a lighter execution shell for add-in automation. Use it for unattended runs from command menus, trigger points, tasks, or other automated launches.</p>
+<p>For add-in script execution, PDMShell also skips autocomplete metadata loading in the launched <code>pdmcli.exe</code> process. This avoids spending startup time on editor suggestions that are only needed when a user is working in the interactive command editor or visual editor.</p>
+<p>Headless execution does not show the normal interactive startup license validation dialog. Commands still enforce PDMShell license limits at runtime using the stored machine license or the license borrowed from the add-in license pool.</p>
 <h2 id="script-editing">Script editing</h2>
 <p>Use <code>-edit</code> when opening a script in the visual editor without executing it:</p>
 <pre><code class="lang-powershell">pdmcli.exe -edit &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
