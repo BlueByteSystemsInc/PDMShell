@@ -323,6 +323,11 @@
 <p><code>Recursive</code> defaults to the command's recursive flag.</p>
 <p><code>FindFolders</code> defaults to the command's include-folders flag.</p>
 <p><code>FindFiles</code> is always enabled for file searches.</p>
+<h2 id="checked-out-files">Checked-Out Files</h2>
+<p>Use <code>Locked=true</code> to search for checked-out files. Use <code>LockedBy</code> when you need files checked out by a specific PDM user.</p>
+<pre><code class="lang-bash">search -search &quot;Name=%.sldprt;Locked=true&quot;
+search -search &quot;Name=%.sldprt;Locked=true;LockedBy=Admin&quot;
+</code></pre>
 <h2 id="dates">Dates</h2>
 <p>Date tokens use <code>yyyyMMdd</code>.</p>
 <pre><code class="lang-bash">Name=%.sldprt;VersionsBefore=20200101

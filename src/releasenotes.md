@@ -12,6 +12,11 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.38 (2026-07-24)
+- Improved [`until`](UNTIL.md) so PDM variable conditions are evaluated during the wait cycle instead of being resolved before the command starts.
+- Improved [`runscript`](RUNSCRIPT.md) and visual editor execution so quoted `until -conditions` expressions are preserved while file target parameters are still resolved for each run target.
+- Clarified checked-out file searches with `Locked=true` and `LockedBy=user` in the [search token reference](search-tokens.md).
+
 ## 4.0.35 (2026-07-21)
 - Improved the [`showcard`](SHOWCARD.md) command window so the PDM data card content resizes with the parent dialog.
 - Improved `showcard` output so card progress, status, modified, and saved messages are returned to the PDMShell command output.

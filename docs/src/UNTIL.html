@@ -121,7 +121,7 @@
 <tr>
 <td><code>-match</code></td>
 <td>No</td>
-<td>When <a href="SEARCH.html"><code>search</code></a> returns multiple files, controls how many files must satisfy the conditions. Use <code>any</code> when one matching file is enough, <code>all</code> when every matching file must pass, or <code>one</code> when exactly one m...</td>
+<td>When <a href="SEARCH.html"><code>search</code></a> returns multiple files, controls how many files must satisfy the conditions. Use <code>any</code> when one matching file is enough, <code>all</code> when every matching file must pass, or <code>one</code> when exactly one matching file must pass.</td>
 </tr>
 <tr>
 <td><code>-filePath</code></td>
@@ -164,6 +164,8 @@ until -conditions &quot;$folderPath\$fileNameWithoutExtension.pdf exists&quot; -
 until -conditions &quot;$folderPath\$fileNameWithoutExtension.pdf exists and $folderPath\$fileNameWithoutExtension.dxf exists&quot; -timeout 500
 
 until -conditions &quot;$(Description.@) contains A&quot; -filePath &quot;C:\Vault\Parts\1001.sldprt&quot; -timeout 30
+
+until -conditions &quot;\&quot;$(Description.@)\&quot; equals A&quot; -filePath &quot;$localPath&quot; -timeout 600
 
 until -conditions &quot;1 + 3 greater than 3&quot; -timeout 5
 
@@ -444,6 +446,8 @@ process exists &quot;notepad&quot;
 &quot;$(Revision.@)&quot; equals &quot;A&quot;
 </code></pre>
 <p>For file data card variables, the <code>.@</code> suffix is required when reading the file <code>@</code> tab, for example <code>$(Description.@)</code>. Bracketed text is literal and is not evaluated as a PDM variable.</p>
+<p>When <code>until</code> waits on a PDM variable, PDMShell evaluates the variable each time the command checks the condition. This lets the condition detect a variable that changes while the command is waiting.</p>
+<p>In the visual editor and in <a href="RUNSCRIPT.html"><code>runscript</code></a>, <code>until -conditions</code> is preserved until the <code>until</code> command runs. Target parameters such as <code>-filePath &quot;$localPath&quot;</code> are still resolved for the current file or folder.</p>
 <h2 id="arithmetic-comparisons">Arithmetic Comparisons</h2>
 <p>Numeric expressions can be used on either side of a comparison.</p>
 <pre><code class="lang-bash">1 + 3 greater than 3
@@ -463,6 +467,7 @@ process exists &quot;notepad&quot;
 <h2 id="availability">Availability</h2>
 <p>Available since PDMShell 4.0.7.</p>
 <p>Updated in PDMShell 4.0.18 with <code>onTimeout</code>.</p>
+<p>Updated in PDMShell 4.0.38 so PDM variables inside <code>-conditions</code> are evaluated during the wait cycle, including visual editor and <code>runscript</code> execution.</p>
 
 </article>
 

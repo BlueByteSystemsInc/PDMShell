@@ -93,6 +93,12 @@
 <p>To update PDMShell properly, download the latest version, uninstall PDMShell and
 then install the latest version. Do not update installed version.</p>
 </div>
+<h2 id="4038-2026-07-24">4.0.38 (2026-07-24)</h2>
+<ul>
+<li>Improved <a href="UNTIL.html"><code>until</code></a> so PDM variable conditions are evaluated during the wait cycle instead of being resolved before the command starts.</li>
+<li>Improved <a href="RUNSCRIPT.html"><code>runscript</code></a> and visual editor execution so quoted <code>until -conditions</code> expressions are preserved while file target parameters are still resolved for each run target.</li>
+<li>Clarified checked-out file searches with <code>Locked=true</code> and <code>LockedBy=user</code> in the <a href="search-tokens.html">search token reference</a>.</li>
+</ul>
 <h2 id="4035-2026-07-21">4.0.35 (2026-07-21)</h2>
 <ul>
 <li>Improved the <a href="SHOWCARD.html"><code>showcard</code></a> command window so the PDM data card content resizes with the parent dialog.</li>

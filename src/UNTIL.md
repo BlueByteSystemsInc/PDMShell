@@ -21,7 +21,7 @@ until -conditions condition_expression [-timeout seconds] [-onTimeout stop|conti
 | `-conditions` | Mode-dependent | The condition expression to evaluate. Supports `and`, `or`, nested groups, file/folder/process exists checks, comparisons, PDM variables, placeholders, and simple arithmetic comparisons. |
 | `-timeout` | No | Maximum number of seconds to wait before the command fails. If omitted, PDMShell uses the command default. |
 | `-onTimeout` | No | Optional timeout behavior. Use `stop` to stop the script after timeout, or `continue` to log the timeout and keep running. The default is `stop`. |
-| `-match` | No | When [`search`](SEARCH.md) returns multiple files, controls how many files must satisfy the conditions. Use `any` when one matching file is enough, `all` when every matching file must pass, or `one` when exactly one m... |
+| `-match` | No | When [`search`](SEARCH.md) returns multiple files, controls how many files must satisfy the conditions. Use `any` when one matching file is enough, `all` when every matching file must pass, or `one` when exactly one matching file must pass. |
 | `-filePath` | No | Optional file context used to evaluate PDM variables and file placeholders. |
 | `-search` | No | Optional search query. When supplied, PDMShell evaluates the condition against the files returned by the search. |
 | `-directory` | No | Optional vault folder used as the search scope. Only valid with [`search`](SEARCH.md). |
@@ -47,6 +47,8 @@ until -conditions "$folderPath\$fileNameWithoutExtension.pdf exists" -timeout 50
 until -conditions "$folderPath\$fileNameWithoutExtension.pdf exists and $folderPath\$fileNameWithoutExtension.dxf exists" -timeout 500
 
 until -conditions "$(Description.@) contains A" -filePath "C:\Vault\Parts\1001.sldprt" -timeout 30
+
+until -conditions "\"$(Description.@)\" equals A" -filePath "$localPath" -timeout 600
 
 until -conditions "1 + 3 greater than 3" -timeout 5
 
@@ -180,6 +182,10 @@ Use `$(VariableName.ConfigurationName)` to read a PDM variable from the file con
 
 For file data card variables, the `.@` suffix is required when reading the file `@` tab, for example `$(Description.@)`. Bracketed text is literal and is not evaluated as a PDM variable.
 
+When `until` waits on a PDM variable, PDMShell evaluates the variable each time the command checks the condition. This lets the condition detect a variable that changes while the command is waiting.
+
+In the visual editor and in [`runscript`](RUNSCRIPT.md), `until -conditions` is preserved until the `until` command runs. Target parameters such as `-filePath "$localPath"` are still resolved for the current file or folder.
+
 ## Arithmetic Comparisons
 Numeric expressions can be used on either side of a comparison.
 
@@ -203,3 +209,5 @@ Arithmetic is evaluated only for simple numeric expressions containing numbers, 
 Available since PDMShell 4.0.7.
 
 Updated in PDMShell 4.0.18 with `onTimeout`.
+
+Updated in PDMShell 4.0.38 so PDM variables inside `-conditions` are evaluated during the wait cycle, including visual editor and `runscript` execution.

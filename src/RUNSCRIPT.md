@@ -73,6 +73,8 @@ Normal lines run once. Consecutive item-specific lines run once for each resolve
 
 An item-specific line is a line that contains a file, folder, vault, date/time, or PDM variable placeholder.
 
+For [`until`](UNTIL.md), `runscript` preserves the `-conditions` value until the `until` command runs. This is important when the condition reads a PDM variable that may change while the script is waiting. Other target values, such as `-filePath "$localPath"`, are still resolved for each target item.
+
 ## Supported placeholders
 
 | Placeholder | Description |
@@ -115,6 +117,7 @@ The source script can use file placeholders and conditions. When the script is r
 ```pdmshell
 RunTask -filePath "$localPath" -taskName "Publish PDF & DXF"
 until -conditions "$folderPath\$fileNameWithoutExtension.pdf exists" -timeout 500
+until -conditions "\"$(Description.@)\" equals A" -filePath "$localPath" -timeout 600
 ```
 
 ## Free version limit

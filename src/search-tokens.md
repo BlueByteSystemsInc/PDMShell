@@ -88,6 +88,15 @@ These tokens are handled by PDMShell after the raw PDM results are collected.
 
 `FindFiles` is always enabled for file searches.
 
+## Checked-Out Files
+
+Use `Locked=true` to search for checked-out files. Use `LockedBy` when you need files checked out by a specific PDM user.
+
+```bash
+search -search "Name=%.sldprt;Locked=true"
+search -search "Name=%.sldprt;Locked=true;LockedBy=Admin"
+```
+
 ## Dates
 
 Date tokens use `yyyyMMdd`.
