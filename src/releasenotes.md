@@ -12,6 +12,10 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.42 (2026-07-25)
+- Improved PDMShell add-in script startup performance by reusing PDM user and group permission information during the add-in session.
+- Unrestricted menu, event, and task scripts now skip unnecessary PDM user and group permission lookups.
+
 ## 4.0.39 (2026-07-24)
 - Improved PDMShell add-in script startup performance by skipping autocomplete metadata loading during headless command-menu, trigger-point, and task execution.
 - Clarified add-in runtime documentation for headless execution, optimized autocomplete behavior, and license enforcement during background script runs.
