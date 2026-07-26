@@ -12,6 +12,11 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.44 (2026-07-26)
+- Updated `$userName` and `$username` so they consistently return the logged-in PDM user instead of the Windows account.
+- Updated PDM user profile placeholders for full name, first name, last name, and email across commands, conditions, and add-in menu, event, and task scripts.
+- Kept `$windowsUser` as the explicit placeholder for the current Windows account.
+
 ## 4.0.43 (2026-07-25)
 - Added checkout-state expression functions for checking whether a PDM file is checked out, checked out by the current user, checked out by a named user, and identifying the checkout computer.
 - Added optional file-path arguments to checkout-state functions for evaluating another file.

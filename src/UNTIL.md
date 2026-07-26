@@ -136,7 +136,7 @@ The `until` command supports placeholders in conditions. The most commonly used 
 | `$taskName` | Task name context when available. |
 | `$tempFolder` / `$TempFolder` | Windows temporary folder. |
 | `$machineName` / `$computerName` | Current machine name. |
-| `$userName` / `$username` | PDM logged-in user, or Windows user when no PDM user is available. |
+| `$userName` / `$username` | Logged-in PDM user name. |
 | `$username.firstName` / `$username.lastName` | PDM logged-in user's first and last name when available. |
 | `$username.FullName` | PDM logged-in user's full name when available. |
 | `$username.email` | PDM logged-in user's email address when available. |
