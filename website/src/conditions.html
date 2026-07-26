@@ -237,6 +237,18 @@ process exists &quot;notepad&quot;
 <h5>Note</h5>
 <p>File-specific placeholders need file or folder context. In the Visual Code Editor, use a run option that provides selected items when the condition depends on a selected file or folder.</p>
 </div>
+<h2 id="checkout-conditions">Checkout Conditions</h2>
+<p>Checkout functions can be used directly as boolean conditions:</p>
+<pre><code class="lang-text">${isCheckedOut()}
+${isCheckedByMe()}
+${isCheckedOutByUsername(&quot;Admin&quot;)}
+</code></pre>
+<p>Supply a file path to inspect a different file. Relative paths resolve from the current PDM folder:</p>
+<pre><code class="lang-text">${isCheckedOut(&quot;RelatedDrawing.slddrw&quot;)}
+${isCheckedOutByUsername(&quot;Admin&quot;, &quot;$folderPath\\RelatedDrawing.slddrw&quot;)}
+${checkedOutOnComputer()} equals &quot;PDM-WORKSTATION&quot;
+</code></pre>
+<p>These functions are available in visual IF statements, <code>until</code>, and PDMShell add-in conditions.</p>
 <h2 id="combining-conditions">Combining Conditions</h2>
 <p>Use <code>and</code>, <code>or</code>, and parentheses to combine checks.</p>
 <pre><code class="lang-text">$folderPath\ready.pdf exists and $folderPath\ready.dxf exists

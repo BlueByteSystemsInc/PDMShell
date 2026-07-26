@@ -261,6 +261,21 @@
 <h5>Warning</h5>
 <p>Evaluating <code>${serialNumber(&quot;SerialNumberName&quot;)}</code> consumes a real PDM serial number. Do not click <strong>Evaluate</strong> repeatedly against a production serial number unless you intentionally want to allocate multiple values.</p>
 </div>
+<h2 id="checkout-function-examples">Checkout Function Examples</h2>
+<p>Select a PDM file and use the checkout functions to inspect its current lock state:</p>
+<pre><code class="lang-text">${isCheckedOut()}
+${isCheckedByMe()}
+${isCheckedOutByUsername(&quot;Admin&quot;)}
+${checkedOutOnComputer()}
+</code></pre>
+<p>The first three functions return <code>true</code> or <code>false</code>. <code>${checkedOutOnComputer()}</code> returns the checkout computer name or an empty value when the file is checked in.</p>
+<p>Each function also accepts an optional file path. For <code>isCheckedOutByUsername</code>, the path is the second argument:</p>
+<pre><code class="lang-text">${isCheckedOut(&quot;C:\\Vault\\Projects\\Part.sldprt&quot;)}
+${isCheckedByMe(&quot;Part.sldprt&quot;)}
+${isCheckedOutByUsername(&quot;Admin&quot;, &quot;Part.sldprt&quot;)}
+${checkedOutOnComputer(&quot;Part.sldprt&quot;)}
+</code></pre>
+<p>Relative paths resolve from the selected PDM folder. These functions appear under <strong>Checkout functions</strong> in Expression Evaluator autocomplete.</p>
 <h2 id="regex-examples">Regex Examples</h2>
 <h3 id="extract-a-value-with-regex">Extract A Value With Regex</h3>
 <p>Use <code>${regex(...)}</code> when simple functions like <code>${before(...)}</code> and <code>${after(...)}</code> are not enough.</p>
