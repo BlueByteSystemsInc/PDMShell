@@ -12,6 +12,13 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.43 (2026-07-25)
+- Added checkout-state expression functions for checking whether a PDM file is checked out, checked out by the current user, checked out by a named user, and identifying the checkout computer.
+- Added optional file-path arguments to checkout-state functions for evaluating another file.
+- Added checkout functions to the Expression Evaluator and PDMShell add-in Conditions editor autocomplete lists.
+- Added checkout-function evaluation to add-in menu, event, and task script conditions.
+- Added an administrator action for releasing stale borrowed add-in license seats.
+
 ## 4.0.42 (2026-07-25)
 - Improved PDMShell add-in script startup performance by reusing PDM user and group permission information during the add-in session.
 - Unrestricted menu, event, and task scripts now skip unnecessary PDM user and group permission lookups.

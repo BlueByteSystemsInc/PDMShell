@@ -168,6 +168,24 @@ Supported functions:
 | `$input(title, message[, defaultValue])` | Prompts the user for a value when the command line is evaluated. `defaultValue` is optional and pre-fills the text box. |
 | `${input(title, message[, defaultValue])}` | Same as `$input(title, message[, defaultValue])`, using the standard function expression syntax. |
 | `${serialNumber(name)}` | Allocates and returns the next value from the named SOLIDWORKS PDM serial number. |
+| `${isCheckedOut([filePath])}` | Returns `true` when the current file, or the optional file path, is checked out. |
+| `${isCheckedByMe([filePath])}` | Returns `true` when the current PDM user has the current file, or the optional file path, checked out. `${isCheckedOutByMe(...)}` is also accepted. |
+| `${isCheckedOutByUsername(userName[, filePath])}` | Returns `true` when the named PDM user has the current file, or the optional file path, checked out. |
+| `${checkedOutOnComputer([filePath])}` | Returns the checkout computer for the current file or optional file path. Returns an empty value when the file is not checked out. |
+
+### Checkout State Functions
+
+Checkout functions use the selected PDM file unless a path is supplied. A relative path is resolved from the current PDM folder. An absolute path can identify another file in the logged-in vault.
+
+```text
+${isCheckedOut()}
+${isCheckedOut("Drawing.slddrw")}
+${isCheckedByMe("$folderPath\\Drawing.slddrw")}
+${isCheckedOutByUsername("Admin", "C:\\Vault\\Projects\\Drawing.slddrw")}
+${checkedOutOnComputer()}
+```
+
+The boolean functions return lowercase `true` or `false`. They can be used in command values, visual IF statements, `until`, and PDMShell add-in conditions.
 
 String functions can be nested when the nested function also uses `${...}`:
 

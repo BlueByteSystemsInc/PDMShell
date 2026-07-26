@@ -194,6 +194,30 @@ ${serialNumber("PartNumber")}
 >[!Warning]
 > Evaluating `${serialNumber("SerialNumberName")}` consumes a real PDM serial number. Do not click **Evaluate** repeatedly against a production serial number unless you intentionally want to allocate multiple values.
 
+## Checkout Function Examples
+
+Select a PDM file and use the checkout functions to inspect its current lock state:
+
+```text
+${isCheckedOut()}
+${isCheckedByMe()}
+${isCheckedOutByUsername("Admin")}
+${checkedOutOnComputer()}
+```
+
+The first three functions return `true` or `false`. `${checkedOutOnComputer()}` returns the checkout computer name or an empty value when the file is checked in.
+
+Each function also accepts an optional file path. For `isCheckedOutByUsername`, the path is the second argument:
+
+```text
+${isCheckedOut("C:\\Vault\\Projects\\Part.sldprt")}
+${isCheckedByMe("Part.sldprt")}
+${isCheckedOutByUsername("Admin", "Part.sldprt")}
+${checkedOutOnComputer("Part.sldprt")}
+```
+
+Relative paths resolve from the selected PDM folder. These functions appear under **Checkout functions** in Expression Evaluator autocomplete.
+
 ## Regex Examples
 
 ### Extract A Value With Regex

@@ -91,6 +91,26 @@ Common examples:
 >[!NOTE]
 > File-specific placeholders need file or folder context. In the Visual Code Editor, use a run option that provides selected items when the condition depends on a selected file or folder.
 
+## Checkout Conditions
+
+Checkout functions can be used directly as boolean conditions:
+
+```text
+${isCheckedOut()}
+${isCheckedByMe()}
+${isCheckedOutByUsername("Admin")}
+```
+
+Supply a file path to inspect a different file. Relative paths resolve from the current PDM folder:
+
+```text
+${isCheckedOut("RelatedDrawing.slddrw")}
+${isCheckedOutByUsername("Admin", "$folderPath\\RelatedDrawing.slddrw")}
+${checkedOutOnComputer()} equals "PDM-WORKSTATION"
+```
+
+These functions are available in visual IF statements, `until`, and PDMShell add-in conditions.
+
 ## Combining Conditions
 
 Use `and`, `or`, and parentheses to combine checks.

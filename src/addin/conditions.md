@@ -23,6 +23,7 @@ Use the Conditions editor to add condition rows, combine them with `and` or `or`
 - numeric comparisons
 - PDMShell placeholders such as `$fileName`, `$localPath`, and `$folderPath`
 - PDM variables such as `$(Description.@)` or `$(Revision.@)` for file `@` tab values
+- checkout functions such as `${isCheckedOut()}`, `${isCheckedByMe()}`, `${isCheckedOutByUsername("Admin")}`, and `${checkedOutOnComputer()}`
 
 ## Examples
 
@@ -30,9 +31,13 @@ Use the Conditions editor to add condition rows, combine them with `and` or `or`
 $localPath exists
 "$(Description.@)" contains "ECO"
 ($folderPath\ready.pdf exists or $folderPath\ready.dxf exists) and "$(State.@)" equals "Released"
+${isCheckedOut()} and ${isCheckedByMe()}
+${isCheckedOutByUsername("Admin", "$filePath")}
 ```
 
 For file data card variables, use the explicit configuration suffix. Use `.@` for the file `@` tab, for example `$(Description.@)`.
+
+Checkout functions are evaluated against each affected file when the menu command, event hook, or task runs. They are available from the Conditions editor autocomplete list. See [Checkout state functions](../EVAL.md#checkout-state-functions) for optional file-path forms.
 
 ## Condition test message
 

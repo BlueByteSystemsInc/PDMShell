@@ -301,8 +301,33 @@ ${serialNumber(&quot;SerialNumberName&quot;)}
 <td><code>${serialNumber(name)}</code></td>
 <td>Allocates and returns the next value from the named SOLIDWORKS PDM serial number.</td>
 </tr>
+<tr>
+<td><code>${isCheckedOut([filePath])}</code></td>
+<td>Returns <code>true</code> when the current file, or the optional file path, is checked out.</td>
+</tr>
+<tr>
+<td><code>${isCheckedByMe([filePath])}</code></td>
+<td>Returns <code>true</code> when the current PDM user has the current file, or the optional file path, checked out. <code>${isCheckedOutByMe(...)}</code> is also accepted.</td>
+</tr>
+<tr>
+<td><code>${isCheckedOutByUsername(userName[, filePath])}</code></td>
+<td>Returns <code>true</code> when the named PDM user has the current file, or the optional file path, checked out.</td>
+</tr>
+<tr>
+<td><code>${checkedOutOnComputer([filePath])}</code></td>
+<td>Returns the checkout computer for the current file or optional file path. Returns an empty value when the file is not checked out.</td>
+</tr>
 </tbody>
 </table>
+<h3 id="checkout-state-functions">Checkout State Functions</h3>
+<p>Checkout functions use the selected PDM file unless a path is supplied. A relative path is resolved from the current PDM folder. An absolute path can identify another file in the logged-in vault.</p>
+<pre><code class="lang-text">${isCheckedOut()}
+${isCheckedOut(&quot;Drawing.slddrw&quot;)}
+${isCheckedByMe(&quot;$folderPath\\Drawing.slddrw&quot;)}
+${isCheckedOutByUsername(&quot;Admin&quot;, &quot;C:\\Vault\\Projects\\Drawing.slddrw&quot;)}
+${checkedOutOnComputer()}
+</code></pre>
+<p>The boolean functions return lowercase <code>true</code> or <code>false</code>. They can be used in command values, visual IF statements, <code>until</code>, and PDMShell add-in conditions.</p>
 <p>String functions can be nested when the nested function also uses <code>${...}</code>:</p>
 <pre><code class="lang-bash">${left(${replace($value, &quot; &quot;, &quot;_&quot;)}, 10)}
 </code></pre>
