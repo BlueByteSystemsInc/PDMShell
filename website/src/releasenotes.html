@@ -93,6 +93,12 @@
 <p>To update PDMShell properly, download the latest version, uninstall PDMShell and
 then install the latest version. Do not update installed version.</p>
 </div>
+<h2 id="4045-2026-07-28">4.0.45 (2026-07-28)</h2>
+<ul>
+<li>Improved nested expression evaluation so PDM variables such as <code>$(Revision)</code> are resolved before functions such as <code>${lookup(...)}</code> run.</li>
+<li>Updated add-in script conditions to use the same PDM variable, placeholder, and expression function evaluation as PDMShell scripts.</li>
+<li>Improved file-specific script errors so PDMShell identifies the affected item and script line instead of continuing with an unevaluated command.</li>
+</ul>
 <h2 id="4044-2026-07-26">4.0.44 (2026-07-26)</h2>
 <ul>
 <li>Updated <code>$userName</code> and <code>$username</code> so they consistently return the logged-in PDM user instead of the Windows account.</li>

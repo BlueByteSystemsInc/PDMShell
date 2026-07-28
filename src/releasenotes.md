@@ -12,6 +12,11 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.45 (2026-07-28)
+- Improved nested expression evaluation so PDM variables such as `$(Revision)` are resolved before functions such as `${lookup(...)}` run.
+- Updated add-in script conditions to use the same PDM variable, placeholder, and expression function evaluation as PDMShell scripts.
+- Improved file-specific script errors so PDMShell identifies the affected item and script line instead of continuing with an unevaluated command.
+
 ## 4.0.44 (2026-07-26)
 - Updated `$userName` and `$username` so they consistently return the logged-in PDM user instead of the Windows account.
 - Updated PDM user profile placeholders for full name, first name, last name, and email across commands, conditions, and add-in menu, event, and task scripts.
