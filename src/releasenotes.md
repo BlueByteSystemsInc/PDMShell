@@ -12,6 +12,11 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.47 (2026-07-28)
+- Added a per-script option that allows users to cancel command-menu and event-hook scripts from the progress dialog.
+- Added `Cancel` and title-bar close actions that request cancellation without reporting the script as failed.
+- Cancelling a before-event hook also cancels the pending PDM operation.
+
 ## 4.0.46 (2026-07-28)
 - Improved add-in command-menu and event-hook script startup by resolving selected PDM files and folders more efficiently and reusing them during execution.
 - Improved the optional script progress dialog with percentage, affected file or folder name, and a clearer command description.

@@ -64,11 +64,19 @@ Each script is organized into these sections:
 
 | Section | Purpose |
 | --- | --- |
-| Overview | Script name and enabled state |
+| Overview | Script name, enabled state, progress display, and optional user cancellation |
 | Permissions | Users and groups allowed to run the script |
 | Conditions | Expression that must pass before the script runs |
 | Trigger Points | Command menu and PDM event trigger configuration |
 | Code | The `.pdmshell` script body |
+
+## Progress and cancellation
+
+Enable `Show progress while running` to display progress for command-menu and event-hook scripts.
+
+Enable `Allow user cancellation` to add a `Cancel` button and title-bar close action to that progress dialog. Cancelling stops the remaining script commands after the current command finishes. Commands that support cancellation can stop sooner.
+
+For a before-event hook, cancelling also cancels the pending PDM operation. For an after-event hook, the completed PDM operation cannot be reversed; only the remaining script commands are stopped.
 
 ## Related articles
 

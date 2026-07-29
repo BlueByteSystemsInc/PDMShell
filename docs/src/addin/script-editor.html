@@ -135,7 +135,7 @@
 <tbody>
 <tr>
 <td>Overview</td>
-<td>Script name and enabled state</td>
+<td>Script name, enabled state, progress display, and optional user cancellation</td>
 </tr>
 <tr>
 <td>Permissions</td>
@@ -155,6 +155,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="progress-and-cancellation">Progress and cancellation</h2>
+<p>Enable <code>Show progress while running</code> to display progress for command-menu and event-hook scripts.</p>
+<p>Enable <code>Allow user cancellation</code> to add a <code>Cancel</code> button and title-bar close action to that progress dialog. Cancelling stops the remaining script commands after the current command finishes. Commands that support cancellation can stop sooner.</p>
+<p>For a before-event hook, cancelling also cancels the pending PDM operation. For an after-event hook, the completed PDM operation cannot be reversed; only the remaining script commands are stopped.</p>
 <h2 id="related-articles">Related articles</h2>
 <ul>
 <li><a href="permissions.html">Permissions</a></li>
