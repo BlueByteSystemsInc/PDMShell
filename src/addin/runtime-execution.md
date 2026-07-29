@@ -1,35 +1,32 @@
 ---
-description: How the PDMShell add-in runs scripts through pdmcli.exe and runscript.
+description: How the PDMShell add-in runs command-menu, event-hook, and task scripts.
 title: Runtime execution | PDMShell add-in
 ---
 # Runtime execution
 
-When a configured script runs, the add-in writes the script to a temporary `.pdmshell` file and launches PDMShell in automation mode.
+When a configured script runs from a command menu, event hook, or PDM task, the add-in executes it directly through the shared PDMShell command runtime. It does not start a separate `pdmcli.exe` process for script execution.
 
-For selected files and folders, the add-in uses the `-items` path:
+The add-in resolves the affected PDM files and folders, evaluates the script conditions, and runs the script against the matching items. Command-menu and event-hook execution reuses the resolved items throughout the run to avoid unnecessary PDM lookups.
+
+## Interactive progress
+
+Command-menu and event-hook scripts can show a modeless progress dialog while they run. The progress line identifies the completion percentage, affected item, and current action:
 
 ```text
-pdmcli.exe -skipautocomplete -headless "runscript -source \"C:\Temp\Script.pdmshell\" -items \"123,45;678,90\""
+25% - membrane.SLDDRW: Setting data card variable
 ```
 
-Each item is passed as an ID pair:
+Commands that are not associated with a specific affected item show the percentage and action only. PDM task runs continue to report progress through the PDM task interface.
 
-| Item type | Format | Meaning |
-| --- | --- | --- |
-| File | `fileId,folderId` | File ID and containing folder ID |
-| Folder | `folderId,parentFolderId` | Folder ID and parent folder ID |
+## Runtime behavior
 
-## Headless mode
+Add-in execution does not initialize interactive editor autocomplete because suggestions are only needed while editing commands. This keeps background execution focused on loading the script context and running commands.
 
-Headless mode starts a lighter execution shell for add-in automation. Use it for unattended runs from command menus, trigger points, tasks, or other automated launches.
-
-For add-in script execution, PDMShell also skips autocomplete metadata loading in the launched `pdmcli.exe` process. This avoids spending startup time on editor suggestions that are only needed when a user is working in the interactive command editor or visual editor.
-
-Headless execution does not show the normal interactive startup license validation dialog. Commands still enforce PDMShell license limits at runtime using the stored machine license or the license borrowed from the add-in license pool.
+Commands still enforce PDMShell license limits at runtime using the configured machine license or a license borrowed from the add-in license pool.
 
 ## Script editing
 
-Use `-edit` when opening a script in the visual editor without executing it:
+The add-in can still start `pdmcli.exe` when opening a script in the visual editor. The `-edit` option opens the script without executing it:
 
 ```powershell
 pdmcli.exe -edit "C:\Vault\Scripts\CreateECO.pdmshell"

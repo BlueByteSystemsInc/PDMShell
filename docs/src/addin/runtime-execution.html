@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Runtime execution | PDMShell add-in | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="How the PDMShell add-in runs scripts through pdmcli.exe and runscript.">
+      <meta name="description" content="How the PDMShell add-in runs command-menu, event-hook, and task scripts.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -87,38 +87,18 @@
         <article data-uid="">
 <h1 id="runtime-execution">Runtime execution</h1>
 
-<p>When a configured script runs, the add-in writes the script to a temporary <code>.pdmshell</code> file and launches PDMShell in automation mode.</p>
-<p>For selected files and folders, the add-in uses the <code>-items</code> path:</p>
-<pre><code class="lang-text">pdmcli.exe -skipautocomplete -headless &quot;runscript -source \&quot;C:\Temp\Script.pdmshell\&quot; -items \&quot;123,45;678,90\&quot;&quot;
+<p>When a configured script runs from a command menu, event hook, or PDM task, the add-in executes it directly through the shared PDMShell command runtime. It does not start a separate <code>pdmcli.exe</code> process for script execution.</p>
+<p>The add-in resolves the affected PDM files and folders, evaluates the script conditions, and runs the script against the matching items. Command-menu and event-hook execution reuses the resolved items throughout the run to avoid unnecessary PDM lookups.</p>
+<h2 id="interactive-progress">Interactive progress</h2>
+<p>Command-menu and event-hook scripts can show a modeless progress dialog while they run. The progress line identifies the completion percentage, affected item, and current action:</p>
+<pre><code class="lang-text">25% - membrane.SLDDRW: Setting data card variable
 </code></pre>
-<p>Each item is passed as an ID pair:</p>
-<table>
-<thead>
-<tr>
-<th>Item type</th>
-<th>Format</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>File</td>
-<td><code>fileId,folderId</code></td>
-<td>File ID and containing folder ID</td>
-</tr>
-<tr>
-<td>Folder</td>
-<td><code>folderId,parentFolderId</code></td>
-<td>Folder ID and parent folder ID</td>
-</tr>
-</tbody>
-</table>
-<h2 id="headless-mode">Headless mode</h2>
-<p>Headless mode starts a lighter execution shell for add-in automation. Use it for unattended runs from command menus, trigger points, tasks, or other automated launches.</p>
-<p>For add-in script execution, PDMShell also skips autocomplete metadata loading in the launched <code>pdmcli.exe</code> process. This avoids spending startup time on editor suggestions that are only needed when a user is working in the interactive command editor or visual editor.</p>
-<p>Headless execution does not show the normal interactive startup license validation dialog. Commands still enforce PDMShell license limits at runtime using the stored machine license or the license borrowed from the add-in license pool.</p>
+<p>Commands that are not associated with a specific affected item show the percentage and action only. PDM task runs continue to report progress through the PDM task interface.</p>
+<h2 id="runtime-behavior">Runtime behavior</h2>
+<p>Add-in execution does not initialize interactive editor autocomplete because suggestions are only needed while editing commands. This keeps background execution focused on loading the script context and running commands.</p>
+<p>Commands still enforce PDMShell license limits at runtime using the configured machine license or a license borrowed from the add-in license pool.</p>
 <h2 id="script-editing">Script editing</h2>
-<p>Use <code>-edit</code> when opening a script in the visual editor without executing it:</p>
+<p>The add-in can still start <code>pdmcli.exe</code> when opening a script in the visual editor. The <code>-edit</code> option opens the script without executing it:</p>
 <pre><code class="lang-powershell">pdmcli.exe -edit &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
 </code></pre>
 <p>For more details about script execution, see <a href="../RUNSCRIPT.html">RunScript</a>.</p>

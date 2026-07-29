@@ -12,6 +12,10 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.46 (2026-07-28)
+- Improved add-in command-menu and event-hook script startup by resolving selected PDM files and folders more efficiently and reusing them during execution.
+- Improved the optional script progress dialog with percentage, affected file or folder name, and a clearer command description.
+
 ## 4.0.45 (2026-07-28)
 - Improved nested expression evaluation so PDM variables such as `$(Revision)` are resolved before functions such as `${lookup(...)}` run.
 - Updated add-in script conditions to use the same PDM variable, placeholder, and expression function evaluation as PDMShell scripts.
