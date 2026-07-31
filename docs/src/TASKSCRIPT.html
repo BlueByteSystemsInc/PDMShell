@@ -101,14 +101,17 @@
 <h2 id="add-in-menu-commands">Add-in menu commands</h2>
 <p>Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, and right-click it to open the add-in menu.</p>
 <p>
-  <img src="../images/pdmshell-addin-admin-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Edit Scripts, Manage PDMShell Licenses, and PDMShell Download Center commands" style="max-width:520px;width:100%;height:auto;">
+  <img src="../images/pdmshell-addin-admin-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Edit Scripts, Manage PDMShell Licenses, PDMShell Download Center, Performance, and Open PDMShell commands" style="max-width:520px;width:100%;height:auto;">
 </p>
 <p>The add-in menu includes:</p>
 <ul>
 <li><code>Edit Scripts...</code> to open the Script Editor.</li>
 <li><code>Manage PDMShell Licenses...</code> for online and offline license management.</li>
+<li><code>Open PDMShell...</code> to launch the PDMShell application bundled with the add-in and log in to the current vault.</li>
 <li><code>PDMShell Download Center...</code> for restricted systems that need Microsoft-hosted <code>.cex</code> downloads.</li>
+<li><code>Performance...</code> to review add-in execution timings. This command is available only to PDM administrators.</li>
 </ul>
+<p>When the add-in uses the license pool, <code>Open PDMShell...</code> borrows a seat while the launched application is running and releases it when PDMShell closes. If no pooled seat is available, you can cancel or open PDMShell with the Free version. In machine-license mode, the launched application uses the PDMShell license activated on that workstation.</p>
 <h2 id="add-in-workflow">Add-in workflow</h2>
 <p>Use <code>Edit Scripts...</code> to open the <a href="addin/script-editor.html">Script Editor</a>. The Script Editor is where administrators create script entries, set permissions and conditions, add command menu text, select PDM command hooks, and edit the PDMShell script code.</p>
 <h2 id="what-you-can-automate">What you can automate</h2>

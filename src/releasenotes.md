@@ -12,6 +12,12 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.48 (2026-07-30)
+- Added a `Get trial license` button beside `Order license` for direct access to the PDMShell trial license page.
+- Added an `Open PDMShell...` Administration command that launches the application bundled with the PDM add-in and uses the current vault's configured license mode.
+- Fixed cancellation so PDMShell returns to the ready state and hides the cancel action after a cancellation request.
+- Improved `until` conditions by refreshing PDM file state on every attempt and reporting each evaluated condition with its attempt number and pass/fail result.
+
 ## 4.0.47 (2026-07-28)
 - Added a per-script option that allows users to cancel command-menu and event-hook scripts from the progress dialog.
 - Added `Cancel` and title-bar close actions that request cancellation without reporting the script as failed.

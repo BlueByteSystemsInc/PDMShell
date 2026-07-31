@@ -977,26 +977,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/pdmshell-addin-script-editor-code.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/pdmshell-addin-script-editor-code.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/pdmshell-addin-script-editor-import-export.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/pdmshell-addin-script-editor-import-export.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "images/pdmshell-addin-script-editor-overview.png",
       "output": {
         "resource": {

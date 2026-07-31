@@ -21,14 +21,18 @@ Instead of building automation from a fixed list of Dispatch actions, the add-in
 Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, and right-click it to open the add-in menu.
 
 <p>
-  <img src="../images/pdmshell-addin-admin-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Edit Scripts, Manage PDMShell Licenses, and PDMShell Download Center commands" style="max-width:520px;width:100%;height:auto;">
+  <img src="../images/pdmshell-addin-admin-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Edit Scripts, Manage PDMShell Licenses, PDMShell Download Center, Performance, and Open PDMShell commands" style="max-width:520px;width:100%;height:auto;">
 </p>
 
 The add-in menu includes:
 
 - `Edit Scripts...` to open the Script Editor.
 - `Manage PDMShell Licenses...` for online and offline license management.
+- `Open PDMShell...` to launch the PDMShell application bundled with the add-in and log in to the current vault.
 - `PDMShell Download Center...` for restricted systems that need Microsoft-hosted `.cex` downloads.
+- `Performance...` to review add-in execution timings. This command is available only to PDM administrators.
+
+When the add-in uses the license pool, `Open PDMShell...` borrows a seat while the launched application is running and releases it when PDMShell closes. If no pooled seat is available, you can cancel or open PDMShell with the Free version. In machine-license mode, the launched application uses the PDMShell license activated on that workstation.
 
 ## Add-in workflow
 
