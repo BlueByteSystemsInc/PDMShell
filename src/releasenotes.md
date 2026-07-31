@@ -12,6 +12,11 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > To update PDMShell properly, download the latest version, uninstall PDMShell and 
 then install the latest version. Do not update installed version.
 
+## 4.0.49 (2026-07-30)
+- Updated file-specific placeholders, PDM variables, and expressions so they are evaluated when each script command runs instead of before the entire script starts.
+- Fixed command sequences such as `setrevision` followed by `$Revision`, `$(Revision.@)`, or a revision expression so the next command reads the newly applied revision.
+- Applied refreshed file context to Visual Code Editor runs, `runscript`, add-in scripts, IF statements, and add-in condition evaluation.
+
 ## 4.0.48 (2026-07-30)
 - Added a `Get trial license` button beside `Order license` for direct access to the PDMShell trial license page.
 - Added an `Open PDMShell...` Administration command that launches the application bundled with the PDM add-in and uses the current vault's configured license mode.
