@@ -5,6 +5,8 @@
     href: index.md
   - name: Introduction
     href: introduction.md
+  - name: MCP Server for Claude Desktop
+    href: mcp-server.md
   - name: Installation
     items:
     - name: PDMShell standalone

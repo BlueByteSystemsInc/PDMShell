@@ -92,6 +92,15 @@
 <h5>Important</h5>
 <p>PDMShell 4.0.50 and newer use a signed per-user VeloPack installer. The updater can replace an existing VeloPack installation without a manual uninstall or administrator privileges.</p>
 </div>
+<h2 id="4051-2026-07-31">4.0.51 (2026-07-31)</h2>
+<ul>
+<li>Added the bundled <code>pdmshell</code> MCP server for Claude Desktop, enabling command discovery and PDMShell command execution through the local SOLIDWORKS PDM environment.</li>
+<li>Added implementation-derived discovery for all PDMShell commands and parameters, including the complete search-expression grammar, tokens, variable operators, result shaping, escaping, and examples.</li>
+<li>Added automatic Claude Desktop registration after VeloPack installation and update, plus clean removal during uninstall.</li>
+<li>Added <code>pdmshell_version</code> so Claude can report the installed MCP, PDMShell Core, protocol, and runtime versions without a vault login.</li>
+<li>Versioned, built, signed, installed, and updated the MCP server together with PDMShell so their release versions remain aligned.</li>
+<li>Reused the installed local PDMShell machine license and normal command license enforcement for MCP operations.</li>
+</ul>
 <h2 id="4050-2026-07-31">4.0.50 (2026-07-31)</h2>
 <ul>
 <li>Replaced the legacy MSI distribution with <code>pdmcli_installer.zip</code>, containing the signed <code>pdmcli_installer.exe</code> VeloPack installer.</li>

@@ -11,6 +11,14 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 >[!Important]
 > PDMShell 4.0.50 and newer use a signed per-user VeloPack installer. The updater can replace an existing VeloPack installation without a manual uninstall or administrator privileges.
 
+## 4.0.51 (2026-07-31)
+- Added the bundled `pdmshell` MCP server for Claude Desktop, enabling command discovery and PDMShell command execution through the local SOLIDWORKS PDM environment.
+- Added implementation-derived discovery for all PDMShell commands and parameters, including the complete search-expression grammar, tokens, variable operators, result shaping, escaping, and examples.
+- Added automatic Claude Desktop registration after VeloPack installation and update, plus clean removal during uninstall.
+- Added `pdmshell_version` so Claude can report the installed MCP, PDMShell Core, protocol, and runtime versions without a vault login.
+- Versioned, built, signed, installed, and updated the MCP server together with PDMShell so their release versions remain aligned.
+- Reused the installed local PDMShell machine license and normal command license enforcement for MCP operations.
+
 ## 4.0.50 (2026-07-31)
 - Replaced the legacy MSI distribution with `pdmcli_installer.zip`, containing the signed `pdmcli_installer.exe` VeloPack installer.
 - Added a per-user installation under `%LOCALAPPDATA%\Blue Byte Systems\PDMShell`, including Desktop and Start menu shortcuts and a Windows Installed apps entry.

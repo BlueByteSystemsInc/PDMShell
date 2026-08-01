@@ -2597,6 +2597,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/mcp-server.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/mcp-server.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/offline-activation.md",
       "output": {
         ".html": {

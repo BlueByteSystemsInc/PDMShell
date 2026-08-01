@@ -283,6 +283,21 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
       <a class="pdmshell-button pdmshell-button-secondary" href="licensing.md">Licensing</a>
     </div>
   </section>
+  <section class="pdmshell-section pdmshell-band">
+    <div class="pdmshell-kicker">Major feature in PDMShell 4.0.51</div>
+    <h2>Use PDMShell from Claude Desktop</h2>
+    <p>PDMShell now includes a version-matched MCP server that lets Claude discover commands, understand every parameter and search expression, and run approved operations through your local SOLIDWORKS PDM environment.</p>
+    <ul class="pdmshell-checklist">
+      <li>Automatically registered in Claude Desktop as <code>pdmshell</code>.</li>
+      <li>Installed, signed, and updated together with PDMShell.</li>
+      <li>Uses the existing local PDMShell machine license.</li>
+      <li>Exposes version information without requiring a vault login.</li>
+    </ul>
+    <div class="pdmshell-cta-row">
+      <a class="pdmshell-button pdmshell-button-primary" href="mcp-server.md">Explore the MCP server</a>
+      <a class="pdmshell-button pdmshell-button-secondary" href="releasenotes.md">What’s new in 4.0.51</a>
+    </div>
+  </section>
   <section class="pdmshell-section">
     <h2>Start with the right path</h2>
     <p>Install the pieces you need, then choose the licensing model that matches how your team will use PDMShell.</p>
