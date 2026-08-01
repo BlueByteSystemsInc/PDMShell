@@ -1,99 +1,62 @@
 ---
-description: Install or update the standalone PDMShell desktop application from the Blue Byte Systems server or Microsoft Store.
-title: PDMShell standalone installation | PDMShell
----
-# PDMShell standalone installation
-
-PDMShell can be installed as a standalone desktop application from the Blue Byte Systems server or from the Microsoft Store. Starting with version 4.0.50, the Blue Byte Systems download uses a signed per-user VeloPack installer and does not require administrator privileges.
-
-For the SOLIDWORKS PDM add-in installer, see [PDMShell add-in installation](addin/installation.md).
-
-> [!NOTE]
-> The VeloPack installer and non-elevated update workflow are available in PDMShell 4.0.50 and newer.
-
+description: Download, install, or update the standalone PDMShell desktop application for SOLIDWORKS PDM Professional.
+title: Install or update PDMShell | PDMShell
 ---
 
-## Install From The Blue Byte Systems Server
+# Install or update PDMShell
 
-Download `pdmcli_installer.zip` from the Blue Byte Systems server:
+PDMShell installs for your Windows account and does not require administrator privileges.
+
+Looking for the SOLIDWORKS PDM add-in instead? See [Install the PDMShell add-in](addin/installation.md).
+
+## Download and install PDMShell
 
 <div align="center">
-  <a href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell" style="display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:6px;background:#0078D4;color:#ffffff;text-decoration:none;font-weight:600;border:1px solid #106EBE;">Download PDMShell latest version</a>
+  <a href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell" style="display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:6px;background:#0078D4;color:#ffffff;text-decoration:none;font-weight:600;border:1px solid #106EBE;">Download the latest PDMShell</a>
 </div>
 
-The ZIP contains the signed executable `pdmcli_installer.exe`.
+The download is a ZIP file containing the signed PDMShell installer.
 
-<div align="center">
-  <img src="/images/image.png" alt="Safe Browsing Warning" style="max-width:480px;width:100%;height:auto;">
-</div>
+1. Open your Downloads folder.
+2. Right-click `pdmcli_installer.zip` and select **Extract All**.
+3. Open the extracted folder.
+4. Double-click `pdmcli_installer.exe`.
+5. Wait for PDMShell to open.
 
-After downloading:
+PDMShell is added to the Start menu and Windows Installed apps. A Desktop shortcut is also created.
 
-1. Extract `pdmcli_installer.zip`.
-2. Double-click `pdmcli_installer.exe`.
-3. Wait for the installation to complete and PDMShell to open.
+## Update PDMShell
 
-The installer registers PDMShell in Windows Installed apps and creates Desktop and Start menu shortcuts. It installs the application for the current user under:
-
-```text
-%LOCALAPPDATA%\Blue Byte Systems\PDMShell
-```
-
-VeloPack stores the active application files in the `current` subfolder. Future versions replace the active version without requiring a manual uninstall.
-
----
-
-## Install From The Microsoft Store
-
-1. Open the Microsoft Store on your Windows device.
-2. Search for PDMShell.
-3. Select the PDMShell app from the search results.
-4. Select `Get` or `Install`.
-5. Wait for the installation to complete.
-6. Launch PDMShell from the Start menu.
-
-The Microsoft Store does not automatically update PDMShell. If you installed PDMShell from the Microsoft Store, you may need to uninstall it and reinstall the latest version manually.
-
----
-
-## Update From Inside PDMShell
-
-PDMShell can show an Update available dialog when a newer version is detected. The dialog shows the release notes for the latest version.
+When an update is available, PDMShell displays an update message.
 
 <div align="center">
   <img src="../images/pdmshell-update-available.png" alt="PDMShell update available dialog" style="max-width:620px;width:100%;height:auto;">
 </div>
 
-Select `Yes, update right now` to launch PDMShell Updater as the current Windows user. The updater does not require a User Account Control prompt or administrator privileges. It also shows the local PDMShell version when an installed version is detected.
+1. Select **Yes, update right now**.
+2. Select **Start** in the updater.
+3. Wait while PDMShell downloads and installs the update.
+4. The updated version opens automatically.
 
-Selecting `Start` will:
+Your shortcuts and settings are preserved. You do not need to uninstall the previous version first.
 
-1. Download `pdmcli_installer.zip` to a unique temporary folder.
-2. Extract the signed `pdmcli_installer.exe`.
-3. Run the VeloPack installer silently for the current user.
-4. Replace the installed version while keeping the PDMShell application identity and shortcuts.
-5. Start `%LOCALAPPDATA%\Blue Byte Systems\PDMShell\current\pdmcli.exe`.
+If the update is interrupted, close PDMShell and run the update again. You can also use **Download Manually** to install the latest version using the steps above.
 
-Use `Download Manually` if you prefer to download the installer yourself. Use `Request Help` to open this updater help section.
+## Install from Microsoft Store
 
----
+1. Open Microsoft Store.
+2. Search for **PDMShell**.
+3. Select **Get** or **Install**.
+4. Open PDMShell from the Start menu.
 
-## Common Update Issues
+The website download may receive new versions before the Microsoft Store. If the Store version is older, use the download button on this page.
 
-If an update is interrupted, close PDMShell and run the updater again. VeloPack keeps a consistent installed application identity and replaces the active `current` folder during a successful update. Use Windows Installed apps to uninstall PDMShell only when you want to remove it completely.
+## System requirements
 
----
+- Windows 10 or Windows 11
+- SOLIDWORKS PDM Professional 2014 or newer
+- SOLIDWORKS 2017 or newer for commands that open or process SOLIDWORKS documents
 
-## System Requirements
+## Need help?
 
-To ensure PDMShell runs smoothly, your system must meet the following requirements:
-
-- Operating System: Windows 10/11
-- SOLIDWORKS PDM Professional: Version 2014 or newer
-- SOLIDWORKS desktop application: Version 2017 or newer for commands that use SOLIDWORKS
-
----
-
-## Support
-
-For further assistance, visit our [Support Page](https://bluebyte.biz/contact) or contact us at `support@bluebytesystemsinc.zohodesk.com`.
+Visit the [Blue Byte Systems support page](https://bluebyte.biz/contact) or email `support@bluebytesystemsinc.zohodesk.com`.

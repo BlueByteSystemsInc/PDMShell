@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>PDMShell standalone installation | PDMShell | Powershell like features for SOLIDWORKS PDM Professional </title>
+      <title>Install or update PDMShell | PDMShell | Powershell like features for SOLIDWORKS PDM Professional </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="PDMShell standalone installation | PDMShell | Powershell like features for SOLIDWORKS PDM Professional ">
+      <meta name="title" content="Install or update PDMShell | PDMShell | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Install or update the standalone PDMShell desktop application from the Blue Byte Systems server or Microsoft Store.">
+      <meta name="description" content="Download, install, or update the standalone PDMShell desktop application for SOLIDWORKS PDM Professional.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,75 +85,52 @@
         </div>
 
         <article data-uid="">
-<h1 id="pdmshell-standalone-installation">PDMShell standalone installation</h1>
+<h1 id="install-or-update-pdmshell">Install or update PDMShell</h1>
 
-<p>PDMShell can be installed as a standalone desktop application from the Blue Byte Systems server or from the Microsoft Store. Starting with version 4.0.50, the Blue Byte Systems download uses a signed per-user VeloPack installer and does not require administrator privileges.</p>
-<p>For the SOLIDWORKS PDM add-in installer, see <a href="addin/installation.html">PDMShell add-in installation</a>.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>The VeloPack installer and non-elevated update workflow are available in PDMShell 4.0.50 and newer.</p>
-</div>
-<hr>
-<h2 id="install-from-the-blue-byte-systems-server">Install From The Blue Byte Systems Server</h2>
-<p>Download <code>pdmcli_installer.zip</code> from the Blue Byte Systems server:</p>
+<p>PDMShell installs for your Windows account and does not require administrator privileges.</p>
+<p>Looking for the SOLIDWORKS PDM add-in instead? See <a href="addin/installation.html">Install the PDMShell add-in</a>.</p>
+<h2 id="download-and-install-pdmshell">Download and install PDMShell</h2>
 <div align="center">
-  <a href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell" style="display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:6px;background:#0078D4;color:#ffffff;text-decoration:none;font-weight:600;border:1px solid #106EBE;">Download PDMShell latest version</a>
+  <a href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell" style="display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:6px;background:#0078D4;color:#ffffff;text-decoration:none;font-weight:600;border:1px solid #106EBE;">Download the latest PDMShell</a>
 </div>
-<p>The ZIP contains the signed executable <code>pdmcli_installer.exe</code>.</p>
-<div align="center">
-  <img src="/images/image.png" alt="Safe Browsing Warning" style="max-width:480px;width:100%;height:auto;">
-</div>
-<p>After downloading:</p>
+<p>The download is a ZIP file containing the signed PDMShell installer.</p>
 <ol>
-<li>Extract <code>pdmcli_installer.zip</code>.</li>
+<li>Open your Downloads folder.</li>
+<li>Right-click <code>pdmcli_installer.zip</code> and select <strong>Extract All</strong>.</li>
+<li>Open the extracted folder.</li>
 <li>Double-click <code>pdmcli_installer.exe</code>.</li>
-<li>Wait for the installation to complete and PDMShell to open.</li>
+<li>Wait for PDMShell to open.</li>
 </ol>
-<p>The installer registers PDMShell in Windows Installed apps and creates Desktop and Start menu shortcuts. It installs the application for the current user under:</p>
-<pre><code class="lang-text">%LOCALAPPDATA%\Blue Byte Systems\PDMShell
-</code></pre>
-<p>VeloPack stores the active application files in the <code>current</code> subfolder. Future versions replace the active version without requiring a manual uninstall.</p>
-<hr>
-<h2 id="install-from-the-microsoft-store">Install From The Microsoft Store</h2>
-<ol>
-<li>Open the Microsoft Store on your Windows device.</li>
-<li>Search for PDMShell.</li>
-<li>Select the PDMShell app from the search results.</li>
-<li>Select <code>Get</code> or <code>Install</code>.</li>
-<li>Wait for the installation to complete.</li>
-<li>Launch PDMShell from the Start menu.</li>
-</ol>
-<p>The Microsoft Store does not automatically update PDMShell. If you installed PDMShell from the Microsoft Store, you may need to uninstall it and reinstall the latest version manually.</p>
-<hr>
-<h2 id="update-from-inside-pdmshell">Update From Inside PDMShell</h2>
-<p>PDMShell can show an Update available dialog when a newer version is detected. The dialog shows the release notes for the latest version.</p>
+<p>PDMShell is added to the Start menu and Windows Installed apps. A Desktop shortcut is also created.</p>
+<h2 id="update-pdmshell">Update PDMShell</h2>
+<p>When an update is available, PDMShell displays an update message.</p>
 <div align="center">
   <img src="../images/pdmshell-update-available.png" alt="PDMShell update available dialog" style="max-width:620px;width:100%;height:auto;">
 </div>
-<p>Select <code>Yes, update right now</code> to launch PDMShell Updater as the current Windows user. The updater does not require a User Account Control prompt or administrator privileges. It also shows the local PDMShell version when an installed version is detected.</p>
-<p>Selecting <code>Start</code> will:</p>
 <ol>
-<li>Download <code>pdmcli_installer.zip</code> to a unique temporary folder.</li>
-<li>Extract the signed <code>pdmcli_installer.exe</code>.</li>
-<li>Run the VeloPack installer silently for the current user.</li>
-<li>Replace the installed version while keeping the PDMShell application identity and shortcuts.</li>
-<li>Start <code>%LOCALAPPDATA%\Blue Byte Systems\PDMShell\current\pdmcli.exe</code>.</li>
+<li>Select <strong>Yes, update right now</strong>.</li>
+<li>Select <strong>Start</strong> in the updater.</li>
+<li>Wait while PDMShell downloads and installs the update.</li>
+<li>The updated version opens automatically.</li>
 </ol>
-<p>Use <code>Download Manually</code> if you prefer to download the installer yourself. Use <code>Request Help</code> to open this updater help section.</p>
-<hr>
-<h2 id="common-update-issues">Common Update Issues</h2>
-<p>If an update is interrupted, close PDMShell and run the updater again. VeloPack keeps a consistent installed application identity and replaces the active <code>current</code> folder during a successful update. Use Windows Installed apps to uninstall PDMShell only when you want to remove it completely.</p>
-<hr>
-<h2 id="system-requirements">System Requirements</h2>
-<p>To ensure PDMShell runs smoothly, your system must meet the following requirements:</p>
+<p>Your shortcuts and settings are preserved. You do not need to uninstall the previous version first.</p>
+<p>If the update is interrupted, close PDMShell and run the update again. You can also use <strong>Download Manually</strong> to install the latest version using the steps above.</p>
+<h2 id="install-from-microsoft-store">Install from Microsoft Store</h2>
+<ol>
+<li>Open Microsoft Store.</li>
+<li>Search for <strong>PDMShell</strong>.</li>
+<li>Select <strong>Get</strong> or <strong>Install</strong>.</li>
+<li>Open PDMShell from the Start menu.</li>
+</ol>
+<p>The website download may receive new versions before the Microsoft Store. If the Store version is older, use the download button on this page.</p>
+<h2 id="system-requirements">System requirements</h2>
 <ul>
-<li>Operating System: Windows 10/11</li>
-<li>SOLIDWORKS PDM Professional: Version 2014 or newer</li>
-<li>SOLIDWORKS desktop application: Version 2017 or newer for commands that use SOLIDWORKS</li>
+<li>Windows 10 or Windows 11</li>
+<li>SOLIDWORKS PDM Professional 2014 or newer</li>
+<li>SOLIDWORKS 2017 or newer for commands that open or process SOLIDWORKS documents</li>
 </ul>
-<hr>
-<h2 id="support">Support</h2>
-<p>For further assistance, visit our <a href="https://bluebyte.biz/contact">Support Page</a> or contact us at <code>support@bluebytesystemsinc.zohodesk.com</code>.</p>
+<h2 id="need-help">Need help?</h2>
+<p>Visit the <a href="https://bluebyte.biz/contact">Blue Byte Systems support page</a> or email <code>support@bluebytesystemsinc.zohodesk.com</code>.</p>
 
 </article>
 
