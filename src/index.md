@@ -185,6 +185,23 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
     padding: 22px;
   }
 
+  .pdmshell-feature-heading {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .pdmshell-feature-heading img {
+    flex: 0 0 auto;
+    height: 38px;
+    width: 38px;
+  }
+
+  .pdmshell-feature-heading h2 {
+    margin: 0;
+  }
+
   .pdmshell-video-frame {
     aspect-ratio: 16 / 9;
     background: var(--pdmshell-panel);
@@ -285,7 +302,10 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
   </section>
   <section class="pdmshell-section pdmshell-band">
     <div class="pdmshell-kicker">Major feature in PDMShell 4.0.51</div>
-    <h2>Use PDMShell from Claude Desktop</h2>
+    <div class="pdmshell-feature-heading">
+      <img src="../images/claude.svg" alt="Claude logo">
+      <h2>Use PDMShell from Claude Desktop</h2>
+    </div>
     <p>PDMShell now includes a version-matched MCP server that lets Claude discover commands, understand every parameter and search expression, and run approved operations through your local SOLIDWORKS PDM environment.</p>
     <ul class="pdmshell-checklist">
       <li>Automatically registered in Claude Desktop as <code>pdmshell</code>.</li>
@@ -295,7 +315,7 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
     </ul>
     <div class="pdmshell-cta-row">
       <a class="pdmshell-button pdmshell-button-primary" href="mcp-server.md">Explore the MCP server</a>
-      <a class="pdmshell-button pdmshell-button-secondary" href="releasenotes.md">What’s new in 4.0.51</a>
+      <a class="pdmshell-button pdmshell-button-secondary" href="releasenotes.md">What's new in 4.0.51</a>
     </div>
   </section>
   <section class="pdmshell-section">
