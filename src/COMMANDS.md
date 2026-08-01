@@ -25,6 +25,7 @@ Availability means the PDMShell version where the command first became available
 | [dir](DIR.md) | List directory contents | Available since PDMShell 2.0.0. |
 | [mkdir](MKDIR.md) | Create a new PDM directory | Available since PDMShell 2.0.0. |
 | [clearcache](CLEARCACHE.md) | Clear cache | Available since PDMShell 2.0.0. |
+| [refresh](REFRESH.md) | Refresh file metadata and state | Available since PDMShell 4.0.51. |
 | [history](HISTORY.md) | View complete file history | Available since PDMShell 2.0.0. |
 | [inbox](INBOX.md) | Open PDM Inbox | Available since PDMShell 2.0.0. |
 | [addtovault](ADDTOVAULT.md) | Add files to vault | Available since PDMShell 2.0.0. |
@@ -99,6 +100,7 @@ Availability means the PDMShell version where the command first became available
 | Command | Description | Availability |
 | --- | --- | --- |
 | [version](VERSION.md) | Show version information | Available since PDMShell 2.0.0. |
+| [rollback](ROLLBACK.md) | Roll back a checked-in file to an earlier version | Available since PDMShell 4.0.51. |
 | [setrevision](SETREVISION.md) | Set revision | Available since PDMShell 3.0.11. |
 | [versionupgrade](VERSIONUPGRADE.md) | Upgrade version after PDM upgrade | Available since PDMShell 3.0.13. |
 | [frogleap](FROGLEAP.md) | Frog leap file version | Available since PDMShell 2.0.0. |

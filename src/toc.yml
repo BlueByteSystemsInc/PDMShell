@@ -136,6 +136,8 @@
       href: MKDIR.md
     - name: Clear cache
       href: CLEARCACHE.md
+    - name: Refresh file information
+      href: REFRESH.md
     - name: View complete file history
       href: HISTORY.md
     - name: Open PDM Inbox
@@ -242,6 +244,8 @@
     items:
     - name: Show version information
       href: VERSION.md
+    - name: Roll back a file version
+      href: ROLLBACK.md
     - name: Set revision
       href: SETREVISION.md
     - name: Upgrade version after PDM upgrade
