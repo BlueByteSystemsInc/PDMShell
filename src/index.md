@@ -315,7 +315,7 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
     </ul>
     <div class="pdmshell-cta-row">
       <a class="pdmshell-button pdmshell-button-primary" href="mcp-server.md">Explore the MCP server</a>
-      <a class="pdmshell-button pdmshell-button-secondary" href="releasenotes.md">What's new in 4.0.51</a>
+      <a class="pdmshell-button pdmshell-button-secondary" href="releasenotes.md">View release notes</a>
     </div>
   </section>
   <section class="pdmshell-section">

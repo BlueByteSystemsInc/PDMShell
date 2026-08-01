@@ -1,14 +1,14 @@
 ---
-title: Use PDMShell with Claude Desktop | Version 4.0.51
+title: Use PDMShell with Claude Desktop | Version 4.0.53
 description: Connect Claude Desktop to PDMShell and use natural language to discover and run SOLIDWORKS PDM commands.
-keywords: PDMShell MCP server, Claude Desktop, SOLIDWORKS PDM AI, Model Context Protocol, PDMShell 4.0.51
+keywords: PDMShell MCP server, Claude Desktop, SOLIDWORKS PDM AI, Model Context Protocol, PDMShell 4.0.53
 ---
 
 <img src="../images/claude.svg" alt="Claude logo" width="56">
 
 # Use PDMShell with Claude Desktop
 
-PDMShell 4.0.51 lets you work with SOLIDWORKS PDM from Claude Desktop. You can ask questions in everyday language, explore available PDMShell commands, build searches, and run approved operations in your local vault.
+PDMShell 4.0.53 lets you work with SOLIDWORKS PDM from Claude Desktop. You can ask questions in everyday language, explore available PDMShell commands, build searches, and run approved operations in your local vault.
 
 You do not need to configure the connection manually. Install or update PDMShell, restart Claude Desktop, and Claude will see a connection named **pdmshell**.
 
@@ -22,7 +22,7 @@ You do not need to configure the connection manually. Install or update PDMShell
 3. Start Claude Desktop again.
 4. Ask Claude: **What version of PDMShell is installed?**
 
-Claude should use the `pdmshell_version` tool and show matching PDMShell and MCP server versions. For PDMShell 4.0.51, both versions are `4.0.51.0`.
+Claude should use the `pdmshell_version` tool and show matching PDMShell and MCP server versions. For PDMShell 4.0.53, both versions are `4.0.53.0`.
 
 ## Things you can ask Claude
 
@@ -49,6 +49,12 @@ You can simply ask:
 > Show my available PDM vaults and help me log in to one.
 
 After login, the connection keeps the same PDMShell session. Claude can continue working with the selected vault and current folder without starting over for every command.
+
+## Long-running commands
+
+PDMShell reports progress to Claude while longer commands run. Progress messages can identify the current operation or file as PDMShell processes it.
+
+You can ask Claude to cancel an active command. PDMShell forwards that request to the running operation and stops at the next safe cancellation point. Some SOLIDWORKS or PDM API calls must finish before cancellation can take effect.
 
 ## Your PDMShell license
 

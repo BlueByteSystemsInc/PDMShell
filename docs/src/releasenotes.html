@@ -92,11 +92,20 @@
 <h5>Important</h5>
 <p>PDMShell 4.0.50 and newer use a signed per-user installer. Updates replace the existing installation automatically without requiring a manual uninstall or administrator privileges.</p>
 </div>
-<h2 id="4052-2026-07-31">4.0.52 (2026-07-31)</h2>
+<h2 id="4053-2026-08-01">4.0.53 (2026-08-01)</h2>
+<ul>
+<li>Improved Claude Desktop setup during PDMShell installation and updates so stale <code>pdmcli</code> connections and development paths are replaced with the installed <code>pdmshell</code> connection.</li>
+<li>Renamed the Claude tools with a consistent <code>pdmshell_*</code> prefix while retaining compatibility with their previous names.</li>
+<li>Added clearer Claude tool titles, PDMShell product information, version details, and a help tool with documentation, troubleshooting, website, and licensing links.</li>
+<li>Added PDMShell branding metadata and the PDMShell icon to the MCP executable.</li>
+</ul>
+<h2 id="4052-2026-08-01">4.0.52 (2026-08-01)</h2>
 <ul>
 <li>Added <code>refresh</code> for reloading current PDM file metadata and state without downloading or modifying files.</li>
 <li>Added preview-first <code>rollback</code> with targets by version number, previous version, date, or revision name.</li>
+<li>Added MCP progress updates and cancellation for commands run from Claude Desktop.</li>
 <li>Improved command parameter controls so PDM file versions use numeric inputs, SOLIDWORKS versions show installed releases, and rollback flags use toggles.</li>
+<li>Improved PDM Administration compatibility with other WPF add-ins by isolating PDMShell UI initialization and assembly resolution.</li>
 </ul>
 <h2 id="4051-2026-07-31">4.0.51 (2026-07-31)</h2>
 <ul>
