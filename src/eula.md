@@ -67,7 +67,7 @@ Licensee is responsible for protecting offline activation request and response f
 
 Blue Byte Systems may provide updates, installers, patches, or replacement versions of the Software. Updates may add, remove, or change features, commands, licensing behavior, documentation, user interface behavior, or compatibility requirements.
 
-The PDMShell updater may uninstall an existing local version, download a newer installer from Blue Byte Systems servers, and start the installer. Some update operations may require administrator privileges.
+The PDMShell updater may download an installer archive from Blue Byte Systems servers, extract and run the signed installer, replace an existing per-user version, and restart the updated application. Per-user VeloPack updates do not require administrator privileges.
 
 Continued use of the Software after installing or using an update means Licensee accepts the EULA that applies to that version.
 

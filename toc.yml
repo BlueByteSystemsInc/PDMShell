@@ -5,7 +5,7 @@
 - name: PDMShell Add-in
   href: src/TASKSCRIPT.md
 - name: Download
-  href: https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell
+  href: src/howtoinstall.md
 - name: Buy Premium
   href: https://bluebyte.biz/product/pdmshell
 - name: Migration Services

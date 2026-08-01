@@ -1247,36 +1247,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/pdmshell-updater-admin.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/pdmshell-updater-admin.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/pdmshell-updater-not-admin.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/pdmshell-updater-not-admin.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/pdmshell-updater-uac.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/pdmshell-updater-uac.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "images/pdmshell.gif",
       "output": {
         "resource": {
@@ -1401,16 +1371,6 @@
       "output": {
         "resource": {
           "relative_path": "images/transitioncsv.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/updateissue.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/updateissue.png"
         }
       },
       "version": ""

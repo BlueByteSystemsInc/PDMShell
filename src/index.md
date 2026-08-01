@@ -278,7 +278,7 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
       </video>
     </div>
     <div class="pdmshell-actions">
-      <a class="pdmshell-button pdmshell-button-primary" href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell">Install Program (MSI Installer)</a>
+      <a class="pdmshell-button pdmshell-button-primary" href="howtoinstall.md">Install PDMShell</a>
       <a class="pdmshell-button pdmshell-button-secondary" href="addin/installation.md">Install PDM Add-in</a>
       <a class="pdmshell-button pdmshell-button-secondary" href="licensing.md">Licensing</a>
     </div>
@@ -288,8 +288,8 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
     <p>Install the pieces you need, then choose the licensing model that matches how your team will use PDMShell.</p>
     <div class="pdmshell-grid">
       <a class="pdmshell-card" href="howtoinstall.md">
-        <h3>Install PDMShell (MSI installer)</h3>
-        <p>Install the standalone desktop app for command-line work, script editing, and single-machine activation.</p>
+        <h3>Install or update PDMShell</h3>
+        <p>Download the signed VeloPack installer for the standalone desktop app, or update an existing per-user installation.</p>
       </a>
       <a class="pdmshell-card" href="addin/installation.md">
         <h3>Install PDM Add-in</h3>

@@ -90,9 +90,17 @@
 <p>Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in updates, script library templates, bug fixes, and upgrade notes.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>To update PDMShell properly, download the latest version, uninstall PDMShell and
-then install the latest version. Do not update installed version.</p>
+<p>PDMShell 4.0.50 and newer use a signed per-user VeloPack installer. The updater can replace an existing VeloPack installation without a manual uninstall or administrator privileges.</p>
 </div>
+<h2 id="4050-2026-07-31">4.0.50 (2026-07-31)</h2>
+<ul>
+<li>Replaced the legacy MSI distribution with <code>pdmcli_installer.zip</code>, containing the signed <code>pdmcli_installer.exe</code> VeloPack installer.</li>
+<li>Added a per-user installation under <code>%LOCALAPPDATA%\Blue Byte Systems\PDMShell</code>, including Desktop and Start menu shortcuts and a Windows Installed apps entry.</li>
+<li>Updated PDMShell and the updater to handle VeloPack install, update, and uninstall lifecycle hooks without opening the application during installer operations.</li>
+<li>Updated PDMShell Updater to download the ZIP to a temporary folder, extract it, run the installer silently, and start the new application from the VeloPack <code>current</code> folder.</li>
+<li>Removed the updater's administrator requirement, UAC launch, and elevation shield UI.</li>
+<li>Updated executable lookup logic to prefer the VeloPack <code>current</code> folder before legacy Program Files locations.</li>
+</ul>
 <h2 id="4049-2026-07-30">4.0.49 (2026-07-30)</h2>
 <ul>
 <li>Updated file-specific placeholders, PDM variables, and expressions so they are evaluated when each script command runs instead of before the entire script starts.</li>

@@ -109,8 +109,7 @@
 <p>If the computer has internet access, use <a href="license-activation.html">License Activation</a>.</p>
 <p>If the computer is air-gapped or cannot reach the license server, use <a href="offline-activation.html">Offline Activation</a>.</p>
 <h2 id="how-do-i-install-or-update-pdmshell">How Do I Install Or Update PDMShell?</h2>
-<p>Use <a href="howtoinstall.html">PDMShell standalone installation</a>. For updates, uninstall the existing version first, then install the latest version.</p>
-<p>Do not install a new version over the installed version unless the installation article specifically says that workflow is supported.</p>
+<p>Use <a href="howtoinstall.html">PDMShell standalone installation</a>. Version 4.0.50 and newer use a signed per-user VeloPack installer. You can install a newer version over the existing VeloPack installation; a manual uninstall is not required.</p>
 <h2 id="where-do-i-download-the-pdmshell-add-in">Where Do I Download The PDMShell Add-in?</h2>
 <p>The PDMShell add-in is available with Premium. After your order is complete, download it from your Blue Byte Systems Inc <a href="https://bluebyte.biz/account">account page</a>, from the order confirmation email, or ask technical support after the order is made.</p>
 <p>See <a href="addin/installation.html">PDMShell add-in installation</a>.</p>
@@ -125,13 +124,7 @@
 <p>PDMShell requires Windows and SOLIDWORKS PDM Professional.</p>
 <p>SOLIDWORKS is required only for commands and scripts that open or automate SOLIDWORKS documents, such as macro-based workflows.</p>
 <h2 id="why-are-commands-missing-or-showing-old-descriptions-after-an-update">Why Are Commands Missing Or Showing Old Descriptions After An Update?</h2>
-<p>This usually means the installed files were not refreshed correctly.</p>
-<p>Use the clean update workflow:</p>
-<ol>
-<li>Uninstall the current PDMShell version.</li>
-<li>Download the latest installer.</li>
-<li>Install the latest version.</li>
-</ol>
+<p>This usually means an update did not finish. Close PDMShell and run the updater again. The updater downloads <code>pdmcli_installer.zip</code>, extracts and runs the signed installer silently, and then starts the active VeloPack version from the per-user installation.</p>
 <p>See <a href="howtoinstall.html">PDMShell standalone installation</a>.</p>
 <h2 id="how-do-i-get-help">How Do I Get Help?</h2>
 <p>For technical support, contact <code>support@bluebytesystemsinc.zohodesk.com</code>.</p>

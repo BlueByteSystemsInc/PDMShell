@@ -87,32 +87,32 @@
         <article data-uid="">
 <h1 id="pdmshell-standalone-installation">PDMShell standalone installation</h1>
 
-<p>PDMShell can be installed as a standalone desktop application from the Blue Byte Systems server or from the Microsoft Store. The Blue Byte Systems server installer is recommended because it provides the latest PDMShell version.</p>
+<p>PDMShell can be installed as a standalone desktop application from the Blue Byte Systems server or from the Microsoft Store. Starting with version 4.0.50, the Blue Byte Systems download uses a signed per-user VeloPack installer and does not require administrator privileges.</p>
 <p>For the SOLIDWORKS PDM add-in installer, see <a href="addin/installation.html">PDMShell add-in installation</a>.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The in-app updater is available in PDMShell 4.0.14 and newer.</p>
+<p>The VeloPack installer and non-elevated update workflow are available in PDMShell 4.0.50 and newer.</p>
 </div>
 <hr>
 <h2 id="install-from-the-blue-byte-systems-server">Install From The Blue Byte Systems Server</h2>
-<p>Download the latest PDMShell installer from the Blue Byte Systems server:</p>
+<p>Download <code>pdmcli_installer.zip</code> from the Blue Byte Systems server:</p>
 <div align="center">
   <a href="https://bluebyte.biz/wp-json/slm_custom/downloadpdmshell" style="display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:6px;background:#0078D4;color:#ffffff;text-decoration:none;font-weight:600;border:1px solid #106EBE;">Download PDMShell latest version</a>
 </div>
-<p>If your browser warns that the installer is unverified, choose <code>Download Anyway</code> or <code>Keep</code> to continue.</p>
+<p>The ZIP contains the signed executable <code>pdmcli_installer.exe</code>.</p>
 <div align="center">
   <img src="/images/image.png" alt="Safe Browsing Warning" style="max-width:480px;width:100%;height:auto;">
 </div>
-<p>If Chrome completely blocks the download before it finishes, you can temporarily lower Safe Browsing:</p>
+<p>After downloading:</p>
 <ol>
-<li>Open Chrome.</li>
-<li>Select the three dots menu in the top-right corner.</li>
-<li>Go to <code>Settings</code> &gt; <code>Privacy and security</code> &gt; <code>Security</code>.</li>
-<li>Under <code>Safe Browsing</code>, temporarily select <code>No protection (not recommended)</code>.</li>
-<li>Try the PDMShell download again.</li>
-<li>After the download completes, turn Safe Browsing back on.</li>
+<li>Extract <code>pdmcli_installer.zip</code>.</li>
+<li>Double-click <code>pdmcli_installer.exe</code>.</li>
+<li>Wait for the installation to complete and PDMShell to open.</li>
 </ol>
-<p>After downloading, double-click the installer and follow the on-screen instructions. You may need administrator privileges to install PDMShell.</p>
+<p>The installer registers PDMShell in Windows Installed apps and creates Desktop and Start menu shortcuts. It installs the application for the current user under:</p>
+<pre><code class="lang-text">%LOCALAPPDATA%\Blue Byte Systems\PDMShell
+</code></pre>
+<p>VeloPack stores the active application files in the <code>current</code> subfolder. Future versions replace the active version without requiring a manual uninstall.</p>
 <hr>
 <h2 id="install-from-the-microsoft-store">Install From The Microsoft Store</h2>
 <ol>
@@ -126,38 +126,23 @@
 <p>The Microsoft Store does not automatically update PDMShell. If you installed PDMShell from the Microsoft Store, you may need to uninstall it and reinstall the latest version manually.</p>
 <hr>
 <h2 id="update-from-inside-pdmshell">Update From Inside PDMShell</h2>
-<p>PDMShell 4.0.14 and newer can show an Update available dialog when a newer version is detected. The dialog shows the release notes for the latest version.</p>
+<p>PDMShell can show an Update available dialog when a newer version is detected. The dialog shows the release notes for the latest version.</p>
 <div align="center">
   <img src="../images/pdmshell-update-available.png" alt="PDMShell update available dialog" style="max-width:620px;width:100%;height:auto;">
 </div>
-<p>Select <code>Yes, update right now</code> to launch PDMShell Updater. Windows may show a User Account Control prompt because the updater needs administrator privileges to uninstall and install software.</p>
-<div align="center">
-  <img src="../images/pdmshell-updater-uac.png" alt="Windows User Account Control prompt for PDMShell Updater" style="max-width:460px;width:100%;height:auto;">
-</div>
-<p>When PDMShell Updater is running as administrator, the <code>Start</code> button is enabled. The updater also shows the local PDMShell version when an installed version is detected.</p>
-<div align="center">
-  <img src="../images/pdmshell-updater-admin.png" alt="PDMShell Updater running as administrator" style="max-width:640px;width:100%;height:auto;">
-</div>
+<p>Select <code>Yes, update right now</code> to launch PDMShell Updater as the current Windows user. The updater does not require a User Account Control prompt or administrator privileges. It also shows the local PDMShell version when an installed version is detected.</p>
 <p>Selecting <code>Start</code> will:</p>
 <ol>
-<li>Uninstall the existing local PDMShell version if one is detected.</li>
-<li>Download the latest PDMShell installer.</li>
-<li>Start the installer.</li>
+<li>Download <code>pdmcli_installer.zip</code> to a unique temporary folder.</li>
+<li>Extract the signed <code>pdmcli_installer.exe</code>.</li>
+<li>Run the VeloPack installer silently for the current user.</li>
+<li>Replace the installed version while keeping the PDMShell application identity and shortcuts.</li>
+<li>Start <code>%LOCALAPPDATA%\Blue Byte Systems\PDMShell\current\pdmcli.exe</code>.</li>
 </ol>
 <p>Use <code>Download Manually</code> if you prefer to download the installer yourself. Use <code>Request Help</code> to open this updater help section.</p>
 <hr>
-<h2 id="run-the-updater-as-administrator">Run The Updater As Administrator</h2>
-<p>PDMShell Updater must run as administrator before it can uninstall or install PDMShell. If the updater is not running as administrator, <code>Start</code> is disabled and the updater shows a red alert explaining the issue.</p>
-<p>Close the updater and launch it as administrator to continue.</p>
-<div align="center">
-  <img src="../images/pdmshell-updater-not-admin.png" alt="PDMShell Updater not running as administrator" style="max-width:640px;width:100%;height:auto;">
-</div>
-<hr>
-<h2 id="fix-update-problems">Fix Update Problems</h2>
-<p>After an update, new commands may appear as <code>N/A</code> in the help command if PDMShell is still loading files from the previous installation. Uninstall PDMShell and reinstall the latest version to refresh the command resources.</p>
-<div align="center">
-  <img src="../images/updateissue.png" alt="PDMShell update issue example" style="max-width:720px;width:100%;height:auto;">
-</div>
+<h2 id="common-update-issues">Common Update Issues</h2>
+<p>If an update is interrupted, close PDMShell and run the updater again. VeloPack keeps a consistent installed application identity and replaces the active <code>current</code> folder during a successful update. Use Windows Installed apps to uninstall PDMShell only when you want to remove it completely.</p>
 <hr>
 <h2 id="system-requirements">System Requirements</h2>
 <p>To ensure PDMShell runs smoothly, your system must meet the following requirements:</p>

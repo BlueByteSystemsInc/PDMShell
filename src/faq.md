@@ -40,9 +40,7 @@ If the computer is air-gapped or cannot reach the license server, use [Offline A
 
 ## How Do I Install Or Update PDMShell?
 
-Use [PDMShell standalone installation](howtoinstall.md). For updates, uninstall the existing version first, then install the latest version.
-
-Do not install a new version over the installed version unless the installation article specifically says that workflow is supported.
+Use [PDMShell standalone installation](howtoinstall.md). Version 4.0.50 and newer use a signed per-user VeloPack installer. You can install a newer version over the existing VeloPack installation; a manual uninstall is not required.
 
 ## Where Do I Download The PDMShell Add-in?
 
@@ -72,13 +70,7 @@ SOLIDWORKS is required only for commands and scripts that open or automate SOLID
 
 ## Why Are Commands Missing Or Showing Old Descriptions After An Update?
 
-This usually means the installed files were not refreshed correctly.
-
-Use the clean update workflow:
-
-1. Uninstall the current PDMShell version.
-2. Download the latest installer.
-3. Install the latest version.
+This usually means an update did not finish. Close PDMShell and run the updater again. The updater downloads `pdmcli_installer.zip`, extracts and runs the signed installer silently, and then starts the active VeloPack version from the per-user installation.
 
 See [PDMShell standalone installation](howtoinstall.md).
 
