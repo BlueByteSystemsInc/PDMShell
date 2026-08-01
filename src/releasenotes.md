@@ -9,23 +9,20 @@ keywords: PDMShell changelog, PDMShell release notes, SOLIDWORKS PDM automation,
 Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in updates, script library templates, bug fixes, and upgrade notes.
 
 >[!Important]
-> PDMShell 4.0.50 and newer use a signed per-user VeloPack installer. The updater can replace an existing VeloPack installation without a manual uninstall or administrator privileges.
+> PDMShell 4.0.50 and newer use a signed per-user installer. Updates replace the existing installation automatically without requiring a manual uninstall or administrator privileges.
 
 ## 4.0.51 (2026-07-31)
-- Added the bundled `pdmshell` MCP server for Claude Desktop, enabling command discovery and PDMShell command execution through the local SOLIDWORKS PDM environment.
-- Added implementation-derived discovery for all PDMShell commands and parameters, including the complete search-expression grammar, tokens, variable operators, result shaping, escaping, and examples.
-- Added automatic Claude Desktop registration after VeloPack installation and update, plus clean removal during uninstall.
-- Added `pdmshell_version` so Claude can report the installed MCP, PDMShell Core, protocol, and runtime versions without a vault login.
-- Versioned, built, signed, installed, and updated the MCP server together with PDMShell so their release versions remain aligned.
-- Reused the installed local PDMShell machine license and normal command license enforcement for MCP operations.
+- Added Claude Desktop integration for discovering and running PDMShell commands, including command parameters and advanced searches.
+- Added automatic Claude setup, updates, removal, and version reporting through the bundled `pdmshell` connection.
+- Claude uses the existing local PDMShell machine license and the same PDMShell version.
 
 ## 4.0.50 (2026-07-31)
-- Replaced the legacy MSI distribution with `pdmcli_installer.zip`, containing the signed `pdmcli_installer.exe` VeloPack installer.
+- Replaced the legacy MSI distribution with `pdmcli_installer.zip`, containing the signed `pdmcli_installer.exe`.
 - Added a per-user installation under `%LOCALAPPDATA%\Blue Byte Systems\PDMShell`, including Desktop and Start menu shortcuts and a Windows Installed apps entry.
-- Updated PDMShell and the updater to handle VeloPack install, update, and uninstall lifecycle hooks without opening the application during installer operations.
-- Updated PDMShell Updater to download the ZIP to a temporary folder, extract it, run the installer silently, and start the new application from the VeloPack `current` folder.
+- Improved installation, update, and uninstall handling so the PDMShell window does not open during setup operations.
+- Updated PDMShell Updater to download the ZIP to a temporary folder, extract it, install the update silently, and start the updated application.
 - Removed the updater's administrator requirement, UAC launch, and elevation shield UI.
-- Updated executable lookup logic to prefer the VeloPack `current` folder before legacy Program Files locations.
+- Updated application lookup so PDMShell reliably starts the current installed version while remaining compatible with older Program Files installations.
 
 ## 4.0.49 (2026-07-30)
 - Updated file-specific placeholders, PDM variables, and expressions so they are evaluated when each script command runs instead of before the entire script starts.
