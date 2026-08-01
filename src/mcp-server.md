@@ -1,75 +1,157 @@
 ---
-title: PDMShell MCP Server for Claude Desktop | Version 4.0.51
-description: Use the bundled PDMShell MCP server to discover and run SOLIDWORKS PDM commands from Claude Desktop with the local PDMShell machine license.
-keywords: PDMShell MCP server, Claude Desktop, SOLIDWORKS PDM AI, Model Context Protocol, pdmshell 4.0.51
+title: Use PDMShell with Claude Desktop | Version 4.0.51
+description: Connect Claude Desktop to PDMShell and use natural language to discover and run SOLIDWORKS PDM commands.
+keywords: PDMShell MCP server, Claude Desktop, SOLIDWORKS PDM AI, Model Context Protocol, PDMShell 4.0.51
 ---
 
-# PDMShell MCP Server
+<img src="../images/claude.svg" alt="Claude logo" width="56">
 
-PDMShell 4.0.51 introduces a bundled [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for Claude Desktop. It lets Claude discover PDMShell commands, understand their parameters and search expressions, and run commands through the same PDMShell command engine used by the desktop application.
+# Use PDMShell with Claude Desktop
+
+PDMShell 4.0.51 lets you work with SOLIDWORKS PDM from Claude Desktop. You can ask questions in everyday language, explore available PDMShell commands, build searches, and run approved operations in your local vault.
+
+You do not need to configure the connection manually. Install or update PDMShell, restart Claude Desktop, and Claude will see a connection named **pdmshell**.
 
 >[!Important]
-> The MCP server ships with PDMShell and always uses the same release version. PDMShell 4.0.51 installs MCP server 4.0.51; updating PDMShell updates the local MCP server at the same time.
+> PDMShell and its Claude integration are installed and updated together. Their version numbers always match.
 
-## Automatic Claude Desktop setup
+## Get started
 
-The signed VeloPack installer includes `pdmcli.mcp.exe` and registers it in Claude Desktop as `pdmshell` after installation. An update refreshes the registration so Claude points to the MCP executable in the current PDMShell version folder. Uninstalling PDMShell removes the `pdmshell` entry without removing unrelated Claude settings.
+1. [Install or update PDMShell](howtoinstall.md).
+2. Close Claude Desktop completely if it is running.
+3. Start Claude Desktop again.
+4. Ask Claude: **What version of PDMShell is installed?**
 
-Restart Claude Desktop after installing or updating PDMShell so it reloads the MCP configuration.
+Claude should use the `pdmshell_version` tool and show matching PDMShell and MCP server versions. For PDMShell 4.0.51, both versions are `4.0.51.0`.
 
-## Licensing and vault access
+## Things you can ask Claude
 
-The MCP server uses the local PDMShell machine license. It does not maintain a separate license or require a separate activation. License limits enforced by PDMShell also apply when a command is executed through Claude.
+Try prompts like these:
 
-Version, license, command, parameter, search, and vault-view discovery do not require an active vault login. Commands that access vault content require Claude to establish a PDMShell session with the appropriate vault first.
+> Show me the PDMShell commands that are available.
 
-## Available MCP tools
+> Explain every parameter for the PDMShell search command.
 
-| Tool | Purpose |
+> Show the PDM vault views available on this computer.
+
+> Build a search for checked-out SOLIDWORKS part files where the Description variable contains "bracket".
+
+> Log in to the Engineering vault, then show me the files in the current folder.
+
+Claude can look up command syntax and parameter details before it creates a command. It can also explain PDMShell search fields, variable expressions, operators, sorting, grouping, duplicate handling, and escaping.
+
+## Connect to a vault
+
+Claude can inspect PDMShell without logging in, but it must log in before reading or changing vault content.
+
+You can simply ask:
+
+> Show my available PDM vaults and help me log in to one.
+
+After login, the connection keeps the same PDMShell session. Claude can continue working with the selected vault and current folder without starting over for every command.
+
+## Your PDMShell license
+
+Claude uses the PDMShell machine license already installed on your computer. There is no separate MCP license and no second activation step.
+
+If no Premium license is installed, PDMShell continues with its normal Free-version limits. You can ask Claude to show the current license status at any time.
+
+Learn more about [machine licenses](machine-license.md) or [compare Free and Premium](FREEVSPREMIUM.md).
+
+## Review commands before running them
+
+Claude can run PDMShell commands that modify PDM files and data. Before approving a large, destructive, or unfamiliar operation, ask Claude to:
+
+1. Explain the command.
+2. Show the complete command and all parameters.
+3. Describe which files or folders it may affect.
+4. Wait for your approval before running it.
+
+For extra safety, begin with a search or listing command so you can review the affected items first.
+
+## If Claude cannot find PDMShell
+
+Try these steps:
+
+1. Confirm that PDMShell 4.0.51 or newer is installed.
+2. Close and restart Claude Desktop.
+3. Open Claude Desktop's integrations and confirm that **pdmshell** appears.
+4. Ask Claude: **Use pdmshell_version and show me the result.**
+5. If vault commands fail, ask Claude to list the available vaults and log in first.
+
+If the connection still does not appear, reinstall or update PDMShell and restart Claude Desktop.
+
+## Check or edit Claude Desktop's configuration
+
+PDMShell normally adds the connection automatically. If **pdmshell** is missing from Claude Desktop, you can check Claude's configuration file manually.
+
+Close Claude Desktop before editing the file. Make a backup copy first so you can restore your existing integrations if the JSON is entered incorrectly.
+
+Claude Desktop commonly stores the file in one of these locations:
+
+- Standard Claude Desktop installation: `%APPDATA%\Claude\claude_desktop_config.json`
+- Microsoft Store installation: `%LOCALAPPDATA%\Packages\Claude_*\LocalCache\Roaming\Claude\claude_desktop_config.json`
+
+The `Claude_*` folder name varies. Open `%LOCALAPPDATA%\Packages` in File Explorer, find the folder whose name begins with `Claude_`, and then open `LocalCache\Roaming\Claude`.
+
+If `claude_desktop_config.json` does not exist, create it as a plain text file with that exact name. Make sure Windows has not added a hidden `.txt` extension.
+
+The file should contain a `pdmshell` entry like this:
+
+```json
+{
+  "mcpServers": {
+    "pdmshell": {
+      "command": "C:\\Users\\YourName\\AppData\\Local\\Blue Byte Systems\\PDMShell\\current\\MCP\\pdmcli.mcp.exe",
+      "args": []
+    }
+  }
+}
+```
+
+Replace `YourName` with your Windows user-folder name. You can also browse to `pdmcli.mcp.exe`, copy its complete path, and use that path for `command`. Keep the doubled backslashes because Claude's configuration uses JSON syntax.
+
+If Claude already has other MCP servers, keep them and add `pdmshell` inside the existing `mcpServers` object. Separate the entries with a comma:
+
+```json
+{
+  "mcpServers": {
+    "another-server": {
+      "command": "C:\\Tools\\another-server.exe"
+    },
+    "pdmshell": {
+      "command": "C:\\Users\\YourName\\AppData\\Local\\Blue Byte Systems\\PDMShell\\current\\MCP\\pdmcli.mcp.exe",
+      "args": []
+    }
+  }
+}
+```
+
+Save the file, restart Claude Desktop, and ask:
+
+> Use pdmshell_version and show me the result.
+
+### Common Claude configuration problems
+
+- **PDMShell does not appear:** Fully exit Claude Desktop from the system tray and start it again.
+- **Server disconnected:** Confirm that Claude's `command` path exists and ends with `MCP\pdmcli.mcp.exe`.
+- **Configuration does not load:** Check for a missing comma, extra comma, unmatched brace, or single backslashes in the JSON file.
+- **An old PDMShell version appears:** Update or reinstall PDMShell, then restart Claude Desktop.
+- **Other Claude integrations disappeared:** Restore your backup and add only the `pdmshell` entry inside the existing `mcpServers` object.
+- **Version works but vault commands fail:** Ask Claude to list available vaults and log in before running a vault command.
+
+## Available tools
+
+You normally do not need to call these tools by name—Claude chooses the appropriate one for your request.
+
+| Tool | What it does |
 | --- | --- |
-| `pdmshell_version` | Reports the MCP server, PDMShell, Core, protocol, and runtime versions without requiring a vault login. |
-| `pdmcli_license_status` | Reports the locally installed PDMShell machine-license tier. |
-| `pdmcli_list_vaults` | Lists SOLIDWORKS PDM vault views available to the current Windows user. |
-| `pdmcli_list_commands` | Lists available PDMShell commands, descriptions, and required license tiers. |
-| `pdmcli_describe_command` | Describes every parameter, short name, requirement, accepted type, and example for a command. |
-| `pdmcli_describe_search` | Explains search tokens, PDM variable expressions, operators, sorting, grouping, duplicate handling, escaping, defaults, and examples. |
-| `pdmcli_execute` | Runs a complete PDMShell command in a persistent MCP session. |
+| `pdmshell_version` | Shows the installed PDMShell and MCP server versions. |
+| `pdmcli_license_status` | Shows the local PDMShell license status. |
+| `pdmcli_list_vaults` | Lists PDM vault views available on this computer. |
+| `pdmcli_list_commands` | Lists available PDMShell commands. |
+| `pdmcli_describe_command` | Explains a command and all its parameters. |
+| `pdmcli_describe_search` | Explains PDMShell searches and provides examples. |
+| `pdmcli_execute` | Runs a PDMShell command in the current session. |
 
-## Verify the installed version
-
-Ask Claude:
-
-> Use `pdmshell_version` and show the installed PDMShell and MCP server versions.
-
-For 4.0.51, `mcpVersion` and `pdmShellVersion` should both report `4.0.51.0`. The version is also supplied to Claude when the MCP connection is initialized.
-
-## Discover commands and parameters
-
-Claude can inspect the implementation-derived command catalog before constructing a command. For example:
-
-> List the available PDMShell commands, then describe every parameter for the `search` command.
-
-> Explain the PDMShell search-expression grammar and give me an example that finds checked-out SOLIDWORKS part files by a PDM variable value.
-
-The discovery tools allow Claude to reason about the installed PDMShell command surface instead of relying on a fixed prompt or a separately maintained command list.
-
-## Run a vault command
-
-Command execution uses a persistent session, so Claude can log in and then run subsequent commands against the same vault and current directory. A typical workflow is:
-
-1. Call `pdmcli_list_vaults` to identify an available vault view.
-2. Inspect the `login` command with `pdmcli_describe_command`.
-3. Run the login command through `pdmcli_execute`.
-4. Inspect the intended operation and parameters before running it.
-
-Commands executed through MCP can modify PDM data. Review generated commands before approving destructive or broad operations.
-
-## Troubleshooting
-
-- Restart Claude Desktop after installing or updating PDMShell.
-- Confirm that `pdmshell` appears in Claude Desktop's MCP integrations.
-- Ask Claude to call `pdmshell_version`; this works without a vault login and confirms that the server can start.
-- Use `pdmcli_list_vaults` to verify that the current Windows user has a local PDM vault view.
-- If a vault command fails, log in to the required vault before retrying it.
-
-See [Installation](howtoinstall.md), [Machine License](machine-license.md), [Advanced Search](advancedsearch.md), and the [Command Reference](COMMANDS.md) for related guidance.
+Continue with [Advanced Search](advancedsearch.md), the [Command Reference](COMMANDS.md), or the [PDMShell release notes](releasenotes.md).
