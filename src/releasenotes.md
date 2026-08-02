@@ -30,6 +30,8 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 - Claude uses the existing local PDMShell machine license and the same PDMShell version.
 
 ## 4.0.50 (2026-07-31)
+>[!Important]
+> PDMShell 4.0.50 introduces breaking changes for the update process. You must uninstall PDMShell 4.0.49 or older manually and download the latest version.
 - Replaced the legacy MSI distribution with `pdmcli_installer.zip`, containing the signed `pdmcli_installer.exe`.
 - Added a per-user installation under `%LOCALAPPDATA%\Blue Byte Systems\PDMShell`, including Desktop and Start menu shortcuts and a Windows Installed apps entry.
 - Improved installation, update, and uninstall handling so the PDMShell window does not open during setup operations.
