@@ -85,88 +85,88 @@
         </div>
 
         <article data-uid="">
-<h1 id="pdmshell-add-in-installation">PDMShell add-in installation</h1>
+<h1 id="pdmshell-add-in-installation" sourcefile="src/addin/installation.md" sourcestartlinenumber="5">PDMShell add-in installation</h1>
 
-<p>Install the PDMShell add-in in the SOLIDWORKS PDM vault where the automation should run. The add-in is available with the premium version of PDMShell and can be deployed from your Blue Byte Systems Inc account or with PDMDeploy.</p>
-<p>For the standalone PDMShell desktop application, see <a href="../howtoinstall.html">PDMShell standalone installation</a>.</p>
-<p>After the add-in is loaded in the vault, open the Script Editor command from the PDMShell add-in menu.</p>
-<h2 id="choose-an-installation-path">Choose an installation path</h2>
-<p>Choose the installation path that matches the vault environment.</p>
-<table>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="7">Install the PDMShell add-in in the SOLIDWORKS PDM vault where the automation should run. The add-in is available with the premium version of PDMShell and can be deployed from your Blue Byte Systems Inc account or with PDMDeploy.</p>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="9">For the standalone PDMShell desktop application, see <a href="../howtoinstall.html" sourcefile="src/addin/installation.md" sourcestartlinenumber="9">PDMShell standalone installation</a>.</p>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="11">After the add-in is loaded in the vault, open the Script Editor command from the PDMShell add-in menu.</p>
+<h2 id="choose-an-installation-path" sourcefile="src/addin/installation.md" sourcestartlinenumber="13">Choose an installation path</h2>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="15">Choose the installation path that matches the vault environment.</p>
+<table sourcefile="src/addin/installation.md" sourcestartlinenumber="17">
 <thead>
-<tr>
-<th>Environment</th>
-<th>Recommended options</th>
+<tr sourcefile="src/addin/installation.md" sourcestartlinenumber="17">
+<th sourcefile="src/addin/installation.md" sourcestartlinenumber="17">Environment</th>
+<th sourcefile="src/addin/installation.md" sourcestartlinenumber="17">Recommended options</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Standard connected system</td>
-<td>Use PDMDeploy, or download the PDMShell <code>.cex</code> file from the PDMShell Download Center.</td>
+<tr sourcefile="src/addin/installation.md" sourcestartlinenumber="19">
+<td sourcefile="src/addin/installation.md" sourcestartlinenumber="19">Standard connected system</td>
+<td sourcefile="src/addin/installation.md" sourcestartlinenumber="19">Use PDMDeploy, or download the PDMShell <code sourcefile="src/addin/installation.md" sourcestartlinenumber="19">.cex</code> file from the PDMShell Download Center.</td>
 </tr>
-<tr>
-<td>Restricted or air-gapped system</td>
-<td>Use the Microsoft-hosted PDMShell Download Center, then use offline activation if the vault cannot reach the license service.</td>
+<tr sourcefile="src/addin/installation.md" sourcestartlinenumber="20">
+<td sourcefile="src/addin/installation.md" sourcestartlinenumber="20">Restricted or air-gapped system</td>
+<td sourcefile="src/addin/installation.md" sourcestartlinenumber="20">Use the Microsoft-hosted PDMShell Download Center, then use offline activation if the vault cannot reach the license service.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="standard-connected-systems">Standard connected systems</h2>
-<p>For a standard vault that can reach Blue Byte Systems services, install the PDMShell add-in with PDMDeploy or by downloading the add-in <code>.cex</code> file.</p>
-<h3 id="option-1-install-with-pdmdeploy">Option 1: Install with PDMDeploy</h3>
-<p>PDMDeploy can install standard Blue Byte Systems add-ins into a SOLIDWORKS PDM vault.</p>
+<h2 id="standard-connected-systems" sourcefile="src/addin/installation.md" sourcestartlinenumber="22">Standard connected systems</h2>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="24">For a standard vault that can reach Blue Byte Systems services, install the PDMShell add-in with PDMDeploy or by downloading the add-in <code sourcefile="src/addin/installation.md" sourcestartlinenumber="24">.cex</code> file.</p>
+<h3 id="option-1-install-with-pdmdeploy" sourcefile="src/addin/installation.md" sourcestartlinenumber="26">Option 1: Install with PDMDeploy</h3>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="28">PDMDeploy can install standard Blue Byte Systems add-ins into a SOLIDWORKS PDM vault.</p>
 <div align="center">
   <a href="https://docs.bluebyte.biz/pdmdeploy/PDMDeploy.cex" style="display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:6px;background:#0078D4;color:#ffffff;text-decoration:none;font-weight:600;border:1px solid #106EBE;">Download PDMDeploy</a>
 </div>
-<p>Use this public activation code for standard Blue Byte Systems products:</p>
-<pre><code class="lang-text">E2A50448-9F15-42D9-B2F3-290409E81F94
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="34">Use this public activation code for standard Blue Byte Systems products:</p>
+<pre><code class="lang-text" sourcefile="src/addin/installation.md" sourcestartlinenumber="36">E2A50448-9F15-42D9-B2F3-290409E81F94
 </code></pre>
-<p>If Blue Byte Systems developed a custom solution for you, use the private activation code from your welcome email instead.</p>
-<p>After downloading <code>PDMDeploy.cex</code>, unblock the file before installing it:</p>
-<ol>
-<li>Right-click <code>PDMDeploy.cex</code>.</li>
-<li>Select <code>Properties</code>.</li>
-<li>Check <code>Unblock</code>.</li>
-<li>Select <code>OK</code>.</li>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="40">If Blue Byte Systems developed a custom solution for you, use the private activation code from your welcome email instead.</p>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="42">After downloading <code sourcefile="src/addin/installation.md" sourcestartlinenumber="42">PDMDeploy.cex</code>, unblock the file before installing it:</p>
+<ol sourcefile="src/addin/installation.md" sourcestartlinenumber="44">
+<li sourcefile="src/addin/installation.md" sourcestartlinenumber="44">Right-click <code sourcefile="src/addin/installation.md" sourcestartlinenumber="44">PDMDeploy.cex</code>.</li>
+<li sourcefile="src/addin/installation.md" sourcestartlinenumber="45">Select <code sourcefile="src/addin/installation.md" sourcestartlinenumber="45">Properties</code>.</li>
+<li sourcefile="src/addin/installation.md" sourcestartlinenumber="46">Check <code sourcefile="src/addin/installation.md" sourcestartlinenumber="46">Unblock</code>.</li>
+<li sourcefile="src/addin/installation.md" sourcestartlinenumber="47">Select <code sourcefile="src/addin/installation.md" sourcestartlinenumber="47">OK</code>.</li>
 </ol>
-<p>To install PDMDeploy after downloading it, follow the <a href="https://docs.bluebyte.biz/src/cdpdm.html">PDMDeploy installation article</a>.</p>
-<p>After PDMDeploy is installed, open the SOLIDWORKS PDM Administration tool and log in to the vault with a PDM user that has the <code>Edit Add-Ins</code> permission.</p>
-<h3 id="option-2-download-the-add-in-cex-file">Option 2: Download the add-in CEX file</h3>
-<p>After your order is complete, download the PDMShell add-in from your Blue Byte Systems Inc <a href="https://bluebyte.biz/account">account page</a>, from the order confirmation email, or from the PDMShell Download Center.</p>
-<p><a class="bbs-download-button" href="https://bluebytebiz-my.sharepoint.com/:f:/g/personal/amen_bluebyte_biz/IgC-eoPU0Z9XQpufSHG6IW0GAUCFFHiVdPxCq_qlFf5fzm8?e=HSylmX">Open PDMShell Download Center</a></p>
-<p>If you cannot find the add-in installer after ordering, contact Blue Byte Systems technical support.</p>
-<p>For standard connected systems, use regular online activation from <a href="license-manager.html">Manage PDMShell add-in licenses</a>.</p>
-<h2 id="restricted-or-air-gapped-systems">Restricted or air-gapped systems</h2>
-<p>Some vault environments cannot reach Blue Byte Systems servers directly, or only allow Microsoft-hosted locations such as SharePoint and OneDrive. For these systems, use the PDMShell Download Center folder to download the PDMShell <code>.cex</code> file:</p>
-<p><a class="bbs-download-button" href="https://bluebytebiz-my.sharepoint.com/:f:/g/personal/amen_bluebyte_biz/IgC-eoPU0Z9XQpufSHG6IW0GAUCFFHiVdPxCq_qlFf5fzm8?e=HSylmX">Open PDMShell Download Center</a></p>
-<p>The folder contains PDMShell <code>.cex</code> files that can be downloaded through Microsoft-hosted infrastructure and installed manually in the SOLIDWORKS PDM Administration tool.</p>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="49">To install PDMDeploy after downloading it, follow the <a href="https://docs.bluebyte.biz/src/cdpdm.html" sourcefile="src/addin/installation.md" sourcestartlinenumber="49">PDMDeploy installation article</a>.</p>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="51">After PDMDeploy is installed, open the SOLIDWORKS PDM Administration tool and log in to the vault with a PDM user that has the <code sourcefile="src/addin/installation.md" sourcestartlinenumber="51">Edit Add-Ins</code> permission.</p>
+<h3 id="option-2-download-the-add-in-cex-file" sourcefile="src/addin/installation.md" sourcestartlinenumber="53">Option 2: Download the add-in CEX file</h3>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="55">After your order is complete, download the PDMShell add-in from your Blue Byte Systems Inc <a href="https://bluebyte.biz/account" sourcefile="src/addin/installation.md" sourcestartlinenumber="55">account page</a>, from the order confirmation email, or from the PDMShell Download Center.</p>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="57"><a class="bbs-download-button" href="https://bluebytebiz-my.sharepoint.com/:f:/g/personal/amen_bluebyte_biz/IgC-eoPU0Z9XQpufSHG6IW0GAUCFFHiVdPxCq_qlFf5fzm8?e=HSylmX">Open PDMShell Download Center</a></p>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="59">If you cannot find the add-in installer after ordering, contact Blue Byte Systems technical support.</p>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="61">For standard connected systems, use regular online activation from <a href="license-manager.html" sourcefile="src/addin/installation.md" sourcestartlinenumber="61">Manage PDMShell add-in licenses</a>.</p>
+<h2 id="restricted-or-air-gapped-systems" sourcefile="src/addin/installation.md" sourcestartlinenumber="63">Restricted or air-gapped systems</h2>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="65">Some vault environments cannot reach Blue Byte Systems servers directly, or only allow Microsoft-hosted locations such as SharePoint and OneDrive. For these systems, use the PDMShell Download Center folder to download the PDMShell <code sourcefile="src/addin/installation.md" sourcestartlinenumber="65">.cex</code> file:</p>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="67"><a class="bbs-download-button" href="https://bluebytebiz-my.sharepoint.com/:f:/g/personal/amen_bluebyte_biz/IgC-eoPU0Z9XQpufSHG6IW0GAUCFFHiVdPxCq_qlFf5fzm8?e=HSylmX">Open PDMShell Download Center</a></p>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="69">The folder contains PDMShell <code sourcefile="src/addin/installation.md" sourcestartlinenumber="69">.cex</code> files that can be downloaded through Microsoft-hosted infrastructure and installed manually in the SOLIDWORKS PDM Administration tool.</p>
 <p align="center">
   <img src="../../images/pdmshell-download-center.png" alt="PDMShell Download Center folder in Microsoft OneDrive showing a PDMShell CEX file" style="max-width:860px;width:100%;height:auto;">
 </p>
-<p>After PDMShell TaskScript is installed, administrators can open the same folder from the PDM add-in menu:</p>
-<ol>
-<li>Open the SOLIDWORKS PDM Administration tool.</li>
-<li>Log in to the vault.</li>
-<li>Expand <code>Add-ins</code>.</li>
-<li>Right-click <code>PDMShell</code>.</li>
-<li>Select <code>PDMShell Download Center...</code>.</li>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="75">After PDMShell TaskScript is installed, administrators can open the same folder from the PDM add-in menu:</p>
+<ol sourcefile="src/addin/installation.md" sourcestartlinenumber="77">
+<li sourcefile="src/addin/installation.md" sourcestartlinenumber="77">Open the SOLIDWORKS PDM Administration tool.</li>
+<li sourcefile="src/addin/installation.md" sourcestartlinenumber="78">Log in to the vault.</li>
+<li sourcefile="src/addin/installation.md" sourcestartlinenumber="79">Expand <code sourcefile="src/addin/installation.md" sourcestartlinenumber="79">Add-ins</code>.</li>
+<li sourcefile="src/addin/installation.md" sourcestartlinenumber="80">Right-click <code sourcefile="src/addin/installation.md" sourcestartlinenumber="80">PDMShell</code>.</li>
+<li sourcefile="src/addin/installation.md" sourcestartlinenumber="81">Select <code sourcefile="src/addin/installation.md" sourcestartlinenumber="81">PDMShell Download Center...</code>.</li>
 </ol>
-<h2 id="manual-cex-installation">Manual CEX installation</h2>
-<p>To install a downloaded <code>.cex</code> file, open it with <code>File &gt; Open...</code> in the Administration tool, then drag the add-in from the CEX window onto the vault's <code>Add-ins</code> node.</p>
-<p>Use the SharePoint Download Center for installer files. Use <a href="../offline-activation.html">Offline Activation</a> or <a href="license-manager.html">Manage PDMShell add-in licenses</a> for license activation in restricted environments.</p>
-<h2 id="administrator-access">Administrator access</h2>
-<p>Only administrators should configure add-in scripts. A script can run PDMShell commands against vault files and folders, so test every script before making it available to general users.</p>
-<h2 id="license-management">License management</h2>
-<p>After the add-in is loaded, open the Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select <code>Manage PDMShell Licenses</code>.</p>
-<h2 id="updating-scripts">Updating scripts</h2>
-<p>The add-in reads script configuration from its settings when it initializes. If you change command menu items or event trigger points, reload the add-in in PDM so the command list and event hooks are registered again.</p>
-<h2 id="related-articles">Related articles</h2>
-<ul>
-<li><a href="script-editor.html">Script Editor</a></li>
-<li><a href="license-manager.html">Manage PDMShell add-in licenses</a></li>
-<li><a href="../license-pool.html">License Pool</a></li>
-<li><a href="../machine-license.html">Machine License</a></li>
-<li><a href="command-menu.html">Command menu scripts</a></li>
-<li><a href="trigger-points.html">Event trigger points</a></li>
+<h2 id="manual-cex-installation" sourcefile="src/addin/installation.md" sourcestartlinenumber="83">Manual CEX installation</h2>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="85">To install a downloaded <code sourcefile="src/addin/installation.md" sourcestartlinenumber="85">.cex</code> file, open it with <code sourcefile="src/addin/installation.md" sourcestartlinenumber="85">File &gt; Open...</code> in the Administration tool, then drag the add-in from the CEX window onto the vault's <code sourcefile="src/addin/installation.md" sourcestartlinenumber="85">Add-ins</code> node.</p>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="87">Use the SharePoint Download Center for installer files. Use <a href="../offline-activation.html" sourcefile="src/addin/installation.md" sourcestartlinenumber="87">Offline Activation</a> or <a href="license-manager.html" sourcefile="src/addin/installation.md" sourcestartlinenumber="87">Manage PDMShell add-in licenses</a> for license activation in restricted environments.</p>
+<h2 id="administrator-access" sourcefile="src/addin/installation.md" sourcestartlinenumber="89">Administrator access</h2>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="91">Only administrators should configure add-in scripts. A script can run PDMShell commands against vault files and folders, so test every script before making it available to general users.</p>
+<h2 id="license-management" sourcefile="src/addin/installation.md" sourcestartlinenumber="93">License management</h2>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="95">After the add-in is loaded, open the Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select <code sourcefile="src/addin/installation.md" sourcestartlinenumber="95">Manage PDMShell Licenses</code>.</p>
+<h2 id="updating-scripts" sourcefile="src/addin/installation.md" sourcestartlinenumber="97">Updating scripts</h2>
+<p sourcefile="src/addin/installation.md" sourcestartlinenumber="99">The add-in reads script configuration from its settings when it initializes. If you change command menu items or event trigger points, reload the add-in in PDM so the command list and event hooks are registered again.</p>
+<h2 id="related-articles" sourcefile="src/addin/installation.md" sourcestartlinenumber="101">Related articles</h2>
+<ul sourcefile="src/addin/installation.md" sourcestartlinenumber="103">
+<li sourcefile="src/addin/installation.md" sourcestartlinenumber="103"><a href="script-editor.html" sourcefile="src/addin/installation.md" sourcestartlinenumber="103">Script Editor</a></li>
+<li sourcefile="src/addin/installation.md" sourcestartlinenumber="104"><a href="license-manager.html" sourcefile="src/addin/installation.md" sourcestartlinenumber="104">Manage PDMShell add-in licenses</a></li>
+<li sourcefile="src/addin/installation.md" sourcestartlinenumber="105"><a href="../license-pool.html" sourcefile="src/addin/installation.md" sourcestartlinenumber="105">License Pool</a></li>
+<li sourcefile="src/addin/installation.md" sourcestartlinenumber="106"><a href="../machine-license.html" sourcefile="src/addin/installation.md" sourcestartlinenumber="106">Machine License</a></li>
+<li sourcefile="src/addin/installation.md" sourcestartlinenumber="107"><a href="command-menu.html" sourcefile="src/addin/installation.md" sourcestartlinenumber="107">Command menu scripts</a></li>
+<li sourcefile="src/addin/installation.md" sourcestartlinenumber="108"><a href="trigger-points.html" sourcefile="src/addin/installation.md" sourcestartlinenumber="108">Event trigger points</a></li>
 </ul>
 
 </article>

@@ -85,112 +85,112 @@
         </div>
 
         <article data-uid="">
-<h1 id="manage-pdmshell-add-in-licenses">Manage PDMShell add-in licenses</h1>
+<h1 id="manage-pdmshell-add-in-licenses" sourcefile="src/addin/license-manager.md" sourcestartlinenumber="5">Manage PDMShell add-in licenses</h1>
 
-<p>PDMShell add-in licenses can be managed from the SOLIDWORKS PDM Administration Tool. Use this page when the add-in is installed in a vault and you want pooled add-in licensing, or when you need to choose whether the add-in uses pooled vault seats or the local machine license.</p>
-<p>Open the Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select <code>Manage PDMShell Licenses</code>.</p>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="7">PDMShell add-in licenses can be managed from the SOLIDWORKS PDM Administration Tool. Use this page when the add-in is installed in a vault and you want pooled add-in licensing, or when you need to choose whether the add-in uses pooled vault seats or the local machine license.</p>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="9">Open the Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select <code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="9">Manage PDMShell Licenses</code>.</p>
 <p align="center">
   <img src="../../images/pdmshell-addin-license-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Manage PDMShell Licenses and PDMShell Download Center commands" style="max-width:520px;width:100%;height:auto;">
 </p>
-<p>The <code>PDMShell Licenses</code> window opens for the selected vault. Use this window to add license keys, activate pooled keys for the vault, generate offline activation files, choose the license mode, and review active pool borrows.</p>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="15">The <code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="15">PDMShell Licenses</code> window opens for the selected vault. Use this window to add license keys, activate pooled keys for the vault, generate offline activation files, choose the license mode, and review active pool borrows.</p>
 <p align="center">
   <img src="../../images/pdmshell-addin-license-manager.png" alt="PDMShell Licenses window in the SOLIDWORKS PDM Administration Tool" style="max-width:980px;width:100%;height:auto;">
 </p>
-<div class="NOTE">
+<div class="NOTE" sourcefile="src/addin/license-manager.md" sourcestartlinenumber="21">
 <h5>Note</h5>
-<p>Restricted or air-gapped vaults that only allow Microsoft-hosted downloads can use the add-in menu command <code>PDMShell Download Center...</code> to open the SharePoint folder that contains PDMShell <code>.cex</code> files. Use this license manager window for activation; use the Download Center for add-in installer files.</p>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="22">Restricted or air-gapped vaults that only allow Microsoft-hosted downloads can use the add-in menu command <code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="22">PDMShell Download Center...</code> to open the SharePoint folder that contains PDMShell <code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="22">.cex</code> files. Use this license manager window for activation; use the Download Center for add-in installer files.</p>
 </div>
-<h2 id="license-mode">License mode</h2>
-<p>The top of the window controls how the vault uses PDMShell licenses.</p>
-<ul>
-<li><code>Use license pool</code> lets the vault borrow from activated license keys stored in the vault.</li>
-<li><code>Use this machine's license</code> uses the local PDMShell license activated in the standalone PDMShell application on the current workstation.</li>
+<h2 id="license-mode" sourcefile="src/addin/license-manager.md" sourcestartlinenumber="24">License mode</h2>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="26">The top of the window controls how the vault uses PDMShell licenses.</p>
+<ul sourcefile="src/addin/license-manager.md" sourcestartlinenumber="28">
+<li sourcefile="src/addin/license-manager.md" sourcestartlinenumber="28"><code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="28">Use license pool</code> lets the vault borrow from activated license keys stored in the vault.</li>
+<li sourcefile="src/addin/license-manager.md" sourcestartlinenumber="29"><code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="29">Use this machine's license</code> uses the local PDMShell license activated in the standalone PDMShell application on the current workstation.</li>
 </ul>
-<p>Use standalone PDMShell settings for a license that belongs to one machine. Use this add-in license manager for pooled licenses that should be shared from the vault.</p>
-<p>For help choosing a mode, see <a href="../license-pool.html">License Pool</a> and <a href="../machine-license.html">Machine License</a>.</p>
-<h2 id="add-license-keys">Add license keys</h2>
-<p>Paste one or more PDMShell license keys in the <code>License key</code> box. You can separate keys with new lines, commas, or semicolons.</p>
-<p>Select <code>Add</code> to add the keys to the vault license list.</p>
-<h2 id="offline-activation">Offline activation</h2>
-<p>Use the <code>Offline activation</code> section when the vault cannot reach the Blue Byte Systems license service directly.</p>
-<ol>
-<li>Select the license row that needs an offline activation or deactivation.</li>
-<li>Select <code>Generate activation request</code> or <code>Generate deactivation request</code>.</li>
-<li>Email the generated request file to <code>info@bluebyte.biz</code> with a clear subject such as <code>PDMShell offline activation request</code>.</li>
-<li>When support returns the response file, select <code>Import response</code> on the same vault.</li>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="31">Use standalone PDMShell settings for a license that belongs to one machine. Use this add-in license manager for pooled licenses that should be shared from the vault.</p>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="33">For help choosing a mode, see <a href="../license-pool.html" sourcefile="src/addin/license-manager.md" sourcestartlinenumber="33">License Pool</a> and <a href="../machine-license.html" sourcefile="src/addin/license-manager.md" sourcestartlinenumber="33">Machine License</a>.</p>
+<h2 id="add-license-keys" sourcefile="src/addin/license-manager.md" sourcestartlinenumber="35">Add license keys</h2>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="37">Paste one or more PDMShell license keys in the <code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="37">License key</code> box. You can separate keys with new lines, commas, or semicolons.</p>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="39">Select <code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="39">Add</code> to add the keys to the vault license list.</p>
+<h2 id="offline-activation" sourcefile="src/addin/license-manager.md" sourcestartlinenumber="41">Offline activation</h2>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="43">Use the <code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="43">Offline activation</code> section when the vault cannot reach the Blue Byte Systems license service directly.</p>
+<ol sourcefile="src/addin/license-manager.md" sourcestartlinenumber="45">
+<li sourcefile="src/addin/license-manager.md" sourcestartlinenumber="45">Select the license row that needs an offline activation or deactivation.</li>
+<li sourcefile="src/addin/license-manager.md" sourcestartlinenumber="46">Select <code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="46">Generate activation request</code> or <code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="46">Generate deactivation request</code>.</li>
+<li sourcefile="src/addin/license-manager.md" sourcestartlinenumber="47">Email the generated request file to <code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="47">info@bluebyte.biz</code> with a clear subject such as <code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="47">PDMShell offline activation request</code>.</li>
+<li sourcefile="src/addin/license-manager.md" sourcestartlinenumber="48">When support returns the response file, select <code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="48">Import response</code> on the same vault.</li>
 </ol>
-<p>Offline request and response files are tied to the selected license and the current vault node. Import the response on the vault where the request was generated.</p>
-<p>If you do not receive an activation response, contact <code>info@bluebyte.biz</code> for help. This address only replies to activation issues.</p>
-<h2 id="license-list">License list</h2>
-<p>The license list shows the keys available to the vault.</p>
-<table>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="50">Offline request and response files are tied to the selected license and the current vault node. Import the response on the vault where the request was generated.</p>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="52">If you do not receive an activation response, contact <code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="52">info@bluebyte.biz</code> for help. This address only replies to activation issues.</p>
+<h2 id="license-list" sourcefile="src/addin/license-manager.md" sourcestartlinenumber="54">License list</h2>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="56">The license list shows the keys available to the vault.</p>
+<table sourcefile="src/addin/license-manager.md" sourcestartlinenumber="58">
 <thead>
-<tr>
-<th>Column</th>
-<th>Meaning</th>
+<tr sourcefile="src/addin/license-manager.md" sourcestartlinenumber="58">
+<th sourcefile="src/addin/license-manager.md" sourcestartlinenumber="58">Column</th>
+<th sourcefile="src/addin/license-manager.md" sourcestartlinenumber="58">Meaning</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Enabled</td>
-<td>Controls whether the key can be used by the add-in.</td>
+<tr sourcefile="src/addin/license-manager.md" sourcestartlinenumber="60">
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="60">Enabled</td>
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="60">Controls whether the key can be used by the add-in.</td>
 </tr>
-<tr>
-<td>License</td>
-<td>Shows the stored license key.</td>
+<tr sourcefile="src/addin/license-manager.md" sourcestartlinenumber="61">
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="61">License</td>
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="61">Shows the stored license key.</td>
 </tr>
-<tr>
-<td>Status</td>
-<td>Shows whether the key is activated and ready to use.</td>
+<tr sourcefile="src/addin/license-manager.md" sourcestartlinenumber="62">
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="62">Status</td>
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="62">Shows whether the key is activated and ready to use.</td>
 </tr>
-<tr>
-<td>Activated node</td>
-<td>Shows the node or machine that activated the license.</td>
+<tr sourcefile="src/addin/license-manager.md" sourcestartlinenumber="63">
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="63">Activated node</td>
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="63">Shows the node or machine that activated the license.</td>
 </tr>
-<tr>
-<td>Expires</td>
-<td>Shows the license expiration date.</td>
+<tr sourcefile="src/addin/license-manager.md" sourcestartlinenumber="64">
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="64">Expires</td>
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="64">Shows the license expiration date.</td>
 </tr>
-<tr>
-<td>Action</td>
-<td>Lets an administrator activate a license key online when activation is required.</td>
+<tr sourcefile="src/addin/license-manager.md" sourcestartlinenumber="65">
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="65">Action</td>
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="65">Lets an administrator activate a license key online when activation is required.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="active-borrows">Active borrows</h2>
-<p>The <code>Active borrows</code> list shows pool seats currently borrowed from the vault. It includes the vault, machine, user, and borrowed time in UTC.</p>
-<p>Use this area to understand who is currently consuming pool seats.</p>
-<h2 id="window-controls">Window controls</h2>
-<p>Use the buttons at the bottom of the window to finish or discard changes.</p>
-<table>
+<h2 id="active-borrows" sourcefile="src/addin/license-manager.md" sourcestartlinenumber="67">Active borrows</h2>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="69">The <code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="69">Active borrows</code> list shows pool seats currently borrowed from the vault. It includes the vault, machine, user, and borrowed time in UTC.</p>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="71">Use this area to understand who is currently consuming pool seats.</p>
+<h2 id="window-controls" sourcefile="src/addin/license-manager.md" sourcestartlinenumber="73">Window controls</h2>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="75">Use the buttons at the bottom of the window to finish or discard changes.</p>
+<table sourcefile="src/addin/license-manager.md" sourcestartlinenumber="77">
 <thead>
-<tr>
-<th>Button</th>
-<th>Meaning</th>
+<tr sourcefile="src/addin/license-manager.md" sourcestartlinenumber="77">
+<th sourcefile="src/addin/license-manager.md" sourcestartlinenumber="77">Button</th>
+<th sourcefile="src/addin/license-manager.md" sourcestartlinenumber="77">Meaning</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Delete</td>
-<td>Removes the selected license key from the vault license list.</td>
+<tr sourcefile="src/addin/license-manager.md" sourcestartlinenumber="79">
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="79">Delete</td>
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="79">Removes the selected license key from the vault license list.</td>
 </tr>
-<tr>
-<td>Cancel</td>
-<td>Closes the window without saving pending changes.</td>
+<tr sourcefile="src/addin/license-manager.md" sourcestartlinenumber="80">
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="80">Cancel</td>
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="80">Closes the window without saving pending changes.</td>
 </tr>
-<tr>
-<td>OK</td>
-<td>Saves the selected license mode, enabled license keys, added keys, removed keys, and other pending license changes.</td>
+<tr sourcefile="src/addin/license-manager.md" sourcestartlinenumber="81">
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="81">OK</td>
+<td sourcefile="src/addin/license-manager.md" sourcestartlinenumber="81">Saves the selected license mode, enabled license keys, added keys, removed keys, and other pending license changes.</td>
 </tr>
 </tbody>
 </table>
-<p>Use the <code>Activate</code> button in the license list when a license key is present but not activated.</p>
-<h2 id="related-articles">Related articles</h2>
-<ul>
-<li><a href="../license-pool.html">License Pool</a></li>
-<li><a href="../machine-license.html">Machine License</a></li>
-<li><a href="../offline-activation.html">Offline Activation</a></li>
-<li><a href="installation.html">PDMShell add-in installation</a></li>
+<p sourcefile="src/addin/license-manager.md" sourcestartlinenumber="83">Use the <code sourcefile="src/addin/license-manager.md" sourcestartlinenumber="83">Activate</code> button in the license list when a license key is present but not activated.</p>
+<h2 id="related-articles" sourcefile="src/addin/license-manager.md" sourcestartlinenumber="85">Related articles</h2>
+<ul sourcefile="src/addin/license-manager.md" sourcestartlinenumber="87">
+<li sourcefile="src/addin/license-manager.md" sourcestartlinenumber="87"><a href="../license-pool.html" sourcefile="src/addin/license-manager.md" sourcestartlinenumber="87">License Pool</a></li>
+<li sourcefile="src/addin/license-manager.md" sourcestartlinenumber="88"><a href="../machine-license.html" sourcefile="src/addin/license-manager.md" sourcestartlinenumber="88">Machine License</a></li>
+<li sourcefile="src/addin/license-manager.md" sourcestartlinenumber="89"><a href="../offline-activation.html" sourcefile="src/addin/license-manager.md" sourcestartlinenumber="89">Offline Activation</a></li>
+<li sourcefile="src/addin/license-manager.md" sourcestartlinenumber="90"><a href="installation.html" sourcefile="src/addin/license-manager.md" sourcestartlinenumber="90">PDMShell add-in installation</a></li>
 </ul>
 
 </article>

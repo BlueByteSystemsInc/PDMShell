@@ -85,138 +85,138 @@
         </div>
 
         <article data-uid="">
-<h1 id="introduction-to-pdmshell">Introduction to PDMShell</h1>
+<h1 id="introduction-to-pdmshell" sourcefile="src/introduction.md" sourcestartlinenumber="5">Introduction to PDMShell</h1>
 
-<p>PDMShell is a command-line and scripting tool for SOLIDWORKS PDM Professional. It helps administrators, engineers, and migration teams automate repetitive vault work without writing a full custom add-in for every task.</p>
-<p>You can use PDMShell for quick one-line commands, repeatable <code>.pdmshell</code> scripts, batch operations, workflow transition automation, Dispatch integration, and PDMShell add-in scripts that run directly inside the PDM client.</p>
-<h2 id="install-and-activate">Install And Activate</h2>
-<p>Start with <a href="howtoinstall.html">PDMShell standalone installation</a> or <a href="addin/installation.html">PDMShell add-in installation</a>, then choose the right workflow from <a href="licensing.html">Licensing</a>. Most computers use <a href="license-activation.html">License Activation</a>. Air-gapped or restricted computers use <a href="offline-activation.html">Offline Activation</a>. If you use the PDMShell add-in, choose between a <a href="license-pool.html">License Pool</a> and a <a href="machine-license.html">Machine License</a>.</p>
-<h2 id="what-you-can-do-with-pdmshell">What You Can Do with PDMShell</h2>
-<p>PDMShell is useful when you need to automate file, folder, metadata, and workflow operations in PDM.</p>
-<ul>
-<li>Navigate vault folders and inspect files.</li>
-<li>Check files in or out.</li>
-<li>Rename, move, copy, delete, recover, and export files.</li>
-<li>Read and update PDM variables.</li>
-<li>Search for files and export results to CSV.</li>
-<li>Run SOLIDWORKS macros and PDM tasks.</li>
-<li>Automate revision, version, reference, BOM, and Document Manager workflows.</li>
-<li>Build scripts that users can run from the PDMShell add-in, Dispatch, workflow transitions, or scheduled jobs.</li>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="7">PDMShell is a command-line and scripting tool for SOLIDWORKS PDM Professional. It helps administrators, engineers, and migration teams automate repetitive vault work without writing a full custom add-in for every task.</p>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="9">You can use PDMShell for quick one-line commands, repeatable <code sourcefile="src/introduction.md" sourcestartlinenumber="9">.pdmshell</code> scripts, batch operations, workflow transition automation, Dispatch integration, and PDMShell add-in scripts that run directly inside the PDM client.</p>
+<h2 id="install-and-activate" sourcefile="src/introduction.md" sourcestartlinenumber="11">Install And Activate</h2>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="13">Start with <a href="howtoinstall.html" sourcefile="src/introduction.md" sourcestartlinenumber="13">PDMShell standalone installation</a> or <a href="addin/installation.html" sourcefile="src/introduction.md" sourcestartlinenumber="13">PDMShell add-in installation</a>, then choose the right workflow from <a href="licensing.html" sourcefile="src/introduction.md" sourcestartlinenumber="13">Licensing</a>. Most computers use <a href="license-activation.html" sourcefile="src/introduction.md" sourcestartlinenumber="13">License Activation</a>. Air-gapped or restricted computers use <a href="offline-activation.html" sourcefile="src/introduction.md" sourcestartlinenumber="13">Offline Activation</a>. If you use the PDMShell add-in, choose between a <a href="license-pool.html" sourcefile="src/introduction.md" sourcestartlinenumber="13">License Pool</a> and a <a href="machine-license.html" sourcefile="src/introduction.md" sourcestartlinenumber="13">Machine License</a>.</p>
+<h2 id="what-you-can-do-with-pdmshell" sourcefile="src/introduction.md" sourcestartlinenumber="15">What You Can Do with PDMShell</h2>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="17">PDMShell is useful when you need to automate file, folder, metadata, and workflow operations in PDM.</p>
+<ul sourcefile="src/introduction.md" sourcestartlinenumber="19">
+<li sourcefile="src/introduction.md" sourcestartlinenumber="19">Navigate vault folders and inspect files.</li>
+<li sourcefile="src/introduction.md" sourcestartlinenumber="20">Check files in or out.</li>
+<li sourcefile="src/introduction.md" sourcestartlinenumber="21">Rename, move, copy, delete, recover, and export files.</li>
+<li sourcefile="src/introduction.md" sourcestartlinenumber="22">Read and update PDM variables.</li>
+<li sourcefile="src/introduction.md" sourcestartlinenumber="23">Search for files and export results to CSV.</li>
+<li sourcefile="src/introduction.md" sourcestartlinenumber="24">Run SOLIDWORKS macros and PDM tasks.</li>
+<li sourcefile="src/introduction.md" sourcestartlinenumber="25">Automate revision, version, reference, BOM, and Document Manager workflows.</li>
+<li sourcefile="src/introduction.md" sourcestartlinenumber="26">Build scripts that users can run from the PDMShell add-in, Dispatch, workflow transitions, or scheduled jobs.</li>
 </ul>
-<h2 id="ways-to-use-pdmshell">Ways to Use PDMShell</h2>
-<h3 id="interactive-command-shell">Interactive Command Shell</h3>
-<p>Use the PDMShell window when you want to type commands directly and see the result immediately.</p>
-<pre><code class="lang-bash">login -auto -vaultName MyVault
+<h2 id="ways-to-use-pdmshell" sourcefile="src/introduction.md" sourcestartlinenumber="28">Ways to Use PDMShell</h2>
+<h3 id="interactive-command-shell" sourcefile="src/introduction.md" sourcestartlinenumber="30">Interactive Command Shell</h3>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="32">Use the PDMShell window when you want to type commands directly and see the result immediately.</p>
+<pre><code class="lang-bash" sourcefile="src/introduction.md" sourcestartlinenumber="34">login -auto -vaultName MyVault
 cd &quot;\Projects&quot;
 dir
 </code></pre>
-<h3 id="script-files">Script Files</h3>
-<p>Save repeatable work in <code>.pdmshell</code> files and run them with <code>pdmcli.exe</code> or the <a href="RUNSCRIPT.html"><code>runscript</code></a> command.</p>
-<pre><code class="lang-bash">runscript -source &quot;C:\Scripts\UpdateVariables.pdmshell&quot;
+<h3 id="script-files" sourcefile="src/introduction.md" sourcestartlinenumber="40">Script Files</h3>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="42">Save repeatable work in <code sourcefile="src/introduction.md" sourcestartlinenumber="42">.pdmshell</code> files and run them with <code sourcefile="src/introduction.md" sourcestartlinenumber="42">pdmcli.exe</code> or the <a href="RUNSCRIPT.html" sourcefile="src/introduction.md" sourcestartlinenumber="42"><code sourcefile="src/introduction.md" sourcestartlinenumber="42">runscript</code></a> command.</p>
+<pre><code class="lang-bash" sourcefile="src/introduction.md" sourcestartlinenumber="44">runscript -source &quot;C:\Scripts\UpdateVariables.pdmshell&quot;
 </code></pre>
-<p>PDMShell can read normal <code>.pdmshell</code> script files as plain text, which makes them easy to store in a PDM vault, review, version, and reuse.</p>
-<p>When you save a script from the PDMShell toolbar or visual editor, PDMShell may convert the saved file to an encrypted script format for security. This helps protect scripts that are intended to be distributed or run by users without exposing the editable source text.</p>
-<h3 id="visual-code-editor">Visual Code Editor</h3>
-<p>The visual editor helps you build PDMShell workflows with command nodes, connections, and command parameters. It is useful when a script needs to be easier to understand, document, or hand off to another administrator.</p>
-<p>See <a href="visual-code-editor-4.html">Visual Code Editor</a>.</p>
-<h3 id="pdmshell-add-in">PDMShell Add-in</h3>
-<p>The <a href="TASKSCRIPT.html">PDMShell add-in</a> lets administrators run approved scripts from PDM right-click menus and event trigger points. It can replace many Dispatch-style automations and adds permissions, conditions, command menu scripts, placeholders, headless execution, and visual editor support.</p>
-<h2 id="first-commands-to-learn">First Commands to Learn</h2>
-<p>Start with these commands before moving into larger scripts:</p>
-<table>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="48">PDMShell can read normal <code sourcefile="src/introduction.md" sourcestartlinenumber="48">.pdmshell</code> script files as plain text, which makes them easy to store in a PDM vault, review, version, and reuse.</p>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="50">When you save a script from the PDMShell toolbar or visual editor, PDMShell may convert the saved file to an encrypted script format for security. This helps protect scripts that are intended to be distributed or run by users without exposing the editable source text.</p>
+<h3 id="visual-code-editor" sourcefile="src/introduction.md" sourcestartlinenumber="52">Visual Code Editor</h3>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="54">The visual editor helps you build PDMShell workflows with command nodes, connections, and command parameters. It is useful when a script needs to be easier to understand, document, or hand off to another administrator.</p>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="56">See <a href="visual-code-editor-4.html" sourcefile="src/introduction.md" sourcestartlinenumber="56">Visual Code Editor</a>.</p>
+<h3 id="pdmshell-add-in" sourcefile="src/introduction.md" sourcestartlinenumber="58">PDMShell Add-in</h3>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="60">The <a href="TASKSCRIPT.html" sourcefile="src/introduction.md" sourcestartlinenumber="60">PDMShell add-in</a> lets administrators run approved scripts from PDM right-click menus and event trigger points. It can replace many Dispatch-style automations and adds permissions, conditions, command menu scripts, placeholders, headless execution, and visual editor support.</p>
+<h2 id="first-commands-to-learn" sourcefile="src/introduction.md" sourcestartlinenumber="62">First Commands to Learn</h2>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="64">Start with these commands before moving into larger scripts:</p>
+<table sourcefile="src/introduction.md" sourcestartlinenumber="66">
 <thead>
-<tr>
-<th>Command</th>
-<th>What it does</th>
+<tr sourcefile="src/introduction.md" sourcestartlinenumber="66">
+<th sourcefile="src/introduction.md" sourcestartlinenumber="66">Command</th>
+<th sourcefile="src/introduction.md" sourcestartlinenumber="66">What it does</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="LOGIN.html"><code>login</code></a></td>
-<td>Logs into a PDM vault.</td>
+<tr sourcefile="src/introduction.md" sourcestartlinenumber="68">
+<td sourcefile="src/introduction.md" sourcestartlinenumber="68"><a href="LOGIN.html" sourcefile="src/introduction.md" sourcestartlinenumber="68"><code sourcefile="src/introduction.md" sourcestartlinenumber="68">login</code></a></td>
+<td sourcefile="src/introduction.md" sourcestartlinenumber="68">Logs into a PDM vault.</td>
 </tr>
-<tr>
-<td><a href="CD.html"><code>cd</code></a></td>
-<td>Changes the current PDM folder.</td>
+<tr sourcefile="src/introduction.md" sourcestartlinenumber="69">
+<td sourcefile="src/introduction.md" sourcestartlinenumber="69"><a href="CD.html" sourcefile="src/introduction.md" sourcestartlinenumber="69"><code sourcefile="src/introduction.md" sourcestartlinenumber="69">cd</code></a></td>
+<td sourcefile="src/introduction.md" sourcestartlinenumber="69">Changes the current PDM folder.</td>
 </tr>
-<tr>
-<td><a href="DIR.html"><code>dir</code></a></td>
-<td>Lists files and folders.</td>
+<tr sourcefile="src/introduction.md" sourcestartlinenumber="70">
+<td sourcefile="src/introduction.md" sourcestartlinenumber="70"><a href="DIR.html" sourcefile="src/introduction.md" sourcestartlinenumber="70"><code sourcefile="src/introduction.md" sourcestartlinenumber="70">dir</code></a></td>
+<td sourcefile="src/introduction.md" sourcestartlinenumber="70">Lists files and folders.</td>
 </tr>
-<tr>
-<td><a href="SEARCH.html"><code>search</code></a></td>
-<td>Finds files and folders.</td>
+<tr sourcefile="src/introduction.md" sourcestartlinenumber="71">
+<td sourcefile="src/introduction.md" sourcestartlinenumber="71"><a href="SEARCH.html" sourcefile="src/introduction.md" sourcestartlinenumber="71"><code sourcefile="src/introduction.md" sourcestartlinenumber="71">search</code></a></td>
+<td sourcefile="src/introduction.md" sourcestartlinenumber="71">Finds files and folders.</td>
 </tr>
-<tr>
-<td><a href="GETVAR.html"><code>getvar</code></a></td>
-<td>Reads PDM variable values.</td>
+<tr sourcefile="src/introduction.md" sourcestartlinenumber="72">
+<td sourcefile="src/introduction.md" sourcestartlinenumber="72"><a href="GETVAR.html" sourcefile="src/introduction.md" sourcestartlinenumber="72"><code sourcefile="src/introduction.md" sourcestartlinenumber="72">getvar</code></a></td>
+<td sourcefile="src/introduction.md" sourcestartlinenumber="72">Reads PDM variable values.</td>
 </tr>
-<tr>
-<td><a href="SETVAR.html"><code>setvar</code></a></td>
-<td>Updates PDM variable values.</td>
+<tr sourcefile="src/introduction.md" sourcestartlinenumber="73">
+<td sourcefile="src/introduction.md" sourcestartlinenumber="73"><a href="SETVAR.html" sourcefile="src/introduction.md" sourcestartlinenumber="73"><code sourcefile="src/introduction.md" sourcestartlinenumber="73">setvar</code></a></td>
+<td sourcefile="src/introduction.md" sourcestartlinenumber="73">Updates PDM variable values.</td>
 </tr>
-<tr>
-<td><a href="RUNSCRIPT.html"><code>runscript</code></a></td>
-<td>Runs a saved <code>.pdmshell</code> script.</td>
+<tr sourcefile="src/introduction.md" sourcestartlinenumber="74">
+<td sourcefile="src/introduction.md" sourcestartlinenumber="74"><a href="RUNSCRIPT.html" sourcefile="src/introduction.md" sourcestartlinenumber="74"><code sourcefile="src/introduction.md" sourcestartlinenumber="74">runscript</code></a></td>
+<td sourcefile="src/introduction.md" sourcestartlinenumber="74">Runs a saved <code sourcefile="src/introduction.md" sourcestartlinenumber="74">.pdmshell</code> script.</td>
 </tr>
-<tr>
-<td><a href="HELP.html"><code>help</code></a></td>
-<td>Lists commands or opens command help.</td>
+<tr sourcefile="src/introduction.md" sourcestartlinenumber="75">
+<td sourcefile="src/introduction.md" sourcestartlinenumber="75"><a href="HELP.html" sourcefile="src/introduction.md" sourcestartlinenumber="75"><code sourcefile="src/introduction.md" sourcestartlinenumber="75">help</code></a></td>
+<td sourcefile="src/introduction.md" sourcestartlinenumber="75">Lists commands or opens command help.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="using-the-help-system">Using the Help System</h2>
-<p>PDMShell includes a help system for learning commands while you work.</p>
-<p>To view all available commands:</p>
-<pre><code class="lang-bash">help
+<h2 id="using-the-help-system" sourcefile="src/introduction.md" sourcestartlinenumber="77">Using the Help System</h2>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="79">PDMShell includes a help system for learning commands while you work.</p>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="81">To view all available commands:</p>
+<pre><code class="lang-bash" sourcefile="src/introduction.md" sourcestartlinenumber="83">help
 </code></pre>
-<p>To get help for a specific command:</p>
-<pre><code class="lang-bash">help -command cd
+<p sourcefile="src/introduction.md" sourcestartlinenumber="87">To get help for a specific command:</p>
+<pre><code class="lang-bash" sourcefile="src/introduction.md" sourcestartlinenumber="89">help -command cd
 </code></pre>
-<h2 id="command-page-structure">Command Page Structure</h2>
-<p>Each command page in this documentation follows the same structure:</p>
-<ol>
-<li>Description: What the command does.</li>
-<li>Syntax: The command format and supported parameters.</li>
-<li>Parameters: What each parameter means.</li>
-<li>Examples: Common ways to use the command.</li>
-<li>Remarks: Notes, limits, and important behavior.</li>
-<li>Availability: The PDMShell version where the command first became available.</li>
+<h2 id="command-page-structure" sourcefile="src/introduction.md" sourcestartlinenumber="93">Command Page Structure</h2>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="95">Each command page in this documentation follows the same structure:</p>
+<ol sourcefile="src/introduction.md" sourcestartlinenumber="97">
+<li sourcefile="src/introduction.md" sourcestartlinenumber="97">Description: What the command does.</li>
+<li sourcefile="src/introduction.md" sourcestartlinenumber="98">Syntax: The command format and supported parameters.</li>
+<li sourcefile="src/introduction.md" sourcestartlinenumber="99">Parameters: What each parameter means.</li>
+<li sourcefile="src/introduction.md" sourcestartlinenumber="100">Examples: Common ways to use the command.</li>
+<li sourcefile="src/introduction.md" sourcestartlinenumber="101">Remarks: Notes, limits, and important behavior.</li>
+<li sourcefile="src/introduction.md" sourcestartlinenumber="102">Availability: The PDMShell version where the command first became available.</li>
 </ol>
-<h2 id="example-command-page">Example Command Page</h2>
-<p>Here is a small example using the <a href="CD.html"><code>cd</code></a> command.</p>
-<pre><code class="lang-bash">cd [-directory|-id]
+<h2 id="example-command-page" sourcefile="src/introduction.md" sourcestartlinenumber="104">Example Command Page</h2>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="106">Here is a small example using the <a href="CD.html" sourcefile="src/introduction.md" sourcestartlinenumber="106"><code sourcefile="src/introduction.md" sourcestartlinenumber="106">cd</code></a> command.</p>
+<pre><code class="lang-bash" sourcefile="src/introduction.md" sourcestartlinenumber="108">cd [-directory|-id]
 </code></pre>
-<p>Examples:</p>
-<pre><code class="lang-bash">cd -directory &quot;C:\Vault\NewFolder&quot;
+<p sourcefile="src/introduction.md" sourcestartlinenumber="112">Examples:</p>
+<pre><code class="lang-bash" sourcefile="src/introduction.md" sourcestartlinenumber="114">cd -directory &quot;C:\Vault\NewFolder&quot;
 cd -id 755
 cd..
 cd\
 </code></pre>
-<p>Notes:</p>
-<ul>
-<li>Use <code>cd..</code> to move to the parent folder.</li>
-<li>Use <code>cd\</code> to move to the root of the vault.</li>
-<li>If you just created a folder and want autocomplete to see it, use <code>dir -refresh</code>.</li>
-<li><code>directory</code> is the default parameter, so <code>cd &quot;\Projects&quot;</code> is valid.</li>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="121">Notes:</p>
+<ul sourcefile="src/introduction.md" sourcestartlinenumber="123">
+<li sourcefile="src/introduction.md" sourcestartlinenumber="123">Use <code sourcefile="src/introduction.md" sourcestartlinenumber="123">cd..</code> to move to the parent folder.</li>
+<li sourcefile="src/introduction.md" sourcestartlinenumber="124">Use <code sourcefile="src/introduction.md" sourcestartlinenumber="124">cd\</code> to move to the root of the vault.</li>
+<li sourcefile="src/introduction.md" sourcestartlinenumber="125">If you just created a folder and want autocomplete to see it, use <code sourcefile="src/introduction.md" sourcestartlinenumber="125">dir -refresh</code>.</li>
+<li sourcefile="src/introduction.md" sourcestartlinenumber="126"><code sourcefile="src/introduction.md" sourcestartlinenumber="126">directory</code> is the default parameter, so <code sourcefile="src/introduction.md" sourcestartlinenumber="126">cd &quot;\Projects&quot;</code> is valid.</li>
 </ul>
-<h2 id="placeholders">Placeholders</h2>
-<p>PDMShell scripts can use placeholders for file names, folder paths, variables, dates, and other runtime values.</p>
-<pre><code class="lang-bash">rename -filePath &quot;$localPath&quot; -value &quot;$fileNameWithoutExtension-$yyyy$extension&quot;
+<h2 id="placeholders" sourcefile="src/introduction.md" sourcestartlinenumber="128">Placeholders</h2>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="130">PDMShell scripts can use placeholders for file names, folder paths, variables, dates, and other runtime values.</p>
+<pre><code class="lang-bash" sourcefile="src/introduction.md" sourcestartlinenumber="132">rename -filePath &quot;$localPath&quot; -value &quot;$fileNameWithoutExtension-$yyyy$extension&quot;
 </code></pre>
-<p>See <a href="EVAL.html">Placeholders in PDMShell</a>, <a href="expression-evaluator.html">Expression Evaluator</a>, and <a href="conditions.html">Conditions</a>.</p>
-<h2 id="case-sensitivity">Case Sensitivity</h2>
-<p>As of PDMShell 3.0.1, command names, parameter names, and values are case-sensitive.</p>
-<h2 id="escaping-quotes">Escaping Quotes</h2>
-<p>Escaping quotes depends on where the command starts, such as Command Prompt, Dispatch, a workflow transition, or an existing PDMShell session.</p>
-<p>See <a href="escapingquotes.html">Escaping Characters</a>.</p>
-<h2 id="quick-tutorial">Quick Tutorial</h2>
-<p>This short tutorial shows basic folder navigation with the <a href="CD.html"><code>cd</code></a> command.</p>
-<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 8px;"></video></p>
-<h2 id="getting-support">Getting Support</h2>
-<p>If you need help building scripts or planning automation, contact Blue Byte Systems support:</p>
-<p><a href="mailto:support@bluebytesystemsinc.zohodesk.com">Get Support</a></p>
-<p>Thank you for choosing PDMShell. We are excited to help you streamline your PDM workflows and unlock new levels of productivity.</p>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="136">See <a href="EVAL.html" sourcefile="src/introduction.md" sourcestartlinenumber="136">Placeholders in PDMShell</a>, <a href="expression-evaluator.html" sourcefile="src/introduction.md" sourcestartlinenumber="136">Expression Evaluator</a>, and <a href="conditions.html" sourcefile="src/introduction.md" sourcestartlinenumber="136">Conditions</a>.</p>
+<h2 id="case-sensitivity" sourcefile="src/introduction.md" sourcestartlinenumber="138">Case Sensitivity</h2>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="140">As of PDMShell 3.0.1, command names, parameter names, and values are case-sensitive.</p>
+<h2 id="escaping-quotes" sourcefile="src/introduction.md" sourcestartlinenumber="142">Escaping Quotes</h2>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="144">Escaping quotes depends on where the command starts, such as Command Prompt, Dispatch, a workflow transition, or an existing PDMShell session.</p>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="146">See <a href="escapingquotes.html" sourcefile="src/introduction.md" sourcestartlinenumber="146">Escaping Characters</a>.</p>
+<h2 id="quick-tutorial" sourcefile="src/introduction.md" sourcestartlinenumber="148">Quick Tutorial</h2>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="150">This short tutorial shows basic folder navigation with the <a href="CD.html" sourcefile="src/introduction.md" sourcestartlinenumber="150"><code sourcefile="src/introduction.md" sourcestartlinenumber="150">cd</code></a> command.</p>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="152"><video src="https://bluebyte.biz/wp-content/pdmshellvideos/cd.mp4" autoplay muted controls style="width: 100%; border-radius: 8px;"></video></p>
+<h2 id="getting-support" sourcefile="src/introduction.md" sourcestartlinenumber="154">Getting Support</h2>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="156">If you need help building scripts or planning automation, contact Blue Byte Systems support:</p>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="158"><a href="mailto:support@bluebytesystemsinc.zohodesk.com" sourcefile="src/introduction.md" sourcestartlinenumber="158">Get Support</a></p>
+<p sourcefile="src/introduction.md" sourcestartlinenumber="160">Thank you for choosing PDMShell. We are excited to help you streamline your PDM workflows and unlock new levels of productivity.</p>
 
 </article>
 

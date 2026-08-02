@@ -85,74 +85,74 @@
         </div>
 
         <article data-uid="">
-<h1 id="recover">recover</h1>
+<h1 id="recover" sourcefile="src/RECOVER.md" sourcestartlinenumber="5">recover</h1>
 
-<h2 id="description">Description</h2>
-<p>The <code>recover</code> command recovers deleted files from a folder or CSV source. It supports optional parameters for search queries and recursive operations.</p>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-text">recover -directory -search -recursive -source
+<h2 id="description" sourcefile="src/RECOVER.md" sourcestartlinenumber="6">Description</h2>
+<p sourcefile="src/RECOVER.md" sourcestartlinenumber="7">The <code sourcefile="src/RECOVER.md" sourcestartlinenumber="7">recover</code> command recovers deleted files from a folder or CSV source. It supports optional parameters for search queries and recursive operations.</p>
+<h2 id="syntax" sourcefile="src/RECOVER.md" sourcestartlinenumber="9">Syntax</h2>
+<pre><code class="lang-text" sourcefile="src/RECOVER.md" sourcestartlinenumber="11">recover -directory -search -recursive -source
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<table>
+<h2 id="parameters" sourcefile="src/RECOVER.md" sourcestartlinenumber="15">Parameters</h2>
+<table sourcefile="src/RECOVER.md" sourcestartlinenumber="17">
 <thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
+<tr sourcefile="src/RECOVER.md" sourcestartlinenumber="17">
+<th sourcefile="src/RECOVER.md" sourcestartlinenumber="17">Parameter</th>
+<th sourcefile="src/RECOVER.md" sourcestartlinenumber="17">Required</th>
+<th sourcefile="src/RECOVER.md" sourcestartlinenumber="17">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>-directory</code></td>
-<td>No</td>
-<td>Specifies the directory to recover files from. This parameter is optional.</td>
+<tr sourcefile="src/RECOVER.md" sourcestartlinenumber="19">
+<td sourcefile="src/RECOVER.md" sourcestartlinenumber="19"><code sourcefile="src/RECOVER.md" sourcestartlinenumber="19">-directory</code></td>
+<td sourcefile="src/RECOVER.md" sourcestartlinenumber="19">No</td>
+<td sourcefile="src/RECOVER.md" sourcestartlinenumber="19">Specifies the directory to recover files from. This parameter is optional.</td>
 </tr>
-<tr>
-<td><code>-search</code></td>
-<td>No</td>
-<td>A search query to filter the files to recover. This parameter is optional. Supports % and * as wildcards.</td>
+<tr sourcefile="src/RECOVER.md" sourcestartlinenumber="20">
+<td sourcefile="src/RECOVER.md" sourcestartlinenumber="20"><code sourcefile="src/RECOVER.md" sourcestartlinenumber="20">-search</code></td>
+<td sourcefile="src/RECOVER.md" sourcestartlinenumber="20">No</td>
+<td sourcefile="src/RECOVER.md" sourcestartlinenumber="20">A search query to filter the files to recover. This parameter is optional. Supports % and * as wildcards.</td>
 </tr>
-<tr>
-<td><code>-recursive</code></td>
-<td>No</td>
-<td>Enables recursive recovery of files within subdirectories. This parameter is optional.</td>
+<tr sourcefile="src/RECOVER.md" sourcestartlinenumber="21">
+<td sourcefile="src/RECOVER.md" sourcestartlinenumber="21"><code sourcefile="src/RECOVER.md" sourcestartlinenumber="21">-recursive</code></td>
+<td sourcefile="src/RECOVER.md" sourcestartlinenumber="21">No</td>
+<td sourcefile="src/RECOVER.md" sourcestartlinenumber="21">Enables recursive recovery of files within subdirectories. This parameter is optional.</td>
 </tr>
-<tr>
-<td><code>-source</code></td>
-<td>No</td>
-<td>Specifies the source to recover files from. This parameter is optional.</td>
+<tr sourcefile="src/RECOVER.md" sourcestartlinenumber="22">
+<td sourcefile="src/RECOVER.md" sourcestartlinenumber="22"><code sourcefile="src/RECOVER.md" sourcestartlinenumber="22">-source</code></td>
+<td sourcefile="src/RECOVER.md" sourcestartlinenumber="22">No</td>
+<td sourcefile="src/RECOVER.md" sourcestartlinenumber="22">Specifies the source to recover files from. This parameter is optional.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details">Parameter Details</h3>
-<ul>
-<li><code>directory</code>: Specifies the directory to recover files from. This parameter is optional.</li>
-<li><code>search</code>: A search query to filter the files to recover. This parameter is optional. Supports % and * as wildcards.</li>
-<li><code>recursive</code>: Enables recursive recovery of files within subdirectories. This parameter is optional.</li>
-<li><code>source</code>: Specifies the source to recover files from. This parameter is optional.</li>
+<h3 id="parameter-details" sourcefile="src/RECOVER.md" sourcestartlinenumber="24">Parameter Details</h3>
+<ul sourcefile="src/RECOVER.md" sourcestartlinenumber="26">
+<li sourcefile="src/RECOVER.md" sourcestartlinenumber="26"><code sourcefile="src/RECOVER.md" sourcestartlinenumber="26">directory</code>: Specifies the directory to recover files from. This parameter is optional.</li>
+<li sourcefile="src/RECOVER.md" sourcestartlinenumber="27"><code sourcefile="src/RECOVER.md" sourcestartlinenumber="27">search</code>: A search query to filter the files to recover. This parameter is optional. Supports % and * as wildcards.</li>
+<li sourcefile="src/RECOVER.md" sourcestartlinenumber="28"><code sourcefile="src/RECOVER.md" sourcestartlinenumber="28">recursive</code>: Enables recursive recovery of files within subdirectories. This parameter is optional.</li>
+<li sourcefile="src/RECOVER.md" sourcestartlinenumber="29"><code sourcefile="src/RECOVER.md" sourcestartlinenumber="29">source</code>: Specifies the source to recover files from. This parameter is optional.</li>
 </ul>
-<div class="NOTE">
+<div class="NOTE" sourcefile="src/RECOVER.md" sourcestartlinenumber="31">
 <h5>Note</h5>
-<ul>
-<li>To generate a source csv file, use the command <code>delete -list -csv deletedfiles.csv</code> to generate a list of all deleted files in the current directory.</li>
-<li>You can include <code>recursive</code> to get all files from the subdirectories.</li>
-<li>To generate a source csv file for a particular directory, use <code>directory</code> in combination with <code>list</code> and <code>csv</code>.</li>
+<ul sourcefile="src/RECOVER.md" sourcestartlinenumber="32">
+<li sourcefile="src/RECOVER.md" sourcestartlinenumber="32">To generate a source csv file, use the command <code sourcefile="src/RECOVER.md" sourcestartlinenumber="32">delete -list -csv deletedfiles.csv</code> to generate a list of all deleted files in the current directory.</li>
+<li sourcefile="src/RECOVER.md" sourcestartlinenumber="33">You can include <code sourcefile="src/RECOVER.md" sourcestartlinenumber="33">recursive</code> to get all files from the subdirectories.</li>
+<li sourcefile="src/RECOVER.md" sourcestartlinenumber="34">To generate a source csv file for a particular directory, use <code sourcefile="src/RECOVER.md" sourcestartlinenumber="34">directory</code> in combination with <code sourcefile="src/RECOVER.md" sourcestartlinenumber="34">list</code> and <code sourcefile="src/RECOVER.md" sourcestartlinenumber="34">csv</code>.</li>
 </ul>
 </div>
-<h2 id="examples">Examples</h2>
-<pre><code class="lang-bash">recover -source &quot;source.csv&quot;
+<h2 id="examples" sourcefile="src/RECOVER.md" sourcestartlinenumber="36">Examples</h2>
+<pre><code class="lang-bash" sourcefile="src/RECOVER.md" sourcestartlinenumber="37">recover -source &quot;source.csv&quot;
 # recover
 recover -directory &quot;&quot;
 # recover
 </code></pre>
-<h2 id="remarks">Remarks</h2>
-<ul>
-<li>Ensure that the specified directory or source exists and is accessible.</li>
+<h2 id="remarks" sourcefile="src/RECOVER.md" sourcestartlinenumber="44">Remarks</h2>
+<ul sourcefile="src/RECOVER.md" sourcestartlinenumber="45">
+<li sourcefile="src/RECOVER.md" sourcestartlinenumber="45">Ensure that the specified directory or source exists and is accessible.</li>
 </ul>
-<h2 id="tutorial">Tutorial</h2>
-<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/recover.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 2.0.74.</p>
+<h2 id="tutorial" sourcefile="src/RECOVER.md" sourcestartlinenumber="47">Tutorial</h2>
+<p sourcefile="src/RECOVER.md" sourcestartlinenumber="48"><video src="https://bluebyte.biz/wp-content/pdmshellvideos/recover.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="availability" sourcefile="src/RECOVER.md" sourcestartlinenumber="50">Availability</h2>
+<p sourcefile="src/RECOVER.md" sourcestartlinenumber="51">Available since PDMShell 2.0.74.</p>
 
 </article>
 

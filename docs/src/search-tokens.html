@@ -85,259 +85,259 @@
         </div>
 
         <article data-uid="">
-<h1 id="search-tokens">Search Tokens</h1>
+<h1 id="search-tokens" sourcefile="src/search-tokens.md" sourcestartlinenumber="6">Search Tokens</h1>
 
-<p>Search tokens are key-value fields used inside the <code>-search</code> query. They map to SOLIDWORKS PDM search options or PDMShell result-shaping options.</p>
-<pre><code class="lang-bash">search -search &quot;Name=%.pdf;Recursive=true;StateName=Released&quot;
+<p sourcefile="src/search-tokens.md" sourcestartlinenumber="8">Search tokens are key-value fields used inside the <code sourcefile="src/search-tokens.md" sourcestartlinenumber="8">-search</code> query. They map to SOLIDWORKS PDM search options or PDMShell result-shaping options.</p>
+<pre><code class="lang-bash" sourcefile="src/search-tokens.md" sourcestartlinenumber="10">search -search &quot;Name=%.pdf;Recursive=true;StateName=Released&quot;
 </code></pre>
-<h2 id="pdm-search-tokens">PDM Search Tokens</h2>
-<p>These tokens control which raw results PDM returns.</p>
-<table>
+<h2 id="pdm-search-tokens" sourcefile="src/search-tokens.md" sourcestartlinenumber="14">PDM Search Tokens</h2>
+<p sourcefile="src/search-tokens.md" sourcestartlinenumber="16">These tokens control which raw results PDM returns.</p>
+<table sourcefile="src/search-tokens.md" sourcestartlinenumber="18">
 <thead>
-<tr>
-<th>Token</th>
-<th>Description</th>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="18">
+<th sourcefile="src/search-tokens.md" sourcestartlinenumber="18">Token</th>
+<th sourcefile="src/search-tokens.md" sourcestartlinenumber="18">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Name</td>
-<td>File or folder name filter</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="20">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="20">Name</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="20">File or folder name filter</td>
 </tr>
-<tr>
-<td>AllVersions</td>
-<td>Search all versions</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="21">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="21">AllVersions</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="21">Search all versions</td>
 </tr>
-<tr>
-<td>ContentText</td>
-<td>Full-text content search string</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="22">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="22">ContentText</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="22">Full-text content search string</td>
 </tr>
-<tr>
-<td>ContentTextExact</td>
-<td>Exact match of content</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="23">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="23">ContentTextExact</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="23">Exact match of content</td>
 </tr>
-<tr>
-<td>ContentTextInBody</td>
-<td>Search inside file body</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="24">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="24">ContentTextInBody</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="24">Search inside file body</td>
 </tr>
-<tr>
-<td>ContentTextInProperties</td>
-<td>Search in custom properties</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="25">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="25">ContentTextInProperties</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="25">Search in custom properties</td>
 </tr>
-<tr>
-<td>ContentTextOr</td>
-<td>Match any word</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="26">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="26">ContentTextOr</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="26">Match any word</td>
 </tr>
-<tr>
-<td>FindFiles</td>
-<td>Include files in results</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="27">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="27">FindFiles</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="27">Include files in results</td>
 </tr>
-<tr>
-<td>FindFolders</td>
-<td>Include folders in results</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="28">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="28">FindFolders</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="28">Include folders in results</td>
 </tr>
-<tr>
-<td>FindItems</td>
-<td>Include items in results</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="29">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="29">FindItems</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="29">Include items in results</td>
 </tr>
-<tr>
-<td>FolderID</td>
-<td>Starting folder ID</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="30">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="30">FolderID</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="30">Starting folder ID</td>
 </tr>
-<tr>
-<td>HistoryAfter</td>
-<td>Search history after date</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="31">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="31">HistoryAfter</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="31">Search history after date</td>
 </tr>
-<tr>
-<td>HistoryBefore</td>
-<td>Search history before date</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="32">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="32">HistoryBefore</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="32">Search history before date</td>
 </tr>
-<tr>
-<td>HistoryString</td>
-<td>History string search</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="33">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="33">HistoryString</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="33">History string search</td>
 </tr>
-<tr>
-<td>HistoryStringConfiguration</td>
-<td>Search configuration names</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="34">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="34">HistoryStringConfiguration</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="34">Search configuration names</td>
 </tr>
-<tr>
-<td>HistoryStringFileName</td>
-<td>Search file names in history</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="35">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="35">HistoryStringFileName</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="35">Search file names in history</td>
 </tr>
-<tr>
-<td>HistoryStringLabels</td>
-<td>Search labels in history</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="36">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="36">HistoryStringLabels</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="36">Search labels in history</td>
 </tr>
-<tr>
-<td>HistoryStringRevisionComment</td>
-<td>Search revision comments</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="37">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="37">HistoryStringRevisionComment</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="37">Search revision comments</td>
 </tr>
-<tr>
-<td>HistoryStringStateComment</td>
-<td>Search state change comments</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="38">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="38">HistoryStringStateComment</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="38">Search state change comments</td>
 </tr>
-<tr>
-<td>HistoryStringVariableValues</td>
-<td>Search variable changes</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="39">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="39">HistoryStringVariableValues</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="39">Search variable changes</td>
 </tr>
-<tr>
-<td>HistoryStringVersionComment</td>
-<td>Search version comments</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="40">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="40">HistoryStringVersionComment</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="40">Search version comments</td>
 </tr>
-<tr>
-<td>Label</td>
-<td>Search label text</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="41">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="41">Label</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="41">Search label text</td>
 </tr>
-<tr>
-<td>LabelAfter</td>
-<td>Labels after date</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="42">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="42">LabelAfter</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="42">Labels after date</td>
 </tr>
-<tr>
-<td>LabelBefore</td>
-<td>Labels before date</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="43">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="43">LabelBefore</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="43">Labels before date</td>
 </tr>
-<tr>
-<td>LabelByUser</td>
-<td>Labels created by user</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="44">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="44">LabelByUser</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="44">Labels created by user</td>
 </tr>
-<tr>
-<td>LabelComment</td>
-<td>Search label comment</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="45">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="45">LabelComment</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="45">Search label comment</td>
 </tr>
-<tr>
-<td>Locked</td>
-<td>Return checked-out files</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="46">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="46">Locked</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="46">Return checked-out files</td>
 </tr>
-<tr>
-<td>LockedBy</td>
-<td>Return files locked by user</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="47">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="47">LockedBy</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="47">Return files locked by user</td>
 </tr>
-<tr>
-<td>Recursive</td>
-<td>Include subfolders</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="48">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="48">Recursive</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="48">Include subfolders</td>
 </tr>
-<tr>
-<td>StateAfter</td>
-<td>State changes after date</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="49">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="49">StateAfter</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="49">State changes after date</td>
 </tr>
-<tr>
-<td>StateBefore</td>
-<td>State changes before date</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="50">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="50">StateBefore</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="50">State changes before date</td>
 </tr>
-<tr>
-<td>StateByUser</td>
-<td>User who changed state</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="51">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="51">StateByUser</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="51">User who changed state</td>
 </tr>
-<tr>
-<td>StateHistoric</td>
-<td>Search historic states</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="52">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="52">StateHistoric</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="52">Search historic states</td>
 </tr>
-<tr>
-<td>StateID</td>
-<td>Workflow state ID</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="53">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="53">StateID</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="53">Workflow state ID</td>
 </tr>
-<tr>
-<td>StateName</td>
-<td>Workflow state name</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="54">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="54">StateName</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="54">Workflow state name</td>
 </tr>
-<tr>
-<td>Unlocked</td>
-<td>Return checked-in files</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="55">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="55">Unlocked</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="55">Return checked-in files</td>
 </tr>
-<tr>
-<td>VersionComment</td>
-<td>Search version comment</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="56">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="56">VersionComment</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="56">Search version comment</td>
 </tr>
-<tr>
-<td>VersionsAfter</td>
-<td>Versions after date</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="57">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="57">VersionsAfter</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="57">Versions after date</td>
 </tr>
-<tr>
-<td>VersionsBefore</td>
-<td>Versions before date</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="58">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="58">VersionsBefore</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="58">Versions before date</td>
 </tr>
-<tr>
-<td>VersionsByUser</td>
-<td>Versions created by user</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="59">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="59">VersionsByUser</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="59">Versions created by user</td>
 </tr>
-<tr>
-<td>WorkflowName</td>
-<td>Search by workflow name</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="60">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="60">WorkflowName</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="60">Search by workflow name</td>
 </tr>
 </tbody>
 </table>
-<h2 id="pdmshell-search-tokens">PDMShell Search Tokens</h2>
-<p>These tokens are handled by PDMShell after the raw PDM results are collected.</p>
-<table>
+<h2 id="pdmshell-search-tokens" sourcefile="src/search-tokens.md" sourcestartlinenumber="62">PDMShell Search Tokens</h2>
+<p sourcefile="src/search-tokens.md" sourcestartlinenumber="64">These tokens are handled by PDMShell after the raw PDM results are collected.</p>
+<table sourcefile="src/search-tokens.md" sourcestartlinenumber="66">
 <thead>
-<tr>
-<th>Token</th>
-<th>Description</th>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="66">
+<th sourcefile="src/search-tokens.md" sourcestartlinenumber="66">Token</th>
+<th sourcefile="src/search-tokens.md" sourcestartlinenumber="66">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Favorite</td>
-<td>Uses a PDM search favorite</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="68">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="68">Favorite</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="68">Uses a PDM search favorite</td>
 </tr>
-<tr>
-<td>DuplicatedBy</td>
-<td>Groups duplicate results by a field or PDM variable</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="69">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="69">DuplicatedBy</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="69">Groups duplicate results by a field or PDM variable</td>
 </tr>
-<tr>
-<td>GroupBy</td>
-<td>Alias for <code>DuplicatedBy</code></td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="70">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="70">GroupBy</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="70">Alias for <code sourcefile="src/search-tokens.md" sourcestartlinenumber="70">DuplicatedBy</code></td>
 </tr>
-<tr>
-<td>SortBy</td>
-<td>Sorts all results, or each group when <code>GroupBy</code> is used</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="71">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="71">SortBy</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="71">Sorts all results, or each group when <code sourcefile="src/search-tokens.md" sourcestartlinenumber="71">GroupBy</code> is used</td>
 </tr>
-<tr>
-<td>SortOrder</td>
-<td>Optional sort direction: <code>Asc</code>, <code>Ascending</code>, <code>Desc</code>, or <code>Descending</code></td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="72">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="72">SortOrder</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="72">Optional sort direction: <code sourcefile="src/search-tokens.md" sourcestartlinenumber="72">Asc</code>, <code sourcefile="src/search-tokens.md" sourcestartlinenumber="72">Ascending</code>, <code sourcefile="src/search-tokens.md" sourcestartlinenumber="72">Desc</code>, or <code sourcefile="src/search-tokens.md" sourcestartlinenumber="72">Descending</code></td>
 </tr>
-<tr>
-<td>SortDirection</td>
-<td>Alias for <code>SortOrder</code></td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="73">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="73">SortDirection</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="73">Alias for <code sourcefile="src/search-tokens.md" sourcestartlinenumber="73">SortOrder</code></td>
 </tr>
-<tr>
-<td>Strategy</td>
-<td>Selects which sorted results are processed</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="74">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="74">Strategy</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="74">Selects which sorted results are processed</td>
 </tr>
-<tr>
-<td>DuplicatesStrategy</td>
-<td>Alias for <code>Strategy</code></td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="75">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="75">DuplicatesStrategy</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="75">Alias for <code sourcefile="src/search-tokens.md" sourcestartlinenumber="75">Strategy</code></td>
 </tr>
-<tr>
-<td>Edit</td>
-<td>Performs checkout and check-in on matching results for supported commands</td>
+<tr sourcefile="src/search-tokens.md" sourcestartlinenumber="76">
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="76">Edit</td>
+<td sourcefile="src/search-tokens.md" sourcestartlinenumber="76">Performs checkout and check-in on matching results for supported commands</td>
 </tr>
 </tbody>
 </table>
-<div class="IMPORTANT">
+<div class="IMPORTANT" sourcefile="src/search-tokens.md" sourcestartlinenumber="78">
 <h5>Important</h5>
-<p><code>SortBy</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, and <code>Strategy</code> require PDMShell to collect the full matching result set before it can return the final results. Use narrow filters when searching large folders or recursive folder trees.</p>
+<p sourcefile="src/search-tokens.md" sourcestartlinenumber="79"><code sourcefile="src/search-tokens.md" sourcestartlinenumber="79">SortBy</code>, <code sourcefile="src/search-tokens.md" sourcestartlinenumber="79">GroupBy</code>, <code sourcefile="src/search-tokens.md" sourcestartlinenumber="79">DuplicatedBy</code>, and <code sourcefile="src/search-tokens.md" sourcestartlinenumber="79">Strategy</code> require PDMShell to collect the full matching result set before it can return the final results. Use narrow filters when searching large folders or recursive folder trees.</p>
 </div>
-<h2 id="default-behavior">Default Behavior</h2>
-<p><code>FolderID</code> defaults to the active directory.</p>
-<p><code>Recursive</code> defaults to the command's recursive flag.</p>
-<p><code>FindFolders</code> defaults to the command's include-folders flag.</p>
-<p><code>FindFiles</code> is always enabled for file searches.</p>
-<h2 id="checked-out-files">Checked-Out Files</h2>
-<p>Use <code>Locked=true</code> to search for checked-out files. Use <code>LockedBy</code> when you need files checked out by a specific PDM user.</p>
-<pre><code class="lang-bash">search -search &quot;Name=%.sldprt;Locked=true&quot;
+<h2 id="default-behavior" sourcefile="src/search-tokens.md" sourcestartlinenumber="81">Default Behavior</h2>
+<p sourcefile="src/search-tokens.md" sourcestartlinenumber="83"><code sourcefile="src/search-tokens.md" sourcestartlinenumber="83">FolderID</code> defaults to the active directory.</p>
+<p sourcefile="src/search-tokens.md" sourcestartlinenumber="85"><code sourcefile="src/search-tokens.md" sourcestartlinenumber="85">Recursive</code> defaults to the command's recursive flag.</p>
+<p sourcefile="src/search-tokens.md" sourcestartlinenumber="87"><code sourcefile="src/search-tokens.md" sourcestartlinenumber="87">FindFolders</code> defaults to the command's include-folders flag.</p>
+<p sourcefile="src/search-tokens.md" sourcestartlinenumber="89"><code sourcefile="src/search-tokens.md" sourcestartlinenumber="89">FindFiles</code> is always enabled for file searches.</p>
+<h2 id="checked-out-files" sourcefile="src/search-tokens.md" sourcestartlinenumber="91">Checked-Out Files</h2>
+<p sourcefile="src/search-tokens.md" sourcestartlinenumber="93">Use <code sourcefile="src/search-tokens.md" sourcestartlinenumber="93">Locked=true</code> to search for checked-out files. Use <code sourcefile="src/search-tokens.md" sourcestartlinenumber="93">LockedBy</code> when you need files checked out by a specific PDM user.</p>
+<pre><code class="lang-bash" sourcefile="src/search-tokens.md" sourcestartlinenumber="95">search -search &quot;Name=%.sldprt;Locked=true&quot;
 search -search &quot;Name=%.sldprt;Locked=true;LockedBy=Admin&quot;
 </code></pre>
-<h2 id="dates">Dates</h2>
-<p>Date tokens use <code>yyyyMMdd</code>.</p>
-<pre><code class="lang-bash">Name=%.sldprt;VersionsBefore=20200101
+<h2 id="dates" sourcefile="src/search-tokens.md" sourcestartlinenumber="100">Dates</h2>
+<p sourcefile="src/search-tokens.md" sourcestartlinenumber="102">Date tokens use <code sourcefile="src/search-tokens.md" sourcestartlinenumber="102">yyyyMMdd</code>.</p>
+<pre><code class="lang-bash" sourcefile="src/search-tokens.md" sourcestartlinenumber="104">Name=%.sldprt;VersionsBefore=20200101
 </code></pre>
-<h2 id="related-articles">Related Articles</h2>
-<ul>
-<li><a href="advancedsearch.html">Advanced search overview</a></li>
-<li><a href="search-variables.html">Variable search</a></li>
-<li><a href="search-result-shaping.html">Result shaping</a></li>
-<li><a href="search-favorites.html">Search favorites</a></li>
+<h2 id="related-articles" sourcefile="src/search-tokens.md" sourcestartlinenumber="108">Related Articles</h2>
+<ul sourcefile="src/search-tokens.md" sourcestartlinenumber="110">
+<li sourcefile="src/search-tokens.md" sourcestartlinenumber="110"><a href="advancedsearch.html" sourcefile="src/search-tokens.md" sourcestartlinenumber="110">Advanced search overview</a></li>
+<li sourcefile="src/search-tokens.md" sourcestartlinenumber="111"><a href="search-variables.html" sourcefile="src/search-tokens.md" sourcestartlinenumber="111">Variable search</a></li>
+<li sourcefile="src/search-tokens.md" sourcestartlinenumber="112"><a href="search-result-shaping.html" sourcefile="src/search-tokens.md" sourcestartlinenumber="112">Result shaping</a></li>
+<li sourcefile="src/search-tokens.md" sourcestartlinenumber="113"><a href="search-favorites.html" sourcefile="src/search-tokens.md" sourcestartlinenumber="113">Search favorites</a></li>
 </ul>
 
 </article>

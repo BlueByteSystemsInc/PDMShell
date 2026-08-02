@@ -85,61 +85,61 @@
         </div>
 
         <article data-uid="">
-<h1 id="getvarfromdb">getvarfromdb</h1>
+<h1 id="getvarfromdb" sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="5">getvarfromdb</h1>
 
-<h2 id="description">Description</h2>
-<p>Gets the value of a variable for a specified file or folder directly from the database.</p>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-text">getvarfromdb -filePath -variableName -configNames
+<h2 id="description" sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="6">Description</h2>
+<p sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="7">Gets the value of a variable for a specified file or folder directly from the database.</p>
+<h2 id="syntax" sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="9">Syntax</h2>
+<pre><code class="lang-text" sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="11">getvarfromdb -filePath -variableName -configNames
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<table>
+<h2 id="parameters" sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="15">Parameters</h2>
+<table sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="17">
 <thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
+<tr sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="17">
+<th sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="17">Parameter</th>
+<th sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="17">Required</th>
+<th sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="17">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>-filePath</code></td>
-<td>Yes</td>
-<td>The file or folder to get the variable from.</td>
+<tr sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="19">
+<td sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="19"><code sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="19">-filePath</code></td>
+<td sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="19">Yes</td>
+<td sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="19">The file or folder to get the variable from.</td>
 </tr>
-<tr>
-<td><code>-variableName</code></td>
-<td>Yes</td>
-<td>The variable name to retrieve from the database.</td>
+<tr sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="20">
+<td sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="20"><code sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="20">-variableName</code></td>
+<td sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="20">Yes</td>
+<td sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="20">The variable name to retrieve from the database.</td>
 </tr>
-<tr>
-<td><code>-configNames</code></td>
-<td>Yes</td>
-<td>The configuration names to retrieve the variable from, separated by commas.</td>
+<tr sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="21">
+<td sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="21"><code sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="21">-configNames</code></td>
+<td sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="21">Yes</td>
+<td sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="21">The configuration names to retrieve the variable from, separated by commas.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details">Parameter Details</h3>
-<ul>
-<li><p><code>filePath</code> :<br>
+<h3 id="parameter-details" sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="23">Parameter Details</h3>
+<ul sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="25">
+<li sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="25"><p sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="25"><code sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="25">filePath</code> :<br>
 The file or folder to get the variable from.</p>
 </li>
-<li><p><code>variableName</code> :<br>
+<li sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="28"><p sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="28"><code sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="28">variableName</code> :<br>
 The variable name to retrieve from the database.</p>
 </li>
-<li><p><code>configNames</code> :<br>
+<li sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="31"><p sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="31"><code sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="31">configNames</code> :<br>
 The configuration names to retrieve the variable from, separated by commas.</p>
 </li>
 </ul>
-<h2 id="examples">Examples</h2>
-<p>getvarfromdb -f &quot;file1.sldprt&quot; -variableName &quot;CustomVar&quot;</p>
-<h2 id="remarks">Remarks</h2>
-<ul>
-<li>The configuration names should be separated by commas.</li>
-<li>This command will always return the latest value.</li>
+<h2 id="examples" sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="34">Examples</h2>
+<p sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="35">getvarfromdb -f &quot;file1.sldprt&quot; -variableName &quot;CustomVar&quot;</p>
+<h2 id="remarks" sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="37">Remarks</h2>
+<ul sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="38">
+<li sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="38">The configuration names should be separated by commas.</li>
+<li sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="39">This command will always return the latest value.</li>
 </ul>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 2.0.0.</p>
+<h2 id="availability" sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="41">Availability</h2>
+<p sourcefile="src/GETVARFROMDB.md" sourcestartlinenumber="42">Available since PDMShell 2.0.0.</p>
 
 </article>
 

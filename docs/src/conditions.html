@@ -85,210 +85,210 @@
         </div>
 
         <article data-uid="">
-<h1 id="conditions">Conditions</h1>
+<h1 id="conditions" sourcefile="src/conditions.md" sourcestartlinenumber="6">Conditions</h1>
 
-<p>Conditions let PDMShell decide whether something is true before continuing. The same condition style is used by:</p>
-<ul>
-<li><a href="if-statements.html">IF statements and conditions</a> in the Visual Code Editor.</li>
-<li>The <a href="UNTIL.html"><code>until</code></a> command.</li>
-<li><a href="addin/conditions.html">PDMShell add-in conditions</a>.</li>
+<p sourcefile="src/conditions.md" sourcestartlinenumber="8">Conditions let PDMShell decide whether something is true before continuing. The same condition style is used by:</p>
+<ul sourcefile="src/conditions.md" sourcestartlinenumber="10">
+<li sourcefile="src/conditions.md" sourcestartlinenumber="10"><a href="if-statements.html" sourcefile="src/conditions.md" sourcestartlinenumber="10">IF statements and conditions</a> in the Visual Code Editor.</li>
+<li sourcefile="src/conditions.md" sourcestartlinenumber="11">The <a href="UNTIL.html" sourcefile="src/conditions.md" sourcestartlinenumber="11"><code sourcefile="src/conditions.md" sourcestartlinenumber="11">until</code></a> command.</li>
+<li sourcefile="src/conditions.md" sourcestartlinenumber="12"><a href="addin/conditions.html" sourcefile="src/conditions.md" sourcestartlinenumber="12">PDMShell add-in conditions</a>.</li>
 </ul>
-<p>Use conditions when a script needs to check file names, folder paths, PDM variables, placeholder values, process state, generated output files, or simple numeric comparisons.</p>
-<h2 id="basic-shape">Basic Shape</h2>
-<p>A condition usually has three parts:</p>
-<table>
+<p sourcefile="src/conditions.md" sourcestartlinenumber="14">Use conditions when a script needs to check file names, folder paths, PDM variables, placeholder values, process state, generated output files, or simple numeric comparisons.</p>
+<h2 id="basic-shape" sourcefile="src/conditions.md" sourcestartlinenumber="16">Basic Shape</h2>
+<p sourcefile="src/conditions.md" sourcestartlinenumber="18">A condition usually has three parts:</p>
+<table sourcefile="src/conditions.md" sourcestartlinenumber="20">
 <thead>
-<tr>
-<th>Part</th>
-<th>Example</th>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="20">
+<th sourcefile="src/conditions.md" sourcestartlinenumber="20">Part</th>
+<th sourcefile="src/conditions.md" sourcestartlinenumber="20">Example</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Left value</td>
-<td><code>$fileName</code></td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="22">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="22">Left value</td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="22"><code sourcefile="src/conditions.md" sourcestartlinenumber="22">$fileName</code></td>
 </tr>
-<tr>
-<td>Operator</td>
-<td><code>contains</code></td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="23">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="23">Operator</td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="23"><code sourcefile="src/conditions.md" sourcestartlinenumber="23">contains</code></td>
 </tr>
-<tr>
-<td>Right value</td>
-<td><code>&quot;ECO&quot;</code></td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="24">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="24">Right value</td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="24"><code sourcefile="src/conditions.md" sourcestartlinenumber="24">&quot;ECO&quot;</code></td>
 </tr>
 </tbody>
 </table>
-<p>Example:</p>
-<pre><code class="lang-text">$fileName contains &quot;ECO&quot;
+<p sourcefile="src/conditions.md" sourcestartlinenumber="26">Example:</p>
+<pre><code class="lang-text" sourcefile="src/conditions.md" sourcestartlinenumber="28">$fileName contains &quot;ECO&quot;
 </code></pre>
-<p>PDMShell evaluates the expression at runtime. If the condition is true, the waiting command, IF branch, or add-in script rule can continue.</p>
-<h2 id="supported-operators">Supported Operators</h2>
-<table>
+<p sourcefile="src/conditions.md" sourcestartlinenumber="32">PDMShell evaluates the expression at runtime. If the condition is true, the waiting command, IF branch, or add-in script rule can continue.</p>
+<h2 id="supported-operators" sourcefile="src/conditions.md" sourcestartlinenumber="34">Supported Operators</h2>
+<table sourcefile="src/conditions.md" sourcestartlinenumber="36">
 <thead>
-<tr>
-<th>Operator</th>
-<th>Example</th>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="36">
+<th sourcefile="src/conditions.md" sourcestartlinenumber="36">Operator</th>
+<th sourcefile="src/conditions.md" sourcestartlinenumber="36">Example</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>exists</code></td>
-<td><code>$localPath exists</code></td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="38">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="38"><code sourcefile="src/conditions.md" sourcestartlinenumber="38">exists</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="38"><code sourcefile="src/conditions.md" sourcestartlinenumber="38">$localPath exists</code></td>
 </tr>
-<tr>
-<td><code>equals</code>, <code>equal</code>, <code>is</code>, <code>=</code>, <code>==</code></td>
-<td><code>$revision equals &quot;A&quot;</code></td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="39">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="39"><code sourcefile="src/conditions.md" sourcestartlinenumber="39">equals</code>, <code sourcefile="src/conditions.md" sourcestartlinenumber="39">equal</code>, <code sourcefile="src/conditions.md" sourcestartlinenumber="39">is</code>, <code sourcefile="src/conditions.md" sourcestartlinenumber="39">=</code>, <code sourcefile="src/conditions.md" sourcestartlinenumber="39">==</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="39"><code sourcefile="src/conditions.md" sourcestartlinenumber="39">$revision equals &quot;A&quot;</code></td>
 </tr>
-<tr>
-<td><code>not equals</code>, <code>!=</code>, <code>&lt;&gt;</code></td>
-<td><code>$fileName not equals &quot;test.pdf&quot;</code></td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="40">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="40"><code sourcefile="src/conditions.md" sourcestartlinenumber="40">not equals</code>, <code sourcefile="src/conditions.md" sourcestartlinenumber="40">!=</code>, <code sourcefile="src/conditions.md" sourcestartlinenumber="40">&lt;&gt;</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="40"><code sourcefile="src/conditions.md" sourcestartlinenumber="40">$fileName not equals &quot;test.pdf&quot;</code></td>
 </tr>
-<tr>
-<td><code>contains</code></td>
-<td><code>$fileName contains &quot;ECO&quot;</code></td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="41">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="41"><code sourcefile="src/conditions.md" sourcestartlinenumber="41">contains</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="41"><code sourcefile="src/conditions.md" sourcestartlinenumber="41">$fileName contains &quot;ECO&quot;</code></td>
 </tr>
-<tr>
-<td><code>starts with</code></td>
-<td><code>$fileName starts with &quot;PRJ&quot;</code></td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="42">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="42"><code sourcefile="src/conditions.md" sourcestartlinenumber="42">starts with</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="42"><code sourcefile="src/conditions.md" sourcestartlinenumber="42">$fileName starts with &quot;PRJ&quot;</code></td>
 </tr>
-<tr>
-<td><code>ends with</code></td>
-<td><code>$fileName ends with &quot;.pdf&quot;</code></td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="43">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="43"><code sourcefile="src/conditions.md" sourcestartlinenumber="43">ends with</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="43"><code sourcefile="src/conditions.md" sourcestartlinenumber="43">$fileName ends with &quot;.pdf&quot;</code></td>
 </tr>
-<tr>
-<td><code>matches</code>, <code>regex</code></td>
-<td><code>$fileName matches &quot;.*\\.pdf&quot;</code></td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="44">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="44"><code sourcefile="src/conditions.md" sourcestartlinenumber="44">matches</code>, <code sourcefile="src/conditions.md" sourcestartlinenumber="44">regex</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="44"><code sourcefile="src/conditions.md" sourcestartlinenumber="44">$fileName matches &quot;.*\\.pdf&quot;</code></td>
 </tr>
-<tr>
-<td><code>less than</code>, <code>&lt;</code></td>
-<td><code>$version less than 5</code></td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="45">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="45"><code sourcefile="src/conditions.md" sourcestartlinenumber="45">less than</code>, <code sourcefile="src/conditions.md" sourcestartlinenumber="45">&lt;</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="45"><code sourcefile="src/conditions.md" sourcestartlinenumber="45">$version less than 5</code></td>
 </tr>
-<tr>
-<td><code>less than or equal</code>, <code>&lt;=</code></td>
-<td><code>$version less than or equal 5</code></td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="46">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="46"><code sourcefile="src/conditions.md" sourcestartlinenumber="46">less than or equal</code>, <code sourcefile="src/conditions.md" sourcestartlinenumber="46">&lt;=</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="46"><code sourcefile="src/conditions.md" sourcestartlinenumber="46">$version less than or equal 5</code></td>
 </tr>
-<tr>
-<td><code>greater than</code>, <code>&gt;</code></td>
-<td><code>$version greater than 1</code></td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="47">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="47"><code sourcefile="src/conditions.md" sourcestartlinenumber="47">greater than</code>, <code sourcefile="src/conditions.md" sourcestartlinenumber="47">&gt;</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="47"><code sourcefile="src/conditions.md" sourcestartlinenumber="47">$version greater than 1</code></td>
 </tr>
-<tr>
-<td><code>greater than or equal</code>, <code>&gt;=</code></td>
-<td><code>$version greater than or equal 1</code></td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="48">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="48"><code sourcefile="src/conditions.md" sourcestartlinenumber="48">greater than or equal</code>, <code sourcefile="src/conditions.md" sourcestartlinenumber="48">&gt;=</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="48"><code sourcefile="src/conditions.md" sourcestartlinenumber="48">$version greater than or equal 1</code></td>
 </tr>
 </tbody>
 </table>
-<h2 id="exists-checks">Exists Checks</h2>
-<p>Use <code>exists</code> to check files, folders, or processes.</p>
-<pre><code class="lang-text">$localPath exists
+<h2 id="exists-checks" sourcefile="src/conditions.md" sourcestartlinenumber="50">Exists Checks</h2>
+<p sourcefile="src/conditions.md" sourcestartlinenumber="52">Use <code sourcefile="src/conditions.md" sourcestartlinenumber="52">exists</code> to check files, folders, or processes.</p>
+<pre><code class="lang-text" sourcefile="src/conditions.md" sourcestartlinenumber="54">$localPath exists
 $folderPath\ready.pdf exists
 file exists &quot;$folderPath\ready.pdf&quot;
 folder exists &quot;$folderPath&quot;
 process exists &quot;notepad&quot;
 </code></pre>
-<p>When the left side is not explicitly <code>file</code>, <code>folder</code>, or <code>process</code>, PDMShell treats it as a file check unless the value looks like a folder path.</p>
-<h2 id="pdm-variables">PDM Variables</h2>
-<p>Use <code>$(VariableName.ConfigurationName)</code> to read a PDM variable from the current file context. Use <code>.@</code> for the file <code>@</code> tab. Folder variables can use <code>$(VariableName)</code> because folders do not use file configurations.</p>
-<pre><code class="lang-text">&quot;$(Description.@)&quot; contains &quot;ECO&quot;
+<p sourcefile="src/conditions.md" sourcestartlinenumber="62">When the left side is not explicitly <code sourcefile="src/conditions.md" sourcestartlinenumber="62">file</code>, <code sourcefile="src/conditions.md" sourcestartlinenumber="62">folder</code>, or <code sourcefile="src/conditions.md" sourcestartlinenumber="62">process</code>, PDMShell treats it as a file check unless the value looks like a folder path.</p>
+<h2 id="pdm-variables" sourcefile="src/conditions.md" sourcestartlinenumber="64">PDM Variables</h2>
+<p sourcefile="src/conditions.md" sourcestartlinenumber="66">Use <code sourcefile="src/conditions.md" sourcestartlinenumber="66">$(VariableName.ConfigurationName)</code> to read a PDM variable from the current file context. Use <code sourcefile="src/conditions.md" sourcestartlinenumber="66">.@</code> for the file <code sourcefile="src/conditions.md" sourcestartlinenumber="66">@</code> tab. Folder variables can use <code sourcefile="src/conditions.md" sourcestartlinenumber="66">$(VariableName)</code> because folders do not use file configurations.</p>
+<pre><code class="lang-text" sourcefile="src/conditions.md" sourcestartlinenumber="68">&quot;$(Description.@)&quot; contains &quot;ECO&quot;
 &quot;$(Revision.@)&quot; equals &quot;A&quot;
 </code></pre>
-<p>For file data card variables, the <code>.@</code> suffix is required when reading the file <code>@</code> tab, for example <code>$(Description.@)</code>. Bracketed text is literal and is not evaluated as a PDM variable.</p>
-<h2 id="placeholders">Placeholders</h2>
-<p>Conditions can use <a href="EVAL.html">PDMShell placeholders</a>.</p>
-<p>Common examples:</p>
-<table>
+<p sourcefile="src/conditions.md" sourcestartlinenumber="73">For file data card variables, the <code sourcefile="src/conditions.md" sourcestartlinenumber="73">.@</code> suffix is required when reading the file <code sourcefile="src/conditions.md" sourcestartlinenumber="73">@</code> tab, for example <code sourcefile="src/conditions.md" sourcestartlinenumber="73">$(Description.@)</code>. Bracketed text is literal and is not evaluated as a PDM variable.</p>
+<h2 id="placeholders" sourcefile="src/conditions.md" sourcestartlinenumber="75">Placeholders</h2>
+<p sourcefile="src/conditions.md" sourcestartlinenumber="77">Conditions can use <a href="EVAL.html" sourcefile="src/conditions.md" sourcestartlinenumber="77">PDMShell placeholders</a>.</p>
+<p sourcefile="src/conditions.md" sourcestartlinenumber="79">Common examples:</p>
+<table sourcefile="src/conditions.md" sourcestartlinenumber="81">
 <thead>
-<tr>
-<th>Placeholder</th>
-<th>Meaning</th>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="81">
+<th sourcefile="src/conditions.md" sourcestartlinenumber="81">Placeholder</th>
+<th sourcefile="src/conditions.md" sourcestartlinenumber="81">Meaning</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>$fileName</code></td>
-<td>Current file name.</td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="83">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="83"><code sourcefile="src/conditions.md" sourcestartlinenumber="83">$fileName</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="83">Current file name.</td>
 </tr>
-<tr>
-<td><code>$filePath</code></td>
-<td>Current file path.</td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="84">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="84"><code sourcefile="src/conditions.md" sourcestartlinenumber="84">$filePath</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="84">Current file path.</td>
 </tr>
-<tr>
-<td><code>$folderName</code></td>
-<td>Current folder name.</td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="85">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="85"><code sourcefile="src/conditions.md" sourcestartlinenumber="85">$folderName</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="85">Current folder name.</td>
 </tr>
-<tr>
-<td><code>$folderPath</code></td>
-<td>Current folder path.</td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="86">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="86"><code sourcefile="src/conditions.md" sourcestartlinenumber="86">$folderPath</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="86">Current folder path.</td>
 </tr>
-<tr>
-<td><code>$vaultName</code></td>
-<td>Current vault name.</td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="87">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="87"><code sourcefile="src/conditions.md" sourcestartlinenumber="87">$vaultName</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="87">Current vault name.</td>
 </tr>
-<tr>
-<td><code>$revision</code></td>
-<td>Current file revision when available.</td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="88">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="88"><code sourcefile="src/conditions.md" sourcestartlinenumber="88">$revision</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="88">Current file revision when available.</td>
 </tr>
-<tr>
-<td><code>$version</code></td>
-<td>Current file version when available.</td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="89">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="89"><code sourcefile="src/conditions.md" sourcestartlinenumber="89">$version</code></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="89">Current file version when available.</td>
 </tr>
 </tbody>
 </table>
-<div class="NOTE">
+<div class="NOTE" sourcefile="src/conditions.md" sourcestartlinenumber="91">
 <h5>Note</h5>
-<p>File-specific placeholders need file or folder context. In the Visual Code Editor, use a run option that provides selected items when the condition depends on a selected file or folder.</p>
+<p sourcefile="src/conditions.md" sourcestartlinenumber="92">File-specific placeholders need file or folder context. In the Visual Code Editor, use a run option that provides selected items when the condition depends on a selected file or folder.</p>
 </div>
-<h2 id="checkout-conditions">Checkout Conditions</h2>
-<p>Checkout functions can be used directly as boolean conditions:</p>
-<pre><code class="lang-text">${isCheckedOut()}
+<h2 id="checkout-conditions" sourcefile="src/conditions.md" sourcestartlinenumber="94">Checkout Conditions</h2>
+<p sourcefile="src/conditions.md" sourcestartlinenumber="96">Checkout functions can be used directly as boolean conditions:</p>
+<pre><code class="lang-text" sourcefile="src/conditions.md" sourcestartlinenumber="98">${isCheckedOut()}
 ${isCheckedByMe()}
 ${isCheckedOutByUsername(&quot;Admin&quot;)}
 </code></pre>
-<p>Supply a file path to inspect a different file. Relative paths resolve from the current PDM folder:</p>
-<pre><code class="lang-text">${isCheckedOut(&quot;RelatedDrawing.slddrw&quot;)}
+<p sourcefile="src/conditions.md" sourcestartlinenumber="104">Supply a file path to inspect a different file. Relative paths resolve from the current PDM folder:</p>
+<pre><code class="lang-text" sourcefile="src/conditions.md" sourcestartlinenumber="106">${isCheckedOut(&quot;RelatedDrawing.slddrw&quot;)}
 ${isCheckedOutByUsername(&quot;Admin&quot;, &quot;$folderPath\\RelatedDrawing.slddrw&quot;)}
 ${checkedOutOnComputer()} equals &quot;PDM-WORKSTATION&quot;
 </code></pre>
-<p>These functions are available in visual IF statements, <code>until</code>, and PDMShell add-in conditions.</p>
-<h2 id="combining-conditions">Combining Conditions</h2>
-<p>Use <code>and</code>, <code>or</code>, and parentheses to combine checks.</p>
-<pre><code class="lang-text">$folderPath\ready.pdf exists and $folderPath\ready.dxf exists
+<p sourcefile="src/conditions.md" sourcestartlinenumber="112">These functions are available in visual IF statements, <code sourcefile="src/conditions.md" sourcestartlinenumber="112">until</code>, and PDMShell add-in conditions.</p>
+<h2 id="combining-conditions" sourcefile="src/conditions.md" sourcestartlinenumber="114">Combining Conditions</h2>
+<p sourcefile="src/conditions.md" sourcestartlinenumber="116">Use <code sourcefile="src/conditions.md" sourcestartlinenumber="116">and</code>, <code sourcefile="src/conditions.md" sourcestartlinenumber="116">or</code>, and parentheses to combine checks.</p>
+<pre><code class="lang-text" sourcefile="src/conditions.md" sourcestartlinenumber="118">$folderPath\ready.pdf exists and $folderPath\ready.dxf exists
 
 ($folderPath\ready.pdf exists or $folderPath\ready.dxf exists) and &quot;$(Description.@)&quot; contains &quot;Released&quot;
 </code></pre>
-<h2 id="numeric-comparisons">Numeric Comparisons</h2>
-<p>Numeric expressions can be used on either side of a comparison.</p>
-<pre><code class="lang-text">1 + 3 greater than 3
+<h2 id="numeric-comparisons" sourcefile="src/conditions.md" sourcestartlinenumber="124">Numeric Comparisons</h2>
+<p sourcefile="src/conditions.md" sourcestartlinenumber="126">Numeric expressions can be used on either side of a comparison.</p>
+<pre><code class="lang-text" sourcefile="src/conditions.md" sourcestartlinenumber="128">1 + 3 greater than 3
 2 * 5 equals 10
 &quot;$(Quantity.@)&quot; greater than 0
 </code></pre>
-<h2 id="where-conditions-are-used">Where Conditions Are Used</h2>
-<table>
+<h2 id="where-conditions-are-used" sourcefile="src/conditions.md" sourcestartlinenumber="134">Where Conditions Are Used</h2>
+<table sourcefile="src/conditions.md" sourcestartlinenumber="136">
 <thead>
-<tr>
-<th>Feature</th>
-<th>How conditions are used</th>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="136">
+<th sourcefile="src/conditions.md" sourcestartlinenumber="136">Feature</th>
+<th sourcefile="src/conditions.md" sourcestartlinenumber="136">How conditions are used</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="if-statements.html">IF statements and conditions</a></td>
-<td>Choose between <code>Conditions Met</code> and <code>Else</code> paths.</td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="138">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="138"><a href="if-statements.html" sourcefile="src/conditions.md" sourcestartlinenumber="138">IF statements and conditions</a></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="138">Choose between <code sourcefile="src/conditions.md" sourcestartlinenumber="138">Conditions Met</code> and <code sourcefile="src/conditions.md" sourcestartlinenumber="138">Else</code> paths.</td>
 </tr>
-<tr>
-<td><a href="UNTIL.html"><code>until</code></a></td>
-<td>Wait until a condition becomes true or timeout is reached.</td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="139">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="139"><a href="UNTIL.html" sourcefile="src/conditions.md" sourcestartlinenumber="139"><code sourcefile="src/conditions.md" sourcestartlinenumber="139">until</code></a></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="139">Wait until a condition becomes true or timeout is reached.</td>
 </tr>
-<tr>
-<td><a href="addin/conditions.html">PDMShell add-in conditions</a></td>
-<td>Decide whether a configured add-in script should run.</td>
+<tr sourcefile="src/conditions.md" sourcestartlinenumber="140">
+<td sourcefile="src/conditions.md" sourcestartlinenumber="140"><a href="addin/conditions.html" sourcefile="src/conditions.md" sourcestartlinenumber="140">PDMShell add-in conditions</a></td>
+<td sourcefile="src/conditions.md" sourcestartlinenumber="140">Decide whether a configured add-in script should run.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="tips">Tips</h2>
-<ul>
-<li>Quote PDM variable expressions when they appear inside a larger condition.</li>
-<li>Use <a href="expression-evaluator.html">Expression Evaluator</a> to test placeholder values before relying on them in a condition.</li>
-<li>Keep conditions small and readable when possible.</li>
+<h2 id="tips" sourcefile="src/conditions.md" sourcestartlinenumber="142">Tips</h2>
+<ul sourcefile="src/conditions.md" sourcestartlinenumber="144">
+<li sourcefile="src/conditions.md" sourcestartlinenumber="144">Quote PDM variable expressions when they appear inside a larger condition.</li>
+<li sourcefile="src/conditions.md" sourcestartlinenumber="145">Use <a href="expression-evaluator.html" sourcefile="src/conditions.md" sourcestartlinenumber="145">Expression Evaluator</a> to test placeholder values before relying on them in a condition.</li>
+<li sourcefile="src/conditions.md" sourcestartlinenumber="146">Keep conditions small and readable when possible.</li>
 </ul>
 
 </article>

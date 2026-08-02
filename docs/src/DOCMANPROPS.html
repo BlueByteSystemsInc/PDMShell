@@ -85,109 +85,109 @@
         </div>
 
         <article data-uid="">
-<h1 id="docmanprops">docmanprops</h1>
+<h1 id="docmanprops" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="6">docmanprops</h1>
 
-<h2 id="description">Description</h2>
-<p>The <code>docmanprops</code> command exports and updates SOLIDWORKS file custom properties without opening SOLIDWORKS.</p>
-<p>This command supports two primary modes:</p>
-<ul>
-<li>Export Mode (Default) Ã¢â‚¬â€ Reads properties from SOLIDWORKS files and writes them to a CSV file</li>
-<li>Update Mode Ã¢â‚¬â€ Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)</li>
-<li>Refresh Mode Ã¢â‚¬â€ Reads a CSV file and refreshes the content of the csv.</li>
+<h2 id="description" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="8">Description</h2>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="9">The <code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="9">docmanprops</code> command exports and updates SOLIDWORKS file custom properties without opening SOLIDWORKS.</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="11">This command supports two primary modes:</p>
+<ul sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="13">
+<li sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="13">Export Mode (Default) Ã¢â‚¬â€ Reads properties from SOLIDWORKS files and writes them to a CSV file</li>
+<li sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="14">Update Mode Ã¢â‚¬â€ Reads a CSV file and writes the properties back into the SOLIDWORKS files (Same CSV from Export mode)</li>
+<li sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="15">Refresh Mode Ã¢â‚¬â€ Reads a CSV file and refreshes the content of the csv.</li>
 </ul>
-<div class="NOTE">
+<div class="NOTE" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="18">
 <h5>Note</h5>
-<p>This command works with the file system and requires files to be locally cached. It reads and writes files both inside and outside the vault. Relative paths only work in the vault directory (and requires you to be logged in).</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="19">This command works with the file system and requires files to be locally cached. It reads and writes files both inside and outside the vault. Relative paths only work in the vault directory (and requires you to be logged in).</p>
 </div>
-<hr>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-text">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-update] [-refresh] [-extension]
+<hr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="21">
+<h2 id="syntax" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="23">Syntax</h2>
+<pre><code class="lang-text" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="25">docmanprops -directory &lt;path&gt; -csv &lt;csvPath&gt; [-recursive] [-configNames] [-update] [-refresh] [-extension]
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<table>
+<h2 id="parameters" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="29">Parameters</h2>
+<table sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="31">
 <thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
+<tr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="31">
+<th sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="31">Parameter</th>
+<th sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="31">Required</th>
+<th sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="31">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>-directory</code></td>
-<td>Yes</td>
-<td>Specifies the folder containing SOLIDWORKS files.</td>
+<tr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="33">
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="33"><code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="33">-directory</code></td>
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="33">Yes</td>
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="33">Specifies the folder containing SOLIDWORKS files.</td>
 </tr>
-<tr>
-<td><code>-csv</code></td>
-<td>Yes</td>
-<td>Specifies the CSV file path.</td>
+<tr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="34">
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="34"><code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="34">-csv</code></td>
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="34">Yes</td>
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="34">Specifies the CSV file path.</td>
 </tr>
-<tr>
-<td><code>-recursive</code></td>
-<td>No</td>
-<td>When specified, searches subfolders.</td>
+<tr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="35">
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="35"><code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="35">-recursive</code></td>
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="35">No</td>
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="35">When specified, searches subfolders.</td>
 </tr>
-<tr>
-<td><code>-configNames</code></td>
-<td>No</td>
-<td>Specifies which configurations to include.</td>
+<tr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="36">
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="36"><code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="36">-configNames</code></td>
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="36">No</td>
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="36">Specifies which configurations to include.</td>
 </tr>
-<tr>
-<td><code>-update</code></td>
-<td>No</td>
-<td>When specified, the command runs in Update Mode.</td>
+<tr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="37">
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="37"><code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="37">-update</code></td>
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="37">No</td>
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="37">When specified, the command runs in Update Mode.</td>
 </tr>
-<tr>
-<td><code>-refresh</code></td>
-<td>No</td>
-<td>When specified, the command runs in Refresh Mode.</td>
+<tr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="38">
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="38"><code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="38">-refresh</code></td>
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="38">No</td>
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="38">When specified, the command runs in Refresh Mode.</td>
 </tr>
-<tr>
-<td><code>-extension</code></td>
-<td>No</td>
-<td>Specifies which file extension filters to include when exporting or updating properties.</td>
+<tr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="39">
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="39"><code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="39">-extension</code></td>
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="39">No</td>
+<td sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="39">Specifies which file extension filters to include when exporting or updating properties.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details">Parameter Details</h3>
-<h3 id="directory"><code>directory</code></h3>
-<p>Specifies the folder containing SOLIDWORKS files.</p>
-<p>Example:</p>
-<pre><code class="lang-bash">`-directory &quot;C:\Vault\Projects&quot;`
+<h3 id="parameter-details" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="41">Parameter Details</h3>
+<h3 id="directory" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="43"><code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="43">directory</code></h3>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="45">Specifies the folder containing SOLIDWORKS files.</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="47">Example:</p>
+<pre><code class="lang-bash" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="48">`-directory &quot;C:\Vault\Projects&quot;`
 </code></pre>
-<hr>
-<h3 id="csv"><code>csv</code></h3>
-<p>Specifies the CSV file path.</p>
-<p>Used for:</p>
-<ul>
-<li>Export destination</li>
-<li>update source</li>
+<hr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="51">
+<h3 id="csv" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="53"><code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="53">csv</code></h3>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="55">Specifies the CSV file path.</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="57">Used for:</p>
+<ul sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="59">
+<li sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="59">Export destination</li>
+<li sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="60">update source</li>
 </ul>
-<p>Example: <code>-csv &quot;C:\temp\props.csv&quot;</code></p>
-<hr>
-<h3 id="update"><code>update</code></h3>
-<p>When specified, the command runs in Update Mode.</p>
-<p>Reads the CSV file and writes the properties back into the SOLIDWORKS files.</p>
-<hr>
-<h3 id="refresh"><code>refresh</code></h3>
-<p>When specified, the command runs in Refresh Mode.</p>
-<p>Reads the CSV file and refreshes the content of the properties in the csv file.</p>
-<hr>
-<h3 id="recursive"><code>recursive</code></h3>
-<h2 id="when-specified-searches-subfolders">When specified, searches subfolders.</h2>
-<h3 id="confignames"><code>configNames</code></h3>
-<p>Specifies which configurations to include.</p>
-<p>Default: All configurations</p>
-<p>Example: <code>-configNames &quot;Default,Config1&quot;</code> Use space for custom property.</p>
-<hr>
-<h3 id="extension"><code>extension</code></h3>
-<p>Specifies which file extension filters to include when exporting or updating properties.</p>
-<p>Default: <code>*</code> (all files)</p>
-<p>Supports wildcards and multiple values separated by commas.</p>
-<p>Special value for all solidworks file extensions is: <code>solidworks</code></p>
-<p>Examples:</p>
-<pre><code class="lang-bash">#all solidworks files
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="62">Example: <code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="62">-csv &quot;C:\temp\props.csv&quot;</code></p>
+<hr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="64">
+<h3 id="update" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="66"><code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="66">update</code></h3>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="68">When specified, the command runs in Update Mode.</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="70">Reads the CSV file and writes the properties back into the SOLIDWORKS files.</p>
+<hr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="72">
+<h3 id="refresh" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="73"><code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="73">refresh</code></h3>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="75">When specified, the command runs in Refresh Mode.</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="77">Reads the CSV file and refreshes the content of the properties in the csv file.</p>
+<hr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="80">
+<h3 id="recursive" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="81"><code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="81">recursive</code></h3>
+<h2 id="when-specified-searches-subfolders" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="84">When specified, searches subfolders.</h2>
+<h3 id="confignames" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="86"><code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="86">configNames</code></h3>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="88">Specifies which configurations to include.</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="90">Default: All configurations</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="92">Example: <code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="92">-configNames &quot;Default,Config1&quot;</code> Use space for custom property.</p>
+<hr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="94">
+<h3 id="extension" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="96"><code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="96">extension</code></h3>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="98">Specifies which file extension filters to include when exporting or updating properties.</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="100">Default: <code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="100">*</code> (all files)</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="102">Supports wildcards and multiple values separated by commas.</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="104">Special value for all solidworks file extensions is: <code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="104">solidworks</code></p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="106">Examples:</p>
+<pre><code class="lang-bash" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="107">#all solidworks files
 -extension &quot;solidworks&quot;
 
 -extension &quot;*.sld*&quot;
@@ -198,14 +198,14 @@
 
 -extension &quot;*&quot;
 </code></pre>
-<p>If an extension filter contains spaces, wrap it in quotes.</p>
-<p>Example:</p>
-<pre><code class="lang-bash">-extension &quot;*.sld*,*.step,*.pdf&quot;
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="119">If an extension filter contains spaces, wrap it in quotes.</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="121">Example:</p>
+<pre><code class="lang-bash" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="122">-extension &quot;*.sld*,*.step,*.pdf&quot;
 </code></pre>
-<h2 id="use--to-include-all-files-regardless-of-extension">Use <code>*.*</code> to include all files regardless of extension.</h2>
-<h2 id="csv-format">CSV Format</h2>
-<p>The CSV contains the following columns:</p>
-<pre><code class="lang-bash">Folder  
+<h2 id="use--to-include-all-files-regardless-of-extension" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="126">Use <code sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="126">*.*</code> to include all files regardless of extension.</h2>
+<h2 id="csv-format" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="128">CSV Format</h2>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="129">The CSV contains the following columns:</p>
+<pre><code class="lang-bash" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="130">Folder  
 FullPath  
 FileName  
 Extension  
@@ -217,63 +217,63 @@ Type
 Success  
 Exception  
 </code></pre>
-<p>Example:</p>
-<pre><code class="lang-bash">C:\Vault\Part, C:\Vault\Part\Part1.SLDPRT, Part1, .SLDPRT, Default, Description, Plate, Plate, Text, True,
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="143">Example:</p>
+<pre><code class="lang-bash" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="145">C:\Vault\Part, C:\Vault\Part\Part1.SLDPRT, Part1, .SLDPRT, Default, Description, Plate, Plate, Text, True,
 </code></pre>
-<hr>
-<h2 id="export-mode">Export Mode</h2>
-<h2 id="description-1">Description</h2>
-<p>Reads properties from files and writes them to CSV.</p>
-<p>Properties include:</p>
-<ul>
-<li>File custom properties</li>
-<li>Configuration properties</li>
-<li>Evaluated values</li>
-<li>Property types</li>
+<hr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="149">
+<h2 id="export-mode" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="151">Export Mode</h2>
+<h2 id="description-1" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="152">Description</h2>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="153">Reads properties from files and writes them to CSV.</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="155">Properties include:</p>
+<ul sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="157">
+<li sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="157">File custom properties</li>
+<li sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="158">Configuration properties</li>
+<li sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="159">Evaluated values</li>
+<li sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="160">Property types</li>
 </ul>
-<hr>
-<h2 id="examples">Examples</h2>
-<pre><code class="lang-bash">docmanprops -directory &quot;C:\Vault\Parts&quot; -csv &quot;C:\temp\props.csv&quot; -recursive
+<hr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="162">
+<h2 id="examples" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="164">Examples</h2>
+<pre><code class="lang-bash" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="165">docmanprops -directory &quot;C:\Vault\Parts&quot; -csv &quot;C:\temp\props.csv&quot; -recursive
 </code></pre>
-<h2 id="output">Output</h2>
-<h2 id="export-mode-1"><img src="/images/exportmode.png" alt="export mode"></h2>
-<h2 id="update-mode">Update Mode</h2>
-<h2 id="description-2">Description</h2>
-<p>Reads CSV file and writes properties back into files.</p>
-<p>Features:</p>
-<ul>
-<li>Opens each file once</li>
-<li>Updates all properties</li>
-<li>Saves file</li>
-<li>Updates CSV Success and Exception columns</li>
-<li>Parallel processing</li>
+<h2 id="output" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="169">Output</h2>
+<h2 id="export-mode-1" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="171"><img src="/images/exportmode.png" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="171" alt="export mode"></h2>
+<h2 id="update-mode" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="173">Update Mode</h2>
+<h2 id="description-2" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="174">Description</h2>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="175">Reads CSV file and writes properties back into files.</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="177">Features:</p>
+<ul sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="179">
+<li sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="179">Opens each file once</li>
+<li sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="180">Updates all properties</li>
+<li sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="181">Saves file</li>
+<li sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="182">Updates CSV Success and Exception columns</li>
+<li sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="183">Parallel processing</li>
 </ul>
-<hr>
-<h2 id="examples-1">Examples</h2>
-<pre><code class="lang-bash">docmanprops -csv &quot;C:\temp\props.csv&quot; -update
+<hr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="185">
+<h2 id="examples-1" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="187">Examples</h2>
+<pre><code class="lang-bash" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="188">docmanprops -csv &quot;C:\temp\props.csv&quot; -update
 </code></pre>
-<h2 id="output-1">Output</h2>
-<p><img src="/images/refreshmode.png" alt="updatemode"></p>
-<div class="NOTE">
+<h2 id="output-1" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="192">Output</h2>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="193"><img src="/images/refreshmode.png" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="193" alt="updatemode"></p>
+<div class="NOTE" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="197">
 <h5>Note</h5>
-<p>Temporary files start with ~ are ignored.</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="198">Temporary files start with ~ are ignored.</p>
 </div>
-<hr>
-<h2 id="success-and-error-tracking">Success And Error Tracking</h2>
-<p>The CSV is updated during update:</p>
-<p>Success column:</p>
-<p>True Ã¢â‚¬â€ Property updated successfully<br>
+<hr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="200">
+<h2 id="success-and-error-tracking" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="202">Success And Error Tracking</h2>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="203">The CSV is updated during update:</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="205">Success column:</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="207">True Ã¢â‚¬â€ Property updated successfully<br>
 False Ã¢â‚¬â€ Property update failed</p>
-<p>Exception column:</p>
-<p>Contains error message</p>
-<p>Example:</p>
-<pre><code class="lang-bash">Property,Success,Exception
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="210">Exception column:</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="212">Contains error message</p>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="214">Example:</p>
+<pre><code class="lang-bash" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="216">Property,Success,Exception
 Description,True,
 PartNumber,False,Configuration Default not found
 </code></pre>
-<hr>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 3.0.30.</p>
+<hr sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="221">
+<h2 id="availability" sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="223">Availability</h2>
+<p sourcefile="src/DOCMANPROPS.md" sourcestartlinenumber="224">Available since PDMShell 3.0.30.</p>
 
 </article>
 

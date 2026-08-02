@@ -85,80 +85,80 @@
         </div>
 
         <article data-uid="">
-<h1 id="setrevisionfromsource">setrevisionfromsource</h1>
+<h1 id="setrevisionfromsource" sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="5">setrevisionfromsource</h1>
 
-<h2 id="description">Description</h2>
-<p>The <code>setrevisionfromsource</code> command allows you to batch-update the PDM-managed revision for multiple files by reading values from a CSV input source.</p>
-<p>The source CSV must contain at minimum:</p>
-<ul>
-<li><code>ID</code> - the PDM file ID.</li>
-<li><code>Revision</code> - the revision value to apply.</li>
+<h2 id="description" sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="7">Description</h2>
+<p sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="9">The <code sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="9">setrevisionfromsource</code> command allows you to batch-update the PDM-managed revision for multiple files by reading values from a CSV input source.</p>
+<p sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="11">The source CSV must contain at minimum:</p>
+<ul sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="13">
+<li sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="13"><code sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="13">ID</code> - the PDM file ID.</li>
+<li sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="14"><code sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="14">Revision</code> - the revision value to apply.</li>
 </ul>
-<p>This command applies the revision exactly as supplied in the CSV, similar to the <a href="SETREVISION.html">setrevision command</a>.
-It does not evaluate <code>%nextrevision%</code>, <code>%previousrevision%</code>, <code>%initial%</code>, or PDM variable expressions. Use literal revision values only.</p>
-<p>You may optionally output a results CSV that includes success or failure information for each processed row.</p>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-text">setrevisionfromsource -source -csv
+<p sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="16">This command applies the revision exactly as supplied in the CSV, similar to the <a href="SETREVISION.html" sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="16">setrevision command</a>.
+It does not evaluate <code sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="17">%nextrevision%</code>, <code sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="17">%previousrevision%</code>, <code sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="17">%initial%</code>, or PDM variable expressions. Use literal revision values only.</p>
+<p sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="19">You may optionally output a results CSV that includes success or failure information for each processed row.</p>
+<h2 id="syntax" sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="21">Syntax</h2>
+<pre><code class="lang-text" sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="23">setrevisionfromsource -source -csv
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<table>
+<h2 id="parameters" sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="27">Parameters</h2>
+<table sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="29">
 <thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
+<tr sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="29">
+<th sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="29">Parameter</th>
+<th sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="29">Required</th>
+<th sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="29">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>-source</code></td>
-<td>Yes</td>
-<td>See parameter details below.</td>
+<tr sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="31">
+<td sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="31"><code sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="31">-source</code></td>
+<td sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="31">Yes</td>
+<td sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="31">See parameter details below.</td>
 </tr>
-<tr>
-<td><code>-csv</code></td>
-<td>Yes</td>
-<td>See parameter details below.</td>
+<tr sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="32">
+<td sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="32"><code sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="32">-csv</code></td>
+<td sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="32">Yes</td>
+<td sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="32">See parameter details below.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details">Parameter Details</h3>
-<ul>
-<li><p><code>source</code><br>
+<h3 id="parameter-details" sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="34">Parameter Details</h3>
+<ul sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="36">
+<li sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="36"><p sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="36"><code sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="36">source</code><br>
 Path to the CSV file that contains the input dataset. Required columns:</p>
-<ul>
-<li><code>ID</code> - the file's PDM ID inside the vault.</li>
-<li><code>Revision</code> - the revision string supported by the revision scheme.</li>
+<ul sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="39">
+<li sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="39"><code sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="39">ID</code> - the file's PDM ID inside the vault.</li>
+<li sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="40"><code sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="40">Revision</code> - the revision string supported by the revision scheme.</li>
 </ul>
 </li>
 </ul>
-<p><img src="/images/setrevisionfromsource.png" alt="setrevisionfromsource"></p>
-<div class="NOTE">
+<p sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="42"><img src="/images/setrevisionfromsource.png" sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="42" alt="setrevisionfromsource"></p>
+<div class="NOTE" sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="44">
 <h5>Note</h5>
-<p>You can generate IDs and variables into a CSV by using the <a href="SEARCH.html">search command</a>.</p>
+<p sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="45">You can generate IDs and variables into a CSV by using the <a href="SEARCH.html" sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="45">search command</a>.</p>
 </div>
-<ul>
-<li><p><code>csv</code><br>
+<ul sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="47">
+<li sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="47"><p sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="47"><code sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="47">csv</code><br>
 Optional. Path to an output CSV file where results will be written. The results file contains:</p>
-<ul>
-<li>File ID</li>
-<li>Operation status</li>
-<li>Error message, if any</li>
+<ul sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="50">
+<li sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="50">File ID</li>
+<li sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="51">Operation status</li>
+<li sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="52">Error message, if any</li>
 </ul>
 </li>
 </ul>
-<h2 id="examples">Examples</h2>
-<pre><code class="lang-bash">setrevisionfromsource -source source.csv -csv results.csv
+<h2 id="examples" sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="54">Examples</h2>
+<pre><code class="lang-bash" sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="56">setrevisionfromsource -source source.csv -csv results.csv
 </code></pre>
-<h2 id="notes">Notes</h2>
-<ul>
-<li>This command updates the PDM revision shown on the Version tab, not data card variables.</li>
-<li>All revisions must already exist in the active revision scheme.</li>
-<li>If a file ID does not exist or cannot be updated, the error is logged and processing continues for the remaining records.</li>
-<li>Output CSV is optional. If omitted, results are printed to the console only.</li>
+<h2 id="notes" sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="60">Notes</h2>
+<ul sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="62">
+<li sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="62">This command updates the PDM revision shown on the Version tab, not data card variables.</li>
+<li sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="63">All revisions must already exist in the active revision scheme.</li>
+<li sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="64">If a file ID does not exist or cannot be updated, the error is logged and processing continues for the remaining records.</li>
+<li sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="65">Output CSV is optional. If omitted, results are printed to the console only.</li>
 </ul>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 3.0.12.</p>
+<h2 id="availability" sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="67">Availability</h2>
+<p sourcefile="src/SETREVISIONFROMSOURCE.md" sourcestartlinenumber="69">Available since PDMShell 3.0.12.</p>
 
 </article>
 

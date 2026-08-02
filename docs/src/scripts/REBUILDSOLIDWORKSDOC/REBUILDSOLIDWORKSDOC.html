@@ -85,15 +85,15 @@
         </div>
 
         <article data-uid="">
-<h1 id="rebuild-solidworks-document">Rebuild SOLIDWORKS Document</h1>
+<h1 id="rebuild-solidworks-document" sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="16">Rebuild SOLIDWORKS Document</h1>
 
-<p>This script checks out the selected SOLIDWORKS document, changes the working directory to the file folder, runs a rebuild macro, and checks the file back into SOLIDWORKS PDM.</p>
-<div class="TIP">
+<p sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="18">This script checks out the selected SOLIDWORKS document, changes the working directory to the file folder, runs a rebuild macro, and checks the file back into SOLIDWORKS PDM.</p>
+<div class="TIP" sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="20">
 <h5>Tip</h5>
-<p>You can download this script directly from the PDMShell Script Library. Open PDMShell, open the Script Library, choose <strong>Rebuild SOLIDWORKS Document</strong>, and load the script into the active session.</p>
+<p sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="21">You can download this script directly from the PDMShell Script Library. Open PDMShell, open the Script Library, choose <strong sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="21">Rebuild SOLIDWORKS Document</strong>, and load the script into the active session.</p>
 </div>
-<h2 id="script">Script</h2>
-<pre><code class="lang-pdmshell">checkout -filePath &quot;$localPath&quot;
+<h2 id="script" sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="23">Script</h2>
+<pre><code class="lang-pdmshell" sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="25">checkout -filePath &quot;$localPath&quot;
 
 cd -directory &quot;$folderPath&quot;
 
@@ -101,48 +101,48 @@ runswmacro -filePath &quot;$tempFolder\RebuildMacro.swb&quot; -search &quot;Name
 
 checkin -filePath &quot;$localPath&quot;
 </code></pre>
-<h2 id="what-it-does">What it does</h2>
-<ul>
-<li>Checks out the selected file from SOLIDWORKS PDM.</li>
-<li>Changes the PDMShell working directory to the selected file folder.</li>
-<li>Runs a SOLIDWORKS macro against the selected file.</li>
-<li>Rebuilds the SOLIDWORKS document.</li>
-<li>Checks the file back into PDM.</li>
+<h2 id="what-it-does" sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="35">What it does</h2>
+<ul sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="37">
+<li sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="37">Checks out the selected file from SOLIDWORKS PDM.</li>
+<li sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="38">Changes the PDMShell working directory to the selected file folder.</li>
+<li sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="39">Runs a SOLIDWORKS macro against the selected file.</li>
+<li sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="40">Rebuilds the SOLIDWORKS document.</li>
+<li sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="41">Checks the file back into PDM.</li>
 </ul>
-<h2 id="requirements">Requirements</h2>
-<ul>
-<li>SOLIDWORKS must be installed on the machine running PDMShell.</li>
-<li>The user must have permission to check out and check in the file.</li>
-<li>The file should be a supported SOLIDWORKS document, such as <code>.sldprt</code>, <code>.sldasm</code>, or <code>.slddrw</code>.</li>
-<li>The swp needs to be called RebuildMacro.swb, downloaded to (<code>$tempFolder\RebuildMacro.swb</code>).</li>
+<h2 id="requirements" sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="43">Requirements</h2>
+<ul sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="45">
+<li sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="45">SOLIDWORKS must be installed on the machine running PDMShell.</li>
+<li sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="46">The user must have permission to check out and check in the file.</li>
+<li sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="47">The file should be a supported SOLIDWORKS document, such as <code sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="47">.sldprt</code>, <code sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="47">.sldasm</code>, or <code sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="47">.slddrw</code>.</li>
+<li sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="48">The swp needs to be called RebuildMacro.swb, downloaded to (<code sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="48">$tempFolder\RebuildMacro.swb</code>).</li>
 </ul>
-<h2 id="macro-code">Macro code</h2>
-<pre><code class="lang-vba">
+<h2 id="macro-code" sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="50">Macro code</h2>
+<pre><code class="lang-vba" sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="51">
 </code></pre>
-<h2 id="placeholders-used">Placeholders used</h2>
-<table>
+<h2 id="placeholders-used" sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="55">Placeholders used</h2>
+<table sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="57">
 <thead>
-<tr>
-<th>Placeholder</th>
-<th>Description</th>
+<tr sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="57">
+<th sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="57">Placeholder</th>
+<th sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="57">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>$localPath</code></td>
-<td>Full local path of the selected file</td>
+<tr sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="59">
+<td sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="59"><code sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="59">$localPath</code></td>
+<td sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="59">Full local path of the selected file</td>
 </tr>
-<tr>
-<td><code>$folderPath</code></td>
-<td>Local folder path of the selected file</td>
+<tr sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="60">
+<td sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="60"><code sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="60">$folderPath</code></td>
+<td sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="60">Local folder path of the selected file</td>
 </tr>
-<tr>
-<td><code>$fileName</code></td>
-<td>File name of the selected file</td>
+<tr sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="61">
+<td sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="61"><code sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="61">$fileName</code></td>
+<td sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="61">File name of the selected file</td>
 </tr>
-<tr>
-<td><code>$tempFolder</code></td>
-<td>Temporary folder in your Windows session</td>
+<tr sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="62">
+<td sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="62"><code sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="62">$tempFolder</code></td>
+<td sourcefile="src/scripts/REBUILDSOLIDWORKSDOC/REBUILDSOLIDWORKSDOC.md" sourcestartlinenumber="62">Temporary folder in your Windows session</td>
 </tr>
 </tbody>
 </table>

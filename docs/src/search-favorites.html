@@ -85,32 +85,32 @@
         </div>
 
         <article data-uid="">
-<h1 id="search-favorites">Search Favorites</h1>
+<h1 id="search-favorites" sourcefile="src/search-favorites.md" sourcestartlinenumber="6">Search Favorites</h1>
 
-<p>Use the <code>Favorite</code> token to run a SOLIDWORKS PDM search favorite from PDMShell.</p>
-<pre><code class="lang-bash">search -search &quot;Favorite=MY SEARCH FAVORITE NAME&quot;
+<p sourcefile="src/search-favorites.md" sourcestartlinenumber="8">Use the <code sourcefile="src/search-favorites.md" sourcestartlinenumber="8">Favorite</code> token to run a SOLIDWORKS PDM search favorite from PDMShell.</p>
+<pre><code class="lang-bash" sourcefile="src/search-favorites.md" sourcestartlinenumber="10">search -search &quot;Favorite=MY SEARCH FAVORITE NAME&quot;
 </code></pre>
-<p>Search favorites are useful when the criteria are already configured in the PDM search tool and you want to reuse them from PDMShell commands or scripts.</p>
-<h2 id="examples">Examples</h2>
-<p>List results from a favorite:</p>
-<pre><code class="lang-bash">search -search &quot;Favorite=Released PDFs&quot;
+<p sourcefile="src/search-favorites.md" sourcestartlinenumber="14">Search favorites are useful when the criteria are already configured in the PDM search tool and you want to reuse them from PDMShell commands or scripts.</p>
+<h2 id="examples" sourcefile="src/search-favorites.md" sourcestartlinenumber="16">Examples</h2>
+<p sourcefile="src/search-favorites.md" sourcestartlinenumber="18">List results from a favorite:</p>
+<pre><code class="lang-bash" sourcefile="src/search-favorites.md" sourcestartlinenumber="20">search -search &quot;Favorite=Released PDFs&quot;
 </code></pre>
-<p>Use a favorite with a command that accepts <code>-search</code>:</p>
-<pre><code class="lang-bash">delete -search &quot;Favorite=Old Export PDFs&quot;
+<p sourcefile="src/search-favorites.md" sourcestartlinenumber="24">Use a favorite with a command that accepts <code sourcefile="src/search-favorites.md" sourcestartlinenumber="24">-search</code>:</p>
+<pre><code class="lang-bash" sourcefile="src/search-favorites.md" sourcestartlinenumber="26">delete -search &quot;Favorite=Old Export PDFs&quot;
 </code></pre>
-<h2 id="result-shaping">Result Shaping</h2>
-<p>When a favorite returns many results, you can combine it with result-shaping tokens when supported by your workflow.</p>
-<pre><code class="lang-bash">search -search &quot;Favorite=PDF Exports;SortBy=FileDate;Strategy=ExcludeFirst&quot;
+<h2 id="result-shaping" sourcefile="src/search-favorites.md" sourcestartlinenumber="30">Result Shaping</h2>
+<p sourcefile="src/search-favorites.md" sourcestartlinenumber="32">When a favorite returns many results, you can combine it with result-shaping tokens when supported by your workflow.</p>
+<pre><code class="lang-bash" sourcefile="src/search-favorites.md" sourcestartlinenumber="34">search -search &quot;Favorite=PDF Exports;SortBy=FileDate;Strategy=ExcludeFirst&quot;
 </code></pre>
-<div class="IMPORTANT">
+<div class="IMPORTANT" sourcefile="src/search-favorites.md" sourcestartlinenumber="38">
 <h5>Important</h5>
-<p>If a favorite returns a broad result set, adding <code>SortBy</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, or <code>Strategy</code> requires PDMShell to collect the full result set before returning final results. Keep favorites scoped when using result shaping.</p>
+<p sourcefile="src/search-favorites.md" sourcestartlinenumber="39">If a favorite returns a broad result set, adding <code sourcefile="src/search-favorites.md" sourcestartlinenumber="39">SortBy</code>, <code sourcefile="src/search-favorites.md" sourcestartlinenumber="39">GroupBy</code>, <code sourcefile="src/search-favorites.md" sourcestartlinenumber="39">DuplicatedBy</code>, or <code sourcefile="src/search-favorites.md" sourcestartlinenumber="39">Strategy</code> requires PDMShell to collect the full result set before returning final results. Keep favorites scoped when using result shaping.</p>
 </div>
-<h2 id="related-articles">Related Articles</h2>
-<ul>
-<li><a href="advancedsearch.html">Advanced search overview</a></li>
-<li><a href="search-tokens.html">Search tokens</a></li>
-<li><a href="search-result-shaping.html">Result shaping</a></li>
+<h2 id="related-articles" sourcefile="src/search-favorites.md" sourcestartlinenumber="41">Related Articles</h2>
+<ul sourcefile="src/search-favorites.md" sourcestartlinenumber="43">
+<li sourcefile="src/search-favorites.md" sourcestartlinenumber="43"><a href="advancedsearch.html" sourcefile="src/search-favorites.md" sourcestartlinenumber="43">Advanced search overview</a></li>
+<li sourcefile="src/search-favorites.md" sourcestartlinenumber="44"><a href="search-tokens.html" sourcefile="src/search-favorites.md" sourcestartlinenumber="44">Search tokens</a></li>
+<li sourcefile="src/search-favorites.md" sourcestartlinenumber="45"><a href="search-result-shaping.html" sourcefile="src/search-favorites.md" sourcestartlinenumber="45">Result shaping</a></li>
 </ul>
 
 </article>

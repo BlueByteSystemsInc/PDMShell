@@ -85,40 +85,40 @@
         </div>
 
         <article data-uid="">
-<h1 id="license-pool">License Pool</h1>
+<h1 id="license-pool" sourcefile="src/license-pool.md" sourcestartlinenumber="5">License Pool</h1>
 
-<p>Use a license pool when a SOLIDWORKS PDM vault should manage PDMShell add-in access centrally.</p>
-<p>In pool mode, administrators add and activate PDMShell license keys from the PDMShell add-in license manager in the SOLIDWORKS PDM Administration Tool. The vault can then borrow from enabled, activated licenses when users run PDMShell add-in automation.</p>
-<p>Do not activate pooled licenses in each user's standalone PDMShell application. Standalone activation is for a single machine. Pooled activation is managed from the PDM add-in.</p>
-<h2 id="when-to-use-a-license-pool">When To Use A License Pool</h2>
-<p>Use <code>Use license pool</code> when:</p>
-<ul>
-<li>Multiple PDM users need access to PDMShell add-in commands.</li>
-<li>A shared vault should control who can use add-in automation.</li>
-<li>You want license access managed from the Administration Tool instead of each workstation.</li>
-<li>You want to review active borrows by vault, machine, user, and borrowed time.</li>
+<p sourcefile="src/license-pool.md" sourcestartlinenumber="7">Use a license pool when a SOLIDWORKS PDM vault should manage PDMShell add-in access centrally.</p>
+<p sourcefile="src/license-pool.md" sourcestartlinenumber="9">In pool mode, administrators add and activate PDMShell license keys from the PDMShell add-in license manager in the SOLIDWORKS PDM Administration Tool. The vault can then borrow from enabled, activated licenses when users run PDMShell add-in automation.</p>
+<p sourcefile="src/license-pool.md" sourcestartlinenumber="11">Do not activate pooled licenses in each user's standalone PDMShell application. Standalone activation is for a single machine. Pooled activation is managed from the PDM add-in.</p>
+<h2 id="when-to-use-a-license-pool" sourcefile="src/license-pool.md" sourcestartlinenumber="13">When To Use A License Pool</h2>
+<p sourcefile="src/license-pool.md" sourcestartlinenumber="15">Use <code sourcefile="src/license-pool.md" sourcestartlinenumber="15">Use license pool</code> when:</p>
+<ul sourcefile="src/license-pool.md" sourcestartlinenumber="17">
+<li sourcefile="src/license-pool.md" sourcestartlinenumber="17">Multiple PDM users need access to PDMShell add-in commands.</li>
+<li sourcefile="src/license-pool.md" sourcestartlinenumber="18">A shared vault should control who can use add-in automation.</li>
+<li sourcefile="src/license-pool.md" sourcestartlinenumber="19">You want license access managed from the Administration Tool instead of each workstation.</li>
+<li sourcefile="src/license-pool.md" sourcestartlinenumber="20">You want to review active borrows by vault, machine, user, and borrowed time.</li>
 </ul>
-<h2 id="how-pool-borrowing-works">How Pool Borrowing Works</h2>
-<p>When a user runs PDMShell automation from the add-in, the vault checks the enabled, activated licenses in the pool. If a seat is available, the add-in borrows a license for that user and machine.</p>
-<p>The <code>Active borrows</code> table in <code>Manage PDMShell Licenses</code> shows the current pool usage.</p>
-<h2 id="manage-pool-keys">Manage Pool Keys</h2>
-<p>Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select <code>Manage PDMShell Licenses</code>.</p>
-<p>From the license manager, administrators can:</p>
-<ul>
-<li>Add one or more PDMShell license keys.</li>
-<li>Enable or disable keys.</li>
-<li>Activate keys for pooled vault use.</li>
-<li>Delete keys from the vault license list.</li>
-<li>Review active pool borrows.</li>
+<h2 id="how-pool-borrowing-works" sourcefile="src/license-pool.md" sourcestartlinenumber="22">How Pool Borrowing Works</h2>
+<p sourcefile="src/license-pool.md" sourcestartlinenumber="24">When a user runs PDMShell automation from the add-in, the vault checks the enabled, activated licenses in the pool. If a seat is available, the add-in borrows a license for that user and machine.</p>
+<p sourcefile="src/license-pool.md" sourcestartlinenumber="26">The <code sourcefile="src/license-pool.md" sourcestartlinenumber="26">Active borrows</code> table in <code sourcefile="src/license-pool.md" sourcestartlinenumber="26">Manage PDMShell Licenses</code> shows the current pool usage.</p>
+<h2 id="manage-pool-keys" sourcefile="src/license-pool.md" sourcestartlinenumber="28">Manage Pool Keys</h2>
+<p sourcefile="src/license-pool.md" sourcestartlinenumber="30">Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select <code sourcefile="src/license-pool.md" sourcestartlinenumber="30">Manage PDMShell Licenses</code>.</p>
+<p sourcefile="src/license-pool.md" sourcestartlinenumber="32">From the license manager, administrators can:</p>
+<ul sourcefile="src/license-pool.md" sourcestartlinenumber="34">
+<li sourcefile="src/license-pool.md" sourcestartlinenumber="34">Add one or more PDMShell license keys.</li>
+<li sourcefile="src/license-pool.md" sourcestartlinenumber="35">Enable or disable keys.</li>
+<li sourcefile="src/license-pool.md" sourcestartlinenumber="36">Activate keys for pooled vault use.</li>
+<li sourcefile="src/license-pool.md" sourcestartlinenumber="37">Delete keys from the vault license list.</li>
+<li sourcefile="src/license-pool.md" sourcestartlinenumber="38">Review active pool borrows.</li>
 </ul>
-<h2 id="when-not-to-use-a-pool">When Not To Use A Pool</h2>
-<p>A pool may not be necessary when only one administrator runs PDMShell automation from a workstation that already has an activated local license. In that case, use a <a href="machine-license.html">Machine License</a>.</p>
-<h2 id="related-articles">Related Articles</h2>
-<ul>
-<li><a href="machine-license.html">Machine License</a></li>
-<li><a href="addin/license-manager.html">Manage PDMShell add-in licenses</a></li>
-<li><a href="license-activation.html">License Activation</a></li>
-<li><a href="offline-activation.html">Offline Activation</a></li>
+<h2 id="when-not-to-use-a-pool" sourcefile="src/license-pool.md" sourcestartlinenumber="40">When Not To Use A Pool</h2>
+<p sourcefile="src/license-pool.md" sourcestartlinenumber="42">A pool may not be necessary when only one administrator runs PDMShell automation from a workstation that already has an activated local license. In that case, use a <a href="machine-license.html" sourcefile="src/license-pool.md" sourcestartlinenumber="42">Machine License</a>.</p>
+<h2 id="related-articles" sourcefile="src/license-pool.md" sourcestartlinenumber="44">Related Articles</h2>
+<ul sourcefile="src/license-pool.md" sourcestartlinenumber="46">
+<li sourcefile="src/license-pool.md" sourcestartlinenumber="46"><a href="machine-license.html" sourcefile="src/license-pool.md" sourcestartlinenumber="46">Machine License</a></li>
+<li sourcefile="src/license-pool.md" sourcestartlinenumber="47"><a href="addin/license-manager.html" sourcefile="src/license-pool.md" sourcestartlinenumber="47">Manage PDMShell add-in licenses</a></li>
+<li sourcefile="src/license-pool.md" sourcestartlinenumber="48"><a href="license-activation.html" sourcefile="src/license-pool.md" sourcestartlinenumber="48">License Activation</a></li>
+<li sourcefile="src/license-pool.md" sourcestartlinenumber="49"><a href="offline-activation.html" sourcefile="src/license-pool.md" sourcestartlinenumber="49">Offline Activation</a></li>
 </ul>
 
 </article>

@@ -85,116 +85,116 @@
         </div>
 
         <article data-uid="">
-<h1 id="mkvar">mkvar</h1>
+<h1 id="mkvar" sourcefile="src/MKVAR.md" sourcestartlinenumber="5">mkvar</h1>
 
-<h2 id="description">Description</h2>
-<p>Creates a new variable.</p>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-text">mkvar -name -varType -mkvarflags -mkvarattributes
+<h2 id="description" sourcefile="src/MKVAR.md" sourcestartlinenumber="6">Description</h2>
+<p sourcefile="src/MKVAR.md" sourcestartlinenumber="7">Creates a new variable.</p>
+<h2 id="syntax" sourcefile="src/MKVAR.md" sourcestartlinenumber="9">Syntax</h2>
+<pre><code class="lang-text" sourcefile="src/MKVAR.md" sourcestartlinenumber="11">mkvar -name -varType -mkvarflags -mkvarattributes
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<table>
+<h2 id="parameters" sourcefile="src/MKVAR.md" sourcestartlinenumber="15">Parameters</h2>
+<table sourcefile="src/MKVAR.md" sourcestartlinenumber="17">
 <thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="17">
+<th sourcefile="src/MKVAR.md" sourcestartlinenumber="17">Parameter</th>
+<th sourcefile="src/MKVAR.md" sourcestartlinenumber="17">Required</th>
+<th sourcefile="src/MKVAR.md" sourcestartlinenumber="17">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>-name</code></td>
-<td>Yes</td>
-<td>The name of the variable to create.</td>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="19">
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="19"><code sourcefile="src/MKVAR.md" sourcestartlinenumber="19">-name</code></td>
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="19">Yes</td>
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="19">The name of the variable to create.</td>
 </tr>
-<tr>
-<td><code>-varType</code></td>
-<td>Yes</td>
-<td>The type of the variable.</td>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="20">
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="20"><code sourcefile="src/MKVAR.md" sourcestartlinenumber="20">-varType</code></td>
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="20">Yes</td>
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="20">The type of the variable.</td>
 </tr>
-<tr>
-<td><code>-mkvarflags</code></td>
-<td>Yes</td>
-<td>The flags for the variable.</td>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="21">
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="21"><code sourcefile="src/MKVAR.md" sourcestartlinenumber="21">-mkvarflags</code></td>
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="21">Yes</td>
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="21">The flags for the variable.</td>
 </tr>
-<tr>
-<td><code>-mkvarattributes</code></td>
-<td>Yes</td>
-<td>The attributes for the variable. Seperated by <code>#</code></td>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="22">
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="22"><code sourcefile="src/MKVAR.md" sourcestartlinenumber="22">-mkvarattributes</code></td>
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="22">Yes</td>
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="22">The attributes for the variable. Seperated by <code sourcefile="src/MKVAR.md" sourcestartlinenumber="22">#</code></td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details">Parameter Details</h3>
-<ul>
-<li><p><code>name</code>: The name of the variable to create.</p>
+<h3 id="parameter-details" sourcefile="src/MKVAR.md" sourcestartlinenumber="24">Parameter Details</h3>
+<ul sourcefile="src/MKVAR.md" sourcestartlinenumber="26">
+<li sourcefile="src/MKVAR.md" sourcestartlinenumber="26"><p sourcefile="src/MKVAR.md" sourcestartlinenumber="26"><code sourcefile="src/MKVAR.md" sourcestartlinenumber="26">name</code>: The name of the variable to create.</p>
 </li>
-<li><p><code>varType</code>: The type of the variable.</p>
+<li sourcefile="src/MKVAR.md" sourcestartlinenumber="28"><p sourcefile="src/MKVAR.md" sourcestartlinenumber="28"><code sourcefile="src/MKVAR.md" sourcestartlinenumber="28">varType</code>: The type of the variable.</p>
 </li>
-<li><p><code>mkvarflags</code>: The flags for the variable.</p>
+<li sourcefile="src/MKVAR.md" sourcestartlinenumber="30"><p sourcefile="src/MKVAR.md" sourcestartlinenumber="30"><code sourcefile="src/MKVAR.md" sourcestartlinenumber="30">mkvarflags</code>: The flags for the variable.</p>
 </li>
-<li><p><code>mkvarattributes</code>: The attributes for the variable. Seperated by <code>#</code></p>
+<li sourcefile="src/MKVAR.md" sourcestartlinenumber="32"><p sourcefile="src/MKVAR.md" sourcestartlinenumber="32"><code sourcefile="src/MKVAR.md" sourcestartlinenumber="32">mkvarattributes</code>: The attributes for the variable. Seperated by <code sourcefile="src/MKVAR.md" sourcestartlinenumber="32">#</code></p>
 </li>
 </ul>
-<h2 id="examples">Examples</h2>
-<pre><code class="lang-bash">mkvar -name &quot;NewVariable&quot; -varType &quot;Text&quot; -mkvarflags &quot;ReadOnly&quot; -mkvarattributes &quot;Attribute1#Attribute2&quot;
+<h2 id="examples" sourcefile="src/MKVAR.md" sourcestartlinenumber="34">Examples</h2>
+<pre><code class="lang-bash" sourcefile="src/MKVAR.md" sourcestartlinenumber="35">mkvar -name &quot;NewVariable&quot; -varType &quot;Text&quot; -mkvarflags &quot;ReadOnly&quot; -mkvarattributes &quot;Attribute1#Attribute2&quot;
 </code></pre>
-<h2 id="variable-type-values">Variable Type Values</h2>
-<table>
+<h2 id="variable-type-values" sourcefile="src/MKVAR.md" sourcestartlinenumber="40">Variable Type Values</h2>
+<table sourcefile="src/MKVAR.md" sourcestartlinenumber="41">
 <thead>
-<tr>
-<th>Description</th>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="41">
+<th sourcefile="src/MKVAR.md" sourcestartlinenumber="41">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>None</td>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="43">
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="43">None</td>
 </tr>
-<tr>
-<td>Text</td>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="44">
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="44">Text</td>
 </tr>
-<tr>
-<td>Int</td>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="45">
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="45">Int</td>
 </tr>
-<tr>
-<td>Float</td>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="46">
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="46">Float</td>
 </tr>
-<tr>
-<td>Bool</td>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="47">
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="47">Bool</td>
 </tr>
-<tr>
-<td>Date</td>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="48">
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="48">Date</td>
 </tr>
 </tbody>
 </table>
-<h2 id="mkvar-flag-values">Mkvar Flag Values</h2>
-<table>
+<h2 id="mkvar-flag-values" sourcefile="src/MKVAR.md" sourcestartlinenumber="50">Mkvar Flag Values</h2>
+<table sourcefile="src/MKVAR.md" sourcestartlinenumber="51">
 <thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="51">
+<th sourcefile="src/MKVAR.md" sourcestartlinenumber="51">Value</th>
+<th sourcefile="src/MKVAR.md" sourcestartlinenumber="51">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Unique</td>
-<td>Values of the variable must be unique; only used for files, ignored for folders</td>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="53">
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="53">Unique</td>
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="53">Values of the variable must be unique; only used for files, ignored for folders</td>
 </tr>
-<tr>
-<td>Mandatory</td>
-<td>Missing values are not permitted; only used for files, ignored for folders</td>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="54">
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="54">Mandatory</td>
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="54">Missing values are not permitted; only used for files, ignored for folders</td>
 </tr>
-<tr>
-<td>VerFreeUpdateAll</td>
-<td>Every version and every revision, regardless access, workflow states etc., are affected by the variable update</td>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="55">
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="55">VerFreeUpdateAll</td>
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="55">Every version and every revision, regardless access, workflow states etc., are affected by the variable update</td>
 </tr>
-<tr>
-<td>VerFreeLatest</td>
-<td>Only the latest version is affected by the variable update</td>
+<tr sourcefile="src/MKVAR.md" sourcestartlinenumber="56">
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="56">VerFreeLatest</td>
+<td sourcefile="src/MKVAR.md" sourcestartlinenumber="56">Only the latest version is affected by the variable update</td>
 </tr>
 </tbody>
 </table>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 2.0.0.</p>
+<h2 id="availability" sourcefile="src/MKVAR.md" sourcestartlinenumber="58">Availability</h2>
+<p sourcefile="src/MKVAR.md" sourcestartlinenumber="59">Available since PDMShell 2.0.0.</p>
 
 </article>
 

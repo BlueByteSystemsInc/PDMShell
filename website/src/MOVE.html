@@ -85,109 +85,109 @@
         </div>
 
         <article data-uid="">
-<h1 id="move">move</h1>
+<h1 id="move" sourcefile="src/MOVE.md" sourcestartlinenumber="5">move</h1>
 
-<h2 id="description">Description</h2>
-<p>The <code>move</code> command moves file(s) from one folder in the vault to another.</p>
-<p>You can move:</p>
-<ul>
-<li>A single file</li>
-<li>A folder</li>
-<li>Files returned from a search query</li>
+<h2 id="description" sourcefile="src/MOVE.md" sourcestartlinenumber="6">Description</h2>
+<p sourcefile="src/MOVE.md" sourcestartlinenumber="7">The <code sourcefile="src/MOVE.md" sourcestartlinenumber="7">move</code> command moves file(s) from one folder in the vault to another.</p>
+<p sourcefile="src/MOVE.md" sourcestartlinenumber="9">You can move:</p>
+<ul sourcefile="src/MOVE.md" sourcestartlinenumber="10">
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="10">A single file</li>
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="11">A folder</li>
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="12">Files returned from a search query</li>
 </ul>
-<p>When a file is moved:</p>
-<ul>
-<li>All references are automatically updated by SOLIDWORKS PDM.</li>
-<li>Any parent files referencing the moved file are updated.</li>
-<li>File history and versions are preserved.</li>
+<p sourcefile="src/MOVE.md" sourcestartlinenumber="14">When a file is moved:</p>
+<ul sourcefile="src/MOVE.md" sourcestartlinenumber="15">
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="15">All references are automatically updated by SOLIDWORKS PDM.</li>
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="16">Any parent files referencing the moved file are updated.</li>
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="17">File history and versions are preserved.</li>
 </ul>
-<hr>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-text">move (-source file_or_folder | -search search_query) -directory target_vault_folder [-recursive]
+<hr sourcefile="src/MOVE.md" sourcestartlinenumber="19">
+<h2 id="syntax" sourcefile="src/MOVE.md" sourcestartlinenumber="21">Syntax</h2>
+<pre><code class="lang-text" sourcefile="src/MOVE.md" sourcestartlinenumber="23">move (-source file_or_folder | -search search_query) -directory target_vault_folder [-recursive]
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<table>
+<h2 id="parameters" sourcefile="src/MOVE.md" sourcestartlinenumber="27">Parameters</h2>
+<table sourcefile="src/MOVE.md" sourcestartlinenumber="29">
 <thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
+<tr sourcefile="src/MOVE.md" sourcestartlinenumber="29">
+<th sourcefile="src/MOVE.md" sourcestartlinenumber="29">Parameter</th>
+<th sourcefile="src/MOVE.md" sourcestartlinenumber="29">Required</th>
+<th sourcefile="src/MOVE.md" sourcestartlinenumber="29">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>-source</code></td>
-<td>No</td>
-<td>File or folder to move. Use either <code>-source</code> or <code>-search</code>.</td>
+<tr sourcefile="src/MOVE.md" sourcestartlinenumber="31">
+<td sourcefile="src/MOVE.md" sourcestartlinenumber="31"><code sourcefile="src/MOVE.md" sourcestartlinenumber="31">-source</code></td>
+<td sourcefile="src/MOVE.md" sourcestartlinenumber="31">No</td>
+<td sourcefile="src/MOVE.md" sourcestartlinenumber="31">File or folder to move. Use either <code sourcefile="src/MOVE.md" sourcestartlinenumber="31">-source</code> or <code sourcefile="src/MOVE.md" sourcestartlinenumber="31">-search</code>.</td>
 </tr>
-<tr>
-<td><code>-directory</code></td>
-<td>Yes</td>
-<td>See parameter details below.</td>
+<tr sourcefile="src/MOVE.md" sourcestartlinenumber="32">
+<td sourcefile="src/MOVE.md" sourcestartlinenumber="32"><code sourcefile="src/MOVE.md" sourcestartlinenumber="32">-directory</code></td>
+<td sourcefile="src/MOVE.md" sourcestartlinenumber="32">Yes</td>
+<td sourcefile="src/MOVE.md" sourcestartlinenumber="32">See parameter details below.</td>
 </tr>
-<tr>
-<td><code>-search</code></td>
-<td>No</td>
-<td>Search query scoped to the current PDMShell directory. Use either <code>-source</code> or <code>-search</code>.</td>
+<tr sourcefile="src/MOVE.md" sourcestartlinenumber="33">
+<td sourcefile="src/MOVE.md" sourcestartlinenumber="33"><code sourcefile="src/MOVE.md" sourcestartlinenumber="33">-search</code></td>
+<td sourcefile="src/MOVE.md" sourcestartlinenumber="33">No</td>
+<td sourcefile="src/MOVE.md" sourcestartlinenumber="33">Search query scoped to the current PDMShell directory. Use either <code sourcefile="src/MOVE.md" sourcestartlinenumber="33">-source</code> or <code sourcefile="src/MOVE.md" sourcestartlinenumber="33">-search</code>.</td>
 </tr>
-<tr>
-<td><code>-recursive</code></td>
-<td>No</td>
-<td>Includes subfolders when used with <code>-search</code>.</td>
+<tr sourcefile="src/MOVE.md" sourcestartlinenumber="34">
+<td sourcefile="src/MOVE.md" sourcestartlinenumber="34"><code sourcefile="src/MOVE.md" sourcestartlinenumber="34">-recursive</code></td>
+<td sourcefile="src/MOVE.md" sourcestartlinenumber="34">No</td>
+<td sourcefile="src/MOVE.md" sourcestartlinenumber="34">Includes subfolders when used with <code sourcefile="src/MOVE.md" sourcestartlinenumber="34">-search</code>.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details">Parameter Details</h3>
-<ul>
-<li><p><code>source</code><br>
+<h3 id="parameter-details" sourcefile="src/MOVE.md" sourcestartlinenumber="36">Parameter Details</h3>
+<ul sourcefile="src/MOVE.md" sourcestartlinenumber="38">
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="38"><p sourcefile="src/MOVE.md" sourcestartlinenumber="38"><code sourcefile="src/MOVE.md" sourcestartlinenumber="38">source</code><br>
 The complete file path of the file to move.<br>
 You can also specify a folder path. This will move the actual folder.
-This parameter is ignored when <code>-search</code> is specified.</p>
+This parameter is ignored when <code sourcefile="src/MOVE.md" sourcestartlinenumber="41">-search</code> is specified.</p>
 </li>
-<li><p><code>directory</code><br>
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="43"><p sourcefile="src/MOVE.md" sourcestartlinenumber="43"><code sourcefile="src/MOVE.md" sourcestartlinenumber="43">directory</code><br>
 Target directory where to move the file(s) to. Must exist in the vault.</p>
 </li>
-<li><p><code>search</code><br>
-Search query. PDMShell searches from the current directory, moves matching files to <code>-directory</code>, and does not use <code>-source</code> as a search scope. This does not support moving folders from search results.</p>
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="46"><p sourcefile="src/MOVE.md" sourcestartlinenumber="46"><code sourcefile="src/MOVE.md" sourcestartlinenumber="46">search</code><br>
+Search query. PDMShell searches from the current directory, moves matching files to <code sourcefile="src/MOVE.md" sourcestartlinenumber="47">-directory</code>, and does not use <code sourcefile="src/MOVE.md" sourcestartlinenumber="47">-source</code> as a search scope. This does not support moving folders from search results.</p>
 </li>
-<li><p><code>recursive</code><br>
-Affects the search parameter. Specify <code>-recursive</code> to make the search recursive.<br>
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="49"><p sourcefile="src/MOVE.md" sourcestartlinenumber="49"><code sourcefile="src/MOVE.md" sourcestartlinenumber="49">recursive</code><br>
+Affects the search parameter. Specify <code sourcefile="src/MOVE.md" sourcestartlinenumber="50">-recursive</code> to make the search recursive.<br>
 The start location is the current directory.</p>
 </li>
 </ul>
-<hr>
-<h2 id="examples">Examples</h2>
-<h3 id="example-1-move-a-single-file">Example 1: Move a Single File</h3>
-<pre><code class="lang-bash">move -source &quot;C:\Vault\Parts\Bracket.SLDPRT&quot; -directory &quot;\Released&quot;
+<hr sourcefile="src/MOVE.md" sourcestartlinenumber="53">
+<h2 id="examples" sourcefile="src/MOVE.md" sourcestartlinenumber="55">Examples</h2>
+<h3 id="example-1-move-a-single-file" sourcefile="src/MOVE.md" sourcestartlinenumber="56">Example 1: Move a Single File</h3>
+<pre><code class="lang-bash" sourcefile="src/MOVE.md" sourcestartlinenumber="57">move -source &quot;C:\Vault\Parts\Bracket.SLDPRT&quot; -directory &quot;\Released&quot;
 ## Moves a single file to the Released folder.
 </code></pre>
-<hr>
-<h3 id="example-2-move-a-folder">Example 2: Move a Folder</h3>
-<pre><code class="lang-bash">move -source &quot;\Projects\OldProject&quot; -directory &quot;\Archive&quot;
+<hr sourcefile="src/MOVE.md" sourcestartlinenumber="61">
+<h3 id="example-2-move-a-folder" sourcefile="src/MOVE.md" sourcestartlinenumber="63">Example 2: Move a Folder</h3>
+<pre><code class="lang-bash" sourcefile="src/MOVE.md" sourcestartlinenumber="64">move -source &quot;\Projects\OldProject&quot; -directory &quot;\Archive&quot;
 ## Moves the OldProject folder to Archive.
 </code></pre>
-<hr>
-<h3 id="example-3-move-search-results">Example 3: Move Search Results</h3>
-<pre><code class="lang-bash">move -search &quot;Name=%.sldprt%&quot; -recursive -directory &quot;\Archive&quot;
+<hr sourcefile="src/MOVE.md" sourcestartlinenumber="68">
+<h3 id="example-3-move-search-results" sourcefile="src/MOVE.md" sourcestartlinenumber="70">Example 3: Move Search Results</h3>
+<pre><code class="lang-bash" sourcefile="src/MOVE.md" sourcestartlinenumber="71">move -search &quot;Name=%.sldprt%&quot; -recursive -directory &quot;\Archive&quot;
 ## Moves all part files found in the current directory, including subfolders, to the Archive folder.
 </code></pre>
-<hr>
-<h2 id="notes">Notes</h2>
-<ul>
-<li>You must have permission to move the file(s).</li>
-<li>If the file is referenced by other files, referencing paths are updated automatically.</li>
-<li>If the file has references, those reference paths are updated automatically.</li>
-<li>Target directory must already exist in the vault.</li>
-<li>Search mode always starts from the current PDMShell directory. Use <a href="CD.html"><code>cd</code></a> to change the search scope before running <code>move -search</code>.</li>
-<li>Move operations preserve version history.</li>
+<hr sourcefile="src/MOVE.md" sourcestartlinenumber="75">
+<h2 id="notes" sourcefile="src/MOVE.md" sourcestartlinenumber="77">Notes</h2>
+<ul sourcefile="src/MOVE.md" sourcestartlinenumber="78">
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="78">You must have permission to move the file(s).</li>
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="79">If the file is referenced by other files, referencing paths are updated automatically.</li>
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="80">If the file has references, those reference paths are updated automatically.</li>
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="81">Target directory must already exist in the vault.</li>
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="82">Search mode always starts from the current PDMShell directory. Use <a href="CD.html" sourcefile="src/MOVE.md" sourcestartlinenumber="82"><code sourcefile="src/MOVE.md" sourcestartlinenumber="82">cd</code></a> to change the search scope before running <code sourcefile="src/MOVE.md" sourcestartlinenumber="82">move -search</code>.</li>
+<li sourcefile="src/MOVE.md" sourcestartlinenumber="83">Move operations preserve version history.</li>
 </ul>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 3.0.28.</p>
-<h2 id="video">Video</h2>
+<h2 id="availability" sourcefile="src/MOVE.md" sourcestartlinenumber="85">Availability</h2>
+<p sourcefile="src/MOVE.md" sourcestartlinenumber="86">Available since PDMShell 3.0.28.</p>
+<h2 id="video" sourcefile="src/MOVE.md" sourcestartlinenumber="88">Video</h2>
 <div class="ratio ratio-16x9">
   <iframe src="https://www.youtube.com/embed/hn5dfAiYp9g" title="Move files with PDMShell" allowfullscreen></iframe>
 </div>
-<p><a href="https://www.youtube.com/watch?v=hn5dfAiYp9g&amp;feature=youtu.be">Watch on YouTube</a></p>
+<p sourcefile="src/MOVE.md" sourcestartlinenumber="94"><a href="https://www.youtube.com/watch?v=hn5dfAiYp9g&amp;feature=youtu.be" sourcefile="src/MOVE.md" sourcestartlinenumber="94">Watch on YouTube</a></p>
 
 </article>
 
