@@ -58,6 +58,8 @@ Free edition limits:
 
 Use Premium when PDMShell is part of a production automation workflow.
 
+To evaluate Premium before buying, request a [7-day PDMShell trial license](https://bluebyte.biz/product/pdmshell-trial/).
+
 Premium includes:
 
 - Unlimited search results.
@@ -80,15 +82,7 @@ Use a [Machine License](machine-license.md) when PDMShell is mainly used from on
 
 ## Premium Pricing
 
-Current listed Premium pricing is seat-based:
-
-| Seats | Price per seat |
-| --- | --- |
-| 1-3 | US$999/year |
-| 4-7 | US$749/year |
-| 8+ | US$499/year |
-
-The total recurring price is calculated from the number of seats selected and the active price-per-seat tier. For current checkout pricing, visit [PDMShell Premium](https://bluebyte.biz/product/pdmshell).
+Premium pricing can change based on the current seat tiers and checkout options. For current pricing, visit [PDMShell Premium](https://bluebyte.biz/product/pdmshell).
 
 > [!TIP]
 > If your team wants help planning, developing, or deploying PDMShell automation, Blue Byte Systems offers [Enterprise Support Services](https://bluebyte.biz/product/enterprise-support-services/).
@@ -96,3 +90,5 @@ The total recurring price is calculated from the number of seats selected and th
 ## Buy Premium
 
 To buy a Premium PDMShell license, visit [PDMShell Premium](https://bluebyte.biz/product/pdmshell).
+
+To evaluate Premium first, request a [7-day PDMShell trial license](https://bluebyte.biz/product/pdmshell-trial/).

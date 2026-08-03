@@ -6,6 +6,10 @@ title: Licensing
 
 Use this section to choose how PDMShell should be activated and how PDMShell add-in access should be managed.
 
+Need to evaluate Premium features first? Request a [7-day PDMShell trial license](https://bluebyte.biz/product/pdmshell-trial/).
+
+For current Premium pricing, visit [PDMShell Premium](https://bluebyte.biz/product/pdmshell).
+
 ## One License, Two Activation Workflows
 
 PDMShell Premium licensing is seat-based. Where you activate the license depends on how you want to use it.
@@ -21,6 +25,7 @@ Use the standalone installed application when the license belongs to one machine
 
 | Need | Start here |
 | --- | --- |
+| Request a temporary license for evaluation | [7-day PDMShell trial license](https://bluebyte.biz/product/pdmshell-trial/) |
 | Activate PDMShell on one workstation with internet access | [License Activation](license-activation.md) |
 | Activate PDMShell on an air-gapped or restricted computer | [Offline Activation](offline-activation.md) |
 | Let a PDM vault manage shared add-in seats | [License Pool](license-pool.md) |

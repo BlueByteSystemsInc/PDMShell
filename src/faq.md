@@ -22,7 +22,7 @@ Main differences:
 - Premium includes the PDMShell add-in.
 - Premium supports production automation, workflow integration, and larger batch workflows.
 
-See [PDMShell Free vs Premium](FREEVSPREMIUM.md) for the full comparison and pricing.
+See [PDMShell Free vs Premium](FREEVSPREMIUM.md) for the full comparison. For current pricing, visit [PDMShell Premium](https://bluebyte.biz/product/pdmshell).
 
 ## What Is The Difference Between A Single License And A License Pool?
 

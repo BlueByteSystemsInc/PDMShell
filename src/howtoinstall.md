@@ -17,6 +17,8 @@ Looking for the SOLIDWORKS PDM add-in instead? See [Install the PDMShell add-in]
 
 The download is a ZIP file containing the signed PDMShell installer.
 
+If you need to test Premium features, request a [7-day PDMShell trial license](https://bluebyte.biz/product/pdmshell-trial/) after installing.
+
 1. Open your Downloads folder.
 2. Right-click `pdmcli_installer.zip` and select **Extract All**.
 3. Open the extracted folder.

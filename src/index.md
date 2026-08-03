@@ -65,9 +65,9 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
   .pdmshell-actions {
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     margin-top: 2px;
-    max-width: 620px;
+    max-width: 820px;
     width: 100%;
   }
 
@@ -296,6 +296,7 @@ keywords: PDMShell, SOLIDWORKS PDM automation, PDM command line, PDM scripts, SO
     </div>
     <div class="pdmshell-actions">
       <a class="pdmshell-button pdmshell-button-primary" href="howtoinstall.md">Install PDMShell</a>
+      <a class="pdmshell-button pdmshell-button-secondary" href="https://bluebyte.biz/product/pdmshell-trial/">7-day trial</a>
       <a class="pdmshell-button pdmshell-button-secondary" href="addin/installation.md">Install PDM Add-in</a>
       <a class="pdmshell-button pdmshell-button-secondary" href="licensing.md">Licensing</a>
     </div>
