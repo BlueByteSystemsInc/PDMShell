@@ -85,78 +85,78 @@
         </div>
 
         <article data-uid="">
-<h1 id="showcard" sourcefile="src/SHOWCARD.md" sourcestartlinenumber="5">showcard</h1>
+<h1 id="showcard">showcard</h1>
 
-<h2 id="description" sourcefile="src/SHOWCARD.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/SHOWCARD.md" sourcestartlinenumber="7">The <code sourcefile="src/SHOWCARD.md" sourcestartlinenumber="7">showcard</code> command opens the SOLIDWORKS PDM data card for a selected file or folder.</p>
-<p sourcefile="src/SHOWCARD.md" sourcestartlinenumber="9">Use this when a script needs to pause and let the user inspect or edit a data card directly. If the user changes a card value, the Save button becomes available in the PDMShell card window.</p>
-<div class="NOTE" sourcefile="src/SHOWCARD.md" sourcestartlinenumber="11">
+<h2 id="description">Description</h2>
+<p>The <code>showcard</code> command opens the SOLIDWORKS PDM data card for a selected file or folder.</p>
+<p>Use this when a script needs to pause and let the user inspect or edit a data card directly. If the user changes a card value, the Save button becomes available in the PDMShell card window.</p>
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/SHOWCARD.md" sourcestartlinenumber="12"><code sourcefile="src/SHOWCARD.md" sourcestartlinenumber="12">showcard</code> is an interactive command. It is intended for desktop or add-in sessions where a user is present. Avoid using it in unattended task or headless automation.</p>
+<p><code>showcard</code> is an interactive command. It is intended for desktop or add-in sessions where a user is present. Avoid using it in unattended task or headless automation.</p>
 </div>
-<h2 id="syntax" sourcefile="src/SHOWCARD.md" sourcestartlinenumber="14">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/SHOWCARD.md" sourcestartlinenumber="16">showcard [-filePath path] [-directory path] [-id id]
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">showcard [-filePath path] [-directory path] [-id id]
 </code></pre>
-<h2 id="parameters" sourcefile="src/SHOWCARD.md" sourcestartlinenumber="20">Parameters</h2>
-<table sourcefile="src/SHOWCARD.md" sourcestartlinenumber="22">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/SHOWCARD.md" sourcestartlinenumber="22">
-<th sourcefile="src/SHOWCARD.md" sourcestartlinenumber="22">Parameter</th>
-<th sourcefile="src/SHOWCARD.md" sourcestartlinenumber="22">Required</th>
-<th sourcefile="src/SHOWCARD.md" sourcestartlinenumber="22">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/SHOWCARD.md" sourcestartlinenumber="24">
-<td sourcefile="src/SHOWCARD.md" sourcestartlinenumber="24"><code sourcefile="src/SHOWCARD.md" sourcestartlinenumber="24">-filePath</code></td>
-<td sourcefile="src/SHOWCARD.md" sourcestartlinenumber="24">No</td>
-<td sourcefile="src/SHOWCARD.md" sourcestartlinenumber="24">File whose PDM data card should be opened. Absolute and relative paths are supported.</td>
+<tr>
+<td><code>-filePath</code></td>
+<td>No</td>
+<td>File whose PDM data card should be opened. Absolute and relative paths are supported.</td>
 </tr>
-<tr sourcefile="src/SHOWCARD.md" sourcestartlinenumber="25">
-<td sourcefile="src/SHOWCARD.md" sourcestartlinenumber="25"><code sourcefile="src/SHOWCARD.md" sourcestartlinenumber="25">-directory</code></td>
-<td sourcefile="src/SHOWCARD.md" sourcestartlinenumber="25">No</td>
-<td sourcefile="src/SHOWCARD.md" sourcestartlinenumber="25">Folder whose PDM data card should be opened. Absolute and relative paths are supported.</td>
+<tr>
+<td><code>-directory</code></td>
+<td>No</td>
+<td>Folder whose PDM data card should be opened. Absolute and relative paths are supported.</td>
 </tr>
-<tr sourcefile="src/SHOWCARD.md" sourcestartlinenumber="26">
-<td sourcefile="src/SHOWCARD.md" sourcestartlinenumber="26"><code sourcefile="src/SHOWCARD.md" sourcestartlinenumber="26">-id</code></td>
-<td sourcefile="src/SHOWCARD.md" sourcestartlinenumber="26">No</td>
-<td sourcefile="src/SHOWCARD.md" sourcestartlinenumber="26">PDM internal ID of the file or folder whose data card should be opened.</td>
+<tr>
+<td><code>-id</code></td>
+<td>No</td>
+<td>PDM internal ID of the file or folder whose data card should be opened.</td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="src/SHOWCARD.md" sourcestartlinenumber="28">If no parameter is provided, <code sourcefile="src/SHOWCARD.md" sourcestartlinenumber="28">showcard</code> opens the data card for the current PDMShell folder.</p>
-<h3 id="parameter-details" sourcefile="src/SHOWCARD.md" sourcestartlinenumber="30">Parameter Details</h3>
-<ul sourcefile="src/SHOWCARD.md" sourcestartlinenumber="32">
-<li sourcefile="src/SHOWCARD.md" sourcestartlinenumber="32"><code sourcefile="src/SHOWCARD.md" sourcestartlinenumber="32">filePath</code>: Opens the data card for a file. Use this when the target is a known file in the vault.</li>
-<li sourcefile="src/SHOWCARD.md" sourcestartlinenumber="33"><code sourcefile="src/SHOWCARD.md" sourcestartlinenumber="33">directory</code>: Opens the data card for a folder. Use this when the target is a folder path.</li>
-<li sourcefile="src/SHOWCARD.md" sourcestartlinenumber="34"><code sourcefile="src/SHOWCARD.md" sourcestartlinenumber="34">id</code>: Opens the data card for a file or folder by PDM database ID. PDMShell tries the ID as a file first, then as a folder.</li>
+<p>If no parameter is provided, <code>showcard</code> opens the data card for the current PDMShell folder.</p>
+<h3 id="parameter-details">Parameter Details</h3>
+<ul>
+<li><code>filePath</code>: Opens the data card for a file. Use this when the target is a known file in the vault.</li>
+<li><code>directory</code>: Opens the data card for a folder. Use this when the target is a folder path.</li>
+<li><code>id</code>: Opens the data card for a file or folder by PDM database ID. PDMShell tries the ID as a file first, then as a folder.</li>
 </ul>
-<p sourcefile="src/SHOWCARD.md" sourcestartlinenumber="36">Only one target parameter should be supplied.</p>
-<h2 id="examples" sourcefile="src/SHOWCARD.md" sourcestartlinenumber="38">Examples</h2>
-<p sourcefile="src/SHOWCARD.md" sourcestartlinenumber="40">Open the current folder card:</p>
-<pre><code class="lang-bash" sourcefile="src/SHOWCARD.md" sourcestartlinenumber="42">showcard
+<p>Only one target parameter should be supplied.</p>
+<h2 id="examples">Examples</h2>
+<p>Open the current folder card:</p>
+<pre><code class="lang-bash">showcard
 </code></pre>
-<p sourcefile="src/SHOWCARD.md" sourcestartlinenumber="46">Open a file card relative to the current folder:</p>
-<pre><code class="lang-bash" sourcefile="src/SHOWCARD.md" sourcestartlinenumber="48">showcard -filePath &quot;membrane.slddrw&quot;
+<p>Open a file card relative to the current folder:</p>
+<pre><code class="lang-bash">showcard -filePath &quot;membrane.slddrw&quot;
 </code></pre>
-<p sourcefile="src/SHOWCARD.md" sourcestartlinenumber="52">Open a folder card:</p>
-<pre><code class="lang-bash" sourcefile="src/SHOWCARD.md" sourcestartlinenumber="54">showcard -directory &quot;Projects\Speaker_001&quot;
+<p>Open a folder card:</p>
+<pre><code class="lang-bash">showcard -directory &quot;Projects\Speaker_001&quot;
 </code></pre>
-<p sourcefile="src/SHOWCARD.md" sourcestartlinenumber="58">Open a card by PDM ID:</p>
-<pre><code class="lang-bash" sourcefile="src/SHOWCARD.md" sourcestartlinenumber="60">showcard -id 1234
+<p>Open a card by PDM ID:</p>
+<pre><code class="lang-bash">showcard -id 1234
 </code></pre>
-<h2 id="remarks" sourcefile="src/SHOWCARD.md" sourcestartlinenumber="64">Remarks</h2>
-<ul sourcefile="src/SHOWCARD.md" sourcestartlinenumber="66">
-<li sourcefile="src/SHOWCARD.md" sourcestartlinenumber="66">The command waits while the data card window is open.</li>
-<li sourcefile="src/SHOWCARD.md" sourcestartlinenumber="67">The card content resizes when the PDMShell data card window is resized.</li>
-<li sourcefile="src/SHOWCARD.md" sourcestartlinenumber="68">If the user edits the card, click Save in the PDMShell card window to write the card values.</li>
-<li sourcefile="src/SHOWCARD.md" sourcestartlinenumber="69">PDMShell returns card progress, status, modified, and saved messages to the command output.</li>
-<li sourcefile="src/SHOWCARD.md" sourcestartlinenumber="70">Closing the window without saving cancels unsaved card edits.</li>
-<li sourcefile="src/SHOWCARD.md" sourcestartlinenumber="71">The user must have the required SOLIDWORKS PDM permissions to edit the selected file or folder card.</li>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>The command waits while the data card window is open.</li>
+<li>The card content resizes when the PDMShell data card window is resized.</li>
+<li>If the user edits the card, click Save in the PDMShell card window to write the card values.</li>
+<li>PDMShell returns card progress, status, modified, and saved messages to the command output.</li>
+<li>Closing the window without saving cancels unsaved card edits.</li>
+<li>The user must have the required SOLIDWORKS PDM permissions to edit the selected file or folder card.</li>
 </ul>
-<h2 id="availability" sourcefile="src/SHOWCARD.md" sourcestartlinenumber="73">Availability</h2>
-<p sourcefile="src/SHOWCARD.md" sourcestartlinenumber="74">Available since PDMShell 4.0.34.</p>
-<p sourcefile="src/SHOWCARD.md" sourcestartlinenumber="76">Last updated in PDMShell 4.0.35.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 4.0.34.</p>
+<p>Last updated in PDMShell 4.0.35.</p>
 
 </article>
 

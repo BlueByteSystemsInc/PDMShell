@@ -85,189 +85,189 @@
         </div>
 
         <article data-uid="">
-<h1 id="search-result-shaping" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="6">Search Result Shaping</h1>
+<h1 id="search-result-shaping">Search Result Shaping</h1>
 
-<p sourcefile="src/search-result-shaping.md" sourcestartlinenumber="8">Result shaping is the part of PDMShell search that runs after SOLIDWORKS PDM returns matching files and folders.</p>
-<p sourcefile="src/search-result-shaping.md" sourcestartlinenumber="10">Use result shaping when you need to sort search results, find duplicate groups, keep only one item from each group, or exclude one item from each group.</p>
-<pre><code class="lang-text" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="12">PDM search
+<p>Result shaping is the part of PDMShell search that runs after SOLIDWORKS PDM returns matching files and folders.</p>
+<p>Use result shaping when you need to sort search results, find duplicate groups, keep only one item from each group, or exclude one item from each group.</p>
+<pre><code class="lang-text">PDM search
   -&gt; raw matching results
   -&gt; SortBy
   -&gt; GroupBy or DuplicatedBy
   -&gt; Strategy
   -&gt; final results passed to the command
 </code></pre>
-<div class="IMPORTANT" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="21">
+<div class="IMPORTANT">
 <h5>Important</h5>
-<p sourcefile="src/search-result-shaping.md" sourcestartlinenumber="22"><code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="22">SortBy</code>, <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="22">GroupBy</code>, <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="22">DuplicatedBy</code>, and <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="22">Strategy</code> require PDMShell to collect all matching PDM search results before sorting, grouping, and applying the strategy. Be mindful when using these options with broad recursive searches that may return hundreds or thousands of results. Narrow the search first with <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="22">Name</code>, variables, folder scope, state, dates, or other filters.</p>
+<p><code>SortBy</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, and <code>Strategy</code> require PDMShell to collect all matching PDM search results before sorting, grouping, and applying the strategy. Be mindful when using these options with broad recursive searches that may return hundreds or thousands of results. Narrow the search first with <code>Name</code>, variables, folder scope, state, dates, or other filters.</p>
 </div>
-<h2 id="tokens" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="24">Tokens</h2>
-<table sourcefile="src/search-result-shaping.md" sourcestartlinenumber="26">
+<h2 id="tokens">Tokens</h2>
+<table>
 <thead>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="26">
-<th sourcefile="src/search-result-shaping.md" sourcestartlinenumber="26">Token</th>
-<th sourcefile="src/search-result-shaping.md" sourcestartlinenumber="26">Description</th>
+<tr>
+<th>Token</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="28">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="28">DuplicatedBy</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="28">Groups results by a field or variable. Only groups with more than one item are processed.</td>
+<tr>
+<td>DuplicatedBy</td>
+<td>Groups results by a field or variable. Only groups with more than one item are processed.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="29">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="29">GroupBy</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="29">Alias for <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="29">DuplicatedBy</code></td>
+<tr>
+<td>GroupBy</td>
+<td>Alias for <code>DuplicatedBy</code></td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="30">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="30">SortBy</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="30">Sorts all results before applying the strategy. If <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="30">GroupBy</code> is specified, each group is sorted separately.</td>
+<tr>
+<td>SortBy</td>
+<td>Sorts all results before applying the strategy. If <code>GroupBy</code> is specified, each group is sorted separately.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="31">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="31">SortOrder</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="31">Optional sort direction: <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="31">Asc</code>, <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="31">Ascending</code>, <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="31">Desc</code>, or <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="31">Descending</code></td>
+<tr>
+<td>SortOrder</td>
+<td>Optional sort direction: <code>Asc</code>, <code>Ascending</code>, <code>Desc</code>, or <code>Descending</code></td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="32">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="32">SortDirection</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="32">Alias for <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="32">SortOrder</code></td>
+<tr>
+<td>SortDirection</td>
+<td>Alias for <code>SortOrder</code></td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="33">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="33">Strategy</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="33">Selects which sorted results are processed</td>
+<tr>
+<td>Strategy</td>
+<td>Selects which sorted results are processed</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="34">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="34">DuplicatesStrategy</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="34">Alias for <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="34">Strategy</code></td>
+<tr>
+<td>DuplicatesStrategy</td>
+<td>Alias for <code>Strategy</code></td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="src/search-result-shaping.md" sourcestartlinenumber="36">Without <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="36">GroupBy</code>, <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="36">SortBy</code> and <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="36">Strategy</code> are applied once to all matching results.</p>
-<p sourcefile="src/search-result-shaping.md" sourcestartlinenumber="38">With <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="38">GroupBy</code> or <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="38">DuplicatedBy</code>, PDMShell processes only duplicate groups. <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="38">SortBy</code> and <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="38">Strategy</code> are applied separately inside each group.</p>
-<h2 id="supported-fields" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="40">Supported Fields</h2>
-<p sourcefile="src/search-result-shaping.md" sourcestartlinenumber="42">Supported <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="42">DuplicatedBy</code>, <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="42">GroupBy</code>, and <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="42">SortBy</code> values include:</p>
-<ul sourcefile="src/search-result-shaping.md" sourcestartlinenumber="44">
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="44"><code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="44">Name</code></li>
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="45"><code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="45">FileDate</code></li>
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="46"><code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="46">Hash</code></li>
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="47"><code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="47">State</code></li>
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="48"><code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="48">Version</code></li>
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="49"><code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="49">CurrentVersion</code></li>
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="50"><code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="50">Revision</code></li>
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="51"><code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="51">FileSize</code></li>
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="52"><code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="52">ID</code></li>
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="53"><code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="53">Path</code></li>
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="54"><code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="54">FolderID</code></li>
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="55">PDM variables such as <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="55">@Revision</code> or <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="55">@PartNumber</code></li>
+<p>Without <code>GroupBy</code>, <code>SortBy</code> and <code>Strategy</code> are applied once to all matching results.</p>
+<p>With <code>GroupBy</code> or <code>DuplicatedBy</code>, PDMShell processes only duplicate groups. <code>SortBy</code> and <code>Strategy</code> are applied separately inside each group.</p>
+<h2 id="supported-fields">Supported Fields</h2>
+<p>Supported <code>DuplicatedBy</code>, <code>GroupBy</code>, and <code>SortBy</code> values include:</p>
+<ul>
+<li><code>Name</code></li>
+<li><code>FileDate</code></li>
+<li><code>Hash</code></li>
+<li><code>State</code></li>
+<li><code>Version</code></li>
+<li><code>CurrentVersion</code></li>
+<li><code>Revision</code></li>
+<li><code>FileSize</code></li>
+<li><code>ID</code></li>
+<li><code>Path</code></li>
+<li><code>FolderID</code></li>
+<li>PDM variables such as <code>@Revision</code> or <code>@PartNumber</code></li>
 </ul>
-<p sourcefile="src/search-result-shaping.md" sourcestartlinenumber="57">To use <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="57">Hash</code>, files must be locally cached.</p>
-<h2 id="default-sort-order" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="59">Default Sort Order</h2>
-<p sourcefile="src/search-result-shaping.md" sourcestartlinenumber="61">When <code sourcefile="src/search-result-shaping.md" sourcestartlinenumber="61">SortOrder</code> is not specified:</p>
-<ul sourcefile="src/search-result-shaping.md" sourcestartlinenumber="63">
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="63">Date, version, revision, and size fields sort descending by default.</li>
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="64">Name, path, state, and ID fields sort ascending by default.</li>
+<p>To use <code>Hash</code>, files must be locally cached.</p>
+<h2 id="default-sort-order">Default Sort Order</h2>
+<p>When <code>SortOrder</code> is not specified:</p>
+<ul>
+<li>Date, version, revision, and size fields sort descending by default.</li>
+<li>Name, path, state, and ID fields sort ascending by default.</li>
 </ul>
-<h2 id="strategies" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="66">Strategies</h2>
-<table sourcefile="src/search-result-shaping.md" sourcestartlinenumber="68">
+<h2 id="strategies">Strategies</h2>
+<table>
 <thead>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="68">
-<th sourcefile="src/search-result-shaping.md" sourcestartlinenumber="68">Strategy</th>
-<th sourcefile="src/search-result-shaping.md" sourcestartlinenumber="68">Description</th>
+<tr>
+<th>Strategy</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="70">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="70">KeepFirst</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="70">Keeps only the first item after sorting.</td>
+<tr>
+<td>KeepFirst</td>
+<td>Keeps only the first item after sorting.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="71">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="71">ExcludeFirst</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="71">Keeps every item except the first after sorting.</td>
+<tr>
+<td>ExcludeFirst</td>
+<td>Keeps every item except the first after sorting.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="72">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="72">KeepLast</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="72">Keeps only the last item after sorting.</td>
+<tr>
+<td>KeepLast</td>
+<td>Keeps only the last item after sorting.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="73">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="73">ExcludeLast</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="73">Keeps every item except the last after sorting.</td>
+<tr>
+<td>ExcludeLast</td>
+<td>Keeps every item except the last after sorting.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="74">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="74">KeepNewest</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="74">Keeps the newest item.</td>
+<tr>
+<td>KeepNewest</td>
+<td>Keeps the newest item.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="75">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="75">ExcludeNewest</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="75">Keeps every item except the newest.</td>
+<tr>
+<td>ExcludeNewest</td>
+<td>Keeps every item except the newest.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="76">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="76">KeepOldest</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="76">Keeps the oldest item.</td>
+<tr>
+<td>KeepOldest</td>
+<td>Keeps the oldest item.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="77">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="77">ExcludeOldest</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="77">Keeps every item except the oldest.</td>
+<tr>
+<td>ExcludeOldest</td>
+<td>Keeps every item except the oldest.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="78">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="78">KeepHighestVersion</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="78">Keeps the item with the highest PDM version.</td>
+<tr>
+<td>KeepHighestVersion</td>
+<td>Keeps the item with the highest PDM version.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="79">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="79">ExcludeHighestVersion</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="79">Keeps every item except the one with the highest PDM version.</td>
+<tr>
+<td>ExcludeHighestVersion</td>
+<td>Keeps every item except the one with the highest PDM version.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="80">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="80">KeepLowestVersion</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="80">Keeps the item with the lowest PDM version.</td>
+<tr>
+<td>KeepLowestVersion</td>
+<td>Keeps the item with the lowest PDM version.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="81">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="81">ExcludeLowestVersion</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="81">Keeps every item except the one with the lowest PDM version.</td>
+<tr>
+<td>ExcludeLowestVersion</td>
+<td>Keeps every item except the one with the lowest PDM version.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="82">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="82">KeepLatestRevision</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="82">Keeps the item with the latest revision value.</td>
+<tr>
+<td>KeepLatestRevision</td>
+<td>Keeps the item with the latest revision value.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="83">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="83">ExcludeLatestRevision</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="83">Keeps every item except the one with the latest revision value.</td>
+<tr>
+<td>ExcludeLatestRevision</td>
+<td>Keeps every item except the one with the latest revision value.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="84">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="84">KeepLargest</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="84">Keeps the largest file.</td>
+<tr>
+<td>KeepLargest</td>
+<td>Keeps the largest file.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="85">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="85">ExcludeLargest</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="85">Keeps every item except the largest file.</td>
+<tr>
+<td>ExcludeLargest</td>
+<td>Keeps every item except the largest file.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="86">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="86">KeepSmallest</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="86">Keeps the smallest file.</td>
+<tr>
+<td>KeepSmallest</td>
+<td>Keeps the smallest file.</td>
 </tr>
-<tr sourcefile="src/search-result-shaping.md" sourcestartlinenumber="87">
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="87">ExcludeSmallest</td>
-<td sourcefile="src/search-result-shaping.md" sourcestartlinenumber="87">Keeps every item except the smallest file.</td>
+<tr>
+<td>ExcludeSmallest</td>
+<td>Keeps every item except the smallest file.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="examples" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="89">Examples</h2>
-<p sourcefile="src/search-result-shaping.md" sourcestartlinenumber="91">List duplicate SOLIDWORKS files by name:</p>
-<pre><code class="lang-bash" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="93">search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns &quot;FileDate,Hash,Revision&quot;
+<h2 id="examples">Examples</h2>
+<p>List duplicate SOLIDWORKS files by name:</p>
+<pre><code class="lang-bash">search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns &quot;FileDate,Hash,Revision&quot;
 </code></pre>
-<p sourcefile="src/search-result-shaping.md" sourcestartlinenumber="97">List duplicate SOLIDWORKS files by revision:</p>
-<pre><code class="lang-bash" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="99">search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=@Revision&quot; -columns &quot;FileDate,Hash,Revision&quot;
+<p>List duplicate SOLIDWORKS files by revision:</p>
+<pre><code class="lang-bash">search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=@Revision&quot; -columns &quot;FileDate,Hash,Revision&quot;
 </code></pre>
-<p sourcefile="src/search-result-shaping.md" sourcestartlinenumber="103">List all PDFs except the oldest one after sorting the full result set by file date:</p>
-<pre><code class="lang-bash" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="105">search -search &quot;Name=%.pdf;SortBy=FileDate;Recursive=true;Strategy=ExcludeFirst&quot; -columns FileDate
+<p>List all PDFs except the oldest one after sorting the full result set by file date:</p>
+<pre><code class="lang-bash">search -search &quot;Name=%.pdf;SortBy=FileDate;Recursive=true;Strategy=ExcludeFirst&quot; -columns FileDate
 </code></pre>
-<p sourcefile="src/search-result-shaping.md" sourcestartlinenumber="109">List the newest PDF in each duplicate-name group:</p>
-<pre><code class="lang-bash" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="111">search -search &quot;Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=KeepFirst&quot;
+<p>List the newest PDF in each duplicate-name group:</p>
+<pre><code class="lang-bash">search -search &quot;Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=KeepFirst&quot;
 </code></pre>
-<p sourcefile="src/search-result-shaping.md" sourcestartlinenumber="115">Delete every PDF except the newest file in each duplicate-name group:</p>
-<pre><code class="lang-bash" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="117">delete -search &quot;Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=ExcludeFirst&quot;
+<p>Delete every PDF except the newest file in each duplicate-name group:</p>
+<pre><code class="lang-bash">delete -search &quot;Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=ExcludeFirst&quot;
 </code></pre>
-<h2 id="related-articles" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="121">Related Articles</h2>
-<ul sourcefile="src/search-result-shaping.md" sourcestartlinenumber="123">
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="123"><a href="advancedsearch.html" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="123">Advanced search overview</a></li>
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="124"><a href="search-tokens.html" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="124">Search tokens</a></li>
-<li sourcefile="src/search-result-shaping.md" sourcestartlinenumber="125"><a href="search-variables.html" sourcefile="src/search-result-shaping.md" sourcestartlinenumber="125">Variable search</a></li>
+<h2 id="related-articles">Related Articles</h2>
+<ul>
+<li><a href="advancedsearch.html">Advanced search overview</a></li>
+<li><a href="search-tokens.html">Search tokens</a></li>
+<li><a href="search-variables.html">Variable search</a></li>
 </ul>
 
 </article>

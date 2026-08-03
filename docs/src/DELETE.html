@@ -85,113 +85,113 @@
         </div>
 
         <article data-uid="">
-<h1 id="delete" sourcefile="src/DELETE.md" sourcestartlinenumber="5">delete</h1>
+<h1 id="delete">delete</h1>
 
-<h2 id="description" sourcefile="src/DELETE.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/DELETE.md" sourcestartlinenumber="7">The <code sourcefile="src/DELETE.md" sourcestartlinenumber="7">delete</code> command deletes one file, one folder, or multiple files found by search. It supports target selection by file path, directory path, search query, or ID.</p>
-<h2 id="syntax" sourcefile="src/DELETE.md" sourcestartlinenumber="9">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/DELETE.md" sourcestartlinenumber="11">delete [-filePath|-id] -directory -search -recursive -list -csv -destroy
+<h2 id="description">Description</h2>
+<p>The <code>delete</code> command deletes one file, one folder, or multiple files found by search. It supports target selection by file path, directory path, search query, or ID.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">delete [-filePath|-id] -directory -search -recursive -list -csv -destroy
 </code></pre>
-<h2 id="parameters" sourcefile="src/DELETE.md" sourcestartlinenumber="15">Parameters</h2>
-<table sourcefile="src/DELETE.md" sourcestartlinenumber="17">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/DELETE.md" sourcestartlinenumber="17">
-<th sourcefile="src/DELETE.md" sourcestartlinenumber="17">Parameter</th>
-<th sourcefile="src/DELETE.md" sourcestartlinenumber="17">Required</th>
-<th sourcefile="src/DELETE.md" sourcestartlinenumber="17">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/DELETE.md" sourcestartlinenumber="19">
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="19"><code sourcefile="src/DELETE.md" sourcestartlinenumber="19">-filePath</code></td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="19">No</td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="19">Optional. Specifies the file path of the file to be deleted.</td>
+<tr>
+<td><code>-filePath</code></td>
+<td>No</td>
+<td>Optional. Specifies the file path of the file to be deleted.</td>
 </tr>
-<tr sourcefile="src/DELETE.md" sourcestartlinenumber="20">
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="20"><code sourcefile="src/DELETE.md" sourcestartlinenumber="20">-id</code></td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="20">No</td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="20">Optional. Specifies the ID of the file to be deleted.</td>
+<tr>
+<td><code>-id</code></td>
+<td>No</td>
+<td>Optional. Specifies the ID of the file to be deleted.</td>
 </tr>
-<tr sourcefile="src/DELETE.md" sourcestartlinenumber="21">
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="21"><code sourcefile="src/DELETE.md" sourcestartlinenumber="21">-directory</code></td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="21">No</td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="21">Optional. Specifies the directory to be deleted. If used with the -recursive parameter, all files and subdirectories within the directory will also be deleted.</td>
+<tr>
+<td><code>-directory</code></td>
+<td>No</td>
+<td>Optional. Specifies the directory to be deleted. If used with the -recursive parameter, all files and subdirectories within the directory will also be deleted.</td>
 </tr>
-<tr sourcefile="src/DELETE.md" sourcestartlinenumber="22">
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="22"><code sourcefile="src/DELETE.md" sourcestartlinenumber="22">-search</code></td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="22">No</td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="22">Optional. A search query to filter files or directories to be deleted.</td>
+<tr>
+<td><code>-search</code></td>
+<td>No</td>
+<td>Optional. A search query to filter files or directories to be deleted.</td>
 </tr>
-<tr sourcefile="src/DELETE.md" sourcestartlinenumber="23">
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="23"><code sourcefile="src/DELETE.md" sourcestartlinenumber="23">-recursive</code></td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="23">No</td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="23">Optional. Deletes all files and subdirectories within the specified directory. This parameter is only applicable when deleting directories.</td>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>Optional. Deletes all files and subdirectories within the specified directory. This parameter is only applicable when deleting directories.</td>
 </tr>
-<tr sourcefile="src/DELETE.md" sourcestartlinenumber="24">
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="24"><code sourcefile="src/DELETE.md" sourcestartlinenumber="24">-list</code></td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="24">No</td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="24">Optional. Lists all the deleted files. Specifying <code sourcefile="src/DELETE.md" sourcestartlinenumber="24">recursive</code> with this parameter will do a drill down search and fetch all deleted files.</td>
+<tr>
+<td><code>-list</code></td>
+<td>No</td>
+<td>Optional. Lists all the deleted files. Specifying <code>recursive</code> with this parameter will do a drill down search and fetch all deleted files.</td>
 </tr>
-<tr sourcefile="src/DELETE.md" sourcestartlinenumber="25">
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="25"><code sourcefile="src/DELETE.md" sourcestartlinenumber="25">-csv</code></td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="25">Mode-dependent</td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="25">Exports a list of deleted files to a csv. This only works if <code sourcefile="src/DELETE.md" sourcestartlinenumber="25">list is specified</code>.</td>
+<tr>
+<td><code>-csv</code></td>
+<td>Mode-dependent</td>
+<td>Exports a list of deleted files to a csv. This only works if <code>list is specified</code>.</td>
 </tr>
-<tr sourcefile="src/DELETE.md" sourcestartlinenumber="26">
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="26"><code sourcefile="src/DELETE.md" sourcestartlinenumber="26">-destroy</code></td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="26">Mode-dependent</td>
-<td sourcefile="src/DELETE.md" sourcestartlinenumber="26">If specified, the deleted file will be also destroyed. <code sourcefile="src/DELETE.md" sourcestartlinenumber="26">-destroy</code> only affects results from the <a href="SEARCH.html" sourcefile="src/DELETE.md" sourcestartlinenumber="26"><code sourcefile="src/DELETE.md" sourcestartlinenumber="26">search</code></a> parameter.</td>
+<tr>
+<td><code>-destroy</code></td>
+<td>Mode-dependent</td>
+<td>If specified, the deleted file will be also destroyed. <code>-destroy</code> only affects results from the <a href="SEARCH.html"><code>search</code></a> parameter.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/DELETE.md" sourcestartlinenumber="28">Parameter Details</h3>
-<ul sourcefile="src/DELETE.md" sourcestartlinenumber="30">
-<li sourcefile="src/DELETE.md" sourcestartlinenumber="30"><p sourcefile="src/DELETE.md" sourcestartlinenumber="30"><code sourcefile="src/DELETE.md" sourcestartlinenumber="30">filePath</code>:
+<h3 id="parameter-details">Parameter Details</h3>
+<ul>
+<li><p><code>filePath</code>:
 (Optional) Specifies the file path of the file to be deleted.</p>
 </li>
-<li sourcefile="src/DELETE.md" sourcestartlinenumber="33"><p sourcefile="src/DELETE.md" sourcestartlinenumber="33"><code sourcefile="src/DELETE.md" sourcestartlinenumber="33">directory</code>:
+<li><p><code>directory</code>:
 (Optional) Specifies the directory to be deleted. If used with the -recursive parameter, all files and subdirectories within the directory will also be deleted.</p>
 </li>
-<li sourcefile="src/DELETE.md" sourcestartlinenumber="36"><p sourcefile="src/DELETE.md" sourcestartlinenumber="36"><code sourcefile="src/DELETE.md" sourcestartlinenumber="36">search</code>:
+<li><p><code>search</code>:
 (Optional) A search query to filter files or directories to be deleted.</p>
 </li>
-<li sourcefile="src/DELETE.md" sourcestartlinenumber="39"><p sourcefile="src/DELETE.md" sourcestartlinenumber="39"><code sourcefile="src/DELETE.md" sourcestartlinenumber="39">id</code>:
+<li><p><code>id</code>:
 (Optional) Specifies the ID of the file to be deleted.</p>
 </li>
-<li sourcefile="src/DELETE.md" sourcestartlinenumber="42"><p sourcefile="src/DELETE.md" sourcestartlinenumber="42"><code sourcefile="src/DELETE.md" sourcestartlinenumber="42">recursive</code>:
+<li><p><code>recursive</code>:
 (Optional) Deletes all files and subdirectories within the specified directory. This parameter is only applicable when deleting directories.</p>
 </li>
-<li sourcefile="src/DELETE.md" sourcestartlinenumber="45"><p sourcefile="src/DELETE.md" sourcestartlinenumber="45"><code sourcefile="src/DELETE.md" sourcestartlinenumber="45">list</code>:
-(Optional) Lists all the deleted files. Specifying <code sourcefile="src/DELETE.md" sourcestartlinenumber="46">recursive</code> with this parameter will do a drill down search and fetch all deleted files.</p>
+<li><p><code>list</code>:
+(Optional) Lists all the deleted files. Specifying <code>recursive</code> with this parameter will do a drill down search and fetch all deleted files.</p>
 </li>
-<li sourcefile="src/DELETE.md" sourcestartlinenumber="48"><p sourcefile="src/DELETE.md" sourcestartlinenumber="48"><code sourcefile="src/DELETE.md" sourcestartlinenumber="48">csv</code>: Exports a list of deleted files to a csv. This only works if <code sourcefile="src/DELETE.md" sourcestartlinenumber="48">list is specified</code>.</p>
+<li><p><code>csv</code>: Exports a list of deleted files to a csv. This only works if <code>list is specified</code>.</p>
 </li>
-<li sourcefile="src/DELETE.md" sourcestartlinenumber="50"><p sourcefile="src/DELETE.md" sourcestartlinenumber="50"><code sourcefile="src/DELETE.md" sourcestartlinenumber="50">destroy</code>: If specified, the deleted file will be also destroyed. <code sourcefile="src/DELETE.md" sourcestartlinenumber="50">-destroy</code> only affects results from the <a href="SEARCH.html" sourcefile="src/DELETE.md" sourcestartlinenumber="50"><code sourcefile="src/DELETE.md" sourcestartlinenumber="50">search</code></a> parameter.</p>
+<li><p><code>destroy</code>: If specified, the deleted file will be also destroyed. <code>-destroy</code> only affects results from the <a href="SEARCH.html"><code>search</code></a> parameter.</p>
 </li>
 </ul>
-<div class="NOTE" sourcefile="src/DELETE.md" sourcestartlinenumber="52">
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/DELETE.md" sourcestartlinenumber="53">Use the exported csv from -csv with the <a href="RECOVER.html" sourcefile="src/DELETE.md" sourcestartlinenumber="53">recover</a> command.</p>
+<p>Use the exported csv from -csv with the <a href="RECOVER.html">recover</a> command.</p>
 </div>
-<div class="NOTE" sourcefile="src/DELETE.md" sourcestartlinenumber="55">
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/DELETE.md" sourcestartlinenumber="56"><code sourcefile="src/DELETE.md" sourcestartlinenumber="56">-destroy</code> only affects results from the <a href="SEARCH.html" sourcefile="src/DELETE.md" sourcestartlinenumber="56"><code sourcefile="src/DELETE.md" sourcestartlinenumber="56">search</code></a> parameter.</p>
+<p><code>-destroy</code> only affects results from the <a href="SEARCH.html"><code>search</code></a> parameter.</p>
 </div>
-<h2 id="examples" sourcefile="src/DELETE.md" sourcestartlinenumber="58">Examples</h2>
-<p sourcefile="src/DELETE.md" sourcestartlinenumber="59">Delete files matching a search query:</p>
-<pre><code class="lang-bash" sourcefile="src/DELETE.md" sourcestartlinenumber="60">delete -search &quot;%.sldprt&quot;
+<h2 id="examples">Examples</h2>
+<p>Delete files matching a search query:</p>
+<pre><code class="lang-bash">delete -search &quot;%.sldprt&quot;
 # delete
 </code></pre>
-<h2 id="remarks" sourcefile="src/DELETE.md" sourcestartlinenumber="64">Remarks</h2>
-<ul sourcefile="src/DELETE.md" sourcestartlinenumber="65">
-<li sourcefile="src/DELETE.md" sourcestartlinenumber="65">The delete command requires at least one of the following parameters: <code sourcefile="src/DELETE.md" sourcestartlinenumber="65">filePath</code>, <a href="DIR.html" sourcefile="src/DELETE.md" sourcestartlinenumber="65"><code sourcefile="src/DELETE.md" sourcestartlinenumber="65">dir</code></a>, <a href="SEARCH.html" sourcefile="src/DELETE.md" sourcestartlinenumber="65"><code sourcefile="src/DELETE.md" sourcestartlinenumber="65">search</code></a>, or <code sourcefile="src/DELETE.md" sourcestartlinenumber="65">id</code>.</li>
-<li sourcefile="src/DELETE.md" sourcestartlinenumber="66">Use the <code sourcefile="src/DELETE.md" sourcestartlinenumber="66">recursive</code> parameter with caution, as it will delete all contents within the specified directory.</li>
-<li sourcefile="src/DELETE.md" sourcestartlinenumber="67">Ensure you have the necessary permissions to delete files or directories in the PDM system.</li>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>The delete command requires at least one of the following parameters: <code>filePath</code>, <a href="DIR.html"><code>dir</code></a>, <a href="SEARCH.html"><code>search</code></a>, or <code>id</code>.</li>
+<li>Use the <code>recursive</code> parameter with caution, as it will delete all contents within the specified directory.</li>
+<li>Ensure you have the necessary permissions to delete files or directories in the PDM system.</li>
 </ul>
-<h2 id="tutorial" sourcefile="src/DELETE.md" sourcestartlinenumber="69">Tutorial</h2>
-<p sourcefile="src/DELETE.md" sourcestartlinenumber="70"><video src="https://bluebyte.biz/wp-content/pdmshellvideos/delete.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
-<h2 id="availability" sourcefile="src/DELETE.md" sourcestartlinenumber="72">Availability</h2>
-<p sourcefile="src/DELETE.md" sourcestartlinenumber="73">Available since PDMShell 2.0.0.</p>
+<h2 id="tutorial">Tutorial</h2>
+<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/delete.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0.</p>
 
 </article>
 

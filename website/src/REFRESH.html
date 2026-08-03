@@ -85,59 +85,59 @@
         </div>
 
         <article data-uid="">
-<h1 id="refresh-command" sourcefile="src/REFRESH.md" sourcestartlinenumber="7"><code sourcefile="src/REFRESH.md" sourcestartlinenumber="7">refresh</code> command</h1>
+<h1 id="refresh-command"><code>refresh</code> command</h1>
 
-<p sourcefile="src/REFRESH.md" sourcestartlinenumber="9">Refreshes the current SOLIDWORKS PDM metadata and state for one file or files found by search. It does not download, rebuild, or modify files.</p>
-<p sourcefile="src/REFRESH.md" sourcestartlinenumber="11">Use <code sourcefile="src/REFRESH.md" sourcestartlinenumber="11">refresh</code> when another user or process may have changed a file's version, variables, workflow state, or checkout information during the current PDMShell session.</p>
-<h2 id="syntax" sourcefile="src/REFRESH.md" sourcestartlinenumber="13">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/REFRESH.md" sourcestartlinenumber="15">refresh (-filePath file_path | -search search_expression) [-recursive]
+<p>Refreshes the current SOLIDWORKS PDM metadata and state for one file or files found by search. It does not download, rebuild, or modify files.</p>
+<p>Use <code>refresh</code> when another user or process may have changed a file's version, variables, workflow state, or checkout information during the current PDMShell session.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">refresh (-filePath file_path | -search search_expression) [-recursive]
 </code></pre>
-<h2 id="parameters" sourcefile="src/REFRESH.md" sourcestartlinenumber="19">Parameters</h2>
-<table sourcefile="src/REFRESH.md" sourcestartlinenumber="21">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/REFRESH.md" sourcestartlinenumber="21">
-<th sourcefile="src/REFRESH.md" sourcestartlinenumber="21">Parameter</th>
-<th sourcefile="src/REFRESH.md" sourcestartlinenumber="21">Short name</th>
-<th sourcefile="src/REFRESH.md" sourcestartlinenumber="21">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Short name</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/REFRESH.md" sourcestartlinenumber="23">
-<td sourcefile="src/REFRESH.md" sourcestartlinenumber="23"><code sourcefile="src/REFRESH.md" sourcestartlinenumber="23">-filePath</code></td>
-<td sourcefile="src/REFRESH.md" sourcestartlinenumber="23"><code sourcefile="src/REFRESH.md" sourcestartlinenumber="23">-f</code></td>
-<td sourcefile="src/REFRESH.md" sourcestartlinenumber="23">Refreshes one file. Absolute and relative paths are supported.</td>
+<tr>
+<td><code>-filePath</code></td>
+<td><code>-f</code></td>
+<td>Refreshes one file. Absolute and relative paths are supported.</td>
 </tr>
-<tr sourcefile="src/REFRESH.md" sourcestartlinenumber="24">
-<td sourcefile="src/REFRESH.md" sourcestartlinenumber="24"><code sourcefile="src/REFRESH.md" sourcestartlinenumber="24">-search</code></td>
-<td sourcefile="src/REFRESH.md" sourcestartlinenumber="24"><code sourcefile="src/REFRESH.md" sourcestartlinenumber="24">-s</code></td>
-<td sourcefile="src/REFRESH.md" sourcestartlinenumber="24">Refreshes files matching a search in the current directory.</td>
+<tr>
+<td><code>-search</code></td>
+<td><code>-s</code></td>
+<td>Refreshes files matching a search in the current directory.</td>
 </tr>
-<tr sourcefile="src/REFRESH.md" sourcestartlinenumber="25">
-<td sourcefile="src/REFRESH.md" sourcestartlinenumber="25"><code sourcefile="src/REFRESH.md" sourcestartlinenumber="25">-recursive</code></td>
-<td sourcefile="src/REFRESH.md" sourcestartlinenumber="25"><code sourcefile="src/REFRESH.md" sourcestartlinenumber="25">-r</code></td>
-<td sourcefile="src/REFRESH.md" sourcestartlinenumber="25">Includes matching files in subfolders when used with <code sourcefile="src/REFRESH.md" sourcestartlinenumber="25">-search</code>.</td>
+<tr>
+<td><code>-recursive</code></td>
+<td><code>-r</code></td>
+<td>Includes matching files in subfolders when used with <code>-search</code>.</td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="src/REFRESH.md" sourcestartlinenumber="27">Specify either <code sourcefile="src/REFRESH.md" sourcestartlinenumber="27">-filePath</code> or <code sourcefile="src/REFRESH.md" sourcestartlinenumber="27">-search</code>, but not both.</p>
-<h2 id="examples" sourcefile="src/REFRESH.md" sourcestartlinenumber="29">Examples</h2>
-<p sourcefile="src/REFRESH.md" sourcestartlinenumber="31">Refresh one file:</p>
-<pre><code class="lang-text" sourcefile="src/REFRESH.md" sourcestartlinenumber="33">refresh -filePath &quot;Part.sldprt&quot;
+<p>Specify either <code>-filePath</code> or <code>-search</code>, but not both.</p>
+<h2 id="examples">Examples</h2>
+<p>Refresh one file:</p>
+<pre><code class="lang-text">refresh -filePath &quot;Part.sldprt&quot;
 </code></pre>
-<p sourcefile="src/REFRESH.md" sourcestartlinenumber="37">Refresh all SOLIDWORKS part files in the current directory:</p>
-<pre><code class="lang-text" sourcefile="src/REFRESH.md" sourcestartlinenumber="39">refresh -search &quot;Name=%.sldprt&quot;
+<p>Refresh all SOLIDWORKS part files in the current directory:</p>
+<pre><code class="lang-text">refresh -search &quot;Name=%.sldprt&quot;
 </code></pre>
-<p sourcefile="src/REFRESH.md" sourcestartlinenumber="43">Refresh checked-out files in the current directory and its subfolders:</p>
-<pre><code class="lang-text" sourcefile="src/REFRESH.md" sourcestartlinenumber="45">refresh -search &quot;Locked=true&quot; -recursive
+<p>Refresh checked-out files in the current directory and its subfolders:</p>
+<pre><code class="lang-text">refresh -search &quot;Locked=true&quot; -recursive
 </code></pre>
-<h2 id="refresh-compared-with-other-commands" sourcefile="src/REFRESH.md" sourcestartlinenumber="49">Refresh compared with other commands</h2>
-<ul sourcefile="src/REFRESH.md" sourcestartlinenumber="51">
-<li sourcefile="src/REFRESH.md" sourcestartlinenumber="51"><code sourcefile="src/REFRESH.md" sourcestartlinenumber="51">refresh</code> reloads PDM information without downloading or changing files.</li>
-<li sourcefile="src/REFRESH.md" sourcestartlinenumber="52"><a href="GET.html" sourcefile="src/REFRESH.md" sourcestartlinenumber="52"><code sourcefile="src/REFRESH.md" sourcestartlinenumber="52">get</code></a> downloads a selected file version to the local vault view.</li>
-<li sourcefile="src/REFRESH.md" sourcestartlinenumber="53"><a href="CLEARCACHE.html" sourcefile="src/REFRESH.md" sourcestartlinenumber="53"><code sourcefile="src/REFRESH.md" sourcestartlinenumber="53">clearcache</code></a> removes locally cached file content.</li>
-<li sourcefile="src/REFRESH.md" sourcestartlinenumber="54"><a href="REBUILD.html" sourcefile="src/REFRESH.md" sourcestartlinenumber="54"><code sourcefile="src/REFRESH.md" sourcestartlinenumber="54">rebuild</code></a> opens and rebuilds supported SOLIDWORKS documents.</li>
+<h2 id="refresh-compared-with-other-commands">Refresh compared with other commands</h2>
+<ul>
+<li><code>refresh</code> reloads PDM information without downloading or changing files.</li>
+<li><a href="GET.html"><code>get</code></a> downloads a selected file version to the local vault view.</li>
+<li><a href="CLEARCACHE.html"><code>clearcache</code></a> removes locally cached file content.</li>
+<li><a href="REBUILD.html"><code>rebuild</code></a> opens and rebuilds supported SOLIDWORKS documents.</li>
 </ul>
-<p sourcefile="src/REFRESH.md" sourcestartlinenumber="56">The <code sourcefile="src/REFRESH.md" sourcestartlinenumber="56">refresh</code> command is available in the Free and Premium editions of PDMShell.</p>
+<p>The <code>refresh</code> command is available in the Free and Premium editions of PDMShell.</p>
 
 </article>
 

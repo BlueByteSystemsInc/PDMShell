@@ -85,217 +85,217 @@
         </div>
 
         <article data-uid="">
-<h1 id="transition" sourcefile="src/TRANSITION.md" sourcestartlinenumber="5">transition</h1>
+<h1 id="transition">transition</h1>
 
-<h2 id="description" sourcefile="src/TRANSITION.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="7">The <code sourcefile="src/TRANSITION.md" sourcestartlinenumber="7">transition</code> command changes SOLIDWORKS PDM files from one workflow state to another using a specified transition.</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="9">This command supports three modes:</p>
-<ul sourcefile="src/TRANSITION.md" sourcestartlinenumber="11">
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="11">Batch transition using CSV source (recommended for large migrations)</li>
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="12">Search-based transition</li>
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="13">Single file transition</li>
+<h2 id="description">Description</h2>
+<p>The <code>transition</code> command changes SOLIDWORKS PDM files from one workflow state to another using a specified transition.</p>
+<p>This command supports three modes:</p>
+<ul>
+<li>Batch transition using CSV source (recommended for large migrations)</li>
+<li>Search-based transition</li>
+<li>Single file transition</li>
 </ul>
-<h2 id="syntax" sourcefile="src/TRANSITION.md" sourcestartlinenumber="15">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/TRANSITION.md" sourcestartlinenumber="17">transition -transitionidorname &lt;id-or-name&gt; -filePath &lt;path&gt; [-mode simple|references]
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">transition -transitionidorname &lt;id-or-name&gt; -filePath &lt;path&gt; [-mode simple|references]
 transition -transitionidorname &lt;id-or-name&gt; -search &lt;pattern&gt; [-recursive] [-mode simple|references]
 transition -source &lt;csv&gt; -password &lt;password&gt; [-batch &lt;size&gt;] [-comment &lt;text&gt;]
 </code></pre>
-<h2 id="parameters" sourcefile="src/TRANSITION.md" sourcestartlinenumber="23">Parameters</h2>
-<table sourcefile="src/TRANSITION.md" sourcestartlinenumber="25">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/TRANSITION.md" sourcestartlinenumber="25">
-<th sourcefile="src/TRANSITION.md" sourcestartlinenumber="25">Parameter</th>
-<th sourcefile="src/TRANSITION.md" sourcestartlinenumber="25">Required</th>
-<th sourcefile="src/TRANSITION.md" sourcestartlinenumber="25">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/TRANSITION.md" sourcestartlinenumber="27">
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="27"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="27">-transitionidorname</code></td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="27">Mode-dependent</td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="27">Specifies the workflow transition ID or name. Required for search and filepath modes.</td>
+<tr>
+<td><code>-transitionidorname</code></td>
+<td>Mode-dependent</td>
+<td>Specifies the workflow transition ID or name. Required for search and filepath modes.</td>
 </tr>
-<tr sourcefile="src/TRANSITION.md" sourcestartlinenumber="28">
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="28"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="28">-filePath</code></td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="28">Mode-dependent</td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="28">Specifies a single file to transition.</td>
+<tr>
+<td><code>-filePath</code></td>
+<td>Mode-dependent</td>
+<td>Specifies a single file to transition.</td>
 </tr>
-<tr sourcefile="src/TRANSITION.md" sourcestartlinenumber="29">
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="29"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="29">-mode</code></td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="29">No</td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="29">Optional. Controls whether direct file and search transitions use simple mode or reference mode.</td>
+<tr>
+<td><code>-mode</code></td>
+<td>No</td>
+<td>Optional. Controls whether direct file and search transitions use simple mode or reference mode.</td>
 </tr>
-<tr sourcefile="src/TRANSITION.md" sourcestartlinenumber="30">
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="30"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="30">-search</code></td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="30">Mode-dependent</td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="30">Searches for files matching a pattern in the current directory.</td>
+<tr>
+<td><code>-search</code></td>
+<td>Mode-dependent</td>
+<td>Searches for files matching a pattern in the current directory.</td>
 </tr>
-<tr sourcefile="src/TRANSITION.md" sourcestartlinenumber="31">
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="31"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="31">-recursive</code></td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="31">No</td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="31">Includes subfolders when used with search.</td>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>Includes subfolders when used with search.</td>
 </tr>
-<tr sourcefile="src/TRANSITION.md" sourcestartlinenumber="32">
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="32"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="32">-source</code></td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="32">Mode-dependent</td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="32">Specifies a CSV file containing files to transition in batch.</td>
+<tr>
+<td><code>-source</code></td>
+<td>Mode-dependent</td>
+<td>Specifies a CSV file containing files to transition in batch.</td>
 </tr>
-<tr sourcefile="src/TRANSITION.md" sourcestartlinenumber="33">
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="33"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="33">-password</code></td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="33">Yes</td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="33">Specifies the PDM user password required to execute the transition. Only used with <code sourcefile="src/TRANSITION.md" sourcestartlinenumber="33">source</code> parameter. Example:</td>
+<tr>
+<td><code>-password</code></td>
+<td>Yes</td>
+<td>Specifies the PDM user password required to execute the transition. Only used with <code>source</code> parameter. Example:</td>
 </tr>
-<tr sourcefile="src/TRANSITION.md" sourcestartlinenumber="34">
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="34"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="34">-batch</code></td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="34">No</td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="34">Specifies how many files to process per batch.</td>
+<tr>
+<td><code>-batch</code></td>
+<td>No</td>
+<td>Specifies how many files to process per batch.</td>
 </tr>
-<tr sourcefile="src/TRANSITION.md" sourcestartlinenumber="35">
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="35"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="35">-comment</code></td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="35">No</td>
-<td sourcefile="src/TRANSITION.md" sourcestartlinenumber="35">Specifies the transition comment.</td>
+<tr>
+<td><code>-comment</code></td>
+<td>No</td>
+<td>Specifies the transition comment.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/TRANSITION.md" sourcestartlinenumber="37">Parameter Details</h3>
-<h3 id="transitionidorname" sourcefile="src/TRANSITION.md" sourcestartlinenumber="39"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="39">transitionidorname</code></h3>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="40">Specifies the workflow transition ID or name.
+<h3 id="parameter-details">Parameter Details</h3>
+<h3 id="transitionidorname"><code>transitionidorname</code></h3>
+<p>Specifies the workflow transition ID or name.
 Required for search and filepath modes.</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="43">Example:</p>
-<pre><code class="lang-bash" sourcefile="src/TRANSITION.md" sourcestartlinenumber="44">-transitionidorname 12
+<p>Example:</p>
+<pre><code class="lang-bash">-transitionidorname 12
 </code></pre>
-<h3 id="source" sourcefile="src/TRANSITION.md" sourcestartlinenumber="47"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="47">source</code></h3>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="49">Specifies a CSV file containing files to transition in batch.</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="51">The CSV may be:</p>
-<ul sourcefile="src/TRANSITION.md" sourcestartlinenumber="52">
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="52">Absolute path</li>
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="53">Relative to current directory</li>
+<h3 id="source"><code>source</code></h3>
+<p>Specifies a CSV file containing files to transition in batch.</p>
+<p>The CSV may be:</p>
+<ul>
+<li>Absolute path</li>
+<li>Relative to current directory</li>
 </ul>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="55">Example:</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="57">-source transitions.csv</p>
-<div class="IMPORTANT" sourcefile="src/TRANSITION.md" sourcestartlinenumber="59">
+<p>Example:</p>
+<p>-source transitions.csv</p>
+<div class="IMPORTANT">
 <h5>Important</h5>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="60">The file must be locally cached.</p>
+<p>The file must be locally cached.</p>
 </div>
-<h3 id="password" sourcefile="src/TRANSITION.md" sourcestartlinenumber="62"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="62">password</code></h3>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="64">Specifies the PDM user password required to execute the transition.
-Only used with <code sourcefile="src/TRANSITION.md" sourcestartlinenumber="65">source</code> parameter.
+<h3 id="password"><code>password</code></h3>
+<p>Specifies the PDM user password required to execute the transition.
+Only used with <code>source</code> parameter.
 Example:</p>
-<pre><code class="lang-bash" sourcefile="src/TRANSITION.md" sourcestartlinenumber="67">-password mypassword
+<pre><code class="lang-bash">-password mypassword
 </code></pre>
-<div class="IMPORTANT" sourcefile="src/TRANSITION.md" sourcestartlinenumber="71">
+<div class="IMPORTANT">
 <h5>Important</h5>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="72">Your password remains visible in your session output. Do not start PDMShell with winlog parameter.</p>
+<p>Your password remains visible in your session output. Do not start PDMShell with winlog parameter.</p>
 </div>
-<h3 id="batch" sourcefile="src/TRANSITION.md" sourcestartlinenumber="75"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="75">batch</code></h3>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="77">Specifies how many files to process per batch.</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="79">Default:
+<h3 id="batch"><code>batch</code></h3>
+<p>Specifies how many files to process per batch.</p>
+<p>Default:
 1000
 Example:</p>
-<pre><code class="lang-bash" sourcefile="src/TRANSITION.md" sourcestartlinenumber="82">-batch 5000
+<pre><code class="lang-bash">-batch 5000
 </code></pre>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="85">Recommended values:
+<p>Recommended values:
 500</p>
-<h3 id="comment" sourcefile="src/TRANSITION.md" sourcestartlinenumber="88"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="88">comment</code></h3>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="90">Specifies the transition comment.</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="92">Default:</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="94">Transitioned by PDMShell</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="96">Example:</p>
-<pre><code class="lang-bash" sourcefile="src/TRANSITION.md" sourcestartlinenumber="97">-comment &quot;Released by migration script&quot;
+<h3 id="comment"><code>comment</code></h3>
+<p>Specifies the transition comment.</p>
+<p>Default:</p>
+<p>Transitioned by PDMShell</p>
+<p>Example:</p>
+<pre><code class="lang-bash">-comment &quot;Released by migration script&quot;
 </code></pre>
-<hr sourcefile="src/TRANSITION.md" sourcestartlinenumber="100">
-<h3 id="mode" sourcefile="src/TRANSITION.md" sourcestartlinenumber="102"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="102">mode</code></h3>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="104">Optional. Controls whether direct file and search transitions use simple mode or reference mode.</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="106">Allowed values:</p>
-<ul sourcefile="src/TRANSITION.md" sourcestartlinenumber="108">
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="108"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="108">simple</code>: transitions only the selected file. This is the default.</li>
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="109"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="109">references</code>: transitions the selected file and references according to SOLIDWORKS PDM transition behavior.</li>
+<hr>
+<h3 id="mode"><code>mode</code></h3>
+<p>Optional. Controls whether direct file and search transitions use simple mode or reference mode.</p>
+<p>Allowed values:</p>
+<ul>
+<li><code>simple</code>: transitions only the selected file. This is the default.</li>
+<li><code>references</code>: transitions the selected file and references according to SOLIDWORKS PDM transition behavior.</li>
 </ul>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="111">Example:</p>
-<pre><code class="lang-bash" sourcefile="src/TRANSITION.md" sourcestartlinenumber="112">-mode references
+<p>Example:</p>
+<pre><code class="lang-bash">-mode references
 </code></pre>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="116">This parameter applies to <code sourcefile="src/TRANSITION.md" sourcestartlinenumber="116">filePath</code> and <code sourcefile="src/TRANSITION.md" sourcestartlinenumber="116">search</code> mode. CSV source mode uses the PDM batch transition reference settings described below.</p>
-<hr sourcefile="src/TRANSITION.md" sourcestartlinenumber="118">
-<h3 id="search" sourcefile="src/TRANSITION.md" sourcestartlinenumber="120"><a href="SEARCH.html" sourcefile="src/TRANSITION.md" sourcestartlinenumber="120"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="120">search</code></a></h3>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="122">Searches for files matching a pattern in the current directory.</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="124">Example:</p>
-<pre><code class="lang-bash" sourcefile="src/TRANSITION.md" sourcestartlinenumber="125"># transition
+<p>This parameter applies to <code>filePath</code> and <code>search</code> mode. CSV source mode uses the PDM batch transition reference settings described below.</p>
+<hr>
+<h3 id="search"><a href="SEARCH.html"><code>search</code></a></h3>
+<p>Searches for files matching a pattern in the current directory.</p>
+<p>Example:</p>
+<pre><code class="lang-bash"># transition
 -search %.sldprt
 </code></pre>
-<hr sourcefile="src/TRANSITION.md" sourcestartlinenumber="129">
-<h3 id="recursive" sourcefile="src/TRANSITION.md" sourcestartlinenumber="131"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="131">recursive</code></h3>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="133">Includes subfolders when used with search.</p>
-<hr sourcefile="src/TRANSITION.md" sourcestartlinenumber="135">
-<h3 id="filepath" sourcefile="src/TRANSITION.md" sourcestartlinenumber="137"><code sourcefile="src/TRANSITION.md" sourcestartlinenumber="137">filePath</code></h3>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="139">Specifies a single file to transition.</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="141">Example:</p>
-<pre><code class="lang-bash" sourcefile="src/TRANSITION.md" sourcestartlinenumber="142"># transition
+<hr>
+<h3 id="recursive"><code>recursive</code></h3>
+<p>Includes subfolders when used with search.</p>
+<hr>
+<h3 id="filepath"><code>filePath</code></h3>
+<p>Specifies a single file to transition.</p>
+<p>Example:</p>
+<pre><code class="lang-bash"># transition
 -filePath part.sldprt
 </code></pre>
-<hr sourcefile="src/TRANSITION.md" sourcestartlinenumber="146">
-<h2 id="csv-format" sourcefile="src/TRANSITION.md" sourcestartlinenumber="148">CSV Format</h2>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="149">Required format:</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="151">FileID,ParentFolderID,TransitionID</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="153">Example:</p>
-<pre><code class="lang-bash" sourcefile="src/TRANSITION.md" sourcestartlinenumber="155">FileID,ParentFolderID,TransitionID
+<hr>
+<h2 id="csv-format">CSV Format</h2>
+<p>Required format:</p>
+<p>FileID,ParentFolderID,TransitionID</p>
+<p>Example:</p>
+<pre><code class="lang-bash">FileID,ParentFolderID,TransitionID
 34521,1201,15
 34522,1201,15
 34523,1205,18
 </code></pre>
-<h2 id="transitioncsv" sourcefile="src/TRANSITION.md" sourcestartlinenumber="162"><img src="/images/transitioncsv.png" sourcefile="src/TRANSITION.md" sourcestartlinenumber="162" alt="transition.csv"></h2>
-<h2 id="batch-mode" sourcefile="src/TRANSITION.md" sourcestartlinenumber="164">Batch Mode</h2>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="165">This is the recommended mode for:</p>
-<ul sourcefile="src/TRANSITION.md" sourcestartlinenumber="167">
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="167">Data migrations</li>
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="168">Vault cleanup</li>
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="169">Bulk state changes</li>
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="170">Automation</li>
+<h2 id="transitioncsv"><img src="/images/transitioncsv.png" alt="transition.csv"></h2>
+<h2 id="batch-mode">Batch Mode</h2>
+<p>This is the recommended mode for:</p>
+<ul>
+<li>Data migrations</li>
+<li>Vault cleanup</li>
+<li>Bulk state changes</li>
+<li>Automation</li>
 </ul>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="172">Supports hundreds of thousands of files.</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="174">Example:</p>
-<pre><code class="lang-bash" sourcefile="src/TRANSITION.md" sourcestartlinenumber="175">transition -source transitions.csv -password mypass -batch 2000
+<p>Supports hundreds of thousands of files.</p>
+<p>Example:</p>
+<pre><code class="lang-bash">transition -source transitions.csv -password mypass -batch 2000
 </code></pre>
-<hr sourcefile="src/TRANSITION.md" sourcestartlinenumber="178">
-<h2 id="important-considerations-for-batch-mode" sourcefile="src/TRANSITION.md" sourcestartlinenumber="180">Important Considerations For Batch Mode</h2>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="181"><img src="/images/ReferenceDialogSettings.png" sourcefile="src/TRANSITION.md" sourcestartlinenumber="181" alt="ReferenceDialogSettings"></p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="183">PDMShell batch transitions are affected by the logged-in userâ€™s Reference Dialog settings. If â€œSelect child references during state changeâ€ and â€œSelect references that are defined as drawing nodes during state changeâ€ are enabled, PDM will also transition referenced files, not just the source files from the CSV. If you want PDMShell batch mode to transition only the source files, these options must be disabled for the logged-in user.</p>
-<h2 id="search-mode" sourcefile="src/TRANSITION.md" sourcestartlinenumber="187">Search Mode</h2>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="188">Transitions files found using search.</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="190">Example:</p>
-<pre><code class="lang-bash" sourcefile="src/TRANSITION.md" sourcestartlinenumber="191">transition -search %.sldasm -transitionidorname 12 -recursive
+<hr>
+<h2 id="important-considerations-for-batch-mode">Important Considerations For Batch Mode</h2>
+<p><img src="/images/ReferenceDialogSettings.png" alt="ReferenceDialogSettings"></p>
+<p>PDMShell batch transitions are affected by the logged-in userâ€™s Reference Dialog settings. If â€œSelect child references during state changeâ€ and â€œSelect references that are defined as drawing nodes during state changeâ€ are enabled, PDM will also transition referenced files, not just the source files from the CSV. If you want PDMShell batch mode to transition only the source files, these options must be disabled for the logged-in user.</p>
+<h2 id="search-mode">Search Mode</h2>
+<p>Transitions files found using search.</p>
+<p>Example:</p>
+<pre><code class="lang-bash">transition -search %.sldasm -transitionidorname 12 -recursive
 </code></pre>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="195">Transition search results with references:</p>
-<pre><code class="lang-bash" sourcefile="src/TRANSITION.md" sourcestartlinenumber="196">transition -search %.sldasm -transitionidorname 12 -recursive -mode references
+<p>Transition search results with references:</p>
+<pre><code class="lang-bash">transition -search %.sldasm -transitionidorname 12 -recursive -mode references
 </code></pre>
-<h2 id="single-file-mode" sourcefile="src/TRANSITION.md" sourcestartlinenumber="201">Single File Mode</h2>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="202">Transitions one file.</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="204">Example:</p>
-<pre><code class="lang-bash" sourcefile="src/TRANSITION.md" sourcestartlinenumber="205">transition -filePath part.sldprt -transitionidorname 12
+<h2 id="single-file-mode">Single File Mode</h2>
+<p>Transitions one file.</p>
+<p>Example:</p>
+<pre><code class="lang-bash">transition -filePath part.sldprt -transitionidorname 12
 </code></pre>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="209">Transition one file with references:</p>
-<pre><code class="lang-bash" sourcefile="src/TRANSITION.md" sourcestartlinenumber="210">transition -filePath part.sldprt -transitionidorname 12 -mode references
+<p>Transition one file with references:</p>
+<pre><code class="lang-bash">transition -filePath part.sldprt -transitionidorname 12 -mode references
 </code></pre>
-<h2 id="validation" sourcefile="src/TRANSITION.md" sourcestartlinenumber="215">Validation</h2>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="216">The command automatically:</p>
-<ul sourcefile="src/TRANSITION.md" sourcestartlinenumber="218">
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="218">Validates transition IDs</li>
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="219">Validates workflow permissions</li>
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="220">Validates file state eligibility</li>
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="221">Skips invalid files</li>
+<h2 id="validation">Validation</h2>
+<p>The command automatically:</p>
+<ul>
+<li>Validates transition IDs</li>
+<li>Validates workflow permissions</li>
+<li>Validates file state eligibility</li>
+<li>Skips invalid files</li>
 </ul>
-<h2 id="license-limitations" sourcefile="src/TRANSITION.md" sourcestartlinenumber="224">License Limitations</h2>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="225">Free version limits number of files processed.</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="227">To remove limit: <a href="https://bluebyte.biz/product/pdmshell" sourcefile="src/TRANSITION.md" sourcestartlinenumber="227">https://bluebyte.biz/product/pdmshell</a></p>
-<h2 id="best-practices" sourcefile="src/TRANSITION.md" sourcestartlinenumber="229">Best Practices</h2>
-<ul sourcefile="src/TRANSITION.md" sourcestartlinenumber="230">
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="230">Use source mode for large operations.</li>
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="231">Use batch size between 500 and 5000.</li>
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="232">Always test with small batch first.</li>
-<li sourcefile="src/TRANSITION.md" sourcestartlinenumber="233">Backup vault before large operations.</li>
+<h2 id="license-limitations">License Limitations</h2>
+<p>Free version limits number of files processed.</p>
+<p>To remove limit: <a href="https://bluebyte.biz/product/pdmshell">https://bluebyte.biz/product/pdmshell</a></p>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Use source mode for large operations.</li>
+<li>Use batch size between 500 and 5000.</li>
+<li>Always test with small batch first.</li>
+<li>Backup vault before large operations.</li>
 </ul>
-<h2 id="availability" sourcefile="src/TRANSITION.md" sourcestartlinenumber="235">Availability</h2>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="236">Available since PDMShell 2.0.0.</p>
-<p sourcefile="src/TRANSITION.md" sourcestartlinenumber="238">Updated in PDMShell 4.0.21 with <code sourcefile="src/TRANSITION.md" sourcestartlinenumber="238">mode</code> for direct file and search transitions.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0.</p>
+<p>Updated in PDMShell 4.0.21 with <code>mode</code> for direct file and search transitions.</p>
 
 </article>
 

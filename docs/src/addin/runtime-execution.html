@@ -85,29 +85,29 @@
         </div>
 
         <article data-uid="">
-<h1 id="runtime-execution" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="5">Runtime execution</h1>
+<h1 id="runtime-execution">Runtime execution</h1>
 
-<p sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="7">When a configured script runs from a command menu, event hook, or PDM task, the add-in executes it directly through the shared PDMShell command runtime. It does not start a separate <code sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="7">pdmcli.exe</code> process for script execution.</p>
-<p sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="9">The add-in resolves the affected PDM files and folders, evaluates the script conditions, and runs the script against the matching items. Command-menu and event-hook execution reuses the resolved items throughout the run to avoid unnecessary PDM lookups.</p>
-<h2 id="interactive-progress" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="11">Interactive progress</h2>
-<p sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="13">Command-menu and event-hook scripts can show a modeless progress dialog while they run. The progress line identifies the completion percentage, affected item, and current action:</p>
-<pre><code class="lang-text" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="15">25% - membrane.SLDDRW: Setting data card variable
+<p>When a configured script runs from a command menu, event hook, or PDM task, the add-in executes it directly through the shared PDMShell command runtime. It does not start a separate <code>pdmcli.exe</code> process for script execution.</p>
+<p>The add-in resolves the affected PDM files and folders, evaluates the script conditions, and runs the script against the matching items. Command-menu and event-hook execution reuses the resolved items throughout the run to avoid unnecessary PDM lookups.</p>
+<h2 id="interactive-progress">Interactive progress</h2>
+<p>Command-menu and event-hook scripts can show a modeless progress dialog while they run. The progress line identifies the completion percentage, affected item, and current action:</p>
+<pre><code class="lang-text">25% - membrane.SLDDRW: Setting data card variable
 </code></pre>
-<p sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="19">Commands that are not associated with a specific affected item show the percentage and action only. PDM task runs continue to report progress through the PDM task interface.</p>
-<h2 id="runtime-behavior" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="21">Runtime behavior</h2>
-<p sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="23">Add-in execution does not initialize interactive editor autocomplete because suggestions are only needed while editing commands. This keeps background execution focused on loading the script context and running commands.</p>
-<p sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="25">Commands still enforce PDMShell license limits at runtime using the configured machine license or a license borrowed from the add-in license pool.</p>
-<h2 id="script-editing" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="27">Script editing</h2>
-<p sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="29">The add-in can still start <code sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="29">pdmcli.exe</code> when opening a script in the visual editor. The <code sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="29">-edit</code> option opens the script without executing it:</p>
-<pre><code class="lang-powershell" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="31">pdmcli.exe -edit &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
+<p>Commands that are not associated with a specific affected item show the percentage and action only. PDM task runs continue to report progress through the PDM task interface.</p>
+<h2 id="runtime-behavior">Runtime behavior</h2>
+<p>Add-in execution does not initialize interactive editor autocomplete because suggestions are only needed while editing commands. This keeps background execution focused on loading the script context and running commands.</p>
+<p>Commands still enforce PDMShell license limits at runtime using the configured machine license or a license borrowed from the add-in license pool.</p>
+<h2 id="script-editing">Script editing</h2>
+<p>The add-in can still start <code>pdmcli.exe</code> when opening a script in the visual editor. The <code>-edit</code> option opens the script without executing it:</p>
+<pre><code class="lang-powershell">pdmcli.exe -edit &quot;C:\Vault\Scripts\CreateECO.pdmshell&quot;
 </code></pre>
-<p sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="35">For more details about script execution, see <a href="../RUNSCRIPT.html" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="35">RunScript</a>.</p>
-<h2 id="related-articles" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="37">Related articles</h2>
-<ul sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="39">
-<li sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="39"><a href="script-editor.html" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="39">Script Editor</a></li>
-<li sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="40"><a href="command-menu.html" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="40">Command menu scripts</a></li>
-<li sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="41"><a href="tasks.html" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="41">PDM Tasks</a></li>
-<li sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="42"><a href="trigger-points.html" sourcefile="src/addin/runtime-execution.md" sourcestartlinenumber="42">Event trigger points</a></li>
+<p>For more details about script execution, see <a href="../RUNSCRIPT.html">RunScript</a>.</p>
+<h2 id="related-articles">Related articles</h2>
+<ul>
+<li><a href="script-editor.html">Script Editor</a></li>
+<li><a href="command-menu.html">Command menu scripts</a></li>
+<li><a href="tasks.html">PDM Tasks</a></li>
+<li><a href="trigger-points.html">Event trigger points</a></li>
 </ul>
 
 </article>

@@ -85,39 +85,39 @@
         </div>
 
         <article data-uid="">
-<h1 id="run-pdmshell-scripts-from-workflow-transitions" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="6">Run PDMShell Scripts from Workflow Transitions</h1>
+<h1 id="run-pdmshell-scripts-from-workflow-transitions">Run PDMShell Scripts from Workflow Transitions</h1>
 
-<p sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="8">SOLIDWORKS PDM workflow transitions can run external commands. You can use this to start <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="8">pdmcli.exe</code> and run a <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="8">.pdmshell</code> script when a file moves through a workflow transition.</p>
-<div class="alert alert-success" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="10">
+<p>SOLIDWORKS PDM workflow transitions can run external commands. You can use this to start <code>pdmcli.exe</code> and run a <code>.pdmshell</code> script when a file moves through a workflow transition.</p>
+<div class="alert alert-success">
 <h5>DID YOU KNOW?</h5>
-<p sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="11">The <a href="TASKSCRIPT.html" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="11">PDMShell add-in</a> can run PDMShell scripts directly from PDM command menus and event trigger points. For many workflow automations, the add-in is easier than creating a workflow task or external command because it includes permissions, conditions, placeholders, trigger points, headless execution, and the visual script editor.</p>
+<p>The <a href="TASKSCRIPT.html">PDMShell add-in</a> can run PDMShell scripts directly from PDM command menus and event trigger points. For many workflow automations, the add-in is easier than creating a workflow task or external command because it includes permissions, conditions, placeholders, trigger points, headless execution, and the visual script editor.</p>
 </div>
-<h2 id="workflow-transition-settings" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="13">Workflow Transition Settings</h2>
-<p sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="15"><img src="../images/worktransition.png" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="15" alt="workflowtransition"></p>
-<ol sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="17">
-<li sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="17">Action Type: Set the action type to Execute Command.</li>
-<li sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="18">Command: Specify the full path to <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="18">pdmcli.exe</code>.</li>
-<li sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="19">Arguments: Use <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="19">runscript -source</code> and pass the selected file with <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="19">-filePath</code>.</li>
-<li sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="20">Wait: Enable Wait until the started program terminates.</li>
+<h2 id="workflow-transition-settings">Workflow Transition Settings</h2>
+<p><img src="../images/worktransition.png" alt="workflowtransition"></p>
+<ol>
+<li>Action Type: Set the action type to Execute Command.</li>
+<li>Command: Specify the full path to <code>pdmcli.exe</code>.</li>
+<li>Arguments: Use <code>runscript -source</code> and pass the selected file with <code>-filePath</code>.</li>
+<li>Wait: Enable Wait until the started program terminates.</li>
 </ol>
-<p sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="22">Command:</p>
-<pre><code class="lang-bash" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="24">C:\Program Files (x86)\BLUE BYTE SYSTEMS INC\PDMShell\PDMCLI.exe
+<p>Command:</p>
+<pre><code class="lang-bash">C:\Program Files (x86)\BLUE BYTE SYSTEMS INC\PDMShell\PDMCLI.exe
 </code></pre>
-<p sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="28">Arguments:</p>
-<pre><code class="lang-bash" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="30">runscript -source &quot;C:\Scripts\clearvariables.pdmshell&quot; -filePath &quot;%PathToSelectedFile%&quot;
+<p>Arguments:</p>
+<pre><code class="lang-bash">runscript -source &quot;C:\Scripts\clearvariables.pdmshell&quot; -filePath &quot;%PathToSelectedFile%&quot;
 </code></pre>
-<ul sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="34">
-<li sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="34">Wrap the script path in quotes if it contains spaces.</li>
-<li sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="35">Use <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="35">-filePath &quot;%PathToSelectedFile%&quot;</code> when the transition runs against the selected PDM file.</li>
-<li sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="36">Inside the script, use PDMShell placeholders such as <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="36">$localPath</code>, <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="36">$fileName</code>, <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="36">$fileNameWithoutExtension</code>, <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="36">$extension</code>, <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="36">$folderPath</code>, and PDM variable placeholders.</li>
+<ul>
+<li>Wrap the script path in quotes if it contains spaces.</li>
+<li>Use <code>-filePath &quot;%PathToSelectedFile%&quot;</code> when the transition runs against the selected PDM file.</li>
+<li>Inside the script, use PDMShell placeholders such as <code>$localPath</code>, <code>$fileName</code>, <code>$fileNameWithoutExtension</code>, <code>$extension</code>, <code>$folderPath</code>, and PDM variable placeholders.</li>
 </ul>
-<h2 id="example-workflow-transition-configuration" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="38">Example: Workflow Transition Configuration</h2>
-<pre><code class="lang-bash" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="40">Command: C:\Program Files (x86)\BLUE BYTE SYSTEMS INC\PDMShell\PDMCLI.exe
+<h2 id="example-workflow-transition-configuration">Example: Workflow Transition Configuration</h2>
+<pre><code class="lang-bash">Command: C:\Program Files (x86)\BLUE BYTE SYSTEMS INC\PDMShell\PDMCLI.exe
 Arguments: runscript -source &quot;C:\Scripts\clearvariables.pdmshell&quot; -filePath &quot;%PathToSelectedFile%&quot;
 </code></pre>
-<p sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="45">Example script:</p>
-<p sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="47">In the PDMShell script (<code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="47">clearvariables.pdmshell</code>), reference the selected file with <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="47">$localPath</code>:</p>
-<pre><code class="lang-bash" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="49"># Check the selected file out.
+<p>Example script:</p>
+<p>In the PDMShell script (<code>clearvariables.pdmshell</code>), reference the selected file with <code>$localPath</code>:</p>
+<pre><code class="lang-bash"># Check the selected file out.
 checkout -filePath &quot;$localPath&quot;
 
 # Clear the Description variable.
@@ -134,28 +134,28 @@ dump -filePath &quot;clearvariables_$yyyy-$mm-$dd_$guid.txt&quot;
 # Required when running from a workflow transition or another external automation host.
 quit
 </code></pre>
-<h2 id="passing-extra-transition-values" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="68">Passing Extra Transition Values</h2>
-<div class="WARNING" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="70">
+<h2 id="passing-extra-transition-values">Passing Extra Transition Values</h2>
+<div class="WARNING">
 <h5>Warning</h5>
-<p sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="71">Positional values such as <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="71">$parameter1$</code> and <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="71">$parameter2$</code> are legacy behavior and should not be used with PDMShell 4.0.6 or later. Starting with PDMShell 4.0.6, <a href="RUNSCRIPT.html" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="71"><code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="71">runscript</code></a> should receive context through <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="71">-filePath</code>, <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="71">-items</code>, or <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="71">-search</code>, and scripts should use PDMShell placeholders such as <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="71">$localPath</code> instead.</p>
+<p>Positional values such as <code>$parameter1$</code> and <code>$parameter2$</code> are legacy behavior and should not be used with PDMShell 4.0.6 or later. Starting with PDMShell 4.0.6, <a href="RUNSCRIPT.html"><code>runscript</code></a> should receive context through <code>-filePath</code>, <code>-items</code>, or <code>-search</code>, and scripts should use PDMShell placeholders such as <code>$localPath</code> instead.</p>
 </div>
-<p sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="73">Older scripts may use this positional format:</p>
-<pre><code class="lang-bash" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="75">runscript &quot;C:\Scripts\clearvariables.pdmshell&quot; &quot;%PathToSelectedFile%&quot;
+<p>Older scripts may use this positional format:</p>
+<pre><code class="lang-bash">runscript &quot;C:\Scripts\clearvariables.pdmshell&quot; &quot;%PathToSelectedFile%&quot;
 </code></pre>
-<p sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="79">In that legacy format, the script used <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="79">$parameter1$</code>:</p>
-<pre><code class="lang-bash" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="81">checkout -filePath &quot;$parameter1$&quot;
+<p>In that legacy format, the script used <code>$parameter1$</code>:</p>
+<pre><code class="lang-bash">checkout -filePath &quot;$parameter1$&quot;
 setvar -filePath &quot;$parameter1$&quot; -variableName Description -value &quot;&quot;
 checkin -filePath &quot;$parameter1$&quot; -comment &quot;Cleared description&quot;
 quit
 </code></pre>
-<p sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="88">For current PDMShell versions, use the <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="88">-source</code> and <code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="88">-filePath</code> format shown above. If the workflow transition needs richer context, conditions, or user/group permissions, use the PDMShell add-in instead of a transition Execute Command action.</p>
-<h2 id="tutorial" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="90">Tutorial</h2>
-<p sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="92"><video src="https://bluebyte.biz/wp-content/pdmshellvideos/workflowtransition.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
-<h2 id="tips" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="94">Tips</h2>
-<ul sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="96">
-<li sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="96">Test scripts in PDMShell before attaching them to a workflow transition.</li>
-<li sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="97">Use <a href="QUIT.html" sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="97"><code sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="97">quit</code></a> at the end of scripts launched from workflow transitions so the external PDMShell process closes after the script runs.</li>
-<li sourcefile="src/scriptsfromtransition.md" sourcestartlinenumber="98">Prefer the PDMShell add-in for automations that need conditions, permissions, right-click menu commands, or event trigger points.</li>
+<p>For current PDMShell versions, use the <code>-source</code> and <code>-filePath</code> format shown above. If the workflow transition needs richer context, conditions, or user/group permissions, use the PDMShell add-in instead of a transition Execute Command action.</p>
+<h2 id="tutorial">Tutorial</h2>
+<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/workflowtransition.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>Test scripts in PDMShell before attaching them to a workflow transition.</li>
+<li>Use <a href="QUIT.html"><code>quit</code></a> at the end of scripts launched from workflow transitions so the external PDMShell process closes after the script runs.</li>
+<li>Prefer the PDMShell add-in for automations that need conditions, permissions, right-click menu commands, or event trigger points.</li>
 </ul>
 
 </article>

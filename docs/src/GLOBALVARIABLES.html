@@ -85,75 +85,75 @@
         </div>
 
         <article data-uid="">
-<h1 id="globalvariables" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="5">globalvariables</h1>
+<h1 id="globalvariables">globalvariables</h1>
 
-<p sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="7">Global variables store temporary values for the current PDMShell session or script run. They are not SOLIDWORKS PDM datacard variables and they are not written to the vault.</p>
-<p sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="9">Use global variables when several commands need the same value, or when a script needs to calculate a value once and reuse it later.</p>
-<h2 id="commands" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="11">Commands</h2>
-<pre><code class="lang-pdmshell" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="13">setglobal -name Project -value &quot;ABC-100&quot;
+<p>Global variables store temporary values for the current PDMShell session or script run. They are not SOLIDWORKS PDM datacard variables and they are not written to the vault.</p>
+<p>Use global variables when several commands need the same value, or when a script needs to calculate a value once and reuse it later.</p>
+<h2 id="commands">Commands</h2>
+<pre><code class="lang-pdmshell">setglobal -name Project -value &quot;ABC-100&quot;
 getglobal -name Project
 getglobal
 clearglobal -name Project
 </code></pre>
-<h2 id="syntax" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="20">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="22">setglobal -name variableName -value value
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">setglobal -name variableName -value value
 getglobal [-name variableName]
 clearglobal -name variableName
 </code></pre>
-<h2 id="parameters" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="28">Parameters</h2>
-<table sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="30">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="30">
-<th sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="30">Parameter</th>
-<th sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="30">Required</th>
-<th sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="30">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="32">
-<td sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="32"><code sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="32">-name</code></td>
-<td sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="32">Mode-dependent</td>
-<td sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="32">Global variable name. Names must start with a letter or underscore and can contain letters, numbers, and underscores.</td>
+<tr>
+<td><code>-name</code></td>
+<td>Mode-dependent</td>
+<td>Global variable name. Names must start with a letter or underscore and can contain letters, numbers, and underscores.</td>
 </tr>
-<tr sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="33">
-<td sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="33"><code sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="33">-value</code></td>
-<td sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="33">Mode-dependent</td>
-<td sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="33">Value to store for the global variable.</td>
+<tr>
+<td><code>-value</code></td>
+<td>Mode-dependent</td>
+<td>Value to store for the global variable.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="35">Parameter Details</h3>
-<ul sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="37">
-<li sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="37"><code sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="37">name</code>: Global variable name. Names must start with a letter or underscore and can contain letters, numbers, and underscores.</li>
-<li sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="38"><code sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="38">value</code>: Value to store for the global variable.</li>
+<h3 id="parameter-details">Parameter Details</h3>
+<ul>
+<li><code>name</code>: Global variable name. Names must start with a letter or underscore and can contain letters, numbers, and underscores.</li>
+<li><code>value</code>: Value to store for the global variable.</li>
 </ul>
-<h2 id="using-global-variables" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="40">Using Global Variables</h2>
-<p sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="42">Use <code sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="42">${global.Name}</code> inside evaluated command parameters.</p>
-<pre><code class="lang-pdmshell" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="44">setglobal -name Project -value &quot;ABC-100&quot;
+<h2 id="using-global-variables">Using Global Variables</h2>
+<p>Use <code>${global.Name}</code> inside evaluated command parameters.</p>
+<pre><code class="lang-pdmshell">setglobal -name Project -value &quot;ABC-100&quot;
 rename -filePath &quot;$localPath&quot; -value &quot;${global.Project}-$fileName&quot;
 setvar -variableName Description -filePath &quot;$localPath&quot; -value &quot;${global.Project} - $value&quot;
 </code></pre>
-<p sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="50">Global variables can also be used with string evaluation functions.</p>
-<pre><code class="lang-pdmshell" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="52">setglobal -name BaseName -value &quot;$fileNameWithoutExtension&quot;
+<p>Global variables can also be used with string evaluation functions.</p>
+<pre><code class="lang-pdmshell">setglobal -name BaseName -value &quot;$fileNameWithoutExtension&quot;
 rename -filePath &quot;$localPath&quot; -value &quot;${replace(${global.BaseName},OLD,NEW)}.pdf&quot;
 </code></pre>
-<h2 id="wait-and-until" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="57">Wait And Until</h2>
-<p sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="59">Global variables work with <a href="WAIT.html" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="59"><code sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="59">wait</code></a> and <a href="UNTIL.html" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="59"><code sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="59">until</code></a>.</p>
-<pre><code class="lang-pdmshell" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="61">setglobal -name Delay -value &quot;10&quot;
+<h2 id="wait-and-until">Wait And Until</h2>
+<p>Global variables work with <a href="WAIT.html"><code>wait</code></a> and <a href="UNTIL.html"><code>until</code></a>.</p>
+<pre><code class="lang-pdmshell">setglobal -name Delay -value &quot;10&quot;
 wait -timeout &quot;${global.Delay}&quot;
 
 setglobal -name ReadyFile -value &quot;C:\Temp\ready.txt&quot;
 until -conditions &quot;${global.ReadyFile} exists&quot; -timeout 60
 </code></pre>
-<h2 id="remarks" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="69">Remarks</h2>
-<ul sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="71">
-<li sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="71">Global variable names are case-insensitive.</li>
-<li sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="72"><code sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="72">getglobal</code> without <code sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="72">name</code> prints all currently set global variables.</li>
-<li sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="73">Unknown <code sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="73">${global.Name}</code> references are left unchanged so typos are visible.</li>
-<li sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="74">Global variables are cleared when the PDMShell session ends.</li>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>Global variable names are case-insensitive.</li>
+<li><code>getglobal</code> without <code>name</code> prints all currently set global variables.</li>
+<li>Unknown <code>${global.Name}</code> references are left unchanged so typos are visible.</li>
+<li>Global variables are cleared when the PDMShell session ends.</li>
 </ul>
-<h2 id="availability" sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="76">Availability</h2>
-<p sourcefile="src/GLOBALVARIABLES.md" sourcestartlinenumber="77">Available since PDMShell 4.0.7.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 4.0.7.</p>
 
 </article>
 

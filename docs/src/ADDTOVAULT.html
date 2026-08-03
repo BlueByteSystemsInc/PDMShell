@@ -85,293 +85,293 @@
         </div>
 
         <article data-uid="">
-<h1 id="addtovault" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="5">addtovault</h1>
+<h1 id="addtovault">addtovault</h1>
 
-<h2 id="description" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="7">The <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="7">addtovault</code> command adds one or more files from disk to the SOLIDWORKS PDM vault. It supports single files, folders, and CSV mapping files. Additional options allow batch processing, filtering, ignoring existing files, updating references, and exporting results.</p>
-<div class="NOTE" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="9">
+<h2 id="description">Description</h2>
+<p>The <code>addtovault</code> command adds one or more files from disk to the SOLIDWORKS PDM vault. It supports single files, folders, and CSV mapping files. Additional options allow batch processing, filtering, ignoring existing files, updating references, and exporting results.</p>
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="10">It is highly recommended that you run PDMShell as <strong sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="10">Administrator</strong> before using this command.</p>
+<p>It is highly recommended that you run PDMShell as <strong>Administrator</strong> before using this command.</p>
 </div>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="12">
-<h2 id="syntax" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="14">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="16">addtovault [-source &lt;path&gt; | -map &lt;csvPath&gt;]  [-skip] [-count] | [-directory &lt;Vault or outside directory&gt;] [-search &lt;pattern&gt;] [-recursive] [-batch &lt;size&gt;] [-ignoreexisting] [-updaterefs] [-csv &lt;outputPath&gt;] [-propertymap] [-clear] [-label]
+<hr>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">addtovault [-source &lt;path&gt; | -map &lt;csvPath&gt;]  [-skip] [-count] | [-directory &lt;Vault or outside directory&gt;] [-search &lt;pattern&gt;] [-recursive] [-batch &lt;size&gt;] [-ignoreexisting] [-updaterefs] [-csv &lt;outputPath&gt;] [-propertymap] [-clear] [-label]
 </code></pre>
-<h2 id="parameters" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="20">Parameters</h2>
-<table sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="22">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="22">
-<th sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="22">Parameter</th>
-<th sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="22">Required</th>
-<th sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="22">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="24">
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="24"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="24">-source</code></td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="24">No</td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="24">Specifies the source file or directory to be added to the vault.</td>
+<tr>
+<td><code>-source</code></td>
+<td>No</td>
+<td>Specifies the source file or directory to be added to the vault.</td>
 </tr>
-<tr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="25">
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="25"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="25">-map</code></td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="25">No</td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="25">Specifies a CSV file containing file mapping information.</td>
+<tr>
+<td><code>-map</code></td>
+<td>No</td>
+<td>Specifies a CSV file containing file mapping information.</td>
 </tr>
-<tr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="26">
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="26"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="26">-skip</code></td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="26">No</td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="26">Optional.</td>
+<tr>
+<td><code>-skip</code></td>
+<td>No</td>
+<td>Optional.</td>
 </tr>
-<tr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="27">
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="27"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="27">-count</code></td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="27">No</td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="27">Optional.</td>
+<tr>
+<td><code>-count</code></td>
+<td>No</td>
+<td>Optional.</td>
 </tr>
-<tr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="28">
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="28"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="28">-directory</code></td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="28">No</td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="28">Specifies the destination folder in the PDM vault.</td>
+<tr>
+<td><code>-directory</code></td>
+<td>No</td>
+<td>Specifies the destination folder in the PDM vault.</td>
 </tr>
-<tr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="29">
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="29"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="29">-search</code></td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="29">No</td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="29">Optional.</td>
+<tr>
+<td><code>-search</code></td>
+<td>No</td>
+<td>Optional.</td>
 </tr>
-<tr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="30">
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="30"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="30">-recursive</code></td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="30">No</td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="30">Optional.</td>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>Optional.</td>
 </tr>
-<tr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="31">
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="31"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="31">-batch</code></td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="31">No</td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="31">Optional.</td>
+<tr>
+<td><code>-batch</code></td>
+<td>No</td>
+<td>Optional.</td>
 </tr>
-<tr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="32">
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="32"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="32">-ignoreexisting</code></td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="32">No</td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="32">Optional.</td>
+<tr>
+<td><code>-ignoreexisting</code></td>
+<td>No</td>
+<td>Optional.</td>
 </tr>
-<tr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="33">
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="33"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="33">-updaterefs</code></td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="33">No</td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="33">Optional.</td>
+<tr>
+<td><code>-updaterefs</code></td>
+<td>No</td>
+<td>Optional.</td>
 </tr>
-<tr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="34">
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="34"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="34">-csv</code></td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="34">No</td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="34">Optional.</td>
+<tr>
+<td><code>-csv</code></td>
+<td>No</td>
+<td>Optional.</td>
 </tr>
-<tr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="35">
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="35"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="35">-propertymap</code></td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="35">No</td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="35">A csv file path containing a list of files and their properties. Use <a href="DOCMANPROPS.html" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="35">DocManProps</a> to generate a list and edit in excel.</td>
+<tr>
+<td><code>-propertymap</code></td>
+<td>No</td>
+<td>A csv file path containing a list of files and their properties. Use <a href="DOCMANPROPS.html">DocManProps</a> to generate a list and edit in excel.</td>
 </tr>
-<tr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="36">
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="36"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="36">-clear</code></td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="36">No</td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="36">Optional.</td>
+<tr>
+<td><code>-clear</code></td>
+<td>No</td>
+<td>Optional.</td>
 </tr>
-<tr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="37">
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="37"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="37">-label</code></td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="37">No</td>
-<td sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="37">Optional.</td>
+<tr>
+<td><code>-label</code></td>
+<td>No</td>
+<td>Optional.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="39">Parameter Details</h3>
-<ul sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="41">
-<li sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="41"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="41">source</code>:
+<h3 id="parameter-details">Parameter Details</h3>
+<ul>
+<li><code>source</code>:
 Specifies the source file or directory to be added to the vault.</li>
 </ul>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="44">Supports:</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="46">â€¢ Single file<br>
+<p>Supports:</p>
+<p>â€¢ Single file<br>
 â€¢ Folder</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="49">If a folder is specified, files can be filtered using <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="49">-search</code> and <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="49">-recursive</code>.</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="51">If not specified, the current working directory is used.</p>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="53">
-<ul sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="55">
-<li sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="55"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="55">map</code>:</li>
+<p>If a folder is specified, files can be filtered using <code>-search</code> and <code>-recursive</code>.</p>
+<p>If not specified, the current working directory is used.</p>
+<hr>
+<ul>
+<li><code>map</code>:</li>
 </ul>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="57">Specifies a CSV file containing file mapping information.</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="59">The CSV must contain two columns (First row is header):</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="61">Column 1: Full source file path<br>
+<p>Specifies a CSV file containing file mapping information.</p>
+<p>The CSV must contain two columns (First row is header):</p>
+<p>Column 1: Full source file path<br>
 Column 2: Destination folder path relative to the target vault directory</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="64">Example CSV:</p>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="65">FilePath,Target
+<p>Example CSV:</p>
+<pre><code class="lang-bash">FilePath,Target
 C:\Data\Part1.sldprt,ProjectA\Mechanical  
 C:\Data\Part2.sldprt,ProjectB\Mechanical  
 </code></pre>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="71">With <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="71">-map</code>, you skip a specified number of items using <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="71">-skip</code> to start from a starting index in your map file. You can limit the number of items to process using the <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="71">-count</code>.</p>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="73">#uses a map file and starts from the index 5234 only processing 540 mappings
+<p>With <code>-map</code>, you skip a specified number of items using <code>-skip</code> to start from a starting index in your map file. You can limit the number of items to process using the <code>-count</code>.</p>
+<pre><code class="lang-bash">#uses a map file and starts from the index 5234 only processing 540 mappings
 addtovault -map &quot;C:\Users\hawkridge\Downloads\map\map.csv&quot; -batch 50 -propertymap &quot;C:\Users\hawkridge\Downloads\map\property.csv&quot; -skip 5243 -count 540 -clear -ignoreexisting -csv &quot;result.csv&quot;
 </code></pre>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="78">This parameter overrides <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="78">-source</code>.</p>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="80">
-<ul sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="82">
-<li sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="82"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="82">skip</code>:</li>
+<p>This parameter overrides <code>-source</code>.</p>
+<hr>
+<ul>
+<li><code>skip</code>:</li>
 </ul>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="84">(Optional)</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="86">Number of rows to skip from the map CSV file before processing begins. Header row is not included in this count.</p>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="88">
-<ul sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="90">
-<li sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="90"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="90">count</code>:</li>
+<p>(Optional)</p>
+<p>Number of rows to skip from the map CSV file before processing begins. Header row is not included in this count.</p>
+<hr>
+<ul>
+<li><code>count</code>:</li>
 </ul>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="92">(Optional)</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="94">Maximum number of rows to process from the map CSV file after applying the skip value.</p>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="96">
-<div class="IMPORTANT" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="98">
+<p>(Optional)</p>
+<p>Maximum number of rows to process from the map CSV file after applying the skip value.</p>
+<hr>
+<div class="IMPORTANT">
 <h5>Important</h5>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="99">Please make sure you don't have duplicates copies to the same target directory.</p>
+<p>Please make sure you don't have duplicates copies to the same target directory.</p>
 </div>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="101">
-<ul sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="103">
-<li sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="103"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="103">directory</code>:</li>
+<hr>
+<ul>
+<li><code>directory</code>:</li>
 </ul>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="105">Specifies the destination folder in the PDM vault.</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="107">If not specified, the current vault directory is used.</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="109">Example:</p>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="110">-directory &quot;Projects&quot;
+<p>Specifies the destination folder in the PDM vault.</p>
+<p>If not specified, the current vault directory is used.</p>
+<p>Example:</p>
+<pre><code class="lang-bash">-directory &quot;Projects&quot;
 </code></pre>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="113">
-<ul sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="115">
-<li sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="115"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="115">search</code>:</li>
+<hr>
+<ul>
+<li><code>search</code>:</li>
 </ul>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="117">(Optional)</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="119">File Explorer search pattern used to filter files when <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="119">-source</code> is a folder.</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="121">Supports:</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="123">â€¢ Wildcards (<code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="123">*</code>)<br>
+<p>(Optional)</p>
+<p>File Explorer search pattern used to filter files when <code>-source</code> is a folder.</p>
+<p>Supports:</p>
+<p>â€¢ Wildcards (<code>*</code>)<br>
 â€¢ Multiple extensions<br>
-â€¢ Separators: <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="125">,</code> <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="125">;</code> <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="125">|</code></p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="127">Examples:</p>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="128">-search &quot;*.sldprt&quot;  
+â€¢ Separators: <code>,</code> <code>;</code> <code>|</code></p>
+<p>Examples:</p>
+<pre><code class="lang-bash">-search &quot;*.sldprt&quot;  
 -search &quot;*.sldprt;*.sldasm&quot;  
 </code></pre>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="132">
-<ul sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="134">
-<li sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="134"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="134">recursive</code>:</li>
+<hr>
+<ul>
+<li><code>recursive</code>:</li>
 </ul>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="136">(Optional)</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="138">Includes all subfolders when the source is a folder.</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="140">If not specified, only the top-level folder is processed.</p>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="142">
-<ul sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="144">
-<li sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="144"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="144">batch</code>:</li>
+<p>(Optional)</p>
+<p>Includes all subfolders when the source is a folder.</p>
+<p>If not specified, only the top-level folder is processed.</p>
+<hr>
+<ul>
+<li><code>batch</code>:</li>
 </ul>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="146">(Optional)</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="148">Specifies the number of files to add per batch.</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="150">This improves performance and stability when adding large numbers of files.</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="152">Examples:</p>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="153">-batch 50  
+<p>(Optional)</p>
+<p>Specifies the number of files to add per batch.</p>
+<p>This improves performance and stability when adding large numbers of files.</p>
+<p>Examples:</p>
+<pre><code class="lang-bash">-batch 50  
 -batch 100  
 </code></pre>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="157">If not specified, all files are added in a single batch.</p>
-<div class="IMPORTANT" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="158">
+<p>If not specified, all files are added in a single batch.</p>
+<div class="IMPORTANT">
 <h5>Important</h5>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="159"><strong sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="159">Please use a batch size when processing large directory +1000 files. We recommend a batch size of 100</strong>.</p>
+<p><strong>Please use a batch size when processing large directory +1000 files. We recommend a batch size of 100</strong>.</p>
 </div>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="161">
-<ul sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="163">
-<li sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="163"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="163">ignoreexisting</code>:</li>
+<hr>
+<ul>
+<li><code>ignoreexisting</code>:</li>
 </ul>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="165">(Optional)</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="167">Ignores files that already exist in the vault.
+<p>(Optional)</p>
+<p>Ignores files that already exist in the vault.
 Prevents duplicate additions and overwriting.</p>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="170">
-<ul sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="172">
-<li sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="172"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="172">updaterefs</code>:</li>
+<hr>
+<ul>
+<li><code>updaterefs</code>:</li>
 </ul>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="174">(Optional)</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="176">Updates file references after files are added.</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="178">This is recommended when migrating SOLIDWORKS assemblies to ensure references point to the correct vault locations.</p>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="180">
-<ul sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="182">
-<li sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="182"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="182">label</code>:</li>
+<p>(Optional)</p>
+<p>Updates file references after files are added.</p>
+<p>This is recommended when migrating SOLIDWORKS assemblies to ensure references point to the correct vault locations.</p>
+<hr>
+<ul>
+<li><code>label</code>:</li>
 </ul>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="184">(Optional)</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="186">Adds a label to the migrated files. This is a great option to mark the added files immediately.</p>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="188">#Add files from a map (skip first 10 and only process 3) and add a label migration name and value 
+<p>(Optional)</p>
+<p>Adds a label to the migrated files. This is a great option to mark the added files immediately.</p>
+<pre><code class="lang-bash">#Add files from a map (skip first 10 and only process 3) and add a label migration name and value 
 addtovault -map &quot;C:\export\map.csv&quot; -skip 10 -count 3 -label &quot;Migration;Migration&quot;
 # addtovault
 search -search &quot;Name=%.sldprt;Label=Migration;Recursive=true&quot;
 </code></pre>
-<h2 id="label" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="195"><img src="/images/label.png" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="195" alt="label"></h2>
-<ul sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="197">
-<li sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="197"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="197">clear</code>:</li>
+<h2 id="label"><img src="/images/label.png" alt="label"></h2>
+<ul>
+<li><code>clear</code>:</li>
 </ul>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="199">(Optional)</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="201">Clears existing properties from the file before applying <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="201">propertymap</code>.</p>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="203">
-<ul sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="205">
-<li sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="205"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="205">csv</code>:</li>
+<p>(Optional)</p>
+<p>Clears existing properties from the file before applying <code>propertymap</code>.</p>
+<hr>
+<ul>
+<li><code>csv</code>:</li>
 </ul>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="207">(Optional)</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="209">Exports the results of the add operation to a CSV file.</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="211">Example:</p>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="212">-csv &quot;C:\Reports\add_results.csv&quot;
+<p>(Optional)</p>
+<p>Exports the results of the add operation to a CSV file.</p>
+<p>Example:</p>
+<pre><code class="lang-bash">-csv &quot;C:\Reports\add_results.csv&quot;
 </code></pre>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="215">
-<ul sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="217">
-<li sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="217"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="217">propertymap</code>:
-A csv file path containing a list of files and their properties. Use <a href="DOCMANPROPS.html" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="218">DocManProps</a> to generate a list and edit in excel.</li>
+<hr>
+<ul>
+<li><code>propertymap</code>:
+A csv file path containing a list of files and their properties. Use <a href="DOCMANPROPS.html">DocManProps</a> to generate a list and edit in excel.</li>
 </ul>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="219">-csv &quot;C:\Reports\propertymap.csv&quot;
+<pre><code class="lang-bash">-csv &quot;C:\Reports\propertymap.csv&quot;
 </code></pre>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="222">You only need the columns that marked in red:</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="224"><img src="/images/propertymap.png" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="224" alt="Example of property map file"></p>
-<div class="IMPORTANT" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="226">
+<p>You only need the columns that marked in red:</p>
+<p><img src="/images/propertymap.png" alt="Example of property map file"></p>
+<div class="IMPORTANT">
 <h5>Important</h5>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="227">If you specify the word &quot;DELETE&quot; as the value, PDMShell will delete that property from in the migrated file during the add operation. <strong sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="227">The original file will not be affected</strong>.</p>
+<p>If you specify the word &quot;DELETE&quot; as the value, PDMShell will delete that property from in the migrated file during the add operation. <strong>The original file will not be affected</strong>.</p>
 </div>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="229">If you specify <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="229">-clear</code>, PDMShell will clear all the properties from the file before adding it to the vault and prior to apply the property map.</p>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="231">
-<h2 id="examples" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="233">Examples</h2>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="234">Adds a single file to the current vault directory:</p>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="235">addtovault -source &quot;C:\Projects\file.txt&quot;
+<p>If you specify <code>-clear</code>, PDMShell will clear all the properties from the file before adding it to the vault and prior to apply the property map.</p>
+<hr>
+<h2 id="examples">Examples</h2>
+<p>Adds a single file to the current vault directory:</p>
+<pre><code class="lang-bash">addtovault -source &quot;C:\Projects\file.txt&quot;
 </code></pre>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="238">
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="240">Adds all parts and assemblies recursively:</p>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="241">addtovault -source &quot;C:\Projects&quot; -recursive -search &quot;*.sldprt;*.sldasm&quot;
+<hr>
+<p>Adds all parts and assemblies recursively:</p>
+<pre><code class="lang-bash">addtovault -source &quot;C:\Projects&quot; -recursive -search &quot;*.sldprt;*.sldasm&quot;
 </code></pre>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="244">
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="246">Adds files using a CSV mapping file in batches of 50:</p>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="247">addtovault -map &quot;C:\Projects\mapping.csv&quot; -batch 50
+<hr>
+<p>Adds files using a CSV mapping file in batches of 50:</p>
+<pre><code class="lang-bash">addtovault -map &quot;C:\Projects\mapping.csv&quot; -batch 50
 </code></pre>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="250">
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="252">Adds files and exports results:</p>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="253">addtovault -source &quot;C:\Projects&quot; -recursive -csv &quot;C:\Reports\results.csv&quot;
+<hr>
+<p>Adds files and exports results:</p>
+<pre><code class="lang-bash">addtovault -source &quot;C:\Projects&quot; -recursive -csv &quot;C:\Reports\results.csv&quot;
 </code></pre>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="256">
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="258">Adds files and updates references:</p>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="259">addtovault -source &quot;C:\Migration&quot; -recursive -updaterefs
+<hr>
+<p>Adds files and updates references:</p>
+<pre><code class="lang-bash">addtovault -source &quot;C:\Migration&quot; -recursive -updaterefs
 </code></pre>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="262">
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="264">Adds files to a specific vault folder:</p>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="265">addtovault -source &quot;C:\Projects&quot; -directory &quot;Projects&quot;
+<hr>
+<p>Adds files to a specific vault folder:</p>
+<pre><code class="lang-bash">addtovault -source &quot;C:\Projects&quot; -directory &quot;Projects&quot;
 </code></pre>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="268">Add files from a map CSV (50 at a time) and save the results to ret.csv, while ensuring properties are updated using a property map CSV file. This also performs a search and ignores files that already exist in the vault.</p>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="269">addtovault -map &quot;c:\export\map.csv&quot; -ignoreexisting -csv &quot;ret.csv&quot; -batch 10 -propertymap &quot;c:\export\propertymap.csv&quot;
+<p>Add files from a map CSV (50 at a time) and save the results to ret.csv, while ensuring properties are updated using a property map CSV file. This also performs a search and ignores files that already exist in the vault.</p>
+<pre><code class="lang-bash">addtovault -map &quot;c:\export\map.csv&quot; -ignoreexisting -csv &quot;ret.csv&quot; -batch 10 -propertymap &quot;c:\export\propertymap.csv&quot;
 </code></pre>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="273">
-<h2 id="remarks" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="275">Remarks</h2>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="276">â€¢ Files are left checked out after being added.
-â€¢ Use <a href="CHECKIN.html" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="277"><code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="277">checkin</code></a> command to check in files after adding.</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="279">Example:</p>
-<pre><code class="lang-bash" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="280">checkin -search % -recursive
+<hr>
+<h2 id="remarks">Remarks</h2>
+<p>â€¢ Files are left checked out after being added.
+â€¢ Use <a href="CHECKIN.html"><code>checkin</code></a> command to check in files after adding.</p>
+<p>Example:</p>
+<pre><code class="lang-bash">checkin -search % -recursive
 </code></pre>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="283">
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="285">â€¢ Batch processing is strongly recommended for large migrations.</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="287">â€¢ The <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="287">ignoreexisting</code> parameter prevents duplicate files from being added.</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="289">â€¢ The <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="289">updaterefs</code> parameter should be used when adding SOLIDWORKS assemblies.</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="291">â€¢ Ensure you have sufficient vault permissions before running this command.</p>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="293">â€¢ The <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="293">map</code> parameter overrides <code sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="293">source</code> if both are specified.</p>
-<hr sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="295">
-<div class="NOTE" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="297">
+<hr>
+<p>â€¢ Batch processing is strongly recommended for large migrations.</p>
+<p>â€¢ The <code>ignoreexisting</code> parameter prevents duplicate files from being added.</p>
+<p>â€¢ The <code>updaterefs</code> parameter should be used when adding SOLIDWORKS assemblies.</p>
+<p>â€¢ Ensure you have sufficient vault permissions before running this command.</p>
+<p>â€¢ The <code>map</code> parameter overrides <code>source</code> if both are specified.</p>
+<hr>
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="298">It is recommended to perform large add operations in stages and verify results using the exported CSV report.</p>
+<p>It is recommended to perform large add operations in stages and verify results using the exported CSV report.</p>
 </div>
-<h2 id="availability" sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="300">Availability</h2>
-<p sourcefile="src/ADDTOVAULT.md" sourcestartlinenumber="301">Available since PDMShell 2.0.0.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0.</p>
 
 </article>
 

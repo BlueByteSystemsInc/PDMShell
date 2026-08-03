@@ -85,100 +85,100 @@
         </div>
 
         <article data-uid="">
-<h1 id="whereusedtree" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="5">whereusedtree</h1>
+<h1 id="whereusedtree">whereusedtree</h1>
 
-<h2 id="description" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="7">The <code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="7">whereusedtree</code> command builds a recursive where-used tree for one file or for each file found by a search in the current directory.</p>
-<p sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="9">Use this when you need to see not only the direct parents of a file, but also the parents of those parents.</p>
-<p sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="11">The command prints a tree in the session output and can optionally export the results to CSV.</p>
-<hr sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="13">
-<h2 id="syntax" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="15">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="17">whereusedtree (-filePath &lt;path&gt; | -search &lt;query&gt;) [-depth &lt;number&gt;] [-csv &lt;file.csv&gt;]
+<h2 id="description">Description</h2>
+<p>The <code>whereusedtree</code> command builds a recursive where-used tree for one file or for each file found by a search in the current directory.</p>
+<p>Use this when you need to see not only the direct parents of a file, but also the parents of those parents.</p>
+<p>The command prints a tree in the session output and can optionally export the results to CSV.</p>
+<hr>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">whereusedtree (-filePath &lt;path&gt; | -search &lt;query&gt;) [-depth &lt;number&gt;] [-csv &lt;file.csv&gt;]
 </code></pre>
-<h2 id="parameters" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="21">Parameters</h2>
-<table sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="23">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="23">
-<th sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="23">Parameter</th>
-<th sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="23">Required</th>
-<th sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="23">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="25">
-<td sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="25"><code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="25">-filePath</code></td>
-<td sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="25">Mode-dependent</td>
-<td sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="25">See parameter details below.</td>
+<tr>
+<td><code>-filePath</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="26">
-<td sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="26"><code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="26">-search</code></td>
-<td sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="26">Mode-dependent</td>
-<td sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="26">See parameter details below.</td>
+<tr>
+<td><code>-search</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="27">
-<td sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="27"><code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="27">-depth</code></td>
-<td sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="27">No</td>
-<td sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="27">See parameter details below.</td>
+<tr>
+<td><code>-depth</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="28">
-<td sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="28"><code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="28">-csv</code></td>
-<td sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="28">No</td>
-<td sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="28">See parameter details below.</td>
+<tr>
+<td><code>-csv</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="30">Parameter Details</h3>
-<ul sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="32">
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="32"><p sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="32"><code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="32">filePath</code>
-Full or relative path of the file to evaluate. Use either <code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="33">-filePath</code> or <code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="33">-search</code>, not both.</p>
+<h3 id="parameter-details">Parameter Details</h3>
+<ul>
+<li><p><code>filePath</code>
+Full or relative path of the file to evaluate. Use either <code>-filePath</code> or <code>-search</code>, not both.</p>
 </li>
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="35"><p sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="35"><code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="35">search</code>
-Search query used to find files in the current directory. Use either <code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="36">-search</code> or <code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="36">-filePath</code>, not both.</p>
+<li><p><code>search</code>
+Search query used to find files in the current directory. Use either <code>-search</code> or <code>-filePath</code>, not both.</p>
 </li>
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="38"><p sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="38"><code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="38">depth</code>
-Optional maximum number of parent levels to traverse. Defaults to <code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="39">10</code>.</p>
+<li><p><code>depth</code>
+Optional maximum number of parent levels to traverse. Defaults to <code>10</code>.</p>
 </li>
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="41"><p sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="41"><code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="41">csv</code>
-Optional CSV output file. Include the <code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="42">.csv</code> extension.</p>
+<li><p><code>csv</code>
+Optional CSV output file. Include the <code>.csv</code> extension.</p>
 </li>
 </ul>
-<hr sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="44">
-<h2 id="examples" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="46">Examples</h2>
-<h3 id="example-1-recursive-where-used-for-one-file" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="47">Example 1: Recursive Where Used For One File</h3>
-<pre><code class="lang-bash" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="49">whereusedtree -filePath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot;
+<hr>
+<h2 id="examples">Examples</h2>
+<h3 id="example-1-recursive-where-used-for-one-file">Example 1: Recursive Where Used For One File</h3>
+<pre><code class="lang-bash">whereusedtree -filePath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot;
 </code></pre>
-<h3 id="example-2-limit-the-tree-depth" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="53">Example 2: Limit The Tree Depth</h3>
-<pre><code class="lang-bash" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="55">whereusedtree -filePath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot; -depth 3
+<h3 id="example-2-limit-the-tree-depth">Example 2: Limit The Tree Depth</h3>
+<pre><code class="lang-bash">whereusedtree -filePath &quot;C:\Vault\Parts\Bracket.SLDPRT&quot; -depth 3
 </code></pre>
-<h3 id="example-3-run-against-files-found-in-the-current-directory" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="59">Example 3: Run Against Files Found In The Current Directory</h3>
-<pre><code class="lang-bash" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="61">whereusedtree -search &quot;%.SLDPRT&quot;
+<h3 id="example-3-run-against-files-found-in-the-current-directory">Example 3: Run Against Files Found In The Current Directory</h3>
+<pre><code class="lang-bash">whereusedtree -search &quot;%.SLDPRT&quot;
 </code></pre>
-<h3 id="example-4-export-to-csv" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="65">Example 4: Export To CSV</h3>
-<pre><code class="lang-bash" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="67">whereusedtree -search &quot;%.SLDASM&quot; -depth 5 -csv whereusedtree.csv
+<h3 id="example-4-export-to-csv">Example 4: Export To CSV</h3>
+<pre><code class="lang-bash">whereusedtree -search &quot;%.SLDASM&quot; -depth 5 -csv whereusedtree.csv
 </code></pre>
-<p sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="71">The CSV includes:</p>
-<ul sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="73">
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="73">RootFileID</li>
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="74">RootFileName</li>
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="75">RootFolderPath</li>
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="76">ChildFileID</li>
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="77">ChildFileName</li>
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="78">ParentFileID</li>
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="79">ParentFileName</li>
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="80">ParentFolderPath</li>
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="81">Level</li>
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="82">Chain</li>
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="83">Circular</li>
+<p>The CSV includes:</p>
+<ul>
+<li>RootFileID</li>
+<li>RootFileName</li>
+<li>RootFolderPath</li>
+<li>ChildFileID</li>
+<li>ChildFileName</li>
+<li>ParentFileID</li>
+<li>ParentFileName</li>
+<li>ParentFolderPath</li>
+<li>Level</li>
+<li>Chain</li>
+<li>Circular</li>
 </ul>
-<hr sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="85">
-<h2 id="remarks" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="87">Remarks</h2>
-<ul sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="88">
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="88"><code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="88">-filePath</code> and <code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="88">-search</code> are mutually exclusive. You must specify exactly one.</li>
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="89"><code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="89">-search</code> is scoped to the current PDMShell directory.</li>
-<li sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="90">Circular parent chains are detected and marked as <code sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="90">Circular</code> in CSV output.</li>
+<hr>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li><code>-filePath</code> and <code>-search</code> are mutually exclusive. You must specify exactly one.</li>
+<li><code>-search</code> is scoped to the current PDMShell directory.</li>
+<li>Circular parent chains are detected and marked as <code>Circular</code> in CSV output.</li>
 </ul>
-<h2 id="availability" sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="92">Availability</h2>
-<p sourcefile="src/WHEREUSEDTREE.md" sourcestartlinenumber="93">Available since PDMShell 4.0.1.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 4.0.1.</p>
 
 </article>
 

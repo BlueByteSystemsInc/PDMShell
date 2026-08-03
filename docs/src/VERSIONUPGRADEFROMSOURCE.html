@@ -85,54 +85,54 @@
         </div>
 
         <article data-uid="">
-<h1 id="versionupgradefromsource" sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="5">versionupgradefromsource</h1>
+<h1 id="versionupgradefromsource">versionupgradefromsource</h1>
 
-<h2 id="description" sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="7">Checks and upgrades SOLIDWORKS PDM file versions from a CSV source.</p>
-<h2 id="syntax" sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="9">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="11">versionupgradefromsource -source -csv -bumprevision -referencescheck
+<h2 id="description">Description</h2>
+<p>Checks and upgrades SOLIDWORKS PDM file versions from a CSV source.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">versionupgradefromsource -source -csv -bumprevision -referencescheck
 </code></pre>
-<h2 id="parameters" sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="15">Parameters</h2>
-<table sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="17">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="17">
-<th sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="17">Parameter</th>
-<th sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="17">Required</th>
-<th sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="17">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="19">
-<td sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="19"><code sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="19">-source</code></td>
-<td sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="19">Yes</td>
-<td sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="19">CSV source file containing files to process.</td>
+<tr>
+<td><code>-source</code></td>
+<td>Yes</td>
+<td>CSV source file containing files to process.</td>
 </tr>
-<tr sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="20">
-<td sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="20"><code sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="20">-csv</code></td>
-<td sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="20">Yes</td>
-<td sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="20">CSV file path used to write command results.</td>
+<tr>
+<td><code>-csv</code></td>
+<td>Yes</td>
+<td>CSV file path used to write command results.</td>
 </tr>
-<tr sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="21">
-<td sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="21"><code sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="21">-bumprevision</code></td>
-<td sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="21">Yes</td>
-<td sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="21">Bumps the file revision during the version upgrade operation.</td>
+<tr>
+<td><code>-bumprevision</code></td>
+<td>Yes</td>
+<td>Bumps the file revision during the version upgrade operation.</td>
 </tr>
-<tr sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="22">
-<td sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="22"><code sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="22">-referencescheck</code></td>
-<td sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="22">Yes</td>
-<td sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="22">Checks references before running the version upgrade operation.</td>
+<tr>
+<td><code>-referencescheck</code></td>
+<td>Yes</td>
+<td>Checks references before running the version upgrade operation.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="24">Parameter Details</h3>
-<ul sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="26">
-<li sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="26"><code sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="26">source</code>: CSV source file containing files to process.</li>
-<li sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="27"><code sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="27">csv</code>: CSV file path used to write command results.</li>
-<li sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="28"><code sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="28">bumprevision</code>: Bumps the file revision during the version upgrade operation.</li>
-<li sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="29"><code sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="29">referencescheck</code>: Checks references before running the version upgrade operation.</li>
+<h3 id="parameter-details">Parameter Details</h3>
+<ul>
+<li><code>source</code>: CSV source file containing files to process.</li>
+<li><code>csv</code>: CSV file path used to write command results.</li>
+<li><code>bumprevision</code>: Bumps the file revision during the version upgrade operation.</li>
+<li><code>referencescheck</code>: Checks references before running the version upgrade operation.</li>
 </ul>
-<h2 id="availability" sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="31">Availability</h2>
-<p sourcefile="src/VERSIONUPGRADEFROMSOURCE.md" sourcestartlinenumber="32">Available since PDMShell 3.0.13.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 3.0.13.</p>
 
 </article>
 

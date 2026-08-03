@@ -85,59 +85,59 @@
         </div>
 
         <article data-uid="">
-<h1 id="runtask" sourcefile="src/RUNTASK.md" sourcestartlinenumber="5">runtask</h1>
+<h1 id="runtask">runtask</h1>
 
-<h2 id="description" sourcefile="src/RUNTASK.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/RUNTASK.md" sourcestartlinenumber="7">The <code sourcefile="src/RUNTASK.md" sourcestartlinenumber="7">runtask</code> command allows you to execute a PDM task on a specific file or via search in the PDM vault.</p>
-<h2 id="syntax" sourcefile="src/RUNTASK.md" sourcestartlinenumber="9">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/RUNTASK.md" sourcestartlinenumber="11">runtask -taskName -filePath -search -recursive
+<h2 id="description">Description</h2>
+<p>The <code>runtask</code> command allows you to execute a PDM task on a specific file or via search in the PDM vault.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">runtask -taskName -filePath -search -recursive
 </code></pre>
-<h2 id="parameters" sourcefile="src/RUNTASK.md" sourcestartlinenumber="15">Parameters</h2>
-<table sourcefile="src/RUNTASK.md" sourcestartlinenumber="17">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/RUNTASK.md" sourcestartlinenumber="17">
-<th sourcefile="src/RUNTASK.md" sourcestartlinenumber="17">Parameter</th>
-<th sourcefile="src/RUNTASK.md" sourcestartlinenumber="17">Required</th>
-<th sourcefile="src/RUNTASK.md" sourcestartlinenumber="17">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/RUNTASK.md" sourcestartlinenumber="19">
-<td sourcefile="src/RUNTASK.md" sourcestartlinenumber="19"><code sourcefile="src/RUNTASK.md" sourcestartlinenumber="19">-taskName</code></td>
-<td sourcefile="src/RUNTASK.md" sourcestartlinenumber="19">Yes</td>
-<td sourcefile="src/RUNTASK.md" sourcestartlinenumber="19">Task name. This can be found in under Tasks in the Administration tool.</td>
+<tr>
+<td><code>-taskName</code></td>
+<td>Yes</td>
+<td>Task name. This can be found in under Tasks in the Administration tool.</td>
 </tr>
-<tr sourcefile="src/RUNTASK.md" sourcestartlinenumber="20">
-<td sourcefile="src/RUNTASK.md" sourcestartlinenumber="20"><code sourcefile="src/RUNTASK.md" sourcestartlinenumber="20">-filePath</code></td>
-<td sourcefile="src/RUNTASK.md" sourcestartlinenumber="20">Yes</td>
-<td sourcefile="src/RUNTASK.md" sourcestartlinenumber="20">Path to the affected file.</td>
+<tr>
+<td><code>-filePath</code></td>
+<td>Yes</td>
+<td>Path to the affected file.</td>
 </tr>
-<tr sourcefile="src/RUNTASK.md" sourcestartlinenumber="21">
-<td sourcefile="src/RUNTASK.md" sourcestartlinenumber="21"><code sourcefile="src/RUNTASK.md" sourcestartlinenumber="21">-search</code></td>
-<td sourcefile="src/RUNTASK.md" sourcestartlinenumber="21">No</td>
-<td sourcefile="src/RUNTASK.md" sourcestartlinenumber="21">Optional. Search query to find files to run the task on.</td>
+<tr>
+<td><code>-search</code></td>
+<td>No</td>
+<td>Optional. Search query to find files to run the task on.</td>
 </tr>
-<tr sourcefile="src/RUNTASK.md" sourcestartlinenumber="22">
-<td sourcefile="src/RUNTASK.md" sourcestartlinenumber="22"><code sourcefile="src/RUNTASK.md" sourcestartlinenumber="22">-recursive</code></td>
-<td sourcefile="src/RUNTASK.md" sourcestartlinenumber="22">No</td>
-<td sourcefile="src/RUNTASK.md" sourcestartlinenumber="22">Optional. If set, search will include subfolders.</td>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>Optional. If set, search will include subfolders.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/RUNTASK.md" sourcestartlinenumber="24">Parameter Details</h3>
-<p sourcefile="src/RUNTASK.md" sourcestartlinenumber="26">The command requires the following parameters:</p>
-<ul sourcefile="src/RUNTASK.md" sourcestartlinenumber="29">
-<li sourcefile="src/RUNTASK.md" sourcestartlinenumber="29"><code sourcefile="src/RUNTASK.md" sourcestartlinenumber="29">taskName</code>: Task name. This can be found in under Tasks in the Administration tool.</li>
-<li sourcefile="src/RUNTASK.md" sourcestartlinenumber="30"><code sourcefile="src/RUNTASK.md" sourcestartlinenumber="30">filePath</code>: Path to the affected file.</li>
-<li sourcefile="src/RUNTASK.md" sourcestartlinenumber="31"><code sourcefile="src/RUNTASK.md" sourcestartlinenumber="31">search</code>: (Optional) Search query to find files to run the task on.</li>
-<li sourcefile="src/RUNTASK.md" sourcestartlinenumber="32"><code sourcefile="src/RUNTASK.md" sourcestartlinenumber="32">recursive</code>: (Optional) If set, search will include subfolders.</li>
+<h3 id="parameter-details">Parameter Details</h3>
+<p>The command requires the following parameters:</p>
+<ul>
+<li><code>taskName</code>: Task name. This can be found in under Tasks in the Administration tool.</li>
+<li><code>filePath</code>: Path to the affected file.</li>
+<li><code>search</code>: (Optional) Search query to find files to run the task on.</li>
+<li><code>recursive</code>: (Optional) If set, search will include subfolders.</li>
 </ul>
-<h2 id="examples" sourcefile="src/RUNTASK.md" sourcestartlinenumber="34">Examples</h2>
-<pre><code class="lang-bash" sourcefile="src/RUNTASK.md" sourcestartlinenumber="35"># runtask
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash"># runtask
  taskrun -TaskName &quot;PrintPDF&quot; -filePath &quot;Assembly.sldasm&quot;  
 </code></pre>
-<h2 id="availability" sourcefile="src/RUNTASK.md" sourcestartlinenumber="40">Availability</h2>
-<p sourcefile="src/RUNTASK.md" sourcestartlinenumber="41">Available since PDMShell 2.0.33.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.33.</p>
 
 </article>
 

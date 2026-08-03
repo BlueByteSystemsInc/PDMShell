@@ -85,141 +85,141 @@
         </div>
 
         <article data-uid="">
-<h1 id="runswmacro" sourcefile="src/runswmacro.md" sourcestartlinenumber="5">runswmacro</h1>
+<h1 id="runswmacro">runswmacro</h1>
 
-<h2 id="description" sourcefile="src/runswmacro.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="7">The <code sourcefile="src/runswmacro.md" sourcestartlinenumber="7">runswmacro</code> command allows you to execute a SOLIDWORKS macro on a specific file or on multiple files found via search in the PDM vault. This is useful for automating repetitive tasks or applying custom logic to many files.</p>
-<h2 id="syntax" sourcefile="src/runswmacro.md" sourcestartlinenumber="10">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/runswmacro.md" sourcestartlinenumber="12">runswmacro -filePath -search -recursive -list -skip -count -timeout
+<h2 id="description">Description</h2>
+<p>The <code>runswmacro</code> command allows you to execute a SOLIDWORKS macro on a specific file or on multiple files found via search in the PDM vault. This is useful for automating repetitive tasks or applying custom logic to many files.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">runswmacro -filePath -search -recursive -list -skip -count -timeout
 </code></pre>
-<h2 id="parameters" sourcefile="src/runswmacro.md" sourcestartlinenumber="16">Parameters</h2>
-<table sourcefile="src/runswmacro.md" sourcestartlinenumber="18">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/runswmacro.md" sourcestartlinenumber="18">
-<th sourcefile="src/runswmacro.md" sourcestartlinenumber="18">Parameter</th>
-<th sourcefile="src/runswmacro.md" sourcestartlinenumber="18">Required</th>
-<th sourcefile="src/runswmacro.md" sourcestartlinenumber="18">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/runswmacro.md" sourcestartlinenumber="20">
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="20"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="20">-filePath</code></td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="20">Yes</td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="20">Path to the SOLIDWORKS macro file (<code sourcefile="src/runswmacro.md" sourcestartlinenumber="20">.swp</code> or <code sourcefile="src/runswmacro.md" sourcestartlinenumber="20">.dll</code>). This is required and the file needs to cached in PDM.</td>
+<tr>
+<td><code>-filePath</code></td>
+<td>Yes</td>
+<td>Path to the SOLIDWORKS macro file (<code>.swp</code> or <code>.dll</code>). This is required and the file needs to cached in PDM.</td>
 </tr>
-<tr sourcefile="src/runswmacro.md" sourcestartlinenumber="21">
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="21"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="21">-search</code></td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="21">Yes</td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="21">Search query to find files to run the macro on.</td>
+<tr>
+<td><code>-search</code></td>
+<td>Yes</td>
+<td>Search query to find files to run the macro on.</td>
 </tr>
-<tr sourcefile="src/runswmacro.md" sourcestartlinenumber="22">
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="22"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="22">-recursive</code></td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="22">Yes</td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="22">If set, search will include subfolders.</td>
+<tr>
+<td><code>-recursive</code></td>
+<td>Yes</td>
+<td>If set, search will include subfolders.</td>
 </tr>
-<tr sourcefile="src/runswmacro.md" sourcestartlinenumber="23">
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="23"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="23">-list</code></td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="23">Yes</td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="23">csv file path of filepaths without a column header.</td>
+<tr>
+<td><code>-list</code></td>
+<td>Yes</td>
+<td>csv file path of filepaths without a column header.</td>
 </tr>
-<tr sourcefile="src/runswmacro.md" sourcestartlinenumber="24">
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="24"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="24">-skip</code></td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="24">Yes</td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="24">Skips the specified number of items. Only valid with <code sourcefile="src/runswmacro.md" sourcestartlinenumber="24">list</code>.</td>
+<tr>
+<td><code>-skip</code></td>
+<td>Yes</td>
+<td>Skips the specified number of items. Only valid with <code>list</code>.</td>
 </tr>
-<tr sourcefile="src/runswmacro.md" sourcestartlinenumber="25">
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="25"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="25">-count</code></td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="25">Yes</td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="25">Only processes the specified number of items. Only valid with <code sourcefile="src/runswmacro.md" sourcestartlinenumber="25">list</code>.</td>
+<tr>
+<td><code>-count</code></td>
+<td>Yes</td>
+<td>Only processes the specified number of items. Only valid with <code>list</code>.</td>
 </tr>
-<tr sourcefile="src/runswmacro.md" sourcestartlinenumber="26">
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="26"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="26">-timeout</code></td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="26">Yes</td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="26">Macro timeout in seconds (for both the macro to execute and for SOLIDWORKS to start too)</td>
+<tr>
+<td><code>-timeout</code></td>
+<td>Yes</td>
+<td>Macro timeout in seconds (for both the macro to execute and for SOLIDWORKS to start too)</td>
 </tr>
-<tr sourcefile="src/runswmacro.md" sourcestartlinenumber="27">
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="27"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="27">-version</code></td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="27">No</td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="27">SOLIDWORKS year version. Example 2023. Default is latest.</td>
+<tr>
+<td><code>-version</code></td>
+<td>No</td>
+<td>SOLIDWORKS year version. Example 2023. Default is latest.</td>
 </tr>
-<tr sourcefile="src/runswmacro.md" sourcestartlinenumber="28">
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="28"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="28">-csv</code></td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="28">No</td>
-<td sourcefile="src/runswmacro.md" sourcestartlinenumber="28">CSV file path used to report macro execution errors and success.</td>
+<tr>
+<td><code>-csv</code></td>
+<td>No</td>
+<td>CSV file path used to report macro execution errors and success.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/runswmacro.md" sourcestartlinenumber="30">Parameter Details</h3>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="32">The command requires the following parameters:</p>
-<ul sourcefile="src/runswmacro.md" sourcestartlinenumber="34">
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="34"><p sourcefile="src/runswmacro.md" sourcestartlinenumber="34"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="34">filePath</code>: Path to the SOLIDWORKS macro file (<code sourcefile="src/runswmacro.md" sourcestartlinenumber="34">.swp</code> or <code sourcefile="src/runswmacro.md" sourcestartlinenumber="34">.dll</code>). This is required and the file needs to cached in PDM.</p>
+<h3 id="parameter-details">Parameter Details</h3>
+<p>The command requires the following parameters:</p>
+<ul>
+<li><p><code>filePath</code>: Path to the SOLIDWORKS macro file (<code>.swp</code> or <code>.dll</code>). This is required and the file needs to cached in PDM.</p>
 </li>
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="35"><p sourcefile="src/runswmacro.md" sourcestartlinenumber="35"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="35">search</code>: Search query to find files to run the macro on.</p>
+<li><p><code>search</code>: Search query to find files to run the macro on.</p>
 </li>
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="36"><p sourcefile="src/runswmacro.md" sourcestartlinenumber="36"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="36">recursive</code>: If set, search will include subfolders.</p>
+<li><p><code>recursive</code>: If set, search will include subfolders.</p>
 </li>
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="37"><p sourcefile="src/runswmacro.md" sourcestartlinenumber="37"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="37">list</code>: csv file path of filepaths without a column header.</p>
+<li><p><code>list</code>: csv file path of filepaths without a column header.</p>
 </li>
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="38"><p sourcefile="src/runswmacro.md" sourcestartlinenumber="38"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="38">skip</code>: Skips the specified number of items. Only valid with <code sourcefile="src/runswmacro.md" sourcestartlinenumber="38">list</code>.</p>
+<li><p><code>skip</code>: Skips the specified number of items. Only valid with <code>list</code>.</p>
 </li>
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="39"><p sourcefile="src/runswmacro.md" sourcestartlinenumber="39"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="39">count</code>: Only processes the specified number of items. Only valid with <code sourcefile="src/runswmacro.md" sourcestartlinenumber="39">list</code>.</p>
+<li><p><code>count</code>: Only processes the specified number of items. Only valid with <code>list</code>.</p>
 </li>
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="40"><p sourcefile="src/runswmacro.md" sourcestartlinenumber="40"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="40">timeout</code>: Macro timeout in seconds (for both the macro to execute and for SOLIDWORKS to start too)</p>
+<li><p><code>timeout</code>: Macro timeout in seconds (for both the macro to execute and for SOLIDWORKS to start too)</p>
 </li>
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="41"><p sourcefile="src/runswmacro.md" sourcestartlinenumber="41"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="41">version</code>: SOLIDWORKS year version. Example 2023. Default is latest.</p>
+<li><p><code>version</code>: SOLIDWORKS year version. Example 2023. Default is latest.</p>
 </li>
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="44"><p sourcefile="src/runswmacro.md" sourcestartlinenumber="44"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="44">csv</code>: CSV file path used to report macro execution errors and success.</p>
+<li><p><code>csv</code>: CSV file path used to report macro execution errors and success.</p>
 </li>
 </ul>
-<h2 id="what-version-of-solidworks-will-pdmshell-use" sourcefile="src/runswmacro.md" sourcestartlinenumber="46">What version of SOLIDWORKS will PDMShell use?</h2>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="47">PDMShell will use the latest SOLIDWORKS version installed on your system by checking the Windows Registry at:</p>
-<pre><code sourcefile="src/runswmacro.md" sourcestartlinenumber="48">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks
+<h2 id="what-version-of-solidworks-will-pdmshell-use">What version of SOLIDWORKS will PDMShell use?</h2>
+<p>PDMShell will use the latest SOLIDWORKS version installed on your system by checking the Windows Registry at:</p>
+<pre><code>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks
 </code></pre>
-<div class="NOTE" sourcefile="src/runswmacro.md" sourcestartlinenumber="52">
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="53">If you have multiple SOLIDWORKS versions installed, PDMShell will automatically select the most recent version found in the registry.</p>
+<p>If you have multiple SOLIDWORKS versions installed, PDMShell will automatically select the most recent version found in the registry.</p>
 </div>
-<h2 id="list-example" sourcefile="src/runswmacro.md" sourcestartlinenumber="55">List Example</h2>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="57">PDMShell assumes the csv file feed into the <code sourcefile="src/runswmacro.md" sourcestartlinenumber="57">list</code> parameter has a header.</p>
-<pre><code class="lang-csv" sourcefile="src/runswmacro.md" sourcestartlinenumber="59">File Path
+<h2 id="list-example">List Example</h2>
+<p>PDMShell assumes the csv file feed into the <code>list</code> parameter has a header.</p>
+<pre><code class="lang-csv">File Path
 C:\TestVault\part1.sldprt
 C:\TestVault\assembly2.sldasm
 C:\TestVault\drawing3.slddrw
 C:\TestVault\bracket4.sldprt
 </code></pre>
-<div class="WARNING" sourcefile="src/runswmacro.md" sourcestartlinenumber="66">
+<div class="WARNING">
 <h5>Warning</h5>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="67">If you only have a list of filenames, we created SOLIDWORKS VBA <a href="/src/createcompletepathsfromfilename.html" sourcefile="src/runswmacro.md" sourcestartlinenumber="67">this macro</a> to help you get the complete list of the filepaths from filenames.</p>
+<p>If you only have a list of filenames, we created SOLIDWORKS VBA <a href="/src/createcompletepathsfromfilename.html">this macro</a> to help you get the complete list of the filepaths from filenames.</p>
 </div>
-<h2 id="swp-macro" sourcefile="src/runswmacro.md" sourcestartlinenumber="70">SWP Macro</h2>
-<div class="WARNING" sourcefile="src/runswmacro.md" sourcestartlinenumber="72">
+<h2 id="swp-macro">SWP Macro</h2>
+<div class="WARNING">
 <h5>Warning</h5>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="73">Please read the remarks below to properly call your macro.</p>
+<p>Please read the remarks below to properly call your macro.</p>
 </div>
-<ul sourcefile="src/runswmacro.md" sourcestartlinenumber="75">
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="75">The macro procedure name must be called <code sourcefile="src/runswmacro.md" sourcestartlinenumber="75">main</code>.</li>
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="76">The macro module name must be called the file name of the macro appended by <code sourcefile="src/runswmacro.md" sourcestartlinenumber="76">1</code>. Example: If the macro called <code sourcefile="src/runswmacro.md" sourcestartlinenumber="76">print.swp</code> the module name must be called <code sourcefile="src/runswmacro.md" sourcestartlinenumber="76">print1</code>.</li>
+<ul>
+<li>The macro procedure name must be called <code>main</code>.</li>
+<li>The macro module name must be called the file name of the macro appended by <code>1</code>. Example: If the macro called <code>print.swp</code> the module name must be called <code>print1</code>.</li>
 </ul>
-<div class="IMPORTANT" sourcefile="src/runswmacro.md" sourcestartlinenumber="78">
+<div class="IMPORTANT">
 <h5>Important</h5>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="79"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="79">runswmacro</code> does not check out files automatically. It opens the file in SOLIDWORKS and runs the selected macro.</p>
+<p><code>runswmacro</code> does not check out files automatically. It opens the file in SOLIDWORKS and runs the selected macro.</p>
 </div>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="81">If your macro needs to modify and save files inside SOLIDWORKS PDM, the macro itself must handle the check-out and check-in process.</p>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="83">The example below shows a generic pattern that:</p>
-<ol sourcefile="src/runswmacro.md" sourcestartlinenumber="85">
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="85">Gets the active SOLIDWORKS document.</li>
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="86">Logs in to the PDM vault.</li>
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="87">Checks out the active file.</li>
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="88">Runs your custom macro logic.</li>
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="89">Saves the file.</li>
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="90">Closes the document.</li>
-<li sourcefile="src/runswmacro.md" sourcestartlinenumber="91">Checks the file back into the vault.</li>
+<p>If your macro needs to modify and save files inside SOLIDWORKS PDM, the macro itself must handle the check-out and check-in process.</p>
+<p>The example below shows a generic pattern that:</p>
+<ol>
+<li>Gets the active SOLIDWORKS document.</li>
+<li>Logs in to the PDM vault.</li>
+<li>Checks out the active file.</li>
+<li>Runs your custom macro logic.</li>
+<li>Saves the file.</li>
+<li>Closes the document.</li>
+<li>Checks the file back into the vault.</li>
 </ol>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="93">Before using this macro, enable the SOLIDWORKS PDM reference from:</p>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="95"><code sourcefile="src/runswmacro.md" sourcestartlinenumber="95">Tools &gt; References &gt; PDMWorks Enterprise Type Library</code></p>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="97">Then update the <code sourcefile="src/runswmacro.md" sourcestartlinenumber="97">vaultName</code> constant with your vault name.</p>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="99">Make sure there are no missing references.</p>
-<pre><code class="lang-vb" sourcefile="src/runswmacro.md" sourcestartlinenumber="102">Option Explicit
+<p>Before using this macro, enable the SOLIDWORKS PDM reference from:</p>
+<p><code>Tools &gt; References &gt; PDMWorks Enterprise Type Library</code></p>
+<p>Then update the <code>vaultName</code> constant with your vault name.</p>
+<p>Make sure there are no missing references.</p>
+<pre><code class="lang-vb">Option Explicit
 
 Dim swApp As SldWorks.SldWorks
 Dim pdmVault As EdmVault5
@@ -373,18 +373,18 @@ End Sub
 &lt;PackageReference Include=&quot;BlueByte.SOLIDWORKS.Interops&quot; Version=&quot;2019.0.0&quot; /&gt;
 &lt;PackageReference Include=&quot;BlueByte.SOLIDWORKS.PDMProfessional.Interops&quot; Version=&quot;2024.5.50&quot; /&gt;
 </code></pre>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="258">Install using Package Manager Console:</p>
-<pre><code class="lang-powershell" sourcefile="src/runswmacro.md" sourcestartlinenumber="260">Install-Package BlueByte.PDMShell.SOLIDWORKSMacro -Version 1.0.0
+<p>Install using Package Manager Console:</p>
+<pre><code class="lang-powershell">Install-Package BlueByte.PDMShell.SOLIDWORKSMacro -Version 1.0.0
 Install-Package BlueByte.SOLIDWORKS.Interops -Version 2019.0.0
 Install-Package BlueByte.SOLIDWORKS.PDMProfessional.Interops -Version 2024.5.50
 </code></pre>
-<div class="NOTE" sourcefile="src/runswmacro.md" sourcestartlinenumber="266">
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="267">Using different versions may result in compatibility issues or runtime errors.
+<p>Using different versions may result in compatibility issues or runtime errors.
 These specific versions are tested and guaranteed to work with PDMShell.</p>
 </div>
-<h3 id="example-implementation" sourcefile="src/runswmacro.md" sourcestartlinenumber="270">Example Implementation</h3>
-<pre><code class="lang-csharp" sourcefile="src/runswmacro.md" sourcestartlinenumber="271">using PDMShellSOLIDWORKSMacro;
+<h3 id="example-implementation">Example Implementation</h3>
+<pre><code class="lang-csharp">using PDMShellSOLIDWORKSMacro;
 using SolidWorks.Interop.sldworks;
 using EPDM.Interop.epdm;
 
@@ -414,31 +414,31 @@ public class MyMacro : IPDMShellSOLIDWORKSMacro
     }
 }
 </code></pre>
-<div class="NOTE" sourcefile="src/runswmacro.md" sourcestartlinenumber="303">
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="304">Use the <code sourcefile="src/runswmacro.md" sourcestartlinenumber="304">callback.AppendMessage()</code> method to provide progress updates and status messages during macro execution. These messages will be displayed in the PDMShell output.</p>
+<p>Use the <code>callback.AppendMessage()</code> method to provide progress updates and status messages during macro execution. These messages will be displayed in the PDMShell output.</p>
 </div>
-<h3 id="running-the-macro" sourcefile="src/runswmacro.md" sourcestartlinenumber="306">Running the Macro</h3>
-<pre><code class="lang-bash" sourcefile="src/runswmacro.md" sourcestartlinenumber="307"># runswmacro
+<h3 id="running-the-macro">Running the Macro</h3>
+<pre><code class="lang-bash"># runswmacro
 runswmacro -filePath &quot;Macros/MyMacro.dll&quot; -search &quot;%.sldprt&quot; -timeout 12000
 </code></pre>
-<div class="NOTE" sourcefile="src/runswmacro.md" sourcestartlinenumber="312">
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="313">The DLL must be built against .NET Framework 4.7.2 or higher</p>
+<p>The DLL must be built against .NET Framework 4.7.2 or higher</p>
 </div>
-<h2 id="examples" sourcefile="src/runswmacro.md" sourcestartlinenumber="315">Examples</h2>
-<pre><code class="lang-bash" sourcefile="src/runswmacro.md" sourcestartlinenumber="316"># runswmacro
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash"># runswmacro
  runswmacro -filePath &quot;Macros/BatchExport.swp&quot; -search &quot;%.sldprt&quot; 
 </code></pre>
-<div class="IMPORTANT" sourcefile="src/runswmacro.md" sourcestartlinenumber="321">
+<div class="IMPORTANT">
 <h5>Important</h5>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="322">You can use the token <code sourcefile="src/runswmacro.md" sourcestartlinenumber="322">edit</code> in the search to force a check out and a check in of the search results. The check out uses the default checkout settings specified in the reference dialog of your PDM user settings (ie: this might check out the file itself and its references too). The check in will only check in the document itself (<strong sourcefile="src/runswmacro.md" sourcestartlinenumber="322">not the references</strong>).</p>
+<p>You can use the token <code>edit</code> in the search to force a check out and a check in of the search results. The check out uses the default checkout settings specified in the reference dialog of your PDM user settings (ie: this might check out the file itself and its references too). The check in will only check in the document itself (<strong>not the references</strong>).</p>
 </div>
-<pre><code class="lang-bash" sourcefile="src/runswmacro.md" sourcestartlinenumber="324"># runswmacro
+<pre><code class="lang-bash"># runswmacro
  runswmacro -filePath &quot;Macros/BatchExport.swp&quot; -search &quot;Name=%.sldprt;Edit&quot; 
 </code></pre>
-<h2 id="availability" sourcefile="src/runswmacro.md" sourcestartlinenumber="329">Availability</h2>
-<p sourcefile="src/runswmacro.md" sourcestartlinenumber="330">Available since PDMShell 2.0.83.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.83.</p>
 
 </article>
 

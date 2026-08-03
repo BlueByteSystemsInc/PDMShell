@@ -85,18 +85,18 @@
         </div>
 
         <article data-uid="">
-<h1 id="change-drawing-sheet-format" sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="17">Change Drawing Sheet Format</h1>
+<h1 id="change-drawing-sheet-format">Change Drawing Sheet Format</h1>
 
-<p sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="19">This script checks out the matching SOLIDWORKS drawing for the selected file, runs a macro that replaces drawing sheet formats, and checks the drawing back into SOLIDWORKS PDM.</p>
-<div class="TIP" sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="21">
+<p>This script checks out the matching SOLIDWORKS drawing for the selected file, runs a macro that replaces drawing sheet formats, and checks the drawing back into SOLIDWORKS PDM.</p>
+<div class="TIP">
 <h5>Tip</h5>
-<p sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="22">You can download this script directly from the PDMShell Script Library. Open PDMShell, open the Script Library, choose <strong sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="22">Change Drawing Sheet Format</strong>, and load the script into the active session.</p>
+<p>You can download this script directly from the PDMShell Script Library. Open PDMShell, open the Script Library, choose <strong>Change Drawing Sheet Format</strong>, and load the script into the active session.</p>
 </div>
-<p sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="24">The target drawing is resolved from the selected file name:</p>
-<pre><code class="lang-text" sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="26">$folderPath\$fileNameWithoutExtension.slddrw
+<p>The target drawing is resolved from the selected file name:</p>
+<pre><code class="lang-text">$folderPath\$fileNameWithoutExtension.slddrw
 </code></pre>
-<h2 id="script" sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="30">Script</h2>
-<pre><code class="lang-pdmshell" sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="32">checkout -filePath &quot;$folderPath\$fileNameWithoutExtension.slddrw&quot;
+<h2 id="script">Script</h2>
+<pre><code class="lang-pdmshell">checkout -filePath &quot;$folderPath\$fileNameWithoutExtension.slddrw&quot;
 
 cd -directory &quot;$folderPath&quot;
 
@@ -104,26 +104,26 @@ runswmacro -filePath &quot;$tempFolder\ChangeSheetFormat.swb&quot; -search &quot
 
 checkin -filePath &quot;$folderPath\$fileNameWithoutExtension.slddrw&quot;
 </code></pre>
-<h2 id="what-it-does" sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="42">What it does</h2>
-<ul sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="44">
-<li sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="44">Checks out the drawing with the same base name as the selected file.</li>
-<li sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="45">Changes the PDMShell working directory to the selected file folder.</li>
-<li sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="46">Runs a SOLIDWORKS macro against the matching drawing.</li>
-<li sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="47">Prompts once for the original and replacement sheet formats if no saved settings exist.</li>
-<li sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="48">Saves those settings beside the macro as <code sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="48">ChangeSheetFormat.ini</code>.</li>
-<li sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="49">Reuses the saved settings for subsequent files in a batch.</li>
-<li sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="50">Checks the drawing back into PDM.</li>
+<h2 id="what-it-does">What it does</h2>
+<ul>
+<li>Checks out the drawing with the same base name as the selected file.</li>
+<li>Changes the PDMShell working directory to the selected file folder.</li>
+<li>Runs a SOLIDWORKS macro against the matching drawing.</li>
+<li>Prompts once for the original and replacement sheet formats if no saved settings exist.</li>
+<li>Saves those settings beside the macro as <code>ChangeSheetFormat.ini</code>.</li>
+<li>Reuses the saved settings for subsequent files in a batch.</li>
+<li>Checks the drawing back into PDM.</li>
 </ul>
-<h2 id="requirements" sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="52">Requirements</h2>
-<ul sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="54">
-<li sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="54">SOLIDWORKS must be installed on the machine running PDMShell.</li>
-<li sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="55">The user must have permission to check out and check in the drawing.</li>
-<li sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="56">The matching drawing must exist beside the selected file.</li>
-<li sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="57">The selected file should have a same-name <code sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="57">.slddrw</code> drawing in the same folder.</li>
-<li sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="58">The macro is downloaded to <code sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="58">$tempFolder\ChangeSheetFormat.swb</code>.</li>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>SOLIDWORKS must be installed on the machine running PDMShell.</li>
+<li>The user must have permission to check out and check in the drawing.</li>
+<li>The matching drawing must exist beside the selected file.</li>
+<li>The selected file should have a same-name <code>.slddrw</code> drawing in the same folder.</li>
+<li>The macro is downloaded to <code>$tempFolder\ChangeSheetFormat.swb</code>.</li>
 </ul>
-<h2 id="macro-code" sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="60">Macro code</h2>
-<pre><code class="lang-vba" sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="62">Option Explicit
+<h2 id="macro-code">Macro code</h2>
+<pre><code class="lang-vba">Option Explicit
 
 Const swDocDRAWING As Long = 3
 Const swSaveAsOptions_Silent As Long = 1
@@ -303,31 +303,31 @@ Function GetFileNameOnly(ByVal path As String) As String
 
 End Function
 </code></pre>
-<h2 id="settings-file" sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="244">Settings file</h2>
-<p sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="246">The macro creates and reuses this file beside the macro:</p>
-<pre><code class="lang-ini" sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="248">OldFormat=OldSheetFormat.slddrt
+<h2 id="settings-file">Settings file</h2>
+<p>The macro creates and reuses this file beside the macro:</p>
+<pre><code class="lang-ini">OldFormat=OldSheetFormat.slddrt
 NewFormat=C:\SOLIDWORKS Sheet Formats\NewSheetFormat.slddrt
 </code></pre>
-<h2 id="placeholders-used" sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="253">Placeholders used</h2>
-<table sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="255">
+<h2 id="placeholders-used">Placeholders used</h2>
+<table>
 <thead>
-<tr sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="255">
-<th sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="255">Placeholder</th>
-<th sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="255">Description</th>
+<tr>
+<th>Placeholder</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="257">
-<td sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="257"><code sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="257">$folderPath</code></td>
-<td sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="257">Local folder path of the selected file</td>
+<tr>
+<td><code>$folderPath</code></td>
+<td>Local folder path of the selected file</td>
 </tr>
-<tr sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="258">
-<td sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="258"><code sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="258">$fileNameWithoutExtension</code></td>
-<td sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="258">Selected file name without its extension</td>
+<tr>
+<td><code>$fileNameWithoutExtension</code></td>
+<td>Selected file name without its extension</td>
 </tr>
-<tr sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="259">
-<td sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="259"><code sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="259">$tempFolder</code></td>
-<td sourcefile="src/scripts/CHANGESHEETFORMAT/CHANGESHEETFORMAT.md" sourcestartlinenumber="259">Temporary folder in your Windows session</td>
+<tr>
+<td><code>$tempFolder</code></td>
+<td>Temporary folder in your Windows session</td>
 </tr>
 </tbody>
 </table>

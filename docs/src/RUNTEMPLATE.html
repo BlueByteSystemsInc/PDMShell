@@ -85,50 +85,50 @@
         </div>
 
         <article data-uid="">
-<h1 id="runtemplate" sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="5">runtemplate</h1>
+<h1 id="runtemplate">runtemplate</h1>
 
-<h2 id="description" sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="7">Runs a SOLIDWORKS PDM template from PDMShell by using the template menu name.</p>
-<p sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="9">The <code sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="9">runtemplate</code> command is useful when you want to start a configured PDM template from a script or command line workflow. The command runs the template in the current vault folder unless a different vault folder is provided.</p>
-<h2 id="syntax" sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="11">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="13">runtemplate -name template_menu_name [-directory vault_folder] [-silent]
+<h2 id="description">Description</h2>
+<p>Runs a SOLIDWORKS PDM template from PDMShell by using the template menu name.</p>
+<p>The <code>runtemplate</code> command is useful when you want to start a configured PDM template from a script or command line workflow. The command runs the template in the current vault folder unless a different vault folder is provided.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">runtemplate -name template_menu_name [-directory vault_folder] [-silent]
 </code></pre>
-<h2 id="parameters" sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="17">Parameters</h2>
-<table sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="19">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="19">
-<th sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="19">Parameter</th>
-<th sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="19">Required</th>
-<th sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="19">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="21">
-<td sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="21"><code sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="21">-name</code></td>
-<td sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="21">Yes</td>
-<td sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="21">See parameter details below.</td>
+<tr>
+<td><code>-name</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="22">
-<td sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="22"><code sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="22">-directory</code></td>
-<td sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="22">No</td>
-<td sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="22">See parameter details below.</td>
+<tr>
+<td><code>-directory</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="23">
-<td sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="23"><code sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="23">-silent</code></td>
-<td sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="23">No</td>
-<td sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="23">See parameter details below.</td>
+<tr>
+<td><code>-silent</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="25">Parameter Details</h3>
-<ul sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="27">
-<li sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="27"><code sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="27">name</code> Required. Template menu name to run. This is the same name shown for the template command in SOLIDWORKS PDM.</li>
-<li sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="28"><code sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="28">directory</code> Optional. Vault folder where the template should run. If omitted, the current PDMShell folder is used.</li>
-<li sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="29"><code sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="29">d</code> Optional short name for <code sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="29">directory</code>.</li>
-<li sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="30"><code sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="30">silent</code> Optional. Automatically confirms the template creation dialog when possible.</li>
+<h3 id="parameter-details">Parameter Details</h3>
+<ul>
+<li><code>name</code> Required. Template menu name to run. This is the same name shown for the template command in SOLIDWORKS PDM.</li>
+<li><code>directory</code> Optional. Vault folder where the template should run. If omitted, the current PDMShell folder is used.</li>
+<li><code>d</code> Optional short name for <code>directory</code>.</li>
+<li><code>silent</code> Optional. Automatically confirms the template creation dialog when possible.</li>
 </ul>
-<h2 id="examples" sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="32">Examples</h2>
-<pre><code class="lang-bash" sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="33"># runtemplate
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash"># runtemplate
 runtemplate -name &quot;New Project&quot;
 
 # runtemplate
@@ -140,18 +140,18 @@ runtemplate -name &quot;New Project&quot; -d &quot;Projects&quot;
 # runtemplate
 runtemplate -name &quot;Create ECO&quot; -d &quot;Engineering Change Orders&quot; -silent
 </code></pre>
-<h2 id="remarks" sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="47">Remarks</h2>
-<ul sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="48">
-<li sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="48">The template name must match the template menu string configured in SOLIDWORKS PDM.</li>
-<li sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="49">The command uses the current vault session.</li>
-<li sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="50">If <code sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="50">directory</code> is relative, it is resolved from the current PDMShell folder.</li>
-<li sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="51">The template must be installed and available in the selected vault.</li>
-<li sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="52">Use <code sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="52">silent</code> only when the template can be created without entering additional information.</li>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>The template name must match the template menu string configured in SOLIDWORKS PDM.</li>
+<li>The command uses the current vault session.</li>
+<li>If <code>directory</code> is relative, it is resolved from the current PDMShell folder.</li>
+<li>The template must be installed and available in the selected vault.</li>
+<li>Use <code>silent</code> only when the template can be created without entering additional information.</li>
 </ul>
-<h2 id="availability" sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="54">Availability</h2>
-<p sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="55">Available since PDMShell 4.0.0.</p>
-<h2 id="last-updated" sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="57">Last Updated</h2>
-<p sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="58">Updated in PDMShell 4.0.16 to improve <code sourcefile="src/RUNTEMPLATE.md" sourcestartlinenumber="58">silent</code> confirmation for template creation dialogs.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 4.0.0.</p>
+<h2 id="last-updated">Last Updated</h2>
+<p>Updated in PDMShell 4.0.16 to improve <code>silent</code> confirmation for template creation dialogs.</p>
 
 </article>
 

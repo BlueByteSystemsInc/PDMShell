@@ -85,170 +85,170 @@
         </div>
 
         <article data-uid="">
-<h1 id="deletefromsource" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="5">deletefromsource</h1>
+<h1 id="deletefromsource">deletefromsource</h1>
 
-<h2 id="description" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="7">The <code sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="7">deletefromsource</code> command deletes files listed in a CSV file. It can also optionally destroy the files and export the operation results to a CSV file for auditing and reporting purposes.</p>
-<h2 id="syntax" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="11">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="13">deletefromsource -filePath -destroy -csv -batch
+<h2 id="description">Description</h2>
+<p>The <code>deletefromsource</code> command deletes files listed in a CSV file. It can also optionally destroy the files and export the operation results to a CSV file for auditing and reporting purposes.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">deletefromsource -filePath -destroy -csv -batch
 </code></pre>
-<h2 id="parameters" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="17">Parameters</h2>
-<table sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="19">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="19">
-<th sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="19">Parameter</th>
-<th sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="19">Required</th>
-<th sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="19">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="21">
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="21"><code sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="21">-filePath</code></td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="21">Yes</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="21">Yes | Path to the source CSV file containing File IDs and Folder IDs. This can be outside the vault.</td>
+<tr>
+<td><code>-filePath</code></td>
+<td>Yes</td>
+<td>Yes | Path to the source CSV file containing File IDs and Folder IDs. This can be outside the vault.</td>
 </tr>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="22">
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="22"><code sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="22">-destroy</code></td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="22">Yes</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="22">No | If specified, files will be permanently destroyed after deletion.</td>
+<tr>
+<td><code>-destroy</code></td>
+<td>Yes</td>
+<td>No | If specified, files will be permanently destroyed after deletion.</td>
 </tr>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="23">
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="23"><code sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="23">-csv</code></td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="23">Yes</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="23">No | Path to export the results CSV file.</td>
+<tr>
+<td><code>-csv</code></td>
+<td>Yes</td>
+<td>No | Path to export the results CSV file.</td>
 </tr>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="24">
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="24"><code sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="24">-batch</code></td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="24">Yes</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="24">No | Destory batch size for large folders.</td>
+<tr>
+<td><code>-batch</code></td>
+<td>Yes</td>
+<td>No | Destory batch size for large folders.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="26">Parameter Details</h3>
-<table sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="28">
+<h3 id="parameter-details">Parameter Details</h3>
+<table>
 <thead>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="28">
-<th sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="28">Parameter</th>
-<th sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="28">Type</th>
-<th sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="28">Required</th>
-<th sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="28">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="30">
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="30"><code sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="30">filePath</code></td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="30">string</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="30">Yes</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="30">Path to the source CSV file containing File IDs and Folder IDs. This can be outside the vault.</td>
+<tr>
+<td><code>filePath</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>Path to the source CSV file containing File IDs and Folder IDs. This can be outside the vault.</td>
 </tr>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="31">
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="31"><code sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="31">destroy</code></td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="31">flag</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="31">No</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="31">If specified, files will be permanently destroyed after deletion.</td>
+<tr>
+<td><code>destroy</code></td>
+<td>flag</td>
+<td>No</td>
+<td>If specified, files will be permanently destroyed after deletion.</td>
 </tr>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="32">
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="32"><code sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="32">csv</code></td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="32">string</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="32">No</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="32">Path to export the results CSV file.</td>
+<tr>
+<td><code>csv</code></td>
+<td>string</td>
+<td>No</td>
+<td>Path to export the results CSV file.</td>
 </tr>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="33">
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="33"><code sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="33">batch</code></td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="33">int</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="33">No</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="33">Destory batch size for large folders.</td>
+<tr>
+<td><code>batch</code></td>
+<td>int</td>
+<td>No</td>
+<td>Destory batch size for large folders.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="important-notes-about--destroy" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="36">IMPORTANT NOTES ABOUT <code sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="36">-destroy</code>:</h3>
-<p sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="37">The <code sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="37">deletefromsource</code> command first attempts to delete and destroy (if <code sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="37">-destroy</code> used) files normally using the provided input (IDs from the CSV).</p>
-<p sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="39">After that initial pass, it performs a second step using the Name column. This is specifically for files that were already deleted but not destroyed.
+<h3 id="important-notes-about--destroy">IMPORTANT NOTES ABOUT <code>-destroy</code>:</h3>
+<p>The <code>deletefromsource</code> command first attempts to delete and destroy (if <code>-destroy</code> used) files normally using the provided input (IDs from the CSV).</p>
+<p>After that initial pass, it performs a second step using the Name column. This is specifically for files that were already deleted but not destroyed.
 Since these files no longer exist in the vault in a normal state, they cannot be deleted again and their IDs do not exist anymore. Instead, PDMShell uses the file name to locate these previously deleted items and destroy them directly.</p>
-<p sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="42">This approach allows you to:</p>
-<ul sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="43">
-<li sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="43">Handle active files (delete Ã¢â€ â€™ destroy)</li>
-<li sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="44">Handle already deleted files (destroy only) if there a value in the name column. See structure of the CSV file.</li>
+<p>This approach allows you to:</p>
+<ul>
+<li>Handle active files (delete Ã¢â€ â€™ destroy)</li>
+<li>Handle already deleted files (destroy only) if there a value in the name column. See structure of the CSV file.</li>
 </ul>
-<div class="IMPORTANT" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="46">
+<div class="IMPORTANT">
 <h5>Important</h5>
-<p sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="47">For previously deleted files, you only need to provide the file name in the Name column.</p>
+<p>For previously deleted files, you only need to provide the file name in the Name column.</p>
 </div>
-<h3 id="source-csv-format" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="49">Source CSV Format</h3>
-<p sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="50">The source CSV file must contain a header row with the following columns:</p>
-<pre><code class="lang-bash" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="52">FileID,FolderID,Name
+<h3 id="source-csv-format">Source CSV Format</h3>
+<p>The source CSV file must contain a header row with the following columns:</p>
+<pre><code class="lang-bash">FileID,FolderID,Name
 12345,678,1.sldprt
 12346,678,2.sldprt
 </code></pre>
-<div class="IMPORTANT" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="57">
+<div class="IMPORTANT">
 <h5>Important</h5>
-<p sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="58">The <code sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="58">Name</code> column is optional. PDMShell uses this value to destroy items. You can enter the names of files that were previously deleted; PDMShell will attempt to delete them (which will fail) and then proceed to destroy them.</p>
+<p>The <code>Name</code> column is optional. PDMShell uses this value to destroy items. You can enter the names of files that were previously deleted; PDMShell will attempt to delete them (which will fail) and then proceed to destroy them.</p>
 </div>
-<table sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="60">
+<table>
 <thead>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="60">
-<th sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="60">Column</th>
-<th sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="60">Description</th>
+<tr>
+<th>Column</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="62">
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="62">FileID</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="62">The document ID of the file</td>
+<tr>
+<td>FileID</td>
+<td>The document ID of the file</td>
 </tr>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="63">
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="63">FolderID</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="63">The folder ID containing the file</td>
+<tr>
+<td>FolderID</td>
+<td>The folder ID containing the file</td>
 </tr>
 </tbody>
 </table>
-<h3 id="results-csv-format" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="65">Results CSV Format</h3>
-<p sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="66">If <code sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="66">-csv</code> is specified, PDMShell will generate a results file containing:</p>
-<pre><code class="lang-bash" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="68">FileID,FolderID,Error
+<h3 id="results-csv-format">Results CSV Format</h3>
+<p>If <code>-csv</code> is specified, PDMShell will generate a results file containing:</p>
+<pre><code class="lang-bash">FileID,FolderID,Error
 12345,678,&quot;DELETE error: File Not Found&quot;
 </code></pre>
-<h3 id="results-csv-columns" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="73">Results CSV Columns</h3>
-<table sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="74">
+<h3 id="results-csv-columns">Results CSV Columns</h3>
+<table>
 <thead>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="74">
-<th sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="74">Column</th>
-<th sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="74">Description</th>
+<tr>
+<th>Column</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="76">
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="76">FileID</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="76">File ID</td>
+<tr>
+<td>FileID</td>
+<td>File ID</td>
 </tr>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="77">
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="77">FolderID</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="77">Folder ID</td>
+<tr>
+<td>FolderID</td>
+<td>Folder ID</td>
 </tr>
-<tr sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="78">
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="78">Error</td>
-<td sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="78">Error message</td>
+<tr>
+<td>Error</td>
+<td>Error message</td>
 </tr>
 </tbody>
 </table>
-<h2 id="remarks" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="80">Remarks</h2>
-<ul sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="81">
-<li sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="81">The source file must be a CSV file with a header row.</li>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>The source file must be a CSV file with a header row.</li>
 </ul>
-<h2 id="examples" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="83">Examples</h2>
-<pre><code class="lang-bash" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="84">## Delete files from CSV:
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash">## Delete files from CSV:
 deletefromsource -filePath &quot;files to delete.csv&quot;
 </code></pre>
-<pre><code class="lang-bash" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="88">##Delete and destroy files:
+<pre><code class="lang-bash">##Delete and destroy files:
 deletefromsource -filePath &quot;files to delete.csv&quot; -destroy
 </code></pre>
-<pre><code class="lang-bash" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="92">## Delete, destroy, and export results:
+<pre><code class="lang-bash">## Delete, destroy, and export results:
 deletefromsource -filePath &quot;files to delete.csv&quot; -destroy -csv &quot;results.csv&quot;
 </code></pre>
-<pre><code class="lang-bash" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="96">## Delete, destroy (50 files at a time in each folder), and export results:
+<pre><code class="lang-bash">## Delete, destroy (50 files at a time in each folder), and export results:
 deletefromsource -filePath &quot;files to delete.csv&quot; -destroy -csv &quot;results.csv&quot; -batch 50
 </code></pre>
-<h2 id="availability" sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="101">Availability</h2>
-<p sourcefile="src/DELETEFROMSOURCE.md" sourcestartlinenumber="102">Available since PDMShell 2.0.2.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.2.</p>
 
 </article>
 

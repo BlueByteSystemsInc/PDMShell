@@ -85,89 +85,89 @@
         </div>
 
         <article data-uid="">
-<h1 id="msgbox" sourcefile="src/MSGBOX.md" sourcestartlinenumber="5">msgbox</h1>
+<h1 id="msgbox">msgbox</h1>
 
-<h2 id="description" sourcefile="src/MSGBOX.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/MSGBOX.md" sourcestartlinenumber="7">The <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="7">msgbox</code> command shows a Windows message box with the specified text.</p>
-<p sourcefile="src/MSGBOX.md" sourcestartlinenumber="9">Use <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="9">msgbox</code> in scripts when you need to display a simple notification or checkpoint message to the user.</p>
-<h2 id="syntax" sourcefile="src/MSGBOX.md" sourcestartlinenumber="11">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/MSGBOX.md" sourcestartlinenumber="13">msgbox -value message [-title title] [-icon icon]
+<h2 id="description">Description</h2>
+<p>The <code>msgbox</code> command shows a Windows message box with the specified text.</p>
+<p>Use <code>msgbox</code> in scripts when you need to display a simple notification or checkpoint message to the user.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">msgbox -value message [-title title] [-icon icon]
 </code></pre>
-<h2 id="parameters" sourcefile="src/MSGBOX.md" sourcestartlinenumber="17">Parameters</h2>
-<table sourcefile="src/MSGBOX.md" sourcestartlinenumber="19">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/MSGBOX.md" sourcestartlinenumber="19">
-<th sourcefile="src/MSGBOX.md" sourcestartlinenumber="19">Parameter</th>
-<th sourcefile="src/MSGBOX.md" sourcestartlinenumber="19">Required</th>
-<th sourcefile="src/MSGBOX.md" sourcestartlinenumber="19">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/MSGBOX.md" sourcestartlinenumber="21">
-<td sourcefile="src/MSGBOX.md" sourcestartlinenumber="21"><code sourcefile="src/MSGBOX.md" sourcestartlinenumber="21">-value</code></td>
-<td sourcefile="src/MSGBOX.md" sourcestartlinenumber="21">Yes</td>
-<td sourcefile="src/MSGBOX.md" sourcestartlinenumber="21"><em sourcefile="src/MSGBOX.md" sourcestartlinenumber="21">(Required)</em> Message text to display in the message box.</td>
+<tr>
+<td><code>-value</code></td>
+<td>Yes</td>
+<td><em>(Required)</em> Message text to display in the message box.</td>
 </tr>
-<tr sourcefile="src/MSGBOX.md" sourcestartlinenumber="22">
-<td sourcefile="src/MSGBOX.md" sourcestartlinenumber="22"><code sourcefile="src/MSGBOX.md" sourcestartlinenumber="22">-title</code></td>
-<td sourcefile="src/MSGBOX.md" sourcestartlinenumber="22">No</td>
-<td sourcefile="src/MSGBOX.md" sourcestartlinenumber="22"><em sourcefile="src/MSGBOX.md" sourcestartlinenumber="22">(Optional)</em> Message box title. If omitted, PDMShell uses the current PDMShell version as the title.</td>
+<tr>
+<td><code>-title</code></td>
+<td>No</td>
+<td><em>(Optional)</em> Message box title. If omitted, PDMShell uses the current PDMShell version as the title.</td>
 </tr>
-<tr sourcefile="src/MSGBOX.md" sourcestartlinenumber="23">
-<td sourcefile="src/MSGBOX.md" sourcestartlinenumber="23"><code sourcefile="src/MSGBOX.md" sourcestartlinenumber="23">-icon</code></td>
-<td sourcefile="src/MSGBOX.md" sourcestartlinenumber="23">No</td>
-<td sourcefile="src/MSGBOX.md" sourcestartlinenumber="23"><em sourcefile="src/MSGBOX.md" sourcestartlinenumber="23">(Optional)</em> Message box icon. Valid values are <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="23">None</code>, <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="23">Information</code>, <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="23">Warning</code>, <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="23">Error</code>, and <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="23">Question</code>. If omitted, PDMShell uses <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="23">Information</code>.</td>
+<tr>
+<td><code>-icon</code></td>
+<td>No</td>
+<td><em>(Optional)</em> Message box icon. Valid values are <code>None</code>, <code>Information</code>, <code>Warning</code>, <code>Error</code>, and <code>Question</code>. If omitted, PDMShell uses <code>Information</code>.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/MSGBOX.md" sourcestartlinenumber="25">Parameter Details</h3>
-<ul sourcefile="src/MSGBOX.md" sourcestartlinenumber="27">
-<li sourcefile="src/MSGBOX.md" sourcestartlinenumber="27"><p sourcefile="src/MSGBOX.md" sourcestartlinenumber="27"><code sourcefile="src/MSGBOX.md" sourcestartlinenumber="27">value</code>:<br>
-<em sourcefile="src/MSGBOX.md" sourcestartlinenumber="28">(Required)</em> Message text to display in the message box.</p>
+<h3 id="parameter-details">Parameter Details</h3>
+<ul>
+<li><p><code>value</code>:<br>
+<em>(Required)</em> Message text to display in the message box.</p>
 </li>
-<li sourcefile="src/MSGBOX.md" sourcestartlinenumber="30"><p sourcefile="src/MSGBOX.md" sourcestartlinenumber="30"><code sourcefile="src/MSGBOX.md" sourcestartlinenumber="30">title</code>:<br>
-<em sourcefile="src/MSGBOX.md" sourcestartlinenumber="31">(Optional)</em> Message box title. If omitted, PDMShell uses the current PDMShell version as the title.</p>
+<li><p><code>title</code>:<br>
+<em>(Optional)</em> Message box title. If omitted, PDMShell uses the current PDMShell version as the title.</p>
 </li>
-<li sourcefile="src/MSGBOX.md" sourcestartlinenumber="33"><p sourcefile="src/MSGBOX.md" sourcestartlinenumber="33"><code sourcefile="src/MSGBOX.md" sourcestartlinenumber="33">icon</code>:<br>
-<em sourcefile="src/MSGBOX.md" sourcestartlinenumber="34">(Optional)</em> Message box icon. Valid values are <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="34">None</code>, <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="34">Information</code>, <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="34">Warning</code>, <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="34">Error</code>, and <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="34">Question</code>. If omitted, PDMShell uses <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="34">Information</code>.</p>
+<li><p><code>icon</code>:<br>
+<em>(Optional)</em> Message box icon. Valid values are <code>None</code>, <code>Information</code>, <code>Warning</code>, <code>Error</code>, and <code>Question</code>. If omitted, PDMShell uses <code>Information</code>.</p>
 </li>
 </ul>
-<h3 id="visual-editor" sourcefile="src/MSGBOX.md" sourcestartlinenumber="36">Visual Editor</h3>
-<p sourcefile="src/MSGBOX.md" sourcestartlinenumber="37">In the visual editor command builder, the <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="37">icon</code> parameter is shown as a single-select combo box with the supported icon values:</p>
-<ul sourcefile="src/MSGBOX.md" sourcestartlinenumber="39">
-<li sourcefile="src/MSGBOX.md" sourcestartlinenumber="39"><code sourcefile="src/MSGBOX.md" sourcestartlinenumber="39">None</code></li>
-<li sourcefile="src/MSGBOX.md" sourcestartlinenumber="40"><code sourcefile="src/MSGBOX.md" sourcestartlinenumber="40">Information</code></li>
-<li sourcefile="src/MSGBOX.md" sourcestartlinenumber="41"><code sourcefile="src/MSGBOX.md" sourcestartlinenumber="41">Warning</code></li>
-<li sourcefile="src/MSGBOX.md" sourcestartlinenumber="42"><code sourcefile="src/MSGBOX.md" sourcestartlinenumber="42">Error</code></li>
-<li sourcefile="src/MSGBOX.md" sourcestartlinenumber="43"><code sourcefile="src/MSGBOX.md" sourcestartlinenumber="43">Question</code></li>
+<h3 id="visual-editor">Visual Editor</h3>
+<p>In the visual editor command builder, the <code>icon</code> parameter is shown as a single-select combo box with the supported icon values:</p>
+<ul>
+<li><code>None</code></li>
+<li><code>Information</code></li>
+<li><code>Warning</code></li>
+<li><code>Error</code></li>
+<li><code>Question</code></li>
 </ul>
-<h3 id="placeholders" sourcefile="src/MSGBOX.md" sourcestartlinenumber="45">Placeholders</h3>
-<p sourcefile="src/MSGBOX.md" sourcestartlinenumber="46">The <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="46">value</code> and <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="46">title</code> parameters support session placeholders. PDMShell evaluates placeholders before showing the message box, so you can display values from the current session in the message text.</p>
-<p sourcefile="src/MSGBOX.md" sourcestartlinenumber="48">For example, after logging in to a vault, <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="48">$vaultName</code> resolves to the active vault name:</p>
-<pre><code class="lang-bash" sourcefile="src/MSGBOX.md" sourcestartlinenumber="50">msgbox -value &quot;vaultName = $vaultName&quot; -icon &quot;Information&quot;
+<h3 id="placeholders">Placeholders</h3>
+<p>The <code>value</code> and <code>title</code> parameters support session placeholders. PDMShell evaluates placeholders before showing the message box, so you can display values from the current session in the message text.</p>
+<p>For example, after logging in to a vault, <code>$vaultName</code> resolves to the active vault name:</p>
+<pre><code class="lang-bash">msgbox -value &quot;vaultName = $vaultName&quot; -icon &quot;Information&quot;
 </code></pre>
-<p sourcefile="src/MSGBOX.md" sourcestartlinenumber="54"><img src="../images/msgbox-placeholders.png" sourcefile="src/MSGBOX.md" sourcestartlinenumber="54" alt="msgbox command showing the evaluated vaultName placeholder"></p>
-<p sourcefile="src/MSGBOX.md" sourcestartlinenumber="56">Common session placeholders include <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="56">$vaultName</code>, <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="56">$date</code>, <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="56">$time</code>, <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="56">$guid</code>, and <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="56">$tempFolder</code>.</p>
-<h2 id="examples" sourcefile="src/MSGBOX.md" sourcestartlinenumber="58">Examples</h2>
-<pre><code class="lang-bash" sourcefile="src/MSGBOX.md" sourcestartlinenumber="59">msgbox -value &quot;Hello from PDMShell&quot;
+<p><img src="../images/msgbox-placeholders.png" alt="msgbox command showing the evaluated vaultName placeholder"></p>
+<p>Common session placeholders include <code>$vaultName</code>, <code>$date</code>, <code>$time</code>, <code>$guid</code>, and <code>$tempFolder</code>.</p>
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash">msgbox -value &quot;Hello from PDMShell&quot;
 </code></pre>
-<pre><code class="lang-bash" sourcefile="src/MSGBOX.md" sourcestartlinenumber="63">msgbox -value &quot;Script completed successfully.&quot; -title &quot;Batch Complete&quot; -icon Information
+<pre><code class="lang-bash">msgbox -value &quot;Script completed successfully.&quot; -title &quot;Batch Complete&quot; -icon Information
 </code></pre>
-<pre><code class="lang-bash" sourcefile="src/MSGBOX.md" sourcestartlinenumber="67">msgbox -value &quot;The export failed.&quot; -title &quot;Export Error&quot; -icon Error
+<pre><code class="lang-bash">msgbox -value &quot;The export failed.&quot; -title &quot;Export Error&quot; -icon Error
 </code></pre>
-<h2 id="remarks" sourcefile="src/MSGBOX.md" sourcestartlinenumber="71">Remarks</h2>
-<ul sourcefile="src/MSGBOX.md" sourcestartlinenumber="72">
-<li sourcefile="src/MSGBOX.md" sourcestartlinenumber="72">The command displays an informational Windows message box.</li>
-<li sourcefile="src/MSGBOX.md" sourcestartlinenumber="73">When <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="73">title</code> is not specified, the message box title defaults to the PDMShell version.</li>
-<li sourcefile="src/MSGBOX.md" sourcestartlinenumber="74">When <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="74">icon</code> is not specified, the message box uses the <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="74">Information</code> icon.</li>
-<li sourcefile="src/MSGBOX.md" sourcestartlinenumber="75">Wrap the value in quotes when the message contains spaces.</li>
-<li sourcefile="src/MSGBOX.md" sourcestartlinenumber="76">Wrap the title in quotes when it contains spaces.</li>
-<li sourcefile="src/MSGBOX.md" sourcestartlinenumber="77">The script continues after the user closes the message box.</li>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>The command displays an informational Windows message box.</li>
+<li>When <code>title</code> is not specified, the message box title defaults to the PDMShell version.</li>
+<li>When <code>icon</code> is not specified, the message box uses the <code>Information</code> icon.</li>
+<li>Wrap the value in quotes when the message contains spaces.</li>
+<li>Wrap the title in quotes when it contains spaces.</li>
+<li>The script continues after the user closes the message box.</li>
 </ul>
-<h2 id="availability" sourcefile="src/MSGBOX.md" sourcestartlinenumber="79">Availability</h2>
-<p sourcefile="src/MSGBOX.md" sourcestartlinenumber="80">Available since PDMShell 4.0.8.</p>
-<h2 id="last-updated" sourcefile="src/MSGBOX.md" sourcestartlinenumber="82">Last Updated</h2>
-<p sourcefile="src/MSGBOX.md" sourcestartlinenumber="83">Updated in PDMShell 4.0.14 so <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="83">value</code> and <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="83">title</code> support session-level placeholders such as <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="83">$vaultName</code>, <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="83">$date</code>, <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="83">$time</code>, <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="83">$guid</code>, and <code sourcefile="src/MSGBOX.md" sourcestartlinenumber="83">$tempFolder</code>.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 4.0.8.</p>
+<h2 id="last-updated">Last Updated</h2>
+<p>Updated in PDMShell 4.0.14 so <code>value</code> and <code>title</code> support session-level placeholders such as <code>$vaultName</code>, <code>$date</code>, <code>$time</code>, <code>$guid</code>, and <code>$tempFolder</code>.</p>
 
 </article>
 

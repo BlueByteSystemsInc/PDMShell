@@ -85,161 +85,161 @@
         </div>
 
         <article data-uid="">
-<h1 id="pdmshell-add-in" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="5">PDMShell add-in</h1>
+<h1 id="pdmshell-add-in">PDMShell add-in</h1>
 
-<p sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="7">The PDMShell add-in lets SOLIDWORKS PDM administrators run <code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="7">.pdmshell</code> scripts directly from PDM menus and PDM event trigger points. It is designed for the same class of automation normally handled with Dispatch: user commands, event-driven rules, file and folder automation, condition checks, and administrator-controlled deployment.</p>
-<p sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="9">Instead of building automation from a fixed list of Dispatch actions, the add-in runs PDMShell scripts. This gives administrators access to the PDMShell command engine, the visual script editor, placeholders, PDM variables, and headless execution through <code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="9">pdmcli.exe</code>.</p>
-<div class="TIP" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="11">
+<p>The PDMShell add-in lets SOLIDWORKS PDM administrators run <code>.pdmshell</code> scripts directly from PDM menus and PDM event trigger points. It is designed for the same class of automation normally handled with Dispatch: user commands, event-driven rules, file and folder automation, condition checks, and administrator-controlled deployment.</p>
+<p>Instead of building automation from a fixed list of Dispatch actions, the add-in runs PDMShell scripts. This gives administrators access to the PDMShell command engine, the visual script editor, placeholders, PDM variables, and headless execution through <code>pdmcli.exe</code>.</p>
+<div class="TIP">
 <h5>Tip</h5>
-<p sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="12">Need help building scripts or automation workflows? Blue Byte Systems offers <a href="https://bluebyte.biz/product/enterprise-support-services/" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="12">Enterprise Support Services</a> for customers who want help designing, developing, or troubleshooting PDMShell automation.</p>
+<p>Need help building scripts or automation workflows? Blue Byte Systems offers <a href="https://bluebyte.biz/product/enterprise-support-services/">Enterprise Support Services</a> for customers who want help designing, developing, or troubleshooting PDMShell automation.</p>
 </div>
-<div class="NOTE" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="14">
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="15">The PDMShell add-in is included with the premium version. You can download it from your Blue Byte Systems Inc <a href="https://bluebyte.biz/account" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="15">account</a> or deploy it with <a href="https://docs.bluebyte.biz/src/cdpdm.html" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="15">PDMDeploy</a>.</p>
-<p sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="17">If the vault is in a restricted or air-gapped environment that only allows Microsoft-hosted links, use the add-in's <code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="17">PDMShell Download Center...</code> menu command to open the Microsoft SharePoint folder that contains PDMShell <code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="17">.cex</code> files.</p>
+<p>The PDMShell add-in is included with the premium version. You can download it from your Blue Byte Systems Inc <a href="https://bluebyte.biz/account">account</a> or deploy it with <a href="https://docs.bluebyte.biz/src/cdpdm.html">PDMDeploy</a>.</p>
+<p>If the vault is in a restricted or air-gapped environment that only allows Microsoft-hosted links, use the add-in's <code>PDMShell Download Center...</code> menu command to open the Microsoft SharePoint folder that contains PDMShell <code>.cex</code> files.</p>
 </div>
-<h2 id="add-in-menu-commands" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="19">Add-in menu commands</h2>
-<p sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="21">Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, and right-click it to open the add-in menu.</p>
+<h2 id="add-in-menu-commands">Add-in menu commands</h2>
+<p>Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, and right-click it to open the add-in menu.</p>
 <p>
   <img src="../images/pdmshell-addin-admin-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Edit Scripts, Manage PDMShell Licenses, PDMShell Download Center, Performance, and Open PDMShell commands" style="max-width:520px;width:100%;height:auto;">
 </p>
-<p sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="27">The add-in menu includes:</p>
-<ul sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="29">
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="29"><code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="29">Edit Scripts...</code> to open the Script Editor.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="30"><code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="30">Manage PDMShell Licenses...</code> for online and offline license management.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="31"><code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="31">Open PDMShell...</code> to launch the PDMShell application bundled with the add-in and log in to the current vault.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="32"><code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="32">PDMShell Download Center...</code> for restricted systems that need Microsoft-hosted <code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="32">.cex</code> downloads.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="33"><code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="33">Performance...</code> to review add-in execution timings. This command is available only to PDM administrators.</li>
+<p>The add-in menu includes:</p>
+<ul>
+<li><code>Edit Scripts...</code> to open the Script Editor.</li>
+<li><code>Manage PDMShell Licenses...</code> for online and offline license management.</li>
+<li><code>Open PDMShell...</code> to launch the PDMShell application bundled with the add-in and log in to the current vault.</li>
+<li><code>PDMShell Download Center...</code> for restricted systems that need Microsoft-hosted <code>.cex</code> downloads.</li>
+<li><code>Performance...</code> to review add-in execution timings. This command is available only to PDM administrators.</li>
 </ul>
-<p sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="35">When the add-in uses the license pool, <code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="35">Open PDMShell...</code> borrows a seat while the launched application is running and releases it when PDMShell closes. If no pooled seat is available, you can cancel or open PDMShell with the Free version. In machine-license mode, the launched application uses the PDMShell license activated on that workstation.</p>
-<h2 id="add-in-workflow" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="37">Add-in workflow</h2>
-<p sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="39">Use <code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="39">Edit Scripts...</code> to open the <a href="addin/script-editor.html" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="39">Script Editor</a>. The Script Editor is where administrators create script entries, set permissions and conditions, add command menu text, select PDM command hooks, and edit the PDMShell script code.</p>
-<h2 id="what-you-can-automate" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="41">What you can automate</h2>
-<ul sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="43">
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="43">Add right-click commands such as <code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="43">PDMShell\Rename Files</code>.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="44">Create SOLIDWORKS PDM Tasks that run PDMShell scripts, similar to the built-in Convert task.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="45">Run scripts before or after checkout, check-in, undo checkout, state change, add, delete, move, copy, rename, get, label, card button, and folder commands.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="46">Restrict scripts to selected PDM users or groups.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="47">Validate conditions before a script runs.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="48">Pass selected files and folders to PDMShell with <code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="48">runscript -items</code>.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="49">Test condition values with a message before enabling production automation.</li>
+<p>When the add-in uses the license pool, <code>Open PDMShell...</code> borrows a seat while the launched application is running and releases it when PDMShell closes. If no pooled seat is available, you can cancel or open PDMShell with the Free version. In machine-license mode, the launched application uses the PDMShell license activated on that workstation.</p>
+<h2 id="add-in-workflow">Add-in workflow</h2>
+<p>Use <code>Edit Scripts...</code> to open the <a href="addin/script-editor.html">Script Editor</a>. The Script Editor is where administrators create script entries, set permissions and conditions, add command menu text, select PDM command hooks, and edit the PDMShell script code.</p>
+<h2 id="what-you-can-automate">What you can automate</h2>
+<ul>
+<li>Add right-click commands such as <code>PDMShell\Rename Files</code>.</li>
+<li>Create SOLIDWORKS PDM Tasks that run PDMShell scripts, similar to the built-in Convert task.</li>
+<li>Run scripts before or after checkout, check-in, undo checkout, state change, add, delete, move, copy, rename, get, label, card button, and folder commands.</li>
+<li>Restrict scripts to selected PDM users or groups.</li>
+<li>Validate conditions before a script runs.</li>
+<li>Pass selected files and folders to PDMShell with <code>runscript -items</code>.</li>
+<li>Test condition values with a message before enabling production automation.</li>
 </ul>
-<h2 id="documentation" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="51">Documentation</h2>
-<table sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="53">
+<h2 id="documentation">Documentation</h2>
+<table>
 <thead>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="53">
-<th sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="53">Article</th>
-<th sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="53">Use it for</th>
+<tr>
+<th>Article</th>
+<th>Use it for</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="55">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="55"><a href="addin/installation.html" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="55">PDMShell add-in installation</a></td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="55">Loading the add-in, opening the Script Editor, and using the Microsoft-hosted Download Center</td>
+<tr>
+<td><a href="addin/installation.html">PDMShell add-in installation</a></td>
+<td>Loading the add-in, opening the Script Editor, and using the Microsoft-hosted Download Center</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="56">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="56"><a href="addin/license-manager.html" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="56">Manage add-in licenses</a></td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="56">Managing PDMShell add-in license keys from the PDM Administration Tool</td>
+<tr>
+<td><a href="addin/license-manager.html">Manage add-in licenses</a></td>
+<td>Managing PDMShell add-in license keys from the PDM Administration Tool</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="57">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="57"><a href="license-pool.html" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="57">License Pool</a></td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="57">Managing pooled vault licenses for add-in automation</td>
+<tr>
+<td><a href="license-pool.html">License Pool</a></td>
+<td>Managing pooled vault licenses for add-in automation</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="58">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="58"><a href="machine-license.html" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="58">Machine License</a></td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="58">Using the local workstation license for add-in automation</td>
+<tr>
+<td><a href="machine-license.html">Machine License</a></td>
+<td>Using the local workstation license for add-in automation</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="59">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="59"><a href="addin/script-editor.html" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="59">Script Editor</a></td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="59">Creating, importing, exporting, saving, and editing script entries</td>
+<tr>
+<td><a href="addin/script-editor.html">Script Editor</a></td>
+<td>Creating, importing, exporting, saving, and editing script entries</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="60">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="60"><a href="addin/permissions.html" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="60">Permissions</a></td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="60">Limiting scripts to users and groups</td>
+<tr>
+<td><a href="addin/permissions.html">Permissions</a></td>
+<td>Limiting scripts to users and groups</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="61">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="61"><a href="addin/conditions.html" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="61">Conditions</a></td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="61">Building wait-style condition expressions</td>
+<tr>
+<td><a href="addin/conditions.html">Conditions</a></td>
+<td>Building wait-style condition expressions</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="62">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="62"><a href="addin/command-menu.html" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="62">Command menu scripts</a></td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="62">Adding right-click PDM menu commands</td>
+<tr>
+<td><a href="addin/command-menu.html">Command menu scripts</a></td>
+<td>Adding right-click PDM menu commands</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="63">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="63"><a href="addin/tasks.html" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="63">PDM Tasks</a></td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="63">Creating SOLIDWORKS PDM Tasks that run PDMShell scripts</td>
+<tr>
+<td><a href="addin/tasks.html">PDM Tasks</a></td>
+<td>Creating SOLIDWORKS PDM Tasks that run PDMShell scripts</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="64">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="64"><a href="addin/trigger-points.html" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="64">Event trigger points</a></td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="64">Running scripts from PDM command hooks</td>
+<tr>
+<td><a href="addin/trigger-points.html">Event trigger points</a></td>
+<td>Running scripts from PDM command hooks</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="65">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="65"><a href="addin/placeholders.html" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="65">Placeholders and command context</a></td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="65">Using file, folder, command, and variable placeholders</td>
+<tr>
+<td><a href="addin/placeholders.html">Placeholders and command context</a></td>
+<td>Using file, folder, command, and variable placeholders</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="66">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="66"><a href="addin/troubleshooting.html" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="66">Testing and troubleshooting</a></td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="66">Validating scripts and diagnosing common issues</td>
+<tr>
+<td><a href="addin/troubleshooting.html">Testing and troubleshooting</a></td>
+<td>Validating scripts and diagnosing common issues</td>
 </tr>
 </tbody>
 </table>
-<h2 id="dispatch-comparison" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="68">Dispatch comparison</h2>
-<p sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="70">Dispatch action scripts typically combine triggers, conditions, variables, and actions. The PDMShell add-in uses a similar administrator workflow, but the action body is a PDMShell script.</p>
-<table sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="72">
+<h2 id="dispatch-comparison">Dispatch comparison</h2>
+<p>Dispatch action scripts typically combine triggers, conditions, variables, and actions. The PDMShell add-in uses a similar administrator workflow, but the action body is a PDMShell script.</p>
+<table>
 <thead>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="72">
-<th sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="72">Dispatch idea</th>
-<th sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="72">PDMShell add-in equivalent</th>
+<tr>
+<th>Dispatch idea</th>
+<th>PDMShell add-in equivalent</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="74">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="74">Action script</td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="74">A configured PDMShell script</td>
+<tr>
+<td>Action script</td>
+<td>A configured PDMShell script</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="75">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="75">Administrative action</td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="75">Script configured in the Script Editor</td>
+<tr>
+<td>Administrative action</td>
+<td>Script configured in the Script Editor</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="76">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="76">Menu command activation</td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="76">Menu trigger with command menu text</td>
+<tr>
+<td>Menu command activation</td>
+<td>Menu trigger with command menu text</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="77">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="77">PDM task</td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="77">PDMShell task add-in running a <code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="77">.pdmshell</code> script</td>
+<tr>
+<td>PDM task</td>
+<td>PDMShell task add-in running a <code>.pdmshell</code> script</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="78">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="78">PDM event activation</td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="78">Trigger points such as checkout, check-in, state change, add, delete, move, copy, rename, and folder events</td>
+<tr>
+<td>PDM event activation</td>
+<td>Trigger points such as checkout, check-in, state change, add, delete, move, copy, rename, and folder events</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="79">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="79">Conditions</td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="79">PDMShell wait-style condition expression</td>
+<tr>
+<td>Conditions</td>
+<td>PDMShell wait-style condition expression</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="80">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="80">Variables</td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="80">PDMShell placeholders and PDM variable placeholders</td>
+<tr>
+<td>Variables</td>
+<td>PDMShell placeholders and PDM variable placeholders</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="81">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="81">Shell execute action</td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="81">The add-in runs the configured <code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="81">.pdmshell</code> script</td>
+<tr>
+<td>Shell execute action</td>
+<td>The add-in runs the configured <code>.pdmshell</code> script</td>
 </tr>
-<tr sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="82">
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="82">Debugging a script</td>
-<td sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="82">Condition test message, visual script editor, and standalone PDMShell testing</td>
+<tr>
+<td>Debugging a script</td>
+<td>Condition test message, visual script editor, and standalone PDMShell testing</td>
 </tr>
 </tbody>
 </table>
-<h2 id="recommended-rollout" sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="84">Recommended rollout</h2>
-<ol sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="86">
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="86">Build and test the <code sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="86">.pdmshell</code> script outside the add-in.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="87">Add the script in the Script Editor.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="88">Enable the condition test message while validating conditions.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="89">Configure permissions for a small administrator group first.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="90">Enable a command menu or trigger point.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="91">Test against a small set of files.</li>
-<li sourcefile="src/TASKSCRIPT.md" sourcestartlinenumber="92">Expand permissions after the automation behaves as expected.</li>
+<h2 id="recommended-rollout">Recommended rollout</h2>
+<ol>
+<li>Build and test the <code>.pdmshell</code> script outside the add-in.</li>
+<li>Add the script in the Script Editor.</li>
+<li>Enable the condition test message while validating conditions.</li>
+<li>Configure permissions for a small administrator group first.</li>
+<li>Enable a command menu or trigger point.</li>
+<li>Test against a small set of files.</li>
+<li>Expand permissions after the automation behaves as expected.</li>
 </ol>
 
 </article>

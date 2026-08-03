@@ -85,69 +85,69 @@
         </div>
 
         <article data-uid="">
-<h1 id="pasteasshared" sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="5">pasteasshared</h1>
+<h1 id="pasteasshared">pasteasshared</h1>
 
-<h2 id="description" sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="7">Shares one SOLIDWORKS PDM file, or files found by search, into another vault folder.</p>
-<p sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="9">The <code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="9">pasteasshared</code> command uses <code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="9">filePath</code> or <a href="SEARCH.html" sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="9"><code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="9">search</code></a> to select the source file or files. The <code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="9">directory</code> parameter is the destination vault folder where the shared file entries are created.</p>
-<p sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="11">This command uses the SOLIDWORKS PDM shared-file behavior. It does not create a copy of the file; it shares the same PDM file into another folder.</p>
-<h2 id="syntax" sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="13">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="15">pasteasshared (-filePath file_path | -search search_query) -directory target_vault_folder [-recursive]
+<h2 id="description">Description</h2>
+<p>Shares one SOLIDWORKS PDM file, or files found by search, into another vault folder.</p>
+<p>The <code>pasteasshared</code> command uses <code>filePath</code> or <a href="SEARCH.html"><code>search</code></a> to select the source file or files. The <code>directory</code> parameter is the destination vault folder where the shared file entries are created.</p>
+<p>This command uses the SOLIDWORKS PDM shared-file behavior. It does not create a copy of the file; it shares the same PDM file into another folder.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">pasteasshared (-filePath file_path | -search search_query) -directory target_vault_folder [-recursive]
 </code></pre>
-<h2 id="parameters" sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="19">Parameters</h2>
-<table sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="21">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="21">
-<th sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="21">Parameter</th>
-<th sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="21">Required</th>
-<th sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="21">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="23">
-<td sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="23"><code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="23">-filePath</code></td>
-<td sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="23">Mode-dependent</td>
-<td sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="23">See parameter details below.</td>
+<tr>
+<td><code>-filePath</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="24">
-<td sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="24"><code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="24">-search</code></td>
-<td sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="24">Mode-dependent</td>
-<td sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="24">See parameter details below.</td>
+<tr>
+<td><code>-search</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="25">
-<td sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="25"><code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="25">-directory</code></td>
-<td sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="25">Mode-dependent</td>
-<td sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="25">See parameter details below.</td>
+<tr>
+<td><code>-directory</code></td>
+<td>Mode-dependent</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="26">
-<td sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="26"><code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="26">-recursive</code></td>
-<td sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="26">No</td>
-<td sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="26">See parameter details below.</td>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="28">Parameter Details</h3>
-<ul sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="30">
-<li sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="30"><code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="30">filePath</code> Optional. Single source file to share. Use either <code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="30">filePath</code> or <a href="SEARCH.html" sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="30"><code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="30">search</code></a>.</li>
-<li sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="31"><code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="31">search</code> Optional. Search query used to find files to share. Use either <code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="31">filePath</code> or <code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="31">search</code>.</li>
-<li sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="32"><code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="32">directory</code> Required. Destination vault folder where the shared file entries are created.</li>
-<li sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="33"><code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="33">recursive</code> Optional. When used with <code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="33">search</code>, includes matching files in subfolders.</li>
+<h3 id="parameter-details">Parameter Details</h3>
+<ul>
+<li><code>filePath</code> Optional. Single source file to share. Use either <code>filePath</code> or <a href="SEARCH.html"><code>search</code></a>.</li>
+<li><code>search</code> Optional. Search query used to find files to share. Use either <code>filePath</code> or <code>search</code>.</li>
+<li><code>directory</code> Required. Destination vault folder where the shared file entries are created.</li>
+<li><code>recursive</code> Optional. When used with <code>search</code>, includes matching files in subfolders.</li>
 </ul>
-<h2 id="validation" sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="35">Validation</h2>
-<ul sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="36">
-<li sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="36"><code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="36">directory</code> is required.</li>
-<li sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="37">Specify either <code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="37">filePath</code> or <code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="37">search</code>, but not both.</li>
-<li sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="38"><code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="38">recursive</code> applies only when using <code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="38">search</code>.</li>
+<h2 id="validation">Validation</h2>
+<ul>
+<li><code>directory</code> is required.</li>
+<li>Specify either <code>filePath</code> or <code>search</code>, but not both.</li>
+<li><code>recursive</code> applies only when using <code>search</code>.</li>
 </ul>
-<h2 id="behavior" sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="40">Behavior</h2>
-<ul sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="41">
-<li sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="41">Shares each selected source file into the destination folder.</li>
-<li sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="42">Keeps the same PDM file ID because this is a shared file, not a copied file.</li>
-<li sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="43">Reports files that cannot be shared, for example when a file with the same name already exists in the destination folder or the user does not have permission.</li>
-<li sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="44">Skips duplicate search results before attempting to share.</li>
+<h2 id="behavior">Behavior</h2>
+<ul>
+<li>Shares each selected source file into the destination folder.</li>
+<li>Keeps the same PDM file ID because this is a shared file, not a copied file.</li>
+<li>Reports files that cannot be shared, for example when a file with the same name already exists in the destination folder or the user does not have permission.</li>
+<li>Skips duplicate search results before attempting to share.</li>
 </ul>
-<h2 id="examples" sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="46">Examples</h2>
-<pre><code class="lang-bash" sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="47"># pasteasshared
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash"># pasteasshared
 pasteasshared -filePath &quot;Part.sldprt&quot; -directory &quot;Shared Parts&quot;
 
 # pasteasshared
@@ -156,14 +156,14 @@ pasteasshared -search &quot;Name=%.sldprt&quot; -directory &quot;Shared Parts&qu
 # pasteasshared
 pasteasshared -search &quot;Name=%.sldprt&quot; -directory &quot;Shared Parts&quot; -recursive
 </code></pre>
-<h2 id="remarks" sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="58">Remarks</h2>
-<ul sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="59">
-<li sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="59">The destination <code sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="59">directory</code> must be a vault folder.</li>
-<li sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="60">If a file with the same name already exists in the destination folder, SOLIDWORKS PDM refuses the share.</li>
-<li sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="61">The user must have permission to share the selected files into the destination folder.</li>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>The destination <code>directory</code> must be a vault folder.</li>
+<li>If a file with the same name already exists in the destination folder, SOLIDWORKS PDM refuses the share.</li>
+<li>The user must have permission to share the selected files into the destination folder.</li>
 </ul>
-<h2 id="availability" sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="63">Availability</h2>
-<p sourcefile="src/PASTEASSHARED.md" sourcestartlinenumber="64">Available since PDMShell 4.0.9.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 4.0.9.</p>
 
 </article>
 

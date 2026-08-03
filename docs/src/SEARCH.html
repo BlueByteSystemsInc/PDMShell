@@ -85,242 +85,242 @@
         </div>
 
         <article data-uid="">
-<h1 id="search" sourcefile="src/SEARCH.md" sourcestartlinenumber="5">search</h1>
+<h1 id="search">search</h1>
 
-<h2 id="description" sourcefile="src/SEARCH.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="7">The <code sourcefile="src/SEARCH.md" sourcestartlinenumber="7">search</code> command allows users to search for files and folders in the current directory. It supports recursive searches, filtering, and output customization.</p>
-<h2 id="syntax" sourcefile="src/SEARCH.md" sourcestartlinenumber="9">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/SEARCH.md" sourcestartlinenumber="11">search -search -recursive -includesubfolders -csv -columns -duplicatesstrategy
+<h2 id="description">Description</h2>
+<p>The <code>search</code> command allows users to search for files and folders in the current directory. It supports recursive searches, filtering, and output customization.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">search -search -recursive -includesubfolders -csv -columns -duplicatesstrategy
 </code></pre>
-<h2 id="parameters" sourcefile="src/SEARCH.md" sourcestartlinenumber="15">Parameters</h2>
-<table sourcefile="src/SEARCH.md" sourcestartlinenumber="17">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="17">
-<th sourcefile="src/SEARCH.md" sourcestartlinenumber="17">Parameter</th>
-<th sourcefile="src/SEARCH.md" sourcestartlinenumber="17">Required</th>
-<th sourcefile="src/SEARCH.md" sourcestartlinenumber="17">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="19">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="19"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="19">-search</code></td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="19">Yes</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="19">Search keyword. This supports SQL wildcard %.</td>
+<tr>
+<td><code>-search</code></td>
+<td>Yes</td>
+<td>Search keyword. This supports SQL wildcard %.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="20">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="20"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="20">-recursive</code></td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="20">Yes</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="20">Searches through all subdirectories recursively.</td>
+<tr>
+<td><code>-recursive</code></td>
+<td>Yes</td>
+<td>Searches through all subdirectories recursively.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="21">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="21"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="21">-includesubfolders</code></td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="21">Yes</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="21">Includes subfolders in the search results.</td>
+<tr>
+<td><code>-includesubfolders</code></td>
+<td>Yes</td>
+<td>Includes subfolders in the search results.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="22">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="22"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="22">-csv</code></td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="22">Yes</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="22">Outputs the search results in CSV format.</td>
+<tr>
+<td><code>-csv</code></td>
+<td>Yes</td>
+<td>Outputs the search results in CSV format.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="23">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="23"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="23">-columns</code></td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="23">Yes</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="23">Specifies the columns to include in the output seperated by a comma.</td>
+<tr>
+<td><code>-columns</code></td>
+<td>Yes</td>
+<td>Specifies the columns to include in the output seperated by a comma.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="24">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="24"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="24">-duplicatesstrategy</code></td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="24">Yes</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="24">Defines how duplicate results are resolved when <code sourcefile="src/SEARCH.md" sourcestartlinenumber="24">DuplicatedBy</code> or <code sourcefile="src/SEARCH.md" sourcestartlinenumber="24">GroupBy</code> is specified in the search query. This parameter is supported for backward compatibility; you can also put <code sourcefile="src/SEARCH.md" sourcestartlinenumber="24">Strategy</code> or <code sourcefile="src/SEARCH.md" sourcestartlinenumber="24">DuplicatesStrategy</code>...</td>
+<tr>
+<td><code>-duplicatesstrategy</code></td>
+<td>Yes</td>
+<td>Defines how duplicate results are resolved when <code>DuplicatedBy</code> or <code>GroupBy</code> is specified in the search query. This parameter is supported for backward compatibility; you can also put <code>Strategy</code> or <code>DuplicatesStrategy</code>...</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="25">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="25"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="25">-lists</code></td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="25">No</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="25">search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns &quot;FileDate,Hash,Revision&quot;</td>
+<tr>
+<td><code>-lists</code></td>
+<td>No</td>
+<td>search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns &quot;FileDate,Hash,Revision&quot;</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/SEARCH.md" sourcestartlinenumber="27">Parameter Details</h3>
-<ul sourcefile="src/SEARCH.md" sourcestartlinenumber="29">
-<li sourcefile="src/SEARCH.md" sourcestartlinenumber="29"><p sourcefile="src/SEARCH.md" sourcestartlinenumber="29"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="29">search</code>: Search keyword. This supports SQL wildcard %.</p>
+<h3 id="parameter-details">Parameter Details</h3>
+<ul>
+<li><p><code>search</code>: Search keyword. This supports SQL wildcard %.</p>
 </li>
-<li sourcefile="src/SEARCH.md" sourcestartlinenumber="31"><p sourcefile="src/SEARCH.md" sourcestartlinenumber="31"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="31">recursive</code>: Searches through all subdirectories recursively.</p>
+<li><p><code>recursive</code>: Searches through all subdirectories recursively.</p>
 </li>
-<li sourcefile="src/SEARCH.md" sourcestartlinenumber="33"><p sourcefile="src/SEARCH.md" sourcestartlinenumber="33"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="33">includesubfolders</code>: Includes subfolders in the search results.</p>
+<li><p><code>includesubfolders</code>: Includes subfolders in the search results.</p>
 </li>
-<li sourcefile="src/SEARCH.md" sourcestartlinenumber="35"><p sourcefile="src/SEARCH.md" sourcestartlinenumber="35"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="35">csv</code>: Outputs the search results in CSV format.</p>
+<li><p><code>csv</code>: Outputs the search results in CSV format.</p>
 </li>
-<li sourcefile="src/SEARCH.md" sourcestartlinenumber="37"><p sourcefile="src/SEARCH.md" sourcestartlinenumber="37"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="37">columns</code>: Specifies the columns to include in the output seperated by a comma.</p>
+<li><p><code>columns</code>: Specifies the columns to include in the output seperated by a comma.</p>
 </li>
-<li sourcefile="src/SEARCH.md" sourcestartlinenumber="39"><p sourcefile="src/SEARCH.md" sourcestartlinenumber="39"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="39">duplicatesstrategy</code>: Defines how duplicate results are resolved when <code sourcefile="src/SEARCH.md" sourcestartlinenumber="39">DuplicatedBy</code> or <code sourcefile="src/SEARCH.md" sourcestartlinenumber="39">GroupBy</code> is specified in the search query. This parameter is supported for backward compatibility; you can also put <code sourcefile="src/SEARCH.md" sourcestartlinenumber="39">Strategy</code> or <code sourcefile="src/SEARCH.md" sourcestartlinenumber="39">DuplicatesStrategy</code> directly inside the <code sourcefile="src/SEARCH.md" sourcestartlinenumber="39">search</code> query.</p>
+<li><p><code>duplicatesstrategy</code>: Defines how duplicate results are resolved when <code>DuplicatedBy</code> or <code>GroupBy</code> is specified in the search query. This parameter is supported for backward compatibility; you can also put <code>Strategy</code> or <code>DuplicatesStrategy</code> directly inside the <code>search</code> query.</p>
 </li>
 </ul>
-<div class="NOTE" sourcefile="src/SEARCH.md" sourcestartlinenumber="41">
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="42"><strong sourcefile="src/SEARCH.md" sourcestartlinenumber="42">Special columns</strong>: You can use <code sourcefile="src/SEARCH.md" sourcestartlinenumber="42">FileDate</code>, <a href="VERSION.html" sourcefile="src/SEARCH.md" sourcestartlinenumber="42"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="42">version</code></a>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="42">State</code> and <code sourcefile="src/SEARCH.md" sourcestartlinenumber="42">Hash</code> to list information that is not captured in the datacard. This is useful when searching for duplicates. The hash requires that the file be locally cached. Example:</p>
+<p><strong>Special columns</strong>: You can use <code>FileDate</code>, <a href="VERSION.html"><code>version</code></a>, <code>State</code> and <code>Hash</code> to list information that is not captured in the datacard. This is useful when searching for duplicates. The hash requires that the file be locally cached. Example:</p>
 </div>
-<pre><code class="lang-bash" sourcefile="src/SEARCH.md" sourcestartlinenumber="44">### lists all duplicates in the current directory by name and prints their file date, hash and revision
+<pre><code class="lang-bash">### lists all duplicates in the current directory by name and prints their file date, hash and revision
 search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -columns &quot;FileDate,Hash,Revision&quot;
 </code></pre>
-<div class="NOTE" sourcefile="src/SEARCH.md" sourcestartlinenumber="49">
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="50">Advanced search capabilities can be used in the <code sourcefile="src/SEARCH.md" sourcestartlinenumber="50">-search</code> parameter. See <a href="advancedsearch.html" sourcefile="src/SEARCH.md" sourcestartlinenumber="50">Advanced Search</a>, <a href="search-tokens.html" sourcefile="src/SEARCH.md" sourcestartlinenumber="50">Search Tokens</a>, <a href="search-variables.html" sourcefile="src/SEARCH.md" sourcestartlinenumber="50">Variable Search</a>, <a href="search-result-shaping.html" sourcefile="src/SEARCH.md" sourcestartlinenumber="50">Result Shaping</a>, and <a href="search-favorites.html" sourcefile="src/SEARCH.md" sourcestartlinenumber="50">Search Favorites</a>.</p>
+<p>Advanced search capabilities can be used in the <code>-search</code> parameter. See <a href="advancedsearch.html">Advanced Search</a>, <a href="search-tokens.html">Search Tokens</a>, <a href="search-variables.html">Variable Search</a>, <a href="search-result-shaping.html">Result Shaping</a>, and <a href="search-favorites.html">Search Favorites</a>.</p>
 </div>
-<h2 id="examples" sourcefile="src/SEARCH.md" sourcestartlinenumber="52">Examples</h2>
-<h3 id="example-1-basic-search" sourcefile="src/SEARCH.md" sourcestartlinenumber="53">Example 1: Basic Search</h3>
-<pre><code class="lang-bash" sourcefile="src/SEARCH.md" sourcestartlinenumber="54">search -search % # prints all the files in the current directory
+<h2 id="examples">Examples</h2>
+<h3 id="example-1-basic-search">Example 1: Basic Search</h3>
+<pre><code class="lang-bash">search -search % # prints all the files in the current directory
 </code></pre>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="57">Performs a basic search in the current directory.</p>
-<h3 id="example-2-recursive-search-with-subfolders" sourcefile="src/SEARCH.md" sourcestartlinenumber="59">Example 2: Recursive Search with Subfolders</h3>
-<pre><code class="lang-bash" sourcefile="src/SEARCH.md" sourcestartlinenumber="60">search -search -recursive -includesubfolders # prints all the files and folders in the current directory
+<p>Performs a basic search in the current directory.</p>
+<h3 id="example-2-recursive-search-with-subfolders">Example 2: Recursive Search with Subfolders</h3>
+<pre><code class="lang-bash">search -search -recursive -includesubfolders # prints all the files and folders in the current directory
 </code></pre>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="63">Searches all files and folders, including subdirectories.</p>
-<h3 id="example-3-export-results-to-csv" sourcefile="src/SEARCH.md" sourcestartlinenumber="65">Example 3: Export Results to CSV</h3>
-<pre><code class="lang-bash" sourcefile="src/SEARCH.md" sourcestartlinenumber="66">search -search -csv -columns &quot;Description,PartNumber&quot; # Prints all the files in the current directory with their descriptions and part numbers
+<p>Searches all files and folders, including subdirectories.</p>
+<h3 id="example-3-export-results-to-csv">Example 3: Export Results to CSV</h3>
+<pre><code class="lang-bash">search -search -csv -columns &quot;Description,PartNumber&quot; # Prints all the files in the current directory with their descriptions and part numbers
 </code></pre>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="69">Exports the search results to a CSV file with specified columns.</p>
-<h2 id="result-selection-and-duplicate-strategy-options" sourcefile="src/SEARCH.md" sourcestartlinenumber="72">Result Selection and Duplicate Strategy Options</h2>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="73">Result selection is handled by the shared search engine. This means the same query options can be used by any command that accepts <code sourcefile="src/SEARCH.md" sourcestartlinenumber="73">-search</code>, such as <code sourcefile="src/SEARCH.md" sourcestartlinenumber="73">search</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="73">delete</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="73">checkout</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="73">get</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="73">setvar</code>, and <code sourcefile="src/SEARCH.md" sourcestartlinenumber="73">transition</code>.</p>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="75">Use these query tokens to sort and select search results. For the full reference, see <a href="search-result-shaping.html" sourcefile="src/SEARCH.md" sourcestartlinenumber="75">Search Result Shaping</a>.</p>
-<div class="IMPORTANT" sourcefile="src/SEARCH.md" sourcestartlinenumber="77">
+<p>Exports the search results to a CSV file with specified columns.</p>
+<h2 id="result-selection-and-duplicate-strategy-options">Result Selection and Duplicate Strategy Options</h2>
+<p>Result selection is handled by the shared search engine. This means the same query options can be used by any command that accepts <code>-search</code>, such as <code>search</code>, <code>delete</code>, <code>checkout</code>, <code>get</code>, <code>setvar</code>, and <code>transition</code>.</p>
+<p>Use these query tokens to sort and select search results. For the full reference, see <a href="search-result-shaping.html">Search Result Shaping</a>.</p>
+<div class="IMPORTANT">
 <h5>Important</h5>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="78"><code sourcefile="src/SEARCH.md" sourcestartlinenumber="78">SortBy</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="78">GroupBy</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="78">DuplicatedBy</code>, and <code sourcefile="src/SEARCH.md" sourcestartlinenumber="78">Strategy</code> require PDMShell to collect all matching PDM search results before sorting, grouping, and applying the strategy. Be mindful when using these options with broad recursive searches that may return hundreds or thousands of files.</p>
+<p><code>SortBy</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, and <code>Strategy</code> require PDMShell to collect all matching PDM search results before sorting, grouping, and applying the strategy. Be mindful when using these options with broad recursive searches that may return hundreds or thousands of files.</p>
 </div>
-<table sourcefile="src/SEARCH.md" sourcestartlinenumber="80">
+<table>
 <thead>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="80">
-<th sourcefile="src/SEARCH.md" sourcestartlinenumber="80">Token</th>
-<th sourcefile="src/SEARCH.md" sourcestartlinenumber="80">Description</th>
+<tr>
+<th>Token</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="82">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="82">DuplicatedBy or GroupBy</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="82">Optional. Groups results by a field or variable. When specified, only groups with more than one item are processed.</td>
+<tr>
+<td>DuplicatedBy or GroupBy</td>
+<td>Optional. Groups results by a field or variable. When specified, only groups with more than one item are processed.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="83">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="83">SortBy</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="83">Sorts the matching results before applying the strategy. If <code sourcefile="src/SEARCH.md" sourcestartlinenumber="83">GroupBy</code> is specified, each group is sorted separately.</td>
+<tr>
+<td>SortBy</td>
+<td>Sorts the matching results before applying the strategy. If <code>GroupBy</code> is specified, each group is sorted separately.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="84">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="84">SortOrder or SortDirection</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="84">Optional. Use <code sourcefile="src/SEARCH.md" sourcestartlinenumber="84">Asc</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="84">Ascending</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="84">Desc</code>, or <code sourcefile="src/SEARCH.md" sourcestartlinenumber="84">Descending</code>.</td>
+<tr>
+<td>SortOrder or SortDirection</td>
+<td>Optional. Use <code>Asc</code>, <code>Ascending</code>, <code>Desc</code>, or <code>Descending</code>.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="85">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="85">Strategy or DuplicatesStrategy</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="85">Selects which results in each sorted group are processed.</td>
+<tr>
+<td>Strategy or DuplicatesStrategy</td>
+<td>Selects which results in each sorted group are processed.</td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="87">Supported <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">DuplicatedBy</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">GroupBy</code>, and <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">SortBy</code> values include <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">Name</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">FileDate</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">Hash</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">State</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">Version</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">CurrentVersion</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">Revision</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">FileSize</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">ID</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">Path</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">FolderID</code>, and PDM variables such as <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">@Revision</code> or <code sourcefile="src/SEARCH.md" sourcestartlinenumber="87">@PartNumber</code>.</p>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="89">Without <code sourcefile="src/SEARCH.md" sourcestartlinenumber="89">GroupBy</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="89">SortBy</code> and <code sourcefile="src/SEARCH.md" sourcestartlinenumber="89">Strategy</code> are applied once to all matching results. With <code sourcefile="src/SEARCH.md" sourcestartlinenumber="89">GroupBy</code>, they are applied separately inside each duplicate group.</p>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="91">When <code sourcefile="src/SEARCH.md" sourcestartlinenumber="91">SortOrder</code> is not specified, date/version/revision/size fields sort descending by default, while name/path/state/ID fields sort ascending by default.</p>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="93">The following strategies are supported for <code sourcefile="src/SEARCH.md" sourcestartlinenumber="93">Strategy</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="93">DuplicatesStrategy</code>, and the legacy <code sourcefile="src/SEARCH.md" sourcestartlinenumber="93">-duplicatesstrategy</code> parameter:</p>
-<table sourcefile="src/SEARCH.md" sourcestartlinenumber="95">
+<p>Supported <code>DuplicatedBy</code>, <code>GroupBy</code>, and <code>SortBy</code> values include <code>Name</code>, <code>FileDate</code>, <code>Hash</code>, <code>State</code>, <code>Version</code>, <code>CurrentVersion</code>, <code>Revision</code>, <code>FileSize</code>, <code>ID</code>, <code>Path</code>, <code>FolderID</code>, and PDM variables such as <code>@Revision</code> or <code>@PartNumber</code>.</p>
+<p>Without <code>GroupBy</code>, <code>SortBy</code> and <code>Strategy</code> are applied once to all matching results. With <code>GroupBy</code>, they are applied separately inside each duplicate group.</p>
+<p>When <code>SortOrder</code> is not specified, date/version/revision/size fields sort descending by default, while name/path/state/ID fields sort ascending by default.</p>
+<p>The following strategies are supported for <code>Strategy</code>, <code>DuplicatesStrategy</code>, and the legacy <code>-duplicatesstrategy</code> parameter:</p>
+<table>
 <thead>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="95">
-<th sourcefile="src/SEARCH.md" sourcestartlinenumber="95">Strategy</th>
-<th sourcefile="src/SEARCH.md" sourcestartlinenumber="95">Description</th>
+<tr>
+<th>Strategy</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="97">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="97">KeepFirst</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="97">Keeps the first file in the sorted result set or each sorted group.</td>
+<tr>
+<td>KeepFirst</td>
+<td>Keeps the first file in the sorted result set or each sorted group.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="98">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="98">ExcludeFirst</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="98">Excludes the first file and keeps the remaining results.</td>
+<tr>
+<td>ExcludeFirst</td>
+<td>Excludes the first file and keeps the remaining results.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="99">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="99">KeepLast</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="99">Keeps the last file in the sorted result set or each sorted group.</td>
+<tr>
+<td>KeepLast</td>
+<td>Keeps the last file in the sorted result set or each sorted group.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="100">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="100">ExcludeLast</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="100">Excludes the last file and keeps the remaining results.</td>
+<tr>
+<td>ExcludeLast</td>
+<td>Excludes the last file and keeps the remaining results.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="101">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="101">KeepNewest</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="101">Keeps the newest file.</td>
+<tr>
+<td>KeepNewest</td>
+<td>Keeps the newest file.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="102">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="102">ExcludeNewest</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="102">Excludes the newest file and keeps the remaining results.</td>
+<tr>
+<td>ExcludeNewest</td>
+<td>Excludes the newest file and keeps the remaining results.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="103">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="103">KeepOldest</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="103">Keeps the oldest file.</td>
+<tr>
+<td>KeepOldest</td>
+<td>Keeps the oldest file.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="104">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="104">ExcludeOldest</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="104">Excludes the oldest file and keeps the remaining results.</td>
+<tr>
+<td>ExcludeOldest</td>
+<td>Excludes the oldest file and keeps the remaining results.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="105">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="105">KeepHighestVersion</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="105">Keeps the file with the highest PDM version.</td>
+<tr>
+<td>KeepHighestVersion</td>
+<td>Keeps the file with the highest PDM version.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="106">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="106">ExcludeHighestVersion</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="106">Excludes the file with the highest PDM version.</td>
+<tr>
+<td>ExcludeHighestVersion</td>
+<td>Excludes the file with the highest PDM version.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="107">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="107">KeepLowestVersion</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="107">Keeps the file with the lowest PDM version.</td>
+<tr>
+<td>KeepLowestVersion</td>
+<td>Keeps the file with the lowest PDM version.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="108">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="108">ExcludeLowestVersion</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="108">Excludes the file with the lowest PDM version.</td>
+<tr>
+<td>ExcludeLowestVersion</td>
+<td>Excludes the file with the lowest PDM version.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="109">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="109">KeepLatestRevision</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="109">Keeps the file with the latest revision value.</td>
+<tr>
+<td>KeepLatestRevision</td>
+<td>Keeps the file with the latest revision value.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="110">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="110">ExcludeLatestRevision</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="110">Excludes the file with the latest revision value.</td>
+<tr>
+<td>ExcludeLatestRevision</td>
+<td>Excludes the file with the latest revision value.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="111">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="111">KeepLargest</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="111">Keeps the file with the largest file size.</td>
+<tr>
+<td>KeepLargest</td>
+<td>Keeps the file with the largest file size.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="112">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="112">ExcludeLargest</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="112">Excludes the file with the largest file size.</td>
+<tr>
+<td>ExcludeLargest</td>
+<td>Excludes the file with the largest file size.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="113">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="113">KeepSmallest</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="113">Keeps the file with the smallest file size.</td>
+<tr>
+<td>KeepSmallest</td>
+<td>Keeps the file with the smallest file size.</td>
 </tr>
-<tr sourcefile="src/SEARCH.md" sourcestartlinenumber="114">
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="114">ExcludeSmallest</td>
-<td sourcefile="src/SEARCH.md" sourcestartlinenumber="114">Excludes the file with the smallest file size.</td>
+<tr>
+<td>ExcludeSmallest</td>
+<td>Excludes the file with the smallest file size.</td>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-bash" sourcefile="src/SEARCH.md" sourcestartlinenumber="116">## Lists all duplicates in the current directory by name and prints their file date, hash and revision
+<pre><code class="lang-bash">## Lists all duplicates in the current directory by name and prints their file date, hash and revision
 search -search &quot;Name=%.sld%;Recursive=true;DuplicatedBy=Name&quot; -duplicatesstrategy KeepNewest -columns &quot;FileDate,Hash,Revision&quot;
 </code></pre>
-<pre><code class="lang-bash" sourcefile="src/SEARCH.md" sourcestartlinenumber="121">## Lists all PDFs except the oldest one after sorting the full result set by file date
+<pre><code class="lang-bash">## Lists all PDFs except the oldest one after sorting the full result set by file date
 search -search &quot;Name=%.pdf;SortBy=FileDate;Recursive=true;Strategy=ExcludeFirst&quot; -columns FileDate
 </code></pre>
-<pre><code class="lang-bash" sourcefile="src/SEARCH.md" sourcestartlinenumber="126">## Lists the newest PDF in each duplicate-name group
+<pre><code class="lang-bash">## Lists the newest PDF in each duplicate-name group
 search -search &quot;Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=KeepFirst&quot;
 </code></pre>
-<pre><code class="lang-bash" sourcefile="src/SEARCH.md" sourcestartlinenumber="131">## Deletes all but the newest PDF in each duplicate-name group
+<pre><code class="lang-bash">## Deletes all but the newest PDF in each duplicate-name group
 delete -search &quot;Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=ExcludeFirst&quot;
 </code></pre>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="136">More examples and strategy details are available in <a href="search-result-shaping.html" sourcefile="src/SEARCH.md" sourcestartlinenumber="136">Search Result Shaping</a>.</p>
-<h2 id="notes" sourcefile="src/SEARCH.md" sourcestartlinenumber="138">Notes</h2>
-<ul sourcefile="src/SEARCH.md" sourcestartlinenumber="139">
-<li sourcefile="src/SEARCH.md" sourcestartlinenumber="139">Ensure the current directory is set correctly before running the command.</li>
-<li sourcefile="src/SEARCH.md" sourcestartlinenumber="140">Use the <code sourcefile="src/SEARCH.md" sourcestartlinenumber="140">-columns</code> parameter to customize the output format. Data is pulled from @ for configuration-supported documents.</li>
+<p>More examples and strategy details are available in <a href="search-result-shaping.html">Search Result Shaping</a>.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Ensure the current directory is set correctly before running the command.</li>
+<li>Use the <code>-columns</code> parameter to customize the output format. Data is pulled from @ for configuration-supported documents.</li>
 </ul>
-<h2 id="tutorial" sourcefile="src/SEARCH.md" sourcestartlinenumber="142">Tutorial</h2>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="143"><video src="https://bluebyte.biz/wp-content/pdmshellvideos/search.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
-<h2 id="availability" sourcefile="src/SEARCH.md" sourcestartlinenumber="145">Availability</h2>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="146">Available since PDMShell 2.0.5.</p>
-<h2 id="last-updated" sourcefile="src/SEARCH.md" sourcestartlinenumber="148">Last Updated</h2>
-<p sourcefile="src/SEARCH.md" sourcestartlinenumber="149">Updated in PDMShell 4.0.14 to add result shaping with <code sourcefile="src/SEARCH.md" sourcestartlinenumber="149">SortBy</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="149">SortOrder</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="149">GroupBy</code>, <code sourcefile="src/SEARCH.md" sourcestartlinenumber="149">DuplicatedBy</code>, and <code sourcefile="src/SEARCH.md" sourcestartlinenumber="149">Strategy</code>.</p>
+<h2 id="tutorial">Tutorial</h2>
+<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/search.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.5.</p>
+<h2 id="last-updated">Last Updated</h2>
+<p>Updated in PDMShell 4.0.14 to add result shaping with <code>SortBy</code>, <code>SortOrder</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, and <code>Strategy</code>.</p>
 
 </article>
 

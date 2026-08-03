@@ -85,50 +85,50 @@
         </div>
 
         <article data-uid="">
-<h1 id="inbox" sourcefile="src/INBOX.md" sourcestartlinenumber="5">inbox</h1>
+<h1 id="inbox">inbox</h1>
 
-<h2 id="description" sourcefile="src/INBOX.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/INBOX.md" sourcestartlinenumber="7">Opens the PDM inbox or sends a message as the logged-in user.</p>
-<h2 id="syntax" sourcefile="src/INBOX.md" sourcestartlinenumber="9">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/INBOX.md" sourcestartlinenumber="11">inbox -filePath -name -value
+<h2 id="description">Description</h2>
+<p>Opens the PDM inbox or sends a message as the logged-in user.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">inbox -filePath -name -value
 </code></pre>
-<h2 id="parameters" sourcefile="src/INBOX.md" sourcestartlinenumber="15">Parameters</h2>
-<table sourcefile="src/INBOX.md" sourcestartlinenumber="17">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/INBOX.md" sourcestartlinenumber="17">
-<th sourcefile="src/INBOX.md" sourcestartlinenumber="17">Parameter</th>
-<th sourcefile="src/INBOX.md" sourcestartlinenumber="17">Required</th>
-<th sourcefile="src/INBOX.md" sourcestartlinenumber="17">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/INBOX.md" sourcestartlinenumber="19">
-<td sourcefile="src/INBOX.md" sourcestartlinenumber="19"><code sourcefile="src/INBOX.md" sourcestartlinenumber="19">-filePath</code></td>
-<td sourcefile="src/INBOX.md" sourcestartlinenumber="19">Yes</td>
-<td sourcefile="src/INBOX.md" sourcestartlinenumber="19">Associated file</td>
+<tr>
+<td><code>-filePath</code></td>
+<td>Yes</td>
+<td>Associated file</td>
 </tr>
-<tr sourcefile="src/INBOX.md" sourcestartlinenumber="20">
-<td sourcefile="src/INBOX.md" sourcestartlinenumber="20"><code sourcefile="src/INBOX.md" sourcestartlinenumber="20">-name</code></td>
-<td sourcefile="src/INBOX.md" sourcestartlinenumber="20">Yes</td>
-<td sourcefile="src/INBOX.md" sourcestartlinenumber="20">Name of the user to send the message to.</td>
+<tr>
+<td><code>-name</code></td>
+<td>Yes</td>
+<td>Name of the user to send the message to.</td>
 </tr>
-<tr sourcefile="src/INBOX.md" sourcestartlinenumber="21">
-<td sourcefile="src/INBOX.md" sourcestartlinenumber="21"><code sourcefile="src/INBOX.md" sourcestartlinenumber="21">-value</code></td>
-<td sourcefile="src/INBOX.md" sourcestartlinenumber="21">Yes</td>
-<td sourcefile="src/INBOX.md" sourcestartlinenumber="21">Message: supports evaluation against the <code sourcefile="src/INBOX.md" sourcestartlinenumber="21">filePath</code>.</td>
+<tr>
+<td><code>-value</code></td>
+<td>Yes</td>
+<td>Message: supports evaluation against the <code>filePath</code>.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/INBOX.md" sourcestartlinenumber="23">Parameter Details</h3>
-<p sourcefile="src/INBOX.md" sourcestartlinenumber="25">-<code sourcefile="src/INBOX.md" sourcestartlinenumber="25">name</code>: Name of the user to send the message to.
--<code sourcefile="src/INBOX.md" sourcestartlinenumber="26">value</code>: Message: supports evaluation against the <code sourcefile="src/INBOX.md" sourcestartlinenumber="26">filePath</code>.
--<code sourcefile="src/INBOX.md" sourcestartlinenumber="27">filePath</code>: Associated file</p>
-<h2 id="examples" sourcefile="src/INBOX.md" sourcestartlinenumber="29">Examples</h2>
-<pre><code class="lang-bash" sourcefile="src/INBOX.md" sourcestartlinenumber="30">inbox -message 'File checked in successfully'
+<h3 id="parameter-details">Parameter Details</h3>
+<p>-<code>name</code>: Name of the user to send the message to.
+-<code>value</code>: Message: supports evaluation against the <code>filePath</code>.
+-<code>filePath</code>: Associated file</p>
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash">inbox -message 'File checked in successfully'
 # inbox
 </code></pre>
-<h2 id="availability" sourcefile="src/INBOX.md" sourcestartlinenumber="35">Availability</h2>
-<p sourcefile="src/INBOX.md" sourcestartlinenumber="36">Available since PDMShell 2.0.0.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0.</p>
 
 </article>
 

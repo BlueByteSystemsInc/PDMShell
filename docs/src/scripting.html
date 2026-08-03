@@ -85,22 +85,22 @@
         </div>
 
         <article data-uid="">
-<h1 id="scripting-in-pdmshell" sourcefile="src/scripting.md" sourcestartlinenumber="5">Scripting in PDMShell</h1>
+<h1 id="scripting-in-pdmshell">Scripting in PDMShell</h1>
 
-<h2 id="overview" sourcefile="src/scripting.md" sourcestartlinenumber="7">Overview</h2>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="8">PDMShell supports scripting to automate tasks and streamline workflows. Scripts use the <code sourcefile="src/scripting.md" sourcestartlinenumber="8">.pdmshell</code> file extension and are plain text files, making them easy to create and edit using any text editor, such as Notepad.</p>
-<div class="TIP" sourcefile="src/scripting.md" sourcestartlinenumber="10">
+<h2 id="overview">Overview</h2>
+<p>PDMShell supports scripting to automate tasks and streamline workflows. Scripts use the <code>.pdmshell</code> file extension and are plain text files, making them easy to create and edit using any text editor, such as Notepad.</p>
+<div class="TIP">
 <h5>Tip</h5>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="11">Need help building scripts or automation workflows? Blue Byte Systems offers <a href="https://bluebyte.biz/product/enterprise-support-services/" sourcefile="src/scripting.md" sourcestartlinenumber="11">Enterprise Support Services</a> for customers who want help designing, developing, or troubleshooting PDMShell automation.</p>
+<p>Need help building scripts or automation workflows? Blue Byte Systems offers <a href="https://bluebyte.biz/product/enterprise-support-services/">Enterprise Support Services</a> for customers who want help designing, developing, or troubleshooting PDMShell automation.</p>
 </div>
-<hr sourcefile="src/scripting.md" sourcestartlinenumber="13">
-<h2 id="creating-a-script" sourcefile="src/scripting.md" sourcestartlinenumber="15">Creating a Script</h2>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="16">A PDMShell script is a sequence of PDMShell commands written in a plain text file. Each command is executed in the order it appears in the script.</p>
-<h3 id="script-file-extension" sourcefile="src/scripting.md" sourcestartlinenumber="18">Script File Extension</h3>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="19">Script file extension is <code sourcefile="src/scripting.md" sourcestartlinenumber="19">.pdmshell</code>.</p>
-<h3 id="example-script" sourcefile="src/scripting.md" sourcestartlinenumber="21">Example Script</h3>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="22">Below is an example of a <code sourcefile="src/scripting.md" sourcestartlinenumber="22">.pdmshell</code> script:</p>
-<pre><code class="lang-bash" sourcefile="src/scripting.md" sourcestartlinenumber="24"># filepath: example.pdmshell
+<hr>
+<h2 id="creating-a-script">Creating a Script</h2>
+<p>A PDMShell script is a sequence of PDMShell commands written in a plain text file. Each command is executed in the order it appears in the script.</p>
+<h3 id="script-file-extension">Script File Extension</h3>
+<p>Script file extension is <code>.pdmshell</code>.</p>
+<h3 id="example-script">Example Script</h3>
+<p>Below is an example of a <code>.pdmshell</code> script:</p>
+<pre><code class="lang-bash"># filepath: example.pdmshell
 # This script automates exporting and adding files to the vault.
 
 # Navigate to the working directory
@@ -124,53 +124,53 @@ checkin -search %
 # Open the folder in File Explorer
 start .
 </code></pre>
-<h3 id="script-annotations" sourcefile="src/scripting.md" sourcestartlinenumber="50">Script Annotations</h3>
-<ol sourcefile="src/scripting.md" sourcestartlinenumber="51">
-<li sourcefile="src/scripting.md" sourcestartlinenumber="51"><code sourcefile="src/scripting.md" sourcestartlinenumber="51">cd &quot;\api\sandbox\fidget spinner&quot;</code>: Changes the current working directory to the specified path.</li>
-<li sourcefile="src/scripting.md" sourcestartlinenumber="52"><code sourcefile="src/scripting.md" sourcestartlinenumber="52">mkdir &quot;$name-export-$date&quot;</code>: Creates a new folder with a dynamic name based on the current date and the folder name.</li>
-<li sourcefile="src/scripting.md" sourcestartlinenumber="53"><a href="export.html" sourcefile="src/scripting.md" sourcestartlinenumber="53"><code sourcefile="src/scripting.md" sourcestartlinenumber="53">export</code></a>: Exports all <code sourcefile="src/scripting.md" sourcestartlinenumber="53">.sldprt</code> files in the current directory to the newly created folder as <code sourcefile="src/scripting.md" sourcestartlinenumber="53">.stp</code> files, appending the current date to the file names.</li>
-<li sourcefile="src/scripting.md" sourcestartlinenumber="54"><code sourcefile="src/scripting.md" sourcestartlinenumber="54">cd &quot;$name-export-$date&quot;</code>: Changes the working directory to the newly created export folder.</li>
-<li sourcefile="src/scripting.md" sourcestartlinenumber="55"><a href="ADDTOVAULT.html" sourcefile="src/scripting.md" sourcestartlinenumber="55"><code sourcefile="src/scripting.md" sourcestartlinenumber="55">addtovault</code></a>: Adds the exported files to the vault.</li>
-<li sourcefile="src/scripting.md" sourcestartlinenumber="56"><a href="CHECKIN.html" sourcefile="src/scripting.md" sourcestartlinenumber="56"><code sourcefile="src/scripting.md" sourcestartlinenumber="56">checkin</code></a>: Checks in all files in the current folder to the vault.</li>
-<li sourcefile="src/scripting.md" sourcestartlinenumber="57"><code sourcefile="src/scripting.md" sourcestartlinenumber="57">start .</code>: Opens the current folder in File Explorer.</li>
+<h3 id="script-annotations">Script Annotations</h3>
+<ol>
+<li><code>cd &quot;\api\sandbox\fidget spinner&quot;</code>: Changes the current working directory to the specified path.</li>
+<li><code>mkdir &quot;$name-export-$date&quot;</code>: Creates a new folder with a dynamic name based on the current date and the folder name.</li>
+<li><a href="export.html"><code>export</code></a>: Exports all <code>.sldprt</code> files in the current directory to the newly created folder as <code>.stp</code> files, appending the current date to the file names.</li>
+<li><code>cd &quot;$name-export-$date&quot;</code>: Changes the working directory to the newly created export folder.</li>
+<li><a href="ADDTOVAULT.html"><code>addtovault</code></a>: Adds the exported files to the vault.</li>
+<li><a href="CHECKIN.html"><code>checkin</code></a>: Checks in all files in the current folder to the vault.</li>
+<li><code>start .</code>: Opens the current folder in File Explorer.</li>
 </ol>
-<hr sourcefile="src/scripting.md" sourcestartlinenumber="59">
-<h3 id="comments" sourcefile="src/scripting.md" sourcestartlinenumber="61">Comments</h3>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="63">Lines that start with <code sourcefile="src/scripting.md" sourcestartlinenumber="63">#</code> are ignored.</p>
-<h2 id="executing-a-script" sourcefile="src/scripting.md" sourcestartlinenumber="65">Executing a Script</h2>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="66">There are two ways to execute a <code sourcefile="src/scripting.md" sourcestartlinenumber="66">.pdmshell</code> script:</p>
-<h3 id="1-using-pdmcliexe" sourcefile="src/scripting.md" sourcestartlinenumber="68">1. Using <code sourcefile="src/scripting.md" sourcestartlinenumber="68">pdmcli.exe</code></h3>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="69">You can execute a script using the <code sourcefile="src/scripting.md" sourcestartlinenumber="69">pdmcli.exe</code> command-line tool. Provide the script file as the first argument, wrapped in quotes if the file path contains spaces.</p>
-<h4 id="example-command" sourcefile="src/scripting.md" sourcestartlinenumber="71">Example Command</h4>
-<pre><code class="lang-bash" sourcefile="src/scripting.md" sourcestartlinenumber="72">pdmcli.exe &quot;C:\Scripts\example.pdmshell&quot;
+<hr>
+<h3 id="comments">Comments</h3>
+<p>Lines that start with <code>#</code> are ignored.</p>
+<h2 id="executing-a-script">Executing a Script</h2>
+<p>There are two ways to execute a <code>.pdmshell</code> script:</p>
+<h3 id="1-using-pdmcliexe">1. Using <code>pdmcli.exe</code></h3>
+<p>You can execute a script using the <code>pdmcli.exe</code> command-line tool. Provide the script file as the first argument, wrapped in quotes if the file path contains spaces.</p>
+<h4 id="example-command">Example Command</h4>
+<pre><code class="lang-bash">pdmcli.exe &quot;C:\Scripts\example.pdmshell&quot;
 </code></pre>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="76">The <code sourcefile="src/scripting.md" sourcestartlinenumber="76">pdmcli.exe</code> tool can be found in the installation folder under <code sourcefile="src/scripting.md" sourcestartlinenumber="76">Program Files (x86)\BLUE BYTE SYSTEMS INC</code>.</p>
-<h3 id="2-using-the-runscript-command" sourcefile="src/scripting.md" sourcestartlinenumber="78">2. Using the <a href="RUNSCRIPT.html" sourcefile="src/scripting.md" sourcestartlinenumber="78"><code sourcefile="src/scripting.md" sourcestartlinenumber="78">runscript</code></a> Command</h3>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="79">You can also execute scripts directly from the PDMShell console using the <a href="RUNSCRIPT.html" sourcefile="src/scripting.md" sourcestartlinenumber="79"><code sourcefile="src/scripting.md" sourcestartlinenumber="79">runscript</code></a> command.</p>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="81">[Note]</p>
-<h4 id="example-command-1" sourcefile="src/scripting.md" sourcestartlinenumber="83">Example Command</h4>
-<pre><code class="lang-bash" sourcefile="src/scripting.md" sourcestartlinenumber="84">runscript -source &quot;C:\Scripts\example.pdmshell&quot;
+<p>The <code>pdmcli.exe</code> tool can be found in the installation folder under <code>Program Files (x86)\BLUE BYTE SYSTEMS INC</code>.</p>
+<h3 id="2-using-the-runscript-command">2. Using the <a href="RUNSCRIPT.html"><code>runscript</code></a> Command</h3>
+<p>You can also execute scripts directly from the PDMShell console using the <a href="RUNSCRIPT.html"><code>runscript</code></a> command.</p>
+<p>[Note]</p>
+<h4 id="example-command-1">Example Command</h4>
+<pre><code class="lang-bash">runscript -source &quot;C:\Scripts\example.pdmshell&quot;
 </code></pre>
-<div class="NOTE" sourcefile="src/scripting.md" sourcestartlinenumber="87">
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="88">For more information about the <a href="RUNSCRIPT.html" sourcefile="src/scripting.md" sourcestartlinenumber="88"><code sourcefile="src/scripting.md" sourcestartlinenumber="88">runscript</code></a> command, refer to the <a href="RUNSCRIPT.html" sourcefile="src/scripting.md" sourcestartlinenumber="88">runscript documentation</a>.</p>
+<p>For more information about the <a href="RUNSCRIPT.html"><code>runscript</code></a> command, refer to the <a href="RUNSCRIPT.html">runscript documentation</a>.</p>
 </div>
-<hr sourcefile="src/scripting.md" sourcestartlinenumber="90">
-<h2 id="workflow-integration" sourcefile="src/scripting.md" sourcestartlinenumber="92">Workflow Integration</h2>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="93">For users with the Premium Version of PDMShell, <code sourcefile="src/scripting.md" sourcestartlinenumber="93">pdmcli.exe</code> can be hooked into workflow transitions. This allows scripts to be executed automatically as part of a workflow, enabling seamless automation of complex processes.</p>
-<hr sourcefile="src/scripting.md" sourcestartlinenumber="95">
-<h2 id="remarks" sourcefile="src/scripting.md" sourcestartlinenumber="97">Remarks</h2>
-<ul sourcefile="src/scripting.md" sourcestartlinenumber="98">
-<li sourcefile="src/scripting.md" sourcestartlinenumber="98">Scripts are a powerful way to automate repetitive tasks and enforce consistency in workflows.</li>
-<li sourcefile="src/scripting.md" sourcestartlinenumber="99">Since <code sourcefile="src/scripting.md" sourcestartlinenumber="99">.pdmshell</code> files are plain text, they can be created and edited using any text editor.</li>
-<li sourcefile="src/scripting.md" sourcestartlinenumber="100">Ensure the script file is saved with the <code sourcefile="src/scripting.md" sourcestartlinenumber="100">.pdmshell</code> extension for proper execution.</li>
-<li sourcefile="src/scripting.md" sourcestartlinenumber="101">Use comments (<code sourcefile="src/scripting.md" sourcestartlinenumber="101">#</code>) in scripts to document the purpose of each command for better readability.</li>
+<hr>
+<h2 id="workflow-integration">Workflow Integration</h2>
+<p>For users with the Premium Version of PDMShell, <code>pdmcli.exe</code> can be hooked into workflow transitions. This allows scripts to be executed automatically as part of a workflow, enabling seamless automation of complex processes.</p>
+<hr>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>Scripts are a powerful way to automate repetitive tasks and enforce consistency in workflows.</li>
+<li>Since <code>.pdmshell</code> files are plain text, they can be created and edited using any text editor.</li>
+<li>Ensure the script file is saved with the <code>.pdmshell</code> extension for proper execution.</li>
+<li>Use comments (<code>#</code>) in scripts to document the purpose of each command for better readability.</li>
 </ul>
-<h2 id="tutorial" sourcefile="src/scripting.md" sourcestartlinenumber="103">TUTORIAL:</h2>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="104"><video src="https://bluebyte.biz/wp-content/pdmshellvideos/scripting.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
-<h2 id="let-blue-byte-systems-write-your-scripts" sourcefile="src/scripting.md" sourcestartlinenumber="106">Let Blue Byte Systems Write Your Scripts</h2>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="107">If you need assistance creating scripts for your specific workflows, Blue Byte Systems offers professional scripting services. Their team of experts can design and implement custom .pdmshell scripts tailored to your requirements, ensuring optimal efficiency and accuracy.</p>
-<p sourcefile="src/scripting.md" sourcestartlinenumber="109">To learn more about this service, contact Blue Byte Systems directly through their support page.</p>
+<h2 id="tutorial">TUTORIAL:</h2>
+<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/scripting.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="let-blue-byte-systems-write-your-scripts">Let Blue Byte Systems Write Your Scripts</h2>
+<p>If you need assistance creating scripts for your specific workflows, Blue Byte Systems offers professional scripting services. Their team of experts can design and implement custom .pdmshell scripts tailored to your requirements, ensuring optimal efficiency and accuracy.</p>
+<p>To learn more about this service, contact Blue Byte Systems directly through their support page.</p>
 
 </article>
 

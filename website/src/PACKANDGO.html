@@ -85,143 +85,143 @@
         </div>
 
         <article data-uid="">
-<h1 id="packandgo" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="5">packandgo</h1>
+<h1 id="packandgo">packandgo</h1>
 
-<h2 id="description" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/PACKANDGO.md" sourcestartlinenumber="7">The <code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="7">packg</code> command performs a SOLIDWORKS Pack and Go operation on:</p>
-<ul sourcefile="src/PACKANDGO.md" sourcestartlinenumber="9">
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="9">A single assembly file</li>
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="10">Multiple assemblies discovered via directory search</li>
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="11">A CSV file containing a list of assembly paths</li>
+<h2 id="description">Description</h2>
+<p>The <code>packg</code> command performs a SOLIDWORKS Pack and Go operation on:</p>
+<ul>
+<li>A single assembly file</li>
+<li>Multiple assemblies discovered via directory search</li>
+<li>A CSV file containing a list of assembly paths</li>
 </ul>
-<p sourcefile="src/PACKANDGO.md" sourcestartlinenumber="13">This command launches SOLIDWORKS, executes Pack and Go for each assembly, and saves the results into a specified output directory.</p>
-<p sourcefile="src/PACKANDGO.md" sourcestartlinenumber="15">By default, only <code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="15">.sldasm</code> files are processed.</p>
-<h2 id="syntax" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="17">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="19">packg -source -directory [-search] [-includedrawings] [-recursive] [-prefix] [-suffix] [-timeout]
+<p>This command launches SOLIDWORKS, executes Pack and Go for each assembly, and saves the results into a specified output directory.</p>
+<p>By default, only <code>.sldasm</code> files are processed.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">packg -source -directory [-search] [-includedrawings] [-recursive] [-prefix] [-suffix] [-timeout]
 </code></pre>
-<h2 id="parameters" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="23">Parameters</h2>
-<table sourcefile="src/PACKANDGO.md" sourcestartlinenumber="25">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/PACKANDGO.md" sourcestartlinenumber="25">
-<th sourcefile="src/PACKANDGO.md" sourcestartlinenumber="25">Parameter</th>
-<th sourcefile="src/PACKANDGO.md" sourcestartlinenumber="25">Required</th>
-<th sourcefile="src/PACKANDGO.md" sourcestartlinenumber="25">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/PACKANDGO.md" sourcestartlinenumber="27">
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="27"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="27">-source</code></td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="27">Yes</td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="27">See parameter details below.</td>
+<tr>
+<td><code>-source</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/PACKANDGO.md" sourcestartlinenumber="28">
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="28"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="28">-directory</code></td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="28">Yes</td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="28">See parameter details below.</td>
+<tr>
+<td><code>-directory</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/PACKANDGO.md" sourcestartlinenumber="29">
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="29"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="29">-search</code></td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="29">No</td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="29">See parameter details below.</td>
+<tr>
+<td><code>-search</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/PACKANDGO.md" sourcestartlinenumber="30">
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="30"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="30">-includedrawings</code></td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="30">No</td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="30">See parameter details below.</td>
+<tr>
+<td><code>-includedrawings</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/PACKANDGO.md" sourcestartlinenumber="31">
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="31"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="31">-recursive</code></td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="31">No</td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="31">See parameter details below.</td>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/PACKANDGO.md" sourcestartlinenumber="32">
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="32"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="32">-prefix</code></td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="32">No</td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="32">See parameter details below.</td>
+<tr>
+<td><code>-prefix</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/PACKANDGO.md" sourcestartlinenumber="33">
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="33"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="33">-suffix</code></td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="33">No</td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="33">See parameter details below.</td>
+<tr>
+<td><code>-suffix</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/PACKANDGO.md" sourcestartlinenumber="34">
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="34"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="34">-timeout</code></td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="34">No</td>
-<td sourcefile="src/PACKANDGO.md" sourcestartlinenumber="34">See parameter details below.</td>
+<tr>
+<td><code>-timeout</code></td>
+<td>No</td>
+<td>See parameter details below.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="36">Parameter Details</h3>
-<ul sourcefile="src/PACKANDGO.md" sourcestartlinenumber="38">
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="38"><p sourcefile="src/PACKANDGO.md" sourcestartlinenumber="38"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="38">source</code><br>
+<h3 id="parameter-details">Parameter Details</h3>
+<ul>
+<li><p><code>source</code><br>
 Single assembly file, directory of assemblies, or CSV file containing assembly paths.</p>
 </li>
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="41"><p sourcefile="src/PACKANDGO.md" sourcestartlinenumber="41"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="41">directory</code><br>
+<li><p><code>directory</code><br>
 Destination folder where Pack and Go results will be saved.<br>
 Supports placeholders:</p>
-<ul sourcefile="src/PACKANDGO.md" sourcestartlinenumber="44">
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="44">$filename</li>
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="45">$fileNameWithoutExtension</li>
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="46">$directory</li>
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="47">$date</li>
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="48">$year</li>
+<ul>
+<li>$filename</li>
+<li>$fileNameWithoutExtension</li>
+<li>$directory</li>
+<li>$date</li>
+<li>$year</li>
 </ul>
 </li>
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="50"><p sourcefile="src/PACKANDGO.md" sourcestartlinenumber="50"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="50">search</code><br>
+<li><p><code>search</code><br>
 Search pattern applied when source is a directory.<br>
-Default value is <code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="52">\.sldasm$</code>. Supports <a href="https://en.wikipedia.org/wiki/Regular_expression" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="52">regular expressions</a>.</p>
+Default value is <code>\.sldasm$</code>. Supports <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expressions</a>.</p>
 </li>
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="54"><p sourcefile="src/PACKANDGO.md" sourcestartlinenumber="54"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="54">includedrawings</code><br>
+<li><p><code>includedrawings</code><br>
 Includes associated drawing files (.slddrw) in the Pack and Go operation.</p>
 </li>
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="57"><p sourcefile="src/PACKANDGO.md" sourcestartlinenumber="57"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="57">recursive</code><br>
+<li><p><code>recursive</code><br>
 Searches subdirectories when source is a directory.</p>
 </li>
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="60"><p sourcefile="src/PACKANDGO.md" sourcestartlinenumber="60"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="60">prefix</code><br>
+<li><p><code>prefix</code><br>
 Adds a prefix to all generated file names.</p>
 </li>
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="63"><p sourcefile="src/PACKANDGO.md" sourcestartlinenumber="63"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="63">suffix</code><br>
+<li><p><code>suffix</code><br>
 Adds a suffix to all generated file names.</p>
 </li>
-<li sourcefile="src/PACKANDGO.md" sourcestartlinenumber="66"><p sourcefile="src/PACKANDGO.md" sourcestartlinenumber="66"><code sourcefile="src/PACKANDGO.md" sourcestartlinenumber="66">timeout</code> SOLIDWORKS startup and pack and go timeout in seconds. Default is 30.</p>
+<li><p><code>timeout</code> SOLIDWORKS startup and pack and go timeout in seconds. Default is 30.</p>
 </li>
 </ul>
-<hr sourcefile="src/PACKANDGO.md" sourcestartlinenumber="68">
-<h2 id="examples" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="70">Examples</h2>
-<h3 id="example-1-pack-a-single-assembly" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="71">Example 1: Pack a Single Assembly</h3>
-<pre><code class="lang-bash" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="72">## Packs a single assembly and saves results to D:\Packages
+<hr>
+<h2 id="examples">Examples</h2>
+<h3 id="example-1-pack-a-single-assembly">Example 1: Pack a Single Assembly</h3>
+<pre><code class="lang-bash">## Packs a single assembly and saves results to D:\Packages
 packg -source &quot;C:\Projects\Top.sldasm&quot; -directory &quot;D:\Packages&quot;
 </code></pre>
-<h3 id="example-2-pack-all-assemblies-in-a-directory" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="78">Example 2: Pack All Assemblies in a Directory</h3>
-<pre><code class="lang-bash" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="79">## Packs all assemblies (*.sldasm) in the specified folder
+<h3 id="example-2-pack-all-assemblies-in-a-directory">Example 2: Pack All Assemblies in a Directory</h3>
+<pre><code class="lang-bash">## Packs all assemblies (*.sldasm) in the specified folder
 packg -source &quot;C:\Projects&quot; -directory &quot;D:\Packages&quot;
 </code></pre>
-<h3 id="example-3-recursive-directory-search" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="85">Example 3: Recursive Directory Search</h3>
-<pre><code class="lang-bash" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="86">## Searches subfolders and packs all assemblies found
+<h3 id="example-3-recursive-directory-search">Example 3: Recursive Directory Search</h3>
+<pre><code class="lang-bash">## Searches subfolders and packs all assemblies found
 packg -source &quot;C:\Projects&quot; -directory &quot;D:\Packages&quot; -recursive
 </code></pre>
-<h3 id="example-4-use-regex-search" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="91">Example 4: Use Regex Search</h3>
-<pre><code class="lang-bash" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="92">## Packs only assemblies that start with TOP_
+<h3 id="example-4-use-regex-search">Example 4: Use Regex Search</h3>
+<pre><code class="lang-bash">## Packs only assemblies that start with TOP_
 packg -source &quot;C:\Projects&quot; -search &quot;^TOP_.*\.sldasm$&quot; -directory &quot;D:\Packages&quot;
 </code></pre>
-<h3 id="example-5-pack-assemblies-from-csv" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="97">Example 5: Pack Assemblies from CSV</h3>
-<pre><code class="lang-bash" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="100">## Reads assembly paths from a CSV file and packs each one 
+<h3 id="example-5-pack-assemblies-from-csv">Example 5: Pack Assemblies from CSV</h3>
+<pre><code class="lang-bash">## Reads assembly paths from a CSV file and packs each one 
 packg -source &quot;C:\Batch\assemblies.csv&quot; -directory &quot;D:\Packages&quot;
 </code></pre>
-<h3 id="example-6-include-drawings" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="106">Example 6: Include Drawings</h3>
-<pre><code class="lang-bash" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="107">## Includes associated drawing files in Pack and Go
+<h3 id="example-6-include-drawings">Example 6: Include Drawings</h3>
+<pre><code class="lang-bash">## Includes associated drawing files in Pack and Go
 packg -source &quot;C:\Projects\Top.sldasm&quot; -directory &quot;D:\Packages&quot; -includedrawings
 </code></pre>
-<h3 id="example-7-prefix-and-suffix" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="113">Example 7: Prefix and Suffix</h3>
-<pre><code class="lang-bash" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="114">## Adds prefix and suffix to all packed files
+<h3 id="example-7-prefix-and-suffix">Example 7: Prefix and Suffix</h3>
+<pre><code class="lang-bash">## Adds prefix and suffix to all packed files
 packg -source &quot;C:\Projects\Top.sldasm&quot; -directory &quot;D:\Packages&quot; -prefix &quot;SW_&quot; -suffix &quot;_Release&quot;
 </code></pre>
-<h3 id="example-8-increase-solidworks-timeout" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="120">Example 8: Increase SOLIDWORKS Timeout</h3>
-<pre><code class="lang-bash" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="121">## Allows more time for SOLIDWORKS to launch
+<h3 id="example-8-increase-solidworks-timeout">Example 8: Increase SOLIDWORKS Timeout</h3>
+<pre><code class="lang-bash">## Allows more time for SOLIDWORKS to launch
 packg -source &quot;C:\Projects&quot; -directory &quot;D:\Packages&quot; -timeout 300
 </code></pre>
-<h2 id="availability" sourcefile="src/PACKANDGO.md" sourcestartlinenumber="126">Availability</h2>
-<p sourcefile="src/PACKANDGO.md" sourcestartlinenumber="127">Available since PDMShell 3.0.27.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 3.0.27.</p>
 
 </article>
 

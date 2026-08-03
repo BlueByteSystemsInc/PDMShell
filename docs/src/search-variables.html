@@ -85,177 +85,177 @@
         </div>
 
         <article data-uid="">
-<h1 id="variable-search" sourcefile="src/search-variables.md" sourcestartlinenumber="6">Variable Search</h1>
+<h1 id="variable-search">Variable Search</h1>
 
-<p sourcefile="src/search-variables.md" sourcestartlinenumber="8">Conditions beginning with <code sourcefile="src/search-variables.md" sourcestartlinenumber="8">@</code> search PDM variables.</p>
-<pre><code class="lang-bash" sourcefile="src/search-variables.md" sourcestartlinenumber="10">@VariableName Operator Value
+<p>Conditions beginning with <code>@</code> search PDM variables.</p>
+<pre><code class="lang-bash">@VariableName Operator Value
 </code></pre>
-<p sourcefile="src/search-variables.md" sourcestartlinenumber="14">Examples:</p>
-<pre><code class="lang-bash" sourcefile="src/search-variables.md" sourcestartlinenumber="16">@Description=Pump
+<p>Examples:</p>
+<pre><code class="lang-bash">@Description=Pump
 @Weight&gt;=10
 @Revision!=A
 @Material~Steel
 @ProjectCode!~TEST
 </code></pre>
-<p sourcefile="src/search-variables.md" sourcestartlinenumber="24">You can combine variable conditions with file-name and PDM search tokens. All conditions must match.</p>
-<pre><code class="lang-bash" sourcefile="src/search-variables.md" sourcestartlinenumber="26">Name=%Pump%;@Description~Steel;StateName=Released;@Weight&gt;=5
+<p>You can combine variable conditions with file-name and PDM search tokens. All conditions must match.</p>
+<pre><code class="lang-bash">Name=%Pump%;@Description~Steel;StateName=Released;@Weight&gt;=5
 </code></pre>
-<h2 id="supported-operators" sourcefile="src/search-variables.md" sourcestartlinenumber="30">Supported Operators</h2>
-<table sourcefile="src/search-variables.md" sourcestartlinenumber="32">
+<h2 id="supported-operators">Supported Operators</h2>
+<table>
 <thead>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="32">
-<th sourcefile="src/search-variables.md" sourcestartlinenumber="32">Symbol</th>
-<th sourcefile="src/search-variables.md" sourcestartlinenumber="32">Meaning</th>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="34">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="34">=</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="34">Equal</td>
+<tr>
+<td>=</td>
+<td>Equal</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="35">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="35">!=</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="35">Not equal</td>
+<tr>
+<td>!=</td>
+<td>Not equal</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="36">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="36">&lt;&gt;</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="36">Not equal</td>
+<tr>
+<td>&lt;&gt;</td>
+<td>Not equal</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="37">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="37">&gt;</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="37">Greater than</td>
+<tr>
+<td>&gt;</td>
+<td>Greater than</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="38">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="38">&lt;</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="38">Less than</td>
+<tr>
+<td>&lt;</td>
+<td>Less than</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="39">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="39">&gt;=</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="39">Greater than or equal</td>
+<tr>
+<td>&gt;=</td>
+<td>Greater than or equal</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="40">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="40">&lt;=</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="40">Less than or equal</td>
+<tr>
+<td>&lt;=</td>
+<td>Less than or equal</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="41">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="41">~</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="41">Contains</td>
+<tr>
+<td>~</td>
+<td>Contains</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="42">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="42">!~</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="42">Does not contain</td>
+<tr>
+<td>!~</td>
+<td>Does not contain</td>
 </tr>
 </tbody>
 </table>
-<h2 id="operator-mapping" sourcefile="src/search-variables.md" sourcestartlinenumber="44">Operator Mapping</h2>
-<p sourcefile="src/search-variables.md" sourcestartlinenumber="46">String variables use these operator mappings.</p>
-<table sourcefile="src/search-variables.md" sourcestartlinenumber="48">
+<h2 id="operator-mapping">Operator Mapping</h2>
+<p>String variables use these operator mappings.</p>
+<table>
 <thead>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="48">
-<th sourcefile="src/search-variables.md" sourcestartlinenumber="48">Symbol</th>
-<th sourcefile="src/search-variables.md" sourcestartlinenumber="48">Enum</th>
+<tr>
+<th>Symbol</th>
+<th>Enum</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="50">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="50">=</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="50">Equals</td>
+<tr>
+<td>=</td>
+<td>Equals</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="51">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="51">!= or &lt;&gt;</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="51">Different</td>
+<tr>
+<td>!= or &lt;&gt;</td>
+<td>Different</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="52">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="52">&gt;</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="52">Greater</td>
+<tr>
+<td>&gt;</td>
+<td>Greater</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="53">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="53">&lt;</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="53">Less</td>
+<tr>
+<td>&lt;</td>
+<td>Less</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="54">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="54">&gt;=</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="54">Greater or equal</td>
+<tr>
+<td>&gt;=</td>
+<td>Greater or equal</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="55">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="55">&lt;=</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="55">Less or equal</td>
+<tr>
+<td>&lt;=</td>
+<td>Less or equal</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="56">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="56">~</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="56">Contains</td>
+<tr>
+<td>~</td>
+<td>Contains</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="57">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="57">!~</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="57">Not contains</td>
+<tr>
+<td>!~</td>
+<td>Not contains</td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="src/search-variables.md" sourcestartlinenumber="59">Numeric and date variables use the corresponding numeric or date operator sets.</p>
-<p sourcefile="src/search-variables.md" sourcestartlinenumber="61">Dates must use <code sourcefile="src/search-variables.md" sourcestartlinenumber="61">yyyyMMdd</code>.</p>
-<pre><code class="lang-bash" sourcefile="src/search-variables.md" sourcestartlinenumber="63">@ApprovedDate&gt;=20260101
+<p>Numeric and date variables use the corresponding numeric or date operator sets.</p>
+<p>Dates must use <code>yyyyMMdd</code>.</p>
+<pre><code class="lang-bash">@ApprovedDate&gt;=20260101
 </code></pre>
-<h2 id="operator-detection" sourcefile="src/search-variables.md" sourcestartlinenumber="67">Operator Detection</h2>
-<p sourcefile="src/search-variables.md" sourcestartlinenumber="69">Operators are detected longest-first to avoid ambiguity.</p>
-<table sourcefile="src/search-variables.md" sourcestartlinenumber="71">
+<h2 id="operator-detection">Operator Detection</h2>
+<p>Operators are detected longest-first to avoid ambiguity.</p>
+<table>
 <thead>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="71">
-<th sourcefile="src/search-variables.md" sourcestartlinenumber="71">Order</th>
-<th sourcefile="src/search-variables.md" sourcestartlinenumber="71">Operator</th>
+<tr>
+<th>Order</th>
+<th>Operator</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="73">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="73">1</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="73">&gt;=</td>
+<tr>
+<td>1</td>
+<td>&gt;=</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="74">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="74">2</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="74">&lt;=</td>
+<tr>
+<td>2</td>
+<td>&lt;=</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="75">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="75">3</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="75">!=</td>
+<tr>
+<td>3</td>
+<td>!=</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="76">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="76">4</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="76">&lt;&gt;</td>
+<tr>
+<td>4</td>
+<td>&lt;&gt;</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="77">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="77">5</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="77">!~</td>
+<tr>
+<td>5</td>
+<td>!~</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="78">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="78">6</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="78">~</td>
+<tr>
+<td>6</td>
+<td>~</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="79">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="79">7</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="79">&gt;</td>
+<tr>
+<td>7</td>
+<td>&gt;</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="80">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="80">8</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="80">&lt;</td>
+<tr>
+<td>8</td>
+<td>&lt;</td>
 </tr>
-<tr sourcefile="src/search-variables.md" sourcestartlinenumber="81">
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="81">9</td>
-<td sourcefile="src/search-variables.md" sourcestartlinenumber="81">=</td>
+<tr>
+<td>9</td>
+<td>=</td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="src/search-variables.md" sourcestartlinenumber="83">This prevents <code sourcefile="src/search-variables.md" sourcestartlinenumber="83">&gt;=</code> from being parsed as <code sourcefile="src/search-variables.md" sourcestartlinenumber="83">&gt;</code>.</p>
-<h2 id="invalid-input" sourcefile="src/search-variables.md" sourcestartlinenumber="85">Invalid Input</h2>
-<p sourcefile="src/search-variables.md" sourcestartlinenumber="87">Invalid expressions are ignored silently. PDMShell continues applying valid conditions.</p>
-<p sourcefile="src/search-variables.md" sourcestartlinenumber="89">Examples that may be ignored:</p>
-<pre><code class="lang-bash" sourcefile="src/search-variables.md" sourcestartlinenumber="91">@MissingVar=Test
+<p>This prevents <code>&gt;=</code> from being parsed as <code>&gt;</code>.</p>
+<h2 id="invalid-input">Invalid Input</h2>
+<p>Invalid expressions are ignored silently. PDMShell continues applying valid conditions.</p>
+<p>Examples that may be ignored:</p>
+<pre><code class="lang-bash">@MissingVar=Test
 HistoryBefore=BADDATE
 UnknownKey=Value
 </code></pre>
-<h2 id="related-articles" sourcefile="src/search-variables.md" sourcestartlinenumber="97">Related Articles</h2>
-<ul sourcefile="src/search-variables.md" sourcestartlinenumber="99">
-<li sourcefile="src/search-variables.md" sourcestartlinenumber="99"><a href="advancedsearch.html" sourcefile="src/search-variables.md" sourcestartlinenumber="99">Advanced search overview</a></li>
-<li sourcefile="src/search-variables.md" sourcestartlinenumber="100"><a href="search-tokens.html" sourcefile="src/search-variables.md" sourcestartlinenumber="100">Search tokens</a></li>
-<li sourcefile="src/search-variables.md" sourcestartlinenumber="101"><a href="search-result-shaping.html" sourcefile="src/search-variables.md" sourcestartlinenumber="101">Result shaping</a></li>
+<h2 id="related-articles">Related Articles</h2>
+<ul>
+<li><a href="advancedsearch.html">Advanced search overview</a></li>
+<li><a href="search-tokens.html">Search tokens</a></li>
+<li><a href="search-result-shaping.html">Result shaping</a></li>
 </ul>
 
 </article>

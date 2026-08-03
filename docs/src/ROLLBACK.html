@@ -85,115 +85,115 @@
         </div>
 
         <article data-uid="">
-<h1 id="rollback-command" sourcefile="src/ROLLBACK.md" sourcestartlinenumber="7"><code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="7">rollback</code> command</h1>
+<h1 id="rollback-command"><code>rollback</code> command</h1>
 
-<p sourcefile="src/ROLLBACK.md" sourcestartlinenumber="9">Previews or permanently rolls a checked-in PDM file back to an earlier version. You can select the target by version number, previous version, date, or revision name.</p>
-<div class="WARNING" sourcefile="src/ROLLBACK.md" sourcestartlinenumber="11">
+<p>Previews or permanently rolls a checked-in PDM file back to an earlier version. You can select the target by version number, previous version, date, or revision name.</p>
+<div class="WARNING">
 <h5>Warning</h5>
-<p sourcefile="src/ROLLBACK.md" sourcestartlinenumber="12">Rollback permanently deletes every file version after the selected target, including associated file and data-card data. It cannot be undone without restoring the vault database and archives from backup.</p>
+<p>Rollback permanently deletes every file version after the selected target, including associated file and data-card data. It cannot be undone without restoring the vault database and archives from backup.</p>
 </div>
-<p sourcefile="src/ROLLBACK.md" sourcestartlinenumber="14">The command previews the result by default. It does not change the file unless you add <code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="14">-confirm</code>.</p>
-<h2 id="requirements" sourcefile="src/ROLLBACK.md" sourcestartlinenumber="16">Requirements</h2>
-<ul sourcefile="src/ROLLBACK.md" sourcestartlinenumber="18">
-<li sourcefile="src/ROLLBACK.md" sourcestartlinenumber="18">PDMShell Premium</li>
-<li sourcefile="src/ROLLBACK.md" sourcestartlinenumber="19">SOLIDWORKS PDM Professional 2017 or newer</li>
-<li sourcefile="src/ROLLBACK.md" sourcestartlinenumber="20">The file must be checked in</li>
-<li sourcefile="src/ROLLBACK.md" sourcestartlinenumber="21">The current user must have Rollback permission</li>
-<li sourcefile="src/ROLLBACK.md" sourcestartlinenumber="22">The selected rollback point must not be cold-stored</li>
+<p>The command previews the result by default. It does not change the file unless you add <code>-confirm</code>.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>PDMShell Premium</li>
+<li>SOLIDWORKS PDM Professional 2017 or newer</li>
+<li>The file must be checked in</li>
+<li>The current user must have Rollback permission</li>
+<li>The selected rollback point must not be cold-stored</li>
 </ul>
-<h2 id="syntax" sourcefile="src/ROLLBACK.md" sourcestartlinenumber="24">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/ROLLBACK.md" sourcestartlinenumber="26">rollback -filePath file_path
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">rollback -filePath file_path
          (-version number | -previous | -before date | -revision name)
          [-comment text]
          [-deleteParentReferences]
          [-confirm]
 </code></pre>
-<p sourcefile="src/ROLLBACK.md" sourcestartlinenumber="34">Specify exactly one target selector.</p>
-<h2 id="target-selectors" sourcefile="src/ROLLBACK.md" sourcestartlinenumber="36">Target selectors</h2>
-<table sourcefile="src/ROLLBACK.md" sourcestartlinenumber="38">
+<p>Specify exactly one target selector.</p>
+<h2 id="target-selectors">Target selectors</h2>
+<table>
 <thead>
-<tr sourcefile="src/ROLLBACK.md" sourcestartlinenumber="38">
-<th sourcefile="src/ROLLBACK.md" sourcestartlinenumber="38">Parameter</th>
-<th sourcefile="src/ROLLBACK.md" sourcestartlinenumber="38">Short name</th>
-<th sourcefile="src/ROLLBACK.md" sourcestartlinenumber="38">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Short name</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/ROLLBACK.md" sourcestartlinenumber="40">
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="40"><code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="40">-version</code></td>
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="40"><code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="40">-ver</code></td>
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="40">Retains this exact earlier PDM version.</td>
+<tr>
+<td><code>-version</code></td>
+<td><code>-ver</code></td>
+<td>Retains this exact earlier PDM version.</td>
 </tr>
-<tr sourcefile="src/ROLLBACK.md" sourcestartlinenumber="41">
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="41"><code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="41">-previous</code></td>
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="41"><code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="41">-prev</code></td>
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="41">Retains the version immediately before the current version.</td>
+<tr>
+<td><code>-previous</code></td>
+<td><code>-prev</code></td>
+<td>Retains the version immediately before the current version.</td>
 </tr>
-<tr sourcefile="src/ROLLBACK.md" sourcestartlinenumber="42">
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="42"><code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="42">-before</code></td>
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="42"><code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="42">-before</code></td>
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="42">Retains the newest version created before the supplied local date and time.</td>
+<tr>
+<td><code>-before</code></td>
+<td><code>-before</code></td>
+<td>Retains the newest version created before the supplied local date and time.</td>
 </tr>
-<tr sourcefile="src/ROLLBACK.md" sourcestartlinenumber="43">
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="43"><code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="43">-revision</code></td>
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="43"><code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="43">-rev</code></td>
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="43">Retains the newest earlier version carrying this revision name.</td>
+<tr>
+<td><code>-revision</code></td>
+<td><code>-rev</code></td>
+<td>Retains the newest earlier version carrying this revision name.</td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="src/ROLLBACK.md" sourcestartlinenumber="45">ISO 8601 dates are recommended:</p>
-<pre><code class="lang-text" sourcefile="src/ROLLBACK.md" sourcestartlinenumber="47">2026-07-01
+<p>ISO 8601 dates are recommended:</p>
+<pre><code class="lang-text">2026-07-01
 2026-07-01T17:30:00-07:00
 </code></pre>
-<p sourcefile="src/ROLLBACK.md" sourcestartlinenumber="52">A date without a time means the start of that date in local time.</p>
-<h2 id="other-parameters" sourcefile="src/ROLLBACK.md" sourcestartlinenumber="54">Other parameters</h2>
-<table sourcefile="src/ROLLBACK.md" sourcestartlinenumber="56">
+<p>A date without a time means the start of that date in local time.</p>
+<h2 id="other-parameters">Other parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/ROLLBACK.md" sourcestartlinenumber="56">
-<th sourcefile="src/ROLLBACK.md" sourcestartlinenumber="56">Parameter</th>
-<th sourcefile="src/ROLLBACK.md" sourcestartlinenumber="56">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/ROLLBACK.md" sourcestartlinenumber="58">
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="58"><code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="58">-filePath</code></td>
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="58">Checked-in PDM file to roll back. Absolute and relative paths are supported.</td>
+<tr>
+<td><code>-filePath</code></td>
+<td>Checked-in PDM file to roll back. Absolute and relative paths are supported.</td>
 </tr>
-<tr sourcefile="src/ROLLBACK.md" sourcestartlinenumber="59">
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="59"><code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="59">-comment</code></td>
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="59">Comment stored with the rollback. Defaults to <code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="59">Rollback performed by PDMShell</code>.</td>
+<tr>
+<td><code>-comment</code></td>
+<td>Comment stored with the rollback. Defaults to <code>Rollback performed by PDMShell</code>.</td>
 </tr>
-<tr sourcefile="src/ROLLBACK.md" sourcestartlinenumber="60">
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="60"><code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="60">-deleteParentReferences</code></td>
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="60">Deletes affected parent references instead of redirecting them to the retained version. Use with care.</td>
+<tr>
+<td><code>-deleteParentReferences</code></td>
+<td>Deletes affected parent references instead of redirecting them to the retained version. Use with care.</td>
 </tr>
-<tr sourcefile="src/ROLLBACK.md" sourcestartlinenumber="61">
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="61"><code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="61">-confirm</code></td>
-<td sourcefile="src/ROLLBACK.md" sourcestartlinenumber="61">Performs the permanent rollback after showing the resolved target. Without it, the command is preview-only.</td>
+<tr>
+<td><code>-confirm</code></td>
+<td>Performs the permanent rollback after showing the resolved target. Without it, the command is preview-only.</td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="src/ROLLBACK.md" sourcestartlinenumber="63">Parent references are redirected to the retained version by default.</p>
-<h2 id="preview-a-rollback" sourcefile="src/ROLLBACK.md" sourcestartlinenumber="65">Preview a rollback</h2>
-<pre><code class="lang-text" sourcefile="src/ROLLBACK.md" sourcestartlinenumber="67">rollback -filePath &quot;Part.sldprt&quot; -previous
+<p>Parent references are redirected to the retained version by default.</p>
+<h2 id="preview-a-rollback">Preview a rollback</h2>
+<pre><code class="lang-text">rollback -filePath &quot;Part.sldprt&quot; -previous
 </code></pre>
-<p sourcefile="src/ROLLBACK.md" sourcestartlinenumber="71">The preview reports:</p>
-<pre><code class="lang-text" sourcefile="src/ROLLBACK.md" sourcestartlinenumber="73">ROLLBACK PREVIEW - no changes were made
+<p>The preview reports:</p>
+<pre><code class="lang-text">ROLLBACK PREVIEW - no changes were made
 Current version: 18
 Rollback target: 17
 Versions permanently deleted: 18-18
 Parent references: redirect to the retained version
 </code></pre>
-<h2 id="perform-a-rollback" sourcefile="src/ROLLBACK.md" sourcestartlinenumber="81">Perform a rollback</h2>
-<p sourcefile="src/ROLLBACK.md" sourcestartlinenumber="83">After reviewing the preview, repeat the command with <code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="83">-confirm</code>:</p>
-<pre><code class="lang-text" sourcefile="src/ROLLBACK.md" sourcestartlinenumber="85">rollback -filePath &quot;Part.sldprt&quot; -previous -comment &quot;Incorrect release&quot; -confirm
+<h2 id="perform-a-rollback">Perform a rollback</h2>
+<p>After reviewing the preview, repeat the command with <code>-confirm</code>:</p>
+<pre><code class="lang-text">rollback -filePath &quot;Part.sldprt&quot; -previous -comment &quot;Incorrect release&quot; -confirm
 </code></pre>
-<p sourcefile="src/ROLLBACK.md" sourcestartlinenumber="89">Additional examples:</p>
-<pre><code class="lang-text" sourcefile="src/ROLLBACK.md" sourcestartlinenumber="91">rollback -filePath &quot;Part.sldprt&quot; -version 12
+<p>Additional examples:</p>
+<pre><code class="lang-text">rollback -filePath &quot;Part.sldprt&quot; -version 12
 rollback -filePath &quot;Part.sldprt&quot; -before &quot;2026-07-01&quot;
 rollback -filePath &quot;Part.sldprt&quot; -revision &quot;B&quot;
 </code></pre>
-<p sourcefile="src/ROLLBACK.md" sourcestartlinenumber="97">Do not use <code sourcefile="src/ROLLBACK.md" sourcestartlinenumber="97">-deleteParentReferences</code> unless you intentionally want to remove references from parent versions to the versions being deleted.</p>
+<p>Do not use <code>-deleteParentReferences</code> unless you intentionally want to remove references from parent versions to the versions being deleted.</p>
 
 </article>
 

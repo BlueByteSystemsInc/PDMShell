@@ -85,83 +85,83 @@
         </div>
 
         <article data-uid="">
-<h1 id="script-editor" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="5">Script Editor</h1>
+<h1 id="script-editor">Script Editor</h1>
 
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="7">The Script Editor stores the scripts that the add-in can run from PDM. Each script entry has its own enabled state, permissions, conditions, command menu settings, trigger points, and script code.</p>
-<h2 id="add-in-workflow" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="9">Add-in workflow</h2>
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="11">Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select <code sourcefile="src/addin/script-editor.md" sourcestartlinenumber="11">Edit Scripts...</code>.</p>
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="13">The Script Editor is where administrators create script entries, enable them, assign permitted users and groups, define conditions, configure command menu text, select PDM command hooks, and edit the PDMShell script code.</p>
+<p>The Script Editor stores the scripts that the add-in can run from PDM. Each script entry has its own enabled state, permissions, conditions, command menu settings, trigger points, and script code.</p>
+<h2 id="add-in-workflow">Add-in workflow</h2>
+<p>Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select <code>Edit Scripts...</code>.</p>
+<p>The Script Editor is where administrators create script entries, enable them, assign permitted users and groups, define conditions, configure command menu text, select PDM command hooks, and edit the PDMShell script code.</p>
 <p>
   <img src="../../images/pdmshell-addin-script-editor.png" alt="PDMShell add-in Script Editor showing script controls, progress and cancellation settings, permissions, conditions, trigger points, code, Import, and Export" style="max-width:1100px;width:100%;height:auto;">
 </p>
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="19">Each script can expose a PDM command menu item and store the PDMShell code that runs against the selected file, folder, or event context.</p>
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="21">Use the Conditions editor to build the same condition expressions used by PDMShell scripts, then save the expression back to the add-in script.</p>
+<p>Each script can expose a PDM command menu item and store the PDMShell code that runs against the selected file, folder, or event context.</p>
+<p>Use the Conditions editor to build the same condition expressions used by PDMShell scripts, then save the expression back to the add-in script.</p>
 <p>
   <img src="../../images/pdmshell-addin-conditions-editor.png" alt="PDMShell add-in Conditions editor with condition rows and generated condition expression" style="max-width:920px;width:100%;height:auto;">
 </p>
-<h2 id="add-or-delete-scripts" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="27">Add or delete scripts</h2>
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="29">Use Add to create a new script entry. Use Delete to remove the selected entry.</p>
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="31">Use Import to load script entries from a saved configuration file. Use Export to save the configured script entries so they can be backed up, reviewed, or moved to another vault.</p>
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="33">The editor does not create dummy scripts. A new script entry is empty until you enter the script name, configuration, and code.</p>
-<h2 id="save-or-discard-changes" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="35">Save or discard changes</h2>
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="37">The editor works on a copy of the saved configuration.</p>
-<ul sourcefile="src/addin/script-editor.md" sourcestartlinenumber="39">
-<li sourcefile="src/addin/script-editor.md" sourcestartlinenumber="39">Click OK to save the edited configuration.</li>
-<li sourcefile="src/addin/script-editor.md" sourcestartlinenumber="40">Click Cancel to discard changes made in the dialog.</li>
+<h2 id="add-or-delete-scripts">Add or delete scripts</h2>
+<p>Use Add to create a new script entry. Use Delete to remove the selected entry.</p>
+<p>Use Import to load script entries from a saved configuration file. Use Export to save the configured script entries so they can be backed up, reviewed, or moved to another vault.</p>
+<p>The editor does not create dummy scripts. A new script entry is empty until you enter the script name, configuration, and code.</p>
+<h2 id="save-or-discard-changes">Save or discard changes</h2>
+<p>The editor works on a copy of the saved configuration.</p>
+<ul>
+<li>Click OK to save the edited configuration.</li>
+<li>Click Cancel to discard changes made in the dialog.</li>
 </ul>
-<h2 id="menu-and-hook-changes-prompt" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="42">Menu and hook changes prompt</h2>
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="44">When you click OK, PDMShell checks whether the saved changes affect PDM menu command registration or PDM command hook registration.</p>
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="46">This prompt appears when changes include command menu changes, command menu name/text changes, or trigger point changes.</p>
+<h2 id="menu-and-hook-changes-prompt">Menu and hook changes prompt</h2>
+<p>When you click OK, PDMShell checks whether the saved changes affect PDM menu command registration or PDM command hook registration.</p>
+<p>This prompt appears when changes include command menu changes, command menu name/text changes, or trigger point changes.</p>
 <p>
   <img src="../../images/pdmshell-menu-hook-changes-dialog.png" alt="PDMShell menu and hook changes dialog asking whether to restart Windows Explorer" style="max-width:520px;width:100%;height:auto;">
 </p>
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="52">SOLIDWORKS PDM registers menu commands and command hooks when a user logs in to the vault and the add-in loads. If you changed menu commands or hooks, users must restart Windows Explorer or log out and back in to the vault before the changed commands and hooks appear.</p>
-<ul sourcefile="src/addin/script-editor.md" sourcestartlinenumber="54">
-<li sourcefile="src/addin/script-editor.md" sourcestartlinenumber="54">Click Yes to restart Windows Explorer for the current Windows session.</li>
-<li sourcefile="src/addin/script-editor.md" sourcestartlinenumber="55">Click No if you want to restart Windows Explorer later or log out and back in to the vault manually.</li>
+<p>SOLIDWORKS PDM registers menu commands and command hooks when a user logs in to the vault and the add-in loads. If you changed menu commands or hooks, users must restart Windows Explorer or log out and back in to the vault before the changed commands and hooks appear.</p>
+<ul>
+<li>Click Yes to restart Windows Explorer for the current Windows session.</li>
+<li>Click No if you want to restart Windows Explorer later or log out and back in to the vault manually.</li>
 </ul>
-<h2 id="script-sections" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="57">Script sections</h2>
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="59">Each script is organized into these sections:</p>
-<table sourcefile="src/addin/script-editor.md" sourcestartlinenumber="61">
+<h2 id="script-sections">Script sections</h2>
+<p>Each script is organized into these sections:</p>
+<table>
 <thead>
-<tr sourcefile="src/addin/script-editor.md" sourcestartlinenumber="61">
-<th sourcefile="src/addin/script-editor.md" sourcestartlinenumber="61">Section</th>
-<th sourcefile="src/addin/script-editor.md" sourcestartlinenumber="61">Purpose</th>
+<tr>
+<th>Section</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/addin/script-editor.md" sourcestartlinenumber="63">
-<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="63">Overview</td>
-<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="63">Script name, enabled state, progress display, and optional user cancellation</td>
+<tr>
+<td>Overview</td>
+<td>Script name, enabled state, progress display, and optional user cancellation</td>
 </tr>
-<tr sourcefile="src/addin/script-editor.md" sourcestartlinenumber="64">
-<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="64">Permissions</td>
-<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="64">Users and groups allowed to run the script</td>
+<tr>
+<td>Permissions</td>
+<td>Users and groups allowed to run the script</td>
 </tr>
-<tr sourcefile="src/addin/script-editor.md" sourcestartlinenumber="65">
-<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="65">Conditions</td>
-<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="65">Expression that must pass before the script runs</td>
+<tr>
+<td>Conditions</td>
+<td>Expression that must pass before the script runs</td>
 </tr>
-<tr sourcefile="src/addin/script-editor.md" sourcestartlinenumber="66">
-<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="66">Trigger Points</td>
-<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="66">Command menu and PDM event trigger configuration</td>
+<tr>
+<td>Trigger Points</td>
+<td>Command menu and PDM event trigger configuration</td>
 </tr>
-<tr sourcefile="src/addin/script-editor.md" sourcestartlinenumber="67">
-<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="67">Code</td>
-<td sourcefile="src/addin/script-editor.md" sourcestartlinenumber="67">The <code sourcefile="src/addin/script-editor.md" sourcestartlinenumber="67">.pdmshell</code> script body</td>
+<tr>
+<td>Code</td>
+<td>The <code>.pdmshell</code> script body</td>
 </tr>
 </tbody>
 </table>
-<h2 id="progress-and-cancellation" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="69">Progress and cancellation</h2>
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="71">Enable <code sourcefile="src/addin/script-editor.md" sourcestartlinenumber="71">Show progress while running</code> to display progress for command-menu and event-hook scripts.</p>
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="73">Enable <code sourcefile="src/addin/script-editor.md" sourcestartlinenumber="73">Allow user cancellation</code> to add a <code sourcefile="src/addin/script-editor.md" sourcestartlinenumber="73">Cancel</code> button and title-bar close action to that progress dialog. Cancelling stops the remaining script commands after the current command finishes. Commands that support cancellation can stop sooner.</p>
-<p sourcefile="src/addin/script-editor.md" sourcestartlinenumber="75">For a before-event hook, cancelling also cancels the pending PDM operation. For an after-event hook, the completed PDM operation cannot be reversed; only the remaining script commands are stopped.</p>
-<h2 id="related-articles" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="77">Related articles</h2>
-<ul sourcefile="src/addin/script-editor.md" sourcestartlinenumber="79">
-<li sourcefile="src/addin/script-editor.md" sourcestartlinenumber="79"><a href="permissions.html" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="79">Permissions</a></li>
-<li sourcefile="src/addin/script-editor.md" sourcestartlinenumber="80"><a href="conditions.html" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="80">Conditions</a></li>
-<li sourcefile="src/addin/script-editor.md" sourcestartlinenumber="81"><a href="command-menu.html" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="81">Command menu scripts</a></li>
-<li sourcefile="src/addin/script-editor.md" sourcestartlinenumber="82"><a href="trigger-points.html" sourcefile="src/addin/script-editor.md" sourcestartlinenumber="82">Event trigger points</a></li>
+<h2 id="progress-and-cancellation">Progress and cancellation</h2>
+<p>Enable <code>Show progress while running</code> to display progress for command-menu and event-hook scripts.</p>
+<p>Enable <code>Allow user cancellation</code> to add a <code>Cancel</code> button and title-bar close action to that progress dialog. Cancelling stops the remaining script commands after the current command finishes. Commands that support cancellation can stop sooner.</p>
+<p>For a before-event hook, cancelling also cancels the pending PDM operation. For an after-event hook, the completed PDM operation cannot be reversed; only the remaining script commands are stopped.</p>
+<h2 id="related-articles">Related articles</h2>
+<ul>
+<li><a href="permissions.html">Permissions</a></li>
+<li><a href="conditions.html">Conditions</a></li>
+<li><a href="command-menu.html">Command menu scripts</a></li>
+<li><a href="trigger-points.html">Event trigger points</a></li>
 </ul>
 
 </article>

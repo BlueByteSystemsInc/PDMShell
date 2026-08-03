@@ -85,86 +85,86 @@
         </div>
 
         <article data-uid="">
-<h1 id="setvar" sourcefile="src/SETVAR.md" sourcestartlinenumber="5">setvar</h1>
+<h1 id="setvar">setvar</h1>
 
-<h2 id="description" sourcefile="src/SETVAR.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="7">Sets the value of a variable for a specified checked out file or many checked out files.</p>
-<h2 id="syntax" sourcefile="src/SETVAR.md" sourcestartlinenumber="9">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/SETVAR.md" sourcestartlinenumber="11">setvar (-filePath path | -search query) -variableName variable_name [-value value | -clear] [-configNames configuration_names] [-recursive] [-stringformat format]
+<h2 id="description">Description</h2>
+<p>Sets the value of a variable for a specified checked out file or many checked out files.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">setvar (-filePath path | -search query) -variableName variable_name [-value value | -clear] [-configNames configuration_names] [-recursive] [-stringformat format]
 </code></pre>
-<h2 id="parameters" sourcefile="src/SETVAR.md" sourcestartlinenumber="15">Parameters</h2>
-<table sourcefile="src/SETVAR.md" sourcestartlinenumber="17">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/SETVAR.md" sourcestartlinenumber="17">
-<th sourcefile="src/SETVAR.md" sourcestartlinenumber="17">Parameter</th>
-<th sourcefile="src/SETVAR.md" sourcestartlinenumber="17">Required</th>
-<th sourcefile="src/SETVAR.md" sourcestartlinenumber="17">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/SETVAR.md" sourcestartlinenumber="19">
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="19"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="19">-filePath</code></td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="19">Mode-dependent</td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="19">The file or folder to set the variable for.</td>
+<tr>
+<td><code>-filePath</code></td>
+<td>Mode-dependent</td>
+<td>The file or folder to set the variable for.</td>
 </tr>
-<tr sourcefile="src/SETVAR.md" sourcestartlinenumber="20">
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="20"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="20">-search</code></td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="20">Mode-dependent</td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="20">The search operation to use.</td>
+<tr>
+<td><code>-search</code></td>
+<td>Mode-dependent</td>
+<td>The search operation to use.</td>
 </tr>
-<tr sourcefile="src/SETVAR.md" sourcestartlinenumber="21">
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="21"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="21">-variableName</code></td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="21">Mode-dependent</td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="21">The variable to set.</td>
+<tr>
+<td><code>-variableName</code></td>
+<td>Mode-dependent</td>
+<td>The variable to set.</td>
 </tr>
-<tr sourcefile="src/SETVAR.md" sourcestartlinenumber="22">
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="22"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="22">-value</code></td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="22">No</td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="22">The value to assign to the variable. This parameter supports placeholders. When using <code sourcefile="src/SETVAR.md" sourcestartlinenumber="22">$value</code>, PDMShell substitutes the existing variable value; if the existing value is null or empty, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="22">$value</code> evaluates to an empty...</td>
+<tr>
+<td><code>-value</code></td>
+<td>No</td>
+<td>The value to assign to the variable. This parameter supports placeholders. When using <code>$value</code>, PDMShell substitutes the existing variable value; if the existing value is null or empty, <code>$value</code> evaluates to an empty...</td>
 </tr>
-<tr sourcefile="src/SETVAR.md" sourcestartlinenumber="23">
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="23"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="23">-clear</code></td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="23">No</td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="23">Clears the variable value.</td>
+<tr>
+<td><code>-clear</code></td>
+<td>No</td>
+<td>Clears the variable value.</td>
 </tr>
-<tr sourcefile="src/SETVAR.md" sourcestartlinenumber="24">
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="24"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="24">-configNames</code></td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="24">No</td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="24">The configuration names to set the variable for, separated by commas.</td>
+<tr>
+<td><code>-configNames</code></td>
+<td>No</td>
+<td>The configuration names to set the variable for, separated by commas.</td>
 </tr>
-<tr sourcefile="src/SETVAR.md" sourcestartlinenumber="25">
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="25"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="25">-recursive</code></td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="25">No</td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="25">When used with <a href="SEARCH.html" sourcefile="src/SETVAR.md" sourcestartlinenumber="25"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="25">search</code></a>, includes files in subfolders.</td>
+<tr>
+<td><code>-recursive</code></td>
+<td>No</td>
+<td>When used with <a href="SEARCH.html"><code>search</code></a>, includes files in subfolders.</td>
 </tr>
-<tr sourcefile="src/SETVAR.md" sourcestartlinenumber="26">
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="26"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="26">-stringformat</code></td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="26">No</td>
-<td sourcefile="src/SETVAR.md" sourcestartlinenumber="26">string format. See remarks section.</td>
+<tr>
+<td><code>-stringformat</code></td>
+<td>No</td>
+<td>string format. See remarks section.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/SETVAR.md" sourcestartlinenumber="28">Parameter Details</h3>
-<ul sourcefile="src/SETVAR.md" sourcestartlinenumber="30">
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="30"><p sourcefile="src/SETVAR.md" sourcestartlinenumber="30"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="30">filePath</code>: The file or folder to set the variable for.</p>
+<h3 id="parameter-details">Parameter Details</h3>
+<ul>
+<li><p><code>filePath</code>: The file or folder to set the variable for.</p>
 </li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="32"><p sourcefile="src/SETVAR.md" sourcestartlinenumber="32"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="32">variableName</code>: The variable to set.</p>
+<li><p><code>variableName</code>: The variable to set.</p>
 </li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="34"><p sourcefile="src/SETVAR.md" sourcestartlinenumber="34"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="34">value</code>: The value to assign to the variable. This parameter supports placeholders. When using <code sourcefile="src/SETVAR.md" sourcestartlinenumber="34">$value</code>, PDMShell substitutes the existing variable value; if the existing value is null or empty, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="34">$value</code> evaluates to an empty string. Literal <code sourcefile="src/SETVAR.md" sourcestartlinenumber="34">\n</code> sequences are converted to <code sourcefile="src/SETVAR.md" sourcestartlinenumber="34">Environment.NewLine</code>.</p>
+<li><p><code>value</code>: The value to assign to the variable. This parameter supports placeholders. When using <code>$value</code>, PDMShell substitutes the existing variable value; if the existing value is null or empty, <code>$value</code> evaluates to an empty string. Literal <code>\n</code> sequences are converted to <code>Environment.NewLine</code>.</p>
 </li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="36"><p sourcefile="src/SETVAR.md" sourcestartlinenumber="36"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="36">configNames</code>: The configuration names to set the variable for, separated by commas.</p>
+<li><p><code>configNames</code>: The configuration names to set the variable for, separated by commas.</p>
 </li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="39"><p sourcefile="src/SETVAR.md" sourcestartlinenumber="39"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="39">clear</code>: Clears the variable value.</p>
+<li><p><code>clear</code>: Clears the variable value.</p>
 </li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="40"><p sourcefile="src/SETVAR.md" sourcestartlinenumber="40"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="40">search</code>: The search operation to use.</p>
+<li><p><code>search</code>: The search operation to use.</p>
 </li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="43"><p sourcefile="src/SETVAR.md" sourcestartlinenumber="43"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="43">recursive</code>: When used with <a href="SEARCH.html" sourcefile="src/SETVAR.md" sourcestartlinenumber="43"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="43">search</code></a>, includes files in subfolders.</p>
+<li><p><code>recursive</code>: When used with <a href="SEARCH.html"><code>search</code></a>, includes files in subfolders.</p>
 </li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="44"><p sourcefile="src/SETVAR.md" sourcestartlinenumber="44"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="44">stringformat</code>: Optional string format. Use <code sourcefile="src/SETVAR.md" sourcestartlinenumber="44">None</code> or omit this parameter when the evaluated value should be written without changing casing. See remarks section.</p>
+<li><p><code>stringformat</code>: Optional string format. Use <code>None</code> or omit this parameter when the evaluated value should be written without changing casing. See remarks section.</p>
 </li>
 </ul>
-<h2 id="examples" sourcefile="src/SETVAR.md" sourcestartlinenumber="46">Examples</h2>
-<pre><code class="lang-bash" sourcefile="src/SETVAR.md" sourcestartlinenumber="47">setvar -filePath file1.sldprt -variableName Description -value $value -stringformat UpperCase # Upper case the current value.
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash">setvar -filePath file1.sldprt -variableName Description -value $value -stringformat UpperCase # Upper case the current value.
 
 setvar -filePath file1.sldprt -variableName Description -value &quot;$value\n$fileNameWithoutExtension.pdf&quot; # Append a new line and a generated PDF name.
 
@@ -176,75 +176,75 @@ setvar -filePath file1.sldprt -variableName Code -value &quot;${left(${replace($
 
 setvar -search &quot;Name=%.sldprt&quot; -variableName Description -value &quot;$value\nChecked by $username&quot; -recursive
 </code></pre>
-<h3 id="set-a-variable-from-the-next-revision" sourcefile="src/SETVAR.md" sourcestartlinenumber="61">Set A Variable From The Next Revision</h3>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="63">You can use revision functions in <code sourcefile="src/SETVAR.md" sourcestartlinenumber="63">-value</code> to write the current or next PDM revision to a data card variable. This is useful for comments, release notes, or automation fields that need to preview the next formatted revision without changing the file revision.</p>
-<pre><code class="lang-bash" sourcefile="src/SETVAR.md" sourcestartlinenumber="65">setvar -filePath membrane.SLDDRW -variableName Comment -value &quot;Incremented revision to ${nextRevisionComponentValue(\&quot;Letters\&quot;)}-${nextRevisionComponentValue(\&quot;Numeric\&quot;)}-W&quot;
+<h3 id="set-a-variable-from-the-next-revision">Set A Variable From The Next Revision</h3>
+<p>You can use revision functions in <code>-value</code> to write the current or next PDM revision to a data card variable. This is useful for comments, release notes, or automation fields that need to preview the next formatted revision without changing the file revision.</p>
+<pre><code class="lang-bash">setvar -filePath membrane.SLDDRW -variableName Comment -value &quot;Incremented revision to ${nextRevisionComponentValue(\&quot;Letters\&quot;)}-${nextRevisionComponentValue(\&quot;Numeric\&quot;)}-W&quot;
 </code></pre>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="69">For a file whose next formatted revision components are <code sourcefile="src/SETVAR.md" sourcestartlinenumber="69">U</code> and <code sourcefile="src/SETVAR.md" sourcestartlinenumber="69">017</code>, the command writes:</p>
-<pre><code class="lang-text" sourcefile="src/SETVAR.md" sourcestartlinenumber="71">Incremented revision to U-017-W
+<p>For a file whose next formatted revision components are <code>U</code> and <code>017</code>, the command writes:</p>
+<pre><code class="lang-text">Incremented revision to U-017-W
 </code></pre>
 <div align="center">
   <img src="/images/pdmshell-setvar-next-revision-comment.png" alt="setvar command writing a next revision value into the Comment variable" style="max-width:960px;width:100%;height:auto;">
 </div>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="79">When the value is wrapped in double quotes, escape quotes inside function arguments with <code sourcefile="src/SETVAR.md" sourcestartlinenumber="79">\&quot;</code>.</p>
-<h3 id="set-a-variable-from-a-pdm-serial-number" sourcefile="src/SETVAR.md" sourcestartlinenumber="81">Set A Variable From A PDM Serial Number</h3>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="83">Use <code sourcefile="src/SETVAR.md" sourcestartlinenumber="83">${serialNumber(&quot;SerialNumberName&quot;)}</code> to allocate a SOLIDWORKS PDM serial number and write it to a variable.</p>
-<pre><code class="lang-bash" sourcefile="src/SETVAR.md" sourcestartlinenumber="85">setvar -filePath file1.sldprt -variableName PartNo -value &quot;${serialNumber(\&quot;PartNumber\&quot;)}&quot;
+<p>When the value is wrapped in double quotes, escape quotes inside function arguments with <code>\&quot;</code>.</p>
+<h3 id="set-a-variable-from-a-pdm-serial-number">Set A Variable From A PDM Serial Number</h3>
+<p>Use <code>${serialNumber(&quot;SerialNumberName&quot;)}</code> to allocate a SOLIDWORKS PDM serial number and write it to a variable.</p>
+<pre><code class="lang-bash">setvar -filePath file1.sldprt -variableName PartNo -value &quot;${serialNumber(\&quot;PartNumber\&quot;)}&quot;
 </code></pre>
-<div class="WARNING" sourcefile="src/SETVAR.md" sourcestartlinenumber="89">
+<div class="WARNING">
 <h5>Warning</h5>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="90">The serial number function allocates a real PDM serial number each time the value is evaluated.</p>
+<p>The serial number function allocates a real PDM serial number each time the value is evaluated.</p>
 </div>
-<h3 id="escaping-quotes-in-the-command-box" sourcefile="src/SETVAR.md" sourcestartlinenumber="92">Escaping Quotes In The Command Box</h3>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="94">In the PDMShell command box, escape quotes inside function arguments when the whole <code sourcefile="src/SETVAR.md" sourcestartlinenumber="94">-value</code> argument is wrapped in double quotes. This is common when the value contains spaces.</p>
-<pre><code class="lang-bash" sourcefile="src/SETVAR.md" sourcestartlinenumber="96">setvar -filePath membrane.SLDDRW -variableName Comment -value &quot;Incremented revision to ${nextRevisionComponentValue(\&quot;Letters\&quot;)}-${nextRevisionComponentValue(\&quot;Numeric\&quot;)}-W&quot;
+<h3 id="escaping-quotes-in-the-command-box">Escaping Quotes In The Command Box</h3>
+<p>In the PDMShell command box, escape quotes inside function arguments when the whole <code>-value</code> argument is wrapped in double quotes. This is common when the value contains spaces.</p>
+<pre><code class="lang-bash">setvar -filePath membrane.SLDDRW -variableName Comment -value &quot;Incremented revision to ${nextRevisionComponentValue(\&quot;Letters\&quot;)}-${nextRevisionComponentValue(\&quot;Numeric\&quot;)}-W&quot;
 </code></pre>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="100">If the value does not need outer quotes, the function argument quotes do not need to be escaped.</p>
-<pre><code class="lang-bash" sourcefile="src/SETVAR.md" sourcestartlinenumber="102">setvar -filePath membrane.SLDDRW -variableName Comment -value ${nextRevisionComponentValue(&quot;Letters&quot;)}-${nextRevisionComponentValue(&quot;Numeric&quot;)}-W
+<p>If the value does not need outer quotes, the function argument quotes do not need to be escaped.</p>
+<pre><code class="lang-bash">setvar -filePath membrane.SLDDRW -variableName Comment -value ${nextRevisionComponentValue(&quot;Letters&quot;)}-${nextRevisionComponentValue(&quot;Numeric&quot;)}-W
 </code></pre>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="106">In the <a href="expression-evaluator.html" sourcefile="src/SETVAR.md" sourcestartlinenumber="106">Expression Evaluator</a>, type only the expression and do not escape the function argument quotes.</p>
-<pre><code class="lang-text" sourcefile="src/SETVAR.md" sourcestartlinenumber="108">${nextRevisionComponentValue(&quot;Letters&quot;)}-${nextRevisionComponentValue(&quot;Numeric&quot;)}-W
+<p>In the <a href="expression-evaluator.html">Expression Evaluator</a>, type only the expression and do not escape the function argument quotes.</p>
+<pre><code class="lang-text">${nextRevisionComponentValue(&quot;Letters&quot;)}-${nextRevisionComponentValue(&quot;Numeric&quot;)}-W
 </code></pre>
-<h2 id="evaluation" sourcefile="src/SETVAR.md" sourcestartlinenumber="112">Evaluation</h2>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="113">The <code sourcefile="src/SETVAR.md" sourcestartlinenumber="113">value</code> parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables.</p>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="115"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="115">$value</code> is the current value of the same variable before the command writes the new value. If the current value is null or empty, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="115">$value</code> evaluates to an empty string instead of staying as literal <code sourcefile="src/SETVAR.md" sourcestartlinenumber="115">$value</code>.</p>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="117">Use <code sourcefile="src/SETVAR.md" sourcestartlinenumber="117">$(VariableName.ConfigurationName)</code> to read another PDM variable while building the value. For file data card variables, include the configuration suffix. Use <code sourcefile="src/SETVAR.md" sourcestartlinenumber="117">.@</code> for the file <code sourcefile="src/SETVAR.md" sourcestartlinenumber="117">@</code> tab, for example <code sourcefile="src/SETVAR.md" sourcestartlinenumber="117">$(Description.@)</code>, and use the explicit configuration name for a named tab, for example <code sourcefile="src/SETVAR.md" sourcestartlinenumber="117">$(PartNo.Default)</code>. Folder variables can use <code sourcefile="src/SETVAR.md" sourcestartlinenumber="117">$(VariableName)</code> because folders do not use file configurations. Bracketed text is literal and is not evaluated as a PDM variable.</p>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="119">Use <code sourcefile="src/SETVAR.md" sourcestartlinenumber="119">\n</code> inside the value when you want PDMShell to write a real newline to the variable.</p>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="121">String and arithmetic functions can be used after placeholder evaluation. This is useful with <code sourcefile="src/SETVAR.md" sourcestartlinenumber="121">$value</code> because <code sourcefile="src/SETVAR.md" sourcestartlinenumber="121">$value</code> is resolved first, then functions such as <code sourcefile="src/SETVAR.md" sourcestartlinenumber="121">${left(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="121">${right(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="121">${len(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="121">${pos(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="121">${replace(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="121">${before(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="121">${after(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="121">${regex(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="121">${inc(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="121">${dec(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="121">${add(...)}</code>, and <code sourcefile="src/SETVAR.md" sourcestartlinenumber="121">${sub(...)}</code> run against the resolved text.</p>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="123">For example, if the existing variable value is <code sourcefile="src/SETVAR.md" sourcestartlinenumber="123">vA4-32(74)</code>, this value keeps the prefix and increments both counters:</p>
-<pre><code class="lang-bash" sourcefile="src/SETVAR.md" sourcestartlinenumber="125">setvar -filePath &quot;Part.sldprt&quot; -variableName Comment -value &quot;${regex($value, \&quot;^([^-]+)-(\\d+)\\((\\d+)\\)$\&quot;, 1)}-${inc(${regex($value, \&quot;^([^-]+)-(\\d+)\\((\\d+)\\)$\&quot;, 2)})}(${inc(${regex($value, \&quot;^([^-]+)-(\\d+)\\((\\d+)\\)$\&quot;, 3)})})&quot;
+<h2 id="evaluation">Evaluation</h2>
+<p>The <code>value</code> parameter gets evaluated by PDMShell. This feature allows you to use placeholders in the new value, which will be replaced with actual values from the file or folder. This can be useful to dynamically generate new values based on file or folder properties or other variables.</p>
+<p><code>$value</code> is the current value of the same variable before the command writes the new value. If the current value is null or empty, <code>$value</code> evaluates to an empty string instead of staying as literal <code>$value</code>.</p>
+<p>Use <code>$(VariableName.ConfigurationName)</code> to read another PDM variable while building the value. For file data card variables, include the configuration suffix. Use <code>.@</code> for the file <code>@</code> tab, for example <code>$(Description.@)</code>, and use the explicit configuration name for a named tab, for example <code>$(PartNo.Default)</code>. Folder variables can use <code>$(VariableName)</code> because folders do not use file configurations. Bracketed text is literal and is not evaluated as a PDM variable.</p>
+<p>Use <code>\n</code> inside the value when you want PDMShell to write a real newline to the variable.</p>
+<p>String and arithmetic functions can be used after placeholder evaluation. This is useful with <code>$value</code> because <code>$value</code> is resolved first, then functions such as <code>${left(...)}</code>, <code>${right(...)}</code>, <code>${len(...)}</code>, <code>${pos(...)}</code>, <code>${replace(...)}</code>, <code>${before(...)}</code>, <code>${after(...)}</code>, <code>${regex(...)}</code>, <code>${inc(...)}</code>, <code>${dec(...)}</code>, <code>${add(...)}</code>, and <code>${sub(...)}</code> run against the resolved text.</p>
+<p>For example, if the existing variable value is <code>vA4-32(74)</code>, this value keeps the prefix and increments both counters:</p>
+<pre><code class="lang-bash">setvar -filePath &quot;Part.sldprt&quot; -variableName Comment -value &quot;${regex($value, \&quot;^([^-]+)-(\\d+)\\((\\d+)\\)$\&quot;, 1)}-${inc(${regex($value, \&quot;^([^-]+)-(\\d+)\\((\\d+)\\)$\&quot;, 2)})}(${inc(${regex($value, \&quot;^([^-]+)-(\\d+)\\((\\d+)\\)$\&quot;, 3)})})&quot;
 </code></pre>
-<div class="NOTE" sourcefile="src/SETVAR.md" sourcestartlinenumber="129">
+<div class="NOTE">
 <h5>Note</h5>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="130">Please read more information about placeholder evaluation <a href="EVAL.html" sourcefile="src/SETVAR.md" sourcestartlinenumber="130">here</a>.</p>
+<p>Please read more information about placeholder evaluation <a href="EVAL.html">here</a>.</p>
 </div>
-<h2 id="remarks" sourcefile="src/SETVAR.md" sourcestartlinenumber="132">Remarks</h2>
-<ul sourcefile="src/SETVAR.md" sourcestartlinenumber="133">
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="133">The <code sourcefile="src/SETVAR.md" sourcestartlinenumber="133">configNames</code> parameter should be separated by commas. If omitted, PDMShell uses <code sourcefile="src/SETVAR.md" sourcestartlinenumber="133">@</code> for configuration-supported documents.</li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="134">The <a href="SEARCH.html" sourcefile="src/SETVAR.md" sourcestartlinenumber="134"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="134">search</code></a> parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code sourcefile="src/SETVAR.md" sourcestartlinenumber="134">%</code> for wildcard.</li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="135">The <code sourcefile="src/SETVAR.md" sourcestartlinenumber="135">stringformat</code> parameter allows you to format the value of the variable using predefined string formatting options. The following formats are supported:
-<ul sourcefile="src/SETVAR.md" sourcestartlinenumber="136">
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="136">None: Leaves the evaluated value unchanged. This is the default when <code sourcefile="src/SETVAR.md" sourcestartlinenumber="136">-stringformat</code> is omitted.</li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="137">UpperCase: Converts the entire string to uppercase.</li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="138">LowerCase: Converts the entire string to lowercase.</li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="139">CamelCase: Converts the string to camel case, where the first word is lowercase, and subsequent words are capitalized (e.g., <code sourcefile="src/SETVAR.md" sourcestartlinenumber="139">exampleString</code>).</li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="140">FirstLetterCase: Capitalizes the first letter of the string and converts the rest to lowercase (e.g., <code sourcefile="src/SETVAR.md" sourcestartlinenumber="140">Example</code>).</li>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>The <code>configNames</code> parameter should be separated by commas. If omitted, PDMShell uses <code>@</code> for configuration-supported documents.</li>
+<li>The <a href="SEARCH.html"><code>search</code></a> parameter searches the current directory and does not drill down. The search query is a PDM one, so you can use <code>%</code> for wildcard.</li>
+<li>The <code>stringformat</code> parameter allows you to format the value of the variable using predefined string formatting options. The following formats are supported:
+<ul>
+<li>None: Leaves the evaluated value unchanged. This is the default when <code>-stringformat</code> is omitted.</li>
+<li>UpperCase: Converts the entire string to uppercase.</li>
+<li>LowerCase: Converts the entire string to lowercase.</li>
+<li>CamelCase: Converts the string to camel case, where the first word is lowercase, and subsequent words are capitalized (e.g., <code>exampleString</code>).</li>
+<li>FirstLetterCase: Capitalizes the first letter of the string and converts the rest to lowercase (e.g., <code>Example</code>).</li>
 </ul>
 </li>
 </ul>
-<h2 id="tutorial" sourcefile="src/SETVAR.md" sourcestartlinenumber="142">Tutorial</h2>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="143"><video src="https://bluebyte.biz/wp-content/pdmshellvideos/setvar.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
-<h2 id="changelog" sourcefile="src/SETVAR.md" sourcestartlinenumber="146">Changelog</h2>
-<ul sourcefile="src/SETVAR.md" sourcestartlinenumber="147">
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="147">As of version <a href="releasenotes.html" sourcefile="src/SETVAR.md" sourcestartlinenumber="147">3.0.9</a>, we have added support for setting folder daracard variables</li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="148"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="148">$value</code> now evaluates to an empty string when the existing value is null or empty, and literal <code sourcefile="src/SETVAR.md" sourcestartlinenumber="148">\n</code> in evaluated values is converted to a newline.</li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="149">PDM variable evaluation now uses <code sourcefile="src/SETVAR.md" sourcestartlinenumber="149">$(Variable)</code> and <code sourcefile="src/SETVAR.md" sourcestartlinenumber="149">$(Variable.Configuration)</code> expressions. Bracketed text is literal.</li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="150">Dynamic placeholder evaluation supports string and arithmetic functions such as <code sourcefile="src/SETVAR.md" sourcestartlinenumber="150">${left(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="150">${right(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="150">${len(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="150">${pos(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="150">${replace(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="150">${before(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="150">${after(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="150">${regex(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="150">${inc(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="150">${dec(...)}</code>, <code sourcefile="src/SETVAR.md" sourcestartlinenumber="150">${add(...)}</code>, and <code sourcefile="src/SETVAR.md" sourcestartlinenumber="150">${sub(...)}</code>.</li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="151"><code sourcefile="src/SETVAR.md" sourcestartlinenumber="151">-stringformat None</code> leaves the evaluated value unchanged and is the default behavior when <code sourcefile="src/SETVAR.md" sourcestartlinenumber="151">-stringformat</code> is omitted.</li>
-<li sourcefile="src/SETVAR.md" sourcestartlinenumber="152">For file variables, use the explicit file configuration suffix such as <code sourcefile="src/SETVAR.md" sourcestartlinenumber="152">$(Description.@)</code> when reading the file <code sourcefile="src/SETVAR.md" sourcestartlinenumber="152">@</code> tab.</li>
+<h2 id="tutorial">Tutorial</h2>
+<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/setvar.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="changelog">Changelog</h2>
+<ul>
+<li>As of version <a href="releasenotes.html">3.0.9</a>, we have added support for setting folder daracard variables</li>
+<li><code>$value</code> now evaluates to an empty string when the existing value is null or empty, and literal <code>\n</code> in evaluated values is converted to a newline.</li>
+<li>PDM variable evaluation now uses <code>$(Variable)</code> and <code>$(Variable.Configuration)</code> expressions. Bracketed text is literal.</li>
+<li>Dynamic placeholder evaluation supports string and arithmetic functions such as <code>${left(...)}</code>, <code>${right(...)}</code>, <code>${len(...)}</code>, <code>${pos(...)}</code>, <code>${replace(...)}</code>, <code>${before(...)}</code>, <code>${after(...)}</code>, <code>${regex(...)}</code>, <code>${inc(...)}</code>, <code>${dec(...)}</code>, <code>${add(...)}</code>, and <code>${sub(...)}</code>.</li>
+<li><code>-stringformat None</code> leaves the evaluated value unchanged and is the default behavior when <code>-stringformat</code> is omitted.</li>
+<li>For file variables, use the explicit file configuration suffix such as <code>$(Description.@)</code> when reading the file <code>@</code> tab.</li>
 </ul>
-<h2 id="availability" sourcefile="src/SETVAR.md" sourcestartlinenumber="154">Availability</h2>
-<p sourcefile="src/SETVAR.md" sourcestartlinenumber="155">Available since PDMShell 2.0.0.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.0.</p>
 
 </article>
 

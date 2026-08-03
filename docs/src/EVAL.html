@@ -85,121 +85,121 @@
         </div>
 
         <article data-uid="">
-<h1 id="placeholders-in-pdmshell" sourcefile="src/EVAL.md" sourcestartlinenumber="5">Placeholders in PDMShell</h1>
+<h1 id="placeholders-in-pdmshell">Placeholders in PDMShell</h1>
 
-<h2 id="overview" sourcefile="src/EVAL.md" sourcestartlinenumber="7">Overview</h2>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="9">Placeholders in PDMShell let you substitute values at runtime. Supported commands can use file or folder properties, system values, vault context, PDM variables, and other contextual information to generate values automatically.</p>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="11">Placeholders are not a standalone command. They are evaluated by supported commands when processing the <code sourcefile="src/EVAL.md" sourcestartlinenumber="11">value</code> parameter or other relevant inputs.</p>
-<hr sourcefile="src/EVAL.md" sourcestartlinenumber="13">
-<h2 id="commands-supporting-placeholders" sourcefile="src/EVAL.md" sourcestartlinenumber="15">Commands Supporting Placeholders</h2>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="16">The following commands support placeholders:</p>
-<h3 id="commands-using-the-current-folder-as-the-backing-object-directory-parameter" sourcefile="src/EVAL.md" sourcestartlinenumber="18">Commands Using the Current Folder as the Backing Object (<code sourcefile="src/EVAL.md" sourcestartlinenumber="18">directory</code> parameter):</h3>
-<ul sourcefile="src/EVAL.md" sourcestartlinenumber="19">
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="19"><a href="CD.html" sourcefile="src/EVAL.md" sourcestartlinenumber="19"><code sourcefile="src/EVAL.md" sourcestartlinenumber="19">cd</code></a>: Change the current directory.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="20"><a href="MKDIR.html" sourcefile="src/EVAL.md" sourcestartlinenumber="20"><code sourcefile="src/EVAL.md" sourcestartlinenumber="20">mkdir</code></a>: Create a new directory.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="21"><a href="export.html" sourcefile="src/EVAL.md" sourcestartlinenumber="21"><code sourcefile="src/EVAL.md" sourcestartlinenumber="21">export</code></a>: Export commands to a file.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="22"><a href="ADDTOVAULT.html" sourcefile="src/EVAL.md" sourcestartlinenumber="22"><code sourcefile="src/EVAL.md" sourcestartlinenumber="22">addtovault</code></a>: Add files to the vault with the directory as the backing object.</li>
+<h2 id="overview">Overview</h2>
+<p>Placeholders in PDMShell let you substitute values at runtime. Supported commands can use file or folder properties, system values, vault context, PDM variables, and other contextual information to generate values automatically.</p>
+<p>Placeholders are not a standalone command. They are evaluated by supported commands when processing the <code>value</code> parameter or other relevant inputs.</p>
+<hr>
+<h2 id="commands-supporting-placeholders">Commands Supporting Placeholders</h2>
+<p>The following commands support placeholders:</p>
+<h3 id="commands-using-the-current-folder-as-the-backing-object-directory-parameter">Commands Using the Current Folder as the Backing Object (<code>directory</code> parameter):</h3>
+<ul>
+<li><a href="CD.html"><code>cd</code></a>: Change the current directory.</li>
+<li><a href="MKDIR.html"><code>mkdir</code></a>: Create a new directory.</li>
+<li><a href="export.html"><code>export</code></a>: Export commands to a file.</li>
+<li><a href="ADDTOVAULT.html"><code>addtovault</code></a>: Add files to the vault with the directory as the backing object.</li>
 </ul>
-<h3 id="commands-using-files-or-folders-as-the-backing-object" sourcefile="src/EVAL.md" sourcestartlinenumber="24">Commands Using Files or Folders as the Backing Object:</h3>
-<ul sourcefile="src/EVAL.md" sourcestartlinenumber="25">
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="25"><a href="RENAME.html" sourcefile="src/EVAL.md" sourcestartlinenumber="25"><code sourcefile="src/EVAL.md" sourcestartlinenumber="25">rename</code></a>: Uses the <code sourcefile="src/EVAL.md" sourcestartlinenumber="25">value</code> parameter for renaming files or folders.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="26"><a href="RENAMEFROMSOURCE.html" sourcefile="src/EVAL.md" sourcestartlinenumber="26"><code sourcefile="src/EVAL.md" sourcestartlinenumber="26">renamefromsource</code></a>: The new file is evaluated if the <code sourcefile="src/EVAL.md" sourcestartlinenumber="26">evaluatealiases</code> parameter is specified.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="27"><a href="SETVAR.html" sourcefile="src/EVAL.md" sourcestartlinenumber="27"><code sourcefile="src/EVAL.md" sourcestartlinenumber="27">setvar</code></a>: Uses the <code sourcefile="src/EVAL.md" sourcestartlinenumber="27">value</code> parameter to set variables for files or folders.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="28"><a href="BOM.html" sourcefile="src/EVAL.md" sourcestartlinenumber="28"><code sourcefile="src/EVAL.md" sourcestartlinenumber="28">bom</code></a>: Uses the <code sourcefile="src/EVAL.md" sourcestartlinenumber="28">name</code> parameter to set the exported bom csv name.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="29"><a href="export.html" sourcefile="src/EVAL.md" sourcestartlinenumber="29"><code sourcefile="src/EVAL.md" sourcestartlinenumber="29">export</code></a>: Uses the <code sourcefile="src/EVAL.md" sourcestartlinenumber="29">name</code> parameter to set the exported files name pattern.</li>
+<h3 id="commands-using-files-or-folders-as-the-backing-object">Commands Using Files or Folders as the Backing Object:</h3>
+<ul>
+<li><a href="RENAME.html"><code>rename</code></a>: Uses the <code>value</code> parameter for renaming files or folders.</li>
+<li><a href="RENAMEFROMSOURCE.html"><code>renamefromsource</code></a>: The new file is evaluated if the <code>evaluatealiases</code> parameter is specified.</li>
+<li><a href="SETVAR.html"><code>setvar</code></a>: Uses the <code>value</code> parameter to set variables for files or folders.</li>
+<li><a href="BOM.html"><code>bom</code></a>: Uses the <code>name</code> parameter to set the exported bom csv name.</li>
+<li><a href="export.html"><code>export</code></a>: Uses the <code>name</code> parameter to set the exported files name pattern.</li>
 </ul>
-<hr sourcefile="src/EVAL.md" sourcestartlinenumber="31">
-<h2 id="placeholder-reference" sourcefile="src/EVAL.md" sourcestartlinenumber="33">Placeholder Reference</h2>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="34">The <code sourcefile="src/EVAL.md" sourcestartlinenumber="34">value</code> parameter in supported commands can include placeholders that are replaced with actual values based on the current context. The placeholders differ slightly depending on whether the backing object is a file or a folder.</p>
-<h3 id="placeholders-for-files" sourcefile="src/EVAL.md" sourcestartlinenumber="36">Placeholders for Files</h3>
-<ul sourcefile="src/EVAL.md" sourcestartlinenumber="37">
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="37"><code sourcefile="src/EVAL.md" sourcestartlinenumber="37">$value</code>: Existing value of the variable. If the existing value is null or empty, this evaluates to an empty string.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="38"><code sourcefile="src/EVAL.md" sourcestartlinenumber="38">$name</code>: The file name with extension.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="39"><code sourcefile="src/EVAL.md" sourcestartlinenumber="39">$fileName</code> / <code sourcefile="src/EVAL.md" sourcestartlinenumber="39">$filename</code>: The file name with extension.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="40"><code sourcefile="src/EVAL.md" sourcestartlinenumber="40">$fileNameWithoutExtension</code>: The file name without extension.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="41"><code sourcefile="src/EVAL.md" sourcestartlinenumber="41">$nameWithoutExtension</code> / <code sourcefile="src/EVAL.md" sourcestartlinenumber="41">$namewithoutextension</code>: The file name without extension.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="42"><code sourcefile="src/EVAL.md" sourcestartlinenumber="42">$extension</code>: The file extension.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="43"><code sourcefile="src/EVAL.md" sourcestartlinenumber="43">$id</code>: The file ID.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="44"><code sourcefile="src/EVAL.md" sourcestartlinenumber="44">$revision</code>: The current revision of the file (PDM revision, not the PDM variable).</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="45"><code sourcefile="src/EVAL.md" sourcestartlinenumber="45">$version</code>: The current version of the file.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="46"><code sourcefile="src/EVAL.md" sourcestartlinenumber="46">$state</code>: The current workflow state name of the file.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="47"><code sourcefile="src/EVAL.md" sourcestartlinenumber="47">$stateID</code>: The current workflow state ID of the file.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="48"><code sourcefile="src/EVAL.md" sourcestartlinenumber="48">$workflow</code>: The workflow name for the file's current state.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="49"><code sourcefile="src/EVAL.md" sourcestartlinenumber="49">$workflowID</code>: The workflow ID for the file's current state.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="50"><code sourcefile="src/EVAL.md" sourcestartlinenumber="50">$filePath</code>: The full local path of the file.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="51"><code sourcefile="src/EVAL.md" sourcestartlinenumber="51">$localPath</code>: The full local path of the file.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="52"><code sourcefile="src/EVAL.md" sourcestartlinenumber="52">$completefilename</code>: Legacy full local path of the file.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="53"><code sourcefile="src/EVAL.md" sourcestartlinenumber="53">$folderPath</code>: The full local path of the folder containing the file.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="54"><code sourcefile="src/EVAL.md" sourcestartlinenumber="54">$directory</code>: The full local path of the folder containing the file.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="55"><code sourcefile="src/EVAL.md" sourcestartlinenumber="55">$completefoldername</code>: Legacy full local path of the folder containing the file.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="56"><code sourcefile="src/EVAL.md" sourcestartlinenumber="56">$folderName</code>: The name of the folder containing the file.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="57"><code sourcefile="src/EVAL.md" sourcestartlinenumber="57">$folderID</code>: The folder ID.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="58"><code sourcefile="src/EVAL.md" sourcestartlinenumber="58">$configuration</code>: configuration name. Only valid for BOM command.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="59"><code sourcefile="src/EVAL.md" sourcestartlinenumber="59">$(Variable.@)</code>: PDM file variable value from the file <code sourcefile="src/EVAL.md" sourcestartlinenumber="59">@</code> tab. The <code sourcefile="src/EVAL.md" sourcestartlinenumber="59">.@</code> suffix is required when reading file variables from the <code sourcefile="src/EVAL.md" sourcestartlinenumber="59">@</code> tab.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="60"><code sourcefile="src/EVAL.md" sourcestartlinenumber="60">$(Variable.Configuration)</code>: PDM file variable value from an explicit configuration tab.</li>
+<hr>
+<h2 id="placeholder-reference">Placeholder Reference</h2>
+<p>The <code>value</code> parameter in supported commands can include placeholders that are replaced with actual values based on the current context. The placeholders differ slightly depending on whether the backing object is a file or a folder.</p>
+<h3 id="placeholders-for-files">Placeholders for Files</h3>
+<ul>
+<li><code>$value</code>: Existing value of the variable. If the existing value is null or empty, this evaluates to an empty string.</li>
+<li><code>$name</code>: The file name with extension.</li>
+<li><code>$fileName</code> / <code>$filename</code>: The file name with extension.</li>
+<li><code>$fileNameWithoutExtension</code>: The file name without extension.</li>
+<li><code>$nameWithoutExtension</code> / <code>$namewithoutextension</code>: The file name without extension.</li>
+<li><code>$extension</code>: The file extension.</li>
+<li><code>$id</code>: The file ID.</li>
+<li><code>$revision</code>: The current revision of the file (PDM revision, not the PDM variable).</li>
+<li><code>$version</code>: The current version of the file.</li>
+<li><code>$state</code>: The current workflow state name of the file.</li>
+<li><code>$stateID</code>: The current workflow state ID of the file.</li>
+<li><code>$workflow</code>: The workflow name for the file's current state.</li>
+<li><code>$workflowID</code>: The workflow ID for the file's current state.</li>
+<li><code>$filePath</code>: The full local path of the file.</li>
+<li><code>$localPath</code>: The full local path of the file.</li>
+<li><code>$completefilename</code>: Legacy full local path of the file.</li>
+<li><code>$folderPath</code>: The full local path of the folder containing the file.</li>
+<li><code>$directory</code>: The full local path of the folder containing the file.</li>
+<li><code>$completefoldername</code>: Legacy full local path of the folder containing the file.</li>
+<li><code>$folderName</code>: The name of the folder containing the file.</li>
+<li><code>$folderID</code>: The folder ID.</li>
+<li><code>$configuration</code>: configuration name. Only valid for BOM command.</li>
+<li><code>$(Variable.@)</code>: PDM file variable value from the file <code>@</code> tab. The <code>.@</code> suffix is required when reading file variables from the <code>@</code> tab.</li>
+<li><code>$(Variable.Configuration)</code>: PDM file variable value from an explicit configuration tab.</li>
 </ul>
-<h3 id="placeholders-for-folders" sourcefile="src/EVAL.md" sourcestartlinenumber="62">Placeholders for Folders</h3>
-<ul sourcefile="src/EVAL.md" sourcestartlinenumber="63">
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="63"><code sourcefile="src/EVAL.md" sourcestartlinenumber="63">$value</code>: Existing value of the variable. If the existing value is null or empty, this evaluates to an empty string.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="64"><code sourcefile="src/EVAL.md" sourcestartlinenumber="64">$folderName</code>: The name of the parent folder.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="65"><code sourcefile="src/EVAL.md" sourcestartlinenumber="65">$folderID</code>: The folder ID.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="66"><code sourcefile="src/EVAL.md" sourcestartlinenumber="66">$folderPath</code>: The full local path of the folder.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="67"><code sourcefile="src/EVAL.md" sourcestartlinenumber="67">$directory</code>: The full local path of the folder.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="68"><code sourcefile="src/EVAL.md" sourcestartlinenumber="68">$filePath</code>: The full local path of the folder when the current context is a folder.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="69"><code sourcefile="src/EVAL.md" sourcestartlinenumber="69">$localPath</code>: The full local path of the folder.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="70"><code sourcefile="src/EVAL.md" sourcestartlinenumber="70">$completefoldername</code>: Legacy full local path of the folder.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="71"><code sourcefile="src/EVAL.md" sourcestartlinenumber="71">$(Variable)</code>: PDM variable value using the default folder configuration.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="72"><code sourcefile="src/EVAL.md" sourcestartlinenumber="72">$(Variable.Configuration)</code>: PDM variable value from an explicit configuration.</li>
+<h3 id="placeholders-for-folders">Placeholders for Folders</h3>
+<ul>
+<li><code>$value</code>: Existing value of the variable. If the existing value is null or empty, this evaluates to an empty string.</li>
+<li><code>$folderName</code>: The name of the parent folder.</li>
+<li><code>$folderID</code>: The folder ID.</li>
+<li><code>$folderPath</code>: The full local path of the folder.</li>
+<li><code>$directory</code>: The full local path of the folder.</li>
+<li><code>$filePath</code>: The full local path of the folder when the current context is a folder.</li>
+<li><code>$localPath</code>: The full local path of the folder.</li>
+<li><code>$completefoldername</code>: Legacy full local path of the folder.</li>
+<li><code>$(Variable)</code>: PDM variable value using the default folder configuration.</li>
+<li><code>$(Variable.Configuration)</code>: PDM variable value from an explicit configuration.</li>
 </ul>
-<h3 id="common-placeholders-applicable-to-both-files-and-folders" sourcefile="src/EVAL.md" sourcestartlinenumber="74">Common Placeholders (Applicable to Both Files and Folders)</h3>
-<ul sourcefile="src/EVAL.md" sourcestartlinenumber="75">
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="75"><code sourcefile="src/EVAL.md" sourcestartlinenumber="75">$username</code>: The name of the logged-in PDM user.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="76"><code sourcefile="src/EVAL.md" sourcestartlinenumber="76">$username.firstName</code>: The logged-in PDM user's first name when available.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="77"><code sourcefile="src/EVAL.md" sourcestartlinenumber="77">$username.lastName</code>: The logged-in PDM user's last name when available.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="78"><code sourcefile="src/EVAL.md" sourcestartlinenumber="78">$username.FullName</code>: The logged-in PDM user's full name when available.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="79"><code sourcefile="src/EVAL.md" sourcestartlinenumber="79">$username.email</code>: The logged-in PDM user's email address when available.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="80"><code sourcefile="src/EVAL.md" sourcestartlinenumber="80">$vaultName</code>: The name of the vault. <code sourcefile="src/EVAL.md" sourcestartlinenumber="80">$vaultname</code> is also supported for compatibility.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="81"><code sourcefile="src/EVAL.md" sourcestartlinenumber="81">$vaultRootFolder</code>: The local root folder of the logged-in vault. <code sourcefile="src/EVAL.md" sourcestartlinenumber="81">$vaultrootfolder</code> is also supported for compatibility.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="82"><code sourcefile="src/EVAL.md" sourcestartlinenumber="82">$GUID</code> / <code sourcefile="src/EVAL.md" sourcestartlinenumber="82">$guid</code>: Unique identifier for the evaluation context.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="83"><code sourcefile="src/EVAL.md" sourcestartlinenumber="83">$taskName</code>: Task name when a task context is available.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="84"><code sourcefile="src/EVAL.md" sourcestartlinenumber="84">$tempFolder</code> / <code sourcefile="src/EVAL.md" sourcestartlinenumber="84">$TempFolder</code>: User's local temporary folder.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="85"><code sourcefile="src/EVAL.md" sourcestartlinenumber="85">$machineName</code> / <code sourcefile="src/EVAL.md" sourcestartlinenumber="85">$computerName</code>: Windows machine name.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="86"><code sourcefile="src/EVAL.md" sourcestartlinenumber="86">$windowsUser</code>: Windows user name.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="87"><code sourcefile="src/EVAL.md" sourcestartlinenumber="87">$userDomain</code> / <code sourcefile="src/EVAL.md" sourcestartlinenumber="87">$domain</code>: Windows user domain.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="88"><code sourcefile="src/EVAL.md" sourcestartlinenumber="88">$yyyy</code> / <code sourcefile="src/EVAL.md" sourcestartlinenumber="88">$year</code>: The current four-digit year.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="89"><code sourcefile="src/EVAL.md" sourcestartlinenumber="89">$yy</code>: The current two-digit year.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="90"><code sourcefile="src/EVAL.md" sourcestartlinenumber="90">$MM</code> / <code sourcefile="src/EVAL.md" sourcestartlinenumber="90">$mm</code>: The current month (two digits).</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="91"><code sourcefile="src/EVAL.md" sourcestartlinenumber="91">$M</code>: The current month.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="92"><code sourcefile="src/EVAL.md" sourcestartlinenumber="92">$dd</code>: The current day of month (two digits).</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="93"><code sourcefile="src/EVAL.md" sourcestartlinenumber="93">$d</code>: The current day of month.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="94"><code sourcefile="src/EVAL.md" sourcestartlinenumber="94">$month</code>: Full month name.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="95"><code sourcefile="src/EVAL.md" sourcestartlinenumber="95">$mon</code>: Short month name.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="96"><code sourcefile="src/EVAL.md" sourcestartlinenumber="96">$day</code>: Full day name.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="97"><code sourcefile="src/EVAL.md" sourcestartlinenumber="97">$dayShort</code>: Short day name.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="98"><code sourcefile="src/EVAL.md" sourcestartlinenumber="98">$HH</code> / <code sourcefile="src/EVAL.md" sourcestartlinenumber="98">$hh</code>: The current hour (24-hour clock).</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="99"><code sourcefile="src/EVAL.md" sourcestartlinenumber="99">$mi</code>: The current minute (two digits).</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="100"><code sourcefile="src/EVAL.md" sourcestartlinenumber="100">$ss</code>: The current second (two digits).</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="101"><code sourcefile="src/EVAL.md" sourcestartlinenumber="101">$tt</code>: AM/PM designator.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="102"><code sourcefile="src/EVAL.md" sourcestartlinenumber="102">$timestamp</code>: Timestamp in <code sourcefile="src/EVAL.md" sourcestartlinenumber="102">yyyyMMdd_HHmmss</code> format.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="103"><code sourcefile="src/EVAL.md" sourcestartlinenumber="103">$date</code>: The current date.</li>
-<li sourcefile="src/EVAL.md" sourcestartlinenumber="104"><code sourcefile="src/EVAL.md" sourcestartlinenumber="104">$time</code>: The current time in the current locale.</li>
+<h3 id="common-placeholders-applicable-to-both-files-and-folders">Common Placeholders (Applicable to Both Files and Folders)</h3>
+<ul>
+<li><code>$username</code>: The name of the logged-in PDM user.</li>
+<li><code>$username.firstName</code>: The logged-in PDM user's first name when available.</li>
+<li><code>$username.lastName</code>: The logged-in PDM user's last name when available.</li>
+<li><code>$username.FullName</code>: The logged-in PDM user's full name when available.</li>
+<li><code>$username.email</code>: The logged-in PDM user's email address when available.</li>
+<li><code>$vaultName</code>: The name of the vault. <code>$vaultname</code> is also supported for compatibility.</li>
+<li><code>$vaultRootFolder</code>: The local root folder of the logged-in vault. <code>$vaultrootfolder</code> is also supported for compatibility.</li>
+<li><code>$GUID</code> / <code>$guid</code>: Unique identifier for the evaluation context.</li>
+<li><code>$taskName</code>: Task name when a task context is available.</li>
+<li><code>$tempFolder</code> / <code>$TempFolder</code>: User's local temporary folder.</li>
+<li><code>$machineName</code> / <code>$computerName</code>: Windows machine name.</li>
+<li><code>$windowsUser</code>: Windows user name.</li>
+<li><code>$userDomain</code> / <code>$domain</code>: Windows user domain.</li>
+<li><code>$yyyy</code> / <code>$year</code>: The current four-digit year.</li>
+<li><code>$yy</code>: The current two-digit year.</li>
+<li><code>$MM</code> / <code>$mm</code>: The current month (two digits).</li>
+<li><code>$M</code>: The current month.</li>
+<li><code>$dd</code>: The current day of month (two digits).</li>
+<li><code>$d</code>: The current day of month.</li>
+<li><code>$month</code>: Full month name.</li>
+<li><code>$mon</code>: Short month name.</li>
+<li><code>$day</code>: Full day name.</li>
+<li><code>$dayShort</code>: Short day name.</li>
+<li><code>$HH</code> / <code>$hh</code>: The current hour (24-hour clock).</li>
+<li><code>$mi</code>: The current minute (two digits).</li>
+<li><code>$ss</code>: The current second (two digits).</li>
+<li><code>$tt</code>: AM/PM designator.</li>
+<li><code>$timestamp</code>: Timestamp in <code>yyyyMMdd_HHmmss</code> format.</li>
+<li><code>$date</code>: The current date.</li>
+<li><code>$time</code>: The current time in the current locale.</li>
 </ul>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="106">Literal <code sourcefile="src/EVAL.md" sourcestartlinenumber="106">\n</code> sequences in evaluated values are converted to <code sourcefile="src/EVAL.md" sourcestartlinenumber="106">Environment.NewLine</code>.</p>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="108">PDM variable expressions use <code sourcefile="src/EVAL.md" sourcestartlinenumber="108">$(VariableName)</code> or <code sourcefile="src/EVAL.md" sourcestartlinenumber="108">$(VariableName.ConfigurationName)</code>. Bracketed text is treated as literal text, so folder and file paths such as <code sourcefile="src/EVAL.md" sourcestartlinenumber="108">[debugging]</code> are not interpreted as variables.</p>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="110">For file data card variables, include the configuration suffix. Use <code sourcefile="src/EVAL.md" sourcestartlinenumber="110">.@</code> for the file <code sourcefile="src/EVAL.md" sourcestartlinenumber="110">@</code> tab, for example <code sourcefile="src/EVAL.md" sourcestartlinenumber="110">$(Description.@)</code> or <code sourcefile="src/EVAL.md" sourcestartlinenumber="110">$(Revision.@)</code>. Use the explicit configuration name for a named tab, for example <code sourcefile="src/EVAL.md" sourcestartlinenumber="110">$(PartNo.Default)</code>. Folder variables can use <code sourcefile="src/EVAL.md" sourcestartlinenumber="110">$(VariableName)</code> because folders do not use file configurations.</p>
-<hr sourcefile="src/EVAL.md" sourcestartlinenumber="112">
-<h2 id="global-variables" sourcefile="src/EVAL.md" sourcestartlinenumber="114">Global Variables</h2>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="115">Session global variables use the <code sourcefile="src/EVAL.md" sourcestartlinenumber="115">${global.Name}</code> syntax. They are set with <code sourcefile="src/EVAL.md" sourcestartlinenumber="115">setglobal</code>, printed with <code sourcefile="src/EVAL.md" sourcestartlinenumber="115">getglobal</code>, and cleared with <code sourcefile="src/EVAL.md" sourcestartlinenumber="115">clearglobal</code>.</p>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="117">setglobal -name Project -value &quot;ABC-100&quot;
+<p>Literal <code>\n</code> sequences in evaluated values are converted to <code>Environment.NewLine</code>.</p>
+<p>PDM variable expressions use <code>$(VariableName)</code> or <code>$(VariableName.ConfigurationName)</code>. Bracketed text is treated as literal text, so folder and file paths such as <code>[debugging]</code> are not interpreted as variables.</p>
+<p>For file data card variables, include the configuration suffix. Use <code>.@</code> for the file <code>@</code> tab, for example <code>$(Description.@)</code> or <code>$(Revision.@)</code>. Use the explicit configuration name for a named tab, for example <code>$(PartNo.Default)</code>. Folder variables can use <code>$(VariableName)</code> because folders do not use file configurations.</p>
+<hr>
+<h2 id="global-variables">Global Variables</h2>
+<p>Session global variables use the <code>${global.Name}</code> syntax. They are set with <code>setglobal</code>, printed with <code>getglobal</code>, and cleared with <code>clearglobal</code>.</p>
+<pre><code class="lang-bash">setglobal -name Project -value &quot;ABC-100&quot;
 rename -filePath &quot;$localPath&quot; -value &quot;${global.Project}-$name&quot;
 setvar -variableName Description -filePath &quot;$localPath&quot; -value &quot;${global.Project} - $value&quot;
 </code></pre>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="123">Global variables are temporary and last only for the current PDMShell session or script run. See <a href="GLOBALVARIABLES.html" sourcefile="src/EVAL.md" sourcestartlinenumber="123">Global Variables</a>.</p>
-<hr sourcefile="src/EVAL.md" sourcestartlinenumber="125">
-<h2 id="string-functions" sourcefile="src/EVAL.md" sourcestartlinenumber="127">String Functions</h2>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="128">Placeholders also support a small set of string functions. Functions are evaluated after placeholders such as <code sourcefile="src/EVAL.md" sourcestartlinenumber="128">$value</code>, <code sourcefile="src/EVAL.md" sourcestartlinenumber="128">$name</code>, and PDM variable expressions like <code sourcefile="src/EVAL.md" sourcestartlinenumber="128">$(Description.@)</code> have been resolved, so they can be used to manipulate the evaluated text.</p>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="130">String functions use the <code sourcefile="src/EVAL.md" sourcestartlinenumber="130">${...}</code> syntax:</p>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="132">${left($value, 5)}
+<p>Global variables are temporary and last only for the current PDMShell session or script run. See <a href="GLOBALVARIABLES.html">Global Variables</a>.</p>
+<hr>
+<h2 id="string-functions">String Functions</h2>
+<p>Placeholders also support a small set of string functions. Functions are evaluated after placeholders such as <code>$value</code>, <code>$name</code>, and PDM variable expressions like <code>$(Description.@)</code> have been resolved, so they can be used to manipulate the evaluated text.</p>
+<p>String functions use the <code>${...}</code> syntax:</p>
+<pre><code class="lang-bash">${left($value, 5)}
 ${replace($fileNameWithoutExtension, &quot; &quot;, &quot;_&quot;)}
 ${before($fileNameWithoutExtension, &quot;-&quot;)}
 ${regex($fileNameWithoutExtension, &quot;^([^-]+)-&quot;, 1)}
@@ -212,328 +212,328 @@ ${input(&quot;Title&quot;, &quot;Message&quot;)}
 ${input(&quot;Title&quot;, &quot;Message&quot;, &quot;Default value&quot;)}
 ${serialNumber(&quot;SerialNumberName&quot;)}
 </code></pre>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="147">Supported functions:</p>
-<table sourcefile="src/EVAL.md" sourcestartlinenumber="149">
+<p>Supported functions:</p>
+<table>
 <thead>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="149">
-<th sourcefile="src/EVAL.md" sourcestartlinenumber="149">Function</th>
-<th sourcefile="src/EVAL.md" sourcestartlinenumber="149">Description</th>
+<tr>
+<th>Function</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="151">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="151"><code sourcefile="src/EVAL.md" sourcestartlinenumber="151">${left(value, count)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="151">Returns the first <code sourcefile="src/EVAL.md" sourcestartlinenumber="151">count</code> characters. If <code sourcefile="src/EVAL.md" sourcestartlinenumber="151">count</code> is longer than the value, the whole value is returned.</td>
+<tr>
+<td><code>${left(value, count)}</code></td>
+<td>Returns the first <code>count</code> characters. If <code>count</code> is longer than the value, the whole value is returned.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="152">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="152"><code sourcefile="src/EVAL.md" sourcestartlinenumber="152">${right(value, count)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="152">Returns the last <code sourcefile="src/EVAL.md" sourcestartlinenumber="152">count</code> characters. If <code sourcefile="src/EVAL.md" sourcestartlinenumber="152">count</code> is longer than the value, the whole value is returned.</td>
+<tr>
+<td><code>${right(value, count)}</code></td>
+<td>Returns the last <code>count</code> characters. If <code>count</code> is longer than the value, the whole value is returned.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="153">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="153"><code sourcefile="src/EVAL.md" sourcestartlinenumber="153">${len(value)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="153">Returns the number of characters in <code sourcefile="src/EVAL.md" sourcestartlinenumber="153">value</code>.</td>
+<tr>
+<td><code>${len(value)}</code></td>
+<td>Returns the number of characters in <code>value</code>.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="154">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="154"><code sourcefile="src/EVAL.md" sourcestartlinenumber="154">${pos(value, search)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="154">Returns the zero-based position of <code sourcefile="src/EVAL.md" sourcestartlinenumber="154">search</code> in <code sourcefile="src/EVAL.md" sourcestartlinenumber="154">value</code>, or <code sourcefile="src/EVAL.md" sourcestartlinenumber="154">-1</code> when it is not found.</td>
+<tr>
+<td><code>${pos(value, search)}</code></td>
+<td>Returns the zero-based position of <code>search</code> in <code>value</code>, or <code>-1</code> when it is not found.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="155">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="155"><code sourcefile="src/EVAL.md" sourcestartlinenumber="155">${replace(value, old, new)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="155">Replaces all occurrences of <code sourcefile="src/EVAL.md" sourcestartlinenumber="155">old</code> with <code sourcefile="src/EVAL.md" sourcestartlinenumber="155">new</code>.</td>
+<tr>
+<td><code>${replace(value, old, new)}</code></td>
+<td>Replaces all occurrences of <code>old</code> with <code>new</code>.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="156">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="156"><code sourcefile="src/EVAL.md" sourcestartlinenumber="156">${before(value, search)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="156">Returns the text before <code sourcefile="src/EVAL.md" sourcestartlinenumber="156">search</code>. If <code sourcefile="src/EVAL.md" sourcestartlinenumber="156">search</code> is not found, the original value is returned.</td>
+<tr>
+<td><code>${before(value, search)}</code></td>
+<td>Returns the text before <code>search</code>. If <code>search</code> is not found, the original value is returned.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="157">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="157"><code sourcefile="src/EVAL.md" sourcestartlinenumber="157">${after(value, search)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="157">Returns the text after <code sourcefile="src/EVAL.md" sourcestartlinenumber="157">search</code>. If <code sourcefile="src/EVAL.md" sourcestartlinenumber="157">search</code> is not found, an empty string is returned.</td>
+<tr>
+<td><code>${after(value, search)}</code></td>
+<td>Returns the text after <code>search</code>. If <code>search</code> is not found, an empty string is returned.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="158">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="158"><code sourcefile="src/EVAL.md" sourcestartlinenumber="158">${regex(value, pattern)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="158">Returns the first regular expression match. If no match is found, an empty string is returned.</td>
+<tr>
+<td><code>${regex(value, pattern)}</code></td>
+<td>Returns the first regular expression match. If no match is found, an empty string is returned.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="159">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="159"><code sourcefile="src/EVAL.md" sourcestartlinenumber="159">${regex(value, pattern, group)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="159">Returns a capture group from the first regular expression match. <code sourcefile="src/EVAL.md" sourcestartlinenumber="159">group</code> can be a group number or group name. If the group is not found, an empty string is returned.</td>
+<tr>
+<td><code>${regex(value, pattern, group)}</code></td>
+<td>Returns a capture group from the first regular expression match. <code>group</code> can be a group number or group name. If the group is not found, an empty string is returned.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="160">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="160"><code sourcefile="src/EVAL.md" sourcestartlinenumber="160">${inc(value)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="160">Increments a number by <code sourcefile="src/EVAL.md" sourcestartlinenumber="160">1</code>.</td>
+<tr>
+<td><code>${inc(value)}</code></td>
+<td>Increments a number by <code>1</code>.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="161">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="161"><code sourcefile="src/EVAL.md" sourcestartlinenumber="161">${inc(value, amount)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="161">Increments a number by <code sourcefile="src/EVAL.md" sourcestartlinenumber="161">amount</code>.</td>
+<tr>
+<td><code>${inc(value, amount)}</code></td>
+<td>Increments a number by <code>amount</code>.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="162">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="162"><code sourcefile="src/EVAL.md" sourcestartlinenumber="162">${dec(value)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="162">Decrements a number by <code sourcefile="src/EVAL.md" sourcestartlinenumber="162">1</code>.</td>
+<tr>
+<td><code>${dec(value)}</code></td>
+<td>Decrements a number by <code>1</code>.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="163">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="163"><code sourcefile="src/EVAL.md" sourcestartlinenumber="163">${add(left, right)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="163">Adds two numbers.</td>
+<tr>
+<td><code>${add(left, right)}</code></td>
+<td>Adds two numbers.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="164">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="164"><code sourcefile="src/EVAL.md" sourcestartlinenumber="164">${sub(left, right)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="164">Subtracts <code sourcefile="src/EVAL.md" sourcestartlinenumber="164">right</code> from <code sourcefile="src/EVAL.md" sourcestartlinenumber="164">left</code>.</td>
+<tr>
+<td><code>${sub(left, right)}</code></td>
+<td>Subtracts <code>right</code> from <code>left</code>.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="165">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="165"><code sourcefile="src/EVAL.md" sourcestartlinenumber="165">${mul(left, right)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="165">Multiplies two numbers.</td>
+<tr>
+<td><code>${mul(left, right)}</code></td>
+<td>Multiplies two numbers.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="166">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="166"><code sourcefile="src/EVAL.md" sourcestartlinenumber="166">${div(left, right)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="166">Divides <code sourcefile="src/EVAL.md" sourcestartlinenumber="166">left</code> by <code sourcefile="src/EVAL.md" sourcestartlinenumber="166">right</code>. Division by zero is invalid and the expression is left unchanged.</td>
+<tr>
+<td><code>${div(left, right)}</code></td>
+<td>Divides <code>left</code> by <code>right</code>. Division by zero is invalid and the expression is left unchanged.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="167">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="167"><code sourcefile="src/EVAL.md" sourcestartlinenumber="167">${lookup(csvPathOrPdmFileId, value)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="167">Reads a CSV file, finds <code sourcefile="src/EVAL.md" sourcestartlinenumber="167">value</code> in the first column, and returns the matching value from the second column.</td>
+<tr>
+<td><code>${lookup(csvPathOrPdmFileId, value)}</code></td>
+<td>Reads a CSV file, finds <code>value</code> in the first column, and returns the matching value from the second column.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="168">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="168"><code sourcefile="src/EVAL.md" sourcestartlinenumber="168">$input(title, message[, defaultValue])</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="168">Prompts the user for a value when the command line is evaluated. <code sourcefile="src/EVAL.md" sourcestartlinenumber="168">defaultValue</code> is optional and pre-fills the text box.</td>
+<tr>
+<td><code>$input(title, message[, defaultValue])</code></td>
+<td>Prompts the user for a value when the command line is evaluated. <code>defaultValue</code> is optional and pre-fills the text box.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="169">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="169"><code sourcefile="src/EVAL.md" sourcestartlinenumber="169">${input(title, message[, defaultValue])}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="169">Same as <code sourcefile="src/EVAL.md" sourcestartlinenumber="169">$input(title, message[, defaultValue])</code>, using the standard function expression syntax.</td>
+<tr>
+<td><code>${input(title, message[, defaultValue])}</code></td>
+<td>Same as <code>$input(title, message[, defaultValue])</code>, using the standard function expression syntax.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="170">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="170"><code sourcefile="src/EVAL.md" sourcestartlinenumber="170">${serialNumber(name)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="170">Allocates and returns the next value from the named SOLIDWORKS PDM serial number.</td>
+<tr>
+<td><code>${serialNumber(name)}</code></td>
+<td>Allocates and returns the next value from the named SOLIDWORKS PDM serial number.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="171">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="171"><code sourcefile="src/EVAL.md" sourcestartlinenumber="171">${isCheckedOut([filePath])}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="171">Returns <code sourcefile="src/EVAL.md" sourcestartlinenumber="171">true</code> when the current file, or the optional file path, is checked out.</td>
+<tr>
+<td><code>${isCheckedOut([filePath])}</code></td>
+<td>Returns <code>true</code> when the current file, or the optional file path, is checked out.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="172">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="172"><code sourcefile="src/EVAL.md" sourcestartlinenumber="172">${isCheckedByMe([filePath])}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="172">Returns <code sourcefile="src/EVAL.md" sourcestartlinenumber="172">true</code> when the current PDM user has the current file, or the optional file path, checked out. <code sourcefile="src/EVAL.md" sourcestartlinenumber="172">${isCheckedOutByMe(...)}</code> is also accepted.</td>
+<tr>
+<td><code>${isCheckedByMe([filePath])}</code></td>
+<td>Returns <code>true</code> when the current PDM user has the current file, or the optional file path, checked out. <code>${isCheckedOutByMe(...)}</code> is also accepted.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="173">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="173"><code sourcefile="src/EVAL.md" sourcestartlinenumber="173">${isCheckedOutByUsername(userName[, filePath])}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="173">Returns <code sourcefile="src/EVAL.md" sourcestartlinenumber="173">true</code> when the named PDM user has the current file, or the optional file path, checked out.</td>
+<tr>
+<td><code>${isCheckedOutByUsername(userName[, filePath])}</code></td>
+<td>Returns <code>true</code> when the named PDM user has the current file, or the optional file path, checked out.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="174">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="174"><code sourcefile="src/EVAL.md" sourcestartlinenumber="174">${checkedOutOnComputer([filePath])}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="174">Returns the checkout computer for the current file or optional file path. Returns an empty value when the file is not checked out.</td>
+<tr>
+<td><code>${checkedOutOnComputer([filePath])}</code></td>
+<td>Returns the checkout computer for the current file or optional file path. Returns an empty value when the file is not checked out.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="checkout-state-functions" sourcefile="src/EVAL.md" sourcestartlinenumber="176">Checkout State Functions</h3>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="178">Checkout functions use the selected PDM file unless a path is supplied. A relative path is resolved from the current PDM folder. An absolute path can identify another file in the logged-in vault.</p>
-<pre><code class="lang-text" sourcefile="src/EVAL.md" sourcestartlinenumber="180">${isCheckedOut()}
+<h3 id="checkout-state-functions">Checkout State Functions</h3>
+<p>Checkout functions use the selected PDM file unless a path is supplied. A relative path is resolved from the current PDM folder. An absolute path can identify another file in the logged-in vault.</p>
+<pre><code class="lang-text">${isCheckedOut()}
 ${isCheckedOut(&quot;Drawing.slddrw&quot;)}
 ${isCheckedByMe(&quot;$folderPath\\Drawing.slddrw&quot;)}
 ${isCheckedOutByUsername(&quot;Admin&quot;, &quot;C:\\Vault\\Projects\\Drawing.slddrw&quot;)}
 ${checkedOutOnComputer()}
 </code></pre>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="188">The boolean functions return lowercase <code sourcefile="src/EVAL.md" sourcestartlinenumber="188">true</code> or <code sourcefile="src/EVAL.md" sourcestartlinenumber="188">false</code>. They can be used in command values, visual IF statements, <code sourcefile="src/EVAL.md" sourcestartlinenumber="188">until</code>, and PDMShell add-in conditions.</p>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="190">String functions can be nested when the nested function also uses <code sourcefile="src/EVAL.md" sourcestartlinenumber="190">${...}</code>:</p>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="192">${left(${replace($value, &quot; &quot;, &quot;_&quot;)}, 10)}
+<p>The boolean functions return lowercase <code>true</code> or <code>false</code>. They can be used in command values, visual IF statements, <code>until</code>, and PDMShell add-in conditions.</p>
+<p>String functions can be nested when the nested function also uses <code>${...}</code>:</p>
+<pre><code class="lang-bash">${left(${replace($value, &quot; &quot;, &quot;_&quot;)}, 10)}
 </code></pre>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="196">For example, if <code sourcefile="src/EVAL.md" sourcestartlinenumber="196">$value</code> is <code sourcefile="src/EVAL.md" sourcestartlinenumber="196">ABC 123 DRAFT</code>, the expression above evaluates to <code sourcefile="src/EVAL.md" sourcestartlinenumber="196">ABC_123_DR</code>.</p>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="198">Arithmetic functions use invariant number parsing. Integer results preserve leading zero padding from the first argument, so <code sourcefile="src/EVAL.md" sourcestartlinenumber="198">${inc(&quot;032&quot;)}</code> evaluates to <code sourcefile="src/EVAL.md" sourcestartlinenumber="198">033</code>. They can also use numeric placeholders, so <code sourcefile="src/EVAL.md" sourcestartlinenumber="198">${add($id, 5)}</code> adds <code sourcefile="src/EVAL.md" sourcestartlinenumber="198">5</code> to the selected file or folder ID.</p>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="200">You can combine <code sourcefile="src/EVAL.md" sourcestartlinenumber="200">regex</code> with arithmetic functions when a value contains counters inside a larger string. For example, if <code sourcefile="src/EVAL.md" sourcestartlinenumber="200">$value</code> is <code sourcefile="src/EVAL.md" sourcestartlinenumber="200">vA4-32(74)</code>, this expression increments both counters while preserving the prefix:</p>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="202">${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 1)}-${inc(${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 2)})}(${inc(${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 3)})})
+<p>For example, if <code>$value</code> is <code>ABC 123 DRAFT</code>, the expression above evaluates to <code>ABC_123_DR</code>.</p>
+<p>Arithmetic functions use invariant number parsing. Integer results preserve leading zero padding from the first argument, so <code>${inc(&quot;032&quot;)}</code> evaluates to <code>033</code>. They can also use numeric placeholders, so <code>${add($id, 5)}</code> adds <code>5</code> to the selected file or folder ID.</p>
+<p>You can combine <code>regex</code> with arithmetic functions when a value contains counters inside a larger string. For example, if <code>$value</code> is <code>vA4-32(74)</code>, this expression increments both counters while preserving the prefix:</p>
+<pre><code class="lang-bash">${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 1)}-${inc(${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 2)})}(${inc(${regex($value, &quot;^([^-]+)-(\d+)\((\d+)\)$&quot;, 3)})})
 </code></pre>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="206">The result is:</p>
-<pre><code class="lang-text" sourcefile="src/EVAL.md" sourcestartlinenumber="208">vA4-33(75)
+<p>The result is:</p>
+<pre><code class="lang-text">vA4-33(75)
 </code></pre>
-<div class="TIP" sourcefile="src/EVAL.md" sourcestartlinenumber="212">
+<div class="TIP">
 <h5>Tip</h5>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="213">Regex is useful for advanced naming and value parsing, but complex expressions should be tested carefully in the <a href="expression-evaluator.html" sourcefile="src/EVAL.md" sourcestartlinenumber="213">Expression Evaluator</a>. If your team needs help building or reviewing complex PDMShell expressions, Blue Byte Systems offers <a href="https://bluebyte.biz/product/enterprise-support-services/" sourcefile="src/EVAL.md" sourcestartlinenumber="213">Enterprise Support Services</a>.</p>
+<p>Regex is useful for advanced naming and value parsing, but complex expressions should be tested carefully in the <a href="expression-evaluator.html">Expression Evaluator</a>. If your team needs help building or reviewing complex PDMShell expressions, Blue Byte Systems offers <a href="https://bluebyte.biz/product/enterprise-support-services/">Enterprise Support Services</a>.</p>
 </div>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="215">Unknown or invalid function expressions are left unchanged.</p>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="217">When a full command value is wrapped in double quotes, escape quotes inside function arguments with <code sourcefile="src/EVAL.md" sourcestartlinenumber="217">\&quot;</code>.</p>
-<h2 id="input-function" sourcefile="src/EVAL.md" sourcestartlinenumber="219">Input Function</h2>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="221">Use <code sourcefile="src/EVAL.md" sourcestartlinenumber="221">$input(&quot;Title&quot;, &quot;Message&quot;)</code> when a script needs a value from the user at runtime. PDMShell shows a prompt with a text box and an <code sourcefile="src/EVAL.md" sourcestartlinenumber="221">OK</code> button. The typed text becomes the evaluated value.</p>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="223">setvar -filePath &quot;$localPath&quot; -variableName Description -value &quot;$input(\&quot;Description\&quot;, \&quot;Enter the new description\&quot;)&quot;
+<p>Unknown or invalid function expressions are left unchanged.</p>
+<p>When a full command value is wrapped in double quotes, escape quotes inside function arguments with <code>\&quot;</code>.</p>
+<h2 id="input-function">Input Function</h2>
+<p>Use <code>$input(&quot;Title&quot;, &quot;Message&quot;)</code> when a script needs a value from the user at runtime. PDMShell shows a prompt with a text box and an <code>OK</code> button. The typed text becomes the evaluated value.</p>
+<pre><code class="lang-bash">setvar -filePath &quot;$localPath&quot; -variableName Description -value &quot;$input(\&quot;Description\&quot;, \&quot;Enter the new description\&quot;)&quot;
 </code></pre>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="227">Add a third argument when the prompt should start with a default value:</p>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="229">setvar -filePath &quot;$localPath&quot; -variableName Description -value &quot;$input(\&quot;Description\&quot;, \&quot;Enter the new description\&quot;, \&quot;Needs review\&quot;)&quot;
+<p>Add a third argument when the prompt should start with a default value:</p>
+<pre><code class="lang-bash">setvar -filePath &quot;$localPath&quot; -variableName Description -value &quot;$input(\&quot;Description\&quot;, \&quot;Enter the new description\&quot;, \&quot;Needs review\&quot;)&quot;
 </code></pre>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="233">You can also use the standard <code sourcefile="src/EVAL.md" sourcestartlinenumber="233">${...}</code> function form:</p>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="235">setvar -filePath &quot;$localPath&quot; -variableName Description -value &quot;${input(\&quot;Description\&quot;, \&quot;Enter the new description\&quot;)}&quot;
+<p>You can also use the standard <code>${...}</code> function form:</p>
+<pre><code class="lang-bash">setvar -filePath &quot;$localPath&quot; -variableName Description -value &quot;${input(\&quot;Description\&quot;, \&quot;Enter the new description\&quot;)}&quot;
 </code></pre>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="239">If the user closes the input prompt without clicking <code sourcefile="src/EVAL.md" sourcestartlinenumber="239">OK</code>, the function returns an empty string. PDMShell warns before clearing the return value; users can suppress that warning with <code sourcefile="src/EVAL.md" sourcestartlinenumber="239">Do not show this again</code>.</p>
-<div class="IMPORTANT" sourcefile="src/EVAL.md" sourcestartlinenumber="241">
+<p>If the user closes the input prompt without clicking <code>OK</code>, the function returns an empty string. PDMShell warns before clearing the return value; users can suppress that warning with <code>Do not show this again</code>.</p>
+<div class="IMPORTANT">
 <h5>Important</h5>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="242"><code sourcefile="src/EVAL.md" sourcestartlinenumber="242">$input(...)</code> is evaluated every time the expression is processed. If you use it in a command that processes multiple files, PDMShell can prompt once per file.
-Use <code sourcefile="src/EVAL.md" sourcestartlinenumber="243">$input(...)</code> for interactive PDMShell sessions. Avoid it in unattended or headless automation because the script will wait for user input.</p>
+<p><code>$input(...)</code> is evaluated every time the expression is processed. If you use it in a command that processes multiple files, PDMShell can prompt once per file.
+Use <code>$input(...)</code> for interactive PDMShell sessions. Avoid it in unattended or headless automation because the script will wait for user input.</p>
 </div>
-<h2 id="lookup-function" sourcefile="src/EVAL.md" sourcestartlinenumber="245">Lookup Function</h2>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="247">Use <code sourcefile="src/EVAL.md" sourcestartlinenumber="247">${lookup(csvPathOrPdmFileId, value)}</code> when a script needs to translate one value into another from a two-column CSV file.</p>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="249">The first column is the lookup key. The second column is the returned value.</p>
-<pre><code class="lang-csv" sourcefile="src/EVAL.md" sourcestartlinenumber="251">Code,Description
+<h2 id="lookup-function">Lookup Function</h2>
+<p>Use <code>${lookup(csvPathOrPdmFileId, value)}</code> when a script needs to translate one value into another from a two-column CSV file.</p>
+<p>The first column is the lookup key. The second column is the returned value.</p>
+<pre><code class="lang-csv">Code,Description
 A100,Bracket
 B200,Cover
 </code></pre>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="257">setvar -filePath &quot;$localPath&quot; -variableName Description -value &quot;${lookup(\&quot;C:\Vault\lookup.csv\&quot;, $(Code.@))}&quot;
+<pre><code class="lang-bash">setvar -filePath &quot;$localPath&quot; -variableName Description -value &quot;${lookup(\&quot;C:\Vault\lookup.csv\&quot;, $(Code.@))}&quot;
 </code></pre>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="261">If <code sourcefile="src/EVAL.md" sourcestartlinenumber="261">$(Code.@)</code> evaluates to <code sourcefile="src/EVAL.md" sourcestartlinenumber="261">A100</code>, the expression returns <code sourcefile="src/EVAL.md" sourcestartlinenumber="261">Bracket</code>.</p>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="263">You can also combine literal text with a lookup result. This example reads <code sourcefile="src/EVAL.md" sourcestartlinenumber="263">Lookup.csv</code>, finds key <code sourcefile="src/EVAL.md" sourcestartlinenumber="263">4</code> in the first column, and inserts the matching second-column value into a message box:</p>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="265">msgbox -value &quot;speaker_frame-${lookup(\&quot;C:\SOLIDWORKSPDM\Assemblageddon\Lookup.csv\&quot;, 4)}&quot; -icon &quot;Information&quot;
+<p>If <code>$(Code.@)</code> evaluates to <code>A100</code>, the expression returns <code>Bracket</code>.</p>
+<p>You can also combine literal text with a lookup result. This example reads <code>Lookup.csv</code>, finds key <code>4</code> in the first column, and inserts the matching second-column value into a message box:</p>
+<pre><code class="lang-bash">msgbox -value &quot;speaker_frame-${lookup(\&quot;C:\SOLIDWORKSPDM\Assemblageddon\Lookup.csv\&quot;, 4)}&quot; -icon &quot;Information&quot;
 </code></pre>
 <p>
   <img src="/images/pdmshell-lookup-msgbox-example.png" alt="PDMShell visual editor showing a msgbox command using the lookup function to return 40 from a CSV file" style="max-width:980px;width:100%;height:auto;">
 </p>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="273">The CSV argument can be a local path, a path relative to the current vault folder, or the PDM file ID of a CSV file:</p>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="275">setvar -filePath &quot;$localPath&quot; -variableName Description -value &quot;${lookup(12345, $(Code.@))}&quot;
+<p>The CSV argument can be a local path, a path relative to the current vault folder, or the PDM file ID of a CSV file:</p>
+<pre><code class="lang-bash">setvar -filePath &quot;$localPath&quot; -variableName Description -value &quot;${lookup(12345, $(Code.@))}&quot;
 </code></pre>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="279">If the CSV file exists but the first-column value is not found, the function returns an empty string. If the CSV file path or PDM file ID cannot be resolved, the expression is left unchanged so the problem is visible in the output.</p>
-<h2 id="serial-number-function" sourcefile="src/EVAL.md" sourcestartlinenumber="281">Serial Number Function</h2>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="283">Use <code sourcefile="src/EVAL.md" sourcestartlinenumber="283">${serialNumber(&quot;SerialNumberName&quot;)}</code> when a command or script needs the next value from a SOLIDWORKS PDM serial number.</p>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="285">setvar -filePath &quot;$localPath&quot; -variableName Number -value &quot;${serialNumber(\&quot;PartNumber\&quot;)}&quot;
+<p>If the CSV file exists but the first-column value is not found, the function returns an empty string. If the CSV file path or PDM file ID cannot be resolved, the expression is left unchanged so the problem is visible in the output.</p>
+<h2 id="serial-number-function">Serial Number Function</h2>
+<p>Use <code>${serialNumber(&quot;SerialNumberName&quot;)}</code> when a command or script needs the next value from a SOLIDWORKS PDM serial number.</p>
+<pre><code class="lang-bash">setvar -filePath &quot;$localPath&quot; -variableName Number -value &quot;${serialNumber(\&quot;PartNumber\&quot;)}&quot;
 </code></pre>
-<div class="WARNING" sourcefile="src/EVAL.md" sourcestartlinenumber="289">
+<div class="WARNING">
 <h5>Warning</h5>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="290"><code sourcefile="src/EVAL.md" sourcestartlinenumber="290">${serialNumber(&quot;SerialNumberName&quot;)}</code> allocates a real PDM serial number every time the expression is evaluated. Avoid testing this repeatedly against a production serial number. If the expression is used in a command that processes multiple files, one serial number is allocated for each evaluated item.</p>
+<p><code>${serialNumber(&quot;SerialNumberName&quot;)}</code> allocates a real PDM serial number every time the expression is evaluated. Avoid testing this repeatedly against a production serial number. If the expression is used in a command that processes multiple files, one serial number is allocated for each evaluated item.</p>
 </div>
-<h2 id="revision-functions" sourcefile="src/EVAL.md" sourcestartlinenumber="292">Revision Functions</h2>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="294">Revision functions use the same <code sourcefile="src/EVAL.md" sourcestartlinenumber="294">${...}</code> syntax as string functions. Without a path argument, they require a selected PDM file because the result depends on the file's active workflow state and revision scheme.</p>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="296">Most revision functions also accept an optional file path. Use this when the expression needs to inspect a different PDM file, such as a released PDF that is related to the current SOLIDWORKS file.</p>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="298">Use the display value functions for normal scripts. Counter functions expose the internal numeric position of a revision component and are intended for advanced cases.</p>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="300">Current and next revision display functions use the active PDM revision scheme format. For example, letter components, zero-padded numeric components such as <code sourcefile="src/EVAL.md" sourcestartlinenumber="300">016</code>, hexadecimal components, and date/time components are formatted the same way PDM displays them.</p>
-<table sourcefile="src/EVAL.md" sourcestartlinenumber="302">
+<h2 id="revision-functions">Revision Functions</h2>
+<p>Revision functions use the same <code>${...}</code> syntax as string functions. Without a path argument, they require a selected PDM file because the result depends on the file's active workflow state and revision scheme.</p>
+<p>Most revision functions also accept an optional file path. Use this when the expression needs to inspect a different PDM file, such as a released PDF that is related to the current SOLIDWORKS file.</p>
+<p>Use the display value functions for normal scripts. Counter functions expose the internal numeric position of a revision component and are intended for advanced cases.</p>
+<p>Current and next revision display functions use the active PDM revision scheme format. For example, letter components, zero-padded numeric components such as <code>016</code>, hexadecimal components, and date/time components are formatted the same way PDM displays them.</p>
+<table>
 <thead>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="302">
-<th sourcefile="src/EVAL.md" sourcestartlinenumber="302">Function</th>
-<th sourcefile="src/EVAL.md" sourcestartlinenumber="302">Description</th>
+<tr>
+<th>Function</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="304">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="304"><code sourcefile="src/EVAL.md" sourcestartlinenumber="304">${revision()}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="304">Returns the current full PDM revision display value for the selected file.</td>
+<tr>
+<td><code>${revision()}</code></td>
+<td>Returns the current full PDM revision display value for the selected file.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="305">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="305"><code sourcefile="src/EVAL.md" sourcestartlinenumber="305">${revision(&quot;filePath&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="305">Returns the current full PDM revision display value for another PDM file.</td>
+<tr>
+<td><code>${revision(&quot;filePath&quot;)}</code></td>
+<td>Returns the current full PDM revision display value for another PDM file.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="306">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="306"><code sourcefile="src/EVAL.md" sourcestartlinenumber="306">${nextRevision()}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="306">Returns the next full PDM revision display value based on the selected file's active revision scheme.</td>
+<tr>
+<td><code>${nextRevision()}</code></td>
+<td>Returns the next full PDM revision display value based on the selected file's active revision scheme.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="307">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="307"><code sourcefile="src/EVAL.md" sourcestartlinenumber="307">${nextRevision(&quot;filePath&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="307">Returns the next full PDM revision display value for another PDM file.</td>
+<tr>
+<td><code>${nextRevision(&quot;filePath&quot;)}</code></td>
+<td>Returns the next full PDM revision display value for another PDM file.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="308">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="308"><code sourcefile="src/EVAL.md" sourcestartlinenumber="308">${revisionComponentValue(&quot;ComponentName&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="308">Returns the current displayed value for a specific revision component.</td>
+<tr>
+<td><code>${revisionComponentValue(&quot;ComponentName&quot;)}</code></td>
+<td>Returns the current displayed value for a specific revision component.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="309">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="309"><code sourcefile="src/EVAL.md" sourcestartlinenumber="309">${revisionComponentValue(&quot;ComponentName&quot;, &quot;filePath&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="309">Returns the current displayed value for a component on another PDM file.</td>
+<tr>
+<td><code>${revisionComponentValue(&quot;ComponentName&quot;, &quot;filePath&quot;)}</code></td>
+<td>Returns the current displayed value for a component on another PDM file.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="310">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="310"><code sourcefile="src/EVAL.md" sourcestartlinenumber="310">${nextRevisionComponentValue(&quot;ComponentName&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="310">Returns the next displayed value for a specific revision component.</td>
+<tr>
+<td><code>${nextRevisionComponentValue(&quot;ComponentName&quot;)}</code></td>
+<td>Returns the next displayed value for a specific revision component.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="311">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="311"><code sourcefile="src/EVAL.md" sourcestartlinenumber="311">${nextRevisionComponentValue(&quot;ComponentName&quot;, &quot;filePath&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="311">Returns the next displayed component value for another PDM file.</td>
+<tr>
+<td><code>${nextRevisionComponentValue(&quot;ComponentName&quot;, &quot;filePath&quot;)}</code></td>
+<td>Returns the next displayed component value for another PDM file.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="312">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="312"><code sourcefile="src/EVAL.md" sourcestartlinenumber="312">${revisionComponentCounter(&quot;ComponentName&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="312">Returns the current internal numeric counter for a specific revision component.</td>
+<tr>
+<td><code>${revisionComponentCounter(&quot;ComponentName&quot;)}</code></td>
+<td>Returns the current internal numeric counter for a specific revision component.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="313">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="313"><code sourcefile="src/EVAL.md" sourcestartlinenumber="313">${revisionComponentCounter(&quot;ComponentName&quot;, &quot;filePath&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="313">Returns the current internal numeric counter for a component on another PDM file.</td>
+<tr>
+<td><code>${revisionComponentCounter(&quot;ComponentName&quot;, &quot;filePath&quot;)}</code></td>
+<td>Returns the current internal numeric counter for a component on another PDM file.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="314">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="314"><code sourcefile="src/EVAL.md" sourcestartlinenumber="314">${nextRevisionComponentCounter(&quot;ComponentName&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="314">Returns the next internal numeric counter for a specific revision component.</td>
+<tr>
+<td><code>${nextRevisionComponentCounter(&quot;ComponentName&quot;)}</code></td>
+<td>Returns the next internal numeric counter for a specific revision component.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="315">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="315"><code sourcefile="src/EVAL.md" sourcestartlinenumber="315">${nextRevisionComponentCounter(&quot;ComponentName&quot;, &quot;filePath&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="315">Returns the next internal numeric component counter for another PDM file.</td>
+<tr>
+<td><code>${nextRevisionComponentCounter(&quot;ComponentName&quot;, &quot;filePath&quot;)}</code></td>
+<td>Returns the next internal numeric component counter for another PDM file.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="316">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="316"><code sourcefile="src/EVAL.md" sourcestartlinenumber="316">${revisionNumberName()}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="316">Returns the name of the active revision number scheme for the selected file.</td>
+<tr>
+<td><code>${revisionNumberName()}</code></td>
+<td>Returns the name of the active revision number scheme for the selected file.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="317">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="317"><code sourcefile="src/EVAL.md" sourcestartlinenumber="317">${revisionNumberName(&quot;filePath&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="317">Returns the active revision number scheme name for another PDM file.</td>
+<tr>
+<td><code>${revisionNumberName(&quot;filePath&quot;)}</code></td>
+<td>Returns the active revision number scheme name for another PDM file.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="318">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="318"><code sourcefile="src/EVAL.md" sourcestartlinenumber="318">${revisionNumberId()}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="318">Returns the internal ID of the active revision number scheme for the selected file.</td>
+<tr>
+<td><code>${revisionNumberId()}</code></td>
+<td>Returns the internal ID of the active revision number scheme for the selected file.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="319">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="319"><code sourcefile="src/EVAL.md" sourcestartlinenumber="319">${revisionNumberId(&quot;filePath&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="319">Returns the internal active revision number scheme ID for another PDM file.</td>
+<tr>
+<td><code>${revisionNumberId(&quot;filePath&quot;)}</code></td>
+<td>Returns the internal active revision number scheme ID for another PDM file.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="320">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="320"><code sourcefile="src/EVAL.md" sourcestartlinenumber="320">${revisionComponents()}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="320">Returns a comma-separated list of active revision component names for the selected file.</td>
+<tr>
+<td><code>${revisionComponents()}</code></td>
+<td>Returns a comma-separated list of active revision component names for the selected file.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="321">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="321"><code sourcefile="src/EVAL.md" sourcestartlinenumber="321">${revisionComponents(&quot;filePath&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="321">Returns a comma-separated list of active revision component names for another PDM file.</td>
+<tr>
+<td><code>${revisionComponents(&quot;filePath&quot;)}</code></td>
+<td>Returns a comma-separated list of active revision component names for another PDM file.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="322">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="322"><code sourcefile="src/EVAL.md" sourcestartlinenumber="322">${hasRevisionScheme()}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="322">Returns <code sourcefile="src/EVAL.md" sourcestartlinenumber="322">true</code> when the selected file's current workflow state has a revision scheme configured.</td>
+<tr>
+<td><code>${hasRevisionScheme()}</code></td>
+<td>Returns <code>true</code> when the selected file's current workflow state has a revision scheme configured.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="323">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="323"><code sourcefile="src/EVAL.md" sourcestartlinenumber="323">${hasRevisionScheme(&quot;filePath&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="323">Returns <code sourcefile="src/EVAL.md" sourcestartlinenumber="323">true</code> when another PDM file's current workflow state has a revision scheme configured.</td>
+<tr>
+<td><code>${hasRevisionScheme(&quot;filePath&quot;)}</code></td>
+<td>Returns <code>true</code> when another PDM file's current workflow state has a revision scheme configured.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="324">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="324"><code sourcefile="src/EVAL.md" sourcestartlinenumber="324">${canIncrementRevision()}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="324">Returns <code sourcefile="src/EVAL.md" sourcestartlinenumber="324">true</code> when PDM reports that the selected file can increment revision in the current state.</td>
+<tr>
+<td><code>${canIncrementRevision()}</code></td>
+<td>Returns <code>true</code> when PDM reports that the selected file can increment revision in the current state.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="325">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="325"><code sourcefile="src/EVAL.md" sourcestartlinenumber="325">${canIncrementRevision(&quot;filePath&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="325">Returns <code sourcefile="src/EVAL.md" sourcestartlinenumber="325">true</code> when PDM reports that another PDM file can increment revision in the current state.</td>
+<tr>
+<td><code>${canIncrementRevision(&quot;filePath&quot;)}</code></td>
+<td>Returns <code>true</code> when PDM reports that another PDM file can increment revision in the current state.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="326">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="326"><code sourcefile="src/EVAL.md" sourcestartlinenumber="326">${isRevisionValueValid(&quot;A&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="326">Returns <code sourcefile="src/EVAL.md" sourcestartlinenumber="326">true</code> when the supplied value matches the active revision scheme component structure.</td>
+<tr>
+<td><code>${isRevisionValueValid(&quot;A&quot;)}</code></td>
+<td>Returns <code>true</code> when the supplied value matches the active revision scheme component structure.</td>
 </tr>
-<tr sourcefile="src/EVAL.md" sourcestartlinenumber="327">
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="327"><code sourcefile="src/EVAL.md" sourcestartlinenumber="327">${isRevisionValueValid(&quot;A&quot;, &quot;filePath&quot;)}</code></td>
-<td sourcefile="src/EVAL.md" sourcestartlinenumber="327">Returns <code sourcefile="src/EVAL.md" sourcestartlinenumber="327">true</code> when the supplied value matches another PDM file's active revision scheme component structure.</td>
+<tr>
+<td><code>${isRevisionValueValid(&quot;A&quot;, &quot;filePath&quot;)}</code></td>
+<td>Returns <code>true</code> when the supplied value matches another PDM file's active revision scheme component structure.</td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="329">Examples:</p>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="331">msgbox -value &quot;Current revision: ${revision()}&quot;
+<p>Examples:</p>
+<pre><code class="lang-bash">msgbox -value &quot;Current revision: ${revision()}&quot;
 msgbox -value &quot;Next revision: ${nextRevision()}&quot;
 setvar -variableName NextRevision -filePath &quot;$localPath&quot; -value &quot;${nextRevision()}&quot;
 msgbox -value &quot;Related PDF revision: ${revision(\&quot;$folderPath\\$fileNameWithoutExtension.pdf\&quot;)}&quot;
 </code></pre>
-<h2 id="expression-evaluator" sourcefile="src/EVAL.md" sourcestartlinenumber="338">Expression Evaluator</h2>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="340">Use the <a href="expression-evaluator.html" sourcefile="src/EVAL.md" sourcestartlinenumber="340">Expression Evaluator</a> to preview placeholders, PDM variables, and string functions before running a command or script.</p>
-<hr sourcefile="src/EVAL.md" sourcestartlinenumber="342">
-<h2 id="using-pdm-variables-in-placeholders" sourcefile="src/EVAL.md" sourcestartlinenumber="344">Using PDM Variables in Placeholders</h2>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="345">In addition to named placeholders, you can include PDM variables with <code sourcefile="src/EVAL.md" sourcestartlinenumber="345">$()</code> expressions.</p>
-<pre><code class="lang-text" sourcefile="src/EVAL.md" sourcestartlinenumber="347">$(Revision.@)
+<h2 id="expression-evaluator">Expression Evaluator</h2>
+<p>Use the <a href="expression-evaluator.html">Expression Evaluator</a> to preview placeholders, PDM variables, and string functions before running a command or script.</p>
+<hr>
+<h2 id="using-pdm-variables-in-placeholders">Using PDM Variables in Placeholders</h2>
+<p>In addition to named placeholders, you can include PDM variables with <code>$()</code> expressions.</p>
+<pre><code class="lang-text">$(Revision.@)
 $(Description.@)
 $(PartNo.Default)
 </code></pre>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="353">For file variables, include the configuration suffix. Use <code sourcefile="src/EVAL.md" sourcestartlinenumber="353">.@</code> for the file <code sourcefile="src/EVAL.md" sourcestartlinenumber="353">@</code> tab.</p>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="355">Bracket syntax is not evaluated. Anything between <code sourcefile="src/EVAL.md" sourcestartlinenumber="355">[</code> and <code sourcefile="src/EVAL.md" sourcestartlinenumber="355">]</code> remains literal text.</p>
-<hr sourcefile="src/EVAL.md" sourcestartlinenumber="357">
-<h2 id="example-usage" sourcefile="src/EVAL.md" sourcestartlinenumber="359">Example Usage</h2>
-<p sourcefile="src/EVAL.md" sourcestartlinenumber="360">Here is an example of how to use placeholders in a command:</p>
-<h3 id="renaming-a-file" sourcefile="src/EVAL.md" sourcestartlinenumber="362">Renaming a File</h3>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="363">rename -filePath 1.sldprt -value &quot;$fileNameWithoutExtension_$yyyy$mm$dd$extension&quot;
+<p>For file variables, include the configuration suffix. Use <code>.@</code> for the file <code>@</code> tab.</p>
+<p>Bracket syntax is not evaluated. Anything between <code>[</code> and <code>]</code> remains literal text.</p>
+<hr>
+<h2 id="example-usage">Example Usage</h2>
+<p>Here is an example of how to use placeholders in a command:</p>
+<h3 id="renaming-a-file">Renaming a File</h3>
+<pre><code class="lang-bash">rename -filePath 1.sldprt -value &quot;$fileNameWithoutExtension_$yyyy$mm$dd$extension&quot;
 </code></pre>
-<h3 id="updating-a-variable-from-its-current-value" sourcefile="src/EVAL.md" sourcestartlinenumber="367">Updating a Variable From Its Current Value</h3>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="368">setvar -filePath file1.sldprt -variableName Description -value &quot;${replace($value, \&quot;DRAFT\&quot;, \&quot;RELEASED\&quot;)}&quot;
+<h3 id="updating-a-variable-from-its-current-value">Updating a Variable From Its Current Value</h3>
+<pre><code class="lang-bash">setvar -filePath file1.sldprt -variableName Description -value &quot;${replace($value, \&quot;DRAFT\&quot;, \&quot;RELEASED\&quot;)}&quot;
 </code></pre>
-<h3 id="renaming-with-nested-string-functions" sourcefile="src/EVAL.md" sourcestartlinenumber="372">Renaming With Nested String Functions</h3>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="373">rename -filePath &quot;Part 123 Draft.sldprt&quot; -value &quot;${left(${replace($fileNameWithoutExtension, \&quot; \&quot;, \&quot;_\&quot;)}, 12)}$extension&quot;
+<h3 id="renaming-with-nested-string-functions">Renaming With Nested String Functions</h3>
+<pre><code class="lang-bash">rename -filePath &quot;Part 123 Draft.sldprt&quot; -value &quot;${left(${replace($fileNameWithoutExtension, \&quot; \&quot;, \&quot;_\&quot;)}, 12)}$extension&quot;
 </code></pre>
-<h3 id="renaming-everything-before-a-separator" sourcefile="src/EVAL.md" sourcestartlinenumber="377">Renaming Everything Before a Separator</h3>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="378">rename -filePath &quot;ABC-123.sldprt&quot; -value &quot;${before($fileNameWithoutExtension, \&quot;-\&quot;)}$extension&quot;
+<h3 id="renaming-everything-before-a-separator">Renaming Everything Before a Separator</h3>
+<pre><code class="lang-bash">rename -filePath &quot;ABC-123.sldprt&quot; -value &quot;${before($fileNameWithoutExtension, \&quot;-\&quot;)}$extension&quot;
 </code></pre>
-<h3 id="renaming-with-a-regular-expression" sourcefile="src/EVAL.md" sourcestartlinenumber="382">Renaming With a Regular Expression</h3>
-<pre><code class="lang-bash" sourcefile="src/EVAL.md" sourcestartlinenumber="383">rename -filePath &quot;ABC-123.sldprt&quot; -value &quot;${regex($fileNameWithoutExtension, \&quot;^([^-]+)-\&quot;, 1)}$extension&quot;
+<h3 id="renaming-with-a-regular-expression">Renaming With a Regular Expression</h3>
+<pre><code class="lang-bash">rename -filePath &quot;ABC-123.sldprt&quot; -value &quot;${regex($fileNameWithoutExtension, \&quot;^([^-]+)-\&quot;, 1)}$extension&quot;
 </code></pre>
 
 </article>

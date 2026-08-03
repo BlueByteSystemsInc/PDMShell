@@ -85,89 +85,89 @@
         </div>
 
         <article data-uid="">
-<h1 id="listreferences" sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="5">listreferences</h1>
+<h1 id="listreferences">listreferences</h1>
 
-<h2 id="description" sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="7">Lists file references inside the SOLIDWORKS PDM vault.</p>
-<p sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="9">The <code sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="9">listreferences</code> command reads references stored inside files, without opening SOLIDWORKS, and allows you to:</p>
-<ul sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="11">
-<li sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="11">List references for a single file</li>
-<li sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="12">List references for multiple files using a search</li>
-<li sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="13">Export reference information to a CSV file</li>
-<li sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="14">Retrieve file IDs, folder IDs, full file paths, full reference paths, and reference IDs</li>
+<h2 id="description">Description</h2>
+<p>Lists file references inside the SOLIDWORKS PDM vault.</p>
+<p>The <code>listreferences</code> command reads references stored inside files, without opening SOLIDWORKS, and allows you to:</p>
+<ul>
+<li>List references for a single file</li>
+<li>List references for multiple files using a search</li>
+<li>Export reference information to a CSV file</li>
+<li>Retrieve file IDs, folder IDs, full file paths, full reference paths, and reference IDs</li>
 </ul>
-<p sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="16">This command is especially useful for auditing references, troubleshooting missing files, validating migrations, or identifying broken or external references.</p>
-<h2 id="syntax" sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="18">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="20">listreferences -filepath -search -recursive -csv
+<p>This command is especially useful for auditing references, troubleshooting missing files, validating migrations, or identifying broken or external references.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">listreferences -filepath -search -recursive -csv
 </code></pre>
-<h2 id="parameters" sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="24">Parameters</h2>
-<table sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="26">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="26">
-<th sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="26">Parameter</th>
-<th sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="26">Required</th>
-<th sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="26">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="28">
-<td sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="28"><code sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="28">-filepath</code></td>
-<td sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="28">Yes</td>
-<td sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="28">See parameter details below.</td>
+<tr>
+<td><code>-filepath</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="29">
-<td sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="29"><code sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="29">-search</code></td>
-<td sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="29">Yes</td>
-<td sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="29">See parameter details below.</td>
+<tr>
+<td><code>-search</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="30">
-<td sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="30"><code sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="30">-recursive</code></td>
-<td sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="30">Yes</td>
-<td sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="30">See parameter details below.</td>
+<tr>
+<td><code>-recursive</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="31">
-<td sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="31"><code sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="31">-csv</code></td>
-<td sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="31">Yes</td>
-<td sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="31">See parameter details below.</td>
+<tr>
+<td><code>-csv</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="33">Parameter Details</h3>
-<ul sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="35">
-<li sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="35"><code sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="35">filepath</code> Optional. Lists references for a single file. If a relative path is provided, it is resolved against the current directory. When specified, the search parameter is ignored.</li>
-<li sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="36"><a href="SEARCH.html" sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="36"><code sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="36">search</code></a> Optional. Search query used to find files whose references should be listed. The search is scoped to the current directory. Supports % wildcards. Can be combined with recursive.</li>
-<li sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="37"><code sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="37">recursive</code> Optional. When used with search, includes subfolders of the current directory when locating files whose references should be listed.</li>
-<li sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="38"><code sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="38">csv</code> Optional. Saves the reference listing results to a CSV file.</li>
+<h3 id="parameter-details">Parameter Details</h3>
+<ul>
+<li><code>filepath</code> Optional. Lists references for a single file. If a relative path is provided, it is resolved against the current directory. When specified, the search parameter is ignored.</li>
+<li><a href="SEARCH.html"><code>search</code></a> Optional. Search query used to find files whose references should be listed. The search is scoped to the current directory. Supports % wildcards. Can be combined with recursive.</li>
+<li><code>recursive</code> Optional. When used with search, includes subfolders of the current directory when locating files whose references should be listed.</li>
+<li><code>csv</code> Optional. Saves the reference listing results to a CSV file.</li>
 </ul>
-<h3 id="csv-output" sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="40">CSV OUTPUT</h3>
-<p sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="42">The exported CSV contains the following columns:</p>
-<pre><code class="lang-bash" sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="43">FileID
+<h3 id="csv-output">CSV OUTPUT</h3>
+<p>The exported CSV contains the following columns:</p>
+<pre><code class="lang-bash">FileID
 FolderID
 FilePath
 ReferencePath
 ReferenceID
 ReferenceFileID
 </code></pre>
-<h2 id="examples" sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="52">Examples</h2>
-<pre><code class="lang-bash" sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="53"># listreferences
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash"># listreferences
 listreferences -filepath speaker.sldasm
 # listreferences
 listreferences -search %.sldasm
 # listreferences
 listreferences -search %.sldasm -recursive true -csv references.csv
 </code></pre>
-<h2 id="remarks" sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="61">Remarks</h2>
-<ul sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="62">
-<li sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="62">Either filepath or search must be specified.</li>
-<li sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="63">If both are provided, filepath takes precedence.</li>
-<li sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="64">The search parameter only searches within the current directory unless recursive is specified.</li>
-<li sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="65">Files that do not contain references are still included in the CSV output.</li>
-<li sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="66">Reference paths may be blank for broken or unresolved references.</li>
-<li sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="67">ReferenceFileID will be blank if the referenced file cannot be found in the vault.</li>
-<li sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="68">This command is intended for reporting and auditing only and does not modify files.</li>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>Either filepath or search must be specified.</li>
+<li>If both are provided, filepath takes precedence.</li>
+<li>The search parameter only searches within the current directory unless recursive is specified.</li>
+<li>Files that do not contain references are still included in the CSV output.</li>
+<li>Reference paths may be blank for broken or unresolved references.</li>
+<li>ReferenceFileID will be blank if the referenced file cannot be found in the vault.</li>
+<li>This command is intended for reporting and auditing only and does not modify files.</li>
 </ul>
-<h2 id="availability" sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="70">Availability</h2>
-<p sourcefile="src/LISTREFERENCES.md" sourcestartlinenumber="71">Available since PDMShell 3.0.70.</p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 3.0.70.</p>
 
 </article>
 

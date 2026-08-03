@@ -85,43 +85,43 @@
         </div>
 
         <article data-uid="">
-<h1 id="rename-before-dash" sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="13">Rename Before Dash</h1>
+<h1 id="rename-before-dash">Rename Before Dash</h1>
 
-<p sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="15">This script renames the selected file by keeping only the part of the file name before the first dash (<code sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="15">-</code>) and preserving the original extension.</p>
-<p sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="17"><img src="RENAMEBEFOREDASH.jpg" sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="17" alt="Rename Before Dash"></p>
-<p sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="19">For example, a file named <code sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="19">ABC-123.sldprt</code> becomes <code sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="19">ABC.sldprt</code>.</p>
-<div class="TIP" sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="21">
+<p>This script renames the selected file by keeping only the part of the file name before the first dash (<code>-</code>) and preserving the original extension.</p>
+<p><img src="RENAMEBEFOREDASH.jpg" alt="Rename Before Dash"></p>
+<p>For example, a file named <code>ABC-123.sldprt</code> becomes <code>ABC.sldprt</code>.</p>
+<div class="TIP">
 <h5>Tip</h5>
-<p sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="22">You can download this script directly from the PDMShell Script Library. Open PDMShell, open the Script Library, choose <strong sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="22">Rename Before Dash</strong>, and load the script into the active session.</p>
+<p>You can download this script directly from the PDMShell Script Library. Open PDMShell, open the Script Library, choose <strong>Rename Before Dash</strong>, and load the script into the active session.</p>
 </div>
-<p sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="24">This script does not use a SOLIDWORKS macro.</p>
-<h2 id="script" sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="26">Script</h2>
-<pre><code class="lang-pdmshell" sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="28">rename -filePath &quot;$localPath&quot; -value &quot;${before($fileNameWithoutExtension,-)}$extension&quot;
+<p>This script does not use a SOLIDWORKS macro.</p>
+<h2 id="script">Script</h2>
+<pre><code class="lang-pdmshell">rename -filePath &quot;$localPath&quot; -value &quot;${before($fileNameWithoutExtension,-)}$extension&quot;
 msgbox -value &quot;Rename complete&quot; -title &quot;Rename Script&quot; -icon &quot;Information&quot;
 </code></pre>
-<h2 id="what-it-does" sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="33">What it does</h2>
-<ul sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="35">
-<li sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="35">Uses <code sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="35">$localPath</code> as the selected file path.</li>
-<li sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="36">Uses <code sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="36">${before($fileNameWithoutExtension,-)}</code> to keep only the text before the first dash.</li>
-<li sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="37">Adds <code sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="37">$extension</code> back so the renamed file keeps its original extension.</li>
-<li sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="38">Shows a confirmation message when the rename completes.</li>
+<h2 id="what-it-does">What it does</h2>
+<ul>
+<li>Uses <code>$localPath</code> as the selected file path.</li>
+<li>Uses <code>${before($fileNameWithoutExtension,-)}</code> to keep only the text before the first dash.</li>
+<li>Adds <code>$extension</code> back so the renamed file keeps its original extension.</li>
+<li>Shows a confirmation message when the rename completes.</li>
 </ul>
-<h2 id="requirements" sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="40">Requirements</h2>
-<ul sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="42">
-<li sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="42">PDMShell must already be logged in to the correct vault.</li>
-<li sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="43">The script must run with a file context, such as from the PDMShell add-in or another command that supplies <code sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="43">$localPath</code>.</li>
-<li sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="44">The user must have permission to rename the selected file.</li>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>PDMShell must already be logged in to the correct vault.</li>
+<li>The script must run with a file context, such as from the PDMShell add-in or another command that supplies <code>$localPath</code>.</li>
+<li>The user must have permission to rename the selected file.</li>
 </ul>
-<h2 id="add-in-note" sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="46">Add-In Note</h2>
-<p sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="48">If you run this from the PDMShell add-in, add <code sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="48">quit -silent</code> as the last line so the background PDMShell session exits after the script runs:</p>
-<pre><code class="lang-pdmshell" sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="50">quit -silent
+<h2 id="add-in-note">Add-In Note</h2>
+<p>If you run this from the PDMShell add-in, add <code>quit -silent</code> as the last line so the background PDMShell session exits after the script runs:</p>
+<pre><code class="lang-pdmshell">quit -silent
 </code></pre>
-<h2 id="save-and-run" sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="54">Save And Run</h2>
-<p sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="56">Save the script with the <code sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="56">.pdmshell</code> extension, for example:</p>
-<pre><code class="lang-text" sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="58">C:\PDMShellScripts\renamebeforedash.pdmshell
+<h2 id="save-and-run">Save And Run</h2>
+<p>Save the script with the <code>.pdmshell</code> extension, for example:</p>
+<pre><code class="lang-text">C:\PDMShellScripts\renamebeforedash.pdmshell
 </code></pre>
-<p sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="62">You can run it from PDMShell with:</p>
-<pre><code class="lang-pdmshell" sourcefile="src/scripts/RENAMEBEFOREDASH/RENAMEBEFOREDASH.md" sourcestartlinenumber="64">runscript -source &quot;C:\PDMShellScripts\renamebeforedash.pdmshell&quot;
+<p>You can run it from PDMShell with:</p>
+<pre><code class="lang-pdmshell">runscript -source &quot;C:\PDMShellScripts\renamebeforedash.pdmshell&quot;
 </code></pre>
 
 </article>

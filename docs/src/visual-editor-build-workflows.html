@@ -85,39 +85,39 @@
         </div>
 
         <article data-uid="">
-<h1 id="build-visual-workflows" sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="6">Build Visual Workflows</h1>
+<h1 id="build-visual-workflows">Build Visual Workflows</h1>
 
-<p sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="8">The Visual Code Editor starts with a Begin action and an option to add the first command. Each command you add becomes a visible action in the workflow.</p>
-<p sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="10"><img src="../images/visual-code-editor-add-new-action.png" sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="10" alt="Adding the first visual action"></p>
-<p sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="12">Actions are connected in the order they should run. This makes longer PDMShell scripts easier to review before you execute them.</p>
-<h2 id="basic-workflow" sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="14">Basic Workflow</h2>
-<p sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="16">A typical workflow is built like this:</p>
-<ol sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="18">
-<li sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="18">Start from the Begin action.</li>
-<li sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="19">Add the first command.</li>
-<li sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="20">Edit the command settings.</li>
-<li sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="21">Add the next command.</li>
-<li sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="22">Connect each action in the order it should run.</li>
-<li sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="23">Validate the workflow before running it.</li>
+<p>The Visual Code Editor starts with a Begin action and an option to add the first command. Each command you add becomes a visible action in the workflow.</p>
+<p><img src="../images/visual-code-editor-add-new-action.png" alt="Adding the first visual action"></p>
+<p>Actions are connected in the order they should run. This makes longer PDMShell scripts easier to review before you execute them.</p>
+<h2 id="basic-workflow">Basic Workflow</h2>
+<p>A typical workflow is built like this:</p>
+<ol>
+<li>Start from the Begin action.</li>
+<li>Add the first command.</li>
+<li>Edit the command settings.</li>
+<li>Add the next command.</li>
+<li>Connect each action in the order it should run.</li>
+<li>Validate the workflow before running it.</li>
 </ol>
-<p sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="25">The visual workflow and the generated script stay connected. The visual layout helps you understand the process, while PDMShell still runs the real command text.</p>
-<h2 id="finding-commands" sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="27">Finding Commands</h2>
-<p sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="29">Use the command picker to search by command name, description, or category. For example, searching for <a href="CHECKOUT.html" sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="29"><code sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="29">checkout</code></a> can show related commands such as Check out and Undo checkout.</p>
-<p sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="31">This is useful when you know what you want to do but do not remember the exact command name or syntax.</p>
-<h2 id="working-with-larger-workflows" sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="33">Working With Larger Workflows</h2>
-<p sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="35">Larger workflows can extend beyond the visible area. Use the navigation controls to make the workflow easier to review:</p>
-<ul sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="37">
-<li sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="37">Zoom In makes actions larger.</li>
-<li sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="38">Zoom Out shows more of the workflow.</li>
-<li sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="39">Zoom To Fit fits the workflow into view.</li>
+<p>The visual workflow and the generated script stay connected. The visual layout helps you understand the process, while PDMShell still runs the real command text.</p>
+<h2 id="finding-commands">Finding Commands</h2>
+<p>Use the command picker to search by command name, description, or category. For example, searching for <a href="CHECKOUT.html"><code>checkout</code></a> can show related commands such as Check out and Undo checkout.</p>
+<p>This is useful when you know what you want to do but do not remember the exact command name or syntax.</p>
+<h2 id="working-with-larger-workflows">Working With Larger Workflows</h2>
+<p>Larger workflows can extend beyond the visible area. Use the navigation controls to make the workflow easier to review:</p>
+<ul>
+<li>Zoom In makes actions larger.</li>
+<li>Zoom Out shows more of the workflow.</li>
+<li>Zoom To Fit fits the workflow into view.</li>
 </ul>
-<h2 id="branching" sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="41">Branching</h2>
-<p sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="43">Use <a href="if-statements.html" sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="43">IF statements and conditions</a> when the workflow needs to choose between two paths.</p>
-<p sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="45">Examples:</p>
-<ul sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="47">
-<li sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="47">Continue only when a file name contains <code sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="47">ECO</code>.</li>
-<li sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="48">Run one action when a value matches and another action when it does not.</li>
-<li sourcefile="src/visual-editor-build-workflows.md" sourcestartlinenumber="49">Check whether a file or folder exists before continuing.</li>
+<h2 id="branching">Branching</h2>
+<p>Use <a href="if-statements.html">IF statements and conditions</a> when the workflow needs to choose between two paths.</p>
+<p>Examples:</p>
+<ul>
+<li>Continue only when a file name contains <code>ECO</code>.</li>
+<li>Run one action when a value matches and another action when it does not.</li>
+<li>Check whether a file or folder exists before continuing.</li>
 </ul>
 
 </article>

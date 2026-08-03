@@ -85,66 +85,66 @@
         </div>
 
         <article data-uid="">
-<h1 id="setvarsfromsource" sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="5">setvarsfromsource</h1>
+<h1 id="setvarsfromsource">setvarsfromsource</h1>
 
-<h2 id="description" sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="6">Description</h2>
-<p sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="7">Sets variables for multiple files using a CSV file as the source.</p>
-<h2 id="syntax" sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="9">Syntax</h2>
-<pre><code class="lang-text" sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="11">setvarsfromsource -source -evaluatealias
+<h2 id="description">Description</h2>
+<p>Sets variables for multiple files using a CSV file as the source.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-text">setvarsfromsource -source -evaluatealias
 </code></pre>
-<h2 id="parameters" sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="15">Parameters</h2>
-<table sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="17">
+<h2 id="parameters">Parameters</h2>
+<table>
 <thead>
-<tr sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="17">
-<th sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="17">Parameter</th>
-<th sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="17">Required</th>
-<th sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="17">Description</th>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="19">
-<td sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="19"><code sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="19">-source</code></td>
-<td sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="19">Yes</td>
-<td sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="19">See parameter details below.</td>
+<tr>
+<td><code>-source</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="20">
-<td sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="20"><code sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="20">-evaluatealias</code></td>
-<td sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="20">Yes</td>
-<td sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="20">See parameter details below.</td>
+<tr>
+<td><code>-evaluatealias</code></td>
+<td>Yes</td>
+<td>See parameter details below.</td>
 </tr>
-<tr sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="21">
-<td sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="21"><code sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="21">-filePath</code></td>
-<td sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="21">No</td>
-<td sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="21">The CSV file containing the file IDs and variable values.</td>
+<tr>
+<td><code>-filePath</code></td>
+<td>No</td>
+<td>The CSV file containing the file IDs and variable values.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details" sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="23">Parameter Details</h3>
-<ul sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="25">
-<li sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="25"><code sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="25">filePath</code>: The CSV file containing the file IDs and variable values.</li>
+<h3 id="parameter-details">Parameter Details</h3>
+<ul>
+<li><code>filePath</code>: The CSV file containing the file IDs and variable values.</li>
 </ul>
-<h3 id="csv-file-format" sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="27">CSV File Format</h3>
-<p sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="28">The CSV file should have the following format:</p>
-<pre><code sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="30">FileID,Variable1,Variable2,... 
+<h3 id="csv-file-format">CSV File Format</h3>
+<p>The CSV file should have the following format:</p>
+<pre><code>FileID,Variable1,Variable2,... 
 XXXX,Value1,Value2,... 
 XXXX,Value1,Value2,...
 </code></pre>
-<h2 id="examples" sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="36">Examples</h2>
-<pre><code class="lang-bash" sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="37">setvarsfromsource -source variables.csv # the source file must be exist in the current directory
+<h2 id="examples">Examples</h2>
+<pre><code class="lang-bash">setvarsfromsource -source variables.csv # the source file must be exist in the current directory
 </code></pre>
-<h2 id="remarks" sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="41">Remarks</h2>
-<ul sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="42">
-<li sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="42">The CSV file should have the first column as the file ID and the subsequent columns as the variable names.</li>
-<li sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="43">You need to include the extension in the filename. This file can be outside the vault.</li>
-<li sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="44">The best way to generate a source CSV is to use the <a href="DIR.html" sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="44"><code sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="44">dir</code></a> command or the <a href="SEARCH.html" sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="44"><code sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="44">search</code></a> command on a folder with the <code sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="44">-csv</code> parameter and the <code sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="44">columns</code>, like:</li>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>The CSV file should have the first column as the file ID and the subsequent columns as the variable names.</li>
+<li>You need to include the extension in the filename. This file can be outside the vault.</li>
+<li>The best way to generate a source CSV is to use the <a href="DIR.html"><code>dir</code></a> command or the <a href="SEARCH.html"><code>search</code></a> command on a folder with the <code>-csv</code> parameter and the <code>columns</code>, like:</li>
 </ul>
-<pre><code class="lang-bash" sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="45">dir -columns Description,&quot;Part Number&quot; -csv data.csv
+<pre><code class="lang-bash">dir -columns Description,&quot;Part Number&quot; -csv data.csv
 search -search %.sldprt -recursive -columns Description,&quot;Part Number&quot; -csv data.csv #this will save all parts from all levels in the current directory with the columns Description and Part Number
 </code></pre>
-<h2 id="tutorial" sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="50">Tutorial</h2>
-<p sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="51"><video src="https://bluebyte.biz/wp-content/pdmshellvideos/setvarsfromsource.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
-<h2 id="availability" sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="53">Availability</h2>
-<p sourcefile="src/SETVARSFROMSOURCE.md" sourcestartlinenumber="54">Available since PDMShell 2.0.1.</p>
+<h2 id="tutorial">Tutorial</h2>
+<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/setvarsfromsource.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="availability">Availability</h2>
+<p>Available since PDMShell 2.0.1.</p>
 
 </article>
 
