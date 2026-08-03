@@ -87,84 +87,88 @@
         <article data-uid="">
 
 <img src="../images/claude.svg" alt="Claude logo" width="56">
-<h1 id="use-pdmshell-with-claude-desktop">Use PDMShell with Claude Desktop</h1>
-<p>PDMShell 4.0.53 lets you work with SOLIDWORKS PDM from Claude Desktop. You can ask questions in everyday language, explore available PDMShell commands, build searches, and run approved operations in your local vault.</p>
-<p>You do not need to configure the connection manually. Install or update PDMShell, restart Claude Desktop, and Claude will see a connection named <strong>pdmshell</strong>.</p>
-<div class="IMPORTANT">
-<h5>Important</h5>
-<p>PDMShell and its Claude integration are installed and updated together. Their version numbers always match.</p>
+<h1 id="use-pdmshell-with-claude-desktop" sourcefile="src/mcp-server.md" sourcestartlinenumber="9">Use PDMShell with Claude Desktop</h1>
+<div style="position: relative; width: 100%; aspect-ratio: 16 / 9; margin: 1rem 0 1.5rem;">
+  <iframe src="https://www.youtube.com/embed/jYEW81aFm18" title="Use PDMShell with Claude Desktop" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+  </iframe>
 </div>
-<h2 id="get-started">Get started</h2>
-<ol>
-<li><a href="howtoinstall.html">Install or update PDMShell</a>.</li>
-<li>Close Claude Desktop completely if it is running.</li>
-<li>Start Claude Desktop again.</li>
-<li>Ask Claude: <strong>What version of PDMShell is installed?</strong></li>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="22">PDMShell 4.0.53 lets you work with SOLIDWORKS PDM from Claude Desktop. You can ask questions in everyday language, explore available PDMShell commands, build searches, and run approved operations in your local vault.</p>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="24">You do not need to configure the connection manually. Install or update PDMShell, restart Claude Desktop, and Claude will see a connection named <strong sourcefile="src/mcp-server.md" sourcestartlinenumber="24">pdmshell</strong>.</p>
+<div class="IMPORTANT" sourcefile="src/mcp-server.md" sourcestartlinenumber="26">
+<h5>Important</h5>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="27">PDMShell and its Claude integration are installed and updated together. Their version numbers always match.</p>
+</div>
+<h2 id="get-started" sourcefile="src/mcp-server.md" sourcestartlinenumber="29">Get started</h2>
+<ol sourcefile="src/mcp-server.md" sourcestartlinenumber="31">
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="31"><a href="howtoinstall.html" sourcefile="src/mcp-server.md" sourcestartlinenumber="31">Install or update PDMShell</a>.</li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="32">Close Claude Desktop completely if it is running.</li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="33">Start Claude Desktop again.</li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="34">Ask Claude: <strong sourcefile="src/mcp-server.md" sourcestartlinenumber="34">What version of PDMShell is installed?</strong></li>
 </ol>
-<p>Claude should use the <code>pdmshell_version</code> tool and show matching PDMShell and MCP server versions. For PDMShell 4.0.53, both versions are <code>4.0.53.0</code>.</p>
-<h2 id="things-you-can-ask-claude">Things you can ask Claude</h2>
-<p>Try prompts like these:</p>
-<blockquote>
-<p>Show me the PDMShell commands that are available.</p>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="36">Claude should use the <code sourcefile="src/mcp-server.md" sourcestartlinenumber="36">pdmshell_version</code> tool and show matching PDMShell and MCP server versions. For PDMShell 4.0.53, both versions are <code sourcefile="src/mcp-server.md" sourcestartlinenumber="36">4.0.53.0</code>.</p>
+<h2 id="things-you-can-ask-claude" sourcefile="src/mcp-server.md" sourcestartlinenumber="38">Things you can ask Claude</h2>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="40">Try prompts like these:</p>
+<blockquote sourcefile="src/mcp-server.md" sourcestartlinenumber="42">
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="42">Show me the PDMShell commands that are available.</p>
 </blockquote>
-<blockquote>
-<p>Explain every parameter for the PDMShell search command.</p>
+<blockquote sourcefile="src/mcp-server.md" sourcestartlinenumber="44">
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="44">Explain every parameter for the PDMShell search command.</p>
 </blockquote>
-<blockquote>
-<p>Show the PDM vault views available on this computer.</p>
+<blockquote sourcefile="src/mcp-server.md" sourcestartlinenumber="46">
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="46">Show the PDM vault views available on this computer.</p>
 </blockquote>
-<blockquote>
-<p>Build a search for checked-out SOLIDWORKS part files where the Description variable contains &quot;bracket&quot;.</p>
+<blockquote sourcefile="src/mcp-server.md" sourcestartlinenumber="48">
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="48">Build a search for checked-out SOLIDWORKS part files where the Description variable contains &quot;bracket&quot;.</p>
 </blockquote>
-<blockquote>
-<p>Log in to the Engineering vault, then show me the files in the current folder.</p>
+<blockquote sourcefile="src/mcp-server.md" sourcestartlinenumber="50">
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="50">Log in to the Engineering vault, then show me the files in the current folder.</p>
 </blockquote>
-<p>Claude can look up command syntax and parameter details before it creates a command. It can also explain PDMShell search fields, variable expressions, operators, sorting, grouping, duplicate handling, and escaping.</p>
-<h2 id="connect-to-a-vault">Connect to a vault</h2>
-<p>Claude can inspect PDMShell without logging in, but it must log in before reading or changing vault content.</p>
-<p>You can simply ask:</p>
-<blockquote>
-<p>Show my available PDM vaults and help me log in to one.</p>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="52">Claude can look up command syntax and parameter details before it creates a command. It can also explain PDMShell search fields, variable expressions, operators, sorting, grouping, duplicate handling, and escaping.</p>
+<h2 id="connect-to-a-vault" sourcefile="src/mcp-server.md" sourcestartlinenumber="54">Connect to a vault</h2>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="56">Claude can inspect PDMShell without logging in, but it must log in before reading or changing vault content.</p>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="58">You can simply ask:</p>
+<blockquote sourcefile="src/mcp-server.md" sourcestartlinenumber="60">
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="60">Show my available PDM vaults and help me log in to one.</p>
 </blockquote>
-<p>After login, the connection keeps the same PDMShell session. Claude can continue working with the selected vault and current folder without starting over for every command.</p>
-<h2 id="long-running-commands">Long-running commands</h2>
-<p>PDMShell reports progress to Claude while longer commands run. Progress messages can identify the current operation or file as PDMShell processes it.</p>
-<p>You can ask Claude to cancel an active command. PDMShell forwards that request to the running operation and stops at the next safe cancellation point. Some SOLIDWORKS or PDM API calls must finish before cancellation can take effect.</p>
-<h2 id="your-pdmshell-license">Your PDMShell license</h2>
-<p>Claude uses the PDMShell machine license already installed on your computer. There is no separate MCP license and no second activation step.</p>
-<p>If no Premium license is installed, PDMShell continues with its normal Free-version limits. You can ask Claude to show the current license status at any time.</p>
-<p>Learn more about <a href="machine-license.html">machine licenses</a> or <a href="FREEVSPREMIUM.html">compare Free and Premium</a>.</p>
-<h2 id="review-commands-before-running-them">Review commands before running them</h2>
-<p>Claude can run PDMShell commands that modify PDM files and data. Before approving a large, destructive, or unfamiliar operation, ask Claude to:</p>
-<ol>
-<li>Explain the command.</li>
-<li>Show the complete command and all parameters.</li>
-<li>Describe which files or folders it may affect.</li>
-<li>Wait for your approval before running it.</li>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="62">After login, the connection keeps the same PDMShell session. Claude can continue working with the selected vault and current folder without starting over for every command.</p>
+<h2 id="long-running-commands" sourcefile="src/mcp-server.md" sourcestartlinenumber="64">Long-running commands</h2>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="66">PDMShell reports progress to Claude while longer commands run. Progress messages can identify the current operation or file as PDMShell processes it.</p>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="68">You can ask Claude to cancel an active command. PDMShell forwards that request to the running operation and stops at the next safe cancellation point. Some SOLIDWORKS or PDM API calls must finish before cancellation can take effect.</p>
+<h2 id="your-pdmshell-license" sourcefile="src/mcp-server.md" sourcestartlinenumber="70">Your PDMShell license</h2>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="72">Claude uses the PDMShell machine license already installed on your computer. There is no separate MCP license and no second activation step.</p>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="74">If no Premium license is installed, PDMShell continues with its normal Free-version limits. You can ask Claude to show the current license status at any time.</p>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="76">Learn more about <a href="machine-license.html" sourcefile="src/mcp-server.md" sourcestartlinenumber="76">machine licenses</a> or <a href="FREEVSPREMIUM.html" sourcefile="src/mcp-server.md" sourcestartlinenumber="76">compare Free and Premium</a>.</p>
+<h2 id="review-commands-before-running-them" sourcefile="src/mcp-server.md" sourcestartlinenumber="78">Review commands before running them</h2>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="80">Claude can run PDMShell commands that modify PDM files and data. Before approving a large, destructive, or unfamiliar operation, ask Claude to:</p>
+<ol sourcefile="src/mcp-server.md" sourcestartlinenumber="82">
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="82">Explain the command.</li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="83">Show the complete command and all parameters.</li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="84">Describe which files or folders it may affect.</li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="85">Wait for your approval before running it.</li>
 </ol>
-<p>For extra safety, begin with a search or listing command so you can review the affected items first.</p>
-<h2 id="if-claude-cannot-find-pdmshell">If Claude cannot find PDMShell</h2>
-<p>Try these steps:</p>
-<ol>
-<li>Confirm that PDMShell 4.0.51 or newer is installed.</li>
-<li>Close and restart Claude Desktop.</li>
-<li>Open Claude Desktop's integrations and confirm that <strong>pdmshell</strong> appears.</li>
-<li>Ask Claude: <strong>Use pdmshell_version and show me the result.</strong></li>
-<li>If vault commands fail, ask Claude to list the available vaults and log in first.</li>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="87">For extra safety, begin with a search or listing command so you can review the affected items first.</p>
+<h2 id="if-claude-cannot-find-pdmshell" sourcefile="src/mcp-server.md" sourcestartlinenumber="89">If Claude cannot find PDMShell</h2>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="91">Try these steps:</p>
+<ol sourcefile="src/mcp-server.md" sourcestartlinenumber="93">
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="93">Confirm that PDMShell 4.0.51 or newer is installed.</li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="94">Close and restart Claude Desktop.</li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="95">Open Claude Desktop's integrations and confirm that <strong sourcefile="src/mcp-server.md" sourcestartlinenumber="95">pdmshell</strong> appears.</li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="96">Ask Claude: <strong sourcefile="src/mcp-server.md" sourcestartlinenumber="96">Use pdmshell_version and show me the result.</strong></li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="97">If vault commands fail, ask Claude to list the available vaults and log in first.</li>
 </ol>
-<p>If the connection still does not appear, reinstall or update PDMShell and restart Claude Desktop.</p>
-<h2 id="check-or-edit-claude-desktops-configuration">Check or edit Claude Desktop's configuration</h2>
-<p>PDMShell normally adds the connection automatically. If <strong>pdmshell</strong> is missing from Claude Desktop, you can check Claude's configuration file manually.</p>
-<p>Close Claude Desktop before editing the file. Make a backup copy first so you can restore your existing integrations if the JSON is entered incorrectly.</p>
-<p>Claude Desktop commonly stores the file in one of these locations:</p>
-<ul>
-<li>Standard Claude Desktop installation: <code>%APPDATA%\Claude\claude_desktop_config.json</code></li>
-<li>Microsoft Store installation: <code>%LOCALAPPDATA%\Packages\Claude_*\LocalCache\Roaming\Claude\claude_desktop_config.json</code></li>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="99">If the connection still does not appear, reinstall or update PDMShell and restart Claude Desktop.</p>
+<h2 id="check-or-edit-claude-desktops-configuration" sourcefile="src/mcp-server.md" sourcestartlinenumber="101">Check or edit Claude Desktop's configuration</h2>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="103">PDMShell normally adds the connection automatically. If <strong sourcefile="src/mcp-server.md" sourcestartlinenumber="103">pdmshell</strong> is missing from Claude Desktop, you can check Claude's configuration file manually.</p>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="105">Close Claude Desktop before editing the file. Make a backup copy first so you can restore your existing integrations if the JSON is entered incorrectly.</p>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="107">Claude Desktop commonly stores the file in one of these locations:</p>
+<ul sourcefile="src/mcp-server.md" sourcestartlinenumber="109">
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="109">Standard Claude Desktop installation: <code sourcefile="src/mcp-server.md" sourcestartlinenumber="109">%APPDATA%\Claude\claude_desktop_config.json</code></li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="110">Microsoft Store installation: <code sourcefile="src/mcp-server.md" sourcestartlinenumber="110">%LOCALAPPDATA%\Packages\Claude_*\LocalCache\Roaming\Claude\claude_desktop_config.json</code></li>
 </ul>
-<p>The <code>Claude_*</code> folder name varies. Open <code>%LOCALAPPDATA%\Packages</code> in File Explorer, find the folder whose name begins with <code>Claude_</code>, and then open <code>LocalCache\Roaming\Claude</code>.</p>
-<p>If <code>claude_desktop_config.json</code> does not exist, create it as a plain text file with that exact name. Make sure Windows has not added a hidden <code>.txt</code> extension.</p>
-<p>The file should contain a <code>pdmshell</code> entry like this:</p>
-<pre><code class="lang-json">{
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="112">The <code sourcefile="src/mcp-server.md" sourcestartlinenumber="112">Claude_*</code> folder name varies. Open <code sourcefile="src/mcp-server.md" sourcestartlinenumber="112">%LOCALAPPDATA%\Packages</code> in File Explorer, find the folder whose name begins with <code sourcefile="src/mcp-server.md" sourcestartlinenumber="112">Claude_</code>, and then open <code sourcefile="src/mcp-server.md" sourcestartlinenumber="112">LocalCache\Roaming\Claude</code>.</p>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="114">If <code sourcefile="src/mcp-server.md" sourcestartlinenumber="114">claude_desktop_config.json</code> does not exist, create it as a plain text file with that exact name. Make sure Windows has not added a hidden <code sourcefile="src/mcp-server.md" sourcestartlinenumber="114">.txt</code> extension.</p>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="116">The file should contain a <code sourcefile="src/mcp-server.md" sourcestartlinenumber="116">pdmshell</code> entry like this:</p>
+<pre><code class="lang-json" sourcefile="src/mcp-server.md" sourcestartlinenumber="118">{
   &quot;mcpServers&quot;: {
     &quot;pdmshell&quot;: {
       &quot;command&quot;: &quot;C:\\Users\\YourName\\AppData\\Local\\Blue Byte Systems\\PDMShell\\current\\MCP\\pdmcli.mcp.exe&quot;,
@@ -173,9 +177,9 @@
   }
 }
 </code></pre>
-<p>Replace <code>YourName</code> with your Windows user-folder name. You can also browse to <code>pdmcli.mcp.exe</code>, copy its complete path, and use that path for <code>command</code>. Keep the doubled backslashes because Claude's configuration uses JSON syntax.</p>
-<p>If Claude already has other MCP servers, keep them and add <code>pdmshell</code> inside the existing <code>mcpServers</code> object. Separate the entries with a comma:</p>
-<pre><code class="lang-json">{
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="129">Replace <code sourcefile="src/mcp-server.md" sourcestartlinenumber="129">YourName</code> with your Windows user-folder name. You can also browse to <code sourcefile="src/mcp-server.md" sourcestartlinenumber="129">pdmcli.mcp.exe</code>, copy its complete path, and use that path for <code sourcefile="src/mcp-server.md" sourcestartlinenumber="129">command</code>. Keep the doubled backslashes because Claude's configuration uses JSON syntax.</p>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="131">If Claude already has other MCP servers, keep them and add <code sourcefile="src/mcp-server.md" sourcestartlinenumber="131">pdmshell</code> inside the existing <code sourcefile="src/mcp-server.md" sourcestartlinenumber="131">mcpServers</code> object. Separate the entries with a comma:</p>
+<pre><code class="lang-json" sourcefile="src/mcp-server.md" sourcestartlinenumber="133">{
   &quot;mcpServers&quot;: {
     &quot;another-server&quot;: {
       &quot;command&quot;: &quot;C:\\Tools\\another-server.exe&quot;
@@ -187,60 +191,60 @@
   }
 }
 </code></pre>
-<p>Save the file, restart Claude Desktop, and ask:</p>
-<blockquote>
-<p>Use pdmshell_version and show me the result.</p>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="147">Save the file, restart Claude Desktop, and ask:</p>
+<blockquote sourcefile="src/mcp-server.md" sourcestartlinenumber="149">
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="149">Use pdmshell_version and show me the result.</p>
 </blockquote>
-<h3 id="common-claude-configuration-problems">Common Claude configuration problems</h3>
-<ul>
-<li><strong>PDMShell does not appear:</strong> Fully exit Claude Desktop from the system tray and start it again.</li>
-<li><strong>Server disconnected:</strong> Confirm that Claude's <code>command</code> path exists and ends with <code>MCP\pdmcli.mcp.exe</code>.</li>
-<li><strong>Configuration does not load:</strong> Check for a missing comma, extra comma, unmatched brace, or single backslashes in the JSON file.</li>
-<li><strong>An old PDMShell version appears:</strong> Update or reinstall PDMShell, then restart Claude Desktop.</li>
-<li><strong>Other Claude integrations disappeared:</strong> Restore your backup and add only the <code>pdmshell</code> entry inside the existing <code>mcpServers</code> object.</li>
-<li><strong>Version works but vault commands fail:</strong> Ask Claude to list available vaults and log in before running a vault command.</li>
+<h3 id="common-claude-configuration-problems" sourcefile="src/mcp-server.md" sourcestartlinenumber="151">Common Claude configuration problems</h3>
+<ul sourcefile="src/mcp-server.md" sourcestartlinenumber="153">
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="153"><strong sourcefile="src/mcp-server.md" sourcestartlinenumber="153">PDMShell does not appear:</strong> Fully exit Claude Desktop from the system tray and start it again.</li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="154"><strong sourcefile="src/mcp-server.md" sourcestartlinenumber="154">Server disconnected:</strong> Confirm that Claude's <code sourcefile="src/mcp-server.md" sourcestartlinenumber="154">command</code> path exists and ends with <code sourcefile="src/mcp-server.md" sourcestartlinenumber="154">MCP\pdmcli.mcp.exe</code>.</li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="155"><strong sourcefile="src/mcp-server.md" sourcestartlinenumber="155">Configuration does not load:</strong> Check for a missing comma, extra comma, unmatched brace, or single backslashes in the JSON file.</li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="156"><strong sourcefile="src/mcp-server.md" sourcestartlinenumber="156">An old PDMShell version appears:</strong> Update or reinstall PDMShell, then restart Claude Desktop.</li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="157"><strong sourcefile="src/mcp-server.md" sourcestartlinenumber="157">Other Claude integrations disappeared:</strong> Restore your backup and add only the <code sourcefile="src/mcp-server.md" sourcestartlinenumber="157">pdmshell</code> entry inside the existing <code sourcefile="src/mcp-server.md" sourcestartlinenumber="157">mcpServers</code> object.</li>
+<li sourcefile="src/mcp-server.md" sourcestartlinenumber="158"><strong sourcefile="src/mcp-server.md" sourcestartlinenumber="158">Version works but vault commands fail:</strong> Ask Claude to list available vaults and log in before running a vault command.</li>
 </ul>
-<h2 id="available-tools">Available tools</h2>
-<p>You normally do not need to call these tools by name—Claude chooses the appropriate one for your request.</p>
-<table>
+<h2 id="available-tools" sourcefile="src/mcp-server.md" sourcestartlinenumber="160">Available tools</h2>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="162">You normally do not need to call these tools by name—Claude chooses the appropriate one for your request.</p>
+<table sourcefile="src/mcp-server.md" sourcestartlinenumber="164">
 <thead>
-<tr>
-<th>Tool</th>
-<th>What it does</th>
+<tr sourcefile="src/mcp-server.md" sourcestartlinenumber="164">
+<th sourcefile="src/mcp-server.md" sourcestartlinenumber="164">Tool</th>
+<th sourcefile="src/mcp-server.md" sourcestartlinenumber="164">What it does</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>pdmshell_version</code></td>
-<td>Shows the installed PDMShell and MCP server versions.</td>
+<tr sourcefile="src/mcp-server.md" sourcestartlinenumber="166">
+<td sourcefile="src/mcp-server.md" sourcestartlinenumber="166"><code sourcefile="src/mcp-server.md" sourcestartlinenumber="166">pdmshell_version</code></td>
+<td sourcefile="src/mcp-server.md" sourcestartlinenumber="166">Shows the installed PDMShell and MCP server versions.</td>
 </tr>
-<tr>
-<td><code>pdmcli_license_status</code></td>
-<td>Shows the local PDMShell license status.</td>
+<tr sourcefile="src/mcp-server.md" sourcestartlinenumber="167">
+<td sourcefile="src/mcp-server.md" sourcestartlinenumber="167"><code sourcefile="src/mcp-server.md" sourcestartlinenumber="167">pdmcli_license_status</code></td>
+<td sourcefile="src/mcp-server.md" sourcestartlinenumber="167">Shows the local PDMShell license status.</td>
 </tr>
-<tr>
-<td><code>pdmcli_list_vaults</code></td>
-<td>Lists PDM vault views available on this computer.</td>
+<tr sourcefile="src/mcp-server.md" sourcestartlinenumber="168">
+<td sourcefile="src/mcp-server.md" sourcestartlinenumber="168"><code sourcefile="src/mcp-server.md" sourcestartlinenumber="168">pdmcli_list_vaults</code></td>
+<td sourcefile="src/mcp-server.md" sourcestartlinenumber="168">Lists PDM vault views available on this computer.</td>
 </tr>
-<tr>
-<td><code>pdmcli_list_commands</code></td>
-<td>Lists available PDMShell commands.</td>
+<tr sourcefile="src/mcp-server.md" sourcestartlinenumber="169">
+<td sourcefile="src/mcp-server.md" sourcestartlinenumber="169"><code sourcefile="src/mcp-server.md" sourcestartlinenumber="169">pdmcli_list_commands</code></td>
+<td sourcefile="src/mcp-server.md" sourcestartlinenumber="169">Lists available PDMShell commands.</td>
 </tr>
-<tr>
-<td><code>pdmcli_describe_command</code></td>
-<td>Explains a command and all its parameters.</td>
+<tr sourcefile="src/mcp-server.md" sourcestartlinenumber="170">
+<td sourcefile="src/mcp-server.md" sourcestartlinenumber="170"><code sourcefile="src/mcp-server.md" sourcestartlinenumber="170">pdmcli_describe_command</code></td>
+<td sourcefile="src/mcp-server.md" sourcestartlinenumber="170">Explains a command and all its parameters.</td>
 </tr>
-<tr>
-<td><code>pdmcli_describe_search</code></td>
-<td>Explains PDMShell searches and provides examples.</td>
+<tr sourcefile="src/mcp-server.md" sourcestartlinenumber="171">
+<td sourcefile="src/mcp-server.md" sourcestartlinenumber="171"><code sourcefile="src/mcp-server.md" sourcestartlinenumber="171">pdmcli_describe_search</code></td>
+<td sourcefile="src/mcp-server.md" sourcestartlinenumber="171">Explains PDMShell searches and provides examples.</td>
 </tr>
-<tr>
-<td><code>pdmcli_execute</code></td>
-<td>Runs a PDMShell command in the current session.</td>
+<tr sourcefile="src/mcp-server.md" sourcestartlinenumber="172">
+<td sourcefile="src/mcp-server.md" sourcestartlinenumber="172"><code sourcefile="src/mcp-server.md" sourcestartlinenumber="172">pdmcli_execute</code></td>
+<td sourcefile="src/mcp-server.md" sourcestartlinenumber="172">Runs a PDMShell command in the current session.</td>
 </tr>
 </tbody>
 </table>
-<p>Continue with <a href="advancedsearch.html">Advanced Search</a>, the <a href="COMMANDS.html">Command Reference</a>, or the <a href="releasenotes.html">PDMShell release notes</a>.</p>
+<p sourcefile="src/mcp-server.md" sourcestartlinenumber="174">Continue with <a href="advancedsearch.html" sourcefile="src/mcp-server.md" sourcestartlinenumber="174">Advanced Search</a>, the <a href="COMMANDS.html" sourcefile="src/mcp-server.md" sourcestartlinenumber="174">Command Reference</a>, or the <a href="releasenotes.html" sourcefile="src/mcp-server.md" sourcestartlinenumber="174">PDMShell release notes</a>.</p>
 
 </article>
 

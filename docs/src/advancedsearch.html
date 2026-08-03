@@ -85,109 +85,109 @@
         </div>
 
         <article data-uid="">
-<h1 id="advanced-search-overview">Advanced Search Overview</h1>
+<h1 id="advanced-search-overview" sourcefile="src/advancedsearch.md" sourcestartlinenumber="6">Advanced Search Overview</h1>
 
-<p>PDMShell advanced search extends SOLIDWORKS PDM search so the same <code>-search</code> query can be used by commands such as <a href="SEARCH.html"><code>search</code></a>, <a href="DELETE.html"><code>delete</code></a>, <a href="CHECKOUT.html"><code>checkout</code></a>, <a href="GET.html"><code>get</code></a>, <a href="SETVAR.html"><code>setvar</code></a>, and <a href="TRANSITION.html"><code>transition</code></a>.</p>
-<p>Use this page for the search mental model. Use the focused articles for details:</p>
-<ul>
-<li><a href="search-tokens.html">Search tokens</a></li>
-<li><a href="search-variables.html">Variable search</a></li>
-<li><a href="search-result-shaping.html">Result shaping</a></li>
-<li><a href="search-favorites.html">Search favorites</a></li>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="8">PDMShell advanced search extends SOLIDWORKS PDM search so the same <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="8">-search</code> query can be used by commands such as <a href="SEARCH.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="8"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="8">search</code></a>, <a href="DELETE.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="8"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="8">delete</code></a>, <a href="CHECKOUT.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="8"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="8">checkout</code></a>, <a href="GET.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="8"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="8">get</code></a>, <a href="SETVAR.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="8"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="8">setvar</code></a>, and <a href="TRANSITION.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="8"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="8">transition</code></a>.</p>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="10">Use this page for the search mental model. Use the focused articles for details:</p>
+<ul sourcefile="src/advancedsearch.md" sourcestartlinenumber="12">
+<li sourcefile="src/advancedsearch.md" sourcestartlinenumber="12"><a href="search-tokens.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="12">Search tokens</a></li>
+<li sourcefile="src/advancedsearch.md" sourcestartlinenumber="13"><a href="search-variables.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="13">Variable search</a></li>
+<li sourcefile="src/advancedsearch.md" sourcestartlinenumber="14"><a href="search-result-shaping.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="14">Result shaping</a></li>
+<li sourcefile="src/advancedsearch.md" sourcestartlinenumber="15"><a href="search-favorites.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="15">Search favorites</a></li>
 </ul>
-<h2 id="how-search-is-processed">How Search Is Processed</h2>
-<p>PDMShell search has two stages:</p>
-<ol>
-<li>SOLIDWORKS PDM returns the raw matching files and folders.</li>
-<li>PDMShell optionally shapes those results by sorting, grouping, and applying a result-selection strategy.</li>
+<h2 id="how-search-is-processed" sourcefile="src/advancedsearch.md" sourcestartlinenumber="17">How Search Is Processed</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="19">PDMShell search has two stages:</p>
+<ol sourcefile="src/advancedsearch.md" sourcestartlinenumber="21">
+<li sourcefile="src/advancedsearch.md" sourcestartlinenumber="21">SOLIDWORKS PDM returns the raw matching files and folders.</li>
+<li sourcefile="src/advancedsearch.md" sourcestartlinenumber="22">PDMShell optionally shapes those results by sorting, grouping, and applying a result-selection strategy.</li>
 </ol>
-<p>Simple filter-only searches can be served as PDM returns results. Result-shaping searches must first collect the full matching result set.</p>
-<pre><code class="lang-text">PDM search
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="24">Simple filter-only searches can be served as PDM returns results. Result-shaping searches must first collect the full matching result set.</p>
+<pre><code class="lang-text" sourcefile="src/advancedsearch.md" sourcestartlinenumber="26">PDM search
   -&gt; raw matching results
   -&gt; optional SortBy
   -&gt; optional GroupBy or DuplicatedBy
   -&gt; optional Strategy
   -&gt; final results passed to the command
 </code></pre>
-<div class="IMPORTANT">
+<div class="IMPORTANT" sourcefile="src/advancedsearch.md" sourcestartlinenumber="35">
 <h5>Important</h5>
-<p><code>SortBy</code>, <code>GroupBy</code>, <code>DuplicatedBy</code>, and <code>Strategy</code> are result-shaping operations. PDMShell must first collect all matching PDM search results, then sort, group, and apply the strategy. Be careful using these options with broad recursive searches that may return hundreds or thousands of files. Narrow the search with <code>Name</code>, variables, folder scope, state, date, or other filters before applying result selection.</p>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="36"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="36">SortBy</code>, <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="36">GroupBy</code>, <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="36">DuplicatedBy</code>, and <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="36">Strategy</code> are result-shaping operations. PDMShell must first collect all matching PDM search results, then sort, group, and apply the strategy. Be careful using these options with broad recursive searches that may return hundreds or thousands of files. Narrow the search with <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="36">Name</code>, variables, folder scope, state, date, or other filters before applying result selection.</p>
 </div>
-<h2 id="simple-searches">Simple Searches</h2>
-<p>If no operators are present, the entire input is treated as a <code>Name</code> filter.</p>
-<pre><code class="lang-bash">pump.sldprt
+<h2 id="simple-searches" sourcefile="src/advancedsearch.md" sourcestartlinenumber="38">Simple Searches</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="40">If no operators are present, the entire input is treated as a <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="40">Name</code> filter.</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="42">pump.sldprt
 assembly_1001
 %.sldasm
 </code></pre>
-<p>These are equivalent to:</p>
-<pre><code class="lang-bash">Name=pump.sldprt
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="48">These are equivalent to:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="50">Name=pump.sldprt
 Name=assembly_1001
 Name=%.sldasm
 </code></pre>
-<h2 id="advanced-syntax">Advanced Syntax</h2>
-<p>Multiple conditions are separated with semicolons.</p>
-<pre><code class="lang-bash">Name=%Pump%;Recursive=true;VersionsBefore=20200101
+<h2 id="advanced-syntax" sourcefile="src/advancedsearch.md" sourcestartlinenumber="56">Advanced Syntax</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="58">Multiple conditions are separated with semicolons.</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="60">Name=%Pump%;Recursive=true;VersionsBefore=20200101
 </code></pre>
-<p>Escaping rules:</p>
-<pre><code class="lang-bash">\; inserts a semicolon
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="64">Escaping rules:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="66">\; inserts a semicolon
 \= inserts an equals sign
 \\ inserts a literal backslash
 </code></pre>
-<p>Example:</p>
-<pre><code class="lang-bash">Name=Valve\=A;Label=Released\;Approved
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="72">Example:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="74">Name=Valve\=A;Label=Released\;Approved
 </code></pre>
-<h2 id="wildcards">Wildcards</h2>
-<p>PDMShell supports the same SQL-style wildcard patterns used by SOLIDWORKS PDM.</p>
-<table>
+<h2 id="wildcards" sourcefile="src/advancedsearch.md" sourcestartlinenumber="78">Wildcards</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="80">PDMShell supports the same SQL-style wildcard patterns used by SOLIDWORKS PDM.</p>
+<table sourcefile="src/advancedsearch.md" sourcestartlinenumber="82">
 <thead>
-<tr>
-<th>Wildcard</th>
-<th>Meaning</th>
-<th>Example</th>
-<th>Result</th>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="82">
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="82">Wildcard</th>
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="82">Meaning</th>
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="82">Example</th>
+<th sourcefile="src/advancedsearch.md" sourcestartlinenumber="82">Result</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>%</code></td>
-<td>Matches zero or more characters</td>
-<td><code>%.sldprt</code></td>
-<td>Returns all part files</td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="84">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="84"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="84">%</code></td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="84">Matches zero or more characters</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="84"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="84">%.sldprt</code></td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="84">Returns all part files</td>
 </tr>
-<tr>
-<td><code>_</code></td>
-<td>Matches exactly one character</td>
-<td><code>pump_.sldprt</code></td>
-<td>Matches <code>pump1.sldprt</code> and <code>pumpA.sldprt</code>, but not <code>pump10.sldprt</code></td>
+<tr sourcefile="src/advancedsearch.md" sourcestartlinenumber="85">
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="85"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="85">_</code></td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="85">Matches exactly one character</td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="85"><code sourcefile="src/advancedsearch.md" sourcestartlinenumber="85">pump_.sldprt</code></td>
+<td sourcefile="src/advancedsearch.md" sourcestartlinenumber="85">Matches <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="85">pump1.sldprt</code> and <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="85">pumpA.sldprt</code>, but not <code sourcefile="src/advancedsearch.md" sourcestartlinenumber="85">pump10.sldprt</code></td>
 </tr>
 </tbody>
 </table>
-<h2 id="common-examples">Common Examples</h2>
-<p>Search by name:</p>
-<pre><code class="lang-bash">Name=%Valve%
+<h2 id="common-examples" sourcefile="src/advancedsearch.md" sourcestartlinenumber="87">Common Examples</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="89">Search by name:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="91">Name=%Valve%
 </code></pre>
-<p>Search recursively:</p>
-<pre><code class="lang-bash">Name=%.pdf;Recursive=true
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="95">Search recursively:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="97">Name=%.pdf;Recursive=true
 </code></pre>
-<p>Combine file name, workflow state, and a PDM variable:</p>
-<pre><code class="lang-bash">Name=%Pump%;StateName=Released;@Revision!=A
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="101">Combine file name, workflow state, and a PDM variable:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="103">Name=%Pump%;StateName=Released;@Revision!=A
 </code></pre>
-<p>Sort all PDFs by file date and exclude the first sorted result:</p>
-<pre><code class="lang-bash">search -search &quot;Name=%.pdf;SortBy=FileDate;Recursive=true;Strategy=ExcludeFirst&quot; -columns FileDate
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="107">Sort all PDFs by file date and exclude the first sorted result:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="109">search -search &quot;Name=%.pdf;SortBy=FileDate;Recursive=true;Strategy=ExcludeFirst&quot; -columns FileDate
 </code></pre>
-<p>Keep the newest PDF in each duplicate-name group:</p>
-<pre><code class="lang-bash">search -search &quot;Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=KeepFirst&quot;
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="113">Keep the newest PDF in each duplicate-name group:</p>
+<pre><code class="lang-bash" sourcefile="src/advancedsearch.md" sourcestartlinenumber="115">search -search &quot;Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=KeepFirst&quot;
 </code></pre>
-<h2 id="related-articles">Related Articles</h2>
-<ul>
-<li><a href="SEARCH.html">Search command reference</a></li>
-<li><a href="search-tokens.html">Search tokens</a></li>
-<li><a href="search-variables.html">Variable search</a></li>
-<li><a href="search-result-shaping.html">Result shaping</a></li>
-<li><a href="search-favorites.html">Search favorites</a></li>
+<h2 id="related-articles" sourcefile="src/advancedsearch.md" sourcestartlinenumber="119">Related Articles</h2>
+<ul sourcefile="src/advancedsearch.md" sourcestartlinenumber="121">
+<li sourcefile="src/advancedsearch.md" sourcestartlinenumber="121"><a href="SEARCH.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="121">Search command reference</a></li>
+<li sourcefile="src/advancedsearch.md" sourcestartlinenumber="122"><a href="search-tokens.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="122">Search tokens</a></li>
+<li sourcefile="src/advancedsearch.md" sourcestartlinenumber="123"><a href="search-variables.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="123">Variable search</a></li>
+<li sourcefile="src/advancedsearch.md" sourcestartlinenumber="124"><a href="search-result-shaping.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="124">Result shaping</a></li>
+<li sourcefile="src/advancedsearch.md" sourcestartlinenumber="125"><a href="search-favorites.html" sourcefile="src/advancedsearch.md" sourcestartlinenumber="125">Search favorites</a></li>
 </ul>
-<h2 id="technical-support">Technical Support</h2>
-<p>Please reach out to us if you have a premium license or are considering getting one from our contact <a href="https://bluebyte.biz/contact">page</a> on our main website.</p>
+<h2 id="technical-support" sourcefile="src/advancedsearch.md" sourcestartlinenumber="127">Technical Support</h2>
+<p sourcefile="src/advancedsearch.md" sourcestartlinenumber="129">Please reach out to us if you have a premium license or are considering getting one from our contact <a href="https://bluebyte.biz/contact" sourcefile="src/advancedsearch.md" sourcestartlinenumber="129">page</a> on our main website.</p>
 
 </article>
 

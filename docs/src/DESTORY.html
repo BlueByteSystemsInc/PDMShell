@@ -85,61 +85,61 @@
         </div>
 
         <article data-uid="">
-<h1 id="destory">destory</h1>
+<h1 id="destory" sourcefile="src/DESTORY.md" sourcestartlinenumber="5">destory</h1>
 
-<h2 id="description">Description</h2>
-<p>The <code>destroy</code> command permanently deletes files that have already been marked as deleted in a specified directory. This command supports recursive deletion and filtering by date.</p>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-text">destroy -directory -recursive -date
+<h2 id="description" sourcefile="src/DESTORY.md" sourcestartlinenumber="6">Description</h2>
+<p sourcefile="src/DESTORY.md" sourcestartlinenumber="7">The <code sourcefile="src/DESTORY.md" sourcestartlinenumber="7">destroy</code> command permanently deletes files that have already been marked as deleted in a specified directory. This command supports recursive deletion and filtering by date.</p>
+<h2 id="syntax" sourcefile="src/DESTORY.md" sourcestartlinenumber="9">Syntax</h2>
+<pre><code class="lang-text" sourcefile="src/DESTORY.md" sourcestartlinenumber="11">destroy -directory -recursive -date
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<table>
+<h2 id="parameters" sourcefile="src/DESTORY.md" sourcestartlinenumber="15">Parameters</h2>
+<table sourcefile="src/DESTORY.md" sourcestartlinenumber="17">
 <thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
+<tr sourcefile="src/DESTORY.md" sourcestartlinenumber="17">
+<th sourcefile="src/DESTORY.md" sourcestartlinenumber="17">Parameter</th>
+<th sourcefile="src/DESTORY.md" sourcestartlinenumber="17">Required</th>
+<th sourcefile="src/DESTORY.md" sourcestartlinenumber="17">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>-directory</code></td>
-<td>Yes</td>
-<td>The directory to destroy.</td>
+<tr sourcefile="src/DESTORY.md" sourcestartlinenumber="19">
+<td sourcefile="src/DESTORY.md" sourcestartlinenumber="19"><code sourcefile="src/DESTORY.md" sourcestartlinenumber="19">-directory</code></td>
+<td sourcefile="src/DESTORY.md" sourcestartlinenumber="19">Yes</td>
+<td sourcefile="src/DESTORY.md" sourcestartlinenumber="19">The directory to destroy.</td>
 </tr>
-<tr>
-<td><code>-recursive</code></td>
-<td>Yes</td>
-<td>Enables recursive search (for files).</td>
+<tr sourcefile="src/DESTORY.md" sourcestartlinenumber="20">
+<td sourcefile="src/DESTORY.md" sourcestartlinenumber="20"><code sourcefile="src/DESTORY.md" sourcestartlinenumber="20">-recursive</code></td>
+<td sourcefile="src/DESTORY.md" sourcestartlinenumber="20">Yes</td>
+<td sourcefile="src/DESTORY.md" sourcestartlinenumber="20">Enables recursive search (for files).</td>
 </tr>
-<tr>
-<td><code>-date</code></td>
-<td>No</td>
-<td>Optional. Specifies a date filter. Only files deleted on or before the specified date will be destroyed. The date format should be YYYY-MM-DD.</td>
+<tr sourcefile="src/DESTORY.md" sourcestartlinenumber="21">
+<td sourcefile="src/DESTORY.md" sourcestartlinenumber="21"><code sourcefile="src/DESTORY.md" sourcestartlinenumber="21">-date</code></td>
+<td sourcefile="src/DESTORY.md" sourcestartlinenumber="21">No</td>
+<td sourcefile="src/DESTORY.md" sourcestartlinenumber="21">Optional. Specifies a date filter. Only files deleted on or before the specified date will be destroyed. The date format should be YYYY-MM-DD.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details">Parameter Details</h3>
-<ul>
-<li><code>directory</code>: The directory to destroy.</li>
-<li><code>recursive</code>: Enables recursive search (for files).</li>
-<li><code>date</code>: (Optional) Specifies a date filter. Only files deleted on or before the specified date will be destroyed. The date format should be YYYY-MM-DD.</li>
+<h3 id="parameter-details" sourcefile="src/DESTORY.md" sourcestartlinenumber="23">Parameter Details</h3>
+<ul sourcefile="src/DESTORY.md" sourcestartlinenumber="25">
+<li sourcefile="src/DESTORY.md" sourcestartlinenumber="25"><code sourcefile="src/DESTORY.md" sourcestartlinenumber="25">directory</code>: The directory to destroy.</li>
+<li sourcefile="src/DESTORY.md" sourcestartlinenumber="26"><code sourcefile="src/DESTORY.md" sourcestartlinenumber="26">recursive</code>: Enables recursive search (for files).</li>
+<li sourcefile="src/DESTORY.md" sourcestartlinenumber="27"><code sourcefile="src/DESTORY.md" sourcestartlinenumber="27">date</code>: (Optional) Specifies a date filter. Only files deleted on or before the specified date will be destroyed. The date format should be YYYY-MM-DD.</li>
 </ul>
-<h2 id="examples">Examples</h2>
-<pre><code class="lang-bash">destroy -directory &quot;C:\Projects\Project&quot;
+<h2 id="examples" sourcefile="src/DESTORY.md" sourcestartlinenumber="29">Examples</h2>
+<pre><code class="lang-bash" sourcefile="src/DESTORY.md" sourcestartlinenumber="30">destroy -directory &quot;C:\Projects\Project&quot;
 # destory
 </code></pre>
-<h2 id="remarks">Remarks</h2>
-<ul>
-<li>The <code>directory</code> parameter is mandatory and must specify a valid directory.</li>
-<li>Use the <code>recursive</code> parameter with caution, as it will process all subdirectories within the specified directory.</li>
-<li>The <code>date</code> parameter allows you to target files deleted on or before the specified date, providing more control over the destruction process.</li>
-<li>This action is irreversible. Ensure you have the necessary permissions and have reviewed the files before executing the command.</li>
+<h2 id="remarks" sourcefile="src/DESTORY.md" sourcestartlinenumber="35">Remarks</h2>
+<ul sourcefile="src/DESTORY.md" sourcestartlinenumber="36">
+<li sourcefile="src/DESTORY.md" sourcestartlinenumber="36">The <code sourcefile="src/DESTORY.md" sourcestartlinenumber="36">directory</code> parameter is mandatory and must specify a valid directory.</li>
+<li sourcefile="src/DESTORY.md" sourcestartlinenumber="37">Use the <code sourcefile="src/DESTORY.md" sourcestartlinenumber="37">recursive</code> parameter with caution, as it will process all subdirectories within the specified directory.</li>
+<li sourcefile="src/DESTORY.md" sourcestartlinenumber="38">The <code sourcefile="src/DESTORY.md" sourcestartlinenumber="38">date</code> parameter allows you to target files deleted on or before the specified date, providing more control over the destruction process.</li>
+<li sourcefile="src/DESTORY.md" sourcestartlinenumber="39">This action is irreversible. Ensure you have the necessary permissions and have reviewed the files before executing the command.</li>
 </ul>
-<h2 id="tutorial">Tutorial</h2>
-<p><video src="https://bluebyte.biz/wp-content/pdmshellvideos/destroy.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 2.0.5.</p>
+<h2 id="tutorial" sourcefile="src/DESTORY.md" sourcestartlinenumber="41">Tutorial</h2>
+<p sourcefile="src/DESTORY.md" sourcestartlinenumber="42"><video src="https://bluebyte.biz/wp-content/pdmshellvideos/destroy.mp4" autoplay muted controls style="width: 100%; border-radius: 12px;"></video></p>
+<h2 id="availability" sourcefile="src/DESTORY.md" sourcestartlinenumber="44">Availability</h2>
+<p sourcefile="src/DESTORY.md" sourcestartlinenumber="45">Available since PDMShell 2.0.5.</p>
 
 </article>
 

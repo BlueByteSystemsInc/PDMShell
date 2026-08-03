@@ -8,6 +8,17 @@ keywords: PDMShell MCP server, Claude Desktop, SOLIDWORKS PDM AI, Model Context 
 
 # Use PDMShell with Claude Desktop
 
+<div style="position: relative; width: 100%; aspect-ratio: 16 / 9; margin: 1rem 0 1.5rem;">
+  <iframe
+    src="https://www.youtube.com/embed/jYEW81aFm18"
+    title="Use PDMShell with Claude Desktop"
+    style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+</div>
+
 PDMShell 4.0.53 lets you work with SOLIDWORKS PDM from Claude Desktop. You can ask questions in everyday language, explore available PDMShell commands, build searches, and run approved operations in your local vault.
 
 You do not need to configure the connection manually. Install or update PDMShell, restart Claude Desktop, and Claude will see a connection named **pdmshell**.

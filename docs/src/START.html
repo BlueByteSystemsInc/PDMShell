@@ -85,106 +85,106 @@
         </div>
 
         <article data-uid="">
-<h1 id="start">start</h1>
+<h1 id="start" sourcefile="src/START.md" sourcestartlinenumber="5">start</h1>
 
-<h2 id="description">Description</h2>
-<p>The <code>start</code> command launches programs, tools, or supported applications. It supports launching SOLIDWORKS, the PDM administration tool, Notepad, Windows Explorer, and other custom programs. It can also open the SOLIDWORKS API help file or the current folder in Explorer.</p>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-text">start -process -swversion
+<h2 id="description" sourcefile="src/START.md" sourcestartlinenumber="6">Description</h2>
+<p sourcefile="src/START.md" sourcestartlinenumber="7">The <code sourcefile="src/START.md" sourcestartlinenumber="7">start</code> command launches programs, tools, or supported applications. It supports launching SOLIDWORKS, the PDM administration tool, Notepad, Windows Explorer, and other custom programs. It can also open the SOLIDWORKS API help file or the current folder in Explorer.</p>
+<h2 id="syntax" sourcefile="src/START.md" sourcestartlinenumber="9">Syntax</h2>
+<pre><code class="lang-text" sourcefile="src/START.md" sourcestartlinenumber="11">start -process -swversion
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<table>
+<h2 id="parameters" sourcefile="src/START.md" sourcestartlinenumber="15">Parameters</h2>
+<table sourcefile="src/START.md" sourcestartlinenumber="17">
 <thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
+<tr sourcefile="src/START.md" sourcestartlinenumber="17">
+<th sourcefile="src/START.md" sourcestartlinenumber="17">Parameter</th>
+<th sourcefile="src/START.md" sourcestartlinenumber="17">Required</th>
+<th sourcefile="src/START.md" sourcestartlinenumber="17">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>-process</code></td>
-<td>No</td>
-<td><em>(Optional)</em> Specifies the program to start. Common values include:</td>
+<tr sourcefile="src/START.md" sourcestartlinenumber="19">
+<td sourcefile="src/START.md" sourcestartlinenumber="19"><code sourcefile="src/START.md" sourcestartlinenumber="19">-process</code></td>
+<td sourcefile="src/START.md" sourcestartlinenumber="19">No</td>
+<td sourcefile="src/START.md" sourcestartlinenumber="19"><em sourcefile="src/START.md" sourcestartlinenumber="19">(Optional)</em> Specifies the program to start. Common values include:</td>
 </tr>
-<tr>
-<td><code>-swversion</code></td>
-<td>No</td>
-<td><em>(Optional)</em> Specifies the version of SOLIDWORKS to launch. The year should be provided (e.g., <code>2023</code>).</td>
+<tr sourcefile="src/START.md" sourcestartlinenumber="20">
+<td sourcefile="src/START.md" sourcestartlinenumber="20"><code sourcefile="src/START.md" sourcestartlinenumber="20">-swversion</code></td>
+<td sourcefile="src/START.md" sourcestartlinenumber="20">No</td>
+<td sourcefile="src/START.md" sourcestartlinenumber="20"><em sourcefile="src/START.md" sourcestartlinenumber="20">(Optional)</em> Specifies the version of SOLIDWORKS to launch. The year should be provided (e.g., <code sourcefile="src/START.md" sourcestartlinenumber="20">2023</code>).</td>
 </tr>
-<tr>
-<td><code>-filePath</code></td>
-<td>No</td>
-<td><em>(Optional)</em> File path or executable to start. This is the default parameter.</td>
+<tr sourcefile="src/START.md" sourcestartlinenumber="21">
+<td sourcefile="src/START.md" sourcestartlinenumber="21"><code sourcefile="src/START.md" sourcestartlinenumber="21">-filePath</code></td>
+<td sourcefile="src/START.md" sourcestartlinenumber="21">No</td>
+<td sourcefile="src/START.md" sourcestartlinenumber="21"><em sourcefile="src/START.md" sourcestartlinenumber="21">(Optional)</em> File path or executable to start. This is the default parameter.</td>
 </tr>
-<tr>
-<td><code>-admin</code></td>
-<td>No</td>
-<td>Launches the PDM administration tool.</td>
+<tr sourcefile="src/START.md" sourcestartlinenumber="22">
+<td sourcefile="src/START.md" sourcestartlinenumber="22"><code sourcefile="src/START.md" sourcestartlinenumber="22">-admin</code></td>
+<td sourcefile="src/START.md" sourcestartlinenumber="22">No</td>
+<td sourcefile="src/START.md" sourcestartlinenumber="22">Launches the PDM administration tool.</td>
 </tr>
-<tr>
-<td><code>-notepad</code></td>
-<td>No</td>
-<td>Launches Notepad.</td>
+<tr sourcefile="src/START.md" sourcestartlinenumber="23">
+<td sourcefile="src/START.md" sourcestartlinenumber="23"><code sourcefile="src/START.md" sourcestartlinenumber="23">-notepad</code></td>
+<td sourcefile="src/START.md" sourcestartlinenumber="23">No</td>
+<td sourcefile="src/START.md" sourcestartlinenumber="23">Launches Notepad.</td>
 </tr>
-<tr>
-<td><code>-apihelp</code></td>
-<td>No</td>
-<td>Opens the SOLIDWORKS API help file.</td>
+<tr sourcefile="src/START.md" sourcestartlinenumber="24">
+<td sourcefile="src/START.md" sourcestartlinenumber="24"><code sourcefile="src/START.md" sourcestartlinenumber="24">-apihelp</code></td>
+<td sourcefile="src/START.md" sourcestartlinenumber="24">No</td>
+<td sourcefile="src/START.md" sourcestartlinenumber="24">Opens the SOLIDWORKS API help file.</td>
 </tr>
-<tr>
-<td><code>-explorer</code></td>
-<td>No</td>
-<td>Opens Windows Explorer. - <code>.</code>: Opens the current folder in Windows Explorer.</td>
+<tr sourcefile="src/START.md" sourcestartlinenumber="25">
+<td sourcefile="src/START.md" sourcestartlinenumber="25"><code sourcefile="src/START.md" sourcestartlinenumber="25">-explorer</code></td>
+<td sourcefile="src/START.md" sourcestartlinenumber="25">No</td>
+<td sourcefile="src/START.md" sourcestartlinenumber="25">Opens Windows Explorer. - <code sourcefile="src/START.md" sourcestartlinenumber="25">.</code>: Opens the current folder in Windows Explorer.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details">Parameter Details</h3>
-<ul>
-<li><p><code>filePath</code>:<br>
-<em>(Optional)</em> File path or executable to start. This is the default parameter.</p>
+<h3 id="parameter-details" sourcefile="src/START.md" sourcestartlinenumber="27">Parameter Details</h3>
+<ul sourcefile="src/START.md" sourcestartlinenumber="29">
+<li sourcefile="src/START.md" sourcestartlinenumber="29"><p sourcefile="src/START.md" sourcestartlinenumber="29"><code sourcefile="src/START.md" sourcestartlinenumber="29">filePath</code>:<br>
+<em sourcefile="src/START.md" sourcestartlinenumber="30">(Optional)</em> File path or executable to start. This is the default parameter.</p>
 </li>
-<li><p><code>process</code>:<br>
-<em>(Optional)</em> Specifies the program to start. Common values include:</p>
-<ul>
-<li><code>admin</code>: Launches the PDM administration tool.</li>
-<li><code>notepad</code>: Launches Notepad.</li>
-<li><code>apihelp</code>: Opens the SOLIDWORKS API help file.</li>
-<li><code>explorer</code>: Opens Windows Explorer.</li>
-<li><code>.</code>: Opens the current folder in Windows Explorer.</li>
+<li sourcefile="src/START.md" sourcestartlinenumber="32"><p sourcefile="src/START.md" sourcestartlinenumber="32"><code sourcefile="src/START.md" sourcestartlinenumber="32">process</code>:<br>
+<em sourcefile="src/START.md" sourcestartlinenumber="33">(Optional)</em> Specifies the program to start. Common values include:</p>
+<ul sourcefile="src/START.md" sourcestartlinenumber="34">
+<li sourcefile="src/START.md" sourcestartlinenumber="34"><code sourcefile="src/START.md" sourcestartlinenumber="34">admin</code>: Launches the PDM administration tool.</li>
+<li sourcefile="src/START.md" sourcestartlinenumber="35"><code sourcefile="src/START.md" sourcestartlinenumber="35">notepad</code>: Launches Notepad.</li>
+<li sourcefile="src/START.md" sourcestartlinenumber="36"><code sourcefile="src/START.md" sourcestartlinenumber="36">apihelp</code>: Opens the SOLIDWORKS API help file.</li>
+<li sourcefile="src/START.md" sourcestartlinenumber="37"><code sourcefile="src/START.md" sourcestartlinenumber="37">explorer</code>: Opens Windows Explorer.</li>
+<li sourcefile="src/START.md" sourcestartlinenumber="38"><code sourcefile="src/START.md" sourcestartlinenumber="38">.</code>: Opens the current folder in Windows Explorer.</li>
 </ul>
 </li>
-<li><p><code>swversion</code>:<br>
-<em>(Optional)</em> Specifies the version of SOLIDWORKS to launch. The year should be provided (e.g., <code>2023</code>).</p>
+<li sourcefile="src/START.md" sourcestartlinenumber="40"><p sourcefile="src/START.md" sourcestartlinenumber="40"><code sourcefile="src/START.md" sourcestartlinenumber="40">swversion</code>:<br>
+<em sourcefile="src/START.md" sourcestartlinenumber="41">(Optional)</em> Specifies the version of SOLIDWORKS to launch. The year should be provided (e.g., <code sourcefile="src/START.md" sourcestartlinenumber="41">2023</code>).</p>
 </li>
 </ul>
-<h2 id="examples">Examples</h2>
-<pre><code class="lang-bash"># start
+<h2 id="examples" sourcefile="src/START.md" sourcestartlinenumber="43">Examples</h2>
+<pre><code class="lang-bash" sourcefile="src/START.md" sourcestartlinenumber="44"># start
 start admin
 </code></pre>
-<h2 id="remarks">Remarks</h2>
-<ul>
-<li><p>Launching SOLIDWORKS:<br>
-If the <code>-swversion</code> parameter is provided, the command attempts to locate and launch the specified version of SOLIDWORKS. If the version is not found, an error message will be displayed.</p>
+<h2 id="remarks" sourcefile="src/START.md" sourcestartlinenumber="49">Remarks</h2>
+<ul sourcefile="src/START.md" sourcestartlinenumber="50">
+<li sourcefile="src/START.md" sourcestartlinenumber="50"><p sourcefile="src/START.md" sourcestartlinenumber="50">Launching SOLIDWORKS:<br>
+If the <code sourcefile="src/START.md" sourcestartlinenumber="51">-swversion</code> parameter is provided, the command attempts to locate and launch the specified version of SOLIDWORKS. If the version is not found, an error message will be displayed.</p>
 </li>
-<li><p>Administration Tool:<br>
-The <code>admin</code> option launches the PDM administration tool. Ensure the tool is installed and accessible.</p>
+<li sourcefile="src/START.md" sourcestartlinenumber="53"><p sourcefile="src/START.md" sourcestartlinenumber="53">Administration Tool:<br>
+The <code sourcefile="src/START.md" sourcestartlinenumber="54">admin</code> option launches the PDM administration tool. Ensure the tool is installed and accessible.</p>
 </li>
-<li><p>Notepad:<br>
-The <code>notepad</code> option launches the default Notepad application from the system directory.</p>
+<li sourcefile="src/START.md" sourcestartlinenumber="56"><p sourcefile="src/START.md" sourcestartlinenumber="56">Notepad:<br>
+The <code sourcefile="src/START.md" sourcestartlinenumber="57">notepad</code> option launches the default Notepad application from the system directory.</p>
 </li>
-<li><p>API Help:<br>
-The <code>apihelp</code> option opens the SOLIDWORKS API help file (<code>api_gb.chm</code>) from the PDM installation directory.</p>
+<li sourcefile="src/START.md" sourcestartlinenumber="59"><p sourcefile="src/START.md" sourcestartlinenumber="59">API Help:<br>
+The <code sourcefile="src/START.md" sourcestartlinenumber="60">apihelp</code> option opens the SOLIDWORKS API help file (<code sourcefile="src/START.md" sourcestartlinenumber="60">api_gb.chm</code>) from the PDM installation directory.</p>
 </li>
-<li><p>Explorer:<br>
-The <code>explorer</code> option opens Windows Explorer. Using <code>.</code> opens the current folder.</p>
+<li sourcefile="src/START.md" sourcestartlinenumber="62"><p sourcefile="src/START.md" sourcestartlinenumber="62">Explorer:<br>
+The <code sourcefile="src/START.md" sourcestartlinenumber="63">explorer</code> option opens Windows Explorer. Using <code sourcefile="src/START.md" sourcestartlinenumber="63">.</code> opens the current folder.</p>
 </li>
-<li><p>Error Handling:<br>
+<li sourcefile="src/START.md" sourcestartlinenumber="65"><p sourcefile="src/START.md" sourcestartlinenumber="65">Error Handling:<br>
 If the specified program or process cannot be found, an error message will be displayed.</p>
 </li>
 </ul>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 2.0.0.</p>
+<h2 id="availability" sourcefile="src/START.md" sourcestartlinenumber="68">Availability</h2>
+<p sourcefile="src/START.md" sourcestartlinenumber="69">Available since PDMShell 2.0.0.</p>
 
 </article>
 

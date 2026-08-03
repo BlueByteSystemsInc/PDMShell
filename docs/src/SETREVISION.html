@@ -85,96 +85,96 @@
         </div>
 
         <article data-uid="">
-<h1 id="setrevision">setrevision</h1>
+<h1 id="setrevision" sourcefile="src/SETREVISION.md" sourcestartlinenumber="5">setrevision</h1>
 
-<h2 id="description">Description</h2>
-<p>The <code>setrevision</code> command allows you to set the PDM-managed revision of a file inside the vault.
+<h2 id="description" sourcefile="src/SETREVISION.md" sourcestartlinenumber="7">Description</h2>
+<p sourcefile="src/SETREVISION.md" sourcestartlinenumber="9">The <code sourcefile="src/SETREVISION.md" sourcestartlinenumber="9">setrevision</code> command allows you to set the PDM-managed revision of a file inside the vault.
 This command updates the official PDM revision, which is the value shown on the Version tab, not a data card variable.</p>
-<p>You may set the revision using:</p>
-<ul>
-<li><code>%nextrevision%</code> - moves the revision forward.</li>
-<li><code>%previousrevision%</code> - moves the revision backward.</li>
-<li><code>%initial%</code> - resets to the first revision in the revision scheme.</li>
+<p sourcefile="src/SETREVISION.md" sourcestartlinenumber="12">You may set the revision using:</p>
+<ul sourcefile="src/SETREVISION.md" sourcestartlinenumber="14">
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="14"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="14">%nextrevision%</code> - moves the revision forward.</li>
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="15"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="15">%previousrevision%</code> - moves the revision backward.</li>
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="16"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="16">%initial%</code> - resets to the first revision in the revision scheme.</li>
 </ul>
-<p>You can also use PDM variable expressions:</p>
-<pre><code class="lang-text">$(Revision.@)
+<p sourcefile="src/SETREVISION.md" sourcestartlinenumber="18">You can also use PDM variable expressions:</p>
+<pre><code class="lang-text" sourcefile="src/SETREVISION.md" sourcestartlinenumber="20">$(Revision.@)
 </code></pre>
-<p>This evaluates the variable on the file and applies its value as the new revision. For file variables, include the configuration suffix. Use <code>.@</code> for the file <code>@</code> tab.</p>
-<p>Bracketed text is treated as literal text and is not evaluated.</p>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-text">setrevision -filePath|-search -recursive -value -csv
+<p sourcefile="src/SETREVISION.md" sourcestartlinenumber="24">This evaluates the variable on the file and applies its value as the new revision. For file variables, include the configuration suffix. Use <code sourcefile="src/SETREVISION.md" sourcestartlinenumber="24">.@</code> for the file <code sourcefile="src/SETREVISION.md" sourcestartlinenumber="24">@</code> tab.</p>
+<p sourcefile="src/SETREVISION.md" sourcestartlinenumber="26">Bracketed text is treated as literal text and is not evaluated.</p>
+<h2 id="syntax" sourcefile="src/SETREVISION.md" sourcestartlinenumber="28">Syntax</h2>
+<pre><code class="lang-text" sourcefile="src/SETREVISION.md" sourcestartlinenumber="30">setrevision -filePath|-search -recursive -value -csv
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<table>
+<h2 id="parameters" sourcefile="src/SETREVISION.md" sourcestartlinenumber="34">Parameters</h2>
+<table sourcefile="src/SETREVISION.md" sourcestartlinenumber="36">
 <thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
+<tr sourcefile="src/SETREVISION.md" sourcestartlinenumber="36">
+<th sourcefile="src/SETREVISION.md" sourcestartlinenumber="36">Parameter</th>
+<th sourcefile="src/SETREVISION.md" sourcestartlinenumber="36">Required</th>
+<th sourcefile="src/SETREVISION.md" sourcestartlinenumber="36">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>-filePath</code></td>
-<td>Mode-dependent</td>
-<td>See parameter details below.</td>
+<tr sourcefile="src/SETREVISION.md" sourcestartlinenumber="38">
+<td sourcefile="src/SETREVISION.md" sourcestartlinenumber="38"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="38">-filePath</code></td>
+<td sourcefile="src/SETREVISION.md" sourcestartlinenumber="38">Mode-dependent</td>
+<td sourcefile="src/SETREVISION.md" sourcestartlinenumber="38">See parameter details below.</td>
 </tr>
-<tr>
-<td><code>-search</code></td>
-<td>Mode-dependent</td>
-<td>See parameter details below.</td>
+<tr sourcefile="src/SETREVISION.md" sourcestartlinenumber="39">
+<td sourcefile="src/SETREVISION.md" sourcestartlinenumber="39"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="39">-search</code></td>
+<td sourcefile="src/SETREVISION.md" sourcestartlinenumber="39">Mode-dependent</td>
+<td sourcefile="src/SETREVISION.md" sourcestartlinenumber="39">See parameter details below.</td>
 </tr>
-<tr>
-<td><code>-recursive</code></td>
-<td>Mode-dependent</td>
-<td>See parameter details below.</td>
+<tr sourcefile="src/SETREVISION.md" sourcestartlinenumber="40">
+<td sourcefile="src/SETREVISION.md" sourcestartlinenumber="40"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="40">-recursive</code></td>
+<td sourcefile="src/SETREVISION.md" sourcestartlinenumber="40">Mode-dependent</td>
+<td sourcefile="src/SETREVISION.md" sourcestartlinenumber="40">See parameter details below.</td>
 </tr>
-<tr>
-<td><code>-value</code></td>
-<td>Mode-dependent</td>
-<td>See parameter details below.</td>
+<tr sourcefile="src/SETREVISION.md" sourcestartlinenumber="41">
+<td sourcefile="src/SETREVISION.md" sourcestartlinenumber="41"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="41">-value</code></td>
+<td sourcefile="src/SETREVISION.md" sourcestartlinenumber="41">Mode-dependent</td>
+<td sourcefile="src/SETREVISION.md" sourcestartlinenumber="41">See parameter details below.</td>
 </tr>
-<tr>
-<td><code>-csv</code></td>
-<td>Mode-dependent</td>
-<td>See parameter details below.</td>
+<tr sourcefile="src/SETREVISION.md" sourcestartlinenumber="42">
+<td sourcefile="src/SETREVISION.md" sourcestartlinenumber="42"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="42">-csv</code></td>
+<td sourcefile="src/SETREVISION.md" sourcestartlinenumber="42">Mode-dependent</td>
+<td sourcefile="src/SETREVISION.md" sourcestartlinenumber="42">See parameter details below.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details">Parameter Details</h3>
-<ul>
-<li><p><code>filePath</code><br>
+<h3 id="parameter-details" sourcefile="src/SETREVISION.md" sourcestartlinenumber="44">Parameter Details</h3>
+<ul sourcefile="src/SETREVISION.md" sourcestartlinenumber="46">
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="46"><p sourcefile="src/SETREVISION.md" sourcestartlinenumber="46"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="46">filePath</code><br>
 Path to the file whose revision you want to update. Only a single file is affected by this command.</p>
 </li>
-<li><p><code>search</code><br>
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="49"><p sourcefile="src/SETREVISION.md" sourcestartlinenumber="49"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="49">search</code><br>
 Search query in the current folder.</p>
 </li>
-<li><p><code>recursive</code><br>
-When used with <a href="SEARCH.html"><code>search</code></a>, includes files in subfolders.</p>
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="52"><p sourcefile="src/SETREVISION.md" sourcestartlinenumber="52"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="52">recursive</code><br>
+When used with <a href="SEARCH.html" sourcefile="src/SETREVISION.md" sourcestartlinenumber="53"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="53">search</code></a>, includes files in subfolders.</p>
 </li>
-<li><p><code>value</code><br>
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="55"><p sourcefile="src/SETREVISION.md" sourcestartlinenumber="55"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="55">value</code><br>
 The revision value to apply. This can be:</p>
-<ul>
-<li><code>%nextrevision%</code> - increments the PDM revision counter.</li>
-<li><code>%previousrevision%</code> - decrements the PDM revision counter.</li>
-<li><code>%initial%</code> - resets revision to the scheme's first value.</li>
-<li><code>$(VariableName.ConfigurationName)</code> - evaluates the PDM variable and uses its value.</li>
-<li>A literal revision string supported by the vault's revision scheme.</li>
+<ul sourcefile="src/SETREVISION.md" sourcestartlinenumber="58">
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="58"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="58">%nextrevision%</code> - increments the PDM revision counter.</li>
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="59"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="59">%previousrevision%</code> - decrements the PDM revision counter.</li>
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="60"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="60">%initial%</code> - resets revision to the scheme's first value.</li>
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="61"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="61">$(VariableName.ConfigurationName)</code> - evaluates the PDM variable and uses its value.</li>
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="62">A literal revision string supported by the vault's revision scheme.</li>
 </ul>
 </li>
-<li><p><code>csv</code><br>
-When used with <a href="SEARCH.html"><code>search</code></a>, saves results to a CSV file.</p>
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="64"><p sourcefile="src/SETREVISION.md" sourcestartlinenumber="64"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="64">csv</code><br>
+When used with <a href="SEARCH.html" sourcefile="src/SETREVISION.md" sourcestartlinenumber="65"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="65">search</code></a>, saves results to a CSV file.</p>
 </li>
 </ul>
-<h2 id="notes">Notes</h2>
-<ul>
-<li>This command affects only the PDM revision, not custom properties or configuration-specific metadata.</li>
-<li>When using PDM variables from a file card, include the configuration suffix. Use <code>.@</code> for the file <code>@</code> tab, for example <code>$(Revision.@)</code>.</li>
-<li><code>%previousrevision%</code> adjusts the counter only if the revision scheme allows backward movement.</li>
-<li><code>%nextrevision%</code> respects all revision scheme rules defined in the PDM Administration tool.</li>
+<h2 id="notes" sourcefile="src/SETREVISION.md" sourcestartlinenumber="67">Notes</h2>
+<ul sourcefile="src/SETREVISION.md" sourcestartlinenumber="69">
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="69">This command affects only the PDM revision, not custom properties or configuration-specific metadata.</li>
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="70">When using PDM variables from a file card, include the configuration suffix. Use <code sourcefile="src/SETREVISION.md" sourcestartlinenumber="70">.@</code> for the file <code sourcefile="src/SETREVISION.md" sourcestartlinenumber="70">@</code> tab, for example <code sourcefile="src/SETREVISION.md" sourcestartlinenumber="70">$(Revision.@)</code>.</li>
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="71"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="71">%previousrevision%</code> adjusts the counter only if the revision scheme allows backward movement.</li>
+<li sourcefile="src/SETREVISION.md" sourcestartlinenumber="72"><code sourcefile="src/SETREVISION.md" sourcestartlinenumber="72">%nextrevision%</code> respects all revision scheme rules defined in the PDM Administration tool.</li>
 </ul>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 3.0.11.</p>
+<h2 id="availability" sourcefile="src/SETREVISION.md" sourcestartlinenumber="74">Availability</h2>
+<p sourcefile="src/SETREVISION.md" sourcestartlinenumber="76">Available since PDMShell 3.0.11.</p>
 
 </article>
 

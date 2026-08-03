@@ -85,41 +85,41 @@
         </div>
 
         <article data-uid="">
-<h1 id="conditions">Conditions</h1>
+<h1 id="conditions" sourcefile="src/addin/conditions.md" sourcestartlinenumber="5">Conditions</h1>
 
-<p>The Conditions section controls whether a script should run for the current file, folder, or command context.</p>
-<p>Conditions use the shared PDMShell condition syntax. See <a href="../conditions.html">Conditions</a> for the full reference.</p>
-<p>Use the Conditions editor to add condition rows, combine them with <code>and</code> or <code>or</code>, group expressions, and review the generated condition expression before saving the add-in script.</p>
+<p sourcefile="src/addin/conditions.md" sourcestartlinenumber="7">The Conditions section controls whether a script should run for the current file, folder, or command context.</p>
+<p sourcefile="src/addin/conditions.md" sourcestartlinenumber="9">Conditions use the shared PDMShell condition syntax. See <a href="../conditions.html" sourcefile="src/addin/conditions.md" sourcestartlinenumber="9">Conditions</a> for the full reference.</p>
+<p sourcefile="src/addin/conditions.md" sourcestartlinenumber="11">Use the Conditions editor to add condition rows, combine them with <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="11">and</code> or <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="11">or</code>, group expressions, and review the generated condition expression before saving the add-in script.</p>
 <p>
   <img src="../../images/pdmshell-addin-conditions-editor.png" alt="PDMShell add-in Conditions editor with condition rows and generated condition expression" style="max-width:920px;width:100%;height:auto;">
 </p>
-<h2 id="supported-condition-features">Supported condition features</h2>
-<ul>
-<li><code>and</code> and <code>or</code></li>
-<li>nested groups with parentheses</li>
-<li>file, folder, and process exists checks</li>
-<li>text comparisons such as equals, contains, starts with, ends with, and regex matches</li>
-<li>numeric comparisons</li>
-<li>PDMShell placeholders such as <code>$fileName</code>, <code>$localPath</code>, and <code>$folderPath</code></li>
-<li>PDM variables such as <code>$(Description.@)</code> or <code>$(Revision.@)</code> for file <code>@</code> tab values</li>
-<li>checkout functions such as <code>${isCheckedOut()}</code>, <code>${isCheckedByMe()}</code>, <code>${isCheckedOutByUsername(&quot;Admin&quot;)}</code>, and <code>${checkedOutOnComputer()}</code></li>
+<h2 id="supported-condition-features" sourcefile="src/addin/conditions.md" sourcestartlinenumber="17">Supported condition features</h2>
+<ul sourcefile="src/addin/conditions.md" sourcestartlinenumber="19">
+<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="19"><code sourcefile="src/addin/conditions.md" sourcestartlinenumber="19">and</code> and <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="19">or</code></li>
+<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="20">nested groups with parentheses</li>
+<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="21">file, folder, and process exists checks</li>
+<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="22">text comparisons such as equals, contains, starts with, ends with, and regex matches</li>
+<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="23">numeric comparisons</li>
+<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="24">PDMShell placeholders such as <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="24">$fileName</code>, <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="24">$localPath</code>, and <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="24">$folderPath</code></li>
+<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="25">PDM variables such as <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="25">$(Description.@)</code> or <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="25">$(Revision.@)</code> for file <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="25">@</code> tab values</li>
+<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="26">checkout functions such as <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="26">${isCheckedOut()}</code>, <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="26">${isCheckedByMe()}</code>, <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="26">${isCheckedOutByUsername(&quot;Admin&quot;)}</code>, and <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="26">${checkedOutOnComputer()}</code></li>
 </ul>
-<h2 id="examples">Examples</h2>
-<pre><code class="lang-pdmshell">$localPath exists
+<h2 id="examples" sourcefile="src/addin/conditions.md" sourcestartlinenumber="28">Examples</h2>
+<pre><code class="lang-pdmshell" sourcefile="src/addin/conditions.md" sourcestartlinenumber="30">$localPath exists
 &quot;$(Description.@)&quot; contains &quot;ECO&quot;
 ($folderPath\ready.pdf exists or $folderPath\ready.dxf exists) and &quot;$(State.@)&quot; equals &quot;Released&quot;
 ${isCheckedOut()} and ${isCheckedByMe()}
 ${isCheckedOutByUsername(&quot;Admin&quot;, &quot;$filePath&quot;)}
 </code></pre>
-<p>For file data card variables, use the explicit configuration suffix. Use <code>.@</code> for the file <code>@</code> tab, for example <code>$(Description.@)</code>.</p>
-<p>Checkout functions are evaluated against each affected file when the menu command, event hook, or task runs. They are available from the Conditions editor autocomplete list. See <a href="../EVAL.html#checkout-state-functions">Checkout state functions</a> for optional file-path forms.</p>
-<h2 id="condition-test-message">Condition test message</h2>
-<p>Enable Always show condition test message while building a script. This displays the condition expression and resolved values so you can confirm what PDM is passing into the script context.</p>
-<h2 id="related-articles">Related articles</h2>
-<ul>
-<li><a href="placeholders.html">Placeholders and command context</a></li>
-<li><a href="../conditions.html">Conditions</a></li>
-<li><a href="troubleshooting.html">Testing and troubleshooting</a></li>
+<p sourcefile="src/addin/conditions.md" sourcestartlinenumber="38">For file data card variables, use the explicit configuration suffix. Use <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="38">.@</code> for the file <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="38">@</code> tab, for example <code sourcefile="src/addin/conditions.md" sourcestartlinenumber="38">$(Description.@)</code>.</p>
+<p sourcefile="src/addin/conditions.md" sourcestartlinenumber="40">Checkout functions are evaluated against each affected file when the menu command, event hook, or task runs. They are available from the Conditions editor autocomplete list. See <a href="../EVAL.html#checkout-state-functions" sourcefile="src/addin/conditions.md" sourcestartlinenumber="40">Checkout state functions</a> for optional file-path forms.</p>
+<h2 id="condition-test-message" sourcefile="src/addin/conditions.md" sourcestartlinenumber="42">Condition test message</h2>
+<p sourcefile="src/addin/conditions.md" sourcestartlinenumber="44">Enable Always show condition test message while building a script. This displays the condition expression and resolved values so you can confirm what PDM is passing into the script context.</p>
+<h2 id="related-articles" sourcefile="src/addin/conditions.md" sourcestartlinenumber="46">Related articles</h2>
+<ul sourcefile="src/addin/conditions.md" sourcestartlinenumber="48">
+<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="48"><a href="placeholders.html" sourcefile="src/addin/conditions.md" sourcestartlinenumber="48">Placeholders and command context</a></li>
+<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="49"><a href="../conditions.html" sourcefile="src/addin/conditions.md" sourcestartlinenumber="49">Conditions</a></li>
+<li sourcefile="src/addin/conditions.md" sourcestartlinenumber="50"><a href="troubleshooting.html" sourcefile="src/addin/conditions.md" sourcestartlinenumber="50">Testing and troubleshooting</a></li>
 </ul>
 
 </article>

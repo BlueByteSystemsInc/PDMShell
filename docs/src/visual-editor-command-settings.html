@@ -85,45 +85,45 @@
         </div>
 
         <article data-uid="">
-<h1 id="edit-command-settings">Edit Command Settings</h1>
+<h1 id="edit-command-settings" sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="6">Edit Command Settings</h1>
 
-<p>When you select an action, the command details area shows the settings for that command.</p>
-<p><img src="../images/visual-code-editor-field-placeholder.png" alt="Editing command settings"></p>
-<p>The details area includes:</p>
-<ul>
-<li>A visual name for the action.</li>
-<li>Command settings such as <code>filePath</code>, <a href="SEARCH.html"><code>search</code></a>, <code>recursive</code>, and command-specific options.</li>
-<li>A short description for the selected setting.</li>
-<li>Browse buttons for file and folder settings when available.</li>
+<p sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="8">When you select an action, the command details area shows the settings for that command.</p>
+<p sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="10"><img src="../images/visual-code-editor-field-placeholder.png" sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="10" alt="Editing command settings"></p>
+<p sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="12">The details area includes:</p>
+<ul sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="14">
+<li sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="14">A visual name for the action.</li>
+<li sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="15">Command settings such as <code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="15">filePath</code>, <a href="SEARCH.html" sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="15"><code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="15">search</code></a>, <code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="15">recursive</code>, and command-specific options.</li>
+<li sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="16">A short description for the selected setting.</li>
+<li sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="17">Browse buttons for file and folder settings when available.</li>
 </ul>
-<h2 id="visual-name">Visual Name</h2>
-<p>The visual name is the text shown on the action in the workflow.</p>
-<p>Use short names that explain the step:</p>
-<ul>
-<li><code>Find PDFs</code></li>
-<li><code>Check out files</code></li>
-<li><code>Set revision</code></li>
-<li><code>Notify user</code></li>
+<h2 id="visual-name" sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="19">Visual Name</h2>
+<p sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="21">The visual name is the text shown on the action in the workflow.</p>
+<p sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="23">Use short names that explain the step:</p>
+<ul sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="25">
+<li sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="25"><code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="25">Find PDFs</code></li>
+<li sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="26"><code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="26">Check out files</code></li>
+<li sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="27"><code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="27">Set revision</code></li>
+<li sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="28"><code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="28">Notify user</code></li>
 </ul>
-<p>The visual name is only for readability. PDMShell still uses the real command and command settings when it runs the workflow.</p>
-<h2 id="command-settings">Command Settings</h2>
-<p>Command settings map to the same parameters used in the command reference.</p>
-<p>For example, a <a href="CHECKOUT.html"><code>checkout</code></a> action may need either:</p>
-<ul>
-<li><code>filePath</code> for one file.</li>
-<li><a href="SEARCH.html"><code>search</code></a> for matching files.</li>
+<p sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="30">The visual name is only for readability. PDMShell still uses the real command and command settings when it runs the workflow.</p>
+<h2 id="command-settings" sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="32">Command Settings</h2>
+<p sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="34">Command settings map to the same parameters used in the command reference.</p>
+<p sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="36">For example, a <a href="CHECKOUT.html" sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="36"><code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="36">checkout</code></a> action may need either:</p>
+<ul sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="38">
+<li sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="38"><code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="38">filePath</code> for one file.</li>
+<li sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="39"><a href="SEARCH.html" sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="39"><code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="39">search</code></a> for matching files.</li>
 </ul>
-<p>Some commands also support optional settings such as <code>recursive</code>, <code>columns</code>, <code>comment</code>, or <code>csv</code>.</p>
-<h2 id="browse-buttons">Browse Buttons</h2>
-<p>Some settings include a browse button. Use it to select files, folders, scripts, or other values without typing the full path manually.</p>
-<h2 id="validation">Validation</h2>
-<p>The Visual Code Editor validates actions while you build the workflow.</p>
-<p><img src="../images/visual-code-editor-validation.png" alt="Visual command validation"></p>
-<p>If a required setting is missing or two settings cannot be used together, the action shows a warning or error. Select the action to review the message and correct the settings.</p>
-<p>For example, <a href="CHECKOUT.html"><code>checkout</code></a> requires either <code>filePath</code> or <a href="SEARCH.html"><code>search</code></a>. If neither is set, the editor reports:</p>
-<pre><code class="lang-text">Specify either -filePath or -search.
+<p sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="41">Some commands also support optional settings such as <code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="41">recursive</code>, <code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="41">columns</code>, <code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="41">comment</code>, or <code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="41">csv</code>.</p>
+<h2 id="browse-buttons" sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="43">Browse Buttons</h2>
+<p sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="45">Some settings include a browse button. Use it to select files, folders, scripts, or other values without typing the full path manually.</p>
+<h2 id="validation" sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="47">Validation</h2>
+<p sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="49">The Visual Code Editor validates actions while you build the workflow.</p>
+<p sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="51"><img src="../images/visual-code-editor-validation.png" sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="51" alt="Visual command validation"></p>
+<p sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="53">If a required setting is missing or two settings cannot be used together, the action shows a warning or error. Select the action to review the message and correct the settings.</p>
+<p sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="55">For example, <a href="CHECKOUT.html" sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="55"><code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="55">checkout</code></a> requires either <code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="55">filePath</code> or <a href="SEARCH.html" sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="55"><code sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="55">search</code></a>. If neither is set, the editor reports:</p>
+<pre><code class="lang-text" sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="57">Specify either -filePath or -search.
 </code></pre>
-<p>Validation helps catch common mistakes before the workflow runs.</p>
+<p sourcefile="src/visual-editor-command-settings.md" sourcestartlinenumber="61">Validation helps catch common mistakes before the workflow runs.</p>
 
 </article>
 

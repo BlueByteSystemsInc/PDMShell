@@ -85,151 +85,151 @@
         </div>
 
         <article data-uid="">
-<h1 id="add-in-placeholders-and-command-context">Add-in Placeholders and Command Context</h1>
+<h1 id="add-in-placeholders-and-command-context" sourcefile="src/addin/placeholders.md" sourcestartlinenumber="5">Add-in Placeholders and Command Context</h1>
 
-<p>The add-in evaluates placeholders for the current command context and the affected file or folder.</p>
-<table>
+<p sourcefile="src/addin/placeholders.md" sourcestartlinenumber="7">The add-in evaluates placeholders for the current command context and the affected file or folder.</p>
+<table sourcefile="src/addin/placeholders.md" sourcestartlinenumber="9">
 <thead>
-<tr>
-<th>Placeholder</th>
-<th>Description</th>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="9">
+<th sourcefile="src/addin/placeholders.md" sourcestartlinenumber="9">Placeholder</th>
+<th sourcefile="src/addin/placeholders.md" sourcestartlinenumber="9">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>$localPath</code>, <code>$filePath</code></td>
-<td>Local path of the current file, or folder path when the context is a folder</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="11">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="11"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="11">$localPath</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="11">$filePath</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="11">Local path of the current file, or folder path when the context is a folder</td>
 </tr>
-<tr>
-<td><code>$fileName</code>, <code>$filename</code>, <code>$name</code></td>
-<td>Current file or folder name</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="12">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="12"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="12">$fileName</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="12">$filename</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="12">$name</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="12">Current file or folder name</td>
 </tr>
-<tr>
-<td><code>$fileNameWithoutExtension</code></td>
-<td>File name without extension</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="13">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="13"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="13">$fileNameWithoutExtension</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="13">File name without extension</td>
 </tr>
-<tr>
-<td><code>$extension</code></td>
-<td>File extension</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="14">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="14"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="14">$extension</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="14">File extension</td>
 </tr>
-<tr>
-<td><code>$id</code></td>
-<td>Current file or folder ID</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="15">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="15"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="15">$id</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="15">Current file or folder ID</td>
 </tr>
-<tr>
-<td><code>$state</code></td>
-<td>Current workflow state name for the current file</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="16">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="16"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="16">$state</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="16">Current workflow state name for the current file</td>
 </tr>
-<tr>
-<td><code>$stateID</code></td>
-<td>Current workflow state ID for the current file</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="17">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="17"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="17">$stateID</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="17">Current workflow state ID for the current file</td>
 </tr>
-<tr>
-<td><code>$workflow</code></td>
-<td>Workflow name for the current file state</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="18">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="18"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="18">$workflow</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="18">Workflow name for the current file state</td>
 </tr>
-<tr>
-<td><code>$workflowID</code></td>
-<td>Workflow ID for the current file state</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="19">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="19"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="19">$workflowID</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="19">Workflow ID for the current file state</td>
 </tr>
-<tr>
-<td><code>$folderPath</code>, <code>$directory</code></td>
-<td>Current folder path</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="20">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="20"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="20">$folderPath</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="20">$directory</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="20">Current folder path</td>
 </tr>
-<tr>
-<td><code>$folderName</code></td>
-<td>Current folder name</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="21">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="21"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="21">$folderName</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="21">Current folder name</td>
 </tr>
-<tr>
-<td><code>$folderID</code></td>
-<td>Folder ID</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="22">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="22"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="22">$folderID</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="22">Folder ID</td>
 </tr>
-<tr>
-<td><code>$vaultName</code></td>
-<td>Current vault name</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="23">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="23"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="23">$vaultName</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="23">Current vault name</td>
 </tr>
-<tr>
-<td><code>$vaultRootFolder</code></td>
-<td>Local vault root folder</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="24">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="24"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="24">$vaultRootFolder</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="24">Local vault root folder</td>
 </tr>
-<tr>
-<td><code>$GUID</code></td>
-<td>Current script execution identifier</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="25">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="25"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="25">$GUID</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="25">Current script execution identifier</td>
 </tr>
-<tr>
-<td><code>$tempFolder</code>, <code>$TempFolder</code></td>
-<td>Windows temporary folder</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="26">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="26"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="26">$tempFolder</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="26">$TempFolder</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="26">Windows temporary folder</td>
 </tr>
-<tr>
-<td><code>$machineName</code>, <code>$computerName</code></td>
-<td>Current machine name</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="27">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="27"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="27">$machineName</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="27">$computerName</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="27">Current machine name</td>
 </tr>
-<tr>
-<td><code>$userName</code>, <code>$username</code></td>
-<td>Current PDM user name</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="28">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="28"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="28">$userName</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="28">$username</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="28">Current PDM user name</td>
 </tr>
-<tr>
-<td><code>$username.firstName</code>, <code>$username.lastName</code></td>
-<td>Current PDM user's first and last name when available</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="29">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="29"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="29">$username.firstName</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="29">$username.lastName</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="29">Current PDM user's first and last name when available</td>
 </tr>
-<tr>
-<td><code>$username.FullName</code></td>
-<td>Current PDM user's full name when available</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="30">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="30"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="30">$username.FullName</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="30">Current PDM user's full name when available</td>
 </tr>
-<tr>
-<td><code>$username.email</code></td>
-<td>Current PDM user's email address when available</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="31">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="31"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="31">$username.email</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="31">Current PDM user's email address when available</td>
 </tr>
-<tr>
-<td><code>$windowsUser</code></td>
-<td>Current Windows user name</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="32">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="32"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="32">$windowsUser</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="32">Current Windows user name</td>
 </tr>
-<tr>
-<td><code>$userDomain</code>, <code>$domain</code></td>
-<td>Current Windows domain</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="33">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="33"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="33">$userDomain</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="33">$domain</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="33">Current Windows domain</td>
 </tr>
-<tr>
-<td><code>$configuration</code>, <code>$configurationName</code></td>
-<td>Configuration context when provided by the PDM event</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="34">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="34"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="34">$configuration</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="34">$configurationName</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="34">Configuration context when provided by the PDM event</td>
 </tr>
-<tr>
-<td><code>$buttonText</code></td>
-<td>Card button text when provided by the PDM event</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="35">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="35"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="35">$buttonText</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="35">Card button text when provided by the PDM event</td>
 </tr>
-<tr>
-<td><code>$cmdType</code>, <code>$commandType</code></td>
-<td>PDM command type that triggered the script</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="36">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="36"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="36">$cmdType</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="36">$commandType</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="36">PDM command type that triggered the script</td>
 </tr>
-<tr>
-<td><code>$cmdId</code>, <code>$commandId</code></td>
-<td>PDM command ID when available</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="37">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="37"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="37">$cmdId</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="37">$commandId</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="37">PDM command ID when available</td>
 </tr>
-<tr>
-<td><code>$(Variable.@)</code>, <code>$(Variable.Configuration)</code></td>
-<td>PDM file variable value for the current file</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="38">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="38"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="38">$(Variable.@)</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="38">$(Variable.Configuration)</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="38">PDM file variable value for the current file</td>
 </tr>
-<tr>
-<td><code>$(Variable)</code></td>
-<td>PDM folder variable value for the current folder</td>
+<tr sourcefile="src/addin/placeholders.md" sourcestartlinenumber="39">
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="39"><code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="39">$(Variable)</code></td>
+<td sourcefile="src/addin/placeholders.md" sourcestartlinenumber="39">PDM folder variable value for the current folder</td>
 </tr>
 </tbody>
 </table>
-<p>Date and time placeholders such as <code>$yyyy</code>, <code>$MM</code>, <code>$dd</code>, <code>$timestamp</code>, <code>$date</code>, and <code>$time</code> are also supported.</p>
-<h2 id="workflow-placeholders">Workflow placeholders</h2>
-<p>Use <code>$state</code>, <code>$stateID</code>, <code>$workflow</code>, and <code>$workflowID</code> when an add-in script needs the selected file's current workflow information.</p>
-<pre><code class="lang-pdmshell">msgbox -value &quot;$fileName is in $state&quot;
+<p sourcefile="src/addin/placeholders.md" sourcestartlinenumber="41">Date and time placeholders such as <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="41">$yyyy</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="41">$MM</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="41">$dd</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="41">$timestamp</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="41">$date</code>, and <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="41">$time</code> are also supported.</p>
+<h2 id="workflow-placeholders" sourcefile="src/addin/placeholders.md" sourcestartlinenumber="43">Workflow placeholders</h2>
+<p sourcefile="src/addin/placeholders.md" sourcestartlinenumber="45">Use <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="45">$state</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="45">$stateID</code>, <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="45">$workflow</code>, and <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="45">$workflowID</code> when an add-in script needs the selected file's current workflow information.</p>
+<pre><code class="lang-pdmshell" sourcefile="src/addin/placeholders.md" sourcestartlinenumber="47">msgbox -value &quot;$fileName is in $state&quot;
 </code></pre>
-<p>Workflow placeholders require a file context. They evaluate to an empty value when there is no current file or when PDM cannot resolve the file state.</p>
-<h2 id="pdm-variables">PDM variables</h2>
-<p>Use <code>$(Variable.Configuration)</code> to read PDM variable values from files. Use <code>.@</code> for the file <code>@</code> tab. Folder variables can use <code>$(Variable)</code> because folders do not use file configurations.</p>
-<pre><code class="lang-pdmshell">&quot;$(Description.@)&quot; contains &quot;ECO&quot;
+<p sourcefile="src/addin/placeholders.md" sourcestartlinenumber="51">Workflow placeholders require a file context. They evaluate to an empty value when there is no current file or when PDM cannot resolve the file state.</p>
+<h2 id="pdm-variables" sourcefile="src/addin/placeholders.md" sourcestartlinenumber="53">PDM variables</h2>
+<p sourcefile="src/addin/placeholders.md" sourcestartlinenumber="55">Use <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="55">$(Variable.Configuration)</code> to read PDM variable values from files. Use <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="55">.@</code> for the file <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="55">@</code> tab. Folder variables can use <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="55">$(Variable)</code> because folders do not use file configurations.</p>
+<pre><code class="lang-pdmshell" sourcefile="src/addin/placeholders.md" sourcestartlinenumber="57">&quot;$(Description.@)&quot; contains &quot;ECO&quot;
 &quot;$(Revision.@)&quot; equals &quot;A&quot;
 </code></pre>
-<p>For file data card variables, the <code>.@</code> suffix is required when reading the file <code>@</code> tab, for example <code>$(Description.@)</code>. Use the configuration name when a specific configuration value is needed. Bracketed text is literal and is not evaluated as a PDM variable.</p>
-<h2 id="related-articles">Related articles</h2>
-<ul>
-<li><a href="conditions.html">Conditions</a></li>
-<li><a href="script-editor.html">Script Editor</a></li>
+<p sourcefile="src/addin/placeholders.md" sourcestartlinenumber="62">For file data card variables, the <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="62">.@</code> suffix is required when reading the file <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="62">@</code> tab, for example <code sourcefile="src/addin/placeholders.md" sourcestartlinenumber="62">$(Description.@)</code>. Use the configuration name when a specific configuration value is needed. Bracketed text is literal and is not evaluated as a PDM variable.</p>
+<h2 id="related-articles" sourcefile="src/addin/placeholders.md" sourcestartlinenumber="64">Related articles</h2>
+<ul sourcefile="src/addin/placeholders.md" sourcestartlinenumber="66">
+<li sourcefile="src/addin/placeholders.md" sourcestartlinenumber="66"><a href="conditions.html" sourcefile="src/addin/placeholders.md" sourcestartlinenumber="66">Conditions</a></li>
+<li sourcefile="src/addin/placeholders.md" sourcestartlinenumber="67"><a href="script-editor.html" sourcefile="src/addin/placeholders.md" sourcestartlinenumber="67">Script Editor</a></li>
 </ul>
 
 </article>

@@ -85,70 +85,70 @@
         </div>
 
         <article data-uid="">
-<h1 id="pasteasreference">pasteasreference</h1>
+<h1 id="pasteasreference" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="5">pasteasreference</h1>
 
-<h2 id="description">Description</h2>
-<p>Appends one custom reference file to a source file or to files found by search in SOLIDWORKS PDM.</p>
-<p>The <code>pasteasreference</code> command uses <code>filePath</code> as the reference file to append. Use <code>source</code> to append that reference to one file, or use <a href="SEARCH.html"><code>search</code></a> to append that reference to multiple matching files.</p>
-<p>This command is useful when a workflow creates or finds a supporting file and then needs to append it as a custom reference to one or more target files.</p>
-<h2 id="syntax">Syntax</h2>
-<pre><code class="lang-text">pasteasreference -filePath reference_file (-source source_file | -search search_query) [-recursive]
+<h2 id="description" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="6">Description</h2>
+<p sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="7">Appends one custom reference file to a source file or to files found by search in SOLIDWORKS PDM.</p>
+<p sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="9">The <code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="9">pasteasreference</code> command uses <code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="9">filePath</code> as the reference file to append. Use <code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="9">source</code> to append that reference to one file, or use <a href="SEARCH.html" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="9"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="9">search</code></a> to append that reference to multiple matching files.</p>
+<p sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="11">This command is useful when a workflow creates or finds a supporting file and then needs to append it as a custom reference to one or more target files.</p>
+<h2 id="syntax" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="13">Syntax</h2>
+<pre><code class="lang-text" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="15">pasteasreference -filePath reference_file (-source source_file | -search search_query) [-recursive]
 </code></pre>
-<h2 id="parameters">Parameters</h2>
-<table>
+<h2 id="parameters" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="19">Parameters</h2>
+<table sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="21">
 <thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
+<tr sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="21">
+<th sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="21">Parameter</th>
+<th sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="21">Required</th>
+<th sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="21">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>-filePath</code></td>
-<td>Mode-dependent</td>
-<td>See parameter details below.</td>
+<tr sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="23">
+<td sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="23"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="23">-filePath</code></td>
+<td sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="23">Mode-dependent</td>
+<td sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="23">See parameter details below.</td>
 </tr>
-<tr>
-<td><code>-source</code></td>
-<td>Mode-dependent</td>
-<td>See parameter details below.</td>
+<tr sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="24">
+<td sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="24"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="24">-source</code></td>
+<td sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="24">Mode-dependent</td>
+<td sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="24">See parameter details below.</td>
 </tr>
-<tr>
-<td><code>-search</code></td>
-<td>Mode-dependent</td>
-<td>See parameter details below.</td>
+<tr sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="25">
+<td sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="25"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="25">-search</code></td>
+<td sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="25">Mode-dependent</td>
+<td sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="25">See parameter details below.</td>
 </tr>
-<tr>
-<td><code>-recursive</code></td>
-<td>No</td>
-<td>See parameter details below.</td>
+<tr sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="26">
+<td sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="26"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="26">-recursive</code></td>
+<td sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="26">No</td>
+<td sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="26">See parameter details below.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parameter-details">Parameter Details</h3>
-<ul>
-<li><code>filePath</code> Required. Reference file to append.</li>
-<li><code>source</code> Optional. Single file that will receive the appended reference. Use either <code>source</code> or <a href="SEARCH.html"><code>search</code></a>.</li>
-<li><a href="SEARCH.html"><code>search</code></a> Optional. Search query used to find files that will receive the appended reference. Use either <code>source</code> or <a href="SEARCH.html"><code>search</code></a>.</li>
-<li><code>recursive</code> Optional. When used with <a href="SEARCH.html"><code>search</code></a>, includes matching files in subfolders.</li>
+<h3 id="parameter-details" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="28">Parameter Details</h3>
+<ul sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="30">
+<li sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="30"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="30">filePath</code> Required. Reference file to append.</li>
+<li sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="31"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="31">source</code> Optional. Single file that will receive the appended reference. Use either <code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="31">source</code> or <a href="SEARCH.html" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="31"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="31">search</code></a>.</li>
+<li sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="32"><a href="SEARCH.html" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="32"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="32">search</code></a> Optional. Search query used to find files that will receive the appended reference. Use either <code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="32">source</code> or <a href="SEARCH.html" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="32"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="32">search</code></a>.</li>
+<li sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="33"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="33">recursive</code> Optional. When used with <a href="SEARCH.html" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="33"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="33">search</code></a>, includes matching files in subfolders.</li>
 </ul>
-<h2 id="validation">Validation</h2>
-<ul>
-<li><code>filePath</code> is required.</li>
-<li>Specify either <code>source</code> or <a href="SEARCH.html"><code>search</code></a>, but not both.</li>
-<li><code>recursive</code> is only valid when used with <a href="SEARCH.html"><code>search</code></a>.</li>
+<h2 id="validation" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="35">Validation</h2>
+<ul sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="36">
+<li sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="36"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="36">filePath</code> is required.</li>
+<li sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="37">Specify either <code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="37">source</code> or <a href="SEARCH.html" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="37"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="37">search</code></a>, but not both.</li>
+<li sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="38"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="38">recursive</code> is only valid when used with <a href="SEARCH.html" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="38"><code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="38">search</code></a>.</li>
 </ul>
-<h2 id="behavior">Behavior</h2>
-<ul>
-<li>Appends the <code>filePath</code> reference to each selected target file.</li>
-<li>Does not clear existing custom references.</li>
-<li>Uses a quantity of <code>1</code> for the appended custom reference.</li>
-<li>Skips a target file if it is the same file as <code>filePath</code>.</li>
-<li>Skips duplicates.</li>
+<h2 id="behavior" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="40">Behavior</h2>
+<ul sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="41">
+<li sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="41">Appends the <code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="41">filePath</code> reference to each selected target file.</li>
+<li sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="42">Does not clear existing custom references.</li>
+<li sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="43">Uses a quantity of <code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="43">1</code> for the appended custom reference.</li>
+<li sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="44">Skips a target file if it is the same file as <code sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="44">filePath</code>.</li>
+<li sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="45">Skips duplicates.</li>
 </ul>
-<h2 id="examples">Examples</h2>
-<pre><code class="lang-bash"># pasteasreference
+<h2 id="examples" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="47">Examples</h2>
+<pre><code class="lang-bash" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="48"># pasteasreference
 pasteasreference -filePath &quot;Part.sldprt&quot; -source &quot;Assembly.sldasm&quot;
 
 # pasteasreference
@@ -157,14 +157,14 @@ pasteasreference -filePath &quot;Part.sldprt&quot; -search &quot;Name=%.sldasm&q
 # pasteasreference
 pasteasreference -filePath &quot;Part.sldprt&quot; -search &quot;Name=%.sldasm&quot; -recursive
 </code></pre>
-<h2 id="remarks">Remarks</h2>
-<ul>
-<li>This command modifies custom references directly in SOLIDWORKS PDM.</li>
-<li>Existing custom references are preserved.</li>
-<li>If the selected target already has the reference, PDMShell reports it and does not add a duplicate.</li>
+<h2 id="remarks" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="59">Remarks</h2>
+<ul sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="60">
+<li sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="60">This command modifies custom references directly in SOLIDWORKS PDM.</li>
+<li sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="61">Existing custom references are preserved.</li>
+<li sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="62">If the selected target already has the reference, PDMShell reports it and does not add a duplicate.</li>
 </ul>
-<h2 id="availability">Availability</h2>
-<p>Available since PDMShell 4.0.0.</p>
+<h2 id="availability" sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="64">Availability</h2>
+<p sourcefile="src/PASTEASREFERENCE.md" sourcestartlinenumber="65">Available since PDMShell 4.0.0.</p>
 
 </article>
 
