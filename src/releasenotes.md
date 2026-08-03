@@ -12,6 +12,7 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > PDMShell 4.0.50 and newer use a signed per-user installer. Updates replace the existing installation automatically without requiring a manual uninstall or administrator privileges.
 
 ## 4.0.53 (2026-08-01)
+- Updated the PDM add-in to use the installed PDMShell application instead of carrying and extracting a separate PDMShell archive. It checks the current per-user installation first, then legacy Program Files installations, and shows installation guidance when PDMShell is missing.
 - Improved Claude Desktop setup during PDMShell installation and updates so stale `pdmcli` connections and development paths are replaced with the installed `pdmshell` connection.
 - Renamed the Claude tools with a consistent `pdmshell_*` prefix while retaining compatibility with their previous names.
 - Added clearer Claude tool titles, PDMShell product information, version details, and a help tool with documentation, troubleshooting, website, and licensing links.
