@@ -3,14 +3,14 @@ $filePath = "website\src\index.html"
 # All tags to insert
 $tagsToInsert = @"
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="PDMShell for SOLDIWORKS PDM Professional" />
+    <meta property="og:title" content="PDMShell for SOLIDWORKS PDM Professional" />
     <meta property="og:description" content="Automate check-ins, migrations, and batch operations in SOLIDWORKS PDM using PDMShell." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://pdmshell.com/src/index.html/" />
     <meta property="og:image" content="images/logo.png" />
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PDMShell for SOLDIWORKS PDM Professional" />
+    <meta name="twitter:title" content="PDMShell for SOLIDWORKS PDM Professional" />
     <meta name="twitter:description" content="Automate your SOLIDWORKS PDM workflows effortlessly using PDMShell." />
     <meta name="twitter:image" content="images/logo.png" />
 
@@ -39,7 +39,7 @@ $tagsToInsert = @"
 $htmlContent = Get-Content -Path $filePath -Raw
 
 # Avoid inserting tags multiple times
-if ($htmlContent -like "*rel=`"canonical`"*") {
+if ($htmlContent -like "*property=`"og:title`" content=`"PDMShell for SOLIDWORKS PDM Professional`"*") {
     Write-Host "SEO tags already exist in index.html. Skipping insertion."
     exit
 }
