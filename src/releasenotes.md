@@ -11,6 +11,11 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 >[!Important]
 > PDMShell 4.0.50 and newer use a signed per-user installer. Updates replace the existing installation automatically without requiring a manual uninstall or administrator privileges.
 
+## 4.0.55 (2026-08-26)
+- Made the SOLIDWORKS PDM Task Setup dialog resizable so larger PDMShell task configuration pages are easier to edit.
+- Improved the `runtemplate` silent workflow so PDMShell more reliably detects and confirms the PDM template Create or OK dialog.
+- Updated the PDM add-in version and refreshed the 4.0.55 release assets.
+
 ## 4.0.54 (2026-08-19)
 - Updated the PDM add-in to use the installed PDMShell application instead of carrying and extracting a separate PDMShell archive. It checks the current per-user installation first, then legacy Program Files installations, and shows installation guidance when PDMShell is missing.
 - Improved Script Editor and add-in handling when PDMShell is not installed by showing an installation prompt and linking users to the installation guide.
