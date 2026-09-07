@@ -11,6 +11,11 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 >[!Important]
 > PDMShell 4.0.50 and newer use a signed per-user installer. Updates replace the existing installation automatically without requiring a manual uninstall or administrator privileges.
 
+## 4.0.56 (2026-09-07)
+- Fixed `runtemplate` when it runs from hosted task or add-in script execution by automatically confirming the PDM template Create or OK dialog.
+- Fixed `transition` when it runs from hosted task or add-in script execution by automatically confirming PDM transition dialogs for single-file, search, and source batch workflows.
+- Updated the PDM add-in description, add-in version, and 4.0.56 release assets.
+
 ## 4.0.55 (2026-08-26)
 - Made the SOLIDWORKS PDM Task Setup dialog resizable so larger PDMShell task configuration pages are easier to edit.
 - Improved the `runtemplate` silent workflow so PDMShell more reliably detects and confirms the PDM template Create or OK dialog.
