@@ -23,11 +23,11 @@ Use `Use license pool` when:
 
 When a user runs PDMShell automation from the add-in, the vault checks the enabled, activated licenses in the pool. If a seat is available, the add-in borrows a license for that user and machine.
 
-The `Active borrows` table in `Manage PDMShell Licenses` shows the current pool usage.
+The `Active borrows` table in `Manage Licenses` shows the current pool usage.
 
 ## Manage Pool Keys
 
-Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select `Manage PDMShell Licenses`.
+Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select `Manage Licenses`.
 
 From the license manager, administrators can:
 

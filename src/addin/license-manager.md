@@ -6,10 +6,10 @@ title: Manage PDMShell add-in licenses | PDMShell
 
 PDMShell add-in licenses can be managed from the SOLIDWORKS PDM Administration Tool. Use this page when the add-in is installed in a vault and you want pooled add-in licensing, or when you need to choose whether the add-in uses pooled vault seats or the local machine license.
 
-Open the Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select `Manage PDMShell Licenses`.
+Open the Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select `Manage Licenses`.
 
 <p align="center">
-  <img src="../../images/pdmshell-addin-license-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Manage PDMShell Licenses and PDMShell Download Center commands" style="max-width:520px;width:100%;height:auto;">
+  <img src="../../images/pdmshell-addin-license-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Manage Licenses and Download Center commands" style="max-width:520px;width:100%;height:auto;">
 </p>
 
 The `PDMShell Licenses` window opens for the selected vault. Use this window to add license keys, activate pooled keys for the vault, generate offline activation files, choose the license mode, and review active pool borrows.
@@ -19,7 +19,7 @@ The `PDMShell Licenses` window opens for the selected vault. Use this window to 
 </p>
 
 > [!NOTE]
-> Restricted or air-gapped vaults that only allow Microsoft-hosted downloads can use the add-in menu command `PDMShell Download Center...` to open the SharePoint folder that contains PDMShell `.cex` files. Use this license manager window for activation; use the Download Center for add-in installer files.
+> Restricted or air-gapped vaults that only allow Microsoft-hosted downloads can use the add-in menu command `Download Center...` to open the SharePoint folder that contains PDMShell `.cex` files. Use this license manager window for activation; use the Download Center for add-in installer files.
 
 ## License mode
 

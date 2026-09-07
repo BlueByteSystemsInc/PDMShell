@@ -50,7 +50,7 @@ See [PDMShell add-in installation](addin/installation.md).
 
 ## How Do I Manage Add-in Licenses?
 
-Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select `Manage PDMShell Licenses`.
+Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select `Manage Licenses`.
 
 From there, administrators can choose license pool mode or machine license mode, add license keys, activate pool keys, enable or disable keys, and review active borrows.
 

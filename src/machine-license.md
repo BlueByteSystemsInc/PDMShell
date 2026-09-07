@@ -8,7 +8,7 @@ A machine license is a PDMShell license activated in the standalone PDMShell app
 
 Use a machine license when PDMShell is licensed for a single computer, or when the PDMShell add-in should use the local PDMShell license already activated on that workstation.
 
-Machine license mode is selected from `Manage PDMShell Licenses` with `Use this machine's license`.
+Machine license mode is selected from `Manage Licenses` with `Use this machine's license`.
 
 ## When To Use A Machine License
 

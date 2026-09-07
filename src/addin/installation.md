@@ -78,7 +78,7 @@ After PDMShell TaskScript is installed, administrators can open the same folder 
 2. Log in to the vault.
 3. Expand `Add-ins`.
 4. Right-click `PDMShell`.
-5. Select `PDMShell Download Center...`.
+5. Select `Download Center...`.
 
 ## Manual CEX installation
 
@@ -92,7 +92,7 @@ Only administrators should configure add-in scripts. A script can run PDMShell c
 
 ## License management
 
-After the add-in is loaded, open the Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select `Manage PDMShell Licenses`.
+After the add-in is loaded, open the Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, right-click it, and select `Manage Licenses`.
 
 ## Updating scripts
 

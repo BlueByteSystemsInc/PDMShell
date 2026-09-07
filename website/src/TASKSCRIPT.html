@@ -96,20 +96,22 @@
 <div class="NOTE">
 <h5>Note</h5>
 <p>The PDMShell add-in is included with the premium version. You can download it from your Blue Byte Systems Inc <a href="https://bluebyte.biz/account">account</a> or deploy it with <a href="https://docs.bluebyte.biz/src/cdpdm.html">PDMDeploy</a>.</p>
-<p>If the vault is in a restricted or air-gapped environment that only allows Microsoft-hosted links, use the add-in's <code>PDMShell Download Center...</code> menu command to open the Microsoft SharePoint folder that contains PDMShell <code>.cex</code> files.</p>
+<p>If the vault is in a restricted or air-gapped environment that only allows Microsoft-hosted links, use the add-in's <code>Download Center...</code> menu command to open the Microsoft SharePoint folder that contains PDMShell <code>.cex</code> files.</p>
 </div>
 <h2 id="add-in-menu-commands">Add-in menu commands</h2>
 <p>Open the SOLIDWORKS PDM Administration Tool, expand the vault, open the add-ins list, locate the PDMShell add-in, and right-click it to open the add-in menu.</p>
 <p>
-  <img src="../images/pdmshell-addin-admin-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Edit Scripts, Manage PDMShell Licenses, PDMShell Download Center, Performance, and Open PDMShell commands" style="max-width:520px;width:100%;height:auto;">
+  <img src="../images/pdmshell-addin-admin-menu.png" alt="PDMShell add-in menu in the SOLIDWORKS PDM Administration Tool with Open PDMShell, Edit Scripts, Manage Licenses, Download Center, Performance, Online Documentation, and Release All Borrowed Licenses commands" style="max-width:520px;width:100%;height:auto;">
 </p>
 <p>The add-in menu includes:</p>
 <ul>
+<li><code>Open PDMShell...</code> to launch the installed PDMShell application and log in to the current vault.</li>
 <li><code>Edit Scripts...</code> to open the Script Editor.</li>
-<li><code>Manage PDMShell Licenses...</code> for online and offline license management.</li>
-<li><code>Open PDMShell...</code> to launch the PDMShell application bundled with the add-in and log in to the current vault.</li>
-<li><code>PDMShell Download Center...</code> for restricted systems that need Microsoft-hosted <code>.cex</code> downloads.</li>
+<li><code>Manage Licenses...</code> for online and offline license management.</li>
+<li><code>Download Center...</code> for restricted systems that need Microsoft-hosted <code>.cex</code> downloads.</li>
 <li><code>Performance...</code> to review add-in execution timings. This command is available only to PDM administrators.</li>
+<li><code>Online Documentation...</code> to open the PDMShell documentation website.</li>
+<li><code>Release All Borrowed Licenses...</code> to release active borrowed seats from the vault when an administrator needs to clear stale borrows.</li>
 </ul>
 <p>When the add-in uses the license pool, <code>Open PDMShell...</code> borrows a seat while the launched application is running and releases it when PDMShell closes. If no pooled seat is available, you can cancel or open PDMShell with the Free version. In machine-license mode, the launched application uses the PDMShell license activated on that workstation.</p>
 <h2 id="add-in-workflow">Add-in workflow</h2>

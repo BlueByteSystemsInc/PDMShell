@@ -12,6 +12,7 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 > PDMShell 4.0.50 and newer use a signed per-user installer. Updates replace the existing installation automatically without requiring a manual uninstall or administrator privileges.
 
 ## 4.0.56 (2026-09-07)
+- Added a `Release All Borrowed Licenses...` add-in administration menu command for clearing active borrowed seats from the vault.
 - Fixed `runtemplate` when it runs from hosted task or add-in script execution by automatically confirming the PDM template Create or OK dialog.
 - Fixed `transition` when it runs from hosted task or add-in script execution by automatically confirming PDM transition dialogs for single-file, search, and source batch workflows.
 - Updated the PDM add-in description, add-in version, and 4.0.56 release assets.
