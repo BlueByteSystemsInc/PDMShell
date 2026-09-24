@@ -92,6 +92,14 @@
 <h5>Important</h5>
 <p>PDMShell 4.0.50 and newer use a signed per-user installer. Updates replace the existing installation automatically without requiring a manual uninstall or administrator privileges.</p>
 </div>
+<h2 id="4057-2026-09-23">4.0.57 (2026-09-23)</h2>
+<ul>
+<li>Added external filesystem move support to <code>move</code> with <code>-fsSearch</code> and <code>-fsSearchDir</code>, including recursive filename matching outside vault views and safeguards against overwrites, vault-boundary moves, and linked or reparse paths.</li>
+<li>Improved command parsing so a parameter without a value no longer consumes the next parameter token, and parameter names are matched as exact command-line tokens.</li>
+<li>Improved SOLIDWORKS automation ownership for commands such as <code>rebuild</code>, <code>runswmacro</code>, <code>export</code>, and Pack and Go so PDMShell closes only SOLIDWORKS instances and documents it owns and preserves the host SOLIDWORKS session when running inside SOLIDWORKS.</li>
+<li>Improved PDM Task Setup resizing and layout, including high-DPI ElementHost layout, page switching, and file-extension filtering help.</li>
+<li>Removed the legacy MSI/MSIX release pipeline; VeloPack is now the supported installer build path, with signed and timestamped package verification and safer output handling.</li>
+</ul>
 <h2 id="4056-2026-09-07">4.0.56 (2026-09-07)</h2>
 <ul>
 <li>Added a <code>Release All Borrowed Licenses...</code> add-in administration menu command for clearing active borrowed seats from the vault.</li>

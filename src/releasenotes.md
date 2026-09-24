@@ -11,6 +11,13 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 >[!Important]
 > PDMShell 4.0.50 and newer use a signed per-user installer. Updates replace the existing installation automatically without requiring a manual uninstall or administrator privileges.
 
+## 4.0.57 (2026-09-23)
+- Added external filesystem move support to `move` with `-fsSearch` and `-fsSearchDir`, including recursive filename matching outside vault views and safeguards against overwrites, vault-boundary moves, and linked or reparse paths.
+- Improved command parsing so a parameter without a value no longer consumes the next parameter token, and parameter names are matched as exact command-line tokens.
+- Improved SOLIDWORKS automation ownership for commands such as `rebuild`, `runswmacro`, `export`, and Pack and Go so PDMShell closes only SOLIDWORKS instances and documents it owns and preserves the host SOLIDWORKS session when running inside SOLIDWORKS.
+- Improved PDM Task Setup resizing and layout, including high-DPI ElementHost layout, page switching, and file-extension filtering help.
+- Removed the legacy MSI/MSIX release pipeline; VeloPack is now the supported installer build path, with signed and timestamped package verification and safer output handling.
+
 ## 4.0.56 (2026-09-07)
 - Added a `Release All Borrowed Licenses...` add-in administration menu command for clearing active borrowed seats from the vault.
 - Fixed `runtemplate` when it runs from hosted task or add-in script execution by automatically confirming the PDM template Create or OK dialog.

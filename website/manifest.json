@@ -37,6 +37,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/BWXT Vendor Payment Enrollment_Authorization Form V20190830 (005) - Blue_SIGNED.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "images/BWXT Vendor Payment Enrollment_Authorization Form V20190830 (005) - Blue_SIGNED.pdf"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/BadgeLogo.scale-100.png",
       "output": {
         "resource": {
