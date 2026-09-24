@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="move Command | PDMShell | SOLIDWORKS PDM | Powershell like features for SOLIDWORKS PDM Professional ">
       
-      <meta name="description" content="Moves files or folders from one vault location to another.">
+      <meta name="description" content="Moves files or folders between vault locations, or moves external filesystem files into a destination folder.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -88,14 +88,15 @@
 <h1 id="move">move</h1>
 
 <h2 id="description">Description</h2>
-<p>The <code>move</code> command moves file(s) from one folder in the vault to another.</p>
+<p>The <code>move</code> command moves file(s) from one folder in the vault to another, or moves external filesystem files into a destination folder.</p>
 <p>You can move:</p>
 <ul>
 <li>A single file</li>
 <li>A folder</li>
 <li>Files returned from a search query</li>
+<li>External filesystem files returned from a filename search</li>
 </ul>
-<p>When a file is moved:</p>
+<p>When a vault file is moved:</p>
 <ul>
 <li>All references are automatically updated by SOLIDWORKS PDM.</li>
 <li>Any parent files referencing the moved file are updated.</li>
@@ -103,7 +104,7 @@
 </ul>
 <hr>
 <h2 id="syntax">Syntax</h2>
-<pre><code class="lang-text">move (-source file_or_folder | -search search_query) -directory target_vault_folder [-recursive]
+<pre><code class="lang-text">move (-source file_or_folder | -search search_query | -fsSearch filename_pattern -fsSearchDir external_folder) -directory existing_destination [-recursive]
 </code></pre>
 <h2 id="parameters">Parameters</h2>
 <table>
@@ -118,7 +119,7 @@
 <tr>
 <td><code>-source</code></td>
 <td>No</td>
-<td>File or folder to move. Use either <code>-source</code> or <code>-search</code>.</td>
+<td>File or folder to move. Use one source mode: <code>-source</code>, <code>-search</code>, or <code>-fsSearch</code> with <code>-fsSearchDir</code>.</td>
 </tr>
 <tr>
 <td><code>-directory</code></td>
@@ -128,12 +129,22 @@
 <tr>
 <td><code>-search</code></td>
 <td>No</td>
-<td>Search query scoped to the current PDMShell directory. Use either <code>-source</code> or <code>-search</code>.</td>
+<td>Search query scoped to the current PDMShell directory. Use one source mode only.</td>
+</tr>
+<tr>
+<td><code>-fsSearch</code></td>
+<td>No</td>
+<td>Filename pattern for external filesystem files, such as <code>*.pdf</code>. Requires <code>-fsSearchDir</code>.</td>
+</tr>
+<tr>
+<td><code>-fsSearchDir</code></td>
+<td>No</td>
+<td>External filesystem folder to search. Requires <code>-fsSearch</code>.</td>
 </tr>
 <tr>
 <td><code>-recursive</code></td>
 <td>No</td>
-<td>Includes subfolders when used with <code>-search</code>.</td>
+<td>Includes subfolders when used with <code>-search</code> or <code>-fsSearch</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -145,14 +156,20 @@ You can also specify a folder path. This will move the actual folder.
 This parameter is ignored when <code>-search</code> is specified.</p>
 </li>
 <li><p><code>directory</code><br>
-Target directory where to move the file(s) to. Must exist in the vault.</p>
+Target directory where to move the file(s) to. Must already exist. For vault moves, this must be a vault folder. For external filesystem moves, this must be an external filesystem folder.</p>
 </li>
 <li><p><code>search</code><br>
 Search query. PDMShell searches from the current directory, moves matching files to <code>-directory</code>, and does not use <code>-source</code> as a search scope. This does not support moving folders from search results.</p>
 </li>
+<li><p><code>fsSearch</code><br>
+Filename pattern for external filesystem files. Use this with <code>-fsSearchDir</code> when moving files that are outside the vault, for example <code>*.pdf</code> or <code>Report*.xlsx</code>.</p>
+</li>
+<li><p><code>fsSearchDir</code><br>
+External filesystem folder to search when <code>-fsSearch</code> is used. This mode does not move files from vault views, does not overwrite destination files, and does not move through linked or reparse paths.</p>
+</li>
 <li><p><code>recursive</code><br>
-Affects the search parameter. Specify <code>-recursive</code> to make the search recursive.<br>
-The start location is the current directory.</p>
+Affects the <code>-search</code> and <code>-fsSearch</code> parameters. Specify <code>-recursive</code> to make the search recursive.<br>
+For <code>-search</code>, the start location is the current PDMShell directory. For <code>-fsSearch</code>, the start location is <code>-fsSearchDir</code>.</p>
 </li>
 </ul>
 <hr>
@@ -172,13 +189,19 @@ The start location is the current directory.</p>
 ## Moves all part files found in the current directory, including subfolders, to the Archive folder.
 </code></pre>
 <hr>
+<h3 id="example-4-move-external-files-by-filename-pattern">Example 4: Move External Files by Filename Pattern</h3>
+<pre><code class="lang-bash">move -fsSearch &quot;*.pdf&quot; -fsSearchDir &quot;C:\Exports&quot; -recursive -directory &quot;D:\Released PDFs&quot;
+## Moves matching external PDF files from C:\Exports and its subfolders into D:\Released PDFs.
+</code></pre>
+<hr>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>You must have permission to move the file(s).</li>
 <li>If the file is referenced by other files, referencing paths are updated automatically.</li>
 <li>If the file has references, those reference paths are updated automatically.</li>
-<li>Target directory must already exist in the vault.</li>
+<li>Target directory must already exist.</li>
 <li>Search mode always starts from the current PDMShell directory. Use <a href="CD.html"><code>cd</code></a> to change the search scope before running <code>move -search</code>.</li>
+<li>External filesystem mode uses <code>-fsSearch</code> and <code>-fsSearchDir</code> together, cannot be combined with <code>-source</code> or <code>-search</code>, and keeps the source and destination outside vault views.</li>
 <li>Move operations preserve version history.</li>
 </ul>
 <h2 id="availability">Availability</h2>
