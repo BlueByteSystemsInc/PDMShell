@@ -178,6 +178,15 @@ Name=%.sldasm
 <p>Keep the newest PDF in each duplicate-name group:</p>
 <pre><code class="lang-bash">search -search &quot;Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=KeepFirst&quot;
 </code></pre>
+<p>Use a CSV file as the <code>-search</code> input when each cell contains one search query. The first cell is treated as a header.</p>
+<pre><code class="lang-bash">history -search &quot;&lt;c:\export\source.csv&gt;&quot;
+</code></pre>
+<p>Example CSV:</p>
+<pre><code class="lang-csv">Search
+Name=%Pump%;Recursive=true
+Name=%Valve%;StateName=Released
+Name=%.pdf;Recursive=true;SortBy=FileDate;SortOrder=Desc
+</code></pre>
 <h2 id="related-articles">Related Articles</h2>
 <ul>
 <li><a href="SEARCH.html">Search command reference</a></li>

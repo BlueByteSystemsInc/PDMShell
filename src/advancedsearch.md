@@ -116,6 +116,21 @@ Keep the newest PDF in each duplicate-name group:
 search -search "Name=%.pdf;Recursive=true;GroupBy=Name;SortBy=FileDate;SortOrder=Desc;Strategy=KeepFirst"
 ```
 
+Use a CSV file as the `-search` input when each cell contains one search query. The first cell is treated as a header.
+
+```bash
+history -search "<c:\export\source.csv>"
+```
+
+Example CSV:
+
+```csv
+Search
+Name=%Pump%;Recursive=true
+Name=%Valve%;StateName=Released
+Name=%.pdf;Recursive=true;SortBy=FileDate;SortOrder=Desc
+```
+
 ## Related Articles
 
 - [Search command reference](SEARCH.md)
