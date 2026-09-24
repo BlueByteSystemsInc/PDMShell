@@ -11,6 +11,9 @@ Track PDMShell releases, new command-line features, SOLIDWORKS PDM add-in update
 >[!Important]
 > PDMShell 4.0.50 and newer use a signed per-user installer. Updates replace the existing installation automatically without requiring a manual uninstall or administrator privileges.
 
+## 4.0.58 (2026-09-24)
+- Fixed `copytree` when used with `-search` so it now processes all matching search results.
+
 ## 4.0.57 (2026-09-23)
 - Added external filesystem move support to `move` with `-fsSearch` and `-fsSearchDir`, including recursive filename matching outside vault views and safeguards against overwrites, vault-boundary moves, and linked or reparse paths.
 - Improved command parsing so a parameter without a value no longer consumes the next parameter token, and parameter names are matched as exact command-line tokens.
